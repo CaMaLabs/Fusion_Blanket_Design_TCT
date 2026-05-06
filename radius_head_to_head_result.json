@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "radius_cm": 55.0,
+      "TBR_openmc": 2.215532468441858,
+      "ATTN_openmc": 0.9997109977556631,
+      "GRAD_openmc": 0.9998875566052617,
+      "front_heating_raw": 0.22262576938786982,
+      "front_heating_corrected": 0.18756221070928034,
+      "wall_load_raw": 619.972827004788,
+      "wall_load_corrected": 500.62805780636626,
+      "wall_temp_raw": 22141.886678742427,
+      "wall_temp_corrected": 16329.641425572541,
+      "fail_rate_raw": 0.013000113385346174,
+      "fail_rate_corrected": 0.009360081637449245,
+      "spread_credit": 0.35,
+      "healing_credit": 0.28,
+      "net_electric": 3824.6410801649745
+    },
+    {
+      "radius_cm": 60.0,
+      "TBR_openmc": 2.205677706616161,
+      "ATTN_openmc": 0.9996137116918948,
+      "GRAD_openmc": 0.9998385731000005,
+      "front_heating_raw": 0.22348028300896278,
+      "front_heating_corrected": 0.18828213843505115,
+      "wall_load_raw": 477.5369402450075,
+      "wall_load_corrected": 385.6110792478435,
+      "wall_temp_raw": 17054.890723035984,
+      "wall_temp_corrected": 12577.981908239039,
+      "fail_rate_raw": 0.013000113385346174,
+      "fail_rate_corrected": 0.009360081637449245,
+      "spread_credit": 0.35,
+      "healing_credit": 0.28,
+      "net_electric": 3470.4606590318404
+    }
+  ],
+  "ranked": [
+    {
+      "radius_cm": 55.0,
+      "TBR_openmc": 2.215532468441858,
+      "ATTN_openmc": 0.9997109977556631,
+      "GRAD_openmc": 0.9998875566052617,
+      "front_heating_raw": 0.22262576938786982,
+      "front_heating_corrected": 0.18756221070928034,
+      "wall_load_raw": 619.972827004788,
+      "wall_load_corrected": 500.62805780636626,
+      "wall_temp_raw": 22141.886678742427,
+      "wall_temp_corrected": 16329.641425572541,
+      "fail_rate_raw": 0.013000113385346174,
+      "fail_rate_corrected": 0.009360081637449245,
+      "spread_credit": 0.35,
+      "healing_credit": 0.28,
+      "net_electric": 3824.6410801649745
+    },
+    {
+      "radius_cm": 60.0,
+      "TBR_openmc": 2.205677706616161,
+      "ATTN_openmc": 0.9996137116918948,
+      "GRAD_openmc": 0.9998385731000005,
+      "front_heating_raw": 0.22348028300896278,
+      "front_heating_corrected": 0.18828213843505115,
+      "wall_load_raw": 477.5369402450075,
+      "wall_load_corrected": 385.6110792478435,
+      "wall_temp_raw": 17054.890723035984,
+      "wall_temp_corrected": 12577.981908239039,
+      "fail_rate_raw": 0.013000113385346174,
+      "fail_rate_corrected": 0.009360081637449245,
+      "spread_credit": 0.35,
+      "healing_credit": 0.28,
+      "net_electric": 3470.4606590318404
+    }
+  ]
+}

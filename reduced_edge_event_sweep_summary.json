@@ -1,0 +1,241 @@
+{
+  "frozen_reference": {
+    "radius_cm": 55.0,
+    "li_current": 0.1,
+    "supervisor_level": "aggressive",
+    "severity_scale": 0.6,
+    "blanket_thickness": 1.25,
+    "axial_outer_cap_thickness": 0.6,
+    "split": [
+      0.15,
+      0.2,
+      0.4,
+      0.15,
+      0.1
+    ]
+  },
+  "best_10": [
+    {
+      "edge_drive": 0.7,
+      "spin": 0.45,
+      "tct_gain": 0.6,
+      "residual_instability": 0.14774213086655613,
+      "event_amplitude": 0.41593583555980107,
+      "event_frequency": 0.8125,
+      "heat_pulse_severity": 0.39253944480956227,
+      "target_heat_flux_proxy": 0.34863207970821586,
+      "damage_index": 0.44236131855772404
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.3,
+      "tct_gain": 0.6,
+      "residual_instability": 0.20413475511064744,
+      "event_amplitude": 0.5174425591991654,
+      "event_frequency": 0.835,
+      "heat_pulse_severity": 0.49182915251880666,
+      "target_heat_flux_proxy": 0.4470126824291617,
+      "damage_index": 0.5298598386140921
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.45,
+      "tct_gain": 0.4,
+      "residual_instability": 0.22707253825945217,
+      "event_amplitude": 0.5587305688670139,
+      "event_frequency": 0.8625,
+      "heat_pulse_severity": 0.5356829329012496,
+      "target_heat_flux_proxy": 0.4909823160382911,
+      "damage_index": 0.5712953079071746
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.15,
+      "tct_gain": 0.6,
+      "residual_instability": 0.27062213140711616,
+      "event_amplitude": 0.6371198365328091,
+      "event_frequency": 0.8575,
+      "heat_pulse_severity": 0.6098829635210314,
+      "target_heat_flux_proxy": 0.5690907080375439,
+      "damage_index": 0.6347878423478305
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.3,
+      "tct_gain": 0.4,
+      "residual_instability": 0.2834651625035435,
+      "event_amplitude": 0.6602372925063783,
+      "event_frequency": 0.885,
+      "heat_pulse_severity": 0.6374591059149083,
+      "target_heat_flux_proxy": 0.5971499412151573,
+      "damage_index": 0.6624974906177469
+    },
+    {
+      "edge_drive": 0.85,
+      "spin": 0.45,
+      "tct_gain": 0.6,
+      "residual_instability": 0.29774213086655615,
+      "event_amplitude": 0.6859358355598011,
+      "event_frequency": 0.9475000000000001,
+      "heat_pulse_severity": 0.6751323461497342,
+      "target_heat_flux_proxy": 0.6342074710208119,
+      "damage_index": 0.7037100316885974
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.0,
+      "tct_gain": 0.6,
+      "residual_instability": 0.34306040631242457,
+      "event_amplitude": 0.7675087313623643,
+      "event_frequency": 0.88,
+      "heat_pulse_severity": 0.7398784170333191,
+      "target_heat_flux_proxy": 0.7097166641701486,
+      "damage_index": 0.7518481286193701
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.15,
+      "tct_gain": 0.4,
+      "residual_instability": 0.3499525388000122,
+      "event_amplitude": 0.779914569840022,
+      "event_frequency": 0.9075000000000001,
+      "heat_pulse_severity": 0.7582719405269615,
+      "target_heat_flux_proxy": 0.7282708996713185,
+      "damage_index": 0.7716558371912243
+    },
+    {
+      "edge_drive": 0.7,
+      "spin": 0.45,
+      "tct_gain": 0.2,
+      "residual_instability": 0.3493354091931471,
+      "event_amplitude": 0.7788037365476648,
+      "event_frequency": 0.9125,
+      "heat_pulse_severity": 0.7583601384632885,
+      "target_heat_flux_proxy": 0.7279951627827518,
+      "damage_index": 0.7723716249896342
+    },
+    {
+      "edge_drive": 0.85,
+      "spin": 0.3,
+      "tct_gain": 0.6,
+      "residual_instability": 0.35413475511064746,
+      "event_amplitude": 0.7874425591991655,
+      "event_frequency": 0.9700000000000001,
+      "heat_pulse_severity": 0.780355576166373,
+      "target_heat_flux_proxy": 0.7482976177407247,
+      "damage_index": 0.7991848522137226
+    }
+  ],
+  "worst_10": [
+    {
+      "edge_drive": 1.15,
+      "spin": 0.3,
+      "tct_gain": 0.2,
+      "residual_instability": 0.8557280334372384,
+      "event_amplitude": 1.690310460187029,
+      "event_frequency": 1.34,
+      "heat_pulse_severity": 1.8627221271261056,
+      "target_heat_flux_proxy": 2.061607592064422,
+      "damage_index": 1.8439794475386848
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.0,
+      "tct_gain": 0.4,
+      "residual_instability": 0.8723908137053206,
+      "event_amplitude": 1.720303464669577,
+      "event_frequency": 1.335,
+      "heat_pulse_severity": 1.8931939628688692,
+      "target_heat_flux_proxy": 2.1064439724059256,
+      "damage_index": 1.8734398712996558
+    },
+    {
+      "edge_drive": 1.0,
+      "spin": 0.15,
+      "tct_gain": 0.0,
+      "residual_instability": 0.9275617250946916,
+      "event_amplitude": 1.8196111051704449,
+      "event_frequency": 1.2775,
+      "heat_pulse_severity": 1.9710937296758846,
+      "target_heat_flux_proxy": 2.2390718985526292,
+      "damage_index": 1.9474481208875254
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.15,
+      "tct_gain": 0.2,
+      "residual_instability": 0.9222154097337072,
+      "event_amplitude": 1.809987737520673,
+      "event_frequency": 1.3625,
+      "heat_pulse_severity": 2.006823903976046,
+      "target_heat_flux_proxy": 2.260670245175878,
+      "damage_index": 1.9863292207395886
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.45,
+      "tct_gain": 0.0,
+      "residual_instability": 0.9546817245541315,
+      "event_amplitude": 1.8684271041974365,
+      "event_frequency": 1.3675000000000002,
+      "heat_pulse_severity": 2.074421192435204,
+      "target_heat_flux_proxy": 2.357740922688087,
+      "damage_index": 2.0533789326457885
+    },
+    {
+      "edge_drive": 1.0,
+      "spin": 0.0,
+      "tct_gain": 0.0,
+      "residual_instability": 1.0,
+      "event_amplitude": 1.95,
+      "event_frequency": 1.3,
+      "heat_pulse_severity": 2.1254999999999997,
+      "target_heat_flux_proxy": 2.4608999999999996,
+      "damage_index": 2.102295
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.0,
+      "tct_gain": 0.2,
+      "residual_instability": 0.9946536846390155,
+      "event_amplitude": 1.9403766323502278,
+      "event_frequency": 1.385,
+      "heat_pulse_severity": 2.164490133386679,
+      "target_heat_flux_proxy": 2.4846044017835056,
+      "damage_index": 2.1436008938977253
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.3,
+      "tct_gain": 0.0,
+      "residual_instability": 1.0110743487982228,
+      "event_amplitude": 1.969933827836801,
+      "event_frequency": 1.3900000000000001,
+      "heat_pulse_severity": 2.200416085693707,
+      "target_heat_flux_proxy": 2.536460725766116,
+      "damage_index": 2.179667064861374
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.15,
+      "tct_gain": 0.0,
+      "residual_instability": 1.0775617250946916,
+      "event_amplitude": 2.089611105170445,
+      "event_frequency": 1.4125,
+      "heat_pulse_severity": 2.3482004794352873,
+      "target_heat_flux_proxy": 2.7518552977185595,
+      "damage_index": 2.328941853004976
+    },
+    {
+      "edge_drive": 1.15,
+      "spin": 0.0,
+      "tct_gain": 0.0,
+      "residual_instability": 1.15,
+      "event_amplitude": 2.2199999999999998,
+      "event_frequency": 1.435,
+      "heat_pulse_severity": 2.5097099999999997,
+      "target_heat_flux_proxy": 2.993448,
+      "damage_index": 2.4936249
+    }
+  ]
+}

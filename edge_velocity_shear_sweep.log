@@ -1,0 +1,296 @@
+=== EDGE VELOCITY/SHEAR SWEEP ===
+Frozen engineering reference:
+{
+  "radius_cm": 55.0,
+  "li_current": 0.1,
+  "supervisor_level": "aggressive",
+  "severity_scale": 0.6,
+  "blanket_thickness": 1.25,
+  "axial_outer_cap_thickness": 0.6,
+  "split": [
+    0.15,
+    0.2,
+    0.4,
+    0.15,
+    0.1
+  ]
+}
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.00 tct_gain=0.00 shear=0.0000 margin=-0.7000 amp=1.3950 freq=0.9450 heat=1.3735 peak_q=11.2261 wet=0.1223 div=7.7777 shift=0.0000 damage=4.1640
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.00 tct_gain=0.20 shear=0.0000 margin=-0.5447 amp=1.1076 freq=0.9610 heat=1.0955 peak_q=6.7430 wet=0.1625 div=4.7664 shift=0.0700 damage=2.6869
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.00 tct_gain=0.40 shear=0.0000 margin=-0.4224 amp=0.8814 freq=0.9770 heat=0.8757 peak_q=4.4163 wet=0.1983 div=3.1771 shift=0.1400 damage=1.8851
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.00 tct_gain=0.60 shear=0.0000 margin=-0.3431 amp=0.7347 freq=0.9930 heat=0.7332 peak_q=3.2078 wet=0.2286 div=2.3417 shift=0.2100 damage=1.4560
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.10 tct_gain=0.00 shear=0.8125 margin=-0.6351 amp=1.2749 freq=0.9515 heat=1.2576 peak_q=8.4476 wet=0.1489 div=5.9311 shift=0.0145 damage=3.2753
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.10 tct_gain=0.20 shear=0.8125 margin=-0.4798 amp=0.9876 freq=0.9675 heat=0.9786 peak_q=5.1778 wet=0.1890 div=3.7081 shift=0.0845 damage=2.1619
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.10 tct_gain=0.40 shear=0.8125 margin=-0.3575 amp=0.7614 freq=0.9835 heat=0.7579 peak_q=3.3709 wet=0.2248 div=2.4563 shift=0.1545 damage=1.5156
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.10 tct_gain=0.60 shear=0.8125 margin=-0.2782 amp=0.6146 freq=0.9995 heat=0.6145 peak_q=2.4090 wet=0.2551 div=1.7809 shift=0.2245 damage=1.1602
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.20 tct_gain=0.00 shear=1.6250 margin=-0.5749 amp=1.1636 freq=0.9574 heat=1.1497 peak_q=6.5948 wet=0.1743 div=4.6890 shift=0.0284 damage=2.6682
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.20 tct_gain=0.20 shear=1.6250 margin=-0.4196 amp=0.8762 freq=0.9734 heat=0.8697 peak_q=4.0553 wet=0.2145 div=2.9403 shift=0.0984 damage=1.7734
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.20 tct_gain=0.40 shear=1.6250 margin=-0.2973 amp=0.6500 freq=0.9894 heat=0.6481 peak_q=2.5893 wet=0.2503 div=1.9099 shift=0.1684 damage=1.2290
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.20 tct_gain=0.60 shear=1.6250 margin=-0.2180 amp=0.5032 freq=1.0054 heat=0.5040 peak_q=1.7964 wet=0.2806 div=1.3441 shift=0.2384 damage=0.9240
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.30 tct_gain=0.00 shear=2.4375 margin=-0.5228 amp=1.0671 freq=0.9623 heat=1.0558 peak_q=5.3358 wet=0.1979 div=3.8378 shift=0.0413 damage=2.2458
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.30 tct_gain=0.20 shear=2.4375 margin=-0.3674 amp=0.7797 freq=0.9783 heat=0.7750 peak_q=3.2563 wet=0.2380 div=2.3878 shift=0.1113 damage=1.4887
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.30 tct_gain=0.40 shear=2.4375 margin=-0.2452 amp=0.5535 freq=0.9943 heat=0.5526 peak_q=2.0182 wet=0.2738 div=1.5053 shift=0.1813 damage=1.0124
+[OK] edge_drive=0.70 v_tor=0.00 v_pol=0.30 tct_gain=0.60 shear=2.4375 margin=-0.1658 amp=0.4068 freq=1.0103 heat=0.4079 peak_q=1.3415 wet=0.3041 div=1.0147 shift=0.2513 damage=0.7420
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.00 tct_gain=0.00 shear=2.5000 margin=-0.5277 amp=1.0763 freq=0.9672 heat=1.0664 peak_q=5.3731 wet=0.1985 div=3.8658 shift=0.0698 damage=2.2628
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.00 tct_gain=0.20 shear=2.5000 margin=-0.3724 amp=0.7889 freq=0.9832 heat=0.7852 peak_q=3.2911 wet=0.2386 div=2.4140 shift=0.1398 damage=1.5047
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.00 tct_gain=0.40 shear=2.5000 margin=-0.2501 amp=0.5628 freq=0.9992 heat=0.5626 peak_q=2.0502 wet=0.2744 div=1.5295 shift=0.2098 damage=1.0275
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.00 tct_gain=0.60 shear=2.5000 margin=-0.1708 amp=0.4160 freq=1.0152 heat=0.4178 peak_q=1.3711 wet=0.3047 div=1.0374 shift=0.2798 damage=0.7563
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.10 tct_gain=0.00 shear=3.3125 margin=-0.4750 amp=0.9787 freq=0.9704 heat=0.9706 peak_q=4.3960 wet=0.2208 div=3.1971 shift=0.0811 damage=1.9238
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.10 tct_gain=0.20 shear=3.3125 margin=-0.3196 amp=0.6913 freq=0.9864 heat=0.6887 peak_q=2.6395 wet=0.2609 div=1.9567 shift=0.1511 damage=1.2632
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.10 tct_gain=0.40 shear=3.3125 margin=-0.1974 amp=0.4651 freq=1.0024 heat=0.4654 peak_q=1.5685 wet=0.2967 div=1.1824 shift=0.2211 damage=0.8367
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.10 tct_gain=0.60 shear=3.3125 margin=-0.1180 amp=0.3184 freq=1.0184 heat=0.3200 peak_q=0.9786 wet=0.3270 div=0.7481 shift=0.2911 damage=0.5920
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.20 tct_gain=0.00 shear=4.1250 margin=-0.4298 amp=0.8952 freq=0.9721 heat=0.8882 peak_q=3.6905 wet=0.2407 div=2.7097 shift=0.0907 damage=1.6727
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.20 tct_gain=0.20 shear=4.1250 margin=-0.2745 amp=0.6078 freq=0.9881 heat=0.6058 peak_q=2.1574 wet=0.2808 div=1.6144 shift=0.1607 damage=1.0789
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.20 tct_gain=0.40 shear=4.1250 margin=-0.1522 amp=0.3816 freq=1.0041 heat=0.3821 peak_q=1.2067 wet=0.3166 div=0.9181 shift=0.2307 damage=0.6883
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.20 tct_gain=0.60 shear=4.1250 margin=-0.0729 amp=0.2349 freq=1.0201 heat=0.2362 peak_q=0.6809 wet=0.3469 div=0.5252 shift=0.3007 damage=0.4627
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.30 tct_gain=0.00 shear=4.9375 margin=-0.3934 amp=0.8279 freq=0.9721 heat=0.8214 peak_q=3.1855 wet=0.2579 div=2.3581 shift=0.0987 damage=1.4891
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.30 tct_gain=0.20 shear=4.9375 margin=-0.2381 amp=0.5405 freq=0.9881 heat=0.5387 peak_q=1.8078 wet=0.2980 div=1.3636 shift=0.1687 damage=0.9417
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.30 tct_gain=0.40 shear=4.9375 margin=-0.1158 amp=0.3143 freq=1.0041 heat=0.3147 peak_q=0.9426 wet=0.3338 div=0.7228 shift=0.2387 damage=0.5766
+[OK] edge_drive=0.70 v_tor=0.20 v_pol=0.30 tct_gain=0.60 shear=4.9375 margin=-0.0365 amp=0.1675 freq=1.0201 heat=0.1685 peak_q=0.4628 wet=0.3641 div=0.3598 shift=0.3087 damage=0.3647
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.00 tct_gain=0.00 shear=5.0000 margin=-0.4128 amp=0.8638 freq=0.9766 heat=0.8581 peak_q=3.3489 wet=0.2562 div=2.4771 shift=0.1210 damage=1.5563
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.00 tct_gain=0.20 shear=5.0000 margin=-0.2575 amp=0.5764 freq=0.9926 heat=0.5752 peak_q=1.9409 wet=0.2964 div=1.4629 shift=0.1910 damage=0.9999
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.00 tct_gain=0.40 shear=5.0000 margin=-0.1352 amp=0.3502 freq=1.0086 heat=0.3510 peak_q=1.0567 wet=0.3322 div=0.8097 shift=0.2610 damage=0.6290
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.00 tct_gain=0.60 shear=5.0000 margin=-0.0559 amp=0.2034 freq=1.0246 heat=0.2048 peak_q=0.5651 wet=0.3625 div=0.4390 shift=0.3310 damage=0.4135
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.10 tct_gain=0.00 shear=5.8125 margin=-0.3746 amp=0.7930 freq=0.9750 heat=0.7875 peak_q=2.8958 wet=0.2720 div=2.1579 shift=0.1274 damage=1.3862
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.10 tct_gain=0.20 shear=5.8125 margin=-0.2193 amp=0.5057 freq=0.9910 heat=0.5044 peak_q=1.6163 wet=0.3121 div=1.2271 shift=0.1974 damage=0.8682
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.10 tct_gain=0.40 shear=5.8125 margin=-0.0970 amp=0.2795 freq=1.0070 heat=0.2800 peak_q=0.8049 wet=0.3479 div=0.6212 shift=0.2674 damage=0.5191
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.10 tct_gain=0.60 shear=5.8125 margin=-0.0177 amp=0.1327 freq=1.0230 heat=0.1336 peak_q=0.3532 wet=0.3782 div=0.2763 shift=0.3374 damage=0.3155
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.20 tct_gain=0.00 shear=6.6250 margin=-0.3419 amp=0.7326 freq=0.9721 heat=0.7269 peak_q=2.5466 wet=0.2854 div=1.9097 shift=0.1325 damage=1.2519
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.20 tct_gain=0.20 shear=6.6250 margin=-0.1866 amp=0.4452 freq=0.9881 heat=0.4437 peak_q=1.3630 wet=0.3255 div=1.0413 shift=0.2025 damage=0.7626
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.20 tct_gain=0.40 shear=6.6250 margin=-0.0643 amp=0.2190 freq=1.0041 heat=0.2193 peak_q=0.6068 wet=0.3614 div=0.4711 shift=0.2725 damage=0.4300
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.20 tct_gain=0.60 shear=6.6250 margin=0.0150 amp=0.1000 freq=1.0201 heat=0.1006 peak_q=0.2580 wet=0.3897 div=0.2029 shift=0.3425 damage=0.2707
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.30 tct_gain=0.00 shear=7.4375 margin=-0.3156 amp=0.6839 freq=0.9681 heat=0.6778 peak_q=2.2847 wet=0.2967 div=1.7223 shift=0.1365 damage=1.1491
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.30 tct_gain=0.20 shear=7.4375 margin=-0.1603 amp=0.3965 freq=0.9841 heat=0.3948 peak_q=1.1721 wet=0.3368 div=0.9000 shift=0.2065 damage=0.6812
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.30 tct_gain=0.40 shear=7.4375 margin=-0.0380 amp=0.1703 freq=1.0001 heat=0.1703 peak_q=0.4571 wet=0.3726 div=0.3568 shift=0.2765 damage=0.3610
+[OK] edge_drive=0.70 v_tor=0.40 v_pol=0.30 tct_gain=0.60 shear=7.4375 margin=0.0413 amp=0.1000 freq=1.0161 heat=0.1005 peak_q=0.2527 wet=0.3975 div=0.1994 shift=0.3465 damage=0.2684
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.00 tct_gain=0.00 shear=7.5000 margin=-0.3529 amp=0.7528 freq=0.9724 heat=0.7470 peak_q=2.5548 wet=0.2924 div=1.9221 shift=0.1509 damage=1.2640
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.00 tct_gain=0.20 shear=7.5000 margin=-0.1975 amp=0.4654 freq=0.9884 heat=0.4639 peak_q=1.3952 wet=0.3325 div=1.0693 shift=0.2209 damage=0.7820
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.00 tct_gain=0.40 shear=7.5000 margin=-0.0753 amp=0.2392 freq=1.0044 heat=0.2395 peak_q=0.6503 wet=0.3683 div=0.5065 shift=0.2909 damage=0.4529
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.00 tct_gain=0.60 shear=7.5000 margin=0.0041 amp=0.1000 freq=1.0204 heat=0.1006 peak_q=0.2526 wet=0.3981 div=0.1994 shift=0.3609 damage=0.2691
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.10 tct_gain=0.00 shear=8.3125 margin=-0.3223 amp=0.6963 freq=0.9674 heat=0.6899 peak_q=2.2783 wet=0.3028 div=1.7224 shift=0.1539 damage=1.1529
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.10 tct_gain=0.20 shear=8.3125 margin=-0.1670 amp=0.4089 freq=0.9834 heat=0.4070 peak_q=1.1867 wet=0.3429 div=0.9138 shift=0.2239 damage=0.6914
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.10 tct_gain=0.40 shear=8.3125 margin=-0.0447 amp=0.1827 freq=0.9994 heat=0.1827 peak_q=0.4822 wet=0.3788 div=0.3774 shift=0.2939 damage=0.3744
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.10 tct_gain=0.60 shear=8.3125 margin=0.0346 amp=0.1000 freq=1.0154 heat=0.1004 peak_q=0.2483 wet=0.4046 div=0.1965 shift=0.3639 damage=0.2670
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.20 tct_gain=0.00 shear=9.1250 margin=-0.2954 amp=0.6465 freq=0.9618 heat=0.6395 peak_q=2.0519 wet=0.3117 div=1.5576 shift=0.1562 damage=1.0600
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.20 tct_gain=0.20 shear=9.1250 margin=-0.1400 amp=0.3591 freq=0.9778 heat=0.3568 peak_q=1.0143 wet=0.3518 div=0.7842 shift=0.2262 damage=0.6147
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.20 tct_gain=0.40 shear=9.1250 margin=-0.0178 amp=0.1329 freq=0.9938 heat=0.1327 peak_q=0.3422 wet=0.3876 div=0.2689 shift=0.2962 damage=0.3075
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.20 tct_gain=0.60 shear=9.1250 margin=0.0616 amp=0.1000 freq=1.0098 heat=0.1003 peak_q=0.2446 wet=0.4099 div=0.1941 shift=0.3662 damage=0.2650
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.30 tct_gain=0.00 shear=9.9375 margin=-0.2733 amp=0.6056 freq=0.9556 heat=0.5981 peak_q=1.8751 wet=0.3190 div=1.4281 shift=0.1580 damage=0.9861
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.30 tct_gain=0.20 shear=9.9375 margin=-0.1180 amp=0.3182 freq=0.9716 heat=0.3157 peak_q=0.8792 wet=0.3591 div=0.6819 shift=0.2280 damage=0.5535
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.30 tct_gain=0.40 shear=9.9375 margin=0.0043 amp=0.1000 freq=0.9876 heat=0.0997 peak_q=0.2527 wet=0.3944 div=0.1991 shift=0.2980 damage=0.2638
+[OK] edge_drive=0.70 v_tor=0.60 v_pol=0.30 tct_gain=0.60 shear=9.9375 margin=0.0836 amp=0.1000 freq=1.0036 heat=0.1001 peak_q=0.2416 wet=0.4144 div=0.1921 shift=0.3680 damage=0.2630
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.00 tct_gain=0.00 shear=0.0000 margin=-0.8500 amp=1.6725 freq=1.0725 heat=1.7065 peak_q=16.5796 wet=0.1029 div=11.3740 shift=0.0000 damage=5.9448
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.00 tct_gain=0.20 shear=0.0000 margin=-0.6947 amp=1.3851 freq=1.0885 heat=1.4194 peak_q=9.9232 wet=0.1430 div=6.9469 shift=0.0700 damage=3.8122
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.00 tct_gain=0.40 shear=0.0000 margin=-0.5724 amp=1.1589 freq=1.1045 heat=1.1928 peak_q=6.6685 wet=0.1789 div=4.7520 shift=0.1400 damage=2.7292
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.00 tct_gain=0.60 shear=0.0000 margin=-0.4931 amp=1.0122 freq=1.1205 heat=1.0463 peak_q=5.0027 wet=0.2091 div=3.6180 shift=0.2100 damage=2.1614
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.10 tct_gain=0.00 shear=0.8125 margin=-0.7851 amp=1.5524 freq=1.0790 heat=1.5868 peak_q=12.2579 wet=0.1295 div=8.5230 shift=0.0145 damage=4.5917
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.10 tct_gain=0.20 shear=0.8125 margin=-0.6298 amp=1.2651 freq=1.0950 heat=1.2987 peak_q=7.6590 wet=0.1696 div=5.4329 shift=0.0845 damage=3.0759
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.10 tct_gain=0.40 shear=0.8125 margin=-0.5075 amp=1.0389 freq=1.1110 heat=1.0712 peak_q=5.2150 wet=0.2054 div=3.7647 shift=0.1545 damage=2.2357
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.10 tct_gain=0.60 shear=0.8125 margin=-0.4282 amp=0.8921 freq=1.1270 heat=0.9238 peak_q=3.9200 wet=0.2357 div=2.8713 shift=0.2245 damage=1.7788
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.20 tct_gain=0.00 shear=1.6250 margin=-0.7249 amp=1.4411 freq=1.0849 heat=1.4753 peak_q=9.5238 wet=0.1549 div=6.7069 shift=0.0284 damage=3.7188
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.20 tct_gain=0.20 shear=1.6250 margin=-0.5696 amp=1.1537 freq=1.1009 heat=1.1863 peak_q=6.0826 wet=0.1950 div=4.3689 shift=0.0984 damage=2.5499
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.20 tct_gain=0.40 shear=1.6250 margin=-0.4473 amp=0.9275 freq=1.1169 heat=0.9579 peak_q=4.1491 wet=0.2309 div=3.0322 shift=0.1684 damage=1.8625
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.20 tct_gain=0.60 shear=1.6250 margin=-0.3680 amp=0.7807 freq=1.1329 heat=0.8098 peak_q=3.1011 wet=0.2611 div=2.2991 shift=0.2384 damage=1.4794
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.30 tct_gain=0.00 shear=2.4375 margin=-0.6728 amp=1.3446 freq=1.0898 heat=1.3784 peak_q=7.7243 wet=0.1785 div=5.5032 shift=0.0413 damage=3.1330
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.30 tct_gain=0.20 shear=2.4375 margin=-0.5174 amp=1.0572 freq=1.1058 heat=1.0885 peak_q=4.9803 wet=0.2186 div=3.6182 shift=0.1113 damage=2.1730
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.30 tct_gain=0.40 shear=2.4375 margin=-0.3952 amp=0.8310 freq=1.1218 heat=0.8594 peak_q=3.3780 wet=0.2544 div=2.4965 shift=0.1813 damage=1.5847
+[OK] edge_drive=0.85 v_tor=0.00 v_pol=0.30 tct_gain=0.60 shear=2.4375 margin=-0.3158 amp=0.6843 freq=1.1378 heat=0.7107 peak_q=2.4964 wet=0.2847 div=1.8714 shift=0.2513 damage=1.2512
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.00 tct_gain=0.00 shear=2.5000 margin=-0.6777 amp=1.3538 freq=1.0947 heat=1.3897 peak_q=7.7616 wet=0.1791 div=5.5314 shift=0.0698 damage=3.1502
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.00 tct_gain=0.20 shear=2.5000 margin=-0.5224 amp=1.0664 freq=1.1107 heat=1.0995 peak_q=5.0166 wet=0.2192 div=3.6456 shift=0.1398 damage=2.1898
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.00 tct_gain=0.40 shear=2.5000 margin=-0.4001 amp=0.8403 freq=1.1267 heat=0.8701 peak_q=3.4120 wet=0.2550 div=2.5223 shift=0.2098 damage=1.6006
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.00 tct_gain=0.60 shear=2.5000 margin=-0.3208 amp=0.6935 freq=1.1427 heat=0.7212 peak_q=2.5281 wet=0.2853 div=1.8957 shift=0.2798 damage=1.2664
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.10 tct_gain=0.00 shear=3.3125 margin=-0.6250 amp=1.2562 freq=1.0979 heat=1.2906 peak_q=6.4094 wet=0.2014 div=4.6178 shift=0.0811 damage=2.6975
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.10 tct_gain=0.20 shear=3.3125 margin=-0.4696 amp=0.9688 freq=1.1139 heat=0.9997 peak_q=4.1399 wet=0.2415 div=3.0408 shift=0.1511 damage=1.8794
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.10 tct_gain=0.40 shear=3.3125 margin=-0.3474 amp=0.7426 freq=1.1299 heat=0.7696 peak_q=2.7753 wet=0.2773 div=2.0733 shift=0.2211 damage=1.3620
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.10 tct_gain=0.60 shear=3.3125 margin=-0.2680 amp=0.5959 freq=1.1459 heat=0.6202 peak_q=2.0163 wet=0.3076 div=1.5277 shift=0.2911 damage=1.0651
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.20 tct_gain=0.00 shear=4.1250 margin=-0.5798 amp=1.1727 freq=1.0996 heat=1.2054 peak_q=5.4482 wet=0.2212 div=3.9632 shift=0.0907 damage=2.3685
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.20 tct_gain=0.20 shear=4.1250 margin=-0.4245 amp=0.8853 freq=1.1156 heat=0.9140 peak_q=3.4969 wet=0.2614 div=2.5929 shift=0.1607 damage=1.6457
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.20 tct_gain=0.40 shear=4.1250 margin=-0.3022 amp=0.6591 freq=1.1316 heat=0.6834 peak_q=2.2995 wet=0.2972 div=1.7339 shift=0.2307 damage=1.1783
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.20 tct_gain=0.60 shear=4.1250 margin=-0.2229 amp=0.5124 freq=1.1476 heat=0.5335 peak_q=1.6293 wet=0.3275 div=1.2458 shift=0.3007 damage=0.9078
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.30 tct_gain=0.00 shear=4.9375 margin=-0.5434 amp=1.1054 freq=1.0996 heat=1.1362 peak_q=4.7653 wet=0.2384 div=3.4951 shift=0.0987 damage=2.1305
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.30 tct_gain=0.20 shear=4.9375 margin=-0.3881 amp=0.8180 freq=1.1156 heat=0.8445 peak_q=3.0317 wet=0.2785 div=2.2661 shift=0.1687 damage=1.4728
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.30 tct_gain=0.40 shear=4.9375 margin=-0.2658 amp=0.5918 freq=1.1316 heat=0.6136 peak_q=1.9518 wet=0.3144 div=1.4834 shift=0.2387 damage=1.0406
+[OK] edge_drive=0.85 v_tor=0.20 v_pol=0.30 tct_gain=0.60 shear=4.9375 margin=-0.1865 amp=0.4450 freq=1.1476 heat=0.4634 peak_q=1.3446 wet=0.3447 div=1.0362 shift=0.3087 damage=0.7889
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.00 tct_gain=0.00 shear=5.0000 margin=-0.5628 amp=1.1413 freq=1.1041 heat=1.1745 peak_q=4.9598 wet=0.2368 div=3.6350 shift=0.1210 damage=2.2078
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.00 tct_gain=0.20 shear=5.0000 margin=-0.4075 amp=0.8539 freq=1.1201 heat=0.8826 peak_q=3.1871 wet=0.2769 div=2.3805 shift=0.1910 damage=1.5383
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.00 tct_gain=0.40 shear=5.0000 margin=-0.2852 amp=0.6277 freq=1.1361 heat=0.6516 peak_q=2.0834 wet=0.3128 div=1.5823 shift=0.2610 damage=1.0989
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.00 tct_gain=0.60 shear=5.0000 margin=-0.2059 amp=0.4809 freq=1.1521 heat=0.5014 peak_q=1.4617 wet=0.3430 div=1.1256 shift=0.3310 damage=0.8428
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.10 tct_gain=0.00 shear=5.8125 margin=-0.5246 amp=1.0705 freq=1.1025 heat=1.1013 peak_q=4.3611 wet=0.2525 div=3.2201 shift=0.1274 damage=1.9929
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.10 tct_gain=0.20 shear=5.8125 margin=-0.3693 amp=0.7832 freq=1.1185 heat=0.8092 peak_q=2.7650 wet=0.2926 div=2.0804 shift=0.1974 damage=1.3763
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.10 tct_gain=0.40 shear=5.8125 margin=-0.2470 amp=0.5570 freq=1.1345 heat=0.5780 peak_q=1.7595 wet=0.3285 div=1.3460 shift=0.2674 damage=0.9663
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.10 tct_gain=0.60 shear=5.8125 margin=-0.1677 amp=0.4102 freq=1.1505 heat=0.4275 peak_q=1.1916 wet=0.3587 div=0.9242 shift=0.3374 damage=0.7262
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.20 tct_gain=0.00 shear=6.6250 margin=-0.4919 amp=1.0101 freq=1.0996 heat=1.0383 peak_q=3.9033 wet=0.2660 div=2.9005 shift=0.1325 damage=1.8250
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.20 tct_gain=0.20 shear=6.6250 margin=-0.3366 amp=0.7227 freq=1.1156 heat=0.7461 peak_q=2.4373 wet=0.3061 div=1.8454 shift=0.2025 damage=1.2475
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.20 tct_gain=0.40 shear=6.6250 margin=-0.2143 amp=0.4965 freq=1.1316 heat=0.5148 peak_q=1.5055 wet=0.3420 div=1.1588 shift=0.2725 damage=0.8595
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.20 tct_gain=0.60 shear=6.6250 margin=-0.1350 amp=0.3498 freq=1.1476 heat=0.3642 peak_q=0.9785 wet=0.3722 div=0.7635 shift=0.3425 damage=0.6316
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.30 tct_gain=0.00 shear=7.4375 margin=-0.4656 amp=0.9614 freq=1.0956 heat=0.9872 peak_q=3.5606 wet=0.2772 div=2.6599 shift=0.1365 damage=1.6972
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.30 tct_gain=0.20 shear=7.4375 margin=-0.3103 amp=0.6740 freq=1.1116 heat=0.6951 peak_q=2.1902 wet=0.3174 div=1.6669 shift=0.2065 damage=1.1484
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.30 tct_gain=0.40 shear=7.4375 margin=-0.1880 amp=0.4478 freq=1.1276 heat=0.4638 peak_q=1.3133 wet=0.3532 div=1.0160 shift=0.2765 damage=0.7769
+[OK] edge_drive=0.85 v_tor=0.40 v_pol=0.30 tct_gain=0.60 shear=7.4375 margin=-0.1087 amp=0.3011 freq=1.1436 heat=0.3132 peak_q=0.8167 wet=0.3835 div=0.6405 shift=0.3465 damage=0.5581
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.00 tct_gain=0.00 shear=7.5000 margin=-0.5029 amp=1.0303 freq=1.0999 heat=1.0591 peak_q=3.8801 wet=0.2730 div=2.8928 shift=0.1509 damage=1.8281
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.00 tct_gain=0.20 shear=7.5000 margin=-0.3475 amp=0.7429 freq=1.1159 heat=0.7670 peak_q=2.4499 wet=0.3131 div=1.8609 shift=0.2209 damage=1.2613
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.00 tct_gain=0.40 shear=7.5000 margin=-0.2253 amp=0.5167 freq=1.1319 heat=0.5358 peak_q=1.5357 wet=0.3489 div=1.1857 shift=0.2909 damage=0.8786
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.00 tct_gain=0.60 shear=7.5000 margin=-0.1459 amp=0.3700 freq=1.1479 heat=0.3853 peak_q=1.0161 wet=0.3792 div=0.7953 shift=0.3609 damage=0.6530
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.10 tct_gain=0.00 shear=8.3125 margin=-0.4723 amp=0.9738 freq=1.0949 heat=0.9997 peak_q=3.5274 wet=0.2834 div=2.6427 shift=0.1539 damage=1.6932
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.10 tct_gain=0.20 shear=8.3125 margin=-0.3170 amp=0.6864 freq=1.1109 heat=0.7077 peak_q=2.1875 wet=0.3235 div=1.6696 shift=0.2239 damage=1.1535
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.10 tct_gain=0.40 shear=8.3125 margin=-0.1947 amp=0.4602 freq=1.1269 heat=0.4765 peak_q=1.3261 wet=0.3593 div=1.0288 shift=0.2939 damage=0.7867
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.10 tct_gain=0.60 shear=8.3125 margin=-0.1154 amp=0.3134 freq=1.1429 heat=0.3260 peak_q=0.8366 wet=0.3896 div=0.6579 shift=0.3639 damage=0.5701
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.20 tct_gain=0.00 shear=9.1250 margin=-0.4454 amp=0.9240 freq=1.0893 heat=0.9471 peak_q=3.2405 wet=0.2923 div=2.4378 shift=0.1562 damage=1.5812
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.20 tct_gain=0.20 shear=9.1250 margin=-0.2900 amp=0.6366 freq=1.1053 heat=0.6553 peak_q=1.9717 wet=0.3324 div=1.5110 shift=0.2262 damage=1.0629
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.20 tct_gain=0.40 shear=9.1250 margin=-0.1678 amp=0.4104 freq=1.1213 heat=0.4243 peak_q=1.1524 wet=0.3682 div=0.8976 shift=0.2962 damage=0.7088
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.20 tct_gain=0.60 shear=9.1250 margin=-0.0884 amp=0.2636 freq=1.1373 heat=0.2738 peak_q=0.6870 wet=0.3985 div=0.5424 shift=0.3662 damage=0.4995
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.30 tct_gain=0.00 shear=9.9375 margin=-0.4233 amp=0.8831 freq=1.0831 heat=0.9037 peak_q=3.0169 wet=0.2995 div=2.2772 shift=0.1580 damage=1.4925
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.30 tct_gain=0.20 shear=9.9375 margin=-0.2680 amp=0.5957 freq=1.0991 heat=0.6122 peak_q=1.8026 wet=0.3397 div=1.3860 shift=0.2280 damage=0.9907
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.30 tct_gain=0.40 shear=9.9375 margin=-0.1457 amp=0.3695 freq=1.1151 heat=0.3814 peak_q=1.0159 wet=0.3755 div=0.7938 shift=0.2980 damage=0.6464
+[OK] edge_drive=0.85 v_tor=0.60 v_pol=0.30 tct_gain=0.60 shear=9.9375 margin=-0.0664 amp=0.2228 freq=1.1311 heat=0.2309 peak_q=0.5692 wet=0.4058 div=0.4508 shift=0.3680 damage=0.4427
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.00 tct_gain=0.00 shear=0.0000 margin=-1.0000 amp=1.9500 freq=1.2000 heat=2.0592 peak_q=20.0000 wet=0.0835 div=13.7207 shift=0.0000 damage=7.1537
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.00 tct_gain=0.20 shear=0.0000 margin=-0.8447 amp=1.6626 freq=1.2160 heat=1.7632 peak_q=14.2631 wet=0.1236 div=9.8881 shift=0.0700 damage=5.2933
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.00 tct_gain=0.40 shear=0.0000 margin=-0.7224 amp=1.4364 freq=1.2320 heat=1.5297 peak_q=9.5938 wet=0.1595 div=6.7714 shift=0.1400 damage=3.7832
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.00 tct_gain=0.60 shear=0.0000 margin=-0.6431 amp=1.2897 freq=1.2480 heat=1.3792 peak_q=7.2696 wet=0.1897 div=5.2080 shift=0.2100 damage=3.0162
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.10 tct_gain=0.00 shear=0.8125 margin=-0.9351 amp=1.8299 freq=1.2065 heat=1.9358 peak_q=17.5938 wet=0.1100 div=12.1135 shift=0.0145 damage=6.3737
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.10 tct_gain=0.20 shear=0.8125 margin=-0.7798 amp=1.5426 freq=1.2225 heat=1.6387 peak_q=10.9140 wet=0.1501 div=7.6677 shift=0.0845 damage=4.2300
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.10 tct_gain=0.40 shear=0.8125 margin=-0.6575 amp=1.3164 freq=1.2385 heat=1.4043 peak_q=7.5509 wet=0.1860 div=5.3996 shift=0.1545 damage=3.1114
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.10 tct_gain=0.60 shear=0.8125 margin=-0.5782 amp=1.1696 freq=1.2545 heat=1.2530 peak_q=5.7941 wet=0.2162 div=4.2047 shift=0.2245 damage=2.5143
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.20 tct_gain=0.00 shear=1.6250 margin=-0.8749 amp=1.7186 freq=1.2124 heat=1.8208 peak_q=13.4391 wet=0.1355 div=9.3727 shift=0.0284 damage=5.0731
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.20 tct_gain=0.20 shear=1.6250 margin=-0.7196 amp=1.4312 freq=1.2284 heat=1.5227 peak_q=8.6714 wet=0.1756 div=6.1694 shift=0.0984 damage=3.5027
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.20 tct_gain=0.40 shear=1.6250 margin=-0.5973 amp=1.2050 freq=1.2444 heat=1.2875 peak_q=6.0892 wet=0.2114 div=4.4086 shift=0.1684 damage=2.6180
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.20 tct_gain=0.60 shear=1.6250 margin=-0.5180 amp=1.0582 freq=1.2604 heat=1.1354 peak_q=4.6974 wet=0.2417 div=3.4507 shift=0.2384 damage=2.1301
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.30 tct_gain=0.00 shear=2.4375 margin=-0.8228 amp=1.6221 freq=1.2173 heat=1.7208 peak_q=10.8208 wet=0.1590 div=7.6358 shift=0.0413 damage=4.2406
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.30 tct_gain=0.20 shear=2.4375 margin=-0.6674 amp=1.3347 freq=1.2333 heat=1.4219 peak_q=7.1400 wet=0.1991 div=5.1387 shift=0.1113 damage=2.9959
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.30 tct_gain=0.40 shear=2.4375 margin=-0.5452 amp=1.1085 freq=1.2493 heat=1.1859 peak_q=5.0469 wet=0.2350 div=3.6956 shift=0.1813 damage=2.2576
+[OK] edge_drive=1.00 v_tor=0.00 v_pol=0.30 tct_gain=0.60 shear=2.4375 margin=-0.4658 amp=0.9618 freq=1.2653 heat=1.0332 peak_q=3.8952 wet=0.2653 div=2.8935 shift=0.2513 damage=1.8415
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.00 tct_gain=0.00 shear=2.5000 margin=-0.8277 amp=1.6313 freq=1.2222 heat=1.7328 peak_q=10.8555 wet=0.1596 div=7.6625 shift=0.0698 damage=4.2573
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.00 tct_gain=0.20 shear=2.5000 margin=-0.6724 amp=1.3439 freq=1.2382 heat=1.4336 peak_q=7.1770 wet=0.1997 div=5.1668 shift=0.1398 damage=3.0131
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.00 tct_gain=0.40 shear=2.5000 margin=-0.5501 amp=1.1178 freq=1.2542 heat=1.1973 peak_q=5.0824 wet=0.2356 div=3.7226 shift=0.2098 damage=2.2743
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.00 tct_gain=0.60 shear=2.5000 margin=-0.4708 amp=0.9710 freq=1.2702 heat=1.0445 peak_q=3.9287 wet=0.2659 div=2.9192 shift=0.2798 damage=1.8575
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.10 tct_gain=0.00 shear=3.3125 margin=-0.7750 amp=1.5337 freq=1.2254 heat=1.6305 peak_q=8.9617 wet=0.1819 div=6.3958 shift=0.0811 damage=3.6408
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.10 tct_gain=0.20 shear=3.3125 margin=-0.6196 amp=1.2463 freq=1.2414 heat=1.3306 peak_q=5.9919 wet=0.2221 div=4.3604 shift=0.1511 damage=2.6090
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.10 tct_gain=0.40 shear=3.3125 margin=-0.4974 amp=1.0201 freq=1.2574 heat=1.0937 peak_q=4.2407 wet=0.2579 div=3.1393 shift=0.2211 damage=1.9729
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.10 tct_gain=0.60 shear=3.3125 margin=-0.4180 amp=0.8734 freq=1.2734 heat=0.9402 peak_q=3.2628 wet=0.2882 div=2.4499 shift=0.2911 damage=1.6087
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.20 tct_gain=0.00 shear=4.1250 margin=-0.7298 amp=1.4502 freq=1.2271 heat=1.5424 peak_q=7.6424 wet=0.2018 div=5.5074 shift=0.0907 damage=3.2032
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.20 tct_gain=0.20 shear=4.1250 margin=-0.5745 amp=1.1628 freq=1.2431 heat=1.2420 peak_q=5.1333 wet=0.2419 div=3.7714 shift=0.1607 damage=2.3094
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.20 tct_gain=0.40 shear=4.1250 margin=-0.4522 amp=0.9366 freq=1.2591 heat=1.0046 peak_q=3.6165 wet=0.2778 div=2.7023 shift=0.2307 damage=1.7435
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.20 tct_gain=0.60 shear=4.1250 margin=-0.3729 amp=0.7899 freq=1.2751 heat=0.8507 peak_q=2.7616 wet=0.3080 div=2.0928 shift=0.3007 damage=1.4160
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.30 tct_gain=0.00 shear=4.9375 margin=-0.6934 amp=1.3829 freq=1.2271 heat=1.4708 peak_q=6.7159 wet=0.2190 div=4.8801 shift=0.0987 damage=2.8912
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.30 tct_gain=0.20 shear=4.9375 margin=-0.5381 amp=1.0955 freq=1.2431 heat=1.1700 peak_q=4.5154 wet=0.2591 div=3.3445 shift=0.1687 damage=2.0898
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.30 tct_gain=0.40 shear=4.9375 margin=-0.4158 amp=0.8693 freq=1.2591 heat=0.9324 peak_q=3.1610 wet=0.2950 div=2.3810 shift=0.2387 damage=1.5725
+[OK] edge_drive=1.00 v_tor=0.20 v_pol=0.30 tct_gain=0.60 shear=4.9375 margin=-0.3365 amp=0.7225 freq=1.2751 heat=0.7782 peak_q=2.3928 wet=0.3252 div=1.8277 shift=0.3087 damage=1.2708
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.00 tct_gain=0.00 shear=5.0000 margin=-0.7128 amp=1.4188 freq=1.2316 heat=1.5108 peak_q=6.9498 wet=0.2174 div=5.0461 shift=0.1210 damage=2.9809
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.00 tct_gain=0.20 shear=5.0000 margin=-0.5575 amp=1.1314 freq=1.2476 heat=1.2098 peak_q=4.6983 wet=0.2575 div=3.4773 shift=0.1910 damage=2.1642
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.00 tct_gain=0.40 shear=5.0000 margin=-0.4352 amp=0.9052 freq=1.2636 heat=0.9720 peak_q=3.3136 wet=0.2933 div=2.4941 shift=0.2610 damage=1.6377
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.00 tct_gain=0.60 shear=5.0000 margin=-0.3559 amp=0.7584 freq=1.2796 heat=0.8178 peak_q=2.5272 wet=0.3236 div=1.9289 shift=0.3310 damage=1.3306
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.10 tct_gain=0.00 shear=5.8125 margin=-0.6746 amp=1.3480 freq=1.2300 heat=1.4349 peak_q=6.1556 wet=0.2331 div=4.5033 shift=0.1274 damage=2.7063
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.10 tct_gain=0.20 shear=5.8125 margin=-0.5193 amp=1.0607 freq=1.2460 heat=1.1337 peak_q=4.1495 wet=0.2732 div=3.0940 shift=0.1974 damage=1.9631
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.10 tct_gain=0.40 shear=5.8125 margin=-0.3970 amp=0.8345 freq=1.2620 heat=0.8957 peak_q=2.8982 wet=0.3091 div=2.1973 shift=0.2674 damage=1.4766
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.10 tct_gain=0.60 shear=5.8125 margin=-0.3177 amp=0.6877 freq=1.2780 heat=0.7412 peak_q=2.1845 wet=0.3393 div=1.6793 shift=0.3374 damage=1.1912
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.20 tct_gain=0.00 shear=6.6250 margin=-0.6419 amp=1.2876 freq=1.2271 heat=1.3695 peak_q=5.5540 wet=0.2466 div=4.0894 shift=0.1325 damage=2.4943
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.20 tct_gain=0.20 shear=6.6250 margin=-0.4866 amp=1.0002 freq=1.2431 heat=1.0683 peak_q=3.7263 wet=0.2867 div=2.7960 shift=0.2025 damage=1.8047
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.20 tct_gain=0.40 shear=6.6250 margin=-0.3643 amp=0.7740 freq=1.2591 heat=0.8302 peak_q=2.5740 wet=0.3225 div=1.9636 shift=0.2725 damage=1.3478
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.20 tct_gain=0.60 shear=6.6250 margin=-0.2850 amp=0.6273 freq=1.2751 heat=0.6756 peak_q=1.9149 wet=0.3528 div=1.4811 shift=0.3425 damage=1.0787
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.30 tct_gain=0.00 shear=7.4375 margin=-0.6156 amp=1.2389 freq=1.2231 heat=1.3163 peak_q=5.1056 wet=0.2578 div=3.7793 shift=0.1365 damage=2.3340
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.30 tct_gain=0.20 shear=7.4375 margin=-0.4603 amp=0.9515 freq=1.2391 heat=1.0152 peak_q=3.4075 wet=0.2979 div=2.5702 shift=0.2065 damage=1.6833
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.30 tct_gain=0.40 shear=7.4375 margin=-0.3380 amp=0.7253 freq=1.2551 heat=0.7771 peak_q=2.3284 wet=0.3338 div=1.7855 shift=0.2765 damage=1.2483
+[OK] edge_drive=1.00 v_tor=0.40 v_pol=0.30 tct_gain=0.60 shear=7.4375 margin=-0.2587 amp=0.5786 freq=1.2711 heat=0.6225 peak_q=1.7099 wet=0.3640 div=1.3293 shift=0.3465 damage=0.9915
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.00 tct_gain=0.00 shear=7.5000 margin=-0.6529 amp=1.3078 freq=1.2274 heat=1.3911 peak_q=5.4866 wet=0.2535 div=4.0532 shift=0.1509 damage=2.4845
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.00 tct_gain=0.20 shear=7.5000 margin=-0.4975 amp=1.0204 freq=1.2434 heat=1.0900 peak_q=3.7117 wet=0.2937 div=2.7941 shift=0.2209 damage=1.8106
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.00 tct_gain=0.40 shear=7.5000 margin=-0.3753 amp=0.7942 freq=1.2594 heat=0.8519 peak_q=2.5856 wet=0.3295 div=1.9788 shift=0.2909 damage=1.3617
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.00 tct_gain=0.60 shear=7.5000 margin=-0.2959 amp=0.6475 freq=1.2754 heat=0.6974 peak_q=1.9385 wet=0.3598 div=1.5041 shift=0.3609 damage=1.0962
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.10 tct_gain=0.00 shear=8.3125 margin=-0.6223 amp=1.2513 freq=1.2224 heat=1.3292 peak_q=5.0354 wet=0.2640 div=3.7382 shift=0.1539 damage=2.3190
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.10 tct_gain=0.20 shear=8.3125 margin=-0.4670 amp=0.9639 freq=1.2384 heat=1.0282 peak_q=3.3813 wet=0.3041 div=2.5578 shift=0.2239 damage=1.6815
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.10 tct_gain=0.40 shear=8.3125 margin=-0.3447 amp=0.7377 freq=1.2544 heat=0.7902 peak_q=2.3248 wet=0.3399 div=1.7877 shift=0.2939 damage=1.2534
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.10 tct_gain=0.60 shear=8.3125 margin=-0.2654 amp=0.5909 freq=1.2704 heat=0.6357 peak_q=1.7171 wet=0.3702 div=1.3386 shift=0.3639 damage=0.9998
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.20 tct_gain=0.00 shear=9.1250 margin=-0.5954 amp=1.2015 freq=1.2168 heat=1.2744 peak_q=4.6710 wet=0.2728 div=3.4822 shift=0.1562 damage=2.1829
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.20 tct_gain=0.20 shear=9.1250 margin=-0.4400 amp=0.9141 freq=1.2328 heat=0.9736 peak_q=3.1112 wet=0.3129 div=2.3631 shift=0.2262 damage=1.5738
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.20 tct_gain=0.40 shear=9.1250 margin=-0.3178 amp=0.6879 freq=1.2488 heat=0.7358 peak_q=2.1097 wet=0.3488 div=1.6288 shift=0.2962 damage=1.1622
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.20 tct_gain=0.60 shear=9.1250 margin=-0.2384 amp=0.5411 freq=1.2648 heat=0.5812 peak_q=1.5334 wet=0.3791 div=1.2002 shift=0.3662 damage=0.9180
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.30 tct_gain=0.00 shear=9.9375 margin=-0.5733 amp=1.1606 freq=1.2106 heat=1.2290 peak_q=4.3877 wet=0.2801 div=3.2822 shift=0.1580 damage=2.0755
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.30 tct_gain=0.20 shear=9.9375 margin=-0.4180 amp=0.8732 freq=1.2266 heat=0.9286 peak_q=2.8999 wet=0.3202 div=2.2099 shift=0.2280 damage=1.4881
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.30 tct_gain=0.40 shear=9.9375 margin=-0.2957 amp=0.6470 freq=1.2426 heat=0.6910 peak_q=1.9406 wet=0.3561 div=1.5033 shift=0.2980 damage=1.0893
+[OK] edge_drive=1.00 v_tor=0.60 v_pol=0.30 tct_gain=0.60 shear=9.9375 margin=-0.2164 amp=0.5003 freq=1.2586 heat=0.5365 peak_q=1.3887 wet=0.3863 div=1.0904 shift=0.3680 damage=0.8524
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.00 tct_gain=0.00 shear=0.0000 margin=-1.1500 amp=2.2275 freq=1.3275 heat=2.4318 peak_q=20.0000 wet=0.0641 div=13.8511 shift=0.0000 damage=7.3443
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.00 tct_gain=0.20 shear=0.0000 margin=-0.9947 amp=1.9401 freq=1.3435 heat=2.1267 peak_q=20.0000 wet=0.1042 div=13.7443 shift=0.0700 damage=7.2014
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.00 tct_gain=0.40 shear=0.0000 margin=-0.8724 amp=1.7139 freq=1.3595 heat=1.8864 peak_q=13.4722 wet=0.1400 div=9.4172 shift=0.1400 damage=5.1310
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.00 tct_gain=0.60 shear=0.0000 margin=-0.7931 amp=1.5672 freq=1.3755 heat=1.7319 peak_q=10.1700 wet=0.1703 div=7.2167 shift=0.2100 damage=4.0690
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.10 tct_gain=0.00 shear=0.8125 margin=-1.0851 amp=2.1074 freq=1.3340 heat=2.3045 peak_q=20.0000 wet=0.0906 div=13.8066 shift=0.0145 damage=7.2847
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.10 tct_gain=0.20 shear=0.8125 margin=-0.9298 amp=1.8201 freq=1.3500 heat=1.9984 peak_q=15.2881 wet=0.1307 div=10.6367 shift=0.0845 damage=5.7278
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.10 tct_gain=0.40 shear=0.8125 margin=-0.8075 amp=1.5939 freq=1.3660 heat=1.7572 peak_q=10.5506 wet=0.1666 div=7.4729 shift=0.1545 damage=4.1941
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.10 tct_gain=0.60 shear=0.8125 margin=-0.7282 amp=1.4471 freq=1.3820 heat=1.6019 peak_q=8.1387 wet=0.1968 div=5.8508 shift=0.2245 damage=3.3989
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.20 tct_gain=0.00 shear=1.6250 margin=-1.0249 amp=1.9961 freq=1.3399 heat=2.1861 peak_q=18.8356 wet=0.1161 div=13.0082 shift=0.0284 damage=6.8798
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.20 tct_gain=0.20 shear=1.6250 margin=-0.8696 amp=1.7087 freq=1.3559 heat=1.8790 peak_q=12.0310 wet=0.1562 div=8.4778 shift=0.0984 damage=4.6947
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.20 tct_gain=0.40 shear=1.6250 margin=-0.7473 amp=1.4825 freq=1.3719 heat=1.6369 peak_q=8.5250 wet=0.1920 div=6.1141 shift=0.1684 damage=3.5301
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.20 tct_gain=0.60 shear=1.6250 margin=-0.6680 amp=1.3357 freq=1.3879 heat=1.4808 peak_q=6.6618 wet=0.2223 div=4.8485 shift=0.2384 damage=2.8993
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.30 tct_gain=0.00 shear=2.4375 margin=-0.9728 amp=1.8996 freq=1.3448 heat=2.0830 peak_q=14.9209 wet=0.1396 div=10.4277 shift=0.0413 damage=5.6571
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.30 tct_gain=0.20 shear=2.4375 margin=-0.8174 amp=1.6122 freq=1.3608 heat=1.7751 peak_q=9.8770 wet=0.1797 div=7.0413 shift=0.1113 damage=3.9998
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.30 tct_gain=0.40 shear=2.4375 margin=-0.6952 amp=1.3860 freq=1.3768 heat=1.5323 peak_q=7.1085 wet=0.2156 div=5.1568 shift=0.1813 damage=3.0562
+[OK] edge_drive=1.15 v_tor=0.00 v_pol=0.30 tct_gain=0.60 shear=2.4375 margin=-0.6158 amp=1.2393 freq=1.3928 heat=1.3756 peak_q=5.5957 wet=0.2458 div=4.1186 shift=0.2513 damage=2.5302
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.00 tct_gain=0.00 shear=2.5000 margin=-0.9777 amp=1.9088 freq=1.3497 heat=2.0957 peak_q=14.9480 wet=0.1402 div=10.4497 shift=0.0698 damage=5.6718
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.00 tct_gain=0.20 shear=2.5000 margin=-0.8224 amp=1.6214 freq=1.3657 heat=1.7875 peak_q=9.9128 wet=0.1803 div=7.0689 shift=0.1398 damage=4.0170
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.00 tct_gain=0.40 shear=2.5000 margin=-0.7001 amp=1.3953 freq=1.3817 heat=1.5444 peak_q=7.1448 wet=0.2162 div=5.1847 shift=0.2098 damage=3.0735
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.00 tct_gain=0.60 shear=2.5000 margin=-0.6208 amp=1.2485 freq=1.3977 heat=1.3875 peak_q=5.6306 wet=0.2464 div=4.1455 shift=0.2798 damage=2.5470
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.10 tct_gain=0.00 shear=3.3125 margin=-0.9250 amp=1.8112 freq=1.3529 heat=1.9902 peak_q=12.2460 wet=0.1625 div=8.6565 shift=0.0811 damage=4.8116
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.10 tct_gain=0.20 shear=3.3125 margin=-0.7696 amp=1.5238 freq=1.3689 heat=1.6812 peak_q=8.2968 wet=0.2026 div=5.9814 shift=0.1511 damage=3.4823
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.10 tct_gain=0.40 shear=3.3125 margin=-0.6474 amp=1.2976 freq=1.3849 heat=1.4375 peak_q=6.0280 wet=0.2385 div=4.4213 shift=0.2211 damage=2.6882
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.10 tct_gain=0.60 shear=3.3125 margin=-0.5680 amp=1.1509 freq=1.4009 heat=1.2801 peak_q=4.7632 wet=0.2687 div=3.5441 shift=0.2911 damage=2.2363
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.20 tct_gain=0.00 shear=4.1250 margin=-0.8798 amp=1.7277 freq=1.3546 heat=1.8992 peak_q=10.4126 wet=0.1824 div=7.4329 shift=0.0907 damage=4.2186
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.20 tct_gain=0.20 shear=4.1250 margin=-0.7245 amp=1.4403 freq=1.3706 heat=1.5898 peak_q=7.1445 wet=0.2225 div=5.2004 shift=0.1607 damage=3.0935
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.20 tct_gain=0.40 shear=4.1250 margin=-0.6022 amp=1.2141 freq=1.3866 heat=1.3455 peak_q=5.2083 wet=0.2583 div=3.8563 shift=0.2307 damage=2.3990
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.20 tct_gain=0.60 shear=4.1250 margin=-0.5229 amp=1.0674 freq=1.4026 heat=1.1877 peak_q=4.1150 wet=0.2886 div=3.0904 shift=0.3007 damage=1.9984
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.30 tct_gain=0.00 shear=4.9375 margin=-0.8434 amp=1.6604 freq=1.3546 heat=1.8252 peak_q=9.1454 wet=0.1996 div=6.5833 shift=0.0987 damage=3.8034
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.30 tct_gain=0.20 shear=4.9375 margin=-0.6881 amp=1.3730 freq=1.3706 heat=1.5154 peak_q=6.3224 wet=0.2397 div=4.6399 shift=0.1687 damage=2.8117
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.30 tct_gain=0.40 shear=4.9375 margin=-0.5658 amp=1.1468 freq=1.3866 heat=1.2709 peak_q=4.6127 wet=0.2755 div=3.4431 shift=0.2387 damage=2.1850
+[OK] edge_drive=1.15 v_tor=0.20 v_pol=0.30 tct_gain=0.60 shear=4.9375 margin=-0.4865 amp=1.0000 freq=1.4026 heat=1.1128 peak_q=3.6388 wet=0.3058 div=2.7547 shift=0.3087 damage=1.8201
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.00 tct_gain=0.00 shear=5.0000 margin=-0.8628 amp=1.6963 freq=1.3591 heat=1.8668 peak_q=9.4304 wet=0.1980 div=6.7831 shift=0.1210 damage=3.9091
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.00 tct_gain=0.20 shear=5.0000 margin=-0.7075 amp=1.4089 freq=1.3751 heat=1.5569 peak_q=6.5393 wet=0.2381 div=4.7954 shift=0.1910 damage=2.8969
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.00 tct_gain=0.40 shear=5.0000 margin=-0.5852 amp=1.1827 freq=1.3911 heat=1.3122 peak_q=4.7907 wet=0.2739 div=3.5732 shift=0.2610 damage=2.2585
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.00 tct_gain=0.60 shear=5.0000 margin=-0.5059 amp=1.0359 freq=1.4071 heat=1.1540 peak_q=3.7938 wet=0.3042 div=2.8699 shift=0.3310 damage=1.8867
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.10 tct_gain=0.00 shear=5.8125 margin=-0.8246 amp=1.6255 freq=1.3575 heat=1.7883 peak_q=8.3691 wet=0.2137 div=6.0658 shift=0.1274 damage=3.5534
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.10 tct_gain=0.20 shear=5.8125 margin=-0.6693 amp=1.3382 freq=1.3735 heat=1.4781 peak_q=5.8241 wet=0.2538 div=4.3030 shift=0.1974 damage=2.6449
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.10 tct_gain=0.40 shear=5.8125 margin=-0.5470 amp=1.1120 freq=1.3895 heat=1.2333 peak_q=4.2581 wet=0.2896 div=3.1994 shift=0.2674 damage=2.0612
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.10 tct_gain=0.60 shear=5.8125 margin=-0.4677 amp=0.9652 freq=1.4055 heat=1.0748 peak_q=3.3598 wet=0.3199 div=2.5601 shift=0.3374 damage=1.7189
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.20 tct_gain=0.00 shear=6.6250 margin=-0.7919 amp=1.5651 freq=1.3546 heat=1.7205 peak_q=7.5743 wet=0.2272 div=5.5254 shift=0.1325 damage=3.2825
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.20 tct_gain=0.20 shear=6.6250 margin=-0.6366 amp=1.2777 freq=1.3706 heat=1.4103 peak_q=5.2767 wet=0.2673 div=3.9235 shift=0.2025 damage=2.4482
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.20 tct_gain=0.40 shear=6.6250 margin=-0.5143 amp=1.0515 freq=1.3866 heat=1.1654 peak_q=3.8448 wet=0.3031 div=2.9070 shift=0.2725 damage=1.9047
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.20 tct_gain=0.60 shear=6.6250 margin=-0.4350 amp=0.9048 freq=1.4026 heat=1.0068 peak_q=3.0199 wet=0.3334 div=2.3153 shift=0.3425 damage=1.5843
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.30 tct_gain=0.00 shear=7.4375 margin=-0.7656 amp=1.5164 freq=1.3506 heat=1.6653 peak_q=6.9855 wet=0.2384 div=5.1234 shift=0.1365 damage=3.0792
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.30 tct_gain=0.20 shear=7.4375 margin=-0.6103 amp=1.2290 freq=1.3666 heat=1.3552 peak_q=4.8658 wet=0.2785 div=3.6371 shift=0.2065 damage=2.2984
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.30 tct_gain=0.40 shear=7.4375 margin=-0.4880 amp=1.0028 freq=1.3826 heat=1.1103 peak_q=3.5320 wet=0.3143 div=2.6844 shift=0.2765 damage=1.7843
+[OK] edge_drive=1.15 v_tor=0.40 v_pol=0.30 tct_gain=0.60 shear=7.4375 margin=-0.4087 amp=0.8561 freq=1.3986 heat=0.9516 peak_q=2.7614 wet=0.3446 div=2.1280 shift=0.3465 damage=1.4802
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.00 tct_gain=0.00 shear=7.5000 margin=-0.8029 amp=1.5853 freq=1.3549 heat=1.7429 peak_q=7.4444 wet=0.2341 div=5.4489 shift=0.1509 damage=3.2541
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.00 tct_gain=0.20 shear=7.5000 margin=-0.6475 amp=1.2979 freq=1.3709 heat=1.4327 peak_q=5.2245 wet=0.2742 div=3.8973 shift=0.2209 damage=2.4432
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.00 tct_gain=0.40 shear=7.5000 margin=-0.5253 amp=1.0717 freq=1.3869 heat=1.1878 peak_q=3.8309 wet=0.3101 div=2.9059 shift=0.2909 damage=1.9112
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.00 tct_gain=0.60 shear=7.5000 margin=-0.4459 amp=0.9250 freq=1.4029 heat=1.0293 peak_q=3.0244 wet=0.3403 div=2.3261 shift=0.3609 damage=1.5964
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.10 tct_gain=0.00 shear=8.3125 margin=-0.7723 amp=1.5288 freq=1.3499 heat=1.6786 peak_q=6.8640 wet=0.2445 div=5.0491 shift=0.1539 damage=3.0490
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.10 tct_gain=0.20 shear=8.3125 margin=-0.6170 amp=1.2414 freq=1.3659 heat=1.3686 peak_q=4.8077 wet=0.2847 div=3.6040 shift=0.2239 damage=2.2872
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.10 tct_gain=0.40 shear=8.3125 margin=-0.4947 amp=1.0152 freq=1.3819 heat=1.1238 peak_q=3.5063 wet=0.3205 div=2.6724 shift=0.2939 damage=1.7829
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.10 tct_gain=0.60 shear=8.3125 margin=-0.4154 amp=0.8684 freq=1.3979 heat=0.9652 peak_q=2.7516 wet=0.3508 div=2.1264 shift=0.3639 damage=1.4836
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.20 tct_gain=0.00 shear=9.1250 margin=-0.7454 amp=1.4790 freq=1.3443 heat=1.6215 peak_q=6.3990 wet=0.2534 div=4.7269 shift=0.1562 damage=2.8818
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.20 tct_gain=0.20 shear=9.1250 margin=-0.5900 amp=1.1916 freq=1.3603 heat=1.3118 peak_q=4.4691 wet=0.2935 div=3.3640 shift=0.2262 damage=2.1580
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.20 tct_gain=0.40 shear=9.1250 margin=-0.4678 amp=0.9654 freq=1.3763 heat=1.0671 peak_q=3.2400 wet=0.3294 div=2.4795 shift=0.2962 damage=1.6754
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.20 tct_gain=0.60 shear=9.1250 margin=-0.3884 amp=0.8186 freq=1.3923 heat=0.9085 peak_q=2.5263 wet=0.3596 div=1.9601 shift=0.3662 damage=1.3884
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.30 tct_gain=0.00 shear=9.9375 margin=-0.7233 amp=1.4381 freq=1.3381 heat=1.5742 peak_q=6.0389 wet=0.2607 div=4.4763 shift=0.1580 damage=2.7506
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.30 tct_gain=0.20 shear=9.9375 margin=-0.5680 amp=1.1507 freq=1.3541 heat=1.2648 peak_q=4.2048 wet=0.3008 div=3.1758 shift=0.2280 damage=2.0557
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.30 tct_gain=0.40 shear=9.9375 margin=-0.4457 amp=0.9245 freq=1.3701 heat=1.0203 peak_q=3.0310 wet=0.3366 div=2.3273 shift=0.2980 damage=1.5898
+[OK] edge_drive=1.15 v_tor=0.60 v_pol=0.30 tct_gain=0.60 shear=9.9375 margin=-0.3664 amp=0.7778 freq=1.3861 heat=0.8618 peak_q=2.3490 wet=0.3669 div=1.8285 shift=0.3680 damage=1.3123
+\n=== BEST 20 ===
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.3, 'tct_gain': 0.6, 'edge_shear': 9.937499999999998, 'residual_instability': -0.08363559306280322, 'stability_margin': 0.08363559306280322, 'stability_window_shift': 0.3680187765999527, 'event_amplitude': 0.1, 'event_frequency': 1.0035628488332726, 'heat_pulse_severity': 0.10009975976733164, 'wetted_fraction': 0.41435129551690214, 'peak_heat_flux': 0.24158186748869087, 'divertor_load_proxy': 0.19206312978621515, 'freq_severity_product': 0.10045640007962954, 'damage_index': 0.26304889147853083}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.3, 'tct_gain': 0.4, 'edge_shear': 9.937499999999998, 'residual_instability': -0.00430518566990723, 'stability_margin': 0.00430518566990723, 'stability_window_shift': 0.2980187765999527, 'event_amplitude': 0.1, 'event_frequency': 0.9875628488332726, 'heat_pulse_severity': 0.09965175976733164, 'wetted_fraction': 0.3943512955169022, 'peak_heat_flux': 0.2526979393758844, 'divertor_load_proxy': 0.19913177651289096, 'freq_severity_product': 0.09841237576707493, 'damage_index': 0.2638045130446889}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.2, 'tct_gain': 0.6, 'edge_shear': 9.125, 'residual_instability': -0.06155456674543447, 'stability_margin': 0.06155456674543447, 'stability_window_shift': 0.3662380522311791, 'event_amplitude': 0.1, 'event_frequency': 1.009782124464499, 'heat_pulse_severity': 0.10027389948500598, 'wetted_fraction': 0.4099307845767379, 'peak_heat_flux': 0.24461178144632603, 'divertor_load_proxy': 0.19409352275986402, 'freq_severity_product': 0.10125479125030898, 'damage_index': 0.26496041289757505}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.1, 'tct_gain': 0.6, 'edge_shear': 8.3125, 'residual_instability': -0.03463239986128297, 'stability_margin': 0.03463239986128297, 'stability_window_shift': 0.36390275766287616, 'event_amplitude': 0.1, 'event_frequency': 1.015446829896196, 'heat_pulse_severity': 0.1004325112370935, 'wetted_fraction': 0.4045613160221478, 'peak_heat_flux': 0.24825040669878407, 'divertor_load_proxy': 0.19651414328719238, 'freq_severity_product': 0.10198387515422068, 'damage_index': 0.26696515098890206}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.3, 'tct_gain': 0.6, 'edge_shear': 7.437499999999999, 'residual_instability': -0.04131511001253396, 'stability_margin': 0.04131511001253396, 'stability_window_shift': 0.3464899127791883, 'event_amplitude': 0.1, 'event_frequency': 1.016137168549023, 'heat_pulse_severity': 0.10045184071937263, 'wetted_fraction': 0.39754099192198544, 'peak_heat_flux': 0.252682975493218, 'divertor_load_proxy': 0.1994020783223721, 'freq_severity_product': 0.10207284900412077, 'damage_index': 0.26840620421806793}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.0, 'tct_gain': 0.6, 'edge_shear': 7.5, 'residual_instability': -0.004064107882645551, 'stability_margin': 0.004064107882645551, 'stability_window_shift': 0.3608612565552808, 'event_amplitude': 0.1, 'event_frequency': 1.0204053287886008, 'heat_pulse_severity': 0.10057134920608082, 'wetted_fraction': 0.39808901721740386, 'peak_heat_flux': 0.2526353274176286, 'divertor_load_proxy': 0.1994129350435869, 'freq_severity_product': 0.10262354065334409, 'damage_index': 0.26907993722601103}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.2, 'tct_gain': 0.6, 'edge_shear': 6.625, 'residual_instability': -0.014997111931461582, 'stability_margin': 0.014997111931461582, 'stability_window_shift': 0.3424880049458703, 'event_amplitude': 0.1, 'event_frequency': 1.020135260715705, 'heat_pulse_severity': 0.10056378730003974, 'wetted_fraction': 0.38970818949175584, 'peak_heat_flux': 0.2580489453690763, 'divertor_load_proxy': 0.20292914004491353, 'freq_severity_product': 0.10258866537588475, 'damage_index': 0.2706604876380945}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.2, 'tct_gain': 0.4, 'edge_shear': 9.125, 'residual_instability': 0.017775840647461627, 'stability_margin': -0.017775840647461627, 'stability_window_shift': 0.29623805223117916, 'event_amplitude': 0.132885305197804, 'event_frequency': 0.9937821244644991, 'heat_pulse_severity': 0.13265395119710324, 'wetted_fraction': 0.3876288132128916, 'peak_heat_flux': 0.3422190164286051, 'divertor_load_proxy': 0.2688712435975794, 'freq_severity_product': 0.13182912543926725, 'damage_index': 0.3074609801742169}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.1, 'tct_gain': 0.6, 'edge_shear': 5.8125, 'residual_instability': 0.01768123073689476, 'stability_margin': -0.01768123073689476, 'stability_window_shift': 0.33738715993511253, 'event_amplitude': 0.13271027686325532, 'event_frequency': 1.0230344157049474, 'heat_pulse_severity': 0.13356620989521967, 'wetted_fraction': 0.37817488092488916, 'peak_heat_flux': 0.35318636068202475, 'divertor_load_proxy': 0.27631930790664294, 'freq_severity_product': 0.1366428294980804, 'damage_index': 0.31548973912897166}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.3, 'tct_gain': 0.4, 'edge_shear': 7.437499999999999, 'residual_instability': 0.03801529738036202, 'stability_margin': -0.03801529738036202, 'stability_window_shift': 0.2764899127791883, 'event_amplitude': 0.17032830015366973, 'event_frequency': 1.0001371685490228, 'heat_pulse_severity': 0.1703348419856908, 'wetted_fraction': 0.37261801091122854, 'peak_heat_flux': 0.4571299212540504, 'divertor_load_proxy': 0.3567516435101245, 'freq_severity_product': 0.170358206568814, 'damage_index': 0.3609957830598991}
+{'edge_drive': 0.7, 'v_tor': 0.2, 'v_pol': 0.3, 'tct_gain': 0.6, 'edge_shear': 4.9375, 'residual_instability': 0.03650709277720887, 'stability_margin': -0.03650709277720887, 'stability_window_shift': 0.30869470112460046, 'event_amplitude': 0.16753812163783643, 'event_frequency': 1.0200775783937588, 'heat_pulse_severity': 0.16847997437375195, 'wetted_fraction': 0.3640778390369829, 'peak_heat_flux': 0.46275811463668304, 'divertor_load_proxy': 0.3597607655446572, 'freq_severity_product': 0.17186264426701942, 'damage_index': 0.3647071248161508}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.1, 'tct_gain': 0.4, 'edge_shear': 8.3125, 'residual_instability': 0.044698007531613015, 'stability_margin': -0.044698007531613015, 'stability_window_shift': 0.2939027576628761, 'event_amplitude': 0.1826913139334841, 'event_frequency': 0.999446829896196, 'heat_pulse_severity': 0.18266301730901813, 'wetted_fraction': 0.37877292404680396, 'peak_heat_flux': 0.48224940515137493, 'divertor_load_proxy': 0.37739416940655, 'freq_severity_product': 0.18256197358877216, 'damage_index': 0.3743617540831911}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.0, 'tct_gain': 0.6, 'edge_shear': 5.0, 'residual_instability': 0.055906947007214214, 'stability_margin': -0.055906947007214214, 'stability_window_shift': 0.33098253125006766, 'event_amplitude': 0.2034278519633463, 'event_frequency': 1.0246297870199024, 'heat_pulse_severity': 0.20483075967032288, 'wetted_fraction': 0.36245889470131193, 'peak_heat_flux': 0.5651144520514962, 'divertor_load_proxy': 0.4390151597180856, 'freq_severity_product': 0.20987569765612774, 'damage_index': 0.41354714958764555}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.2, 'tct_gain': 0.4, 'edge_shear': 6.625, 'residual_instability': 0.0643332954614344, 'stability_margin': -0.0643332954614344, 'stability_window_shift': 0.2724880049458703, 'event_amplitude': 0.21901659660365366, 'event_frequency': 1.004135260715705, 'heat_pulse_severity': 0.21927019000749995, 'wetted_fraction': 0.36137702772950014, 'peak_heat_flux': 0.6067629461262525, 'divertor_load_proxy': 0.4711404814846891, 'freq_severity_product': 0.22017692941036315, 'damage_index': 0.43000724326744666}
+{'edge_drive': 0.85, 'v_tor': 0.6, 'v_pol': 0.3, 'tct_gain': 0.6, 'edge_shear': 9.937499999999998, 'residual_instability': 0.06636440693719681, 'stability_margin': -0.06636440693719681, 'stability_window_shift': 0.3680187765999527, 'event_amplitude': 0.2227741528338141, 'event_frequency': 1.1310628488332723, 'heat_pulse_severity': 0.2309494290665233, 'wetted_fraction': 0.40575710481853516, 'peak_heat_flux': 0.5691814790767736, 'divertor_load_proxy': 0.45080026157318603, 'freq_severity_product': 0.2612183191763996, 'damage_index': 0.4427483037152118}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.0, 'tct_gain': 0.4, 'edge_shear': 7.5, 'residual_instability': 0.07526629951025043, 'stability_margin': -0.07526629951025043, 'stability_window_shift': 0.2908612565552808, 'event_amplitude': 0.2392426540939633, 'event_frequency': 1.0044053287886006, 'heat_pulse_severity': 0.23953775800839489, 'wetted_fraction': 0.36834203143082644, 'peak_heat_flux': 0.6503133977893027, 'divertor_load_proxy': 0.506541923865985, 'freq_severity_product': 0.2405930005897061, 'damage_index': 0.4528598667849764}
+{'edge_drive': 0.7, 'v_tor': 0.2, 'v_pol': 0.2, 'tct_gain': 0.6, 'edge_shear': 4.125, 'residual_instability': 0.07289990998179463, 'stability_margin': -0.07289990998179463, 'stability_window_shift': 0.3006824454514582, 'event_amplitude': 0.2348648334663201, 'event_frequency': 1.0200653227206167, 'heat_pulse_severity': 0.23618437229650327, 'wetted_fraction': 0.3468948222937515, 'peak_heat_flux': 0.6808529765154628, 'divertor_load_proxy': 0.525218965038827, 'freq_severity_product': 0.24092348794819887, 'damage_index': 0.4626744267786018}
+{'edge_drive': 0.85, 'v_tor': 0.6, 'v_pol': 0.2, 'tct_gain': 0.6, 'edge_shear': 9.125, 'residual_instability': 0.08844543325456555, 'stability_margin': -0.08844543325456555, 'stability_window_shift': 0.3662380522311791, 'event_amplitude': 0.26362405152094626, 'event_frequency': 1.1372821244644988, 'heat_pulse_severity': 0.27375749507971175, 'wetted_fraction': 0.39847710097027167, 'peak_heat_flux': 0.6870093523897008, 'divertor_load_proxy': 0.5423712023312047, 'freq_severity_product': 0.3113395055923342, 'damage_index': 0.49946493740665465}
+{'edge_drive': 0.7, 'v_tor': 0.4, 'v_pol': 0.1, 'tct_gain': 0.4, 'edge_shear': 5.8125, 'residual_instability': 0.09701163812979086, 'stability_margin': -0.09701163812979086, 'stability_window_shift': 0.26738715993511253, 'event_amplitude': 0.2794715305401131, 'event_frequency': 1.0070344157049473, 'heat_pulse_severity': 0.28002198783869786, 'wetted_fraction': 0.3479015931675091, 'peak_heat_flux': 0.8048884895559294, 'divertor_load_proxy': 0.6211852139548985, 'freq_severity_product': 0.28199177890768096, 'damage_index': 0.5190822500774687}
+{'edge_drive': 0.7, 'v_tor': 0.6, 'v_pol': 0.3, 'tct_gain': 0.2, 'edge_shear': 9.937499999999998, 'residual_instability': 0.11795768526378769, 'stability_margin': -0.11795768526378769, 'stability_window_shift': 0.2280187765999527, 'event_amplitude': 0.3182217177380072, 'event_frequency': 0.9715628488332726, 'heat_pulse_severity': 0.31568790839228883, 'wetted_fraction': 0.35907577527524165, 'peak_heat_flux': 0.8791679364900213, 'divertor_load_proxy': 0.681949926655815, 'freq_severity_product': 0.3067106436198293, 'damage_index': 0.5534536244184809}
+\nSaved edge_velocity_shear_sweep_results.csv
+Saved edge_velocity_shear_sweep_summary.json

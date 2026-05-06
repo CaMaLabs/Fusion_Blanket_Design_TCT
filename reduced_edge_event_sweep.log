@@ -1,0 +1,96 @@
+=== REDUCED EDGE EVENT SWEEP ===
+Frozen engineering reference:
+{
+  "radius_cm": 55.0,
+  "li_current": 0.1,
+  "supervisor_level": "aggressive",
+  "severity_scale": 0.6,
+  "blanket_thickness": 1.25,
+  "axial_outer_cap_thickness": 0.6,
+  "split": [
+    0.15,
+    0.2,
+    0.4,
+    0.15,
+    0.1
+  ]
+}
+[OK] edge_drive=0.70 spin=0.00 tct_gain=0.00 amp=1.4100 freq=1.0300 heat=1.4227 flux=1.5358 damage=1.3977
+[OK] edge_drive=0.70 spin=0.00 tct_gain=0.20 amp=1.1304 freq=0.9800 heat=1.1236 flux=1.1544 damage=1.1113
+[OK] edge_drive=0.70 spin=0.00 tct_gain=0.40 amp=0.9103 freq=0.9300 heat=0.8912 flux=0.8787 damage=0.8933
+[OK] edge_drive=0.70 spin=0.00 tct_gain=0.60 amp=0.7675 freq=0.8800 heat=0.7399 flux=0.7097 damage=0.7518
+[OK] edge_drive=0.70 spin=0.15 tct_gain=0.00 amp=1.2796 freq=1.0075 heat=1.2825 flux=1.3535 damage=1.2625
+[OK] edge_drive=0.70 spin=0.15 tct_gain=0.20 amp=1.0000 freq=0.9575 heat=0.9872 flux=0.9898 damage=0.9835
+[OK] edge_drive=0.70 spin=0.15 tct_gain=0.40 amp=0.7799 freq=0.9075 heat=0.7583 flux=0.7283 damage=0.7717
+[OK] edge_drive=0.70 spin=0.15 tct_gain=0.60 amp=0.6371 freq=0.8575 heat=0.6099 flux=0.5691 damage=0.6348
+[OK] edge_drive=0.70 spin=0.30 tct_gain=0.00 amp=1.1599 freq=0.9850 heat=1.1547 flux=1.1929 damage=1.1407
+[OK] edge_drive=0.70 spin=0.30 tct_gain=0.20 amp=0.8803 freq=0.9350 heat=0.8631 flux=0.8455 damage=0.8686
+[OK] edge_drive=0.70 spin=0.30 tct_gain=0.40 amp=0.6602 freq=0.8850 heat=0.6375 flux=0.5971 damage=0.6625
+[OK] edge_drive=0.70 spin=0.30 tct_gain=0.60 amp=0.5174 freq=0.8350 heat=0.4918 flux=0.4470 damage=0.5299
+[OK] edge_drive=0.70 spin=0.45 tct_gain=0.00 amp=1.0584 freq=0.9625 heat=1.0465 flux=1.0613 damage=1.0383
+[OK] edge_drive=0.70 spin=0.45 tct_gain=0.20 amp=0.7788 freq=0.9125 heat=0.7584 flux=0.7280 damage=0.7724
+[OK] edge_drive=0.70 spin=0.45 tct_gain=0.40 amp=0.5587 freq=0.8625 heat=0.5357 flux=0.4910 damage=0.5713
+[OK] edge_drive=0.70 spin=0.45 tct_gain=0.60 amp=0.4159 freq=0.8125 heat=0.3925 flux=0.3486 damage=0.4424
+[OK] edge_drive=0.85 spin=0.00 tct_gain=0.00 amp=1.6800 freq=1.1650 heat=1.7632 flux=1.9750 damage=1.7370
+[OK] edge_drive=0.85 spin=0.00 tct_gain=0.20 amp=1.4004 freq=1.1150 heat=1.4487 flux=1.5512 damage=1.4294
+[OK] edge_drive=0.85 spin=0.00 tct_gain=0.40 amp=1.1803 freq=1.0650 heat=1.2033 flux=1.2413 damage=1.1940
+[OK] edge_drive=0.85 spin=0.00 tct_gain=0.60 amp=1.0375 freq=1.0150 heat=1.0422 flux=1.0490 damage=1.0402
+[OK] edge_drive=0.85 spin=0.15 tct_gain=0.00 amp=1.5496 freq=1.1425 heat=1.6159 flux=1.7729 damage=1.5920
+[OK] edge_drive=0.85 spin=0.15 tct_gain=0.20 amp=1.2700 freq=1.0925 heat=1.3052 flux=1.3668 damage=1.2918
+[OK] edge_drive=0.85 spin=0.15 tct_gain=0.40 amp=1.0499 freq=1.0425 heat=1.0633 flux=1.0711 damage=1.0625
+[OK] edge_drive=0.85 spin=0.15 tct_gain=0.60 amp=0.9071 freq=0.9925 heat=0.9051 flux=0.8886 damage=0.9133
+[OK] edge_drive=0.85 spin=0.30 tct_gain=0.00 amp=1.4299 freq=1.1200 heat=1.4814 flux=1.5941 damage=1.4610
+[OK] edge_drive=0.85 spin=0.30 tct_gain=0.20 amp=1.1503 freq=1.0700 heat=1.1745 flux=1.2042 damage=1.1677
+[OK] edge_drive=0.85 spin=0.30 tct_gain=0.40 amp=0.9302 freq=1.0200 heat=0.9358 flux=0.9217 damage=0.9442
+[OK] edge_drive=0.85 spin=0.30 tct_gain=0.60 amp=0.7874 freq=0.9700 heat=0.7804 flux=0.7483 damage=0.7992
+[OK] edge_drive=0.85 spin=0.45 tct_gain=0.00 amp=1.3284 freq=1.0975 heat=1.3673 flux=1.4468 damage=1.3507
+[OK] edge_drive=0.85 spin=0.45 tct_gain=0.20 amp=1.0488 freq=1.0475 heat=1.0637 flux=1.0710 damage=1.0635
+[OK] edge_drive=0.85 spin=0.45 tct_gain=0.40 amp=0.8287 freq=0.9975 heat=0.8281 flux=0.7998 damage=0.8450
+[OK] edge_drive=0.85 spin=0.45 tct_gain=0.60 amp=0.6859 freq=0.9475 heat=0.6751 flux=0.6342 damage=0.7037
+[OK] edge_drive=1.00 spin=0.00 tct_gain=0.00 amp=1.9500 freq=1.3000 heat=2.1255 flux=2.4609 damage=2.1023
+[OK] edge_drive=1.00 spin=0.00 tct_gain=0.20 amp=1.6704 freq=1.2500 heat=1.7957 flux=1.9946 damage=1.7735
+[OK] edge_drive=1.00 spin=0.00 tct_gain=0.40 amp=1.4503 freq=1.2000 heat=1.5373 flux=1.6505 damage=1.5207
+[OK] edge_drive=1.00 spin=0.00 tct_gain=0.60 amp=1.3075 freq=1.1500 heat=1.3663 flux=1.4350 damage=1.3545
+[OK] edge_drive=1.00 spin=0.15 tct_gain=0.00 amp=1.8196 freq=1.2775 heat=1.9711 flux=2.2391 damage=1.9474
+[OK] edge_drive=1.00 spin=0.15 tct_gain=0.20 amp=1.5400 freq=1.2275 heat=1.6451 flux=1.7904 damage=1.6260
+[OK] edge_drive=1.00 spin=0.15 tct_gain=0.40 amp=1.3199 freq=1.1775 heat=1.3902 flux=1.4606 damage=1.3794
+[OK] edge_drive=1.00 spin=0.15 tct_gain=0.60 amp=1.1771 freq=1.1275 heat=1.2221 flux=1.2548 damage=1.2178
+[OK] edge_drive=1.00 spin=0.30 tct_gain=0.00 amp=1.6999 freq=1.2550 heat=1.8300 flux=2.0419 damage=1.8073
+[OK] edge_drive=1.00 spin=0.30 tct_gain=0.20 amp=1.4203 freq=1.2050 heat=1.5077 flux=1.6096 damage=1.4928
+[OK] edge_drive=1.00 spin=0.30 tct_gain=0.40 amp=1.2002 freq=1.1550 heat=1.2560 flux=1.2930 damage=1.2520
+[OK] edge_drive=1.00 spin=0.30 tct_gain=0.60 amp=1.0574 freq=1.1050 heat=1.0908 flux=1.0962 damage=1.0945
+[OK] edge_drive=1.00 spin=0.45 tct_gain=0.00 amp=1.5984 freq=1.2325 heat=1.7099 flux=1.8789 damage=1.6890
+[OK] edge_drive=1.00 spin=0.45 tct_gain=0.20 amp=1.3188 freq=1.1825 heat=1.3910 flux=1.4607 damage=1.3806
+[OK] edge_drive=1.00 spin=0.45 tct_gain=0.40 amp=1.0987 freq=1.1325 heat=1.1424 flux=1.1554 damage=1.1448
+[OK] edge_drive=1.00 spin=0.45 tct_gain=0.60 amp=0.9559 freq=1.0825 heat=0.9796 flux=0.9664 damage=0.9911
+[OK] edge_drive=1.15 spin=0.00 tct_gain=0.00 amp=2.2200 freq=1.4350 heat=2.5097 flux=2.9934 damage=2.4936
+[OK] edge_drive=1.15 spin=0.00 tct_gain=0.20 amp=1.9404 freq=1.3850 heat=2.1645 flux=2.4846 damage=2.1436
+[OK] edge_drive=1.15 spin=0.00 tct_gain=0.40 amp=1.7203 freq=1.3350 heat=1.8932 flux=2.1064 damage=1.8734
+[OK] edge_drive=1.15 spin=0.00 tct_gain=0.60 amp=1.5775 freq=1.2850 heat=1.7124 flux=1.8676 damage=1.6948
+[OK] edge_drive=1.15 spin=0.15 tct_gain=0.00 amp=2.0896 freq=1.4125 heat=2.3482 flux=2.7519 damage=2.3289
+[OK] edge_drive=1.15 spin=0.15 tct_gain=0.20 amp=1.8100 freq=1.3625 heat=2.0068 flux=2.2607 damage=1.9863
+[OK] edge_drive=1.15 spin=0.15 tct_gain=0.40 amp=1.5899 freq=1.3125 heat=1.7390 flux=1.8967 damage=1.7223
+[OK] edge_drive=1.15 spin=0.15 tct_gain=0.60 amp=1.4471 freq=1.2625 heat=1.5611 flux=1.6677 damage=1.5483
+[OK] edge_drive=1.15 spin=0.30 tct_gain=0.00 amp=1.9699 freq=1.3900 heat=2.2004 flux=2.5365 damage=2.1797
+[OK] edge_drive=1.15 spin=0.30 tct_gain=0.20 amp=1.6903 freq=1.3400 heat=1.8627 flux=2.0616 damage=1.8440
+[OK] edge_drive=1.15 spin=0.30 tct_gain=0.40 amp=1.4702 freq=1.2900 heat=1.5981 flux=1.7108 damage=1.5857
+[OK] edge_drive=1.15 spin=0.30 tct_gain=0.60 amp=1.3274 freq=1.2400 heat=1.4230 flux=1.4908 damage=1.4159
+[OK] edge_drive=1.15 spin=0.45 tct_gain=0.00 amp=1.8684 freq=1.3675 heat=2.0744 flux=2.3577 damage=2.0534
+[OK] edge_drive=1.15 spin=0.45 tct_gain=0.20 amp=1.5888 freq=1.3175 heat=1.7401 flux=1.8970 damage=1.7238
+[OK] edge_drive=1.15 spin=0.45 tct_gain=0.40 amp=1.3687 freq=1.2675 heat=1.4786 flux=1.5575 damage=1.4706
+[OK] edge_drive=1.15 spin=0.45 tct_gain=0.60 amp=1.2259 freq=1.2175 heat=1.3059 flux=1.3453 damage=1.3045
+
+=== BEST 10 ===
+{'edge_drive': 0.7, 'spin': 0.45, 'tct_gain': 0.6, 'residual_instability': 0.14774213086655613, 'event_amplitude': 0.41593583555980107, 'event_frequency': 0.8125, 'heat_pulse_severity': 0.39253944480956227, 'target_heat_flux_proxy': 0.34863207970821586, 'damage_index': 0.44236131855772404}
+{'edge_drive': 0.7, 'spin': 0.3, 'tct_gain': 0.6, 'residual_instability': 0.20413475511064744, 'event_amplitude': 0.5174425591991654, 'event_frequency': 0.835, 'heat_pulse_severity': 0.49182915251880666, 'target_heat_flux_proxy': 0.4470126824291617, 'damage_index': 0.5298598386140921}
+{'edge_drive': 0.7, 'spin': 0.45, 'tct_gain': 0.4, 'residual_instability': 0.22707253825945217, 'event_amplitude': 0.5587305688670139, 'event_frequency': 0.8625, 'heat_pulse_severity': 0.5356829329012496, 'target_heat_flux_proxy': 0.4909823160382911, 'damage_index': 0.5712953079071746}
+{'edge_drive': 0.7, 'spin': 0.15, 'tct_gain': 0.6, 'residual_instability': 0.27062213140711616, 'event_amplitude': 0.6371198365328091, 'event_frequency': 0.8575, 'heat_pulse_severity': 0.6098829635210314, 'target_heat_flux_proxy': 0.5690907080375439, 'damage_index': 0.6347878423478305}
+{'edge_drive': 0.7, 'spin': 0.3, 'tct_gain': 0.4, 'residual_instability': 0.2834651625035435, 'event_amplitude': 0.6602372925063783, 'event_frequency': 0.885, 'heat_pulse_severity': 0.6374591059149083, 'target_heat_flux_proxy': 0.5971499412151573, 'damage_index': 0.6624974906177469}
+{'edge_drive': 0.85, 'spin': 0.45, 'tct_gain': 0.6, 'residual_instability': 0.29774213086655615, 'event_amplitude': 0.6859358355598011, 'event_frequency': 0.9475000000000001, 'heat_pulse_severity': 0.6751323461497342, 'target_heat_flux_proxy': 0.6342074710208119, 'damage_index': 0.7037100316885974}
+{'edge_drive': 0.7, 'spin': 0.0, 'tct_gain': 0.6, 'residual_instability': 0.34306040631242457, 'event_amplitude': 0.7675087313623643, 'event_frequency': 0.88, 'heat_pulse_severity': 0.7398784170333191, 'target_heat_flux_proxy': 0.7097166641701486, 'damage_index': 0.7518481286193701}
+{'edge_drive': 0.7, 'spin': 0.15, 'tct_gain': 0.4, 'residual_instability': 0.3499525388000122, 'event_amplitude': 0.779914569840022, 'event_frequency': 0.9075000000000001, 'heat_pulse_severity': 0.7582719405269615, 'target_heat_flux_proxy': 0.7282708996713185, 'damage_index': 0.7716558371912243}
+{'edge_drive': 0.7, 'spin': 0.45, 'tct_gain': 0.2, 'residual_instability': 0.3493354091931471, 'event_amplitude': 0.7788037365476648, 'event_frequency': 0.9125, 'heat_pulse_severity': 0.7583601384632885, 'target_heat_flux_proxy': 0.7279951627827518, 'damage_index': 0.7723716249896342}
+{'edge_drive': 0.85, 'spin': 0.3, 'tct_gain': 0.6, 'residual_instability': 0.35413475511064746, 'event_amplitude': 0.7874425591991655, 'event_frequency': 0.9700000000000001, 'heat_pulse_severity': 0.780355576166373, 'target_heat_flux_proxy': 0.7482976177407247, 'damage_index': 0.7991848522137226}
+
+Saved reduced_edge_event_sweep_results.csv
+Saved reduced_edge_event_sweep_summary.json

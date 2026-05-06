@@ -1,0 +1,162 @@
+
+=== radius_cm=55.0 ===
+[GEOM DEBUG] radial mesh bins: 24
+[GEOM DEBUG] outer_radius_cm: 180.29999999999998
+[GEOM DEBUG] z_extent_cm: 540.0
+[GEOM DEBUG] r_grid first/last: [0.0, 7.512499999999999, 15.024999999999999, 22.537499999999998] ... [157.7625, 165.27499999999998, 172.7875, 180.29999999999998]
+[GEOM DEBUG] plasma_radius_cm: 55.0
+[GEOM DEBUG] blanket_thickness_cm: 125.0
+[GEOM DEBUG] lithium_thickness_cm: 0.3
+[GEOM DEBUG] axial caps cm: 80.0 60.0
+[GEOM DEBUG] split: (0.19047619047619047, 0.19047619047619047, 0.38095238095238093, 0.14285714285714285, 0.09523809523809523)
+[GEOM DEBUG] materials: Be Li2O Li2O W_Ti_B4C_60_30_10_wt Be
+[GEOM DEBUG] axial materials: Be Be
+[GEOM DEBUG] radii cm: {'r0': 55.0, 'r1': 55.3, 'r2': 79.10952380952381, 'r3': 102.91904761904762, 'r4': 150.53809523809522, 'r5': 168.39523809523808, 'r6': 180.29999999999998}
+[GEOM DEBUG] cell names: ['plasma', 'liquid_wall', 'l1_inner_breeder', 'l2_multiplier', 'l3_main_breeder', 'l4_outer_shape', 'l5_outer_breeder', 'top_cap_inner', 'bot_cap_inner', 'top_cap_outer', 'bot_cap_outer']
+[RUN DEBUG] run_dir: /tmp/tmpll2nz5p7
+[RUN DEBUG] files: ['geometry.xml', 'materials.xml', 'settings.xml', 'tallies.xml']
+[RUN DEBUG] flux size: 24
+[RUN DEBUG] h3 size: 10
+[RUN DEBUG] heat size: 10
+[RUN DEBUG] flux first 8: [ 16.30184965  25.3434979   34.10421     42.96739284  51.75656471
+  60.02957234  68.0688202  103.09943937]
+[RUN DEBUG] flux last 8: [0.15847456 0.1134279  0.06713385 0.04942047 0.02186401 0.00572745
+ 0.00488498 0.00183304]
+[RUN DEBUG] inner/mid/outer: 50.208918376638486 38.96718115196341 0.05284578058969399
+[RUN DEBUG] attenuation: 0.9997109977556631
+[RUN DEBUG] gradient: 0.9998875566052617
+[RUN DEBUG] h3_total: 2.215532468441857
+[RUN DEBUG] heat_total: 22989970.249788217
+[RUN DEBUG] front_heating_frac: 0.2226257693878698
+[SIM PATCH] attn=0.000000 grad=0.000000 front_heat=0.000000
+[GEOM DEBUG] radial mesh bins: 24
+[GEOM DEBUG] outer_radius_cm: 180.29999999999998
+[GEOM DEBUG] z_extent_cm: 540.0
+[GEOM DEBUG] r_grid first/last: [0.0, 7.512499999999999, 15.024999999999999, 22.537499999999998] ... [157.7625, 165.27499999999998, 172.7875, 180.29999999999998]
+[GEOM DEBUG] plasma_radius_cm: 55.0
+[GEOM DEBUG] blanket_thickness_cm: 125.0
+[GEOM DEBUG] lithium_thickness_cm: 0.3
+[GEOM DEBUG] axial caps cm: 80.0 60.0
+[GEOM DEBUG] split: (0.19047619047619047, 0.19047619047619047, 0.38095238095238093, 0.14285714285714285, 0.09523809523809523)
+[GEOM DEBUG] materials: Be Li2O Li2O W_Ti_B4C_60_30_10_wt Be
+[GEOM DEBUG] axial materials: Be Be
+[GEOM DEBUG] radii cm: {'r0': 55.0, 'r1': 55.3, 'r2': 79.10952380952381, 'r3': 102.91904761904762, 'r4': 150.53809523809522, 'r5': 168.39523809523808, 'r6': 180.29999999999998}
+[GEOM DEBUG] cell names: ['plasma', 'liquid_wall', 'l1_inner_breeder', 'l2_multiplier', 'l3_main_breeder', 'l4_outer_shape', 'l5_outer_breeder', 'top_cap_inner', 'bot_cap_inner', 'top_cap_outer', 'bot_cap_outer']
+[RUN DEBUG] run_dir: /tmp/tmpxucjv6pk
+[RUN DEBUG] files: ['geometry.xml', 'materials.xml', 'settings.xml', 'tallies.xml']
+[RUN DEBUG] flux size: 24
+[RUN DEBUG] h3 size: 10
+[RUN DEBUG] heat size: 10
+[RUN DEBUG] flux first 8: [ 16.30184965  25.3434979   34.10421     42.96739284  51.75656471
+  60.02957234  68.0688202  103.09943937]
+[RUN DEBUG] flux last 8: [0.15847456 0.1134279  0.06713385 0.04942047 0.02186401 0.00572745
+ 0.00488498 0.00183304]
+[RUN DEBUG] inner/mid/outer: 50.208918376638486 38.967181151963416 0.05284578058969399
+[RUN DEBUG] attenuation: 0.9997109977556631
+[RUN DEBUG] gradient: 0.9998875566052617
+[RUN DEBUG] h3_total: 2.215532468441857
+[RUN DEBUG] heat_total: 22989970.24978823
+[RUN DEBUG] front_heating_frac: 0.2226257693878698
+radius_cm: 55.0
+TBR_openmc: 2.215532468441857
+ATTN_openmc: 0.9997109977556631
+GRAD_openmc: 0.9998875566052617
+front_heating_raw: 0.2226257693878698
+front_heat_adjusted: 0.37177004695168936
+front_excess: 0.06262576938786979
+trap_factor: 0.9210107279225741
+peakedness_penalty: 0.1491442775638196
+wall_load_raw: 619.972827004788
+wall_load_corrected: 500.62805780636626
+wall_temp_raw: 22141.886678742427
+wall_temp_corrected: 16329.641425572541
+fail_rate_raw: 0.013000113385346174
+fail_rate_corrected: 0.009360081637449245
+spread_credit: 0.35
+healing_credit: 0.28
+net_electric: 3824.6410801649745
+engineering_score: 88.27675513058497
+
+=== radius_cm=60.0 ===
+[GEOM DEBUG] radial mesh bins: 24
+[GEOM DEBUG] outer_radius_cm: 185.29999999999998
+[GEOM DEBUG] z_extent_cm: 540.0
+[GEOM DEBUG] r_grid first/last: [0.0, 7.720833333333332, 15.441666666666665, 23.162499999999998] ... [162.1375, 169.85833333333332, 177.57916666666665, 185.29999999999998]
+[GEOM DEBUG] plasma_radius_cm: 60.0
+[GEOM DEBUG] blanket_thickness_cm: 125.0
+[GEOM DEBUG] lithium_thickness_cm: 0.3
+[GEOM DEBUG] axial caps cm: 80.0 60.0
+[GEOM DEBUG] split: (0.19047619047619047, 0.19047619047619047, 0.38095238095238093, 0.14285714285714285, 0.09523809523809523)
+[GEOM DEBUG] materials: Be Li2O Li2O W_Ti_B4C_60_30_10_wt Be
+[GEOM DEBUG] axial materials: Be Be
+[GEOM DEBUG] radii cm: {'r0': 60.0, 'r1': 60.3, 'r2': 84.10952380952381, 'r3': 107.91904761904762, 'r4': 155.53809523809522, 'r5': 173.39523809523808, 'r6': 185.29999999999998}
+[GEOM DEBUG] cell names: ['plasma', 'liquid_wall', 'l1_inner_breeder', 'l2_multiplier', 'l3_main_breeder', 'l4_outer_shape', 'l5_outer_breeder', 'top_cap_inner', 'bot_cap_inner', 'top_cap_outer', 'bot_cap_outer']
+[RUN DEBUG] run_dir: /tmp/tmp6r24jty4
+[RUN DEBUG] files: ['geometry.xml', 'materials.xml', 'settings.xml', 'tallies.xml']
+[RUN DEBUG] flux size: 24
+[RUN DEBUG] h3 size: 10
+[RUN DEBUG] heat size: 10
+[RUN DEBUG] flux first 8: [16.49845693 25.29368193 34.01371155 42.45562275 51.2508101  59.33669606
+ 67.49274308 79.10550255]
+[RUN DEBUG] flux last 8: [0.18939885 0.13639552 0.08087818 0.04889988 0.02677952 0.01057486
+ 0.00566535 0.00266329]
+[RUN DEBUG] inner/mid/outer: 46.930903120599496 46.14014232665038 0.0626569322326262
+[RUN DEBUG] attenuation: 0.9996137116918948
+[RUN DEBUG] gradient: 0.9998385731000005
+[RUN DEBUG] h3_total: 2.2056777066161612
+[RUN DEBUG] heat_total: 22966376.268921714
+[RUN DEBUG] front_heating_frac: 0.22348028300896317
+[SIM PATCH] attn=0.000000 grad=0.000000 front_heat=0.000000
+[GEOM DEBUG] radial mesh bins: 24
+[GEOM DEBUG] outer_radius_cm: 185.29999999999998
+[GEOM DEBUG] z_extent_cm: 540.0
+[GEOM DEBUG] r_grid first/last: [0.0, 7.720833333333332, 15.441666666666665, 23.162499999999998] ... [162.1375, 169.85833333333332, 177.57916666666665, 185.29999999999998]
+[GEOM DEBUG] plasma_radius_cm: 60.0
+[GEOM DEBUG] blanket_thickness_cm: 125.0
+[GEOM DEBUG] lithium_thickness_cm: 0.3
+[GEOM DEBUG] axial caps cm: 80.0 60.0
+[GEOM DEBUG] split: (0.19047619047619047, 0.19047619047619047, 0.38095238095238093, 0.14285714285714285, 0.09523809523809523)
+[GEOM DEBUG] materials: Be Li2O Li2O W_Ti_B4C_60_30_10_wt Be
+[GEOM DEBUG] axial materials: Be Be
+[GEOM DEBUG] radii cm: {'r0': 60.0, 'r1': 60.3, 'r2': 84.10952380952381, 'r3': 107.91904761904762, 'r4': 155.53809523809522, 'r5': 173.39523809523808, 'r6': 185.29999999999998}
+[GEOM DEBUG] cell names: ['plasma', 'liquid_wall', 'l1_inner_breeder', 'l2_multiplier', 'l3_main_breeder', 'l4_outer_shape', 'l5_outer_breeder', 'top_cap_inner', 'bot_cap_inner', 'top_cap_outer', 'bot_cap_outer']
+[RUN DEBUG] run_dir: /tmp/tmp5j9lrvqi
+[RUN DEBUG] files: ['geometry.xml', 'materials.xml', 'settings.xml', 'tallies.xml']
+[RUN DEBUG] flux size: 24
+[RUN DEBUG] h3 size: 10
+[RUN DEBUG] heat size: 10
+[RUN DEBUG] flux first 8: [16.49845693 25.29368193 34.01371155 42.45562275 51.2508101  59.33669606
+ 67.49274308 79.10550255]
+[RUN DEBUG] flux last 8: [0.18939885 0.13639552 0.08087818 0.04889988 0.02677952 0.01057486
+ 0.00566535 0.00266329]
+[RUN DEBUG] inner/mid/outer: 46.9309031205995 46.14014232665032 0.0626569322326262
+[RUN DEBUG] attenuation: 0.9996137116918948
+[RUN DEBUG] gradient: 0.9998385731000005
+[RUN DEBUG] h3_total: 2.2056777066161612
+[RUN DEBUG] heat_total: 22966376.268921707
+[RUN DEBUG] front_heating_frac: 0.22348028300896292
+radius_cm: 60.0
+TBR_openmc: 2.2056777066161612
+ATTN_openmc: 0.9996137116918948
+GRAD_openmc: 0.9998385731000005
+front_heating_raw: 0.22348028300896292
+front_heat_adjusted: 0.3719877632405605
+front_excess: 0.06348028300896291
+trap_factor: 0.8929512513424002
+peakedness_penalty: 0.1485074802315976
+wall_load_raw: 477.5369402450075
+wall_load_corrected: 385.6110792478435
+wall_temp_raw: 17054.890723035984
+wall_temp_corrected: 12577.981908239039
+fail_rate_raw: 0.013000113385346174
+fail_rate_corrected: 0.009360081637449245
+spread_credit: 0.35
+healing_credit: 0.28
+net_electric: 3470.4606590318404
+engineering_score: 95.49893204767912
+
+=== RANKED SUMMARY ===
+radius_cm= 60.0 eng_score= 95.49893204767912 TBR= 2.2056777066161612 ATTN= 0.9996137116918948 GRAD= 0.9998385731000005 front_raw= 0.22348028300896292 front_adj= 0.3719877632405605 peak_pen= 0.1485074802315976 wall_load_corr= 385.6110792478435 wall_temp_corr= 12577.981908239039 fail_corr= 0.009360081637449245 net_electric= 3470.4606590318404
+radius_cm= 55.0 eng_score= 88.27675513058497 TBR= 2.215532468441857 ATTN= 0.9997109977556631 GRAD= 0.9998875566052617 front_raw= 0.2226257693878698 front_adj= 0.37177004695168936 peak_pen= 0.1491442775638196 wall_load_corr= 500.62805780636626 wall_temp_corr= 16329.641425572541 fail_corr= 0.009360081637449245 net_electric= 3824.6410801649745
+
+Saved radius_head_to_head_peakedness_result.json
