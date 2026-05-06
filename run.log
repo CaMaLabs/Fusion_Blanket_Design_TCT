@@ -1,0 +1,1278 @@
+nohup: ignoring input
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=1.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=5.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=9.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=13.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=17.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=21.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=25.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=29.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=33.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=37.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=41.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=45.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=49.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=53.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=57.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=61.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=65.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=69.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=73.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=77.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=81.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=85.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=89.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=93.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=97.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=101.
+  warn(msg, IDWarning)
+
+================ GENERATION 0 ================
+
+=== Building gen00_000__W_Ti_B4C_60_30_10_wt__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen00_000__W_Ti_B4C_60_30_10_wt__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0428885, back/front=0.105298, high_survival=0.0631289, li6_total=0
+
+=== Building gen00_001__PbLi__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen00_001__PbLi__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0364664, back/front=0.23302, high_survival=0.138863, li6_total=0
+
+=== Building gen00_002__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__TiB2__15p0cm__20_30_50 ===
+=== Running gen00_002__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__TiB2__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0874932, back/front=0.151323, high_survival=0.103379, li6_total=0
+
+=== Building gen00_003__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__10p0cm__33_33_34 ===
+=== Running gen00_003__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__10p0cm__33_33_34 with 16 threads ===
+done: score=0.203687, back/front=0.363501, high_survival=0.276887, li6_total=0
+
+=== Building gen00_004__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen00_004__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen00_005__PbLi__W_Ti_B4C_60_30_10_wt__B4C__15p0cm__25_25_50 ===
+=== Running gen00_005__PbLi__W_Ti_B4C_60_30_10_wt__B4C__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0721782, back/front=0.150295, high_survival=0.139177, li6_total=0
+
+=== Building gen00_006__SiC__PbLi__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen00_006__SiC__PbLi__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0463154, back/front=0.297462, high_survival=0.144227, li6_total=0
+
+=== Building gen00_007__TiB2__Li4SiO4__B4C__10p0cm__20_30_50 ===
+=== Running gen00_007__TiB2__Li4SiO4__B4C__10p0cm__20_30_50 with 16 threads ===
+done: score=0.38476, back/front=0.406075, high_survival=0.35592, li6_total=0
+
+=== Building gen00_008__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_60_30_10_wt__10p0cm__20_30_50 ===
+=== Running gen00_008__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_60_30_10_wt__10p0cm__20_30_50 with 16 threads ===
+done: score=0.145857, back/front=0.336589, high_survival=0.172779, li6_total=0
+
+=== Building gen00_009__W_Ti_B4C_Cr_55_25_10_10_wt__TiB2__TiB2__10p0cm__33_33_34 ===
+=== Running gen00_009__W_Ti_B4C_Cr_55_25_10_10_wt__TiB2__TiB2__10p0cm__33_33_34 with 16 threads ===
+done: score=0.335484, back/front=0.263992, high_survival=0.238714, li6_total=0
+
+=== Building gen00_010__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen00_010__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0308243, back/front=0.176608, high_survival=0.0870987, li6_total=0
+
+=== Building gen00_011__W_Ti_B4C_60_30_10_wt__PbLi__Li2O__10p0cm__20_30_50 ===
+=== Running gen00_011__W_Ti_B4C_60_30_10_wt__PbLi__Li2O__10p0cm__20_30_50 with 16 threads ===
+done: score=0.676161, back/front=0.318811, high_survival=0.323867, li6_total=0
+
+=== Building gen00_012__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen00_012__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0324751, back/front=0.155504, high_survival=0.0658961, li6_total=0
+
+=== Building gen00_013__W_Ti_B4C_60_30_10_wt__SiC__Li4SiO4__10p0cm__20_30_50 ===
+=== Running gen00_013__W_Ti_B4C_60_30_10_wt__SiC__Li4SiO4__10p0cm__20_30_50 with 16 threads ===
+done: score=0.612519, back/front=0.302555, high_survival=0.321865, li6_total=0
+
+=== Building gen00_014__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen00_014__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.041116, back/front=0.115471, high_survival=0.0656814, li6_total=0
+
+=== Building gen00_015__Li4SiO4__Li2TiO3__Li4SiO4__15p0cm__33_33_34 ===
+=== Running gen00_015__Li4SiO4__Li2TiO3__Li4SiO4__15p0cm__33_33_34 with 16 threads ===
+done: score=0.123841, back/front=0.240663, high_survival=0.197157, li6_total=0
+
+=== Building gen00_016__Pb__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__20_30_50 ===
+=== Running gen00_016__Pb__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__20_30_50 with 16 threads ===
+done: score=0.117877, back/front=0.371194, high_survival=0.240593, li6_total=0
+
+=== Building gen00_017__SiC__PbLi__B4C__10p0cm__15_35_50 ===
+=== Running gen00_017__SiC__PbLi__B4C__10p0cm__15_35_50 with 16 threads ===
+done: score=0.340643, back/front=0.454336, high_survival=0.395312, li6_total=0
+
+=== Building gen00_018__Li4SiO4__Pb__W__10p0cm__15_35_50 ===
+=== Running gen00_018__Li4SiO4__Pb__W__10p0cm__15_35_50 with 16 threads ===
+done: score=0.174903, back/front=0.534151, high_survival=0.280637, li6_total=0
+
+=== Building gen00_019__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__15_35_50 ===
+=== Running gen00_019__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__15_35_50 with 16 threads ===
+done: score=0.111154, back/front=0.278144, high_survival=0.173912, li6_total=0
+
+=== Building gen00_020__Pb__W_Ti_B4C_Al2O3_55_25_10_10_wt__SiC__10p0cm__15_35_50 ===
+=== Running gen00_020__Pb__W_Ti_B4C_Al2O3_55_25_10_10_wt__SiC__10p0cm__15_35_50 with 16 threads ===
+done: score=0.198896, back/front=0.27627, high_survival=0.279573, li6_total=0
+
+=== Building gen00_021__PbLi__Li2O__B4C__10p0cm__33_33_34 ===
+=== Running gen00_021__PbLi__Li2O__B4C__10p0cm__33_33_34 with 16 threads ===
+done: score=0.361242, back/front=0.408703, high_survival=0.400299, li6_total=0
+
+=== Building gen00_022__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen00_022__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0329629, back/front=0.0822863, high_survival=0.0434348, li6_total=0
+
+=== Building gen00_023__TiB2__SiC__Li2TiO3__15p0cm__15_35_50 ===
+=== Running gen00_023__TiB2__SiC__Li2TiO3__15p0cm__15_35_50 with 16 threads ===
+done: score=0.202794, back/front=0.228269, high_survival=0.190969, li6_total=0
+
+Top generation 0 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+TiB2 | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0308243 | back/front=0.176608 | li6_total=0
+Li4SiO4 | W_Ti_B4C_Al2O3_55_25_10_10_wt | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0324751 | back/front=0.155504 | li6_total=0
+W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0329629 | back/front=0.0822863 | li6_total=0
+PbLi | Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0364664 | back/front=0.23302 | li6_total=0
+W_Ti_B4C_Al2O3_55_25_10_10_wt | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.041116 | back/front=0.115471 | li6_total=0
+W_Ti_B4C_60_30_10_wt | Li4SiO4 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0428885 | back/front=0.105298 | li6_total=0
+SiC | PbLi | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0463154 | back/front=0.297462 | li6_total=0
+
+================ GENERATION 1 ================
+
+=== Building gen01_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen01_001__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_001__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0308243, back/front=0.176608, high_survival=0.0870987, li6_total=0/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=105.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=109.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=113.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=117.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=121.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=125.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=129.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=133.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=137.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=141.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=145.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=149.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=153.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=157.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=161.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=165.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=169.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=173.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=177.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=181.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=185.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=189.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=193.
+  warn(msg, IDWarning)
+
+
+=== Building gen01_002__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_002__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0324751, back/front=0.155504, high_survival=0.0658961, li6_total=0
+
+=== Building gen01_003__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_003__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0329629, back/front=0.0822863, high_survival=0.0434348, li6_total=0
+
+=== Building gen01_004__PbLi__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen01_004__PbLi__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0364664, back/front=0.23302, high_survival=0.138863, li6_total=0
+
+=== Building gen01_005__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_005__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.041116, back/front=0.115471, high_survival=0.0656814, li6_total=0
+
+=== Building gen01_006__W_Ti_B4C_60_30_10_wt__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_006__W_Ti_B4C_60_30_10_wt__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0428885, back/front=0.105298, high_survival=0.0631289, li6_total=0
+
+=== Building gen01_007__SiC__PbLi__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen01_007__SiC__PbLi__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0463154, back/front=0.297462, high_survival=0.144227, li6_total=0
+
+=== Building gen01_008__TiB2__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_008__TiB2__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0346421, back/front=0.181405, high_survival=0.0865276, li6_total=0
+
+=== Building gen01_009__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__15p0cm__25_25_50 ===
+=== Running gen01_009__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0816264, back/front=0.0923345, high_survival=0.0845454, li6_total=0
+
+=== Building gen01_010__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_010__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0273622, back/front=0.0748786, high_survival=0.0411887, li6_total=0
+
+=== Building gen01_011__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__10p0cm__25_25_50 ===
+=== Running gen01_011__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__10p0cm__25_25_50 with 16 threads ===
+done: score=0.129634, back/front=0.238542, high_survival=0.144555, li6_total=0
+
+=== Building gen01_012__W_Ti_B4C_60_30_10_wt__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_012__W_Ti_B4C_60_30_10_wt__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0436533, back/front=0.115901, high_survival=0.0689551, li6_total=0
+
+=== Building gen01_013__TiB2__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_013__TiB2__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0312591, back/front=0.182253, high_survival=0.0905416, li6_total=0
+
+=== Building gen01_014__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen01_014__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0569646, back/front=0.108055, high_survival=0.067758, li6_total=0
+
+=== Building gen01_015__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__20_30_50 ===
+=== Running gen01_015__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__20_30_50 with 16 threads ===
+done: score=0.127567, back/front=0.388454, high_survival=0.224205, li6_total=0
+
+=== Building gen01_016__SiC__SiC__W_Ti_B4C_Cr_55_25_10_10_wt__10p0cm__33_33_34 ===
+=== Running gen01_016__SiC__SiC__W_Ti_B4C_Cr_55_25_10_10_wt__10p0cm__33_33_34 with 16 threads ===
+done: score=0.167014, back/front=0.506226, high_survival=0.295765, li6_total=0
+
+=== Building gen01_017__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_017__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0416965, back/front=0.113942, high_survival=0.0666495, li6_total=0
+
+=== Building gen01_018__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li4SiO4__15p0cm__15_35_50 ===
+=== Running gen01_018__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li4SiO4__15p0cm__15_35_50 with 16 threads ===
+done: score=0.0862159, back/front=0.0921014, high_survival=0.0909144, li6_total=0
+
+=== Building gen01_019__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_019__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0279453, back/front=0.131586, high_survival=0.0591323, li6_total=0
+
+=== Building gen01_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__TiB2__15p0cm__20_30_50 ===
+=== Running gen01_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__TiB2__15p0cm__20_30_50 with 16 threads ===
+done: score=0.178347, back/front=0.134833, high_survival=0.116997, li6_total=0
+
+=== Building gen01_021__SiC__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen01_021__SiC__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0409649, back/front=0.185745, high_survival=0.0793756, li6_total=0
+
+=== Building gen01_022__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li4SiO4__W_Ti_B4C_60_30_10_wt__15p0cm__20_30_50 ===
+=== Running gen01_022__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li4SiO4__W_Ti_B4C_60_30_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0453233, back/front=0.125521, high_survival=0.0670644, li6_total=0
+
+=== Building gen01_023__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen01_023__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0464085, back/front=0.110171, high_survival=0.0624175, li6_total=0
+
+Top generation 1 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+W_Ti_B4C_60_30_10_wt | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0273622 | back/front=0.0748786 | li6_total=0
+Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0279453 | back/front=0.131586 | li6_total=0
+TiB2 | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0308243 | back/front=0.176608 | li6_total=0
+TiB2 | Li4SiO4 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0312591 | back/front=0.182253 | li6_total=0
+Li4SiO4 | W_Ti_B4C_Al2O3_55_25_10_10_wt | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0324751 | back/front=0.155504 | li6_total=0
+W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0329629 | back/front=0.0822863 | li6_total=0
+TiB2 | Li2TiO3 | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0346421 | back/front=0.181405 | li6_total=0
+
+================ GENERATION 2 ================
+
+=== Building gen02_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen02_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=197.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=201.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=205.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=209.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=213.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=217.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=221.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=225.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=229.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=233.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=237.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=241.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=245.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=249.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=253.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=257.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=261.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=265.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=269.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=273.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=277.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=281.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=285.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=289.
+  warn(msg, IDWarning)
+
+
+=== Building gen02_001__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_001__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0273622, back/front=0.0748786, high_survival=0.0411887, li6_total=0
+
+=== Building gen02_002__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen02_002__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0279453, back/front=0.131586, high_survival=0.0591323, li6_total=0
+
+=== Building gen02_003__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen02_003__TiB2__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0308243, back/front=0.176608, high_survival=0.0870987, li6_total=0
+
+=== Building gen02_004__TiB2__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_004__TiB2__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0312591, back/front=0.182253, high_survival=0.0905416, li6_total=0
+
+=== Building gen02_005__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_005__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0324751, back/front=0.155504, high_survival=0.0658961, li6_total=0
+
+=== Building gen02_006__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_006__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0329629, back/front=0.0822863, high_survival=0.0434348, li6_total=0
+
+=== Building gen02_007__TiB2__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_007__TiB2__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0346421, back/front=0.181405, high_survival=0.0865276, li6_total=0
+
+=== Building gen02_008__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_008__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0274546, back/front=0.128227, high_survival=0.0606178, li6_total=0
+
+=== Building gen02_009__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W__15p0cm__25_25_50 ===
+=== Running gen02_009__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__W__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0556704, back/front=0.213019, high_survival=0.0818342, li6_total=0
+
+=== Building gen02_010__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_60_30_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_010__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_60_30_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0437727, back/front=0.109689, high_survival=0.0601336, li6_total=0
+
+=== Building gen02_011__TiB2__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_011__TiB2__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0305869, back/front=0.172944, high_survival=0.0852429, li6_total=0
+
+=== Building gen02_012__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_60_30_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_012__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_60_30_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0316194, back/front=0.0815932, high_survival=0.0419132, li6_total=0
+
+=== Building gen02_013__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen02_013__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0320636, back/front=0.135491, high_survival=0.0584652, li6_total=0
+
+=== Building gen02_014__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen02_014__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0278418, back/front=0.143565, high_survival=0.0677251, li6_total=0
+
+=== Building gen02_015__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_015__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0166766, back/front=0.196704, high_survival=0.0911774, li6_total=0
+
+=== Building gen02_016__TiB2__Li4SiO4__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_016__TiB2__Li4SiO4__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0347894, back/front=0.18888, high_survival=0.0906084, li6_total=0
+
+=== Building gen02_017__Li4SiO4__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_017__Li4SiO4__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0332815, back/front=0.153856, high_survival=0.065053, li6_total=0
+
+=== Building gen02_018__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__15p0cm__25_25_50 ===
+=== Running gen02_018__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__15p0cm__25_25_50 with 16 threads ===
+done: score=0.199555, back/front=0.201545, high_survival=0.13357, li6_total=0
+
+=== Building gen02_019__Li4SiO4__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 ===
+=== Running gen02_019__Li4SiO4__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 with 16 threads ===
+done: score=0.112733, back/front=0.444795, high_survival=0.245194, li6_total=0
+
+=== Building gen02_020__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li4SiO4__15p0cm__25_25_50 ===
+=== Running gen02_020__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li4SiO4__15p0cm__25_25_50 with 16 threads ===
+done: score=0.104381, back/front=0.149502, high_survival=0.127363, li6_total=0
+
+=== Building gen02_021__W_Ti_B4C_60_30_10_wt__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_021__W_Ti_B4C_60_30_10_wt__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0389123, back/front=0.0984107, high_survival=0.0580992, li6_total=0
+
+=== Building gen02_022__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__Li2O__15p0cm__20_30_50 ===
+=== Running gen02_022__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__Li2O__15p0cm__20_30_50 with 16 threads ===
+done: score=0.331792, back/front=0.138063, high_survival=0.135313, li6_total=0
+
+=== Building gen02_023__TiB2__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen02_023__TiB2__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.029781, back/front=0.17669, high_survival=0.0869945, li6_total=0
+
+Top generation 2 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+W_Ti_B4C_60_30_10_wt | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0273622 | back/front=0.0748786 | li6_total=0
+TiB2 | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0274546 | back/front=0.128227 | li6_total=0
+TiB2 | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0278418 | back/front=0.143565 | li6_total=0
+Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0279453 | back/front=0.131586 | li6_total=0
+TiB2 | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.029781 | back/front=0.17669 | li6_total=0
+TiB2 | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0305869 | back/front=0.172944 | li6_total=0
+
+================ GENERATION 3 ================
+
+=== Building gen03_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0166766, back/front=0.196704, high_survival=0.0911774, li6_total=0/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=293.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=297.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=301.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=305.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=309.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=313.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=317.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=321.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=325.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=329.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=333.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=337.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=341.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=345.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=349.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=353.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=357.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=361.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=365.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=369.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=373.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=377.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=381.
+  warn(msg, IDWarning)
+
+
+=== Building gen03_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen03_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen03_002__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_002__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0273622, back/front=0.0748786, high_survival=0.0411887, li6_total=0
+
+=== Building gen03_003__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_003__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0274546, back/front=0.128227, high_survival=0.0606178, li6_total=0
+
+=== Building gen03_004__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen03_004__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0278418, back/front=0.143565, high_survival=0.0677251, li6_total=0
+
+=== Building gen03_005__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen03_005__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0279453, back/front=0.131586, high_survival=0.0591323, li6_total=0
+
+=== Building gen03_006__TiB2__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_006__TiB2__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.029781, back/front=0.17669, high_survival=0.0869945, li6_total=0
+
+=== Building gen03_007__TiB2__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_007__TiB2__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0305869, back/front=0.172944, high_survival=0.0852429, li6_total=0
+
+=== Building gen03_008__Li4SiO4__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__15p0cm__20_30_50 ===
+=== Running gen03_008__Li4SiO4__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__15p0cm__20_30_50 with 16 threads ===
+done: score=0.098623, back/front=0.158904, high_survival=0.118808, li6_total=0
+
+=== Building gen03_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0306047, back/front=0.0821504, high_survival=0.0521792, li6_total=0
+
+=== Building gen03_010__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__15_35_50 ===
+=== Running gen03_010__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__15_35_50 with 16 threads ===
+done: score=0.124064, back/front=0.286671, high_survival=0.164013, li6_total=0
+
+=== Building gen03_011__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_011__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.025618, back/front=0.143119, high_survival=0.0635467, li6_total=0
+
+=== Building gen03_012__W_Ti_B4C_Al2O3_55_25_10_10_wt__B4C__TiB2__15p0cm__25_25_50 ===
+=== Running gen03_012__W_Ti_B4C_Al2O3_55_25_10_10_wt__B4C__TiB2__15p0cm__25_25_50 with 16 threads ===
+done: score=0.166723, back/front=0.121202, high_survival=0.106183, li6_total=0
+
+=== Building gen03_013__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_60_30_10_wt__15p0cm__33_33_34 ===
+=== Running gen03_013__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_60_30_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.030262, back/front=0.148086, high_survival=0.0659811, li6_total=0
+
+=== Building gen03_014__TiB2__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 ===
+=== Running gen03_014__TiB2__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 with 16 threads ===
+done: score=0.0290794, back/front=0.175547, high_survival=0.0859593, li6_total=0
+
+=== Building gen03_015__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen03_015__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0280929, back/front=0.119342, high_survival=0.0568174, li6_total=0
+
+=== Building gen03_016__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_016__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0191795, back/front=0.19256, high_survival=0.0893189, li6_total=0
+
+=== Building gen03_017__SiC__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_017__SiC__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.027329, back/front=0.219574, high_survival=0.099557, li6_total=0
+
+=== Building gen03_018__W_Ti_B4C_60_30_10_wt__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_018__W_Ti_B4C_60_30_10_wt__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0412327, back/front=0.102169, high_survival=0.0606538, li6_total=0
+
+=== Building gen03_019__W__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen03_019__W__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0299813, back/front=0.0806474, high_survival=0.0509443, li6_total=0
+
+=== Building gen03_020__W_Ti_B4C_Cr_55_25_10_10_wt__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen03_020__W_Ti_B4C_Cr_55_25_10_10_wt__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0519298, back/front=0.10435, high_survival=0.0657554, li6_total=0
+
+=== Building gen03_021__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen03_021__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0274219, back/front=0.0749134, high_survival=0.0412148, li6_total=0
+
+=== Building gen03_022__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen03_022__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0274204, back/front=0.0752276, high_survival=0.0409032, li6_total=0
+
+=== Building gen03_023__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 ===
+=== Running gen03_023__TiB2__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 with 16 threads ===
+done: score=0.121354, back/front=0.340559, high_survival=0.190851, li6_total=0
+
+Top generation 3 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | li6_total=0
+Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.025618 | back/front=0.143119 | li6_total=0
+SiC | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.027329 | back/front=0.219574 | li6_total=0
+W_Ti_B4C_60_30_10_wt | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0273622 | back/front=0.0748786 | li6_total=0
+W_Ti_B4C_60_30_10_wt | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0274204 | back/front=0.0752276 | li6_total=0
+W_Ti_B4C_60_30_10_wt | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0274219 | back/front=0.0749134 | li6_total=0
+
+================ GENERATION 4 ================
+
+=== Building gen04_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=385.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=389.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=393.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=397.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=401.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=405.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=409.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=413.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=417.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=421.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=425.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=429.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=433.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=437.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=441.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=445.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=449.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=453.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=457.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=461.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=465.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=469.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=473.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=477.
+  warn(msg, IDWarning)
+
+=== Running gen04_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0166766, back/front=0.196704, high_survival=0.0911774, li6_total=0
+
+=== Building gen04_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen04_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen04_002__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_002__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0191795, back/front=0.19256, high_survival=0.0893189, li6_total=0
+
+=== Building gen04_003__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_003__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.025618, back/front=0.143119, high_survival=0.0635467, li6_total=0
+
+=== Building gen04_004__SiC__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_004__SiC__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.027329, back/front=0.219574, high_survival=0.099557, li6_total=0
+
+=== Building gen04_005__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_005__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0273622, back/front=0.0748786, high_survival=0.0411887, li6_total=0
+
+=== Building gen04_006__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen04_006__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0274204, back/front=0.0752276, high_survival=0.0409032, li6_total=0
+
+=== Building gen04_007__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen04_007__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0274219, back/front=0.0749134, high_survival=0.0412148, li6_total=0
+
+=== Building gen04_008__PbLi__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_008__PbLi__Li4SiO4__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0264738, back/front=0.197285, high_survival=0.110383, li6_total=0
+
+=== Building gen04_009__W_Ti_B4C_Cr_55_25_10_10_wt__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_009__W_Ti_B4C_Cr_55_25_10_10_wt__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0409327, back/front=0.103736, high_survival=0.0610427, li6_total=0
+
+=== Building gen04_010__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen04_010__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0279824, back/front=0.0755533, high_survival=0.0419031, li6_total=0
+
+=== Building gen04_011__W_Ti_B4C_60_30_10_wt__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 ===
+=== Running gen04_011__W_Ti_B4C_60_30_10_wt__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 with 16 threads ===
+done: score=0.122356, back/front=0.244535, high_survival=0.155541, li6_total=0
+
+=== Building gen04_012__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__15p0cm__20_30_50 ===
+=== Running gen04_012__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0303084, back/front=0.0774704, high_survival=0.0397459, li6_total=0
+
+=== Building gen04_013__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_013__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0257647, back/front=0.140641, high_survival=0.0620967, li6_total=0
+
+=== Building gen04_014__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_014__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0246199, back/front=0.13407, high_survival=0.0722663, li6_total=0
+
+=== Building gen04_015__SiC__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 ===
+=== Running gen04_015__SiC__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 with 16 threads ===
+done: score=0.0367301, back/front=0.121903, high_survival=0.0558497, li6_total=0
+
+=== Building gen04_016__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__15p0cm__33_33_34 ===
+=== Running gen04_016__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0554704, back/front=0.0819729, high_survival=0.0692515, li6_total=0
+
+=== Building gen04_017__TiB2__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen04_017__TiB2__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0284774, back/front=0.179004, high_survival=0.0876945, li6_total=0
+
+=== Building gen04_018__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_018__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0281928, back/front=0.0761868, high_survival=0.0421799, li6_total=0
+
+=== Building gen04_019__SiC__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_019__SiC__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0369888, back/front=0.156522, high_survival=0.0694362, li6_total=0
+
+=== Building gen04_020__W_Ti_B4C_60_30_10_wt__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_020__W_Ti_B4C_60_30_10_wt__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0412327, back/front=0.102169, high_survival=0.0606538, li6_total=0
+
+=== Building gen04_021__Li2O__Li2O__B4C__15p0cm__20_30_50 ===
+=== Running gen04_021__Li2O__Li2O__B4C__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0664642, back/front=0.22084, high_survival=0.175464, li6_total=0
+
+=== Building gen04_022__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen04_022__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0182704, back/front=0.226298, high_survival=0.115486, li6_total=0
+
+=== Building gen04_023__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen04_023__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0248368, back/front=0.189232, high_survival=0.0876341, li6_total=0
+
+Top generation 4 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | li6_total=0
+Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | li6_total=0
+PbLi | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0246199 | back/front=0.13407 | li6_total=0
+B4C | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0248368 | back/front=0.189232 | li6_total=0
+Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.025618 | back/front=0.143119 | li6_total=0
+Li2O | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0257647 | back/front=0.140641 | li6_total=0/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=481.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=485.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=489.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=493.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=497.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=501.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=505.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=509.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=513.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=517.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=521.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=525.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=529.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=533.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=537.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=541.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=545.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=549.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=553.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=557.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=561.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=565.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=569.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=573.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=577.
+  warn(msg, IDWarning)
+
+
+================ GENERATION 5 ================
+
+=== Building gen05_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0166766, back/front=0.196704, high_survival=0.0911774, li6_total=0
+
+=== Building gen05_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen05_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen05_002__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen05_002__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0182704, back/front=0.226298, high_survival=0.115486, li6_total=0
+
+=== Building gen05_003__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_003__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0191795, back/front=0.19256, high_survival=0.0893189, li6_total=0
+
+=== Building gen05_004__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_004__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0246199, back/front=0.13407, high_survival=0.0722663, li6_total=0
+
+=== Building gen05_005__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_005__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0248368, back/front=0.189232, high_survival=0.0876341, li6_total=0
+
+=== Building gen05_006__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_006__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.025618, back/front=0.143119, high_survival=0.0635467, li6_total=0
+
+=== Building gen05_007__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_007__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0257647, back/front=0.140641, high_survival=0.0620967, li6_total=0
+
+=== Building gen05_008__B4C__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_008__B4C__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.031381, back/front=0.135181, high_survival=0.0596479, li6_total=0
+
+=== Building gen05_009__W_Ti_B4C_60_30_10_wt__PbLi__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_009__W_Ti_B4C_60_30_10_wt__PbLi__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0445128, back/front=0.113384, high_survival=0.0673863, li6_total=0
+
+=== Building gen05_010__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen05_010__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0279453, back/front=0.131586, high_survival=0.0591323, li6_total=0
+
+=== Building gen05_011__PbLi__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen05_011__PbLi__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0240348, back/front=0.189317, high_survival=0.103492, li6_total=0
+
+=== Building gen05_012__SiC__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_012__SiC__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.027329, back/front=0.219574, high_survival=0.099557, li6_total=0
+
+=== Building gen05_013__Li2O__Li2O__Li2TiO3__15p0cm__33_33_34 ===
+=== Running gen05_013__Li2O__Li2O__Li2TiO3__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0875177, back/front=0.228859, high_survival=0.179071, li6_total=0
+
+=== Building gen05_014__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_014__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0313454, back/front=0.137594, high_survival=0.0610508, li6_total=0
+
+=== Building gen05_015__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 ===
+=== Running gen05_015__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 with 16 threads ===
+done: score=0.130694, back/front=0.343266, high_survival=0.183649, li6_total=0
+
+=== Building gen05_016__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_016__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0251649, back/front=0.141978, high_survival=0.0628814, li6_total=0
+
+=== Building gen05_017__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen05_017__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0216831, back/front=0.159981, high_survival=0.0697792, li6_total=0
+
+=== Building gen05_018__Pb__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen05_018__Pb__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0332148, back/front=0.208134, high_survival=0.1323, li6_total=0
+
+=== Building gen05_019__Li2O__B4C__Li2O__15p0cm__20_30_50 ===
+=== Running gen05_019__Li2O__B4C__Li2O__15p0cm__20_30_50 with 16 threads ===
+done: score=0.1538, back/front=0.225141, high_survival=0.182059, li6_total=0
+
+=== Building gen05_020__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen05_020__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0202758, back/front=0.188221, high_survival=0.0873577, li6_total=0
+
+=== Building gen05_021__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__15p0cm__25_25_50 ===
+=== Running gen05_021__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__15p0cm__25_25_50 with 16 threads ===
+done: score=0.103132, back/front=0.165891, high_survival=0.128929, li6_total=0
+
+=== Building gen05_022__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 ===
+=== Running gen05_022__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 with 16 threads ===
+done: score=0.0303847, back/front=0.119299, high_survival=0.0548889, li6_total=0
+
+=== Building gen05_023__PbLi__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen05_023__PbLi__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0345459, back/front=0.220442, high_survival=0.135355, li6_total=0
+
+Top generation 5 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | li6_total=0
+Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | li6_total=0
+Li2O | TiB2 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0202758 | back/front=0.188221 | li6_total=0
+Li2O | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0216831 | back/front=0.159981 | li6_total=0
+PbLi | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0240348 | back/front=0.189317 | li6_total=0
+PbLi | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0246199 | back/front=0.13407 | li6_total=0
+
+================ GENERATION 6 ================
+
+=== Building gen06_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0166766, back/front=0.196704, high_survival=0.0911774, li6_total=0/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=581.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=585.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=589.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=593.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=597.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=601.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=605.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=609.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=613.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=617.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=621.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=625.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=629.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=633.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=637.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=641.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=645.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=649.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=653.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=657.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=661.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=665.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=669.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=673.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=677.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=681.
+  warn(msg, IDWarning)
+
+
+=== Building gen06_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen06_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen06_002__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen06_002__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0182704, back/front=0.226298, high_survival=0.115486, li6_total=0
+
+=== Building gen06_003__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_003__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0191795, back/front=0.19256, high_survival=0.0893189, li6_total=0
+
+=== Building gen06_004__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_004__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0202758, back/front=0.188221, high_survival=0.0873577, li6_total=0
+
+=== Building gen06_005__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen06_005__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0216831, back/front=0.159981, high_survival=0.0697792, li6_total=0
+
+=== Building gen06_006__PbLi__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen06_006__PbLi__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0240348, back/front=0.189317, high_survival=0.103492, li6_total=0
+
+=== Building gen06_007__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_007__PbLi__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0246199, back/front=0.13407, high_survival=0.0722663, li6_total=0
+
+=== Building gen06_008__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 ===
+=== Running gen06_008__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 with 16 threads ===
+done: score=0.104248, back/front=0.452245, high_survival=0.269737, li6_total=0
+
+=== Building gen06_009__Pb__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_009__Pb__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0238843, back/front=0.17807, high_survival=0.10188, li6_total=0
+
+=== Building gen06_010__Li2O__Li2O__PbLi__15p0cm__20_30_50 ===
+=== Running gen06_010__Li2O__Li2O__PbLi__15p0cm__20_30_50 with 16 threads ===
+done: score=0.139893, back/front=0.300767, high_survival=0.200903, li6_total=0
+
+=== Building gen06_011__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_011__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0248368, back/front=0.189232, high_survival=0.0876341, li6_total=0
+
+=== Building gen06_012__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen06_012__B4C__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0236808, back/front=0.190418, high_survival=0.0880976, li6_total=0
+
+=== Building gen06_013__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 ===
+=== Running gen06_013__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 with 16 threads ===
+done: score=0.0306034, back/front=0.115978, high_survival=0.053059, li6_total=0
+
+=== Building gen06_014__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen06_014__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0219123, back/front=0.185757, high_survival=0.0868333, li6_total=0
+
+=== Building gen06_015__PbLi__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen06_015__PbLi__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0272027, back/front=0.183479, high_survival=0.10103, li6_total=0
+
+=== Building gen06_016__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 ===
+=== Running gen06_016__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 with 16 threads ===
+done: score=0.0926361, back/front=0.460731, high_survival=0.276593, li6_total=0
+
+=== Building gen06_017__SiC__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_017__SiC__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0373102, back/front=0.153542, high_survival=0.0678311, li6_total=0
+
+=== Building gen06_018__Li2O__W_Ti_B4C_60_30_10_wt__W__15p0cm__33_33_34 ===
+=== Running gen06_018__Li2O__W_Ti_B4C_60_30_10_wt__W__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0363909, back/front=0.20676, high_survival=0.0796109, li6_total=0
+
+=== Building gen06_019__B4C__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 ===
+=== Running gen06_019__B4C__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__15_35_50 with 16 threads ===
+done: score=0.0340538, back/front=0.112719, high_survival=0.0514372, li6_total=0
+
+=== Building gen06_020__Li4SiO4__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_020__Li4SiO4__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0290335, back/front=0.147973, high_survival=0.0649148, li6_total=0
+
+=== Building gen06_021__Pb__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_021__Pb__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0246666, back/front=0.169825, high_survival=0.0977679, li6_total=0
+
+=== Building gen06_022__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen06_022__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0401795, back/front=0.116815, high_survival=0.0661199, li6_total=0
+
+=== Building gen06_023__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen06_023__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.018802, back/front=0.194499, high_survival=0.0905077, li6_total=0
+
+Top generation 6 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | li6_total=0
+Li2O | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.018802 | back/front=0.194499 | li6_total=0
+Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | li6_total=0
+Li2O | TiB2 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0202758 | back/front=0.188221 | li6_total=0
+Li2O | W_Ti_B4C_60_30_10_wt | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0216831 | back/front=0.159981 | li6_total=0
+Li2O | TiB2 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0219123 | back/front=0.185757 | li6_total=0
+
+================ GENERATION 7 ================
+
+=== Building gen07_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_000__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0166766, back/front=0.196704, high_survival=0.0911774, li6_total=0
+
+=== Building gen07_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen07_001__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0166989, back/front=0.19668, high_survival=0.0912802, li6_total=0
+
+=== Building gen07_002__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen07_002__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=685.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=689.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=693.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=697.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=701.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=705.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=709.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=713.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=717.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=721.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=725.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=729.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=733.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=737.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=741.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=745.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=749.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=753.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=757.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=761.
+  warn(msg, IDWarning)
+/home/chase/miniforge/envs/openmc-env/lib/python3.11/site-packages/openmc/mixin.py:70: IDWarning: Another Filter instance already exists with id=765.
+  warn(msg, IDWarning)
+
+done: score=0.0182704, back/front=0.226298, high_survival=0.115486, li6_total=0
+
+=== Building gen07_003__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_003__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.018802, back/front=0.194499, high_survival=0.0905077, li6_total=0
+
+=== Building gen07_004__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_004__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0191795, back/front=0.19256, high_survival=0.0893189, li6_total=0
+
+=== Building gen07_005__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_005__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0202758, back/front=0.188221, high_survival=0.0873577, li6_total=0
+
+=== Building gen07_006__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen07_006__Li2O__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0216831, back/front=0.159981, high_survival=0.0697792, li6_total=0
+
+=== Building gen07_007__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen07_007__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0219123, back/front=0.185757, high_survival=0.0868333, li6_total=0
+
+=== Building gen07_008__B4C__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_008__B4C__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.028729, back/front=0.181002, high_survival=0.0839232, li6_total=0
+
+=== Building gen07_009__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 ===
+=== Running gen07_009__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0196524, back/front=0.223005, high_survival=0.113397, li6_total=0
+
+=== Building gen07_010__Li2O__W__TiB2__15p0cm__33_33_34 ===
+=== Running gen07_010__Li2O__W__TiB2__15p0cm__33_33_34 with 16 threads ===
+done: score=0.0616885, back/front=0.201777, high_survival=0.124124, li6_total=0
+
+=== Building gen07_011__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 ===
+=== Running gen07_011__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 with 16 threads ===
+done: score=0.0926361, back/front=0.460731, high_survival=0.276593, li6_total=0
+
+=== Building gen07_012__Li2O__Li2O__PbLi__15p0cm__20_30_50 ===
+=== Running gen07_012__Li2O__Li2O__PbLi__15p0cm__20_30_50 with 16 threads ===
+done: score=0.139893, back/front=0.300767, high_survival=0.200903, li6_total=0
+
+=== Building gen07_013__Li2TiO3__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen07_013__Li2TiO3__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0218387, back/front=0.191975, high_survival=0.0903476, li6_total=0
+
+=== Building gen07_014__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 ===
+=== Running gen07_014__Li2O__Li2O__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 with 16 threads ===
+done: score=0.0997487, back/front=0.426693, high_survival=0.236603, li6_total=0
+
+=== Building gen07_015__Li2O__PbLi__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_015__Li2O__PbLi__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.022266, back/front=0.21291, high_survival=0.101174, li6_total=0
+
+=== Building gen07_016__W__Li2O__Li2TiO3__15p0cm__33_33_34 ===
+=== Running gen07_016__W__Li2O__Li2TiO3__15p0cm__33_33_34 with 16 threads ===
+done: score=0.183972, back/front=0.121414, high_survival=0.137882, li6_total=0
+
+=== Building gen07_017__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 ===
+=== Running gen07_017__Li2O__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__25_25_50 with 16 threads ===
+done: score=0.111503, back/front=0.410161, high_survival=0.227493, li6_total=0
+
+=== Building gen07_018__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen07_018__Li2O__Li2TiO3__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0193138, back/front=0.194018, high_survival=0.0905858, li6_total=0
+
+=== Building gen07_019__Li2O__SiC__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_019__Li2O__SiC__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0212264, back/front=0.207568, high_survival=0.0984447, li6_total=0
+
+=== Building gen07_020__Li2O__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_020__Li2O__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0187044, back/front=0.204016, high_survival=0.0913016, li6_total=0
+
+=== Building gen07_021__W_Ti_B4C_60_30_10_wt__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 ===
+=== Running gen07_021__W_Ti_B4C_60_30_10_wt__TiB2__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_30_50 with 16 threads ===
+done: score=0.0394229, back/front=0.106197, high_survival=0.0624191, li6_total=0
+
+=== Building gen07_022__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 ===
+=== Running gen07_022__Li2O__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__10p0cm__33_33_34 with 16 threads ===
+done: score=0.104248, back/front=0.452245, high_survival=0.269737, li6_total=0
+
+=== Building gen07_023__Pb__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 ===
+=== Running gen07_023__Pb__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__25_25_50 with 16 threads ===
+done: score=0.0259747, back/front=0.173765, high_survival=0.0998762, li6_total=0
+
+Top generation 7 designs:
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | li6_total=0
+Li2O | Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0187044 | back/front=0.204016 | li6_total=0
+Li2O | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.018802 | back/front=0.194499 | li6_total=0
+Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | li6_total=0
+Li2O | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0193138 | back/front=0.194018 | li6_total=0
+Li2O | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0196524 | back/front=0.223005 | li6_total=0
+
+Top 25 blanket candidates overall:
+gen07 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | high_survival=0.0911774 | li6_total=0
+gen02 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | high_survival=0.0911774 | li6_total=0
+gen04 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | high_survival=0.0911774 | li6_total=0
+gen05 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | high_survival=0.0911774 | li6_total=0
+gen06 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | high_survival=0.0911774 | li6_total=0
+gen03 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0166766 | back/front=0.196704 | high_survival=0.0911774 | li6_total=0
+gen04 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen05 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen07 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen00 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen03 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen01 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen06 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen02 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 20_30_50 | score=0.0166989 | back/front=0.19668 | high_survival=0.0912802 | li6_total=0
+gen05 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | high_survival=0.115486 | li6_total=0
+gen06 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | high_survival=0.115486 | li6_total=0
+gen07 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | high_survival=0.115486 | li6_total=0
+gen04 | Li2O | Li2O | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 33_33_34 | score=0.0182704 | back/front=0.226298 | high_survival=0.115486 | li6_total=0
+gen07 | Li2O | Li2O | W_Ti_B4C_Cr_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0187044 | back/front=0.204016 | high_survival=0.0913016 | li6_total=0
+gen06 | Li2O | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.018802 | back/front=0.194499 | high_survival=0.0905077 | li6_total=0
+gen07 | Li2O | Li2TiO3 | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.018802 | back/front=0.194499 | high_survival=0.0905077 | li6_total=0
+gen04 | Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | high_survival=0.0893189 | li6_total=0
+gen05 | Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | high_survival=0.0893189 | li6_total=0
+gen03 | Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | high_survival=0.0893189 | li6_total=0
+gen06 | Li2O | B4C | W_Ti_B4C_Al2O3_55_25_10_10_wt | 15.0 cm | split 25_25_50 | score=0.0191795 | back/front=0.19256 | high_survival=0.0893189 | li6_total=0
+
+Finished. Wrote evo_blanket_results_v2.csv

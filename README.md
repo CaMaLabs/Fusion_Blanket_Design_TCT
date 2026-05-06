@@ -1,2 +1,32 @@
-# Fusion_Blanket_Design_TCT
-This project explores fusion reactor blanket design optimization using OpenMC, with a focus on neutron transport shaping, tritium breeding, and controlled leakage architectures. Unlike conventional blanket design approaches that aim to fully absorb neutron flux, this work investigates structured neutron flow control through layered material stack.
+# Fusion Engine v5
+
+Unified reactor optimizer with:
+- Plasma core model
+- Continuous TCT / plasmoid control
+- GPU Monte Carlo robustness
+- ELM damage model
+- Lithium wall thermals
+- MHD drag + pumping power
+- Plant power balance
+- Engineering penalties
+- Integrated blanket genome
+- Material learning
+- OpenMC finalist validation
+
+## Settings
+- Population size: 64
+- Generations: 30
+- Top 5 validated each generation
+- OpenMC batches: 80
+- OpenMC particles: 300000
+
+## Run
+```bash
+pip install -r requirements.txt
+python run_reactor_optimizer.py
+```
+
+## Notes
+- Every design includes plasma + blanket + TCT + wall + plant variables.
+- Top 5 each generation go through explicit-layer OpenMC validation.
+- The rest use the fast surrogate to keep runtime manageable.

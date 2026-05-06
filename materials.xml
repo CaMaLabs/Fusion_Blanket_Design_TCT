@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<materials>
+  <material id="1" name="tungsten">
+    <density value="19.3" units="g/cm3"/>
+    <nuclide name="W180" ao="0.0012"/>
+    <nuclide name="W182" ao="0.265"/>
+    <nuclide name="W183" ao="0.1431"/>
+    <nuclide name="W184" ao="0.3064"/>
+    <nuclide name="W186" ao="0.2843"/>
+  </material>
+</materials>

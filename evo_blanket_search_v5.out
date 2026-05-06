@@ -1,0 +1,1592 @@
+nohup: ignoring input
+
+================ GENERATION 0 ================
+
+=== Building gen00_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen00_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen00_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen00_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen00_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen00_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen00_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen00_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen00_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen00_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen00_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen00_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen00_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen00_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen00_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen00_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen00_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen00_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen00_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen00_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen00_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen00_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen00_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen00_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen00_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen00_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen00_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen00_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen00_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen00_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen00_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen00_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen00_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen00_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen00_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen00_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen00_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen00_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen00_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen00_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen00_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen00_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen00_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen00_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen00_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen00_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen00_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen00_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen00_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen00_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen00_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen00_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen00_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen00_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen00_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen00_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 0 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 1 ================
+
+=== Building gen01_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen01_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen01_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen01_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen01_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen01_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen01_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen01_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen01_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen01_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen01_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen01_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen01_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen01_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen01_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen01_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen01_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen01_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen01_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen01_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen01_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen01_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen01_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen01_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen01_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen01_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen01_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen01_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen01_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen01_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen01_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen01_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen01_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen01_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen01_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen01_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen01_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen01_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen01_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen01_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen01_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen01_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen01_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen01_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen01_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen01_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen01_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen01_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen01_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen01_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen01_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen01_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen01_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen01_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen01_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen01_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 1 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 2 ================
+
+=== Building gen02_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen02_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen02_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen02_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen02_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen02_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen02_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen02_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen02_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen02_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen02_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen02_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen02_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen02_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen02_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen02_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen02_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen02_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen02_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen02_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen02_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen02_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen02_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen02_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen02_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen02_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen02_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen02_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen02_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen02_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen02_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen02_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen02_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen02_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen02_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen02_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen02_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen02_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen02_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen02_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen02_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen02_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen02_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen02_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen02_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen02_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen02_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen02_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen02_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen02_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen02_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen02_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen02_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen02_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen02_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen02_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 2 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 3 ================
+
+=== Building gen03_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen03_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen03_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen03_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen03_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen03_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen03_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen03_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen03_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen03_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen03_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen03_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen03_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen03_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen03_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen03_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen03_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen03_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen03_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen03_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen03_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen03_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen03_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen03_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen03_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen03_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen03_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen03_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen03_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen03_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen03_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen03_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen03_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen03_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen03_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen03_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen03_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen03_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen03_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen03_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen03_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen03_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen03_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen03_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen03_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen03_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen03_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen03_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen03_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen03_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen03_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen03_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen03_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen03_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen03_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen03_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 3 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 4 ================
+
+=== Building gen04_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen04_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen04_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen04_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen04_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen04_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen04_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen04_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen04_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen04_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen04_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen04_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen04_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen04_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen04_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen04_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen04_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen04_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen04_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen04_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen04_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen04_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen04_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen04_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen04_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen04_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen04_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen04_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen04_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen04_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen04_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen04_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen04_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen04_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen04_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen04_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen04_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen04_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen04_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen04_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen04_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen04_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen04_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen04_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen04_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen04_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen04_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen04_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen04_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen04_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen04_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen04_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen04_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen04_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen04_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen04_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 4 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 5 ================
+
+=== Building gen05_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen05_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen05_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen05_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen05_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen05_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen05_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen05_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen05_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen05_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen05_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen05_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen05_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen05_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen05_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen05_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen05_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen05_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen05_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen05_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen05_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen05_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen05_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen05_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen05_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen05_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen05_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen05_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen05_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen05_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen05_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen05_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen05_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen05_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen05_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen05_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen05_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen05_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen05_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen05_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen05_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen05_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen05_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen05_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen05_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen05_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen05_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen05_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen05_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen05_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen05_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen05_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen05_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen05_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen05_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen05_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 5 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 6 ================
+
+=== Building gen06_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen06_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen06_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen06_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen06_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen06_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen06_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen06_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen06_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen06_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen06_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen06_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen06_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen06_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen06_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen06_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen06_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen06_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen06_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen06_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen06_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen06_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen06_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen06_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen06_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen06_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen06_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen06_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen06_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen06_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen06_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen06_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen06_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen06_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen06_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen06_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen06_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen06_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen06_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen06_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen06_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen06_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen06_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen06_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen06_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen06_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen06_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen06_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen06_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen06_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen06_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen06_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen06_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen06_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen06_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen06_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 6 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 7 ================
+
+=== Building gen07_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen07_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen07_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen07_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen07_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen07_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen07_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen07_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen07_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen07_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen07_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen07_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen07_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen07_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen07_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen07_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen07_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen07_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen07_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen07_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen07_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen07_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen07_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen07_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen07_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen07_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen07_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen07_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen07_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen07_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen07_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen07_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen07_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen07_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen07_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen07_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen07_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen07_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen07_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen07_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen07_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen07_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen07_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen07_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen07_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen07_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen07_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen07_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen07_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen07_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen07_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen07_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen07_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen07_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen07_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen07_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 7 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 8 ================
+
+=== Building gen08_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen08_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen08_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen08_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen08_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen08_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen08_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen08_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen08_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen08_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen08_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen08_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen08_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen08_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen08_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen08_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen08_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen08_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen08_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen08_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen08_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen08_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen08_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen08_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen08_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen08_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen08_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen08_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen08_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen08_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen08_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen08_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen08_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen08_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen08_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen08_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen08_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen08_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen08_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen08_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen08_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen08_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen08_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen08_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen08_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen08_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen08_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen08_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen08_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen08_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen08_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen08_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen08_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen08_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen08_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen08_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 8 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 9 ================
+
+=== Building gen09_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen09_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen09_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen09_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen09_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen09_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen09_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen09_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen09_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen09_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen09_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen09_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen09_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen09_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen09_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen09_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen09_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen09_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen09_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen09_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen09_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen09_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen09_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen09_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen09_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen09_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen09_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen09_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen09_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen09_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen09_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen09_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen09_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen09_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen09_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen09_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen09_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen09_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen09_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen09_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen09_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen09_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen09_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen09_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen09_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen09_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen09_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen09_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen09_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen09_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen09_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen09_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen09_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen09_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen09_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen09_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 9 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 10 ================
+
+=== Building gen10_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen10_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen10_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen10_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen10_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen10_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen10_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen10_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen10_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen10_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen10_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen10_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen10_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen10_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen10_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen10_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen10_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen10_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen10_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen10_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen10_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen10_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen10_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen10_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen10_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen10_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen10_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen10_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen10_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen10_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen10_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen10_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen10_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen10_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen10_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen10_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen10_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen10_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen10_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen10_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen10_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen10_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen10_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen10_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen10_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen10_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen10_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen10_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen10_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen10_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen10_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen10_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen10_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen10_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen10_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen10_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 10 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+================ GENERATION 11 ================
+
+=== Building gen11_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 ===
+=== Running gen11_000__Li2TiO3__Li2TiO3__W_Ti_B4C_Cr_55_25_10_10_wt__W_Ti_B4C_Al2O3_55_25_10_10_wt__15p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00365158, back/front=0.210347, high_survival=0.096657, h3_total=0.0459719, heat_l1=0.247029
+
+=== Building gen11_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 ===
+=== Running gen11_001__Li4SiO4__PbLi__SiC__Be__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00232779, back/front=0.263417, high_survival=0.178366, h3_total=0.0420302, heat_l1=0.41252
+
+=== Building gen11_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 ===
+=== Running gen11_002__Be__W_Ti_B4C_60_30_10_wt__Li4SiO4__PbLi__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0741407, back/front=0.196473, high_survival=0.159005, h3_total=0.0566958, heat_l1=0.116212
+
+=== Building gen11_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 ===
+=== Running gen11_003__W_Ti_B4C_Al2O3_55_25_10_10_wt__Pb__Li2TiO3__SiC__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0985273, back/front=0.154738, high_survival=0.168731, h3_total=0.0231212, heat_l1=0.593179
+
+=== Building gen11_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 ===
+=== Running gen11_004__Li__TiB2__Li2O__Li2TiO3__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0691142, back/front=0.598953, high_survival=0.537346, h3_total=0.0615694, heat_l1=0.149931
+
+=== Building gen11_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 ===
+=== Running gen11_005__Li4SiO4__Li4SiO4__SiC__TiB2__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0162053, back/front=0.422058, high_survival=0.34753, h3_total=0.0404634, heat_l1=0.259431
+
+=== Building gen11_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 ===
+=== Running gen11_006__Pb__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2TiO3__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00541099, back/front=0.0541851, high_survival=0.0487865, h3_total=0.0228949, heat_l1=0.15583
+
+=== Building gen11_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 ===
+=== Running gen11_007__Li2O__W_Ti_B4C_60_30_10_wt__Li4SiO4__Li2TiO3__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0026901, back/front=0.0830774, high_survival=0.0636922, h3_total=0.137643, heat_l1=0.353471
+
+=== Building gen11_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen11_008__B4C__W_Ti_B4C_60_30_10_wt__Li__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00234501, back/front=0.103472, high_survival=0.0436911, h3_total=0.060941, heat_l1=0.219959
+
+=== Building gen11_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 ===
+=== Running gen11_009__W__W_Ti_B4C_Cr_55_25_10_10_wt__Li2O__W_Ti_B4C_Cr_55_25_10_10_wt__20p0cm__15_25_25_35 with 16 threads ===
+done: score=0.00199642, back/front=0.035487, high_survival=0.0228713, h3_total=0.0652389, heat_l1=0.305708
+
+=== Building gen11_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 ===
+=== Running gen11_010__W_Ti_B4C_60_30_10_wt__Li2O__TiB2__W_Ti_B4C_60_30_10_wt__10p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0231647, back/front=0.416816, high_survival=0.265796, h3_total=0.0431278, heat_l1=0.19719
+
+=== Building gen11_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 ===
+=== Running gen11_011__B4C__W_Ti_B4C_Al2O3_55_25_10_10_wt__Be__Li__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0565619, back/front=0.245153, high_survival=0.24569, h3_total=0.0381171, heat_l1=0.159513
+
+=== Building gen11_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 ===
+=== Running gen11_012__Li2O__Pb__Li2TiO3__PbLi__20p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0110117, back/front=0.211815, high_survival=0.144931, h3_total=0.0822944, heat_l1=0.373823
+
+=== Building gen11_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 ===
+=== Running gen11_013__W__Li4SiO4__PbLi__SiC__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0289173, back/front=0.0854229, high_survival=0.107089, h3_total=0.0514483, heat_l1=0.502222
+
+=== Building gen11_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 ===
+=== Running gen11_014__TiB2__SiC__Li__Li2TiO3__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0371774, back/front=0.372643, high_survival=0.308872, h3_total=0.0580597, heat_l1=0.21027
+
+=== Building gen11_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 ===
+=== Running gen11_015__SiC__PbLi__SiC__PbLi__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0777135, back/front=0.227198, high_survival=0.146712, h3_total=0.00945594, heat_l1=0.411792
+
+=== Building gen11_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 ===
+=== Running gen11_016__Li2TiO3__W__W__Li2O__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.00466382, back/front=0.0962537, high_survival=0.0775027, h3_total=0.0872934, heat_l1=0.379773
+
+=== Building gen11_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 ===
+=== Running gen11_017__TiB2__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__10p0cm__15_25_25_35 with 16 threads ===
+done: score=0.137334, back/front=0.420941, high_survival=0.300507, h3_total=0.0116504, heat_l1=0.261736
+
+=== Building gen11_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 ===
+=== Running gen11_018__Li__PbLi__PbLi__Li2TiO3__15p0cm__10_20_30_40 with 16 threads ===
+done: score=0.0378236, back/front=0.337433, high_survival=0.305532, h3_total=0.0427719, heat_l1=0.125621
+
+=== Building gen11_019__Li__W__Pb__Be__15p0cm__20_25_25_30 ===
+=== Running gen11_019__Li__W__Pb__Be__15p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0121417, back/front=0.334085, high_survival=0.244669, h3_total=0.0498151, heat_l1=0.227371
+
+=== Building gen11_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 ===
+=== Running gen11_020__W_Ti_B4C_Al2O3_55_25_10_10_wt__Li2TiO3__W__W_Ti_B4C_Al2O3_55_25_10_10_wt__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.00301263, back/front=0.0547956, high_survival=0.0285944, h3_total=0.0407742, heat_l1=0.572488
+
+=== Building gen11_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 ===
+=== Running gen11_021__PbLi__Li4SiO4__Li4SiO4__W__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.00597807, back/front=0.366735, high_survival=0.188482, h3_total=0.0582405, heat_l1=0.130126
+
+=== Building gen11_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 ===
+=== Running gen11_022__Pb__Li2O__Li2TiO3__Li2O__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0219786, back/front=0.154532, high_survival=0.17269, h3_total=0.0863163, heat_l1=0.241277
+
+=== Building gen11_023__Li__W__B4C__Li__20p0cm__20_25_25_30 ===
+=== Running gen11_023__Li__W__B4C__Li__20p0cm__20_25_25_30 with 16 threads ===
+done: score=0.0127963, back/front=0.176601, high_survival=0.16925, h3_total=0.0837262, heat_l1=0.213518
+
+=== Building gen11_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 ===
+=== Running gen11_024__Li__W_Ti_B4C_60_30_10_wt__W_Ti_B4C_60_30_10_wt__W__10p0cm__15_20_25_40 with 16 threads ===
+done: score=0.030823, back/front=0.419646, high_survival=0.207428, h3_total=0.031821, heat_l1=0.0740553
+
+=== Building gen11_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 ===
+=== Running gen11_025__B4C__W_Ti_B4C_Cr_55_25_10_10_wt__SiC__W_Ti_B4C_60_30_10_wt__20p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0053695, back/front=0.0931351, high_survival=0.0395064, h3_total=0.0186658, heat_l1=0.257379
+
+=== Building gen11_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 ===
+=== Running gen11_026__Li__W_Ti_B4C_Cr_55_25_10_10_wt__PbLi__TiB2__10p0cm__20_20_20_40 with 16 threads ===
+done: score=0.0782756, back/front=0.464722, high_survival=0.380544, h3_total=0.0347802, heat_l1=0.144896
+
+=== Building gen11_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 ===
+=== Running gen11_027__Pb__W_Ti_B4C_Cr_55_25_10_10_wt__Li4SiO4__Be__15p0cm__15_20_25_40 with 16 threads ===
+done: score=0.0211925, back/front=0.231459, high_survival=0.2406, h3_total=0.0305566, heat_l1=0.150222
+
+Top generation 11 designs:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+
+Top 25 blanket candidates overall:
+Traceback (most recent call last):
+  File "/home/chase/work/openmc/sweep/evo_blanket_search_v5.py", line 632, in <module>
+    main()
+  File "/home/chase/work/openmc/sweep/evo_blanket_search_v5.py", line 616, in main
+    for r in final_good[:25]:
+             ^^^^^^^^^^
+NameError: name 'final_good' is not defined
