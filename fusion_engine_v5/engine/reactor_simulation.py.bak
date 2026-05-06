@@ -1,0 +1,223 @@
+import numpy as np
+
+from .plasma_model import evaluate_case
+from .tct_control import run_tct_controller
+from .elm_model import simulate_elm
+from .lithium_wall import (
+    lithium_wall_temperature,
+    mhd_drag_power,
+    pumping_power_from_heat,
+)
+from .power_balance import plant_power_balance
+from .engineering_limits import engineering_penalty
+from ..gpu.gpu_monte_carlo import monte_carlo_plasma
+from ..blanket.openmc_dataset_model import evaluate_blanket
+from ..blanket.openmc_runner import run_openmc_validation
+
+
+def estimate_capex_billion(design, plant, plasma):
+
+    net_gw = max(plant["net_electric"], 0.0) / 1000.0
+
+    base_cost = 6.0 * net_gw ** 0.7
+
+    magnet_cost = 0.8 * (design["B0"] / 6.0) ** 2
+
+    size_cost = 0.25 * (design["R"] / 6.0) ** 1.3
+
+    capex_billion = 2.0 + base_cost + magnet_cost + size_cost
+
+    return capex_billion
+
+def estimate_annual_revenue_musd(
+    plant,
+    capacity_factor=0.90,
+    power_price_per_mwh=65.0,
+):
+    net_gw = max(plant["net_electric"], 0.0) / 1000.0
+    annual_mwh = net_gw * 8760.0 * capacity_factor * 1_000_000.0
+    return annual_mwh * power_price_per_mwh / 1_000_000.0
+
+
+def estimate_annualized_cost_musd(
+    capex_billion,
+    o_and_m_fraction=0.04,
+):
+    annualized_capex_musd = capex_billion * 1000.0 / 20.0
+    annual_om_musd = capex_billion * 1000.0 * o_and_m_fraction
+    return annualized_capex_musd + annual_om_musd
+
+
+
+def simulate_reactor(design, blanket_validate=False):
+    plasma = evaluate_case(
+        design["R"],
+        design["a"],
+        design["kappa"],
+        design["B0"],
+        design["Ip"],
+        design["Ti"],
+        design["Te"],
+        design["H98"],
+        design["fG"],
+        design["frac_cap"],
+    )
+
+    tct = run_tct_controller(plasma, design)
+
+    mc = monte_carlo_plasma(
+        plasma,
+        tct["control_strength"],
+        samples=int(design.get("mc_samples", 300000)),
+    )
+
+    rng = np.random.default_rng()
+
+    elm_energy_MJ_m2, elm_flag = simulate_elm(
+        rng,
+        plasma["stored_energy_J"],
+        tct["control_strength"],
+    )
+
+    wall_temp = lithium_wall_temperature(
+        plasma["wn_mw_m2"],
+        design["lithium_thickness"],
+    )
+
+    mhd_power = mhd_drag_power(
+        design["B0"],
+        design["lithium_velocity"],
+        1e6,
+        500,
+        0.01,
+    )
+
+    pump_power = pumping_power_from_heat(plasma["pfus_mw"])
+
+    design = dict(design)
+    design["pump_power_mw"] = pump_power
+
+    if blanket_validate:
+        blanket, err = run_openmc_validation(design, plasma)
+        if blanket is None:
+            blanket = evaluate_blanket(design)
+            blanket["model"] = "dataset_fallback"
+    else:
+        blanket = evaluate_blanket(design)
+
+    plant = plant_power_balance(plasma, blanket, mhd_power, design)
+
+    penalty, stress = engineering_penalty(
+        plasma,
+        plant,
+        wall_temp,
+        design,
+        blanket,
+    )
+
+    capex_billion = estimate_capex_billion(design, plant, plasma)
+    annual_revenue_musd = estimate_annual_revenue_musd(plant)
+    annual_cost_musd = estimate_annualized_cost_musd(capex_billion)
+
+    size_penalty = (
+        60.0 * max(design["R"] - 8.5, 0.0) ** 2
+        + 45.0 * max(design["a"] - 2.6, 0.0) ** 2
+    )
+
+    grid_penalty = 0.0
+    if plant["net_electric"] < 500.0:
+        grid_penalty += 20000.0 * (500.0 - plant["net_electric"]) ** 2
+    if plant["net_electric"] > 2500.0:
+        grid_penalty += 0.7 * (plant["net_electric"] - 2500.0)
+    if plant["net_electric"] > 4000.0:
+        grid_penalty += 1.5 * (plant["net_electric"] - 4000.0)
+
+    complexity_penalty = (
+        15.0 * max(design["B0"] - 8.0, 0.0) ** 2
+        + 8.0 * max(design["lithium_velocity"] - 4.0, 0.0) ** 2
+        + 80.0 * max(design["blanket_thickness"] - 1.2, 0.0) ** 2
+    )
+
+    breeding_penalty = 0.0
+    if blanket["TBR"] < 1.15:
+        breeding_penalty += 15000.0 * (1.15 - blanket["TBR"])
+
+    wall_penalty = 0.0
+    if plasma["wn_mw_m2"] > 6.5:
+        wall_penalty += 300000.0 * (plasma["wn_mw_m2"] - 6.5) ** 2
+    if plasma["wn_mw_m2"] < 4.0:
+        wall_penalty += 20000.0 * (4.0 - plasma["wn_mw_m2"]) ** 2
+
+    bootstrap_penalty = 0.0
+    if plasma["bootstrap_frac"] > 0.65:
+        bootstrap_penalty += 20000.0 * (plasma["bootstrap_frac"] - 0.65)
+
+    stability_penalty = 0.0
+    betaN = (
+        plasma.get("beta", 0.03)
+        * design["a"]
+        * design["B0"]
+        / max(plasma.get("Ip_MA", 10.0), 0.1)
+    )
+    nG = plasma.get("Ip_MA", 10.0) / (3.1416 * max(design["a"], 0.1) ** 2)
+
+    if plasma.get("density", 0.5) > 0.9 * nG:
+        stability_penalty += 12000.0 * (
+            plasma.get("density", 0.5) / (0.9 * nG) - 1.0
+        ) ** 2
+
+    if betaN > 3.5:
+        stability_penalty += 15000.0 * (betaN - 3.5) ** 2
+
+    hard_fail_penalty = 0.0
+    if blanket["TBR"] < 1.10:
+        hard_fail_penalty += 5000000.0 + 500000.0 * (1.10 - blanket["TBR"])
+
+    if blanket["attenuation"] < 0.05:
+        hard_fail_penalty += 3000000.0 + 1000000.0 * (0.05 - blanket["attenuation"])
+
+    if plant["net_electric"] > 7000.0:
+        hard_fail_penalty += 2000000.0 + 2000.0 * (plant["net_electric"] - 7000.0)
+
+    if design["R"] > 12.0:
+        hard_fail_penalty += 1000000.0 + 250000.0 * (design["R"] - 12.0)
+
+    if design["a"] > 2.5:
+        hard_fail_penalty += 1000000.0 + 250000.0 * (design["a"] - 2.5)
+
+    if design["B0"] > 9.5:
+        hard_fail_penalty += 1000000.0 + 250000.0 * (design["B0"] - 9.5)
+
+    score = (
+        2000.0 * plasma.get("bootstrap_frac", 0.0)
+        + annual_revenue_musd
+        - annual_cost_musd
+        - penalty
+        - size_penalty
+        - grid_penalty
+        - complexity_penalty
+        - breeding_penalty
+        - wall_penalty
+        - bootstrap_penalty
+        - hard_fail_penalty
+        - stability_penalty
+        + 600.0 * tct["stability"]["stability"]
+        - 20000.0 * mc["fail_rate"]
+    )
+
+    return {
+        "score": score,
+        "net_electric": plant["net_electric"],
+        "TBR": blanket["TBR"],
+        "fail_rate": mc["fail_rate"],
+        "wall_load": plasma["wn_mw_m2"],
+        "wall_temp": wall_temp,
+        "bootstrap": plasma["bootstrap_frac"],
+        "blanket_model": blanket.get("model", "unknown"),
+        "blanket_attenuation": blanket["attenuation"],
+        "blanket_front_heating_frac": blanket["front_heating_frac"],
+        "capex_billion": capex_billion,
+        "annual_revenue_musd": annual_revenue_musd,
+        "annual_cost_musd": annual_cost_musd,
+    }
+
