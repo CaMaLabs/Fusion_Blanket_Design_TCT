@@ -1,0 +1,9 @@
+rank_order,pareto_rank,crowding,score,ok,feasible,design_R,design_a,design_kappa,design_B0,design_Ip,design_Ti,design_Te,design_H98,design_fG,design_frac_cap,design_reconn_trigger,design_conf_trigger,design_lithium_thickness,design_lithium_velocity,design_liquid_wall_li6_enrich,design_blanket_thickness,design_l1,design_l1_li6,design_l1_pack,design_l2,design_l2_li6,design_l2_pack,design_l3,design_l3_li6,design_l3_pack,design_l4,design_l4_li6,design_l4_pack,design_li6_frac,design_mult_frac,design_cooling_eff,design_coolant_outlet_K,design_mc_samples,result_error,result_traceback,result_R
+1,0,0.0,-1e+18,False,False,6.331157308331274,2.5792856726224853,1.887876289616385,9.5,20.090167491877168,32.42799788805581,21.423044687838587,1.3319150370072772,0.7277055527139524,0.648920680486807,0.7087993752187846,0.7750316293264612,0.0017634825836719632,5.676855016028236,0.9109158939961763,0.9033695817113857,Li2O,0.9,0.8839519928868065,Li2O,0.9,0.8927579318454482,W_Ti_B4C_60_30_10_wt,0.0,1.0,W_Ti_B4C_Cr_55_25_10_10_wt,0.0,1.0,0.20075674535180343,0.18550931607678428,0.3342434850271348,1005.5538795450208,300000,unsupported operand type(s) for -: 'float' and 'tuple',"Traceback (most recent call last):
+  File ""/home/chase/work/openmc/sweep/run_evo_reactor_search.py"", line 160, in evaluate
+    r = simulate_reactor(d)
+        ^^^^^^^^^^^^^^^^^^^
+  File ""/home/chase/work/openmc/sweep/fusion_engine_v5/engine/reactor_simulation.py"", line 246, in simulate_reactor
+    2000.0 * float(np.asarray(bootstrap_frac).reshape(-1)[0])
+TypeError: unsupported operand type(s) for -: 'float' and 'tuple'
+",-1e+18

@@ -1,0 +1,64 @@
+[
+  {
+    "ok": false,
+    "design": {
+      "R": 6.331157308331274,
+      "a": 2.5792856726224853,
+      "kappa": 1.887876289616385,
+      "B0": 9.5,
+      "Ip": 20.090167491877168,
+      "Ti": 32.42799788805581,
+      "Te": 21.423044687838587,
+      "H98": 1.3319150370072772,
+      "fG": 0.7277055527139524,
+      "frac_cap": 0.648920680486807,
+      "reconn_trigger": 0.7087993752187846,
+      "conf_trigger": 0.7750316293264612,
+      "lithium_thickness": 0.0017634825836719632,
+      "lithium_velocity": 5.676855016028236,
+      "liquid_wall_li6_enrich": 0.9109158939961763,
+      "blanket_thickness": 0.9033695817113857,
+      "l1": "Li2O",
+      "l1_li6": 0.9,
+      "l1_pack": 0.8839519928868065,
+      "l2": "Li2O",
+      "l2_li6": 0.9,
+      "l2_pack": 0.8927579318454482,
+      "l3": "W_Ti_B4C_60_30_10_wt",
+      "l3_li6": 0.0,
+      "l3_pack": 1.0,
+      "l4": "W_Ti_B4C_Cr_55_25_10_10_wt",
+      "l4_li6": 0.0,
+      "l4_pack": 1.0,
+      "split": [
+        0.5196207803405988,
+        0.21900258730630676,
+        0.012558690259968268,
+        0.24881794209312608
+      ],
+      "li6_frac": 0.20075674535180343,
+      "mult_frac": 0.18550931607678428,
+      "cooling_eff": 0.3342434850271348,
+      "coolant_outlet_K": 1005.5538795450208,
+      "mc_samples": 300000
+    },
+    "result": {
+      "error": "unsupported operand type(s) for -: 'float' and 'tuple'",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/chase/work/openmc/sweep/run_evo_reactor_search.py\", line 160, in evaluate\n    r = simulate_reactor(d)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/home/chase/work/openmc/sweep/fusion_engine_v5/engine/reactor_simulation.py\", line 246, in simulate_reactor\n    2000.0 * float(np.asarray(bootstrap_frac).reshape(-1)[0])\nTypeError: unsupported operand type(s) for -: 'float' and 'tuple'\n",
+      "R": -1e+18
+    },
+    "score": -1e+18,
+    "feasible": false,
+    "objectives": {
+      "net_electric": -1e+18,
+      "bootstrap": 0.0,
+      "TBR": 0.0,
+      "wall_load": 1e+18,
+      "capex_billion": 1e+18,
+      "R": -1e+18,
+      "B0": 9.5
+    },
+    "crowding": 0.0,
+    "rank": 0
+  }
+]
