@@ -1,0 +1,329 @@
+import math
+from typing import Any, Dict
+
+import numpy as np
+
+from .plasma_model import evaluate_case
+from .tct_control import run_tct_controller
+from .lithium_wall import (
+    lithium_wall_temperature,
+    mhd_drag_power,
+    pumping_power_from_heat,
+)
+from .power_balance import plant_power_balance
+from .engineering_limits import engineering_penalty
+from ..blanket.openmc_dataset_model import evaluate_blanket
+from ..blanket.openmc_runner import run_openmc_validation
+
+
+def _safe_float(x: Any, default: float = 0.0) -> float:
+    try:
+        return float(x)
+    except Exception:
+        return float(default)
+
+
+def _call_evaluate_blanket(design: Dict[str, Any], plasma: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Support either evaluate_blanket(design) or evaluate_blanket(design, plasma).
+    """
+    try:
+        return evaluate_blanket(design, plasma)
+    except TypeError:
+        return evaluate_blanket(design)
+
+
+def _lithium_wall_modifier(thickness: float, velocity: float) -> float:
+    """
+    Heuristic modifier for effective wall loading when a direct helper is not exposed
+    by lithium_wall.py. Tuned to stay in a sane range for your current design space.
+    """
+    thickness = max(_safe_float(thickness, 0.0), 0.0)
+    velocity = max(_safe_float(velocity, 0.0), 0.0)
+    mod = 1.0 + 8.0 * thickness + 0.08 * velocity
+    return float(min(max(mod, 1.0), 2.5))
+
+
+def _monte_carlo_plasma(tct: Dict[str, Any], samples: int = 30000) -> Dict[str, Any]:
+    """
+    Lightweight stochastic survivability proxy tied to the TCT controller state.
+    """
+    samples = max(int(samples or 30000), 1000)
+
+    risk_R = _safe_float(tct.get("risk_R", tct.get("tct_risk_R", 0.25)), 0.25)
+    risk_H = _safe_float(tct.get("risk_H", tct.get("tct_risk_H", 0.25)), 0.25)
+    control = _safe_float(tct.get("control_strength", 0.0), 0.0)
+    stability = _safe_float(
+        tct.get("stability", {}).get("stability", tct.get("stability_metric", 0.85)),
+        0.85,
+    )
+
+    base_risk = np.clip(0.55 * risk_R + 0.45 * risk_H, 0.0, 1.0)
+    effective_risk = np.clip(base_risk * (1.0 - 0.75 * control), 0.0, 1.0)
+
+    # keep fail rates in the realistic "small but meaningful" regime
+    fail_rate = np.clip(0.002 + 0.08 * effective_risk + 0.04 * max(0.0, 0.85 - stability), 0.0, 1.0)
+
+    # use a deterministic expectation rather than a random binomial so runs stay reproducible
+    fail_count = int(round(samples * fail_rate))
+
+    return {
+        "fail_rate": float(fail_rate),
+        "fail_count": int(fail_count),
+        "samples": int(samples),
+    }
+
+
+def estimate_capex_billion(design: Dict[str, Any], plant: Dict[str, Any], plasma: Dict[str, Any]) -> float:
+    net_gw = max(_safe_float(plant.get("net_electric", 0.0), 0.0) / 1000.0, 0.0)
+
+    base_cost = 6.0 * (net_gw ** 0.7)
+    magnet_cost = 0.8 * (_safe_float(design.get("B0", 0.0)) / 6.0) ** 2
+    size_cost = 0.25 * (_safe_float(design.get("R", 0.0)) / 6.0) ** 1.3
+
+    capex_billion = 2.0 + base_cost + magnet_cost + size_cost
+    return float(capex_billion)
+
+
+def estimate_annual_revenue_musd(
+    plant: Dict[str, Any],
+    capacity_factor: float = 0.90,
+    price_per_mwh: float = 50.0,
+) -> float:
+    net_mw = max(_safe_float(plant.get("net_electric", 0.0), 0.0), 0.0)
+    annual_mwh = net_mw * 8760.0 * capacity_factor
+    return float(annual_mwh * price_per_mwh / 1_000_000.0)
+
+
+def estimate_annualized_cost_musd(capex_billion: float, annual_om_fraction: float = 0.04) -> float:
+    annualized_capex_musd = _safe_float(capex_billion, 0.0) * 1000.0 / 20.0
+    annual_om_musd = _safe_float(capex_billion, 0.0) * 1000.0 * annual_om_fraction
+    return float(annualized_capex_musd + annual_om_musd)
+
+
+def simulate_reactor(design: Dict[str, Any], blanket_validate: bool = False) -> Dict[str, Any]:
+    plasma = evaluate_case(
+        _safe_float(design["R"]),
+        _safe_float(design["a"]),
+        _safe_float(design["kappa"]),
+        _safe_float(design["B0"]),
+        _safe_float(design["Ip"]),
+        _safe_float(design["Ti"]),
+        _safe_float(design["Te"]),
+        _safe_float(design["H98"]),
+        _safe_float(design["fG"]),
+        _safe_float(design["frac_cap"]),
+    )
+
+    tct = run_tct_controller(plasma, design)
+
+    mc = _monte_carlo_plasma(
+        tct,
+        samples=int(design.get("mc_samples", 30000)),
+    )
+
+    raw_wall_load = _safe_float(plasma.get("wn_mw_m2", 1e9), 1e9)
+    lithium_mod = _lithium_wall_modifier(
+        _safe_float(design.get("lithium_thickness", 0.0)),
+        _safe_float(design.get("lithium_velocity", 0.0)),
+    )
+    effective_wall_load = raw_wall_load / max(lithium_mod, 1e-6)
+
+    wall_temp = lithium_wall_temperature(
+        raw_wall_load,
+        _safe_float(design.get("lithium_thickness", 0.0)),
+    )
+
+    mhd_power = mhd_drag_power(
+        _safe_float(design.get("B0", 0.0)),
+        _safe_float(design.get("lithium_velocity", 0.0)),
+        1.0e6,
+        500.0,
+        0.05,
+        200.0,
+    )
+
+    pump_power = pumping_power_from_heat(_safe_float(plasma.get("pfus_mw", 0.0), 0.0))
+
+    design = dict(design)
+    design["pump_power_mw"] = float(pump_power)
+
+    if blanket_validate:
+        blanket = run_openmc_validation(design, plasma)
+        if blanket is None:
+            blanket = _call_evaluate_blanket(design, plasma)
+            blanket["model"] = "dataset_fallback"
+    else:
+        blanket = _call_evaluate_blanket(design, plasma)
+
+    # normalize OpenMC output safely
+    if isinstance(blanket, dict):
+        blanket = dict(blanket)
+
+    elif isinstance(blanket, (list, tuple)):
+        # attempt structured unpack
+        try:
+            blanket = {
+                "TBR": float(blanket[0]),
+                "attenuation": float(blanket[1]) if len(blanket) > 1 else 0.0,
+                "front_heating_frac": float(blanket[2]) if len(blanket) > 2 else 1.0,
+                "model": "openmc_raw",
+            }
+        except Exception:
+            blanket = {"model": "openmc_invalid"}
+
+    else:
+        blanket = {"model": "openmc_unknown"}
+
+    # ensure required keys exist
+    blanket.setdefault("TBR", 0.0)
+    blanket.setdefault("attenuation", 0.0)
+    blanket.setdefault("front_heating_frac", 1.0)
+
+    plant = plant_power_balance(plasma, blanket, mhd_power, design)
+
+    penalty_stress = engineering_penalty(
+        plasma,
+        plant,
+        wall_temp,
+        design,
+        blanket=blanket,
+    )
+
+    capex_billion = estimate_capex_billion(design, plant, plasma)
+    annual_revenue_musd = estimate_annual_revenue_musd(plant)
+    annual_cost_musd = estimate_annualized_cost_musd(capex_billion)
+
+    size_penalty = (
+        50.0 * max(_safe_float(design["R"]) - 8.5, 0.0) ** 2
+        + 45.0 * max(_safe_float(design["a"]) - 2.6, 0.0) ** 2
+    )
+
+    grid_penalty = 0.0
+    # --- ORIGINAL RAW POWER ---
+    net_electric_raw = _safe_float(plant.get("net_electric", 0.0), 0.0)
+
+    # --- EVENT / INSTABILITY MODEL ---
+    fail_rate = safe_float(mc.get("fail_rate", 0.0), 0.0)
+
+    # derive severity from TCT + stability
+    stability = safe_float(tct.get("stability", 1.0), 1.0)
+    tct_usage = safe_float(tct.get("used", 0.0), 0.0)
+
+    # severity model (bounded, tunable)
+    event_severity = max(0.02, min(1.0, 1.0 - stability + 0.1 * tct_usage))
+
+    # if you later add real damage_per_event, it overrides:
+    if "damage_per_event" in mc:
+        event_severity = max(
+            0.02,
+            min(1.0, _safe_float(mc.get("damage_per_event", 0.0), 0.0) * 1e5)
+        )
+
+    # combined loss (THIS is the missing physics)
+    event_loss_frac = max(0.0, min(0.6, 0.35 * fail_rate * event_severity))
+
+    # adjusted power
+    net_electric = max(0.0, net_electric_raw * (1.0 - event_loss_frac))
+    if net_electric < 500.0:
+        grid_penalty += 2000.0 + 500.0 * (500.0 - net_electric) ** 2
+    if net_electric < 2500.0:
+        grid_penalty += 0.7 * (2500.0 - net_electric)
+    if net_electric > 4000.0:
+        grid_penalty += 1.5 * (net_electric - 4000.0)
+
+    complexity_penalty = (
+    15.0 * max(_safe_float(design["B0"]) - 8.0, 0.0) ** 2
+    + 3.0 * max(_safe_float(design["lithium_velocity"]) - 4.0, 0.0) ** 2
+    + 80.0 * max(_safe_float(design["blanket_thickness"]) - 1.2, 0.0) ** 2
+    )
+    breeding_penalty = 0.0
+    if _safe_float(blanket["TBR"]) < 1.15:
+        breeding_penalty += 15000.0 * (1.15 - _safe_float(blanket["TBR"]))
+
+    wall_penalty = 0.0
+    if effective_wall_load > 6.5:
+        wall_penalty += 30000.0 * (effective_wall_load - 6.5) ** 2
+    if raw_wall_load > 24.0:
+        wall_penalty += 2000.0 * (raw_wall_load - 24.0) ** 2
+
+    bootstrap_penalty = 0.0
+    bootstrap_frac = _safe_float(plasma.get("bootstrap_frac", 0.0), 0.0)
+    if bootstrap_frac < 0.65:
+        bootstrap_penalty += 20000.0 * (0.65 - bootstrap_frac)
+
+    stability_penalty = 0.0
+    beta = _safe_float(plasma.get("beta", 0.03), 0.03)
+    ip_ma = max(_safe_float(plasma.get("Ip_MA", _safe_float(design["Ip"], 10.0))), 0.1)
+    betan = beta * _safe_float(design["B0"]) * _safe_float(design["a"]) / ip_ma
+    density_frac = _safe_float(design.get("fG", plasma.get("fG", 0.85)), 0.85)
+
+    if density_frac > 0.9 and betan < 1.0:
+        stability_penalty += 12000.0 * ((density_frac / 0.9) - 1.0) ** 2
+    if betan > 3.5:
+        stability_penalty += 15000.0 * (betan - 3.5) ** 2
+
+    hard_fail_penalty = 0.0
+    if _safe_float(blanket["TBR"]) < 0.95:
+        hard_fail_penalty += 100000.0 + 20000.0 * (0.95 - _safe_float(blanket["TBR"]))
+    if _safe_float(blanket.get("attenuation", 0.0)) < 0.05:
+        hard_fail_penalty += 300000.0 + 100000.0 * (0.05 - _safe_float(blanket.get("attenuation", 0.0)))
+
+    # keep "reactor-like" regimes preferred without outright forbidding smaller cases
+    if net_electric < 1500.0:
+        hard_fail_penalty += 50000.0 + 500.0 * (1500.0 - net_electric)
+
+    if _safe_float(design["R"]) > 12.0:
+        hard_fail_penalty += 100000.0 + 25000.0 * (_safe_float(design["R"]) - 12.0)
+    if _safe_float(design["a"]) > 2.5:
+        hard_fail_penalty += 100000.0 + 25000.0 * (_safe_float(design["a"]) - 2.5)
+    if _safe_float(design["B0"]) > 9.5:
+        hard_fail_penalty += 100000.0 + 25000.0 * (_safe_float(design["B0"]) - 9.5)
+
+    performance_boost = lithium_mod
+    bootstrap_boost = bootstrap_frac
+
+    score = (
+        2000.0 * float(np.asarray(bootstrap_frac).reshape(-1)[0])
+        + annual_revenue_musd
+        - annual_cost_musd
+        - penalty_stress
+        - grid_penalty
+        - size_penalty
+        - complexity_penalty
+        - breeding_penalty
+        - wall_penalty
+        - bootstrap_penalty
+        - hard_fail_penalty
+        - stability_penalty
+        + 600.0 * _safe_float(tct.get("stability", {}).get("stability", 0.0), 0.0)
+        - 200.0 * _safe_float(mc["fail_rate"], 0.0)
+    )
+
+    return {
+        "score": float(score),
+        "net_electric": float(net_electric),
+        "TBR": float(_safe_float(blanket["TBR"])),
+        "fail_rate": float(_safe_float(mc["fail_rate"])),
+        "wall_load": float(effective_wall_load),
+        "raw_wall_load": float(raw_wall_load),
+        "lithium_wall_modifier": float(lithium_mod),
+        "performance_boost": float(performance_boost),
+        "bootstrap": float(np.asarray(bootstrap_boost).reshape(-1)[0]),
+        "wall_temp": float(_safe_float(wall_temp)),
+        "blanket_model": blanket.get("model", "unknown"),
+        "blanket_attenuation": float(_safe_float(blanket.get("attenuation", 0.0))),
+        "blanket_front_heating_frac": float(_safe_float(blanket.get("front_heating_frac", 1.0))),
+        "capex_billion": float(capex_billion),
+        "annual_revenue_musd": float(annual_revenue_musd),
+        "annual_cost_musd": float(annual_cost_musd),
+        "mc_samples": int(mc["samples"]),
+        "tct_control_strength": float(_safe_float(tct.get("control_strength", 0.0))),
+        "tct_precursor": float(_safe_float(tct.get("precursor", 0.0))),
+        "tct_upstream_factor": float(_safe_float(tct.get("upstream_factor", 1.0))),
+        "tct_risk_R": float(_safe_float(tct.get("risk_R", 0.0))),
+        "tct_risk_H": float(_safe_float(tct.get("risk_H", 0.0))),
+        "tct_n_used": float(_safe_float(tct.get("n_used", plasma.get("n_e3", plasma.get("n_e", 0.0))))),
+        "tct_B_used": float(_safe_float(tct.get("B_used", plasma.get("B_t", 0.0)))),
+        "tct_Te_used": float(_safe_float(tct.get("Te_used", plasma.get("T_keV", plasma.get("Te_keV", 0.0))))),
+    }
