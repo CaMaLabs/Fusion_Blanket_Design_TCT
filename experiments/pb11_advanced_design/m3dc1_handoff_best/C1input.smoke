@@ -1,0 +1,164 @@
+&inputnl
+
+! I/O Options
+! ===========
+	ntimemax = 0	! number of time steps
+	ntimepr = 1	! number of time steps per output
+	iprint = 2	! 1 = print detailed debug info
+	itimer = 0	! 1 = print timing info
+
+	irestart = 0	! 1 = read restart
+
+	iread_eqdsk = 3
+	iwrite_aux_vars = 1
+	iwrite_transport_coeffs = 1
+	iwrite_hdf5 = 0
+
+	irmp = 0
+	extsubtract = 0
+	icalc_scalars = 1	! keep scalar diagnostics enabled for sweep runs
+
+
+! Numerical Method Options
+! ========================
+	dt = 1.		! time step
+
+	integrator = 0	! 0 = Crank-Nicholson, 1 = BDF2
+	thimp = 0.6	! implicitness parameter for CN
+	imp_mod = 0
+	isplitstep = 1
+
+	int_pts_main = 25
+	int_pts_aux = 25
+	int_pts_diag = 25
+
+	ivform = 1
+	jadv = 1
+	isurface = 0
+
+	max_ke = 1.
+
+	itime_independent = 0
+	imp_bf = 1
+
+	regular = 1e-8
+
+!	iset_pe_floor = 1
+!	pe_floor = 1e-10
+	
+
+! Model Options
+! =============
+	itor = 1	! 1 = toroidal geometry, 0 = slab geometry
+
+	linear = 0	! run the nonlinear path for meaningful native diagnostics
+	eqsubtract = 0	! keep equilibrium terms in the nonlinear run
+      	numvar = 3	! 1 = 2-field; 2 = 4-field; 3 = 6-field
+      	idens = 1	! 1 = advance density
+	ipres = 0       ! 1 = include electron pressure equation
+	gyro = 0
+
+	inertia = 1
+
+	ion_mass = 2.
+	z_ion = 1.
+
+
+! Equilibrium Options
+! ===================
+      	itaylor = 1     ! itor = 1 and itaylor = 1 --> GS equilibrium
+	idevice = -1    ! -1 = read coil.dat and current.dat
+
+	p0 = 1.		! total pressure
+	pi0 = 0.5	! ion pressure
+	eps = 0	! amplitude of initial random perturbations
+
+	irot = 0	! 1 = equilibrium toroidal rotation; -1 = p(psi)
+	iread_omega_ExB = 0 ! read profile_omega
+
+	iread_ne = 0	! use default density profile
+	iread_te = 0	! use default temperature profile
+
+
+	imag_probes = 1
+	mag_probe_x(1) = 2.3
+	mag_probe_z(1) = 0.
+	mag_probe_nx(1) = 1.  ! probe is oriented to measure BR
+
+! Transport Parameters
+! ====================
+	eta_wall = 1.
+	iresfunc = 4
+      	amu = 1e-6	! kinematic viscosity 
+	amuc = 0.
+	amupar = 0.
+	denm = 1e-6	! density diffusion
+	kappat = 1e-6	! isotropic thermal conductivity
+	kappa0 = 0.	!  kappa = kappat + kappa0*p/T^(3/2)
+	kappar = 0.	! field-aligned thermal conductivity
+	ikapscale = 0
+
+	gam = 1.66666666666667	! adiabatic constant
+
+	db_fac = 0.	! 1.0 for two-fluid calculation
+
+
+! Boundary Conditions
+! ===================
+	mesh_filename = '/root/M3DC1/unstructured/runs/first_linear/diii-d_rw1-9K.smb'
+	mesh_model = '/root/M3DC1/unstructured/runs/first_linear/diii-d_rw1.txt'
+
+	icsubtract = 1		! B = B_plasma + B_coil
+	imulti_region = 1	! Use multi-region mesh
+
+	boundary_type(1) = 1  ! Loop 1 is the first wall
+	boundary_type(3) = 2  ! Loop 3 is the domain boundary
+	zone_type(1) = 1    ! Zone 1 is the plasma
+	zone_type(2) = 2    ! Zone 2 is a conductor (resistive wall)
+	zone_type(3) = 3    ! Zone 3 is a vacuum
+
+
+! Grad-Shafranov Options
+! ======================
+	xlim = 0.	! limiting value of x
+	zlim = 0.	! limiting value of z
+	xlim2 = 0.	! limiting value of x
+	zlim2 = 0.	! limiting value of z
+	th_gs = 0.7
+	igs = 0	! number of grad-shafranov iterations
+	pedge = 0.0002	! mapped from lithium_thickness_m
+	expn = 0.
+	divertors = 0
+	xnull = 1.4
+	znull = -0.7
+	xnull2 = 1.4
+	znull2 = 0.7
+	sigma0 = 0.4
+
+	igs_extend_p = 1
+
+	gs_vertical_feedback(9)   = -500
+	gs_vertical_feedback(10)  = 500
+	gs_vertical_feedback(11)  = -500
+	gs_vertical_feedback(12)  = 500
+	gs_vertical_feedback(13)  = -500
+	gs_vertical_feedback(14)  = 500
+	gs_vertical_feedback_i(9)   = -50
+	gs_vertical_feedback_i(10)  = 50
+	gs_vertical_feedback_i(11)  = -50
+	gs_vertical_feedback_i(12)  = 50
+	gs_vertical_feedback_i(13)  = -50
+	gs_vertical_feedback_i(14)  = 50
+	gs_radial_feedback(15)  = -500
+	gs_radial_feedback(16)  = -500
+	gs_radial_feedback(17)  = -500
+	gs_radial_feedback(18)  = -500
+	gs_radial_feedback_i(15)  = -50
+	gs_radial_feedback_i(16)  = -50
+	gs_radial_feedback_i(17)  = -50
+	gs_radial_feedback_i(18)  = -50
+
+	ntor = 1
+	nplanes = 1
+	nperiods = 1
+ /

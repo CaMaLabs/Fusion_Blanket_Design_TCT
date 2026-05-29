@@ -515,6 +515,59 @@ def parse_m3dc1_log(log_text: str) -> Dict[str, float | None]:
     return metrics
 
 
+def export_m3dc1_case(s: Scenario, output_dir: Path, *, quick_init: bool = True) -> Dict[str, object]:
+    if not M3DC1_TEMPLATE_DIR.exists():
+        raise FileNotFoundError(f"M3DC1 template directory not found: {M3DC1_TEMPLATE_DIR}")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(M3DC1_TEMPLATE_DIR, output_dir, dirs_exist_ok=True)
+    applied = apply_m3dc1_mapping(s, output_dir, quick_init=quick_init)
+    metrics = simulate(s)
+    manifest = {
+        "scenario": asdict(s),
+        "metrics": asdict(metrics),
+        "m3dc1_mapping": applied,
+        "template_dir": str(M3DC1_TEMPLATE_DIR),
+        "quick_init": quick_init,
+        "notes": [
+            "This is an M3DC1/TCT handoff deck for the DT-TCT baseline behavior of the surrogate-selected auxiliary hybrid.",
+            "Auxiliary p-B11, D-He3, D-Li6, direct conversion, racetrack, and wall-channel effects remain surrogate annotations, not native M3DC1 physics.",
+            "Run native MHD stability first; use surrogate metrics only to prioritize cases.",
+        ],
+    }
+    (output_dir / "pb11_surrogate_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (output_dir / "README_pb11_handoff.md").write_text(
+        "\n".join([
+            "# PB11 Advanced Hybrid M3DC1 Handoff",
+            "",
+            f"Scenario: `{s.name}`",
+            "",
+            "Native M3DC1 mappings applied:",
+            f"- feedback scale: `{applied['feedback_scale']}`",
+            f"- lithium/current scale: `{applied['li_scale']}`",
+            f"- perturbation eps: `{applied['eps']}`",
+            f"- edge pressure proxy: `{applied['pedge']}`",
+            "",
+            "Surrogate headline metrics:",
+            f"- net power proxy: `{metrics.net_power_proxy}`",
+            f"- ignition margin proxy: `{metrics.ignition_margin_proxy}`",
+            f"- auxiliary gross power proxy: `{metrics.pB11_gross_power}`",
+            f"- auxiliary power fraction: `{metrics.pB11_power_fraction}`",
+            f"- TBR proxy: `{metrics.tbr_proxy}`",
+            f"- liquid lithium wall heat: `{metrics.liquid_lithium_wall_heat_load}`",
+            f"- Be/B4C wall heat: `{metrics.be_b4c_wall_heat_deposition}`",
+            "",
+            "Caution: the auxiliary edge-fuel and direct-conversion systems are not solved by M3DC1 here. This deck is for DT-TCT MHD/control screening around the selected operating point.",
+            "",
+        ]) + "\n",
+        encoding="utf-8",
+    )
+    return {
+        "output_dir": str(output_dir),
+        "applied": applied,
+        "metrics": asdict(metrics),
+    }
+
+
 def run_m3dc1_case(s: Scenario, *, keep_logs: bool = False, quick_init: bool = False) -> Dict[str, object]:
     if not M3DC1_TEMPLATE_DIR.exists():
         raise FileNotFoundError(f"M3DC1 template directory not found: {M3DC1_TEMPLATE_DIR}")
@@ -2435,6 +2488,80 @@ def print_outperform_uncertainty(reference: Scenario | None = None) -> None:
         print(f"{label}: {status}")
 
 
+def print_penalty_sweep(reference: Scenario | None = None) -> None:
+    base = reference or outperform_reference_scenario()
+    base_m = simulate(base)
+    rows = []
+    configs = [
+        ("nominal", 1.00, 1.00, 1.00),
+        ("mild output loss", 0.85, 1.00, 1.00),
+        ("medium output loss", 0.70, 1.00, 1.00),
+        ("hard output loss", 0.50, 1.00, 1.00),
+        ("support +25%", 1.00, 1.25, 1.00),
+        ("support +50%", 1.00, 1.50, 1.00),
+        ("support x2", 1.00, 2.00, 1.00),
+        ("wall heat +25%", 1.00, 1.00, 1.25),
+        ("wall heat +50%", 1.00, 1.00, 1.50),
+        ("credible conservative", 0.85, 1.25, 1.15),
+        ("severe conservative", 0.70, 1.50, 1.25),
+        ("break case", 0.50, 2.00, 1.50),
+    ]
+    support_power = (
+        base_m.pb11_support_recirc_power
+        + base_m.pb11_support_areal_power
+        + base_m.pb11_support_driver_power
+        + base_m.pb11_support_control_power
+        + base_m.racetrack_drive_power
+        + base_m.boron_replenishment_power
+        + base_m.li_boron_mhd_penalty
+    )
+    for label, output_scale, support_scale, wall_scale in configs:
+        gross_loss = base_m.pB11_gross_power * (1.0 - output_scale)
+        extra_support = support_power * (support_scale - 1.0)
+        li_heat = base_m.liquid_lithium_wall_heat_load * wall_scale + 0.10 * gross_loss
+        be_heat = base_m.be_b4c_wall_heat_deposition * wall_scale + 0.08 * gross_loss
+        wall_penalty = 0.10 * max(0.0, li_heat + be_heat - 6.0)
+        pbgross = base_m.pB11_gross_power * output_scale
+        net = base_m.net_power_proxy - gross_loss - extra_support - wall_penalty
+        ign = base_m.ignition_margin_proxy - 0.75 * gross_loss - 0.75 * extra_support - 0.5 * wall_penalty
+        pbnet = base_m.pB11_net_delta - gross_loss - extra_support - wall_penalty
+        pbfrac = pbgross / max(base_m.fusion_dt_power_proxy + pbgross, 1e-9)
+        status = "pass" if (
+            net >= 8.639
+            and ign >= 9.024
+            and pbnet >= 0.0
+            and pbfrac >= 0.18
+            and li_heat <= 4.8
+            and be_heat <= 4.8
+            and base_m.tbr_proxy >= 1.1
+        ) else "fail"
+        rows.append({
+            "case": label,
+            "out": output_scale,
+            "support": support_scale,
+            "wall": wall_scale,
+            "net": round(net, 3),
+            "ign": round(ign, 3),
+            "pBnet": round(pbnet, 3),
+            "pBgross": round(pbgross, 3),
+            "pBfrac": round(pbfrac, 4),
+            "LiHeat": round(li_heat, 3),
+            "BeHeat": round(be_heat, 3),
+            "status": status,
+        })
+    headers = ["case", "out", "support", "wall", "net", "ign", "pBnet", "pBgross", "pBfrac", "LiHeat", "BeHeat", "status"]
+    widths = {h: len(h) for h in headers}
+    for row in rows:
+        for h in headers:
+            widths[h] = max(widths[h], len(str(row[h])))
+    print()
+    print("Outperform candidate pB11 penalty sweep")
+    print(" | ".join(h.ljust(widths[h]) for h in headers))
+    print("-+-".join("-" * widths[h] for h in headers))
+    for row in rows:
+        print(" | ".join(str(row[h]).ljust(widths[h]) for h in headers))
+
+
 def print_breakthrough_robustness(reference: Scenario | None = None) -> None:
     base = reference or breakthrough_reference_scenario()
     base_m = simulate(base)
@@ -2540,7 +2667,10 @@ def main() -> None:
     parser.add_argument("--min-aux-fraction", type=float, default=None, help="Filter optimizer results below this auxiliary-fuel gross power fraction")
     parser.add_argument("--robustness", action="store_true", help="Run targeted robustness sweeps around the best p-B11 breakthrough candidate")
     parser.add_argument("--uncertainty", action="store_true", help="Run stress tests around the best full-DT auxiliary outperform candidate")
+    parser.add_argument("--penalty-sweep", action="store_true", help="Apply conservative p-B11 output, support-cost, and wall-heat penalties to the outperform candidate")
     parser.add_argument("--run-real-m3dc1", action="store_true", help="Prepare the M3DC1 case directory and run the local solver for one scenario")
+    parser.add_argument("--export-best-m3dc1", action="store_true", help="Export the best full-DT auxiliary hybrid as an M3DC1/TCT handoff case without running it")
+    parser.add_argument("--export-dir", default=str(ROOT / "m3dc1_case_runs" / "pb11_best_handoff"), help="Output directory for --export-best-m3dc1")
     parser.add_argument("--case", default="H", choices=sorted(case_definitions().keys()), help="Scenario key to use with --run-real-m3dc1")
     parser.add_argument("--keep-logs", action="store_true", help="Keep the copied M3DC1 run directory")
     parser.add_argument("--quick-init", action="store_true", help="Zero the initial perturbation amplitude when preparing the M3DC1 deck")
@@ -2554,6 +2684,15 @@ def main() -> None:
 
     if args.uncertainty:
         print_outperform_uncertainty()
+        return
+
+    if args.penalty_sweep:
+        print_penalty_sweep()
+        return
+
+    if args.export_best_m3dc1:
+        result = export_m3dc1_case(outperform_reference_scenario(), Path(args.export_dir), quick_init=args.quick_init)
+        print(json.dumps(result, indent=2, sort_keys=True))
         return
 
     if args.run_real_m3dc1:
