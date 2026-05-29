@@ -149,7 +149,6 @@ def mutate(d, mutation_scale=MUTATION_SCALE):
             "blanket_thickness",
             child["blanket_thickness"] + abs(random.gauss(0.08, 0.20)),
         )
-
     return sanitize_design(child)
 
 
@@ -225,8 +224,8 @@ def evaluate(d):
             "result": {
                 "error": str(e),
                 "traceback": traceback.format_exc(),
-            
-        "R": -1e18,},
+                "R": -1e18,
+            },
             "score": -1e18,
             "feasible": False,
             "objectives": {
@@ -240,6 +239,7 @@ def evaluate(d):
             "crowding": 0.0,
             "rank": 9999,
         }
+
 
 def is_feasible(item):
     if not item.get("ok", False):
@@ -266,6 +266,7 @@ def is_feasible(item):
         return True
     except Exception:
         return False
+
 
 def extract_objectives(item):
     r = item.get("result", {})
@@ -313,6 +314,7 @@ def extract_objectives(item):
 
     return out
 
+
 def dominates(a, b):
     if a.get("feasible") and not b.get("feasible"):
         return True
@@ -347,6 +349,7 @@ def dominates(a, b):
 
     return better_or_equal and strictly_better
 
+
 def non_dominated_sort(population):
     fronts = []
     S = {}
@@ -356,6 +359,8 @@ def non_dominated_sort(population):
     for i, p in enumerate(population):
         S[i] = []
         n[i] = 0
+        p["rank"] = 9999
+        p["crowding"] = 0.0
         for j, q in enumerate(population):
             if i == j:
                 continue
@@ -400,7 +405,10 @@ def crowding_distance(population, front):
     distance = [0.0] * n
 
     if n <= 2:
-        return [float("inf")] * n
+        distance = [float("inf")] * n
+        for idx, dist in zip(front, distance):
+            population[idx]["crowding"] = dist
+        return distance
 
     for key, direction in OBJECTIVES.items():
         front_sorted = sorted(front, key=lambda idx: get_obj(idx, key))
@@ -425,7 +433,11 @@ def crowding_distance(population, front):
             if distance[pos] != float("inf"):
                 distance[pos] += norm
 
+    for idx, dist in zip(front, distance):
+        population[idx]["crowding"] = dist
+
     return distance
+
 
 def pareto_select(population, target_size):
     fronts = non_dominated_sort(population)
@@ -552,7 +564,7 @@ def main():
             mutation_scale = min(mutation_scale * 1.15, 0.6)
 
         with mp.Pool(WORKERS) as pool:
-            evaluated = [evaluate(x) for x in population]
+            evaluated = pool.map(evaluate, population)
 
         feasible_count = sum(1 for x in evaluated if x.get("feasible"))
         print(f"GEN {gen:03d} | feasible={feasible_count}/{len(evaluated)}")
@@ -572,12 +584,10 @@ def main():
         selected = pareto_select(evaluated, len(evaluated))
 
         if not selected:
-
             print(f"GEN {gen:03d} | no feasible candidates, reseeding")
-
             population = [sanitize_design(random_design()) for _ in range(POP_SIZE)]
-
             continue
+
         # --- anti-collapse diversity filter ---
         unique_keys = set()
         diverse = []
@@ -651,6 +661,7 @@ def main():
             writer.writerows(history)
     else:
         print("No feasible results collected — skipping CSV write.")
+
     all_front = []
     for gen_dir in sorted(OUTDIR.glob("gen_*")):
         fp = gen_dir / "pareto_front.json"
