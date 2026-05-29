@@ -1,3 +1,19 @@
+"""
+LEGACY / EARLY SCREENING SCRIPT
+
+This file is retained for provenance only. It represents an early standalone
+fusion/TCT screening model with simplified plasma, wall, TBR, and event-loss
+approximations.
+
+The current coupled research path is:
+
+    run_evo_reactor_search.py
+    fusion_engine_v5/
+
+Do not cite this file as the current reactor model or as validated physics.
+Use it only to understand the development history of the repository.
+"""
+
 import math
 import random
 import numpy as np
