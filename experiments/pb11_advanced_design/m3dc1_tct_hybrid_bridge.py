@@ -2278,6 +2278,163 @@ def robustness_status(m: Metrics) -> str:
     return "pass" if all(checks) else "fail"
 
 
+def outperform_reference_scenario() -> Scenario:
+    return Scenario(
+        name="Best full-DT auxiliary hybrid reference",
+        tct_mode="aggressive",
+        tct_strength="aggressive",
+        field_reversal_depth="strong local reversal",
+        counter_rotation="strong",
+        plasma_spin_organization="phase-locked",
+        compression_amplitude_pct=10.0,
+        magnetic_ramp_timing="during compression",
+        rf_timing="at peak compression",
+        plasma_mirror_drive="strong",
+        plasma_mirror_duty=1.0,
+        dynamic_volume_compression="deep",
+        volume_compression_timing="peak-burn",
+        volume_compression_duty=0.35,
+        edge_racetrack="off",
+        racetrack_pitch="steep",
+        racetrack_wall_clearance="nominal",
+        racetrack_energy_rephase="off",
+        boron_vapor_density="extreme",
+        proton_recirculation_quality="100k-pass",
+        boron_areal_density=10.0,
+        proton_energy_center_keV=120.0,
+        proton_energy_spread_pct=8.0,
+        proton_energy_recovery="aggressive",
+        proton_driver_mode="autoresonant",
+        pb11_cavity_q="high-Q",
+        boron_vapor_control="magnetized",
+        li_boron_mix_fraction="rich",
+        boron_wall_loading="heavy",
+        pb11_wall_thickness="graded-bulk",
+        pb11_wall_current="high",
+        boron_wick_efficiency="capillary",
+        alpha_channeling_to_protons="medium",
+        alpha_to_li_capture_fraction=0.90,
+        grazing_path_multiplier="none",
+        direct_converter_geometry="divertor-integrated",
+        alpha_to_proton_coupling="weak",
+        adaptive_electron_skimmer="off",
+        dt_alpha_assist="strong",
+        rf_grating="adaptive",
+        rf_grating_duty=0.10,
+        electron_channel="off",
+        electron_channel_duty=0.35,
+        alpha_channel="strong",
+        alpha_channel_duty=0.10,
+        ash_channel="off",
+        ash_channel_duty=0.50,
+        channel_separation_quality=0.92,
+        liquid_lithium_current="high",
+        alpha_conversion_efficiency=0.85,
+        dt_seed_fraction="full",
+        boron_profile_shape="pulsed-sheet",
+        proton_phase_cooling="magnetic-collimation",
+        resonant_orbit_closure="strong",
+        boron_sheet_quality="phase-locked",
+        proton_phase_recovery="strong",
+        converter_staging="adaptive",
+        alpha_bootstrap_feedback="strong",
+        graphene_heat_channels="aligned",
+        aux_fuel="D-He3+D-Li6+pB11-wall",
+        pB11_enabled=True,
+    )
+
+
+def stress_status(m: Metrics) -> str:
+    checks = [
+        m.net_power_proxy >= 8.639,
+        m.ignition_margin_proxy >= 9.024,
+        m.pB11_net_delta >= 0.0,
+        m.pB11_power_fraction >= 0.18,
+        m.tbr_proxy >= 1.1,
+        m.liquid_lithium_wall_heat_load <= 4.8,
+        m.be_b4c_wall_heat_deposition <= 4.8,
+    ]
+    return "pass" if all(checks) else "fail"
+
+
+def print_outperform_uncertainty(reference: Scenario | None = None) -> None:
+    base = reference or outperform_reference_scenario()
+    fields = [
+        "net_power_proxy",
+        "ignition_margin_proxy",
+        "pB11_net_delta",
+        "pB11_gross_power",
+        "pB11_power_fraction",
+        "pB11_alpha_yield",
+        "proton_burnup_fraction",
+        "proton_energy_retention_norm",
+        "proton_loss_fraction",
+        "effective_proton_path_length_passes",
+        "hardware_recirc_passes",
+        "pb11_support_recirc_power",
+        "racetrack_guidance_factor",
+        "tbr_proxy",
+        "liquid_lithium_wall_heat_load",
+        "be_b4c_wall_heat_deposition",
+    ]
+    cases = [
+        ("reference", {}),
+        ("mirror medium", {"plasma_mirror_drive": "medium", "plasma_mirror_duty": 0.50}),
+        ("mirror off", {"plasma_mirror_drive": "off"}),
+        ("cavity resonant", {"pb11_cavity_q": "resonant"}),
+        ("cavity guided", {"pb11_cavity_q": "guided"}),
+        ("spread 15pct", {"proton_energy_spread_pct": 15.0}),
+        ("spread 25pct", {"proton_energy_spread_pct": 25.0}),
+        ("recirc 10k", {"proton_recirculation_quality": "10k-pass"}),
+        ("recirc 1k", {"proton_recirculation_quality": "1k-pass"}),
+        ("wall current medium", {"pb11_wall_current": "medium"}),
+        ("wick structured", {"boron_wick_efficiency": "structured"}),
+        ("wick shallow", {"boron_wick_efficiency": "shallow"}),
+        ("alpha weak", {"alpha_channeling_to_protons": "weak", "alpha_channel": "weak"}),
+        ("alpha off", {"alpha_channeling_to_protons": "off", "alpha_channel": "off", "alpha_to_proton_coupling": "off"}),
+        ("graphene micro", {"graphene_heat_channels": "microchannel"}),
+        ("graphene off", {"graphene_heat_channels": "off"}),
+        ("resonant racetrack", {"edge_racetrack": "resonant", "racetrack_energy_rephase": "weak", "graphene_heat_channels": "microchannel"}),
+        ("conservative stack", {
+            "plasma_mirror_drive": "medium",
+            "plasma_mirror_duty": 0.50,
+            "pb11_cavity_q": "resonant",
+            "proton_energy_spread_pct": 15.0,
+            "boron_wick_efficiency": "structured",
+            "alpha_channeling_to_protons": "weak",
+            "alpha_channel": "weak",
+            "alpha_to_proton_coupling": "off",
+            "pb11_wall_current": "medium",
+            "graphene_heat_channels": "microchannel",
+        }),
+        ("hard fail stack", {
+            "plasma_mirror_drive": "weak",
+            "pb11_cavity_q": "guided",
+            "proton_energy_spread_pct": 25.0,
+            "proton_recirculation_quality": "10k-pass",
+            "boron_wick_efficiency": "shallow",
+            "alpha_channeling_to_protons": "off",
+            "alpha_channel": "off",
+            "alpha_to_proton_coupling": "off",
+            "pb11_wall_current": "medium",
+            "graphene_heat_channels": "off",
+        }),
+    ]
+    rows = []
+    statuses = []
+    for label, changes in cases:
+        metrics = simulate(dataclasses.replace(base, name=label, **changes))
+        rows.append((label, metrics))
+        statuses.append((label, stress_status(metrics)))
+    print()
+    print("Outperform candidate uncertainty/stress matrix")
+    print(format_table(rows, fields))
+    print()
+    print("Stress pass/fail")
+    for label, status in statuses:
+        print(f"{label}: {status}")
+
+
 def print_breakthrough_robustness(reference: Scenario | None = None) -> None:
     base = reference or breakthrough_reference_scenario()
     base_m = simulate(base)
@@ -2382,6 +2539,7 @@ def main() -> None:
     parser.add_argument("--min-pb11-burnup", type=float, default=None, help="Filter optimizer results below this p-B11 burnup fraction")
     parser.add_argument("--min-aux-fraction", type=float, default=None, help="Filter optimizer results below this auxiliary-fuel gross power fraction")
     parser.add_argument("--robustness", action="store_true", help="Run targeted robustness sweeps around the best p-B11 breakthrough candidate")
+    parser.add_argument("--uncertainty", action="store_true", help="Run stress tests around the best full-DT auxiliary outperform candidate")
     parser.add_argument("--run-real-m3dc1", action="store_true", help="Prepare the M3DC1 case directory and run the local solver for one scenario")
     parser.add_argument("--case", default="H", choices=sorted(case_definitions().keys()), help="Scenario key to use with --run-real-m3dc1")
     parser.add_argument("--keep-logs", action="store_true", help="Keep the copied M3DC1 run directory")
@@ -2392,6 +2550,10 @@ def main() -> None:
 
     if args.robustness:
         print_breakthrough_robustness()
+        return
+
+    if args.uncertainty:
+        print_outperform_uncertainty()
         return
 
     if args.run_real_m3dc1:
