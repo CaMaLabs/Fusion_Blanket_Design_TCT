@@ -1,0 +1,113 @@
+IncIntShear = false		# type: bool, source: default
+MXG = 0		# type: int, doc: Number of guard cells on each side in X, source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+MYG = 2		# type: int, doc: Number of guard cells on each side in Y, source: default
+ZMAX = 1		# type: BoutReal, source: default
+ZMIN = 0		# type: BoutReal, source: default
+append = false		# type: bool, doc: Add new outputs to the end of existing files? If false, overwrite files., source: default
+async_send = false		# type: bool, doc: Whether to use asyncronous MPI sends, source: default
+datadir = validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100		# type: string, source: Command line
+dump_on_restart = true		# type: bool, doc: Write initial state as time point 0?, source: default
+non_uniform = true		# type: bool, source: default
+nout = 1		# type: int, doc: Number of output steps, source: default
+optionfile = BOUT.inp		# type: string, source: default
+periodicX = false		# type: bool, doc: Make grid periodic in X?, source: default
+restart = false		# type: bool, doc: Load state from restart files?, source: default
+settingsfile = BOUT.settings		# type: string, source: default
+stopCheck = false		# type: bool, doc: Check if a file exists, and exit if it does., source: default
+stopCheckName = BOUT.stop		# type: string, doc: Name of file whose existence triggers a stop, source: default
+timestep = 1		# type: BoutReal, doc: Output time step size, source: default
+twistshift = false		# type: bool, doc: Apply a Twist-Shift boundary using ShiftAngle?, source: default
+wall_limit = -1		# type: BoutReal, doc: Wall time limit in hours. By default (< 0), no limit, source: default
+
+[T]
+bndry_all = dirichlet_o4(0.0)		# type: string, source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+evolve_bndry = false		# type: bool, source: default
+function = gauss(y-pi, 0.15974441)		# type: string, source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+scale = 0.75674494		# type: BoutReal, source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+
+[all]
+evolve_bndry = false		# type: bool, source: default
+
+[conduction]
+chi = 3.063		# type: BoutReal, doc: Conduction coefficient, source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+
+[input]
+error_on_unused_options = true		# type: bool, doc: Error if there are any unused options before starting the main simulation, source: default
+max_recursion_depth = 0		# type: string, doc: Maximum recursion depth allowed in expressions. 0 = no recursion; -1 = unlimited, source: default
+transform_from_field_aligned = true		# type: string, source: default
+validate = false		# type: bool, doc: Check for unused options and stop, source: default
+
+[mesh]
+calcParallelSlices_on_communicate = true		# type: bool, doc: Calculate parallel slices on all communicated fields, source: default
+dy = 0.1		# source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+extrapolate_x = false		# type: bool, source: default
+extrapolate_y = false		# type: bool, source: default
+include_corner_cells = true		# type: bool, doc: Communicate corner guard and boundary cells. Can be set to false if you are sure that you will not need these cells, for mixed derivatives D2DXDY (or anything else), for example if your grid has orthogonal x- and y-directions. This might slightly reduce communication time., source: default
+ixseps1 = -1		# source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+ixseps2 = -1		# source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+maxregionblocksize = 64		# type: int, doc: (Advanced) Sets the maximum size of continguous blocks when creating Regions, source: default
+nx = 1		# source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+ny = 200		# source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+nz = 1		# source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+staggergrids = false		# type: bool, doc: Enable staggered grids. By default, all variables are cell centred, source: default
+symmetricGlobalX = true		# type: bool, source: default
+symmetricGlobalY = true		# type: bool, source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+symmetricGlobalZ = false		# type: bool, source: default
+type = bout		# type: string, source: default
+
+[mesh:ddz]
+fft_filter = 0		# type: BoutReal, source: default
+
+[mesh:paralleltransform]
+type = identity		# type: string, source: default
+
+[output]
+append = false		# type: bool, doc: Append to existing file?, source: user_default
+enabled = true		# type: bool, doc: Write output files, source: default
+flush_frequency = 1		# type: m, doc: How often to flush to disk, source: default
+path = validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100		# type: string, source: user_default
+prefix = BOUT.dmp		# type: string, source: user_default
+type = netcdf		# type: string, source: default
+
+[restart_files]
+append = false		# type: bool, doc: Append to existing file?, source: user_default
+enabled = true		# type: bool, doc: Write restart files, source: default
+path = validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100		# type: string, source: user_default
+prefix = BOUT.restart		# type: string, source: user_default
+singleWriteFile = true		# unused value (NOT marked conditionally used), type: bool, source: user_default
+type = netcdf		# type: string, source: default
+
+[run]
+finished = Tue Jun  2 09:37:10 2026
+		# unused value (NOT marked conditionally used), source: Output
+revision = 3e317cbc18b4ad3839cfff67aded3bff4b5fb9f9		# unused value (NOT marked conditionally used), source: Output
+run_id = 3cb494e8-ad7a-4eaf-8ea2-6a4259efef82		# unused value (NOT marked conditionally used), source: Output
+run_restart_from = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz		# unused value (NOT marked conditionally used), source: Output
+started = Tue Jun  2 09:37:10 2026
+		# unused value (NOT marked conditionally used), source: Output
+version = 5.2.1.dev764+g3e317cbc1		# unused value (NOT marked conditionally used), source: Output
+
+[solver]
+adams_moulton = false		# type: bool, doc: Use Adams Moulton solver instead of BDF, source: default
+atol = 1e-12		# type: BoutReal, doc: Absolute tolerance, source: default
+debug_on_failure = false		# type: bool, doc: Run an aditional rhs if the solver fails with extra tracking, source: default
+is_nonsplit_model_diffusive = true		# type: bool, doc: If not a split operator, treat RHS as diffusive?, source: default
+max_order = -1		# type: int, doc: Maximum order, source: default
+max_timestep = -1		# type: BoutReal, doc: Maximum internal timestep, source: default
+min_timestep = -1		# type: BoutReal, doc: Minimum internal timestep, source: default
+mldq = 3		# type: int, source: default
+mlkeep = 0		# type: int, source: default
+mms = false		# type: bool, doc: Use Method of Manufactured Solutions to track error scaling, source: default
+mms_initialise = false		# type: bool, doc: Use MMS solution for field initial conditions, source: default
+monitor_timestep = false		# type: bool, doc: Call monitors on internal timesteps, source: default
+mudq = 3		# type: int, source: default
+mukeep = 0		# type: int, source: default
+mxstep = 500		# type: int, doc: Maximum number of internal steps, source: default
+nout = 20		# type: int, doc: Number of output steps. Overrides global setting., source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+output_step = 0.1		# type: BoutReal, doc: Output time step size. Overrides global 'timestep' setting., source: validation_runs/bout_robustness_sweep_default/resolution_ny200_tct100_wall100/BOUT.inp
+precon_dimens = 50		# type: int, doc: Maximum Krylov dimension, source: default
+precon_tol = 0.0001		# type: BoutReal, doc: Tolerance for preconditioner, source: default
+rtol = 1e-05		# type: BoutReal, doc: Relative tolerance, source: default
+save_repeat_run_id = false		# type: bool, doc: Write run_id and run_restart_from at every output timestep, to make it easier to concatenate output data sets in time, source: default
+type = pvode		# type: string, source: default
+use_precon = false		# type: bool, doc: Use user-supplied preconditioner, source: default

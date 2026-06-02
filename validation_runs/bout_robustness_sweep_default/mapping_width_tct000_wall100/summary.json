@@ -1,0 +1,34 @@
+{
+  "bout_summary": {
+    "final_peak_abs_T": 0.512833055939485,
+    "initial_peak_abs_T": 1.853682724981861,
+    "mean_peak_abs_T": 0.8249678079274764,
+    "peak_decay_ratio": 0.27665632798326006,
+    "time_end": 2.0000000000000004,
+    "time_start": 0.0
+  },
+  "case_spec": {
+    "boundary": "dirichlet_o4(0.0)",
+    "case": "mapping_width_tct000_wall100",
+    "dy": 0.2,
+    "group": "mapping",
+    "ny": 100,
+    "params": {
+      "B0_T": 6.0,
+      "Te_keV": 15.0,
+      "Ti_keV": 25.0,
+      "betaN": 2.39258377344,
+      "chi": 0.813,
+      "control_mapping": "width",
+      "gaussian_width": 0.15974440894568692,
+      "lithium_wall_modifier": 1.252,
+      "ne_m3": 6.274524476454882e+19,
+      "qstar": 2.663352272727273,
+      "raw_wall_load_mw_m2": 1.8948893253590815,
+      "t_scale": 0.7567449382424447,
+      "tct_control_strength": 0.0,
+      "wall_load_mw_m2": 1.5134898764848894,
+      "wall_load_scale": 1.0
+    }
+  }
+}

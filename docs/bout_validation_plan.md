@@ -121,3 +121,48 @@ wall-load scale:
 Interpretation: the reduced conduction mapping supports the expected direction
 for this specific transport proxy. It is still a first-rung BOUT++ result; the
 claim must next survive a less-prescribed SOL, blob, or edge-turbulence model.
+
+## Robustness and falsification checks
+
+The next runner is:
+
+```bash
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 bout_robustness_sweep.py --run-dir validation_runs/bout_robustness_sweep_default --nout 20
+```
+
+It tests:
+
+- mesh sensitivity at `ny = 50, 100, 200`
+- boundary sensitivity across `dirichlet_o2`, `dirichlet_o4`, and `neumann`
+- alternative control mappings where TCT changes amplitude or width instead of
+  directly increasing effective diffusivity
+
+The alternative mappings are deliberately stricter falsification checks. If they
+do not support the same directional trend, the correct interpretation is not
+that BOUT++ disproves TCT, but that the current conduction proxy only supports a
+narrow transport-control formulation.
+
+## Robustness sweep result
+
+The default 27-case robustness sweep completed successfully:
+
+| Check | Final peak at TCT 0.0 | Final peak at TCT 1.0 | Reduction | Decay-ratio trend |
+| --- | ---: | ---: | ---: | --- |
+| `ny = 50` | 0.5126658048 | 0.2716791184 | 47.01% | monotonic |
+| `ny = 100` | 0.5128330559 | 0.2716867520 | 47.02% | monotonic |
+| `ny = 200` | 0.5128737863 | 0.2716877042 | 47.03% | monotonic |
+| `dirichlet_o2` | 0.5128330546 | 0.2716865876 | 47.02% | monotonic |
+| `dirichlet_o4` | 0.5128330559 | 0.2716867520 | 47.02% | monotonic |
+| `neumann` | 0.5128331076 | 0.2716871852 | 47.02% | monotonic |
+| diffusivity mapping | 0.5128330559 | 0.2716867520 | 47.02% | monotonic |
+| amplitude mapping | 0.5128330559 | 0.3076998554 | 40.00% | not monotonic |
+| width mapping | 0.5128330559 | 0.4640341573 | 9.52% | not monotonic |
+
+Interpretation: the main diffusivity-control trend is stable under the tested
+mesh and boundary changes. The broader falsification checks are weaker: reducing
+amplitude or broadening the perturbation still lowers absolute final peak, but
+does not improve normalized decay ratio. That means the current positive result
+should be framed as support for a transport/diffusivity-style TCT proxy, not as
+general evidence that every plausible control mapping works.
