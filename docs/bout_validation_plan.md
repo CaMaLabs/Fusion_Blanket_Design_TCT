@@ -232,3 +232,33 @@ Interpretation: this is a stronger plasma-side validation rung than the
 conduction and prescribed-blob checks because it uses a reduced drift-turbulence
 model. The control is still a reduced proxy, not a resolved actuator or current
 sheet model, but the positive direction survived a second BOUT++ model family.
+
+## Resolved TCT current-sheet check
+
+The next rung adds a custom BOUT++ reduced-MHD current-sheet model:
+
+```bash
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 bout_tct_current_sheet_sweep.py --run-dir validation_runs/bout_tct_current_sheet_sweep_default --nout 20
+```
+
+The model evolves `psi` and `omega`, computes `J = -Delp2(psi)`, solves `phi`
+from vorticity, and applies a spatially resolved TCT actuator mask near the
+current sheet. This is the first validation rung where the actuator is a
+localized term in the reduced-MHD equations rather than a global transport
+coefficient or prescribed source-shaping-only input.
+
+## Resolved TCT current-sheet result
+
+The default 6-case current-sheet sweep completed successfully:
+
+| Grid | Post-initial max J reduction | Integrated max J reduction | J p99 trend |
+| --- | ---: | ---: | --- |
+| coarse | 14.07% | 68.32% | monotonic |
+| base | 14.16% | 68.07% | monotonic |
+
+Interpretation: this is the strongest validation rung so far because the TCT
+effect is represented as a resolved localized actuator/current-sheet term. It is
+still a reduced-MHD slab model, so the next credibility step is actuator
+placement/timing noise and a higher-resolution convergence pass.

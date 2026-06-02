@@ -1,0 +1,41 @@
+{
+  "diagnostics": {
+    "final_abs_J_p99": 0.01952996757985398,
+    "final_current_concentration": 0.0006464923343487952,
+    "final_magnetic_energy": 1.0467683841843178e-05,
+    "final_max_abs_J": 0.024804314466831498,
+    "initial_magnetic_energy": 0.00022039231782721444,
+    "initial_max_abs_J": 0.41517876719166324,
+    "max_abs_J": 0.41517876719166324,
+    "max_abs_J_p99": 0.4135106354300509,
+    "max_abs_omega": 0.01590234448203603,
+    "max_current_concentration": 0.0011475018719711845,
+    "post_initial_max_abs_J": 0.35469983494886426,
+    "post_initial_max_abs_J_p99": 0.3520875977165427,
+    "time_end": 20.0,
+    "time_integrated_max_abs_J": 2.535190894482161,
+    "time_integrated_max_abs_omega": 0.25812046491247537,
+    "time_start": 0.0
+  },
+  "grid": {
+    "dx": 0.12,
+    "dz": 0.12,
+    "name": "base",
+    "nx": 96,
+    "nz": 96,
+    "sheet_width": 0.055
+  },
+  "mapped_parameters": {
+    "actuator_width": 0.0935,
+    "control": 0.8,
+    "eta": 0.00075,
+    "island_seed": 0.006,
+    "nu": 0.001,
+    "omega_seed": 0.01,
+    "omega_tct_strength": 0.056215838023758236,
+    "psi_amp": 0.08,
+    "sheet_width": 0.055,
+    "tct_strength": 0.11243167604751647,
+    "wall_load_mw_m2": 1.5134898764848894
+  }
+}
