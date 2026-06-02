@@ -1,0 +1,407 @@
+{
+  "base_plasma_summary": {
+    "betaN": 2.39258377344,
+    "pfus_mw": 1870.1808025141236,
+    "qstar": 2.663352272727273,
+    "wn_mw_m2": 1.8948893253590815
+  },
+  "base_reactor_summary": {
+    "event_loss_frac": 9.100071082398914e-05,
+    "wall_load": 1.5134898764848894
+  },
+  "bout_build": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build",
+  "bout_top": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev",
+  "cases": [
+    {
+      "blob_summary": {
+        "final_concentration": 0.048061946456176216,
+        "final_peak_excess": 0.48085594795558384,
+        "final_total_excess": 10.00492038735962,
+        "initial_peak_excess": 0.47754547368266165,
+        "initial_total_excess": 10.002837894751183,
+        "max_concentration": 0.04956345993881548,
+        "max_p95_excess": 0.001743747363060804,
+        "max_peak_excess": 0.4957997815984867,
+        "mean_peak_excess": 0.48685309641216495,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 29.2494477126951,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0002081901786621
+      },
+      "case": "coarse_source_tct000",
+      "grid": {
+        "dx": 0.35,
+        "dz": 0.35,
+        "name": "coarse",
+        "nx": 48,
+        "nz": 48
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 0.0,
+        "height": 0.49837246912122235,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.055
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.026001529983952054,
+        "final_peak_excess": 0.2601379038200551,
+        "final_total_excess": 10.004715260240848,
+        "initial_peak_excess": 0.25771680289304166,
+        "initial_total_excess": 10.003394652962037,
+        "max_concentration": 0.026213269846392277,
+        "max_p95_excess": 0.013030142771822807,
+        "max_peak_excess": 0.26223243892526527,
+        "mean_peak_excess": 0.25962600548268583,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 15.581053589591837,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0001320159130602
+      },
+      "case": "coarse_source_tct050",
+      "grid": {
+        "dx": 0.35,
+        "dz": 0.35,
+        "name": "coarse",
+        "nx": 48,
+        "nz": 48
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 0.5,
+        "height": 0.26360196713849776,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.075625
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.015946578055238834,
+        "final_peak_excess": 0.15967089886094765,
+        "final_total_excess": 10.012862841661,
+        "initial_peak_excess": 0.16048125059196505,
+        "initial_total_excess": 10.013264649817774,
+        "max_concentration": 0.01616890748746225,
+        "max_p95_excess": 0.02540378054026914,
+        "max_peak_excess": 0.16189955402870537,
+        "mean_peak_excess": 0.16107642825521706,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 9.669587462956827,
+        "time_start": 0.0,
+        "total_excess_fraction": 0.9999598724121627
+      },
+      "case": "coarse_source_tct100",
+      "grid": {
+        "dx": 0.35,
+        "dz": 0.35,
+        "name": "coarse",
+        "nx": 48,
+        "nz": 48
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 1.0,
+        "height": 0.16273386746815424,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.09625
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.02763454758559314,
+        "final_peak_excess": 0.5027107644911901,
+        "final_total_excess": 18.191387535262958,
+        "initial_peak_excess": 0.48706173845284195,
+        "initial_total_excess": 18.18697728214143,
+        "max_concentration": 0.02763454758559314,
+        "max_p95_excess": 0.0019064672148936257,
+        "max_peak_excess": 0.5027107644911901,
+        "mean_peak_excess": 0.49259657103565146,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 29.544345859957264,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.00024249511357
+      },
+      "case": "base_source_tct000",
+      "grid": {
+        "dx": 0.3,
+        "dz": 0.3,
+        "name": "base",
+        "nx": 64,
+        "nz": 64
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 0.0,
+        "height": 0.49837246912122235,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.055
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.014400025525789253,
+        "final_peak_excess": 0.2619419371323992,
+        "final_total_excess": 18.190380056152186,
+        "initial_peak_excess": 0.2604205474856416,
+        "initial_total_excess": 18.18735959017964,
+        "max_concentration": 0.014442922020755772,
+        "max_p95_excess": 0.013923121735036459,
+        "max_peak_excess": 0.26268848424984914,
+        "mean_peak_excess": 0.26131018619453594,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 15.679255891099734,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0001660750125696
+      },
+      "case": "base_source_tct050",
+      "grid": {
+        "dx": 0.3,
+        "dz": 0.3,
+        "name": "base",
+        "nx": 64,
+        "nz": 64
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 0.5,
+        "height": 0.26360196713849776,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.075625
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.008867830242918406,
+        "final_peak_excess": 0.16136566799987717,
+        "final_total_excess": 18.196747522173098,
+        "initial_peak_excess": 0.1615185595253974,
+        "initial_total_excess": 18.19564809136079,
+        "max_concentration": 0.00891386722037784,
+        "max_p95_excess": 0.026603005637336807,
+        "max_peak_excess": 0.16219613889863682,
+        "mean_peak_excess": 0.16171807206581487,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 9.70446411546478,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0000604227344245
+      },
+      "case": "base_source_tct100",
+      "grid": {
+        "dx": 0.3,
+        "dz": 0.3,
+        "name": "base",
+        "nx": 64,
+        "nz": 64
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 1.0,
+        "height": 0.16273386746815424,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.09625
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.012128123220950318,
+        "final_peak_excess": 0.5074445184264611,
+        "final_total_excess": 41.840316855446616,
+        "initial_peak_excess": 0.4935299160942306,
+        "initial_total_excess": 41.8300474127228,
+        "max_concentration": 0.012128123220950318,
+        "max_p95_excess": 0.002136847761712135,
+        "max_peak_excess": 0.5074445184264611,
+        "mean_peak_excess": 0.4968048467875642,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 29.789878954889943,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0002455039704472
+      },
+      "case": "fine_source_tct000",
+      "grid": {
+        "dx": 0.2,
+        "dz": 0.2,
+        "name": "fine",
+        "nx": 96,
+        "nz": 96
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 0.0,
+        "height": 0.49837246912122235,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.055
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.006300414499671687,
+        "final_peak_excess": 0.2635931615929765,
+        "final_total_excess": 41.83743174464352,
+        "initial_peak_excess": 0.2622440904671539,
+        "initial_total_excess": 41.83032769711634,
+        "max_concentration": 0.006300414499671687,
+        "max_p95_excess": 0.014825737855205912,
+        "max_peak_excess": 0.2635931615929765,
+        "mean_peak_excess": 0.2626704623705151,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 15.75898692393316,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0001698300711057
+      },
+      "case": "fine_source_tct050",
+      "grid": {
+        "dx": 0.2,
+        "dz": 0.2,
+        "name": "fine",
+        "nx": 96,
+        "nz": 96
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 0.5,
+        "height": 0.26360196713849776,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.075625
+      }
+    },
+    {
+      "blob_summary": {
+        "final_concentration": 0.003885352430786945,
+        "final_peak_excess": 0.16256488038302108,
+        "final_total_excess": 41.84044646629262,
+        "initial_peak_excess": 0.1622158474353088,
+        "initial_total_excess": 41.83663739185305,
+        "max_concentration": 0.00388819072162564,
+        "max_p95_excess": 0.027450018909697504,
+        "max_peak_excess": 0.16268097051878616,
+        "mean_peak_excess": 0.16233653225507277,
+        "time_end": 60.0,
+        "time_integrated_peak_excess": 9.739922777033906,
+        "time_start": 0.0,
+        "total_excess_fraction": 1.0000910463812827
+      },
+      "case": "fine_source_tct100",
+      "grid": {
+        "dx": 0.2,
+        "dz": 0.2,
+        "name": "fine",
+        "nx": 96,
+        "nz": 96
+      },
+      "mapped_parameters": {
+        "B0": 6.0,
+        "D_n": 1e-06,
+        "D_vort": 1e-06,
+        "L_par": 50.26548245743669,
+        "R_c": 2.0,
+        "Te0": 15000.0,
+        "control": 1.0,
+        "height": 0.16273386746815424,
+        "inventory_proxy": 0.0015075767190916977,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "width": 0.09625
+      }
+    }
+  ],
+  "control_mapping": "source_shaping_inventory_proxy_conserved",
+  "controls": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "run_dir": "validation_runs/bout_blob_sol_sweep_default",
+  "trend_summary": {
+    "all_grid_trends_supported": true,
+    "grid_trends": [
+      {
+        "concentration_monotonic_decrease": true,
+        "grid": "base",
+        "integrated_peak_at_control_0": 29.544345859957264,
+        "integrated_peak_at_control_1": 9.70446411546478,
+        "integrated_peak_monotonic_decrease": true,
+        "integrated_peak_reduction_fraction": 0.6715288887604831,
+        "max_peak_at_control_0": 0.5027107644911901,
+        "max_peak_at_control_1": 0.16219613889863682,
+        "max_peak_monotonic_decrease": true,
+        "max_peak_reduction_fraction": 0.6773569408986084
+      },
+      {
+        "concentration_monotonic_decrease": true,
+        "grid": "coarse",
+        "integrated_peak_at_control_0": 29.2494477126951,
+        "integrated_peak_at_control_1": 9.669587462956827,
+        "integrated_peak_monotonic_decrease": true,
+        "integrated_peak_reduction_fraction": 0.6694095711502974,
+        "max_peak_at_control_0": 0.4957997815984867,
+        "max_peak_at_control_1": 0.16189955402870537,
+        "max_peak_monotonic_decrease": true,
+        "max_peak_reduction_fraction": 0.6734577947841526
+      },
+      {
+        "concentration_monotonic_decrease": true,
+        "grid": "fine",
+        "integrated_peak_at_control_0": 29.789878954889943,
+        "integrated_peak_at_control_1": 9.739922777033906,
+        "integrated_peak_monotonic_decrease": true,
+        "integrated_peak_reduction_fraction": 0.6730459095928916,
+        "max_peak_at_control_0": 0.5074445184264611,
+        "max_peak_at_control_1": 0.16268097051878616,
+        "max_peak_monotonic_decrease": true,
+        "max_peak_reduction_fraction": 0.6794113156976354
+      }
+    ],
+    "interpretation": "PASS: source-shaped blob cases reduce peak and time-integrated peak excess across tested grids."
+  }
+}

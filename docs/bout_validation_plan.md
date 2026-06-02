@@ -166,3 +166,38 @@ amplitude or broadening the perturbation still lowers absolute final peak, but
 does not improve normalized decay ratio. That means the current positive result
 should be framed as support for a transport/diffusivity-style TCT proxy, not as
 general evidence that every plausible control mapping works.
+
+## Blob / SOL source-shaping check
+
+The next rung uses the BOUT++ `blob2d` model instead of the 1D conduction
+example:
+
+```bash
+cmake --build /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build --target blob2d -j2
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 bout_blob_sol_sweep.py --run-dir validation_runs/bout_blob_sol_sweep_default --nout 12
+```
+
+This check does not prescribe higher diffusivity. It represents TCT-like control
+as source shaping: the initial blob is broadened and lowered while approximately
+conserving a Gaussian excess inventory proxy. The measured quantities are peak
+density excess, time-integrated peak excess, high-percentile excess, and spatial
+concentration.
+
+## Blob / SOL source-shaping result
+
+The default 9-case `blob2d` sweep completed successfully:
+
+| Grid | Max peak at TCT 0.0 | Max peak at TCT 1.0 | Peak reduction | Integrated peak reduction | Concentration trend |
+| --- | ---: | ---: | ---: | ---: | --- |
+| coarse | 0.4957997816 | 0.1618995540 | 67.35% | 66.94% | monotonic |
+| base | 0.5027107645 | 0.1621961389 | 67.74% | 67.15% | monotonic |
+| fine | 0.5074445184 | 0.1626809705 | 67.94% | 67.30% | monotonic |
+
+Interpretation: this is stronger than the conduction-only checks because the
+positive trend is produced in a 2D blob/SOL model without directly increasing
+diffusivity. It still does not prove the full TCT mechanism; the control is a
+source-shaping proxy. The next hard test is to add source shaping or localized
+damping to a reduced turbulence model where intermittent structures form from
+the model dynamics rather than from a prescribed initial blob.
