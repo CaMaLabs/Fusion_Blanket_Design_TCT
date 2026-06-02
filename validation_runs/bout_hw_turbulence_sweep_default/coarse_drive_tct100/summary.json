@@ -1,0 +1,33 @@
+{
+  "grid": {
+    "dx": 0.28,
+    "dz": 0.28,
+    "name": "coarse",
+    "nx": 48,
+    "nz": 48
+  },
+  "hw_summary": {
+    "final_fluctuation_energy": 0.0003801935673486054,
+    "final_n_rms": 0.004260338601027699,
+    "final_vort_rms": 0.02724402043938824,
+    "max_abs_n_p95": 0.009960154195379425,
+    "max_abs_vort_p95": 0.07718611585032645,
+    "max_fluctuation_energy": 0.0006206074974687054,
+    "max_n_rms": 0.004500092974228243,
+    "max_phi_rms": 0.004809911504051394,
+    "max_vort_rms": 0.035230881268248325,
+    "time_end": 40.0,
+    "time_integrated_fluctuation_energy": 0.01728581334376371,
+    "time_start": 0.0
+  },
+  "mapped_parameters": {
+    "Dn": 0.0001,
+    "Dvort": 0.0001,
+    "alpha": 1.0,
+    "base_kappa": 0.47702348147273343,
+    "control": 1.0,
+    "kappa": 0.2623629148100034,
+    "vort_scale": 0.06,
+    "wall_load_mw_m2": 1.5134898764848894
+  }
+}

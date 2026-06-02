@@ -1,0 +1,257 @@
+{
+  "base_plasma_summary": {
+    "betaN": 2.39258377344,
+    "pfus_mw": 1870.1808025141236,
+    "qstar": 2.663352272727273,
+    "wn_mw_m2": 1.8948893253590815
+  },
+  "base_reactor_summary": {
+    "event_loss_frac": 9.100071082398914e-05,
+    "wall_load": 1.5134898764848894
+  },
+  "bout_build": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build",
+  "bout_top": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev",
+  "cases": [
+    {
+      "case": "coarse_drive_tct000",
+      "grid": {
+        "dx": 0.28,
+        "dz": 0.28,
+        "name": "coarse",
+        "nx": 48,
+        "nz": 48
+      },
+      "hw_summary": {
+        "final_fluctuation_energy": 0.001095767148702614,
+        "final_n_rms": 0.008956861476888789,
+        "final_vort_rms": 0.04594898181558601,
+        "max_abs_n_p95": 0.018336201633680528,
+        "max_abs_vort_p95": 0.10291482113376861,
+        "max_fluctuation_energy": 0.001103302217722143,
+        "max_n_rms": 0.008956861476888789,
+        "max_phi_rms": 0.0067198885200632445,
+        "max_vort_rms": 0.04697450835766444,
+        "time_end": 40.0,
+        "time_integrated_fluctuation_energy": 0.03869536757656407,
+        "time_start": 0.0
+      },
+      "mapped_parameters": {
+        "Dn": 0.0001,
+        "Dvort": 0.0001,
+        "alpha": 1.0,
+        "base_kappa": 0.47702348147273343,
+        "control": 0.0,
+        "kappa": 0.47702348147273343,
+        "vort_scale": 0.08,
+        "wall_load_mw_m2": 1.5134898764848894
+      }
+    },
+    {
+      "case": "coarse_drive_tct050",
+      "grid": {
+        "dx": 0.28,
+        "dz": 0.28,
+        "name": "coarse",
+        "nx": 48,
+        "nz": 48
+      },
+      "hw_summary": {
+        "final_fluctuation_energy": 0.0006388932880062244,
+        "final_n_rms": 0.006100618549726834,
+        "final_vort_rms": 0.03522171247005429,
+        "max_abs_n_p95": 0.012928288727865713,
+        "max_abs_vort_p95": 0.09005046849204754,
+        "max_fluctuation_energy": 0.0008447157604435159,
+        "max_n_rms": 0.006100618549726834,
+        "max_phi_rms": 0.005611563421393294,
+        "max_vort_rms": 0.041102694812956385,
+        "time_end": 40.0,
+        "time_integrated_fluctuation_energy": 0.02593038243265042,
+        "time_start": 0.0
+      },
+      "mapped_parameters": {
+        "Dn": 0.0001,
+        "Dvort": 0.0001,
+        "alpha": 1.0,
+        "base_kappa": 0.47702348147273343,
+        "control": 0.5,
+        "kappa": 0.3696931981413684,
+        "vort_scale": 0.07,
+        "wall_load_mw_m2": 1.5134898764848894
+      }
+    },
+    {
+      "case": "coarse_drive_tct100",
+      "grid": {
+        "dx": 0.28,
+        "dz": 0.28,
+        "name": "coarse",
+        "nx": 48,
+        "nz": 48
+      },
+      "hw_summary": {
+        "final_fluctuation_energy": 0.0003801935673486054,
+        "final_n_rms": 0.004260338601027699,
+        "final_vort_rms": 0.02724402043938824,
+        "max_abs_n_p95": 0.009960154195379425,
+        "max_abs_vort_p95": 0.07718611585032645,
+        "max_fluctuation_energy": 0.0006206074974687054,
+        "max_n_rms": 0.004500092974228243,
+        "max_phi_rms": 0.004809911504051394,
+        "max_vort_rms": 0.035230881268248325,
+        "time_end": 40.0,
+        "time_integrated_fluctuation_energy": 0.01728581334376371,
+        "time_start": 0.0
+      },
+      "mapped_parameters": {
+        "Dn": 0.0001,
+        "Dvort": 0.0001,
+        "alpha": 1.0,
+        "base_kappa": 0.47702348147273343,
+        "control": 1.0,
+        "kappa": 0.2623629148100034,
+        "vort_scale": 0.06,
+        "wall_load_mw_m2": 1.5134898764848894
+      }
+    },
+    {
+      "case": "base_drive_tct000",
+      "grid": {
+        "dx": 0.22,
+        "dz": 0.22,
+        "name": "base",
+        "nx": 64,
+        "nz": 64
+      },
+      "hw_summary": {
+        "final_fluctuation_energy": 0.0012590790050427245,
+        "final_n_rms": 0.010607265613638742,
+        "final_vort_rms": 0.049047364111511296,
+        "max_abs_n_p95": 0.02174236792134085,
+        "max_abs_vort_p95": 0.10174003937095799,
+        "max_fluctuation_energy": 0.0012590790050427245,
+        "max_n_rms": 0.010607265613638742,
+        "max_phi_rms": 0.007958308009380393,
+        "max_vort_rms": 0.049047364111511296,
+        "time_end": 40.0,
+        "time_integrated_fluctuation_energy": 0.040860281281008125,
+        "time_start": 0.0
+      },
+      "mapped_parameters": {
+        "Dn": 0.0001,
+        "Dvort": 0.0001,
+        "alpha": 1.0,
+        "base_kappa": 0.47702348147273343,
+        "control": 0.0,
+        "kappa": 0.47702348147273343,
+        "vort_scale": 0.08,
+        "wall_load_mw_m2": 1.5134898764848894
+      }
+    },
+    {
+      "case": "base_drive_tct050",
+      "grid": {
+        "dx": 0.22,
+        "dz": 0.22,
+        "name": "base",
+        "nx": 64,
+        "nz": 64
+      },
+      "hw_summary": {
+        "final_fluctuation_energy": 0.0007096057182314751,
+        "final_n_rms": 0.007106832299700275,
+        "final_vort_rms": 0.036996004799530545,
+        "max_abs_n_p95": 0.014669656059319741,
+        "max_abs_vort_p95": 0.08902253444958824,
+        "max_fluctuation_energy": 0.0008287181630394184,
+        "max_n_rms": 0.007106832299700275,
+        "max_phi_rms": 0.006219810541153154,
+        "max_vort_rms": 0.04071162396759477,
+        "time_end": 40.0,
+        "time_integrated_fluctuation_energy": 0.02679876931196739,
+        "time_start": 0.0
+      },
+      "mapped_parameters": {
+        "Dn": 0.0001,
+        "Dvort": 0.0001,
+        "alpha": 1.0,
+        "base_kappa": 0.47702348147273343,
+        "control": 0.5,
+        "kappa": 0.3696931981413684,
+        "vort_scale": 0.07,
+        "wall_load_mw_m2": 1.5134898764848894
+      }
+    },
+    {
+      "case": "base_drive_tct100",
+      "grid": {
+        "dx": 0.22,
+        "dz": 0.22,
+        "name": "base",
+        "nx": 64,
+        "nz": 64
+      },
+      "hw_summary": {
+        "final_fluctuation_energy": 0.0004111552803742674,
+        "final_n_rms": 0.004902022337282522,
+        "final_vort_rms": 0.0282538623510719,
+        "max_abs_n_p95": 0.010816918835178426,
+        "max_abs_vort_p95": 0.07630502952821848,
+        "max_fluctuation_energy": 0.000608854160600389,
+        "max_n_rms": 0.00492842171199519,
+        "max_phi_rms": 0.005331266178131274,
+        "max_vort_rms": 0.0348956776865098,
+        "time_end": 40.0,
+        "time_integrated_fluctuation_energy": 0.017589700939125645,
+        "time_start": 0.0
+      },
+      "mapped_parameters": {
+        "Dn": 0.0001,
+        "Dvort": 0.0001,
+        "alpha": 1.0,
+        "base_kappa": 0.47702348147273343,
+        "control": 1.0,
+        "kappa": 0.2623629148100034,
+        "vort_scale": 0.06,
+        "wall_load_mw_m2": 1.5134898764848894
+      }
+    }
+  ],
+  "control_mapping": "reduced_gradient_drive_and_initial_vorticity",
+  "controls": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "run_dir": "validation_runs/bout_hw_turbulence_sweep_default",
+  "trend_summary": {
+    "all_grid_trends_supported": true,
+    "grid_trends": [
+      {
+        "density_p95_monotonic_decrease": true,
+        "grid": "base",
+        "integrated_energy_at_control_0": 0.040860281281008125,
+        "integrated_energy_at_control_1": 0.017589700939125645,
+        "integrated_energy_monotonic_decrease": true,
+        "integrated_energy_reduction_fraction": 0.5695159115974724,
+        "max_energy_at_control_0": 0.0012590790050427245,
+        "max_energy_at_control_1": 0.000608854160600389,
+        "max_energy_monotonic_decrease": true,
+        "max_energy_reduction_fraction": 0.5164289467445065
+      },
+      {
+        "density_p95_monotonic_decrease": true,
+        "grid": "coarse",
+        "integrated_energy_at_control_0": 0.03869536757656407,
+        "integrated_energy_at_control_1": 0.01728581334376371,
+        "integrated_energy_monotonic_decrease": true,
+        "integrated_energy_reduction_fraction": 0.5532846842826504,
+        "max_energy_at_control_0": 0.001103302217722143,
+        "max_energy_at_control_1": 0.0006206074974687054,
+        "max_energy_monotonic_decrease": true,
+        "max_energy_reduction_fraction": 0.4375000000000001
+      }
+    ],
+    "interpretation": "PASS: reduced-gradient HW cases reduce fluctuation energy across tested grids."
+  }
+}

@@ -1,0 +1,340 @@
+[1780420919.269726] [localhost:16222:0]       tcp_iface.c:893  UCX  ERROR scandir(/sys/class/net) failed: Permission denied
+BOUT++ version 5.2.1.dev764+g3e317cbc1
+Revision: 3e317cbc18b4ad3839cfff67aded3bff4b5fb9f9
+Code compiled on May 31 2026 at 15:05:25
+
+B.Dudson (University of York), M.Umansky (LLNL) 2007
+Based on BOUT by Xueqiao Xu, 1999
+
+Processor number: 0 of 1
+
+pid: 16222
+
+Compile-time options:
+	Runtime error checking enabled, level 2
+	Parallel NetCDF support disabled
+	Metrics mode is 2D
+	FFT support enabled
+	Natural language support disabled
+	LAPACK support disabled
+	NetCDF support enabled (NetCDF4)
+	ADIOS2 support disabled
+	PETSc support disabled
+	PVODE support enabled
+	Score-P support disabled
+	SLEPc support disabled
+	SUNDIALS support disabled
+	Backtrace in exceptions enabled
+	Colour in logs enabled
+	OpenMP parallelisation disabled, using 1 threads
+	Extra debug output disabled
+	Floating-point exceptions disabled
+	Signal handling support enabled
+	Field name tracking enabled
+	Message stack enabled
+	Compiled with flags : "-Wall -Wextra -Wnull-dereference -Wno-cast-function-type -DCHECK=2 -O3 -DNDEBUG"
+	Command line options for this run : /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build/examples/hasegawa-wakatani/hasegawa-wakatani -d validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100
+Reading options file validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp
+	Option datadir = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (Command line)
+	Option optionfile = BOUT.inp (default)
+	Option settingsfile = BOUT.settings (default)
+Writing options to file validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.settings
+	Option mesh:type = bout (default)
+
+Getting grid data from options
+	Option mesh:calcParallelSlices_on_communicate = 1 (default)
+	Option mesh:maxregionblocksize = 64 (default)
+	Option mesh:staggergrids = 0 (default)
+	Option mesh:include_corner_cells = 1 (default)
+	Option mesh:ddz:fft_filter = 0 (default)
+	Option mesh:symmetricGlobalX = 1 (default)
+	Option optionfile = BOUT.inp (default)
+WARNING: The default of this option has changed in release 4.1.
+If you want the old setting, you have to specify mesh:symmetricGlobalY=false in BOUT.inp
+	Option mesh:symmetricGlobalY = 1 (default)
+	Option mesh:symmetricGlobalZ = 0 (default)
+Loading mesh
+	Option input:transform_from_field_aligned = true (default)
+	Option input:max_recursion_depth = 0 (default)
+	Option mesh:nx = 48 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option mesh:ny = 1 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option mesh:nz = 48 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Read nz from input grid file
+	Grid size: 48 x 1 x 48
+Variable 'MXG' not in mesh options. Setting to 0
+	Option MXG = 2 (default)
+Variable 'MYG' not in mesh options. Setting to 0
+	Option MYG = 0 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Guard cells (x,y,z): 2, 0, 0
+Variable 'ixseps1' not in mesh options. Setting to 48
+Variable 'ixseps2' not in mesh options. Setting to 48
+Variable 'jyseps1_1' not in mesh options. Setting to -1
+Variable 'jyseps1_2' not in mesh options. Setting to 0
+Variable 'jyseps2_1' not in mesh options. Setting to 0
+Variable 'jyseps2_2' not in mesh options. Setting to 0
+Variable 'ny_inner' not in mesh options. Setting to 0
+Finding value for NXPE (ideal = 6.633250)
+	Candidate value: 1
+	 -> Good value
+	Domain split (NXPE=1, NYPE=1) into domains (localNx=44, localNy=1)
+	Option IncIntShear = 0 (default)
+	Option periodicX = true (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option async_send = 0 (default)
+	Option ZMIN = 0 (default)
+	Option ZMAX = 1 (default)
+	EQUILIBRIUM IS SINGLE NULL (SND) 
+Connection between top of Y processor 0 and bottom of 0 in range 0 <= x < 48
+=> This processor sending in up
+=> This processor sending in down
+WARNING adding connection: poloidal index -1 out of range
+Variable 'limiter_count' not in mesh options. Setting to 0
+	MYPE_IN_CORE = true
+	DXS = 48, DIN = 0. DOUT = -1
+	UXS = 48, UIN = 0. UOUT = -1
+	XIN = 0, XOUT = 0
+	Twist-shift: DI UI 
+	Option twistshift = 0 (default)
+Variable 'ShiftAngle' not in mesh options. Setting to empty vector
+No boundary regions; domain is periodic
+No boundary regions in this processor
+Constructing default regions
+	Option mesh:extrapolate_x = 0 (default)
+	Option mesh:extrapolate_y = 0 (default)
+	Option mesh:dx = 0.28 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option mesh:dy = 1.0 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option ZMIN = 0 (default)
+	Option ZMAX = 1 (default)
+	Option mesh:dz = 0.28 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option mesh:paralleltransform:type = identity (default)
+Variable 'g11' not in mesh options. Setting to 1.000000e+00
+Variable 'g22' not in mesh options. Setting to 1.000000e+00
+Variable 'g33' not in mesh options. Setting to 1.000000e+00
+Variable 'g12' not in mesh options. Setting to 0.000000e+00
+Variable 'g13' not in mesh options. Setting to 0.000000e+00
+Variable 'g23' not in mesh options. Setting to 0.000000e+00
+	Local maximum error in diagonal inversion is 0.000000e+00
+	Local maximum error in off-diagonal inversion is 0.000000e+00
+Variable 'J' not in mesh options. Setting to 0.000000e+00
+	WARNING: Jacobian 'J' not found. Calculating from metric tensor
+Variable 'Bxy' not in mesh options. Setting to 0.000000e+00
+	WARNING: Magnitude of B field 'Bxy' not found. Calculating from metric tensor
+Variable 'ShiftTorsion' not in mesh options. Setting to 0.000000e+00
+	WARNING: No Torsion specified for zShift. Derivatives may not be correct
+Calculating differential geometry terms
+	Communicating connection terms
+	Option non_uniform = 1 (default)
+Variable 'd2x' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2x' not found. Calculating from dx
+Variable 'd2y' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2y' not found. Calculating from dy
+	done
+	Option output:enabled = 1 (default)
+	Option restart_files:enabled = 1 (default)
+	Option output:flush_frequency = 1 (default)
+	Option datadir = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (Command line)
+	Option append = 0 (default)
+	Option output:type = netcdf (default)
+	Option output:path = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (user_default)
+	Option output:prefix = BOUT.dmp (user_default)
+	Option output:append = false (user_default)
+	Option datadir = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (Command line)
+	Option restart_files:type = netcdf (default)
+	Option restart_files:path = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (user_default)
+	Option restart_files:prefix = BOUT.restart (user_default)
+	Option restart_files:append = false (user_default)
+	Option solver:type = pvode (default)
+	Option solver:monitor_timestep = 0 (default)
+	Option solver:save_repeat_run_id = 0 (default)
+	Option solver:is_nonsplit_model_diffusive = 1 (default)
+	Option solver:mms = 0 (default)
+	Option solver:mms_initialise = 0 (default)
+	Option nout = 1 (default)
+	Option solver:nout = 40 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option timestep = 1 (default)
+	Option solver:output_step = 1 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option solver:use_precon = 0 (default)
+	Option solver:precon_dimens = 50 (default)
+	Option solver:precon_tol = 0.0001 (default)
+	Option solver:mxstep = 500 (default)
+	Option solver:atol = 1e-12 (default)
+	Option solver:rtol = 1e-05 (default)
+Setting up output (experimental output) file
+	Option restart = 0 (default)
+	Option hw:alpha = 1 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option hw:kappa = 0.26236291 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option hw:Dvort = 0.0001 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option hw:Dn = 0.0001 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option hw:modified = true (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+Setting boundary for variable n
+	Option all:function = 0.0 (default)
+	Option all:scale = 0 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option all:evolve_bndry = 0 (default)
+	Option n:evolve_bndry = 0 (default)
+Setting boundary for variable vort
+	Option vort:function = mixmode(2*pi*x) * mixmode(z) (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option vort:scale = 0.06 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Option all:evolve_bndry = false (default)
+	Option vort:evolve_bndry = 0 (default)
+	Option laplace:type = cyclic (default)
+Initialising Laplacian inversion routines
+	Option laplace:async = 1 (default)
+	Option laplace:filter = 0 (default)
+	Option laplace:maxmode = 24 (default)
+	Option laplace:low_mem = 0 (default)
+	Option laplace:nonuniform = 1 (default)
+	Option laplace:all_terms = 1 (default)
+	Option laplace:global_flags = 0 (default)
+	Option laplace:inner_boundary_flags = 0 (default)
+	Option laplace:outer_boundary_flags = 0 (default)
+	Option laplace:include_yguards = 0 (default)
+	Option laplace:extra_yguards_lower = 0 (default)
+	Option laplace:extra_yguards_upper = 0 (default)
+	Option laplace:dst = 0 (default)
+	Option hw:bracket = 2 (validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.inp)
+	Brackets: Arakawa scheme
+Variable 'grid_id' not in mesh options. Setting to 
+Variable 'hypnotoad_version' not in mesh options. Setting to 
+Variable 'hypnotoad_git_hash' not in mesh options. Setting to 
+Variable 'hypnotoad_git_diff' not in mesh options. Setting to 
+Variable 'hypnotoad_geqdsk_filename' not in mesh options. Setting to 
+Variable 'grid_id' not in mesh options. Setting to 
+Variable 'hypnotoad_version' not in mesh options. Setting to 
+Variable 'hypnotoad_git_hash' not in mesh options. Setting to 
+Variable 'hypnotoad_git_diff' not in mesh options. Setting to 
+Variable 'hypnotoad_geqdsk_filename' not in mesh options. Setting to 
+	Option wall_limit = -1 (default)
+	Option stopCheck = 0 (default)
+	Option datadir = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (Command line)
+	Option stopCheckName = BOUT.stop (default)
+Solver running for 40 outputs with output timestep of 1.000000e+00
+Initialising solver
+Initialising PVODE solver
+	3d fields = 2, 2d fields = 0 neq=4224, local_N=4224
+	Option solver:mudq = 92 (default)
+	Option solver:mldq = 92 (default)
+	Option solver:mukeep = 0 (default)
+	Option solver:mlkeep = 0 (default)
+	Option solver:max_timestep = -1 (default)
+	Option solver:min_timestep = -1 (default)
+	Option solver:max_order = -1 (default)
+	Option solver:adams_moulton = 0 (default)
+	Option solver:debug_on_failure = 0 (default)
+	Option fft:fft_measurement_flag = estimate (default)
+	Option laplace:type = cyclic (default)
+Initialising Laplacian inversion routines
+	Option laplace:async = true (default)
+	Option laplace:filter = 0 (default)
+	Option laplace:maxmode = 24 (default)
+	Option laplace:low_mem = false (default)
+	Option laplace:nonuniform = true (default)
+	Option laplace:all_terms = true (default)
+	Option laplace:global_flags = 0 (default)
+	Option laplace:inner_boundary_flags = 0 (default)
+	Option laplace:outer_boundary_flags = 0 (default)
+	Option laplace:include_yguards = false (default)
+	Option laplace:extra_yguards_lower = 0 (default)
+	Option laplace:extra_yguards_upper = 0 (default)
+	Option laplace:dst = false (default)
+Running simulation
+
+Run ID: 43ce3ff1-eb63-455b-b286-548a7d2d361c
+
+Run started at  : Tue Jun  2 10:21:59 2026
+	Option restart = false (default)
+	Option append = false (default)
+	Option dump_on_restart = 1 (default)
+	Option input:validate = 0 (default)
+	Option input:error_on_unused_options = 1 (default)
+	Option datadir = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (Command line)
+	Option optionfile = BOUT.inp (default)
+
+Sim Time  |  RHS_e evals  | RHS_I evals  | Wall Time |  Calc    Inv   Comm    I/O   SOLVER
+
+0.000e+00          2                2       4.13e-02     3.3    4.4    0.4  158.3  -66.5
+|  Step 0 of 40. Elapsed 0:00:00.0 ETA 0:00:01.7
+1.000e+00        149              149       7.53e-02    49.5   15.6    1.0   25.0    9.0
+/  Step 1 of 40. Elapsed 0:00:00.1 ETA 0:00:02.9
+2.000e+00         43               43       2.94e-02    39.6   11.7    0.8   38.5    9.4
+-  Step 2 of 40. Elapsed 0:00:00.1 ETA 0:00:01.1
+3.000e+00         24               24       1.87e-02    34.2   10.3    0.7   48.2    6.6
+\  Step 3 of 40. Elapsed 0:00:00.2 ETA 0:00:00.7
+4.000e+00         25               25       1.93e-02    32.7   10.9    0.7   48.1    7.7
+|  Step 4 of 40. Elapsed 0:00:00.2 ETA 0:00:00.7
+5.000e+00         19               19       1.61e-02    29.7    9.6    0.6   54.1    6.0
+/  Step 5 of 40. Elapsed 0:00:00.2 ETA 0:00:00.6
+6.000e+00         15               15       1.49e-02    25.4    8.3    0.5   60.4    5.3
+-  Step 6 of 40. Elapsed 0:00:00.2 ETA 0:00:00.5
+7.000e+00         13               13       1.40e-02    23.9    7.5    0.7   62.7    5.3
+\  Step 7 of 40. Elapsed 0:00:00.2 ETA 0:00:00.5
+8.000e+00         11               11       1.32e-02    21.5    6.7    0.5   66.2    5.1
+|  Step 8 of 40. Elapsed 0:00:00.2 ETA 0:00:00.4
+9.000e+00         11               11       1.43e-02    19.5    6.2    0.5   69.0    4.8
+/  Step 9 of 40. Elapsed 0:00:00.3 ETA 0:00:00.4
+1.000e+01          8                8       1.20e-02    17.3    5.4    0.4   72.6    4.3
+-  Step 10 of 40. Elapsed 0:00:00.3 ETA 0:00:00.4
+1.100e+01         13               13       1.50e-02    21.7    7.1    0.5   66.2    4.5
+\  Step 11 of 40. Elapsed 0:00:00.3 ETA 0:00:00.4
+1.200e+01         10               10       1.46e-02    18.1    5.7    0.7   71.0    4.5
+|  Step 12 of 40. Elapsed 0:00:00.3 ETA 0:00:00.4
+1.300e+01          6                6       1.19e-02    13.1    4.2    0.3   78.4    3.9
+/  Step 13 of 40. Elapsed 0:00:00.3 ETA 0:00:00.3
+1.400e+01          9                9       1.28e-02    17.8    5.9    0.4   71.7    4.2
+-  Step 14 of 40. Elapsed 0:00:00.3 ETA 0:00:00.3
+1.500e+01          7                7       1.68e-02    10.8    3.4    0.3   82.8    2.7
+\  Step 15 of 40. Elapsed 0:00:00.3 ETA 0:00:00.4
+1.600e+01         11               11       1.59e-02    18.1    6.0    0.4   71.2    4.3
+|  Step 16 of 40. Elapsed 0:00:00.4 ETA 0:00:00.4
+1.700e+01          8                8       1.42e-02    14.6    4.7    0.5   76.8    3.5
+/  Step 17 of 40. Elapsed 0:00:00.4 ETA 0:00:00.3
+1.800e+01          4                4       1.41e-02     7.4    2.4    0.2   87.7    2.3
+-  Step 18 of 40. Elapsed 0:00:00.4 ETA 0:00:00.3
+1.900e+01         10               10       1.53e-02    17.1    5.3    0.4   73.7    3.5
+\  Step 19 of 40. Elapsed 0:00:00.4 ETA 0:00:00.3
+2.000e+01          4                4       1.45e-02     7.7    2.4    0.2   87.4    2.4
+|  Step 20 of 40. Elapsed 0:00:00.4 ETA 0:00:00.3
+2.100e+01          8                8       1.42e-02    14.4    4.6    0.3   77.2    3.4
+/  Step 21 of 40. Elapsed 0:00:00.4 ETA 0:00:00.3
+2.200e+01          8                8       1.51e-02    13.9    4.8    0.4   77.7    3.3
+-  Step 22 of 40. Elapsed 0:00:00.4 ETA 0:00:00.3
+2.300e+01          6                6       1.88e-02     8.5    2.7    0.2   86.1    2.5
+\  Step 23 of 40. Elapsed 0:00:00.5 ETA 0:00:00.3
+2.400e+01          5                5       1.37e-02     9.9    3.1    0.2   83.6    3.2
+|  Step 24 of 40. Elapsed 0:00:00.5 ETA 0:00:00.2
+2.500e+01          6                6       1.44e-02    11.2    3.8    0.3   81.7    2.9
+/  Step 25 of 40. Elapsed 0:00:00.5 ETA 0:00:00.2
+2.600e+01          6                6       1.36e-02    11.4    3.7    0.3   81.4    3.2
+-  Step 26 of 40. Elapsed 0:00:00.5 ETA 0:00:00.2
+2.700e+01          5                5       1.43e-02     9.4    3.3    0.2   84.5    2.6
+\  Step 27 of 40. Elapsed 0:00:00.5 ETA 0:00:00.2
+2.800e+01          6                6       1.56e-02    10.5    3.7    0.3   82.7    2.8
+|  Step 28 of 40. Elapsed 0:00:00.5 ETA 0:00:00.2
+2.900e+01          5                5       1.31e-02    10.3    3.5    0.3   82.7    3.3
+/  Step 29 of 40. Elapsed 0:00:00.5 ETA 0:00:00.1
+3.000e+01          4                4       1.37e-02     8.0    2.6    0.3   86.4    2.6
+-  Step 30 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.100e+01          4                4       1.41e-02     7.5    2.5    0.2   87.3    2.4
+\  Step 31 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.200e+01          5                5       1.22e-02    10.7    3.5    0.3   82.5    3.1
+|  Step 32 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.300e+01          6                6       1.45e-02    11.0    3.5    0.3   82.5    2.8
+/  Step 33 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.400e+01          6                6       1.31e-02    12.2    3.9    0.3   80.3    3.2
+-  Step 34 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.500e+01          4                4       1.17e-02     9.3    2.9    0.3   84.3    3.1
+\  Step 35 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.600e+01          6                6       1.32e-02    11.9    3.8    0.3   80.7    3.3
+|  Step 36 of 40. Elapsed 0:00:00.6 ETA 0:00:00.1
+3.700e+01          4                4       1.26e-02     8.5    2.8    0.3   85.4    3.0
+/  Step 37 of 40. Elapsed 0:00:00.7 ETA 0:00:00.0
+3.800e+01         10               10       1.43e-02    17.9    5.9    0.4   71.5    4.3
+-  Step 38 of 40. Elapsed 0:00:00.7 ETA 0:00:00.0
+3.900e+01          5                5       1.34e-02     9.8    3.2    0.3   83.5    3.2
+\  Step 39 of 40. Elapsed 0:00:00.7 ETA 0:00:00.0
+4.000e+01          6                6       1.32e-02    11.9    3.9    0.3   80.4    3.5
+|  Step 40 of 40. Elapsed 0:00:00.7 ETA 0:00:00.0
+Run finished at  : Tue Jun  2 10:22:00 2026
+Run time : 1 s
+	Option datadir = validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100 (Command line)
+	Option settingsfile = BOUT.settings (default)
+Writing options to file validation_runs/bout_hw_turbulence_sweep_default/coarse_drive_tct100/BOUT.settings
+	Option time_report:show = 0 (default)

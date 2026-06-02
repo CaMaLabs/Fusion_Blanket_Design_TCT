@@ -201,3 +201,34 @@ diffusivity. It still does not prove the full TCT mechanism; the control is a
 source-shaping proxy. The next hard test is to add source shaping or localized
 damping to a reduced turbulence model where intermittent structures form from
 the model dynamics rather than from a prescribed initial blob.
+
+## Reduced turbulence check
+
+The next rung uses the BOUT++ Hasegawa-Wakatani model:
+
+```bash
+cmake --build /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build --target hasegawa-wakatani -j2
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 bout_hw_turbulence_sweep.py --run-dir validation_runs/bout_hw_turbulence_sweep_default --nout 40
+```
+
+This check moves from a prescribed blob to a reduced drift-turbulence model. The
+TCT-like proxy reduces gradient drive and initial vorticity perturbation without
+directly changing diffusion. The primary metrics are max fluctuation energy,
+time-integrated fluctuation energy, and high-percentile density/vorticity
+fluctuations.
+
+## Reduced turbulence result
+
+The default 6-case Hasegawa-Wakatani sweep completed successfully:
+
+| Grid | Max energy at TCT 0.0 | Max energy at TCT 1.0 | Max energy reduction | Integrated energy reduction | Density p95 trend |
+| --- | ---: | ---: | ---: | ---: | --- |
+| coarse | 0.0011033022 | 0.0006206075 | 43.75% | 55.33% | monotonic |
+| base | 0.0012590790 | 0.0006088542 | 51.64% | 56.95% | monotonic |
+
+Interpretation: this is a stronger plasma-side validation rung than the
+conduction and prescribed-blob checks because it uses a reduced drift-turbulence
+model. The control is still a reduced proxy, not a resolved actuator or current
+sheet model, but the positive direction survived a second BOUT++ model family.
