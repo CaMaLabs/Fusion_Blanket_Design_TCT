@@ -1,0 +1,26 @@
+{
+  "bout_summary": {
+    "final_peak_abs_T": 1.025666279334797,
+    "initial_peak_abs_T": 3.707365498954673,
+    "mean_peak_abs_T": 1.649935696216777,
+    "peak_decay_ratio": 0.27665636949580324,
+    "time_end": 2.0000000000000004,
+    "time_start": 0.0
+  },
+  "mapped_parameters": {
+    "B0_T": 6.0,
+    "Te_keV": 15.0,
+    "Ti_keV": 25.0,
+    "betaN": 2.39258377344,
+    "chi": 0.813,
+    "gaussian_width": 0.15974440894568692,
+    "lithium_wall_modifier": 1.252,
+    "ne_m3": 6.274524476454882e+19,
+    "qstar": 2.663352272727273,
+    "raw_wall_load_mw_m2": 3.789778650718163,
+    "t_scale": 1.5134898764848894,
+    "tct_control_strength": 0.0,
+    "wall_load_mw_m2": 3.026979752969779,
+    "wall_load_scale": 2.0
+  }
+}

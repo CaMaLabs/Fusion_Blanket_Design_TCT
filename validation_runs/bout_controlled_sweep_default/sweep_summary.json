@@ -1,0 +1,470 @@
+{
+  "base_plasma_summary": {
+    "betaN": 2.39258377344,
+    "pbrem_mw": 509.2028059781944,
+    "pfus_mw": 1870.1808025141236,
+    "ptr_mw": 892.2492049975872,
+    "qstar": 2.663352272727273,
+    "wn_mw_m2": 1.8948893253590815
+  },
+  "base_reactor_summary": {
+    "event_loss_frac": 9.100071082398914e-05,
+    "net_electric": 141.10147505747076,
+    "raw_wall_load": 1.8948893253590815,
+    "score": -65139596.06558966,
+    "tct_control_strength": 1.0,
+    "wall_load": 1.5134898764848894
+  },
+  "bout_build": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build",
+  "bout_top": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev",
+  "cases": [
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.25641653820105087,
+        "initial_peak_abs_T": 0.9268413624909305,
+        "mean_peak_abs_T": 0.41248392306821746,
+        "peak_decay_ratio": 0.27665633902215925,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct000_wall050",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 0.813,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 0.9474446626795408,
+        "t_scale": 0.37837246912122235,
+        "tct_control_strength": 0.0,
+        "wall_load_mw_m2": 0.7567449382424447,
+        "wall_load_scale": 0.5
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.2001846859189131,
+        "initial_peak_abs_T": 0.9268413624909305,
+        "mean_peak_abs_T": 0.3426588560547773,
+        "peak_decay_ratio": 0.215985921669386,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct025_wall050",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 1.3755,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 0.9474446626795408,
+        "t_scale": 0.37837246912122235,
+        "tct_control_strength": 0.25,
+        "wall_load_mw_m2": 0.7567449382424447,
+        "wall_load_scale": 0.5
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.16976175656055256,
+        "initial_peak_abs_T": 0.9268413624909305,
+        "mean_peak_abs_T": 0.3021824215719093,
+        "peak_decay_ratio": 0.18316161042307144,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct050_wall050",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 1.938,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 0.9474446626795408,
+        "t_scale": 0.37837246912122235,
+        "tct_control_strength": 0.5,
+        "wall_load_mw_m2": 0.7567449382424447,
+        "wall_load_scale": 0.5
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.14999954087735637,
+        "initial_peak_abs_T": 0.9268413624909305,
+        "mean_peak_abs_T": 0.27483641080111054,
+        "peak_decay_ratio": 0.1618394980498339,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct075_wall050",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 2.5005,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 0.9474446626795408,
+        "t_scale": 0.37837246912122235,
+        "tct_control_strength": 0.75,
+        "wall_load_mw_m2": 0.7567449382424447,
+        "wall_load_scale": 0.5
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.13584324217384125,
+        "initial_peak_abs_T": 0.9268413624909305,
+        "mean_peak_abs_T": 0.2547370765389616,
+        "peak_decay_ratio": 0.14656579612368187,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct100_wall050",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 3.063,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 0.9474446626795408,
+        "t_scale": 0.37837246912122235,
+        "tct_control_strength": 1.0,
+        "wall_load_mw_m2": 0.7567449382424447,
+        "wall_load_scale": 0.5
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.512833055939485,
+        "initial_peak_abs_T": 1.853682724981861,
+        "mean_peak_abs_T": 0.8249678079274764,
+        "peak_decay_ratio": 0.27665632798326006,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct000_wall100",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 0.813,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 1.8948893253590815,
+        "t_scale": 0.7567449382424447,
+        "tct_control_strength": 0.0,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "wall_load_scale": 1.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.40036931428785527,
+        "initial_peak_abs_T": 1.853682724981861,
+        "mean_peak_abs_T": 0.6853176884235118,
+        "peak_decay_ratio": 0.21598589062309625,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct025_wall100",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 1.3755,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 1.8948893253590815,
+        "t_scale": 0.7567449382424447,
+        "tct_control_strength": 0.25,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "wall_load_scale": 1.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.33952345105479964,
+        "initial_peak_abs_T": 1.853682724981861,
+        "mean_peak_abs_T": 0.6043648696525983,
+        "peak_decay_ratio": 0.18316157694036989,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct050_wall100",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 1.938,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 1.8948893253590815,
+        "t_scale": 0.7567449382424447,
+        "tct_control_strength": 0.5,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "wall_load_scale": 1.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.29999858573684157,
+        "initial_peak_abs_T": 1.853682724981861,
+        "mean_peak_abs_T": 0.5496728200747834,
+        "peak_decay_ratio": 0.16183923046473725,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct075_wall100",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 2.5005,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 1.8948893253590815,
+        "t_scale": 0.7567449382424447,
+        "tct_control_strength": 0.75,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "wall_load_scale": 1.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.27168675195419917,
+        "initial_peak_abs_T": 1.853682724981861,
+        "mean_peak_abs_T": 0.5094741698866716,
+        "peak_decay_ratio": 0.14656594048847152,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct100_wall100",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 3.063,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 1.8948893253590815,
+        "t_scale": 0.7567449382424447,
+        "tct_control_strength": 1.0,
+        "wall_load_mw_m2": 1.5134898764848894,
+        "wall_load_scale": 1.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 1.025666279334797,
+        "initial_peak_abs_T": 3.707365498954673,
+        "mean_peak_abs_T": 1.649935696216777,
+        "peak_decay_ratio": 0.27665636949580324,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct000_wall200",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 0.813,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 3.789778650718163,
+        "t_scale": 1.5134898764848894,
+        "tct_control_strength": 0.0,
+        "wall_load_mw_m2": 3.026979752969779,
+        "wall_load_scale": 2.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.8007386510026081,
+        "initial_peak_abs_T": 3.707365498954673,
+        "mean_peak_abs_T": 1.370635422841655,
+        "peak_decay_ratio": 0.215985893818234,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct025_wall200",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 1.3755,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 3.789778650718163,
+        "t_scale": 1.5134898764848894,
+        "tct_control_strength": 0.25,
+        "wall_load_mw_m2": 3.026979752969779,
+        "wall_load_scale": 2.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.6790470430530386,
+        "initial_peak_abs_T": 3.707365498954673,
+        "mean_peak_abs_T": 1.208729734366059,
+        "peak_decay_ratio": 0.1831616125371244,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct050_wall200",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 1.938,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 3.789778650718163,
+        "t_scale": 1.5134898764848894,
+        "tct_control_strength": 0.5,
+        "wall_load_mw_m2": 3.026979752969779,
+        "wall_load_scale": 2.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.5999953425675425,
+        "initial_peak_abs_T": 3.707365498954673,
+        "mean_peak_abs_T": 1.099345017050081,
+        "peak_decay_ratio": 0.161838735009191,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct075_wall200",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 2.5005,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 3.789778650718163,
+        "t_scale": 1.5134898764848894,
+        "tct_control_strength": 0.75,
+        "wall_load_mw_m2": 3.026979752969779,
+        "wall_load_scale": 2.0
+      }
+    },
+    {
+      "bout_summary": {
+        "final_peak_abs_T": 0.5433729445239028,
+        "initial_peak_abs_T": 3.707365498954673,
+        "mean_peak_abs_T": 1.018948401686885,
+        "peak_decay_ratio": 0.14656578766704065,
+        "time_end": 2.0000000000000004,
+        "time_start": 0.0
+      },
+      "case": "tct100_wall200",
+      "mapped_parameters": {
+        "B0_T": 6.0,
+        "Te_keV": 15.0,
+        "Ti_keV": 25.0,
+        "betaN": 2.39258377344,
+        "chi": 3.063,
+        "gaussian_width": 0.15974440894568692,
+        "lithium_wall_modifier": 1.252,
+        "ne_m3": 6.274524476454882e+19,
+        "qstar": 2.663352272727273,
+        "raw_wall_load_mw_m2": 3.789778650718163,
+        "t_scale": 1.5134898764848894,
+        "tct_control_strength": 1.0,
+        "wall_load_mw_m2": 3.026979752969779,
+        "wall_load_scale": 2.0
+      }
+    }
+  ],
+  "controls": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "sweep_dir": "validation_runs/bout_controlled_sweep_default",
+  "trend_summary": {
+    "all_control_trends_supported": true,
+    "control_trends": [
+      {
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.25641653820105087,
+        "final_peak_at_control_1": 0.13584324217384125,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.47022433448762424,
+        "wall_load_scale": 0.5
+      },
+      {
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.512833055939485,
+        "final_peak_at_control_1": 0.27168675195419917,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.47022379152903404,
+        "wall_load_scale": 1.0
+      },
+      {
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 1.025666279334797,
+        "final_peak_at_control_1": 0.5433729445239028,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.470224423409619,
+        "wall_load_scale": 2.0
+      }
+    ],
+    "interpretation": "PASS: final heat perturbation decreases monotonically as the controlled effective diffusivity increases at each wall-load scale."
+  },
+  "wall_load_scales": [
+    0.5,
+    1.0,
+    2.0
+  ]
+}

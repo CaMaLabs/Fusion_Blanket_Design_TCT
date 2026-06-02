@@ -93,3 +93,31 @@ The next useful experiment is a small sweep around the default design:
 
 That sweep will say whether the current BOUT++ mapping supports the same
 directional story as the internal reactor surrogate.
+
+The sweep runner is:
+
+```bash
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 bout_controlled_sweep.py --sweep-dir validation_runs/bout_controlled_sweep_default --nout 20
+```
+
+It writes per-case BOUT++ outputs plus:
+
+- `validation_runs/bout_controlled_sweep_default/sweep_results.csv`
+- `validation_runs/bout_controlled_sweep_default/sweep_summary.json`
+
+## Controlled sweep result
+
+The default 15-case sweep completed with monotonic final-peak reduction at every
+wall-load scale:
+
+| Wall-load scale | Final peak at TCT 0.0 | Final peak at TCT 1.0 | Reduction |
+| --- | ---: | ---: | ---: |
+| 0.5x | 0.2564165382 | 0.1358432422 | 47.02% |
+| 1.0x | 0.5128330559 | 0.2716867520 | 47.02% |
+| 2.0x | 1.0256662793 | 0.5433729445 | 47.02% |
+
+Interpretation: the reduced conduction mapping supports the expected direction
+for this specific transport proxy. It is still a first-rung BOUT++ result; the
+claim must next survive a less-prescribed SOL, blob, or edge-turbulence model.
