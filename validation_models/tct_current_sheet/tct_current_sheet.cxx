@@ -16,6 +16,8 @@ private:
   BoutReal nu;
   BoutReal tct_strength;
   BoutReal omega_tct_strength;
+  BoutReal tct_start_time;
+  BoutReal tct_end_time;
   BRACKET_METHOD bracket_method;
 
   std::unique_ptr<Laplacian> phi_solver;
@@ -28,6 +30,8 @@ protected:
     tct_strength = options["strength"].doc("Localized psi actuator damping").withDefault(0.0);
     omega_tct_strength =
         options["omega_strength"].doc("Localized vorticity actuator damping").withDefault(0.0);
+    tct_start_time = options["start_time"].doc("TCT actuator turn-on time").withDefault(0.0);
+    tct_end_time = options["end_time"].doc("TCT actuator turn-off time").withDefault(1e30);
 
     switch (options["bracket"].withDefault(2)) {
     case 0:
@@ -65,18 +69,20 @@ protected:
     state["tct_mask"].assignRepeat(tct_mask).setAttributes({{"long_name", "Resolved TCT actuator mask"}});
   }
 
-  int rhs(BoutReal UNUSED(time)) override {
+  int rhs(BoutReal time) override {
     phi = phi_solver->solve(omega, phi);
 
     mesh->communicate(psi, omega, phi, tct_mask);
     J = -Delp2(psi);
     mesh->communicate(J);
 
+    const BoutReal actuator_gate = (time >= tct_start_time && time <= tct_end_time) ? 1.0 : 0.0;
+
     ddt(psi) = -bracket(phi, psi, bracket_method) + eta * Delp2(psi)
-               - tct_strength * tct_mask * psi;
+               - actuator_gate * tct_strength * tct_mask * psi;
 
     ddt(omega) = -bracket(phi, omega, bracket_method) + bracket(J, psi, bracket_method)
-                 + nu * Delp2(omega) - omega_tct_strength * tct_mask * omega;
+                 + nu * Delp2(omega) - actuator_gate * omega_tct_strength * tct_mask * omega;
 
     return 0;
   }

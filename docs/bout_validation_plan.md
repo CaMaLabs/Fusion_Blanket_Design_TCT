@@ -262,3 +262,45 @@ Interpretation: this is the strongest validation rung so far because the TCT
 effect is represented as a resolved localized actuator/current-sheet term. It is
 still a reduced-MHD slab model, so the next credibility step is actuator
 placement/timing noise and a higher-resolution convergence pass.
+
+## Resolved actuator robustness check
+
+The robustness runner reuses the custom reduced-MHD current-sheet model, but now
+varies actuator placement, mask width, start/end timing, strength, and one
+higher-resolution grid:
+
+```bash
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 bout_tct_actuator_robustness_sweep.py --run-dir validation_runs/bout_tct_actuator_robustness_default --nout 18
+```
+
+The model now accepts `[tct] start_time` and `end_time` so delayed and pulsed
+actuation can be tested without changing the equation set between cases.
+
+## Resolved actuator robustness result
+
+The default 16-case robustness sweep completed. Of the 14 controlled cases, 12
+reduced both post-initial peak current and time-integrated max current. All 14
+reduced time-integrated max current.
+
+| Check | Cases | Min post-initial max J reduction | Min integrated max J reduction | Result |
+| --- | ---: | ---: | ---: | --- |
+| nominal base actuator | 1 | 14.16% | 65.33% | pass |
+| placement offsets `+/-0.04`, `+/-0.08` | 4 | 2.98% | 24.73% | pass, weak at large offsets |
+| width scales `0.8x`, `1.2x`, `2.2x` | 3 | 12.76% | 45.65% | pass |
+| strength `0.4`, `1.2` | 2 | 7.33% | 44.97% | pass |
+| fine-grid nominal actuator | 1 | 14.05% | 65.08% | pass |
+| delayed/pulsed timing | 3 | 0.00% | 44.81% | mixed |
+
+Best case: `strength_1p2` reduced post-initial peak current by 20.41% and
+integrated max current by 74.89%. The fine-grid nominal case reproduced the base
+direction with 14.05% post-initial peak-current reduction and 65.08% integrated
+max-current reduction.
+
+Interpretation: the actuator survives width, moderate placement, strength, and
+fine-grid checks. Timing is now the main falsification boundary: delayed
+actuation still lowers integrated current, but it cannot reduce the peak-current
+metric once the sheet has already formed. The next run should therefore focus on
+closed-loop triggering or preemptive timing thresholds rather than only stronger
+open-loop damping.

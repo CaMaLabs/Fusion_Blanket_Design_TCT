@@ -1,0 +1,39 @@
+{
+  "case_parameters": {
+    "actuator_center": 0.5,
+    "actuator_width": 0.044000000000000004,
+    "case": "width_0p8x",
+    "control": 0.8,
+    "end_time": 1e+30,
+    "eta": 0.00075,
+    "family": "width",
+    "island_seed": 0.006,
+    "nu": 0.001,
+    "omega_seed": 0.01,
+    "omega_tct_strength": 0.056215838023758236,
+    "psi_amp": 0.08,
+    "start_time": 0.0,
+    "tct_strength": 0.11243167604751647
+  },
+  "diagnostics": {
+    "final_abs_J_p99": 0.17970095689087762,
+    "final_magnetic_energy": 2.7216153958438143e-05,
+    "final_max_abs_J": 0.2144355184912343,
+    "initial_magnetic_energy": 0.00022039231782721444,
+    "initial_max_abs_J": 0.41517876719166324,
+    "max_abs_omega": 0.031762936528926485,
+    "post_initial_max_abs_J": 0.31379419754087984,
+    "post_initial_max_abs_J_p99": 0.3087519103421694,
+    "time_end": 18.0,
+    "time_integrated_max_abs_J": 3.8917893822163494,
+    "time_integrated_max_abs_omega": 0.40768084391642423
+  },
+  "grid": {
+    "dx": 0.12,
+    "dz": 0.12,
+    "name": "base",
+    "nx": 96,
+    "nz": 96,
+    "sheet_width": 0.055
+  }
+}
