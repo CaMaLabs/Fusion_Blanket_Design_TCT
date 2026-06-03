@@ -1,0 +1,301 @@
+[1780422104.230434] [localhost:22166:0]       tcp_iface.c:893  UCX  ERROR scandir(/sys/class/net) failed: Permission denied
+BOUT++ version 5.2.1.dev764+g3e317cbc1
+Revision: 3e317cbc18b4ad3839cfff67aded3bff4b5fb9f9
+Code compiled on May 31 2026 at 15:05:25
+
+B.Dudson (University of York), M.Umansky (LLNL) 2007
+Based on BOUT by Xueqiao Xu, 1999
+
+Processor number: 0 of 1
+
+pid: 22166
+
+Compile-time options:
+	Runtime error checking enabled, level 2
+	Parallel NetCDF support disabled
+	Metrics mode is 2D
+	FFT support enabled
+	Natural language support disabled
+	LAPACK support disabled
+	NetCDF support enabled (NetCDF4)
+	ADIOS2 support disabled
+	PETSc support disabled
+	PVODE support enabled
+	Score-P support disabled
+	SLEPc support disabled
+	SUNDIALS support disabled
+	Backtrace in exceptions enabled
+	Colour in logs enabled
+	OpenMP parallelisation disabled, using 1 threads
+	Extra debug output disabled
+	Floating-point exceptions disabled
+	Signal handling support enabled
+	Field name tracking enabled
+	Message stack enabled
+	Compiled with flags : "-Wall -Wextra -Wnull-dereference -Wno-cast-function-type -DCHECK=2 -O3 -DNDEBUG"
+	Command line options for this run : /root/Fusion_Blanket_Design_TCT/validation_models/tct_current_sheet/build/tct_current_sheet -d validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000
+Reading options file validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp
+	Option datadir = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (Command line)
+	Option optionfile = BOUT.inp (default)
+	Option settingsfile = BOUT.settings (default)
+Writing options to file validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.settings
+	Option mesh:type = bout (default)
+
+Getting grid data from options
+	Option mesh:calcParallelSlices_on_communicate = 1 (default)
+	Option mesh:maxregionblocksize = 64 (default)
+	Option mesh:staggergrids = 0 (default)
+	Option mesh:include_corner_cells = 1 (default)
+	Option mesh:ddz:fft_filter = 0 (default)
+	Option mesh:symmetricGlobalX = 1 (default)
+	Option optionfile = BOUT.inp (default)
+WARNING: The default of this option has changed in release 4.1.
+If you want the old setting, you have to specify mesh:symmetricGlobalY=false in BOUT.inp
+	Option mesh:symmetricGlobalY = 1 (default)
+	Option mesh:symmetricGlobalZ = 0 (default)
+Loading mesh
+	Option input:transform_from_field_aligned = true (default)
+	Option input:max_recursion_depth = 0 (default)
+	Option mesh:nx = 96 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option mesh:ny = 1 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option mesh:nz = 96 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Read nz from input grid file
+	Grid size: 96 x 1 x 96
+Variable 'MXG' not in mesh options. Setting to 0
+	Option MXG = 2 (default)
+Variable 'MYG' not in mesh options. Setting to 0
+	Option MYG = 0 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Guard cells (x,y,z): 2, 0, 0
+Variable 'ixseps1' not in mesh options. Setting to 96
+Variable 'ixseps2' not in mesh options. Setting to 96
+Variable 'jyseps1_1' not in mesh options. Setting to -1
+Variable 'jyseps1_2' not in mesh options. Setting to 0
+Variable 'jyseps2_1' not in mesh options. Setting to 0
+Variable 'jyseps2_2' not in mesh options. Setting to 0
+Variable 'ny_inner' not in mesh options. Setting to 0
+Finding value for NXPE (ideal = 9.591663)
+	Candidate value: 1
+	 -> Good value
+	Domain split (NXPE=1, NYPE=1) into domains (localNx=92, localNy=1)
+	Option IncIntShear = 0 (default)
+	Option periodicX = true (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option async_send = 0 (default)
+	Option ZMIN = 0 (default)
+	Option ZMAX = 1 (default)
+	EQUILIBRIUM IS SINGLE NULL (SND) 
+Connection between top of Y processor 0 and bottom of 0 in range 0 <= x < 96
+=> This processor sending in up
+=> This processor sending in down
+WARNING adding connection: poloidal index -1 out of range
+Variable 'limiter_count' not in mesh options. Setting to 0
+	MYPE_IN_CORE = true
+	DXS = 96, DIN = 0. DOUT = -1
+	UXS = 96, UIN = 0. UOUT = -1
+	XIN = 0, XOUT = 0
+	Twist-shift: DI UI 
+	Option twistshift = 0 (default)
+Variable 'ShiftAngle' not in mesh options. Setting to empty vector
+No boundary regions; domain is periodic
+No boundary regions in this processor
+Constructing default regions
+	Option mesh:extrapolate_x = 0 (default)
+	Option mesh:extrapolate_y = 0 (default)
+	Option mesh:dx = 0.12 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option mesh:dy = 1.0 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option ZMIN = 0 (default)
+	Option ZMAX = 1 (default)
+	Option mesh:dz = 0.12 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option mesh:paralleltransform:type = identity (default)
+Variable 'g11' not in mesh options. Setting to 1.000000e+00
+Variable 'g22' not in mesh options. Setting to 1.000000e+00
+Variable 'g33' not in mesh options. Setting to 1.000000e+00
+Variable 'g12' not in mesh options. Setting to 0.000000e+00
+Variable 'g13' not in mesh options. Setting to 0.000000e+00
+Variable 'g23' not in mesh options. Setting to 0.000000e+00
+	Local maximum error in diagonal inversion is 0.000000e+00
+	Local maximum error in off-diagonal inversion is 0.000000e+00
+Variable 'J' not in mesh options. Setting to 0.000000e+00
+	WARNING: Jacobian 'J' not found. Calculating from metric tensor
+Variable 'Bxy' not in mesh options. Setting to 0.000000e+00
+	WARNING: Magnitude of B field 'Bxy' not found. Calculating from metric tensor
+Variable 'ShiftTorsion' not in mesh options. Setting to 0.000000e+00
+	WARNING: No Torsion specified for zShift. Derivatives may not be correct
+Calculating differential geometry terms
+	Communicating connection terms
+	Option non_uniform = 1 (default)
+Variable 'd2x' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2x' not found. Calculating from dx
+Variable 'd2y' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2y' not found. Calculating from dy
+	done
+	Option output:enabled = 1 (default)
+	Option restart_files:enabled = 1 (default)
+	Option output:flush_frequency = 1 (default)
+	Option datadir = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (Command line)
+	Option append = 0 (default)
+	Option output:type = netcdf (default)
+	Option output:path = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (user_default)
+	Option output:prefix = BOUT.dmp (user_default)
+	Option output:append = false (user_default)
+	Option datadir = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (Command line)
+	Option restart_files:type = netcdf (default)
+	Option restart_files:path = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (user_default)
+	Option restart_files:prefix = BOUT.restart (user_default)
+	Option restart_files:append = false (user_default)
+	Option solver:type = pvode (default)
+	Option solver:monitor_timestep = 0 (default)
+	Option solver:save_repeat_run_id = 0 (default)
+	Option solver:is_nonsplit_model_diffusive = 1 (default)
+	Option solver:mms = 0 (default)
+	Option solver:mms_initialise = 0 (default)
+	Option nout = 1 (default)
+	Option solver:nout = 20 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option timestep = 1 (default)
+	Option solver:output_step = 1 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option solver:use_precon = 0 (default)
+	Option solver:precon_dimens = 50 (default)
+	Option solver:precon_tol = 0.0001 (default)
+	Option solver:mxstep = 10000 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option solver:atol = 1e-10 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option solver:rtol = 1e-06 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+Setting up output (experimental output) file
+	Option restart = 0 (default)
+	Option tct:eta = 0.00075 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option tct:nu = 0.001 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option tct:strength = 0 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option tct:omega_strength = 0 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option tct:bracket = 2 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+Setting boundary for variable tct_mask
+	Option tct_mask:function = exp(-((x-0.5)/0.0935)^2) (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option tct_mask:scale = 1 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option laplace:type = cyclic (default)
+Initialising Laplacian inversion routines
+	Option laplace:async = 1 (default)
+	Option laplace:filter = 0 (default)
+	Option laplace:maxmode = 48 (default)
+	Option laplace:low_mem = 0 (default)
+	Option laplace:nonuniform = 1 (default)
+	Option laplace:all_terms = 1 (default)
+	Option laplace:global_flags = 0 (default)
+	Option laplace:inner_boundary_flags = 0 (default)
+	Option laplace:outer_boundary_flags = 0 (default)
+	Option laplace:include_yguards = 0 (default)
+	Option laplace:extra_yguards_lower = 0 (default)
+	Option laplace:extra_yguards_upper = 0 (default)
+	Option laplace:dst = 0 (default)
+Setting boundary for variable psi
+	Option psi:function = 0.08 * exp(-((x-0.5)/0.055)^2) + 0.006 * cos(z) (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option psi:scale = 1 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option all:evolve_bndry = 0 (default)
+	Option psi:evolve_bndry = 0 (default)
+Setting boundary for variable omega
+	Option omega:function = 0.01 * sin(z) * exp(-((x-0.5)/(2*0.055))^2) (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option omega:scale = 1 (validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.inp)
+	Option all:evolve_bndry = false (default)
+	Option omega:evolve_bndry = 0 (default)
+	Option fft:fft_measurement_flag = estimate (default)
+	Option laplace:type = cyclic (default)
+Initialising Laplacian inversion routines
+	Option laplace:async = true (default)
+	Option laplace:filter = 0 (default)
+	Option laplace:maxmode = 48 (default)
+	Option laplace:low_mem = false (default)
+	Option laplace:nonuniform = true (default)
+	Option laplace:all_terms = true (default)
+	Option laplace:global_flags = 0 (default)
+	Option laplace:inner_boundary_flags = 0 (default)
+	Option laplace:outer_boundary_flags = 0 (default)
+	Option laplace:include_yguards = false (default)
+	Option laplace:extra_yguards_lower = 0 (default)
+	Option laplace:extra_yguards_upper = 0 (default)
+	Option laplace:dst = false (default)
+Variable 'grid_id' not in mesh options. Setting to 
+Variable 'hypnotoad_version' not in mesh options. Setting to 
+Variable 'hypnotoad_git_hash' not in mesh options. Setting to 
+Variable 'hypnotoad_git_diff' not in mesh options. Setting to 
+Variable 'hypnotoad_geqdsk_filename' not in mesh options. Setting to 
+Variable 'grid_id' not in mesh options. Setting to 
+Variable 'hypnotoad_version' not in mesh options. Setting to 
+Variable 'hypnotoad_git_hash' not in mesh options. Setting to 
+Variable 'hypnotoad_git_diff' not in mesh options. Setting to 
+Variable 'hypnotoad_geqdsk_filename' not in mesh options. Setting to 
+	Option wall_limit = -1 (default)
+	Option stopCheck = 0 (default)
+	Option datadir = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (Command line)
+	Option stopCheckName = BOUT.stop (default)
+Solver running for 20 outputs with output timestep of 1.000000e+00
+Initialising solver
+Initialising PVODE solver
+	3d fields = 2, 2d fields = 0 neq=17664, local_N=17664
+	Option solver:mudq = 188 (default)
+	Option solver:mldq = 188 (default)
+	Option solver:mukeep = 0 (default)
+	Option solver:mlkeep = 0 (default)
+	Option solver:max_timestep = -1 (default)
+	Option solver:min_timestep = -1 (default)
+	Option solver:max_order = -1 (default)
+	Option solver:adams_moulton = 0 (default)
+	Option solver:debug_on_failure = 0 (default)
+Running simulation
+
+Run ID: 2008d1d6-a1bf-40c6-a025-7cfd4a632706
+
+Run started at  : Tue Jun  2 10:41:44 2026
+	Option restart = false (default)
+	Option append = false (default)
+	Option dump_on_restart = 1 (default)
+	Option input:validate = 0 (default)
+	Option input:error_on_unused_options = 1 (default)
+	Option datadir = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (Command line)
+	Option optionfile = BOUT.inp (default)
+
+Sim Time  |  RHS evals  | Wall Time |  Calc    Inv   Comm    I/O   SOLVER
+
+0.000e+00          2       7.92e-02     7.1    5.3    0.6  136.1  -49.1
+|  Step 0 of 20. Elapsed 0:00:00.1 ETA 0:00:01.6
+1.000e+00         28       1.03e-01    26.1   16.4    0.3   40.0   17.1
+/  Step 1 of 20. Elapsed 0:00:00.2 ETA 0:00:02.0
+2.000e+00         13       4.37e-02    26.5   16.2    0.4   48.5    8.3
+-  Step 2 of 20. Elapsed 0:00:00.2 ETA 0:00:00.8
+3.000e+00         17       4.86e-02    28.3   18.5    0.3   44.7    8.2
+\  Step 3 of 20. Elapsed 0:00:00.3 ETA 0:00:00.8
+4.000e+00         13       3.99e-02    27.0   17.0    0.3   48.0    7.8
+|  Step 4 of 20. Elapsed 0:00:00.3 ETA 0:00:00.6
+5.000e+00          9       3.37e-02    21.9   14.0    0.3   56.8    7.0
+/  Step 5 of 20. Elapsed 0:00:00.3 ETA 0:00:00.5
+6.000e+00          5       2.55e-02    16.3   10.4    0.2   67.9    5.1
+-  Step 6 of 20. Elapsed 0:00:00.4 ETA 0:00:00.4
+7.000e+00          7       3.27e-02    19.0   11.5    0.3   62.1    7.2
+\  Step 7 of 20. Elapsed 0:00:00.4 ETA 0:00:00.4
+8.000e+00          5       2.58e-02    16.2   10.3    0.2   67.5    5.8
+|  Step 8 of 20. Elapsed 0:00:00.4 ETA 0:00:00.3
+9.000e+00          5       2.73e-02    15.6    9.7    0.2   68.9    5.6
+/  Step 9 of 20. Elapsed 0:00:00.5 ETA 0:00:00.3
+1.000e+01          5       3.03e-02    16.3    9.2    0.3   67.3    6.8
+-  Step 10 of 20. Elapsed 0:00:00.5 ETA 0:00:00.3
+1.100e+01          5       3.21e-02    13.5    8.3    0.2   73.9    4.1
+\  Step 11 of 20. Elapsed 0:00:00.5 ETA 0:00:00.3
+1.200e+01          5       4.33e-02     9.7    6.4    0.1   79.5    4.2
+|  Step 12 of 20. Elapsed 0:00:00.6 ETA 0:00:00.3
+1.300e+01          5       4.80e-02    11.6    6.1    0.2   77.7    4.4
+/  Step 13 of 20. Elapsed 0:00:00.6 ETA 0:00:00.3
+1.400e+01          5       4.24e-02    10.8    7.0    0.3   77.0    5.0
+-  Step 14 of 20. Elapsed 0:00:00.7 ETA 0:00:00.3
+1.500e+01          5       4.38e-02     9.7    6.1    0.2   80.7    3.4
+\  Step 15 of 20. Elapsed 0:00:00.7 ETA 0:00:00.2
+1.600e+01          3       4.27e-02     7.7    4.0    0.2   84.7    3.4
+|  Step 16 of 20. Elapsed 0:00:00.7 ETA 0:00:00.2
+1.700e+01          6       5.23e-02     9.8    6.2    0.2   79.8    4.0
+/  Step 17 of 20. Elapsed 0:00:00.8 ETA 0:00:00.2
+1.800e+01          1       4.83e-02     1.9    1.2    0.0   95.2    1.6
+-  Step 18 of 20. Elapsed 0:00:00.8 ETA 0:00:00.1
+1.900e+01          5       5.77e-02     8.9    4.7    0.1   83.5    2.8
+\  Step 19 of 20. Elapsed 0:00:00.9 ETA 0:00:00.1
+2.000e+01          5       4.60e-02     8.9    5.8    0.1   82.3    2.9
+|  Step 20 of 20. Elapsed 0:00:00.9 ETA 0:00:00.0
+Run finished at  : Tue Jun  2 10:41:45 2026
+Run time : 1 s
+	Option datadir = validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000 (Command line)
+	Option settingsfile = BOUT.settings (default)
+Writing options to file validation_runs/bout_tct_current_sheet_sweep_default/base_resolved_tct000/BOUT.settings
+	Option time_report:show = 0 (default)

@@ -1,0 +1,7 @@
+gate,passed,evidence
+m3dc1_helical_proxy_hdf5_schema,True,"{""field_count"": 23, ""helical_proxy_flag"": 1, ""missing_required_fields"": []}"
+m3dc1_candidate_proxy_constraints,True,"{""best_case"": ""aggressive_tct"", ""min_TBR"": 1.1008, ""rows"": 5}"
+open_source_equilibrium_verifier,True,"{""returncode"": 0, ""stdout"": ""...                                                                      [100%]\n3 passed in 34.11s\n""}"
+bout_preemptive_actuator_supported,True,"{""nominal_integrated_reduction"": 0.6533426292161446, ""nominal_peak_reduction"": 0.14159563381722218}"
+bout_fine_grid_direction_preserved,True,"{""fine_integrated_reduction"": 0.650780464112708, ""fine_peak_reduction"": 0.14051812213299775}"
+timing_boundary_detected,True,"{""timing_min_integrated_reduction"": 0.44814560157366523, ""timing_min_peak_reduction"": 0.0}"

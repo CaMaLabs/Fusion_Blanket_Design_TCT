@@ -1,0 +1,130 @@
+{
+  "bout_build": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build",
+  "bout_top": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev",
+  "checks": {
+    "boundary_supported": true,
+    "interpretation": "PASS: the diffusivity-control trend survives the tested mesh and boundary variants; alternative mappings are reported separately as falsification checks.",
+    "mapping_supported": {
+      "mapping_amplitude": true,
+      "mapping_diffusivity": true,
+      "mapping_width": true
+    },
+    "resolution_supported": true,
+    "trend_summary": {
+      "boundary_dirichlet_o2(0.0)": {
+        "cases": [
+          "boundary_dirichlet_o2_tct000_wall100",
+          "boundary_dirichlet_o2_tct050_wall100",
+          "boundary_dirichlet_o2_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.5128330545754516,
+        "final_peak_at_control_1": 0.27168658755289254,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.470224110694643
+      },
+      "boundary_dirichlet_o4(0.0)": {
+        "cases": [
+          "boundary_dirichlet_o4_tct000_wall100",
+          "boundary_dirichlet_o4_tct050_wall100",
+          "boundary_dirichlet_o4_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.512833055939485,
+        "final_peak_at_control_1": 0.27168675195419917,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.47022379152903404
+      },
+      "boundary_neumann": {
+        "cases": [
+          "boundary_neumann_tct000_wall100",
+          "boundary_neumann_tct050_wall100",
+          "boundary_neumann_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.5128331076117696,
+        "final_peak_at_control_1": 0.271687185211367,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.4702230000777514
+      },
+      "mapping_amplitude": {
+        "cases": [
+          "mapping_amplitude_tct000_wall100",
+          "mapping_amplitude_tct050_wall100",
+          "mapping_amplitude_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": false,
+        "final_peak_at_control_0": 0.512833055939485,
+        "final_peak_at_control_1": 0.30769985538262373,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.39999995745412187
+      },
+      "mapping_diffusivity": {
+        "cases": [
+          "mapping_diffusivity_tct000_wall100",
+          "mapping_diffusivity_tct050_wall100",
+          "mapping_diffusivity_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.512833055939485,
+        "final_peak_at_control_1": 0.27168675195419917,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.47022379152903404
+      },
+      "mapping_width": {
+        "cases": [
+          "mapping_width_tct000_wall100",
+          "mapping_width_tct050_wall100",
+          "mapping_width_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": false,
+        "final_peak_at_control_0": 0.512833055939485,
+        "final_peak_at_control_1": 0.46403415729838826,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.095155524933352
+      },
+      "resolution_ny100": {
+        "cases": [
+          "resolution_ny100_tct000_wall100",
+          "resolution_ny100_tct050_wall100",
+          "resolution_ny100_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.512833055939485,
+        "final_peak_at_control_1": 0.27168675195419917,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.47022379152903404
+      },
+      "resolution_ny200": {
+        "cases": [
+          "resolution_ny200_tct000_wall100",
+          "resolution_ny200_tct050_wall100",
+          "resolution_ny200_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.5128737863468479,
+        "final_peak_at_control_1": 0.2716877042006844,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.4702640075721347
+      },
+      "resolution_ny50": {
+        "cases": [
+          "resolution_ny50_tct000_wall100",
+          "resolution_ny50_tct050_wall100",
+          "resolution_ny50_tct100_wall100"
+        ],
+        "decay_ratio_monotonic_decrease": true,
+        "final_peak_at_control_0": 0.512665804843183,
+        "final_peak_at_control_1": 0.2716791184296012,
+        "final_peak_monotonic_decrease": true,
+        "final_peak_reduction_fraction": 0.4700658482328388
+      }
+    }
+  },
+  "controls": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "run_dir": "validation_runs/bout_robustness_sweep_default"
+}

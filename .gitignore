@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+
+.BOUT.pid.*
+BOUT.restart.*.nc
+
+validation_models/**/build/

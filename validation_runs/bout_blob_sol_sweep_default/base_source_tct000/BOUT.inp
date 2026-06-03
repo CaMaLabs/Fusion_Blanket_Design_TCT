@@ -1,0 +1,57 @@
+
+MXG = 2
+MYG = 0
+
+[mesh]
+nx = 64
+ny = 1
+nz = 64
+dx = 0.3
+dz = 0.3
+
+[mesh:ddx]
+first = C2
+second = C2
+upwind = W3
+
+[mesh:ddy]
+first = C2
+second = C2
+upwind = W3
+
+[mesh:ddz]
+first = C2
+second = C2
+upwind = W3
+
+[solver]
+atol = 1e-10
+rtol = 1e-05
+mxstep = 10000
+output_step = 5
+nout = 12
+
+[phiSolver]
+type = tri
+fourth_order = true
+
+[model]
+Te0 = 15000
+B0 = 6
+D_vort = 1e-06
+D_n = 1e-06
+R_c = 2
+L_par = 50.265482
+compressible = false
+boussinesq = true
+sheath = true
+
+[all]
+scale = 0.0
+bndry_all = neumann
+
+[n]
+scale = 1.0
+height = 0.49837247
+width = 0.055
+function = 1 + height * exp(-((x-0.25)/width)^2 - ((z/(2*pi) - 0.5)/width)^2)

@@ -1,0 +1,39 @@
+{
+  "case_parameters": {
+    "actuator_center": 0.5,
+    "actuator_width": 0.0765,
+    "case": "fine_tct080",
+    "control": 0.8,
+    "end_time": 1e+30,
+    "eta": 0.00075,
+    "family": "resolution",
+    "island_seed": 0.006,
+    "nu": 0.001,
+    "omega_seed": 0.01,
+    "omega_tct_strength": 0.056215838023758236,
+    "psi_amp": 0.08,
+    "start_time": 0.0,
+    "tct_strength": 0.11243167604751647
+  },
+  "diagnostics": {
+    "final_abs_J_p99": 0.03095488272460528,
+    "final_magnetic_energy": 1.1656830715944797e-05,
+    "final_max_abs_J": 0.039507105473417486,
+    "initial_magnetic_energy": 0.00018383732215551234,
+    "initial_max_abs_J": 0.6113302775525158,
+    "max_abs_omega": 0.02263681051789113,
+    "post_initial_max_abs_J": 0.519727740998578,
+    "post_initial_max_abs_J_p99": 0.5143514487518134,
+    "time_end": 18.0,
+    "time_integrated_max_abs_J": 3.5806133925575656,
+    "time_integrated_max_abs_omega": 0.33203468796171215
+  },
+  "grid": {
+    "dx": 0.09,
+    "dz": 0.09,
+    "name": "fine",
+    "nx": 128,
+    "nz": 128,
+    "sheet_width": 0.045
+  }
+}

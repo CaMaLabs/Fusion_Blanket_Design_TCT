@@ -1,0 +1,316 @@
+BOUT++ version 5.2.1.dev764+g3e317cbc1
+Revision: 3e317cbc18b4ad3839cfff67aded3bff4b5fb9f9
+Code compiled on May 31 2026 at 15:05:25
+
+B.Dudson (University of York), M.Umansky (LLNL) 2007
+Based on BOUT by Xueqiao Xu, 1999
+
+Processor number: 0 of 1
+
+pid: 8896
+
+Compile-time options:
+	Runtime error checking enabled, level 2
+	Parallel NetCDF support disabled
+	Metrics mode is 2D
+	FFT support enabled
+	Natural language support disabled
+	LAPACK support disabled
+	NetCDF support enabled (NetCDF4)
+	ADIOS2 support disabled
+	PETSc support disabled
+	PVODE support enabled
+	Score-P support disabled
+	SLEPc support disabled
+	SUNDIALS support disabled
+	Backtrace in exceptions enabled
+	Colour in logs enabled
+	OpenMP parallelisation disabled, using 1 threads
+	Extra debug output disabled
+	Floating-point exceptions disabled
+	Signal handling support enabled
+	Field name tracking enabled
+	Message stack enabled
+	Compiled with flags : "-Wall -Wextra -Wnull-dereference -Wno-cast-function-type -DCHECK=2 -O3 -DNDEBUG"
+	Command line options for this run : /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build/examples/blob2d/blob2d -d validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000
+Reading options file validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp
+	Option datadir = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (Command line)
+	Option optionfile = BOUT.inp (default)
+	Option settingsfile = BOUT.settings (default)
+Writing options to file validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.settings
+	Option mesh:type = bout (default)
+
+Getting grid data from options
+	Option mesh:calcParallelSlices_on_communicate = 1 (default)
+	Option mesh:maxregionblocksize = 64 (default)
+	Option mesh:staggergrids = 0 (default)
+	Option mesh:include_corner_cells = 1 (default)
+	Option mesh:ddx:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddx:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddx:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddx:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddx:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddx:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:first = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:second = C2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddy:upwind = W3 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ddz:fft_filter = 0 (default)
+	Option mesh:symmetricGlobalX = 1 (default)
+	Option optionfile = BOUT.inp (default)
+WARNING: The default of this option has changed in release 4.1.
+If you want the old setting, you have to specify mesh:symmetricGlobalY=false in BOUT.inp
+	Option mesh:symmetricGlobalY = 1 (default)
+	Option mesh:symmetricGlobalZ = 0 (default)
+Loading mesh
+	Option input:transform_from_field_aligned = true (default)
+	Option input:max_recursion_depth = 0 (default)
+	Option mesh:nx = 48 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:ny = 1 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:nz = 48 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Read nz from input grid file
+	Grid size: 48 x 1 x 48
+Variable 'MXG' not in mesh options. Setting to 0
+	Option MXG = 2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+Variable 'MYG' not in mesh options. Setting to 0
+	Option MYG = 0 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Guard cells (x,y,z): 2, 0, 0
+Variable 'ixseps1' not in mesh options. Setting to 48
+Variable 'ixseps2' not in mesh options. Setting to 48
+Variable 'jyseps1_1' not in mesh options. Setting to -1
+Variable 'jyseps1_2' not in mesh options. Setting to 0
+Variable 'jyseps2_1' not in mesh options. Setting to 0
+Variable 'jyseps2_2' not in mesh options. Setting to 0
+Variable 'ny_inner' not in mesh options. Setting to 0
+Finding value for NXPE (ideal = 6.633250)
+	Candidate value: 1
+	 -> Good value
+	Domain split (NXPE=1, NYPE=1) into domains (localNx=44, localNy=1)
+	Option IncIntShear = 0 (default)
+	Option periodicX = 0 (default)
+	Option async_send = 0 (default)
+	Option ZMIN = 0 (default)
+	Option ZMAX = 1 (default)
+	EQUILIBRIUM IS SINGLE NULL (SND) 
+Connection between top of Y processor 0 and bottom of 0 in range 0 <= x < 48
+=> This processor sending in up
+=> This processor sending in down
+WARNING adding connection: poloidal index -1 out of range
+Variable 'limiter_count' not in mesh options. Setting to 0
+	MYPE_IN_CORE = true
+	DXS = 48, DIN = 0. DOUT = -1
+	UXS = 48, UIN = 0. UOUT = -1
+	XIN = -1, XOUT = -1
+	Twist-shift: DI UI 
+	Option twistshift = 0 (default)
+Variable 'ShiftAngle' not in mesh options. Setting to empty vector
+Possible boundary regions are: core, sol, Boundary regions in this processor: core, sol, 
+Constructing default regions
+	Boundary region inner X
+	Boundary region outer X
+	Option mesh:extrapolate_x = 0 (default)
+	Option mesh:extrapolate_y = 0 (default)
+	Option mesh:dx = 0.35 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+Variable 'dy' not in mesh options. Setting to 1.000000e+00
+	Option ZMIN = 0 (default)
+	Option ZMAX = 1 (default)
+	Option mesh:dz = 0.35 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option mesh:paralleltransform:type = identity (default)
+Variable 'g11' not in mesh options. Setting to 1.000000e+00
+Variable 'g22' not in mesh options. Setting to 1.000000e+00
+Variable 'g33' not in mesh options. Setting to 1.000000e+00
+Variable 'g12' not in mesh options. Setting to 0.000000e+00
+Variable 'g13' not in mesh options. Setting to 0.000000e+00
+Variable 'g23' not in mesh options. Setting to 0.000000e+00
+	Local maximum error in diagonal inversion is 0.000000e+00
+	Local maximum error in off-diagonal inversion is 0.000000e+00
+Variable 'J' not in mesh options. Setting to 0.000000e+00
+	WARNING: Jacobian 'J' not found. Calculating from metric tensor
+Variable 'Bxy' not in mesh options. Setting to 0.000000e+00
+	WARNING: Magnitude of B field 'Bxy' not found. Calculating from metric tensor
+Variable 'ShiftTorsion' not in mesh options. Setting to 0.000000e+00
+	WARNING: No Torsion specified for zShift. Derivatives may not be correct
+Calculating differential geometry terms
+	Communicating connection terms
+	Option non_uniform = 1 (default)
+Variable 'd2x' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2x' not found. Calculating from dx
+Variable 'd2y' not in mesh options. Setting to 0.000000e+00
+	WARNING: differencing quantity 'd2y' not found. Calculating from dy
+	done
+	Option output:enabled = 1 (default)
+	Option restart_files:enabled = 1 (default)
+	Option output:flush_frequency = 1 (default)
+	Option datadir = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (Command line)
+	Option append = 0 (default)
+	Option output:type = netcdf (default)
+	Option output:path = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (user_default)
+	Option output:prefix = BOUT.dmp (user_default)
+	Option output:append = false (user_default)
+	Option datadir = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (Command line)
+	Option restart_files:type = netcdf (default)
+	Option restart_files:path = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (user_default)
+	Option restart_files:prefix = BOUT.restart (user_default)
+	Option restart_files:append = false (user_default)
+	Option solver:type = pvode (default)
+	Option solver:monitor_timestep = 0 (default)
+	Option solver:save_repeat_run_id = 0 (default)
+	Option solver:is_nonsplit_model_diffusive = 1 (default)
+	Option solver:mms = 0 (default)
+	Option solver:mms_initialise = 0 (default)
+	Option nout = 1 (default)
+	Option solver:nout = 12 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option timestep = 1 (default)
+	Option solver:output_step = 5 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option solver:use_precon = 0 (default)
+	Option solver:precon_dimens = 50 (default)
+	Option solver:precon_tol = 0.0001 (default)
+	Option solver:mxstep = 10000 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option solver:atol = 1e-10 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option solver:rtol = 1e-05 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+Setting up output (experimental output) file
+	Option restart = 0 (default)
+	Option model:Te0 = 15000 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:e = 1.602e-19 (default)
+	Option model:m_i = 3.334e-27 (default)
+	Option model:m_e = 9.11e-31 (default)
+	Option model:D_vort = 1e-06 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:D_n = 1e-06 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:R_c = 2 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:L_par = 50.265482 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:B0 = 6 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:compressible = false (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:boussinesq = true (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option model:sheath = true (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+
+
+	----------Parameters: ------------ 
+	Omega_i = 2.883023e+08 /s,
+	c_s = 8.489734e+05 m/s,
+	rho_s = 2.944733e-03 m
+	delta_* = rho_s * (dn/n) * 1.338113e+01 	Option phiBoussinesq:type = cyclic (default)
+Initialising Laplacian inversion routines
+	Option phiBoussinesq:async = 1 (default)
+	Option phiBoussinesq:filter = 0 (default)
+	Option phiBoussinesq:maxmode = 24 (default)
+	Option phiBoussinesq:low_mem = 0 (default)
+	Option phiBoussinesq:nonuniform = 1 (default)
+	Option phiBoussinesq:all_terms = 1 (default)
+	Option phiBoussinesq:global_flags = 0 (default)
+	Option phiBoussinesq:inner_boundary_flags = 0 (default)
+	Option phiBoussinesq:outer_boundary_flags = 0 (default)
+	Option phiBoussinesq:include_yguards = 0 (default)
+	Option phiBoussinesq:extra_yguards_lower = 0 (default)
+	Option phiBoussinesq:extra_yguards_upper = 0 (default)
+	Option phiBoussinesq:dst = 0 (default)
+Setting boundary for variable n
+	core region: 	Option all:bndry_all = neumann (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+
+	sol region: 	Option all:bndry_all = neumann (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+
+	Option n:function = 1 + height * exp(-((x-0.25)/width)^2 - ((z/(2*pi) - 0.5)/width)^2) (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option n:height = 0.49837247 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option n:width = 0.055 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option n:scale = 1 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option all:evolve_bndry = 0 (default)
+	Option n:evolve_bndry = 0 (default)
+Setting boundary for variable omega
+	core region: 	Option all:bndry_all = neumann (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+
+	sol region: 	Option all:bndry_all = neumann (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+
+	Option all:function = 0.0 (default)
+	Option all:scale = 0 (validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.inp)
+	Option all:evolve_bndry = false (default)
+	Option omega:evolve_bndry = 0 (default)
+Variable 'grid_id' not in mesh options. Setting to 
+Variable 'hypnotoad_version' not in mesh options. Setting to 
+Variable 'hypnotoad_git_hash' not in mesh options. Setting to 
+Variable 'hypnotoad_git_diff' not in mesh options. Setting to 
+Variable 'hypnotoad_geqdsk_filename' not in mesh options. Setting to 
+Variable 'grid_id' not in mesh options. Setting to 
+Variable 'hypnotoad_version' not in mesh options. Setting to 
+Variable 'hypnotoad_git_hash' not in mesh options. Setting to 
+Variable 'hypnotoad_git_diff' not in mesh options. Setting to 
+Variable 'hypnotoad_geqdsk_filename' not in mesh options. Setting to 
+	Option wall_limit = -1 (default)
+	Option stopCheck = 0 (default)
+	Option datadir = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (Command line)
+	Option stopCheckName = BOUT.stop (default)
+Solver running for 12 outputs with output timestep of 5.000000e+00
+Initialising solver
+Initialising PVODE solver
+	3d fields = 2, 2d fields = 0 neq=4224, local_N=4224
+	Option solver:mudq = 92 (default)
+	Option solver:mldq = 92 (default)
+	Option solver:mukeep = 0 (default)
+	Option solver:mlkeep = 0 (default)
+	Option solver:max_timestep = -1 (default)
+	Option solver:min_timestep = -1 (default)
+	Option solver:max_order = -1 (default)
+	Option solver:adams_moulton = 0 (default)
+	Option solver:debug_on_failure = 0 (default)
+	Option fft:fft_measurement_flag = estimate (default)
+	Option laplace:type = cyclic (default)
+Initialising Laplacian inversion routines
+	Option laplace:async = 1 (default)
+	Option laplace:filter = 0 (default)
+	Option laplace:maxmode = 24 (default)
+	Option laplace:low_mem = 0 (default)
+	Option laplace:nonuniform = 1 (default)
+	Option laplace:all_terms = 1 (default)
+	Option laplace:global_flags = 0 (default)
+	Option laplace:inner_boundary_flags = 0 (default)
+	Option laplace:outer_boundary_flags = 0 (default)
+	Option laplace:include_yguards = 0 (default)
+	Option laplace:extra_yguards_lower = 0 (default)
+	Option laplace:extra_yguards_upper = 0 (default)
+	Option laplace:dst = 0 (default)
+Running simulation
+
+Run ID: 21d9f74d-35ee-4b5e-82ac-9c13ded82f5f
+
+Run started at  : Tue Jun  2 09:57:04 2026
+	Option restart = false (default)
+	Option append = false (default)
+	Option dump_on_restart = 1 (default)
+	Option input:validate = 0 (default)
+	Option input:error_on_unused_options = 1 (default)
+	Option datadir = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (Command line)
+	Option optionfile = BOUT.inp (default)
+Sim Time  |  RHS evals  | Wall Time |  Calc    Inv   Comm    I/O   SOLVER
+
+0.000e+00          2       4.00e-02     1.7   11.5    2.3  181.2  -96.8
+5.000e+00         36       5.06e-02    14.7   12.0    0.3   65.6    7.4
+1.000e+01         13       2.26e-02    11.2    9.1    0.2   74.4    5.0
+1.500e+01          7       2.35e-02     6.1    5.1    0.2   86.0    2.6
+2.000e+01          7       2.49e-02     6.9    4.3    0.2   85.1    3.5
+2.500e+01          3       2.16e-02     2.8    2.3    0.1   92.4    2.4
+3.000e+01          9       2.11e-02     7.7    6.5    0.2   82.5    3.2
+3.500e+01          4       1.91e-02     3.9    3.2    0.1   90.1    2.7
+4.000e+01          5       1.94e-02     4.5    3.7    0.2   88.7    2.9
+4.500e+01          3       1.76e-02     3.2    2.8    0.1   91.6    2.3
+5.000e+01          7       2.02e-02     6.0    5.0    0.2   85.8    3.0
+5.500e+01          5       1.98e-02     4.6    3.8    0.2   88.7    2.8
+6.000e+01          9       2.15e-02     7.7    6.1    0.3   82.1    3.8
+
+Run finished at  : Tue Jun  2 09:57:04 2026
+Run time : 0 s
+	Option datadir = validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000 (Command line)
+	Option settingsfile = BOUT.settings (default)
+Writing options to file validation_runs/bout_blob_sol_sweep_default/coarse_source_tct000/BOUT.settings
+	Option time_report:show = 0 (default)

@@ -1,0 +1,149 @@
+IncIntShear = false		# type: bool, source: default
+MXG = 2		# type: int, doc: Number of guard cells on each side in X, source: default
+MYG = 0		# type: int, doc: Number of guard cells on each side in Y, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+ZMAX = 1		# type: BoutReal, source: default
+ZMIN = 0		# type: BoutReal, source: default
+append = false		# type: bool, doc: Add new outputs to the end of existing files? If false, overwrite files., source: default
+async_send = false		# type: bool, doc: Whether to use asyncronous MPI sends, source: default
+datadir = validation_runs/bout_tct_actuator_robustness_default/fine_tct000		# type: string, source: Command line
+dump_on_restart = true		# type: bool, doc: Write initial state as time point 0?, source: default
+non_uniform = true		# type: bool, source: default
+nout = 1		# type: int, doc: Number of output steps, source: default
+optionfile = BOUT.inp		# type: string, source: default
+periodicX = true		# type: bool, doc: Make grid periodic in X?, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+restart = false		# type: bool, doc: Load state from restart files?, source: default
+settingsfile = BOUT.settings		# type: string, source: default
+stopCheck = false		# type: bool, doc: Check if a file exists, and exit if it does., source: default
+stopCheckName = BOUT.stop		# type: string, doc: Name of file whose existence triggers a stop, source: default
+timestep = 1		# type: BoutReal, doc: Output time step size, source: default
+twistshift = false		# type: bool, doc: Apply a Twist-Shift boundary using ShiftAngle?, source: default
+wall_limit = -1		# type: BoutReal, doc: Wall time limit in hours. By default (< 0), no limit, source: default
+
+[all]
+evolve_bndry = false		# type: bool, source: default
+
+[fft]
+fft_measurement_flag = estimate		# type: 20FFT_MEASUREMENT_FLAG, doc: Level speed measurements to optimise FFT settings: [estimate], measure, exhaustive, source: default
+
+[input]
+error_on_unused_options = true		# type: bool, doc: Error if there are any unused options before starting the main simulation, source: default
+max_recursion_depth = 0		# type: string, doc: Maximum recursion depth allowed in expressions. 0 = no recursion; -1 = unlimited, source: default
+transform_from_field_aligned = true		# type: string, source: default
+validate = false		# type: bool, doc: Check for unused options and stop, source: default
+
+[laplace]
+all_terms = true		# type: bool, doc: Include first derivative terms?, source: default
+async = true		# type: bool, doc: Use asyncronous MPI send?, source: default
+dst = false		# type: bool, doc: Use Discrete Sine Transform in Z to enforce Dirichlet boundaries in Z, source: default
+extra_yguards_lower = 0		# type: int, doc: Exclude some number of points at the lower boundary, useful for staggered grids or when boundary conditions make inversion redundant, source: default
+extra_yguards_upper = 0		# type: int, doc: Exclude some number of points at the upper boundary, useful for staggered grids or when boundary conditions make inversion redundant, source: default
+filter = 0		# type: BoutReal, doc: Fraction of Z modes to filter out. Between 0 and 1, source: default
+global_flags = 0		# type: int, doc: Default flags, source: default
+include_yguards = false		# type: bool, doc: Solve Laplacian in Y guard cells?, source: default
+inner_boundary_flags = 0		# type: int, doc: Flags to set inner boundary condition, source: default
+low_mem = false		# type: bool, doc: If true, reduce the amount of memory used, source: default
+maxmode = 64		# type: int, doc: The maximum Z mode to solve for, source: default
+nonuniform = true		# type: bool, doc: Use non-uniform grid corrections? Default is the mesh setting., source: default
+outer_boundary_flags = 0		# type: int, doc: Flags to set outer boundary condition, source: default
+type = cyclic		# type: string, source: default
+
+[mesh]
+calcParallelSlices_on_communicate = true		# type: bool, doc: Calculate parallel slices on all communicated fields, source: default
+dx = 0.09		# source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+dy = 1.0		# source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+dz = 0.09		# source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+extrapolate_x = false		# type: bool, source: default
+extrapolate_y = false		# type: bool, source: default
+include_corner_cells = true		# type: bool, doc: Communicate corner guard and boundary cells. Can be set to false if you are sure that you will not need these cells, for mixed derivatives D2DXDY (or anything else), for example if your grid has orthogonal x- and y-directions. This might slightly reduce communication time., source: default
+maxregionblocksize = 64		# type: int, doc: (Advanced) Sets the maximum size of continguous blocks when creating Regions, source: default
+nx = 128		# source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+ny = 1		# source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+nz = 128		# source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+staggergrids = false		# type: bool, doc: Enable staggered grids. By default, all variables are cell centred, source: default
+symmetricGlobalX = true		# type: bool, source: default
+symmetricGlobalY = true		# type: bool, source: default
+symmetricGlobalZ = false		# type: bool, source: default
+type = bout		# type: string, source: default
+
+[mesh:ddz]
+fft_filter = 0		# type: BoutReal, source: default
+
+[mesh:paralleltransform]
+type = identity		# type: string, source: default
+
+[omega]
+bndry_all = dirichlet_o2		# unused value (marked conditionally used), source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+evolve_bndry = false		# type: bool, source: default
+function = 0.01 * sin(z) * exp(-((x-0.5)/(2*0.045))^2)		# type: string, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+scale = 1.0		# type: BoutReal, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+
+[output]
+append = false		# type: bool, doc: Append to existing file?, source: user_default
+enabled = true		# type: bool, doc: Write output files, source: default
+flush_frequency = 1		# type: m, doc: How often to flush to disk, source: default
+path = validation_runs/bout_tct_actuator_robustness_default/fine_tct000		# type: string, source: user_default
+prefix = BOUT.dmp		# type: string, source: user_default
+type = netcdf		# type: string, source: default
+
+[psi]
+bndry_all = dirichlet_o2		# unused value (marked conditionally used), source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+evolve_bndry = false		# type: bool, source: default
+function = 0.08 * exp(-((x-0.5)/0.045)^2) + 0.006 * cos(z)		# type: string, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+scale = 1.0		# type: BoutReal, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+
+[restart_files]
+append = false		# type: bool, doc: Append to existing file?, source: user_default
+enabled = true		# type: bool, doc: Write restart files, source: default
+path = validation_runs/bout_tct_actuator_robustness_default/fine_tct000		# type: string, source: user_default
+prefix = BOUT.restart		# type: string, source: user_default
+singleWriteFile = true		# unused value (NOT marked conditionally used), type: bool, source: user_default
+type = netcdf		# type: string, source: default
+
+[run]
+finished = Tue Jun  2 12:09:40 2026
+		# unused value (NOT marked conditionally used), source: Output
+revision = 3e317cbc18b4ad3839cfff67aded3bff4b5fb9f9		# unused value (NOT marked conditionally used), source: Output
+run_id = 91606bbf-5af3-4dd5-b55b-4b197019ce11		# unused value (NOT marked conditionally used), source: Output
+run_restart_from = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz		# unused value (NOT marked conditionally used), source: Output
+started = Tue Jun  2 12:09:39 2026
+		# unused value (NOT marked conditionally used), source: Output
+version = 5.2.1.dev764+g3e317cbc1		# unused value (NOT marked conditionally used), source: Output
+
+[solver]
+adams_moulton = false		# type: bool, doc: Use Adams Moulton solver instead of BDF, source: default
+atol = 1e-10		# type: BoutReal, doc: Absolute tolerance, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+debug_on_failure = false		# type: bool, doc: Run an aditional rhs if the solver fails with extra tracking, source: default
+is_nonsplit_model_diffusive = true		# type: bool, doc: If not a split operator, treat RHS as diffusive?, source: default
+max_order = -1		# type: int, doc: Maximum order, source: default
+max_timestep = -1		# type: BoutReal, doc: Maximum internal timestep, source: default
+min_timestep = -1		# type: BoutReal, doc: Minimum internal timestep, source: default
+mldq = 252		# type: int, source: default
+mlkeep = 0		# type: int, source: default
+mms = false		# type: bool, doc: Use Method of Manufactured Solutions to track error scaling, source: default
+mms_initialise = false		# type: bool, doc: Use MMS solution for field initial conditions, source: default
+monitor_timestep = false		# type: bool, doc: Call monitors on internal timesteps, source: default
+mudq = 252		# type: int, source: default
+mukeep = 0		# type: int, source: default
+mxstep = 10000		# type: int, doc: Maximum number of internal steps, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+nout = 18		# type: int, doc: Number of output steps. Overrides global setting., source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+output_step = 1.0		# type: BoutReal, doc: Output time step size. Overrides global 'timestep' setting., source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+precon_dimens = 50		# type: int, doc: Maximum Krylov dimension, source: default
+precon_tol = 0.0001		# type: BoutReal, doc: Tolerance for preconditioner, source: default
+rtol = 1e-6		# type: BoutReal, doc: Relative tolerance, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+save_repeat_run_id = false		# type: bool, doc: Write run_id and run_restart_from at every output timestep, to make it easier to concatenate output data sets in time, source: default
+type = pvode		# type: string, source: default
+use_precon = false		# type: bool, doc: Use user-supplied preconditioner, source: default
+
+[tct]
+bracket = 2		# type: int, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+end_time = 1e+30		# type: BoutReal, doc: TCT actuator turn-off time, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+eta = 0.00075		# type: BoutReal, doc: Magnetic diffusivity, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+nu = 0.001		# type: BoutReal, doc: Vorticity viscosity, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+omega_strength = 0		# type: BoutReal, doc: Localized vorticity actuator damping, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+start_time = 0		# type: BoutReal, doc: TCT actuator turn-on time, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+strength = 0		# type: BoutReal, doc: Localized psi actuator damping, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+
+[tct_mask]
+bndry_all = dirichlet_o2		# unused value (marked conditionally used), source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+function = exp(-((x-0.5)/0.0765)^2)		# type: string, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp
+scale = 1.0		# type: BoutReal, source: validation_runs/bout_tct_actuator_robustness_default/fine_tct000/BOUT.inp

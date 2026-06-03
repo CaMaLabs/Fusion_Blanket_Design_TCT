@@ -1,0 +1,40 @@
+
+MYG = 0
+periodicX = true
+
+[mesh]
+nx = 96
+ny = 1
+nz = 96
+dx = 0.12
+dy = 1.0
+dz = 0.12
+
+[tct]
+eta = 0.00075
+nu = 0.001
+strength = 0
+omega_strength = 0
+bracket = 2
+
+[psi]
+scale = 1.0
+function = 0.08 * exp(-((x-0.5)/0.055)^2) + 0.006 * cos(z)
+bndry_all = dirichlet_o2
+
+[omega]
+scale = 1.0
+function = 0.01 * sin(z) * exp(-((x-0.5)/(2*0.055))^2)
+bndry_all = dirichlet_o2
+
+[tct_mask]
+scale = 1.0
+function = exp(-((x-0.5)/0.0935)^2)
+bndry_all = dirichlet_o2
+
+[solver]
+output_step = 1.0
+nout = 20
+mxstep = 10000
+atol = 1e-10
+rtol = 1e-6

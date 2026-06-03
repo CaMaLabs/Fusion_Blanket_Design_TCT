@@ -1,0 +1,789 @@
+{
+  "base_plasma_summary": {
+    "betaN": 2.39258377344,
+    "pfus_mw": 1870.1808025141236,
+    "qstar": 2.663352272727273,
+    "wn_mw_m2": 1.8948893253590815
+  },
+  "base_reactor_summary": {
+    "event_loss_frac": 9.100071082398914e-05,
+    "wall_load": 1.5134898764848894
+  },
+  "bout_build": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev/build",
+  "bout_top": "/root/Documents/Codex/2026-05-26/can-you-make-a-list-of/BOUT-dev",
+  "cases": [
+    {
+      "case": "base_uncontrolled",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "base_uncontrolled",
+        "control": 0.0,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "baseline",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.0,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.0
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.3333507143262759,
+        "final_magnetic_energy": 0.00020649764006285638,
+        "final_max_abs_J": 0.3869438409542194,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.058858786846472715,
+        "post_initial_max_abs_J": 0.41320833038882626,
+        "post_initial_max_abs_J_p99": 0.4087751270407294,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 7.160614545639312,
+        "time_integrated_max_abs_omega": 0.6778011360123762
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "base_nominal",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "base_nominal",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "baseline",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.023103119035389762,
+        "final_magnetic_energy": 1.2281442300017883e-05,
+        "final_max_abs_J": 0.028074111371172866,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.01590234448203603,
+        "post_initial_max_abs_J": 0.35469983494886426,
+        "post_initial_max_abs_J_p99": 0.3520875977165427,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 2.4822798115879547,
+        "time_integrated_max_abs_omega": 0.24021411686883823
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "placement_m0p08",
+      "case_parameters": {
+        "actuator_center": 0.42,
+        "actuator_width": 0.0935,
+        "case": "placement_m0p08",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "placement",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.18993803443937374,
+        "final_magnetic_energy": 4.378115939977131e-05,
+        "final_max_abs_J": 0.22611463716444025,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.021534821236867018,
+        "post_initial_max_abs_J": 0.39731045056222997,
+        "post_initial_max_abs_J_p99": 0.39638245373640135,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 5.389909046386707,
+        "time_integrated_max_abs_omega": 0.34335226815927467
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "placement_m0p04",
+      "case_parameters": {
+        "actuator_center": 0.46,
+        "actuator_width": 0.0935,
+        "case": "placement_m0p04",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "placement",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.08615886364946007,
+        "final_magnetic_energy": 1.803646183568142e-05,
+        "final_max_abs_J": 0.10281620191911693,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.01634434627254062,
+        "post_initial_max_abs_J": 0.3721849308131962,
+        "post_initial_max_abs_J_p99": 0.36981435131339274,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.6112425996762005,
+        "time_integrated_max_abs_omega": 0.24604664621749575
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "placement_p0p04",
+      "case_parameters": {
+        "actuator_center": 0.54,
+        "actuator_width": 0.0935,
+        "case": "placement_p0p04",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "placement",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.08132764643694258,
+        "final_magnetic_energy": 1.853060665431663e-05,
+        "final_max_abs_J": 0.09650037551736204,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.021354201477651918,
+        "post_initial_max_abs_J": 0.3740260157620394,
+        "post_initial_max_abs_J_p99": 0.3679314445742207,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.5227638291144947,
+        "time_integrated_max_abs_omega": 0.3487727790911537
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "placement_p0p08",
+      "case_parameters": {
+        "actuator_center": 0.58,
+        "actuator_width": 0.0935,
+        "case": "placement_p0p08",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "placement",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.1949588846041177,
+        "final_magnetic_energy": 4.5021870093394945e-05,
+        "final_max_abs_J": 0.2142304423678988,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.039708752272567864,
+        "post_initial_max_abs_J": 0.4008950643541461,
+        "post_initial_max_abs_J_p99": 0.3927772867948761,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 5.283007053922282,
+        "time_integrated_max_abs_omega": 0.5218590546645204
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "width_0p8x",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.044000000000000004,
+        "case": "width_0p8x",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "width",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.17970095689087762,
+        "final_magnetic_energy": 2.7216153958438143e-05,
+        "final_max_abs_J": 0.2144355184912343,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.031762936528926485,
+        "post_initial_max_abs_J": 0.31379419754087984,
+        "post_initial_max_abs_J_p99": 0.3087519103421694,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.8917893822163494,
+        "time_integrated_max_abs_omega": 0.40768084391642423
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "width_1p2x",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.066,
+        "case": "width_1p2x",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "width",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.056827207776262295,
+        "final_magnetic_energy": 1.6188800692693136e-05,
+        "final_max_abs_J": 0.07009242319404167,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.01581533224437072,
+        "post_initial_max_abs_J": 0.3420742630381081,
+        "post_initial_max_abs_J_p99": 0.3391251797279936,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 2.4630211296981117,
+        "time_integrated_max_abs_omega": 0.2541619244842141
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "width_2p2x",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.12100000000000001,
+        "case": "width_2p2x",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "width",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.02778167066664711,
+        "final_magnetic_energy": 1.0679497944660706e-05,
+        "final_max_abs_J": 0.03102393732090985,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.016157083599499838,
+        "post_initial_max_abs_J": 0.3604950814030458,
+        "post_initial_max_abs_J_p99": 0.3573582331772484,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 2.6994703087542193,
+        "time_integrated_max_abs_omega": 0.24086943037150765
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "timing_delayed2",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "timing_delayed2",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "timing",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 2.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.029647351805236574,
+        "final_magnetic_energy": 1.4972971424200722e-05,
+        "final_max_abs_J": 0.03531294732662206,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.02120160410162494,
+        "post_initial_max_abs_J": 0.41320833038882626,
+        "post_initial_max_abs_J_p99": 0.4087751270407294,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.229566007677112,
+        "time_integrated_max_abs_omega": 0.3140408178396297
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "timing_delayed4",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "timing_delayed4",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "timing",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 4.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.03891906981309386,
+        "final_magnetic_energy": 1.8949113743134494e-05,
+        "final_max_abs_J": 0.046107986067302334,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.026555021417401996,
+        "post_initial_max_abs_J": 0.41320833038882626,
+        "post_initial_max_abs_J_p99": 0.4087751270407294,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.9516166324466453,
+        "time_integrated_max_abs_omega": 0.38598780015310674
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "timing_pulse0_8",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "timing_pulse0_8",
+        "control": 0.8,
+        "end_time": 8.0,
+        "eta": 0.00075,
+        "family": "timing",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.10156267658212714,
+        "final_magnetic_energy": 4.624864243551853e-05,
+        "final_max_abs_J": 0.11176667593549515,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.017597909825839295,
+        "post_initial_max_abs_J": 0.35469983494886426,
+        "post_initial_max_abs_J_p99": 0.3520875977165427,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.035618853854621,
+        "time_integrated_max_abs_omega": 0.2814116956337605
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "strength_0p4",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "strength_0p4",
+        "control": 0.4,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "strength",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.028107919011879118,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.056215838023758236
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.08581743033560021,
+        "final_magnetic_energy": 3.925728351629324e-05,
+        "final_max_abs_J": 0.09736588045389429,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.022783748024543023,
+        "post_initial_max_abs_J": 0.3829225607225482,
+        "post_initial_max_abs_J_p99": 0.3794455376621035,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.940645488252357,
+        "time_integrated_max_abs_omega": 0.36785333540618137
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "strength_1p2",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0935,
+        "case": "strength_1p2",
+        "control": 1.2,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "strength",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.08432375703563735,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.1686475140712747
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.01354028382785636,
+        "final_magnetic_energy": 7.569759799045301e-06,
+        "final_max_abs_J": 0.018027700527889642,
+        "initial_magnetic_energy": 0.00022039231782721444,
+        "initial_max_abs_J": 0.41517876719166324,
+        "max_abs_omega": 0.013272563480915196,
+        "post_initial_max_abs_J": 0.3288561073032484,
+        "post_initial_max_abs_J_p99": 0.32654917642454395,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 1.7978495740543219,
+        "time_integrated_max_abs_omega": 0.1735401411523926
+      },
+      "grid": {
+        "dx": 0.12,
+        "dz": 0.12,
+        "name": "base",
+        "nx": 96,
+        "nz": 96,
+        "sheet_width": 0.055
+      }
+    },
+    {
+      "case": "fine_tct000",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0765,
+        "case": "fine_tct000",
+        "control": 0.0,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "resolution",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.0,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.0
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.44174534516772995,
+        "final_magnetic_energy": 0.00016775960658230843,
+        "final_max_abs_J": 0.5530071739059108,
+        "initial_magnetic_energy": 0.00018383732215551234,
+        "initial_max_abs_J": 0.6113302775525158,
+        "max_abs_omega": 0.08817219718586997,
+        "post_initial_max_abs_J": 0.6046988940457935,
+        "post_initial_max_abs_J_p99": 0.597554971352405,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 10.253187535628536,
+        "time_integrated_max_abs_omega": 1.0035536579054607
+      },
+      "grid": {
+        "dx": 0.09,
+        "dz": 0.09,
+        "name": "fine",
+        "nx": 128,
+        "nz": 128,
+        "sheet_width": 0.045
+      }
+    },
+    {
+      "case": "fine_tct080",
+      "case_parameters": {
+        "actuator_center": 0.5,
+        "actuator_width": 0.0765,
+        "case": "fine_tct080",
+        "control": 0.8,
+        "end_time": 1e+30,
+        "eta": 0.00075,
+        "family": "resolution",
+        "island_seed": 0.006,
+        "nu": 0.001,
+        "omega_seed": 0.01,
+        "omega_tct_strength": 0.056215838023758236,
+        "psi_amp": 0.08,
+        "start_time": 0.0,
+        "tct_strength": 0.11243167604751647
+      },
+      "diagnostics": {
+        "final_abs_J_p99": 0.03095488272460528,
+        "final_magnetic_energy": 1.1656830715944797e-05,
+        "final_max_abs_J": 0.039507105473417486,
+        "initial_magnetic_energy": 0.00018383732215551234,
+        "initial_max_abs_J": 0.6113302775525158,
+        "max_abs_omega": 0.02263681051789113,
+        "post_initial_max_abs_J": 0.519727740998578,
+        "post_initial_max_abs_J_p99": 0.5143514487518134,
+        "time_end": 18.0,
+        "time_integrated_max_abs_J": 3.5806133925575656,
+        "time_integrated_max_abs_omega": 0.33203468796171215
+      },
+      "grid": {
+        "dx": 0.09,
+        "dz": 0.09,
+        "name": "fine",
+        "nx": 128,
+        "nz": 128,
+        "sheet_width": 0.045
+      }
+    }
+  ],
+  "control_mapping": "localized_resolved_psi_and_vorticity_damping_mask_with_position_width_timing_strength_variants",
+  "executable": "/root/Fusion_Blanket_Design_TCT/validation_models/tct_current_sheet/build/tct_current_sheet",
+  "model_dir": "/root/Fusion_Blanket_Design_TCT/validation_models/tct_current_sheet",
+  "run_dir": "validation_runs/bout_tct_actuator_robustness_default",
+  "trend_summary": {
+    "controlled_cases": 14,
+    "family_summary": {
+      "baseline": {
+        "all_reduce_integrated_J": true,
+        "all_reduce_post_initial_peak_J": true,
+        "cases": 1,
+        "max_integrated_J_reduction_fraction": 0.6533426292161446,
+        "min_integrated_J_reduction_fraction": 0.6533426292161446,
+        "min_post_initial_peak_J_reduction_fraction": 0.14159563381722218
+      },
+      "placement": {
+        "all_reduce_integrated_J": true,
+        "all_reduce_post_initial_peak_J": true,
+        "cases": 4,
+        "max_integrated_J_reduction_fraction": 0.5080361040715708,
+        "min_integrated_J_reduction_fraction": 0.24728401284089974,
+        "min_post_initial_peak_J_reduction_fraction": 0.029799171819922976
+      },
+      "resolution": {
+        "all_reduce_integrated_J": true,
+        "all_reduce_post_initial_peak_J": true,
+        "cases": 1,
+        "max_integrated_J_reduction_fraction": 0.650780464112708,
+        "min_integrated_J_reduction_fraction": 0.650780464112708,
+        "min_post_initial_peak_J_reduction_fraction": 0.14051812213299775
+      },
+      "strength": {
+        "all_reduce_integrated_J": true,
+        "all_reduce_post_initial_peak_J": true,
+        "cases": 2,
+        "max_integrated_J_reduction_fraction": 0.7489252406206978,
+        "min_integrated_J_reduction_fraction": 0.44967775277721933,
+        "min_post_initial_peak_J_reduction_fraction": 0.07329418948978916
+      },
+      "timing": {
+        "all_reduce_integrated_J": true,
+        "all_reduce_post_initial_peak_J": false,
+        "cases": 3,
+        "max_integrated_J_reduction_fraction": 0.5760672726472535,
+        "min_integrated_J_reduction_fraction": 0.44814560157366523,
+        "min_post_initial_peak_J_reduction_fraction": 0.0
+      },
+      "width": {
+        "all_reduce_integrated_J": true,
+        "all_reduce_post_initial_peak_J": true,
+        "cases": 3,
+        "max_integrated_J_reduction_fraction": 0.656032158413268,
+        "min_integrated_J_reduction_fraction": 0.45650064566226645,
+        "min_post_initial_peak_J_reduction_fraction": 0.12757063473569774
+      }
+    },
+    "interpretation": "CHECK: at least one resolved TCT actuator robustness case failed a current reduction metric.",
+    "robust_cases": 12,
+    "top_cases": [
+      {
+        "case": "strength_1p2",
+        "family": "strength",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.7489252406206978,
+        "post_initial_max_J_reduction_fraction": 0.20413969632752327
+      },
+      {
+        "case": "width_1p2x",
+        "family": "width",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.656032158413268,
+        "post_initial_max_J_reduction_fraction": 0.17215061294572997
+      },
+      {
+        "case": "base_nominal",
+        "family": "baseline",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.6533426292161446,
+        "post_initial_max_J_reduction_fraction": 0.14159563381722218
+      },
+      {
+        "case": "fine_tct080",
+        "family": "resolution",
+        "grid": "fine",
+        "integrated_J_reduction_fraction": 0.650780464112708,
+        "post_initial_max_J_reduction_fraction": 0.14051812213299775
+      },
+      {
+        "case": "width_2p2x",
+        "family": "width",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.6230113642413346,
+        "post_initial_max_J_reduction_fraction": 0.12757063473569774
+      }
+    ],
+    "weakest_cases": [
+      {
+        "case": "width_0p8x",
+        "family": "width",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.45650064566226645,
+        "post_initial_max_J_reduction_fraction": 0.24059082437761692
+      },
+      {
+        "case": "strength_0p4",
+        "family": "strength",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.44967775277721933,
+        "post_initial_max_J_reduction_fraction": 0.07329418948978916
+      },
+      {
+        "case": "timing_delayed4",
+        "family": "timing",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.44814560157366523,
+        "post_initial_max_J_reduction_fraction": 0.0
+      },
+      {
+        "case": "placement_p0p08",
+        "family": "placement",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.2622131773397103,
+        "post_initial_max_J_reduction_fraction": 0.029799171819922976
+      },
+      {
+        "case": "placement_m0p08",
+        "family": "placement",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.24728401284089974,
+        "post_initial_max_J_reduction_fraction": 0.038474248115076715
+      }
+    ]
+  }
+}

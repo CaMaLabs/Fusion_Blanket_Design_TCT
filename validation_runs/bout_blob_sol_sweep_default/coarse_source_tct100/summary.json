@@ -1,0 +1,37 @@
+{
+  "blob_summary": {
+    "final_concentration": 0.015946578055238834,
+    "final_peak_excess": 0.15967089886094765,
+    "final_total_excess": 10.012862841661,
+    "initial_peak_excess": 0.16048125059196505,
+    "initial_total_excess": 10.013264649817774,
+    "max_concentration": 0.01616890748746225,
+    "max_p95_excess": 0.02540378054026914,
+    "max_peak_excess": 0.16189955402870537,
+    "mean_peak_excess": 0.16107642825521706,
+    "time_end": 60.0,
+    "time_integrated_peak_excess": 9.669587462956827,
+    "time_start": 0.0,
+    "total_excess_fraction": 0.9999598724121627
+  },
+  "grid": {
+    "dx": 0.35,
+    "dz": 0.35,
+    "name": "coarse",
+    "nx": 48,
+    "nz": 48
+  },
+  "mapped_parameters": {
+    "B0": 6.0,
+    "D_n": 1e-06,
+    "D_vort": 1e-06,
+    "L_par": 50.26548245743669,
+    "R_c": 2.0,
+    "Te0": 15000.0,
+    "control": 1.0,
+    "height": 0.16273386746815424,
+    "inventory_proxy": 0.0015075767190916977,
+    "wall_load_mw_m2": 1.5134898764848894,
+    "width": 0.09625
+  }
+}

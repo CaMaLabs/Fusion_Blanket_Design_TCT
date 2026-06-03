@@ -1,0 +1,31 @@
+
+MYG = 0
+periodicX = true
+
+[mesh]
+nx = 64
+ny = 1
+nz = 64
+dx = 0.22
+dy = 1.0
+dz = 0.22
+
+[hw]
+alpha = 1
+kappa = 0.47702348
+Dvort = 0.0001
+Dn = 0.0001
+modified = true
+bracket = 2
+
+[all]
+scale = 0.0
+bndry_all = dirichlet_o2
+
+[vort]
+scale = 0.08
+function = mixmode(2*pi*x) * mixmode(z)
+
+[solver]
+output_step = 1.0
+nout = 40
