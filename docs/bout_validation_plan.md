@@ -365,3 +365,34 @@ Interpretation: this closes the “no GEQDSK at all” criticism for DIII-D, but
 does not close the full experimental-diagnostics gap. The correct next claim is
 that the validation chain now has a DIII-D EFIT anchor and explicit NSTX-U/ITER
 input holes, not that all three machines are experimentally validated.
+
+## GEQDSK / EFIT baseline case
+
+The concrete baseline case builder turns the DIII-D EFIT package into a
+solver-facing case directory with a `geqdsk` filename, original `g/a/p`
+provenance files, density-profile CSV, and filled M3D-C1 input deck:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 geqdsk_efit_baseline_case.py \
+  --machine-input validation_inputs/machine_equilibria/diii_d \
+  --case-dir validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796 \
+  --run-dir validation_runs/geqdsk_efit_baseline_default
+```
+
+Current baseline:
+
+- Machine: DIII-D
+- Shot/time: `158103 @ 3796 ms`
+- GEQDSK source: `g158103.03796`
+- M3D-C1 settings filled for the baseline deck:
+  - `idevice = 4`
+  - `iread_eqdsk = 1`
+  - `iread_ne = 1`
+  - `iread_te = 1`
+  - `eqsubtract = 1`
+  - `icalc_scalars = 1`
+
+Interpretation: this is the first named-machine EFIT baseline input case in the
+fusion validation repo. It is not yet a completed M3D-C1 run, and it still does
+not include raw experimental diagnostic archives.
