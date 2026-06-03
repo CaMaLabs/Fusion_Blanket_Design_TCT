@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-06-03T12:41:16.980074+00:00",
+  "geqdsk_summaries": [
+    {
+      "bcentr_t": -1.8977622,
+      "current_a": 1339492.25,
+      "fpol_max": -3.21401705,
+      "fpol_min": -3.282083,
+      "header": "EFITD    06/25/2013    #158103  3796ms           3 129 129",
+      "machine": "DIII-D",
+      "nh": 129,
+      "numeric_values": 23043,
+      "nw": 129,
+      "path": "validation_inputs/machine_equilibria/diii_d/efit/g158103.03796",
+      "pressure_max": 101734.004,
+      "pressure_min": 524.238222,
+      "psi_grid_max": 0.634556344,
+      "psi_grid_min": -0.236497368,
+      "qpsi_max": 8.45323831,
+      "qpsi_min": 1.1,
+      "rcentr_m": 1.69550002,
+      "rdim_m": 1.7,
+      "rleft_m": 0.84,
+      "rmaxis_m": 1.73854887,
+      "sibry_wb": 0.0637294348,
+      "simag_wb": -0.236613887,
+      "size_bytes": 449956,
+      "zdim_m": 3.2,
+      "zmaxis_m": 0.0128069012,
+      "zmid_m": 0.0
+    }
+  ],
+  "input_dir": "validation_inputs/machine_equilibria",
+  "m3dc1_repo": "/root/CaMaLabs_M3DC1",
+  "machines": [
+    {
+      "copied_template": "validation_inputs/machine_equilibria/diii_d/C1input_base",
+      "has_aeqdsk": true,
+      "has_coil_file": true,
+      "has_experimental_diagnostics": false,
+      "has_profile_file": true,
+      "has_public_geqdsk": true,
+      "m3dc1_idevice": 4,
+      "machine": "DIII-D",
+      "public_geqdsk_files": [
+        "validation_inputs/machine_equilibria/diii_d/efit/g158103.03796"
+      ],
+      "requires_real_efit": true,
+      "status": "ready_with_public_efit",
+      "template_source": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/C1input_base",
+      "template_values": {
+        "eqsubtract": "1",
+        "idevice": "",
+        "iread_eqdsk": "",
+        "iread_ne": "1",
+        "iread_te": "1"
+      }
+    },
+    {
+      "copied_template": "validation_inputs/machine_equilibria/nstx_u/C1input_base",
+      "has_aeqdsk": false,
+      "has_coil_file": true,
+      "has_experimental_diagnostics": false,
+      "has_profile_file": false,
+      "has_public_geqdsk": false,
+      "m3dc1_idevice": 2,
+      "machine": "NSTX-U",
+      "public_geqdsk_files": [],
+      "requires_real_efit": true,
+      "status": "blocked_missing_real_efit",
+      "template_source": "/root/CaMaLabs_M3DC1/templates_from_autoc1/NSTX-U/C1input_base",
+      "template_values": {
+        "eqsubtract": "1",
+        "idevice": "",
+        "iread_eqdsk": "",
+        "iread_ne": "1",
+        "iread_te": "1"
+      }
+    },
+    {
+      "copied_template": "validation_inputs/machine_equilibria/iter/C1input_base",
+      "has_aeqdsk": false,
+      "has_coil_file": true,
+      "has_experimental_diagnostics": false,
+      "has_profile_file": false,
+      "has_public_geqdsk": false,
+      "m3dc1_idevice": 3,
+      "machine": "ITER",
+      "public_geqdsk_files": [],
+      "requires_real_efit": false,
+      "status": "template_only_missing_public_efit",
+      "template_source": "/root/CaMaLabs_M3DC1/templates_from_autoc1/ITER/C1input_base",
+      "template_values": {
+        "eqsubtract": "1",
+        "idevice": "",
+        "iread_eqdsk": "",
+        "iread_ne": "1",
+        "iread_te": "1"
+      }
+    }
+  ],
+  "overall_status": "PARTIAL_MACHINE_EQUILIBRIUM_READY"
+}

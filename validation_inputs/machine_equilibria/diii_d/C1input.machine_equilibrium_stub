@@ -1,0 +1,12 @@
+# M3D-C1 machine-equilibrium validation stub
+# machine = DIII-D
+# Fill remaining solver and mesh settings from the corresponding public M3D-C1 template.
+
+&input
+  idevice = 4
+  iread_eqdsk = 1
+  iread_ne = 1
+  iread_te = 1
+  eqsubtract = 1
+  icalc_scalars = 1
+/

@@ -1,0 +1,4 @@
+machine,status,m3dc1_idevice,has_public_geqdsk,has_aeqdsk,has_profile_file,has_coil_file,has_experimental_diagnostics,requires_real_efit
+DIII-D,ready_with_public_efit,4,True,True,True,True,False,True
+NSTX-U,blocked_missing_real_efit,2,False,False,False,True,False,True
+ITER,template_only_missing_public_efit,3,False,False,False,True,False,False

@@ -329,3 +329,39 @@ This check does not claim full M3D-C1 validation. It verifies that:
 
 The intended status is therefore `PASS_WITH_REDUCED_MODEL_BOUNDARIES`, not
 `FULL_VALIDATION`.
+
+## Machine equilibrium readiness check
+
+The next bridge responds to the remaining validation gap around named machine
+equilibria and EFIT/GEQDSK inputs:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 machine_equilibrium_readiness.py \
+  --m3dc1-repo /root/CaMaLabs_M3DC1 \
+  --input-dir validation_inputs/machine_equilibria \
+  --run-dir validation_runs/machine_equilibrium_readiness_default
+```
+
+This check scans the public CaMaLabs/M3DC1 template package and copies only the
+small, directly relevant machine-equilibrium inputs into this repo. It verifies
+M3D-C1 support for:
+
+- `idevice = 2` for NSTX-family templates,
+- `idevice = 3` for ITER templates,
+- `idevice = 4` for DIII-D templates,
+- `iread_eqdsk = 1` for an EFIT g-file named `geqdsk`,
+- profile reads through `iread_ne` and `iread_te`,
+- scalar diagnostics through `icalc_scalars`.
+
+Current result: the package is `PARTIAL_MACHINE_EQUILIBRIUM_READY`.
+
+- DIII-D has a public EFIT-backed package with `g158103.03796`,
+  `a158103.03796`, and `p158103.03796`.
+- NSTX-U and ITER have M3D-C1 machine templates and coil/current material, but
+  no public EFIT GEQDSK was found in the scanned public package.
+
+Interpretation: this closes the “no GEQDSK at all” criticism for DIII-D, but it
+does not close the full experimental-diagnostics gap. The correct next claim is
+that the validation chain now has a DIII-D EFIT anchor and explicit NSTX-U/ITER
+input holes, not that all three machines are experimentally validated.
