@@ -1,0 +1,282 @@
+{
+  "bout": {
+    "all_controlled_reduce_integrated_J": true,
+    "controlled_cases": 14,
+    "fine_integrated_reduction": 0.650780464112708,
+    "fine_peak_reduction": 0.14051812213299775,
+    "interpretation": "CHECK: at least one resolved TCT actuator robustness case failed a current reduction metric.",
+    "nominal_integrated_reduction": 0.6533426292161446,
+    "nominal_peak_reduction": 0.14159563381722218,
+    "path": "/root/Fusion_Blanket_Design_TCT/validation_runs/bout_tct_actuator_robustness_default/tct_actuator_robustness_summary.json",
+    "placement_min_integrated_reduction": 0.24728401284089974,
+    "placement_min_peak_reduction": 0.029799171819922976,
+    "robust_cases": 12,
+    "timing_min_integrated_reduction": 0.44814560157366523,
+    "timing_min_peak_reduction": 0.0,
+    "top_cases": [
+      {
+        "case": "strength_1p2",
+        "family": "strength",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.7489252406206978,
+        "post_initial_max_J_reduction_fraction": 0.20413969632752327
+      },
+      {
+        "case": "width_1p2x",
+        "family": "width",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.656032158413268,
+        "post_initial_max_J_reduction_fraction": 0.17215061294572997
+      },
+      {
+        "case": "base_nominal",
+        "family": "baseline",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.6533426292161446,
+        "post_initial_max_J_reduction_fraction": 0.14159563381722218
+      },
+      {
+        "case": "fine_tct080",
+        "family": "resolution",
+        "grid": "fine",
+        "integrated_J_reduction_fraction": 0.650780464112708,
+        "post_initial_max_J_reduction_fraction": 0.14051812213299775
+      },
+      {
+        "case": "width_2p2x",
+        "family": "width",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.6230113642413346,
+        "post_initial_max_J_reduction_fraction": 0.12757063473569774
+      }
+    ],
+    "weakest_cases": [
+      {
+        "case": "width_0p8x",
+        "family": "width",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.45650064566226645,
+        "post_initial_max_J_reduction_fraction": 0.24059082437761692
+      },
+      {
+        "case": "strength_0p4",
+        "family": "strength",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.44967775277721933,
+        "post_initial_max_J_reduction_fraction": 0.07329418948978916
+      },
+      {
+        "case": "timing_delayed4",
+        "family": "timing",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.44814560157366523,
+        "post_initial_max_J_reduction_fraction": 0.0
+      },
+      {
+        "case": "placement_p0p08",
+        "family": "placement",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.2622131773397103,
+        "post_initial_max_J_reduction_fraction": 0.029799171819922976
+      },
+      {
+        "case": "placement_m0p08",
+        "family": "placement",
+        "grid": "base",
+        "integrated_J_reduction_fraction": 0.24728401284089974,
+        "post_initial_max_J_reduction_fraction": 0.038474248115076715
+      }
+    ]
+  },
+  "gates": [
+    {
+      "evidence": {
+        "field_count": 23,
+        "helical_proxy_flag": 1,
+        "missing_required_fields": []
+      },
+      "gate": "m3dc1_helical_proxy_hdf5_schema",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "best_case": "aggressive_tct",
+        "min_TBR": 1.1008,
+        "rows": 5
+      },
+      "gate": "m3dc1_candidate_proxy_constraints",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "returncode": 0,
+        "stdout": "...                                                                      [100%]\n3 passed in 34.11s\n"
+      },
+      "gate": "open_source_equilibrium_verifier",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "nominal_integrated_reduction": 0.6533426292161446,
+        "nominal_peak_reduction": 0.14159563381722218
+      },
+      "gate": "bout_preemptive_actuator_supported",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fine_integrated_reduction": 0.650780464112708,
+        "fine_peak_reduction": 0.14051812213299775
+      },
+      "gate": "bout_fine_grid_direction_preserved",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "timing_min_integrated_reduction": 0.44814560157366523,
+        "timing_min_peak_reduction": 0.0
+      },
+      "gate": "timing_boundary_detected",
+      "passed": true
+    }
+  ],
+  "generated_at": "2026-06-03T00:52:13.532303+00:00",
+  "m3dc1": {
+    "candidate_results": {
+      "all_rows_pass_hard_constraints": true,
+      "baseline_event_severity_mean": 0.063410028,
+      "best_case": "aggressive_tct",
+      "best_score": 0.06844354258,
+      "controlled_rows": 4,
+      "max_TBR": 1.1408,
+      "min_TBR": 1.1008,
+      "passed_hard_constraints_rows": 5,
+      "path": "/root/CaMaLabs_M3DC1/validation/generated/candidate0_physics_results.csv",
+      "rows": 5
+    },
+    "freegsnke_verifier": {
+      "path": "/root/CaMaLabs_M3DC1/validation/results/freegsnke_verifier_summary.json",
+      "returncode": 0,
+      "stdout": "...                                                                      [100%]\n3 passed in 34.11s\n",
+      "tests": [
+        "freegsnke/tests/test_inverse_static_solver.py",
+        "freegsnke/tests/test_implicit_euler.py",
+        "freegsnke/tests/test_static_solver.py"
+      ]
+    },
+    "hdf5": {
+      "exists": true,
+      "field_count": 23,
+      "has_required_fields": true,
+      "helical_proxy_flag": 1,
+      "missing_required_fields": [],
+      "path": "/root/CaMaLabs_M3DC1/validation/generated/helical_benchmark_proxy/C1.h5",
+      "proxy_metadata": {
+        "benchmark_label": "helical_benchmark_proxy",
+        "blanket_topology": "be_outer",
+        "lithium_thickness_m": [
+          0.0021
+        ],
+        "provenance_note": "Source-inspired proxy built from public PPPL meeting notes, public M3D-C1 reader conventions, and the HEAT C1.h5 layout.",
+        "source_paths": [
+          "/projects/M3DC1/sjardin/helical5g/C1.h5",
+          "/projects/M3DC1/sjardin/helical5f/C1.h5"
+        ],
+        "target_tbr_floor": [
+          1.05
+        ]
+      },
+      "required_fields": [
+        "psi",
+        "phi",
+        "P",
+        "den",
+        "ne",
+        "te",
+        "ti"
+      ],
+      "root_attrs": {
+        "3d": 1,
+        "amu": 2.0,
+        "amuc": 2.0,
+        "amupar": 2.0,
+        "b0_norm": 1.0,
+        "blanket_topology": "be_outer",
+        "bzero": 1.0,
+        "db": 0.0,
+        "delta_wall": 0.0,
+        "denm": 1.0,
+        "eqsubtract": 0,
+        "eta0": 1e-06,
+        "eta_wall": 0.2,
+        "etar": 0.2,
+        "extsubtract": 0,
+        "gam": 1.6666666666666667,
+        "gyro": 0,
+        "helical_proxy": 1,
+        "hyper": 0,
+        "hyperc": 0,
+        "hyperi": 0,
+        "hyperp": 0,
+        "hyperv": 0,
+        "icomplex": 0,
+        "icsubract": 0,
+        "idens": 1,
+        "ifixedb": 0,
+        "igeometry": 1,
+        "integrator": 1,
+        "ion_mass": 2.0,
+        "ipellet": 0,
+        "iper": 1,
+        "ipres": 1,
+        "ipressplit": 0,
+        "itemp": 1,
+        "itor": 1,
+        "ivform": 0,
+        "jper": 1,
+        "kappa0": 0.0,
+        "kappar": 0.0,
+        "kappat": 0.0,
+        "l0_norm": 1.0,
+        "linear": 0,
+        "lithium_thickness_m": 0.0021,
+        "ln": 1,
+        "mpol": 1,
+        "n0_norm": 1.0,
+        "nonrect": 1,
+        "nplanes": 2,
+        "ntime": 2,
+        "ntor": 1,
+        "numvar": 20,
+        "pellet_var": 0.0,
+        "pellet_velphi": 0.0,
+        "pellet_velx": 0.0,
+        "pellet_velz": 0.0,
+        "rzero": 3.0,
+        "thimp": 0,
+        "version": 36,
+        "vloop": 0.0001,
+        "xlim": [
+          1.0,
+          6.0
+        ],
+        "xmag": 3.02,
+        "zeff": 1.0,
+        "zlim": [
+          -2.0,
+          2.0
+        ],
+        "zmag": 0.0,
+        "zzero": 0.0
+      },
+      "size_bytes": 349256,
+      "time_group_used": "time_000"
+    },
+    "repo": "/root/CaMaLabs_M3DC1",
+    "reports": {
+      "helical_benchmark_note": "/root/CaMaLabs_M3DC1/validation/helical_benchmark_note.md",
+      "real_c1_h5_report": "/root/CaMaLabs_M3DC1/validation/real_c1_h5_report.md"
+    }
+  },
+  "overall_status": "PASS_WITH_REDUCED_MODEL_BOUNDARIES"
+}

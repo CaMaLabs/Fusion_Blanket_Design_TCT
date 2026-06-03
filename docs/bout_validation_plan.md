@@ -304,3 +304,28 @@ actuation still lowers integrated current, but it cannot reduce the peak-current
 metric once the sheet has already formed. The next run should therefore focus on
 closed-loop triggering or preemptive timing thresholds rather than only stronger
 open-loop damping.
+
+## M3D-C1 / BOUT++ cross-validation bridge
+
+The next bridge ingests the public CaMaLabs M3D-C1 validation artifacts and the
+BOUT++ actuator robustness summary:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 m3dc1_bout_cross_validation.py \
+  --m3dc1-repo /root/CaMaLabs_M3DC1 \
+  --run-dir validation_runs/m3dc1_bout_cross_validation_default
+```
+
+This check does not claim full M3D-C1 validation. It verifies that:
+
+- the public M3D-C1 helical proxy `C1.h5` has the expected HDF5 fields and
+  explicit proxy metadata,
+- the M3D-C1 Candidate-0 proxy campaign passes its hard constraints,
+- the open-source FreeGSNKE equilibrium verifier passed in the M3D-C1 repo,
+- the BOUT++ resolved actuator reduces nominal and fine-grid current-sheet
+  metrics,
+- and the timing boundary is explicit rather than hidden.
+
+The intended status is therefore `PASS_WITH_REDUCED_MODEL_BOUNDARIES`, not
+`FULL_VALIDATION`.
