@@ -1,6 +1,6 @@
 # GEQDSK / EFIT Baseline Case
 
-Generated: `2026-06-03T13:17:46.745380+00:00`
+Generated: `2026-06-03T14:18:51.522193+00:00`
 
 Status: **GEQDSK_EFIT_BASELINE_READY**
 

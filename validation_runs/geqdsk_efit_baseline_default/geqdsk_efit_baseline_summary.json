@@ -9,6 +9,7 @@
     "profile": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/efit/p158103.03796",
     "profile_density_csv": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/profile_density.csv"
   },
+  "claim_boundary": "Real imported DIII-D EFIT/GEQDSK baseline input package; not a completed M3D-C1 run, not NSTX/ITER, and not a raw experimental diagnostic archive.",
   "filled_c1input_values": {
     "db_fac": "0.0",
     "eps": "1e-6",
@@ -24,7 +25,7 @@
     "mesh_model": "'diii_d_158103_03796.dmg'",
     "ntor": "1"
   },
-  "generated_at": "2026-06-03T13:17:46.745380+00:00",
+  "generated_at": "2026-06-03T14:18:51.522193+00:00",
   "geqdsk": {
     "bcentr_t": -1.8977622,
     "current_a": 1339492.25,
@@ -65,6 +66,22 @@
     "rows": 256
   },
   "raw_experimental_diagnostics_present": false,
+  "sha256": {
+    "aeqdsk": "93b33723e39f8b53fb14a4a3a05c1b66cbce84ddb6eee23980381cba935e0c79",
+    "c1input": "db09f2f76bc94858e7bae0d6ebb4001f280c37af233eb429e0ced3a645041f39",
+    "c1input_base": "74bf7584d30eca26045b96febf625b334f54a33fc1c225e44c6cb100e8080762",
+    "geqdsk": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e",
+    "gfile_original": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e",
+    "profile": "e3e90776e20d3eb4deedc0a02538995d51e0b050c3e0d4300d06c7e74317c065",
+    "profile_density_csv": "0087c7a9557e7e5b46c2f140e101a5df6d2c5f85071de930f14848fc422cbe8f"
+  },
   "shot_time": "158103 @ 3796 ms",
+  "source_provenance": {
+    "local_checkout": "/root/CaMaLabs_M3DC1",
+    "repo": "CaMaLabs/M3DC1",
+    "source_aeqdsk": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/a158103.03796",
+    "source_geqdsk": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/g158103.03796",
+    "source_profile": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/p158103.03796"
+  },
   "status": "GEQDSK_EFIT_BASELINE_READY"
 }

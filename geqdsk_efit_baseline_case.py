@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import shutil
@@ -35,6 +36,14 @@ FILLED_VALUES = {
     "imulti_region": "0",
     "ntor": "1",
 }
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _copy(src: Path, dest: Path) -> str:
@@ -162,6 +171,77 @@ def _write_report(run_dir: Path, summary: dict[str, Any]) -> None:
     (run_dir / "geqdsk_efit_baseline_report.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+def _write_case_readme(case_dir: Path, summary: dict[str, Any]) -> None:
+    geq = summary["geqdsk"]
+    files = summary["case_files"]
+    lines = [
+        "# DIII-D GEQDSK / EFIT Baseline Case",
+        "",
+        "This directory is a concrete EFIT/GEQDSK baseline input package for follow-up M3D-C1/BOUT++ validation.",
+        "It is not evidence that a completed M3D-C1 nonlinear run has been performed from this case.",
+        "",
+        "## Provenance",
+        "",
+        "- Machine: `DIII-D`",
+        "- Shot/time: `158103 @ 3796 ms`",
+        "- Source package: public `CaMaLabs/M3DC1` template mirror",
+        "- Source GEQDSK path before import: `/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/g158103.03796`",
+        "- Source AEQDSK path before import: `/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/a158103.03796`",
+        "- Source profile path before import: `/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/p158103.03796`",
+        "",
+        "## GEQDSK Header",
+        "",
+        "```text",
+        geq["header"],
+        "```",
+        "",
+        "## Parsed Checks",
+        "",
+        f"- Grid: `{geq['nw']} x {geq['nh']}`",
+        f"- R dimension: `{geq['rdim_m']}` m",
+        f"- Z dimension: `{geq['zdim_m']}` m",
+        f"- Magnetic axis: R=`{geq['rmaxis_m']}` m, Z=`{geq['zmaxis_m']}` m",
+        f"- Central field: `{geq['bcentr_t']}` T",
+        f"- Plasma current: `{geq['current_a']}` A",
+        f"- q range: `{geq['qpsi_min']}` to `{geq['qpsi_max']}`",
+        "",
+        "## Files",
+        "",
+        "- `geqdsk`: solver-facing copy expected by M3D-C1 when `iread_eqdsk = 1`",
+        "- `efit/g158103.03796`: original GEQDSK filename",
+        "- `efit/a158103.03796`: original AEQDSK-style metadata file",
+        "- `efit/p158103.03796`: profile file used to derive `profile_density.csv`",
+        "- `C1input.geqdsk_baseline`: filled M3D-C1 input deck for this baseline",
+        "- `profile_density.csv`: parsed density profile table",
+        "",
+        "## SHA-256",
+        "",
+        "| File | SHA-256 |",
+        "| --- | --- |",
+    ]
+    labels = {
+        "geqdsk": "geqdsk",
+        "gfile_original": "efit/g158103.03796",
+        "aeqdsk": "efit/a158103.03796",
+        "profile": "efit/p158103.03796",
+        "c1input": "C1input.geqdsk_baseline",
+    }
+    for key in ("geqdsk", "gfile_original", "aeqdsk", "profile", "c1input"):
+        path = Path(files[key])
+        lines.append(f"| `{labels[key]}` | `{_sha256(path)}` |")
+    lines.extend(
+        [
+            "",
+            "## Claim Boundary",
+            "",
+            "This is a real imported DIII-D EFIT/GEQDSK baseline input package.",
+            "It is not a completed experimental validation result, not an NSTX/ITER baseline, and not a raw diagnostic archive.",
+            "",
+        ]
+    )
+    (case_dir / "README.md").write_text("\n".join(lines), encoding="utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--machine-input", type=Path, default=DEFAULT_MACHINE_INPUT)
@@ -200,15 +280,28 @@ def main() -> int:
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "GEQDSK_EFIT_BASELINE_READY",
+        "claim_boundary": (
+            "Real imported DIII-D EFIT/GEQDSK baseline input package; not a completed M3D-C1 run, "
+            "not NSTX/ITER, and not a raw experimental diagnostic archive."
+        ),
         "machine": "DIII-D",
         "shot_time": "158103 @ 3796 ms",
+        "source_provenance": {
+            "repo": "CaMaLabs/M3DC1",
+            "local_checkout": "/root/CaMaLabs_M3DC1",
+            "source_geqdsk": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/g158103.03796",
+            "source_aeqdsk": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/a158103.03796",
+            "source_profile": "/root/CaMaLabs_M3DC1/templates_from_autoc1/DIII-D/efit/p158103.03796",
+        },
         "case_dir": str(args.case_dir),
         "case_files": files,
+        "sha256": {key: _sha256(Path(value)) for key, value in files.items()},
         "filled_c1input_values": replacements,
         "geqdsk": geqdsk,
         "profile": profile,
         "raw_experimental_diagnostics_present": False,
     }
+    _write_case_readme(args.case_dir, summary)
     (args.run_dir / "geqdsk_efit_baseline_summary.json").write_text(
         json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8"
     )
