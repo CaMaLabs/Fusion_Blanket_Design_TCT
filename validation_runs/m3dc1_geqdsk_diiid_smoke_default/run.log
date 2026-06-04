@@ -1,11 +1,11 @@
-[1780547881.504179] [localhost:6563 :0]       tcp_iface.c:893  UCX  ERROR scandir(/sys/class/net) failed: Permission denied
-[1780547881.512076] [localhost:6563 :0]        memtrack.c:329  UCX  WARN  allocated zero-size block 0x3000efaf80 for string_set
-[1780547881.512114] [localhost:6563 :0]     ucp_context.c:1192 UCX  WARN  network device 'lo' is not available, please use one or more of: 
-[1780547881.512148] [localhost:6563 :0]     ucp_context.c:1192 UCX  WARN  transport 'tcp' is not available, please use one or more of: cma, mm, posix, self, shm, sm, sysv
+[1780617194.677239] [localhost:10613:0]       tcp_iface.c:893  UCX  ERROR scandir(/sys/class/net) failed: Permission denied
+[1780617194.685317] [localhost:10613:0]        memtrack.c:329  UCX  WARN  allocated zero-size block 0x3000efaf80 for string_set
+[1780617194.685350] [localhost:10613:0]     ucp_context.c:1192 UCX  WARN  network device 'lo' is not available, please use one or more of: 
+[1780617194.685374] [localhost:10613:0]     ucp_context.c:1192 UCX  WARN  transport 'tcp' is not available, please use one or more of: cma, mm, posix, self, shm, sm, sysv
  ==============================================================
  RELEASE VERSION: 1.16-devel
  BUILD DATE: Fri May 29 06:36:50 PDT 2026
-START DATE: 2026 06 03   TIME: 21:38:01.5
+START DATE: 2026 06 04   TIME: 16:53:14.6
 
  REAL VERSION
  2D VERSION
@@ -613,8 +613,8 @@ zzero                = 0
 zzero_rekc           = 0 
   Loading mesh nplane=
  full torus...
-model diii-d_rw1.txt loaded in 0.000004 seconds
-mesh diii-d_rw1-9K.smb loaded in 0.030499 seconds
+model diii-d_rw1.txt loaded in 0.000007 seconds
+mesh diii-d_rw1-9K.smb loaded in 0.022956 seconds
 number of triangle 9002 quad 0
 mesh entity counts: v 4576 e 13577 f 9002 r 0
 
@@ -20868,17 +20868,760 @@ mesh shape: "Linear"
  [M3DC1 DEBUG] create_vector id=          44  name=44\x00\x00\x00\x00
 [M3D-C1 INFO] m3dc1_field_create_: field 44, #values 1, #dofs 6, name 44
  boundary_wall_dist called
-[M3DC1 DEBUG] solve: matrix 64 fieldOrdering= 1 rhs=44 field_id=44
+ M3DC1_SKIP_WALL_DIST_SOLVE=1: keeping zero wall_dist smoke-field
+  Defining initial conditions
+ before load_eqdsk           1
+ Reading EQDSK g-file
+  Resolution:          129         129
+ reading fpol
+ reading press
+ reading ffprim
+ reading pprim
+ reading psirz
+ reading qpsi
+ reading nbbbs, limitr
+   EFITD      06/25  /2013      #158103    3796ms            
+ Magnetic axis:   0.1739E+01  0.1281E-01
+ Toroidal field on axis:  -0.1898E+01
+ Plasma current:   0.1339E+07
+ Poloidal flux at axis, boundary -0.2366E+00  0.6373E-01
+ Bounding box:  0.8400E+00 -0.1600E+01  0.1700E+01  0.3200E+01
+ Done reading EQDSK g-file.
+ normalized current    1.6832556048561851     
+  calculating vacuum field....
+ Calculating fields due to poloidal field coils
+ Coil file style =            0
+  Read           18  lines
+  Read           18  lines
+ Coil            1
+      0.8600      1.1900      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):       0.0000      0.0000
+ Coil            2
+      0.8600      0.8500      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):       0.0000      0.0000
+ Coil            3
+      0.8600      0.5100      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):      -0.0004      0.0000
+ Coil            4
+      0.8600      0.1700      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):      -0.0007      0.0000
+ Coil            5
+      0.8600     -0.1700      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):      -0.0004      0.0000
+ Coil            6
+      0.8600     -0.5100      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):      -0.0003      0.0000
+ Coil            7
+      0.8600     -0.8500      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):      -0.0003      0.0000
+ Coil            8
+      0.8600     -1.1900      0.0500      0.3200      0.0000      0.0000    3   18
+current (kA), phase (deg):       0.0003      0.0000
+ Coil            9
+      1.0000      1.5100      0.1400      0.1200      1.0000      0.0000    7    5
+current (kA), phase (deg):       0.0007      0.0000
+ Coil           10
+      1.0000     -1.5100      0.1400      0.1200     -1.0000      0.0000    7    5
+current (kA), phase (deg):       0.0007      0.0000
+ Coil           11
+      1.2500      1.6000      0.2400      0.0900      0.0000      0.0000    9    5
+current (kA), phase (deg):       0.0004      0.0000
+ Coil           12
+      1.2500     -1.6000      0.2400      0.0900      0.0000      0.0000    9    5
+current (kA), phase (deg):       0.0007      0.0000
+ Coil           13
+      1.6900      1.5900      0.1700      0.1350      0.0000      0.0000    9    7
+current (kA), phase (deg):      -0.0003      0.0000
+ Coil           14
+      1.6900     -1.5900      0.1700      0.1350      0.0000      0.0000    9    7
+current (kA), phase (deg):      -0.0000      0.0000
+ Coil           15
+      2.3700      1.1200      0.1900      0.1700      0.0000      0.3640   11   11
+current (kA), phase (deg):      -0.0003      0.0000
+ Coil           16
+      2.3700     -1.1200      0.1900      0.1700      0.0000     -0.3640   11   11
+current (kA), phase (deg):      -0.0005      0.0000
+ Coil           17
+      2.6100      0.4400      0.1800      0.2000      0.0000      0.0875   11   11
+current (kA), phase (deg):      -0.0004      0.0000
+ Coil           18
+      2.6100     -0.4400      0.1800      0.2000      0.0000     -0.0875   11   11
+current (kA), phase (deg):      -0.0003      0.0000
+ Calculating fields due to coils
+ [M3DC1 DEBUG] create_vector id=          45  name=45\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 45, #values 1, #dofs 6, name 45
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=45 field_id=45
 [M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 INFO] setKspType: matrix 22 using GMRES/Jacobi fallback
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 116
+For mat%imatrix=  22, newsolve takes num_iter=  116, time=  2.566E-01 secs
+ Done calculating fields due to coils
+ Calculating fields due to divertors
+ Done calculating fields
+ Interpolating geqdsk Equilibrium
+ [M3DC1 DEBUG] create_vector id=          46  name=46\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 46, #values 1, #dofs 6, name 46
+ [M3DC1 DEBUG] create_vector id=          47  name=47\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 47, #values 1, #dofs 6, name 47
+ [M3DC1 DEBUG] create_vector id=          48  name=48\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 48, #values 1, #dofs 6, name 48
+ [M3DC1 DEBUG] create_vector id=          49  name=49\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 49, #values 1, #dofs 6, name 49
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=46 field_id=46
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 81
+For mat%imatrix=  22, newsolve takes num_iter=   81, time=  1.646E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=47 field_id=47
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 386
+For mat%imatrix=  22, newsolve takes num_iter=  386, time=  6.638E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=48 field_id=48
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 71
+For mat%imatrix=  22, newsolve takes num_iter=   71, time=  1.194E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=49 field_id=49
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 382
+For mat%imatrix=  22, newsolve takes num_iter=  382, time=  1.905E+00 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=46 field_id=46
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  6.191E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=47 field_id=47
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  4.689E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=48 field_id=48
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  4.785E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=49 field_id=49
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  3.731E-03 secs
+Setting bzero, rzero =      -1.8508      1.7385
+ sibry, simag, psimin, psilim,psibound =  6.3729E-02 -2.3661E-01  2.3661E-01 -0.0000E+00 -6.3729E-02
+  Calculating electron density
+  Calculating electron density
+  Calculating Temperatures
+ [M3DC1 DEBUG] create_vector id=          50  name=50\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 50, #values 1, #dofs 6, name 50
+ [M3DC1 DEBUG] create_vector id=          51  name=51\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 51, #values 1, #dofs 6, name 51
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=50 field_id=50
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 71
+For mat%imatrix=  22, newsolve takes num_iter=   71, time=  1.421E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=51 field_id=51
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 71
+For mat%imatrix=  22, newsolve takes num_iter=   71, time=  9.978E-02 secs
+  Done calculating temperatures
+  Calculating Temperatures
+ [M3DC1 DEBUG] create_vector id=          52  name=52\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 52, #values 1, #dofs 6, name 52
+ [M3DC1 DEBUG] create_vector id=          53  name=53\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 53, #values 1, #dofs 6, name 53
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=52 field_id=52
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  7.321E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=53 field_id=53
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  5.817E-03 secs
+  Done calculating temperatures
+  Writing simulation parameters
+ Writing HDF5 file for restart: version=          45
+   transport coefficients
+   finding lcfs
+ [M3DC1 DEBUG] create_vector id=          54  name=54\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 54, #values 1, #dofs 6, name 54
+  Finding magnetic axis.  FX =  T
+  magaxis: guess =   0.1739E+01  0.1281E-01
+  magaxis: iterations, x, z =           49  0.1890E+01  0.8511E-02
+  magnetic axis:   0.1890E+01  0.8511E-02
+  psi at magnetic axis:   0.6234E+00
+  Finding X-point
+  magaxis: guess =   0.1400E+01 -0.7000E+00
+  magaxis: iterations, x, z =           51  0.1379E+01 -0.7310E+00
+  magaxis: guess =   0.1400E+01  0.7000E+00
+  magaxis: iterations, x, z =           51  0.1459E+01  0.8144E+00
+  X-point 1 found at   0.1379E+01 -0.7310E+00
+   Psi_x =   0.2075E+00
+  X-point 2 found at   0.1459E+01  0.8144E+00
+   Psi_x =   0.2117E+00
+  Finding LCFS
+   psi at:       axis       wall   divertor       lim1       lim2       lcfs
+         0  6.234E-01  4.585E-01  2.075E-01  4.585E-01  4.585E-01  4.585E-01
+  Plasma is limited by wall.
+ Calculating transport coefficients
+   defining...
+    psi...
+    I...
+    P...
+    n...
+    B^-2...
+    eta...
+  solving...
+   resistivity
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=18 field_id=18
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 58
+For mat%imatrix=  22, newsolve takes num_iter=   58, time=  1.267E-01 secs
+   kappa
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=19 field_id=19
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 382
+For mat%imatrix=  22, newsolve takes num_iter=  382, time=  2.210E+00 secs
+   denm
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=21 field_id=21
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 382
+For mat%imatrix=  22, newsolve takes num_iter=  382, time=  4.770E-01 secs
+ done define_transport_coefficients
+   finding temax
+  te_max: guess =   0.1890E+01  0.8511E-02
+  te_max: rdiff/h, tol, xnew,znew  0.1007E+02  0.1000E-02  0.1887E+01  0.9573E-02
+  te_max: rdiff/h, tol, xnew,znew  0.4727E+01  0.1000E-02  0.1884E+01  0.1047E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2724E+01  0.1000E-02  0.1881E+01  0.1108E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2027E+01  0.1000E-02  0.1877E+01  0.1149E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1698E+01  0.1000E-02  0.1874E+01  0.1179E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1536E+01  0.1000E-02  0.1871E+01  0.1206E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1490E+01  0.1000E-02  0.1867E+01  0.1239E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1600E+01  0.1000E-02  0.1864E+01  0.1279E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1857E+01  0.1000E-02  0.1861E+01  0.1329E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2654E+01  0.1000E-02  0.1858E+01  0.1404E-01
+  te_max: rdiff/h, tol, xnew,znew  0.7329E+01  0.1000E-02  0.1854E+01  0.1526E-01
+  te_max: rdiff/h, tol, xnew,znew  0.4545E+01  0.1000E-02  0.1851E+01  0.1616E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2106E+01  0.1000E-02  0.1848E+01  0.1618E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1628E+01  0.1000E-02  0.1845E+01  0.1521E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2186E+01  0.1000E-02  0.1842E+01  0.1277E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1330E+01  0.1000E-02  0.1840E+01  0.1127E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1044E+01  0.1000E-02  0.1836E+01  0.1051E-01
+  te_max: rdiff/h, tol, xnew,znew  0.9550E+00  0.1000E-02  0.1833E+01  0.1012E-01
+  te_max: rdiff/h, tol, xnew,znew  0.9626E+00  0.1000E-02  0.1830E+01  0.1001E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1096E+01  0.1000E-02  0.1826E+01  0.1017E-01
+  te_max: iterations, x, z =           21  0.1826E+01  0.1017E-01
+max te  0.6283E-01
+  Calculating electron density
+   temperatures
+  Calculating Temperatures
+ [M3DC1 DEBUG] create_vector id=          55  name=55\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 55, #values 1, #dofs 6, name 55
+ [M3DC1 DEBUG] create_vector id=          56  name=56\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 56, #values 1, #dofs 6, name 56
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=55 field_id=55
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 71
+For mat%imatrix=  22, newsolve takes num_iter=   71, time=  9.956E-02 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=56 field_id=56
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 71
+For mat%imatrix=  22, newsolve takes num_iter=   71, time=  9.021E-02 secs
+  Done calculating temperatures
+   toroidal current
+ derived_quantities: solve jphi_field from gs_mat_rhs, ilin=           0
+[M3DC1 DEBUG] solve_newvar1 lhs=22 rhs=50 fin_isize=13 fout_isize=1
+ [M3DC1 DEBUG] create_vector id=          57  name=57\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 57, #values 1, #dofs 6, name 57
+[M3DC1 DEBUG] solve_newvar1 temp_in field=57 isize=1
+ [M3DC1 DEBUG] create_vector id=          58  name=58\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 58, #values 1, #dofs 6, name 58
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=58 field_id=58
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 76
+For mat%imatrix=  22, newsolve takes num_iter=   76, time=  9.737E-02 secs
+  Calculating diagnostic fields
+    U...
+    psi...
+    V...
+    I...
+    chi...
+    P...
+    n...
+    n^-1...
+    TE...
+    TI...
+    B^-2...
+    eta...
+    kappa...
+    vis...
+  before bdotgradp solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=29 field_id=29
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 55
+For mat%imatrix=  22, newsolve takes num_iter=   55, time=  1.379E-01 secs
+  before bdotgradt solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=30 field_id=30
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 56
+For mat%imatrix=  22, newsolve takes num_iter=   56, time=  3.100E-01 secs
+  before torque_density solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=31 field_id=31
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 76
+For mat%imatrix=  22, newsolve takes num_iter=   76, time=  3.317E-01 secs
+  before torque_density_ntv solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=32 field_id=32
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  3.949E-03 secs
+  before mag_reg solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=34 field_id=34
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 58
+For mat%imatrix=  22, newsolve takes num_iter=   58, time=  8.952E-02 secs
+  before ef solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=35 field_id=35
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 75
+For mat%imatrix=  22, newsolve takes num_iter=   75, time=  1.060E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=36 field_id=36
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 119
+For mat%imatrix=  22, newsolve takes num_iter=  119, time=  1.853E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=37 field_id=37
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 71
+For mat%imatrix=  22, newsolve takes num_iter=   71, time=  4.023E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=38 field_id=38
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 120
+For mat%imatrix=  22, newsolve takes num_iter=  120, time=  2.187E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=39 field_id=39
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 77
+For mat%imatrix=  22, newsolve takes num_iter=   77, time=  1.318E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=40 field_id=40
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 67
+For mat%imatrix=  22, newsolve takes num_iter=   67, time=  1.063E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=41 field_id=41
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 382
+For mat%imatrix=  22, newsolve takes num_iter=  382, time=  5.411E-01 secs
+ before J parallel bootstrap solve
+  Done calculating diagnostic fields
+  Writing time slice file equilibrium.h5     
+   Writing attr 
+   Writing mesh 
+ Calculating mesh adjacency
+   Writing fields 
+ In output_fields.  ilin=           0
+ Writing psi_plasma
+ Writing phi
+ Writing V
+ Writing Pe
+ Writing P
+ Writing chi
+ Writing den
+ Writing te
+ Writing ti
+ Writing ne
+ Writing psi_coil
+ Writing eta
+ Writing visc
+ Writing visc_c
+ Writing kappa
+ Writing kappar
+ Writing denm
+ Writing wall_dist
+ Writing jphi
+ Writing torque_em
+ Writing torque_ntv
+ Writing bdotgradp
+ Writing bdotgradt
+ Writing zeff
+ Writing magnetic_region
+ Writing mesh_zone
+ Writing E_R
+ Writing E_PHI
+ Writing E_Z
+ Writing E_par
+ Writing eta_J
+   Done writing fields            0
+  Writing wall regions
+ linking equilibrium.h5     
+   End of hdf5_write_time_slice 
+   transport coefficients
+   finding lcfs
+ [M3DC1 DEBUG] create_vector id=          59  name=59\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 59, #values 1, #dofs 6, name 59
+  Finding magnetic axis.  FX =  T
+  magaxis: guess =   0.1890E+01  0.8511E-02
+  magaxis: iterations, x, z =            1  0.1890E+01  0.8511E-02
+  magnetic axis:   0.1890E+01  0.8511E-02
+  psi at magnetic axis:   0.6234E+00
+  Finding X-point
+  magaxis: guess =   0.1379E+01 -0.7310E+00
+  magaxis: iterations, x, z =           51  0.1356E+01 -0.7566E+00
+  magaxis: guess =   0.1459E+01  0.8144E+00
+  magaxis: iterations, x, z =           51  0.1483E+01  0.8342E+00
+  X-point 1 found at   0.1356E+01 -0.7566E+00
+   Psi_x =   0.1890E+00
+  X-point 2 found at   0.1483E+01  0.8342E+00
+   Psi_x =   0.2106E+00
+  Finding LCFS
+   psi at:       axis       wall   divertor       lim1       lim2       lcfs
+         0  6.234E-01  4.585E-01  1.890E-01  4.585E-01  4.585E-01  4.585E-01
+  Plasma is limited by wall.
+   finding temax
+  te_max: guess =   0.1890E+01  0.8511E-02
+  te_max: rdiff/h, tol, xnew,znew  0.1007E+02  0.1000E-02  0.1887E+01  0.9573E-02
+  te_max: rdiff/h, tol, xnew,znew  0.4727E+01  0.1000E-02  0.1884E+01  0.1047E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2724E+01  0.1000E-02  0.1881E+01  0.1108E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2027E+01  0.1000E-02  0.1877E+01  0.1149E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1698E+01  0.1000E-02  0.1874E+01  0.1179E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1536E+01  0.1000E-02  0.1871E+01  0.1206E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1490E+01  0.1000E-02  0.1867E+01  0.1239E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1600E+01  0.1000E-02  0.1864E+01  0.1279E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1857E+01  0.1000E-02  0.1861E+01  0.1329E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2654E+01  0.1000E-02  0.1858E+01  0.1404E-01
+  te_max: rdiff/h, tol, xnew,znew  0.7329E+01  0.1000E-02  0.1854E+01  0.1526E-01
+  te_max: rdiff/h, tol, xnew,znew  0.4545E+01  0.1000E-02  0.1851E+01  0.1616E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2106E+01  0.1000E-02  0.1848E+01  0.1618E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1628E+01  0.1000E-02  0.1845E+01  0.1521E-01
+  te_max: rdiff/h, tol, xnew,znew  0.2186E+01  0.1000E-02  0.1842E+01  0.1277E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1330E+01  0.1000E-02  0.1840E+01  0.1127E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1044E+01  0.1000E-02  0.1836E+01  0.1051E-01
+  te_max: rdiff/h, tol, xnew,znew  0.9550E+00  0.1000E-02  0.1833E+01  0.1012E-01
+  te_max: rdiff/h, tol, xnew,znew  0.9626E+00  0.1000E-02  0.1830E+01  0.1001E-01
+  te_max: rdiff/h, tol, xnew,znew  0.1096E+01  0.1000E-02  0.1826E+01  0.1017E-01
+  te_max: iterations, x, z =           21  0.1826E+01  0.1017E-01
+max te  0.6283E-01
+  Calculating electron density
+   temperatures
+  Calculating Temperatures
+ [M3DC1 DEBUG] create_vector id=          60  name=60\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 60, #values 1, #dofs 6, name 60
+ [M3DC1 DEBUG] create_vector id=          61  name=61\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 61, #values 1, #dofs 6, name 61
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=60 field_id=60
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  6.749E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=61 field_id=61
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  3.818E-03 secs
+  Done calculating temperatures
+   toroidal current
+ derived_quantities: solve jphi_field from gs_mat_rhs, ilin=           1
+[M3DC1 DEBUG] solve_newvar1 lhs=22 rhs=50 fin_isize=13 fout_isize=1
+ [M3DC1 DEBUG] create_vector id=          62  name=62\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 62, #values 1, #dofs 6, name 62
+[M3DC1 DEBUG] solve_newvar1 temp_in field=62 isize=1
+ [M3DC1 DEBUG] create_vector id=          63  name=63\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 63, #values 1, #dofs 6, name 63
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=63 field_id=63
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  4.740E-03 secs
+  Initializing timestep
+ [M3DC1 DEBUG] create_vector id=          64  name=64\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 64, #values 3, #dofs 18, name 64
+ [M3DC1 DEBUG] create_vector id=          65  name=65\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 65, #values 3, #dofs 18, name 65
+ [M3DC1 DEBUG] create_vector id=          66  name=66\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 66, #values 3, #dofs 18, name 66
+ [M3DC1 DEBUG] create_vector id=          67  name=67\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 67, #values 3, #dofs 18, name 67
+ [M3DC1 DEBUG] create_vector id=          68  name=68\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 68, #values 3, #dofs 18, name 68
+ [M3DC1 DEBUG] create_vector id=          69  name=69\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 69, #values 3, #dofs 18, name 69
+ [M3DC1 DEBUG] create_vector id=          70  name=70\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 70, #values 3, #dofs 18, name 70
+ [M3DC1 DEBUG] create_vector id=          71  name=71\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 71, #values 3, #dofs 18, name 71
+ [M3DC1 DEBUG] create_vector id=          72  name=72\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 72, #values 1, #dofs 6, name 72
+ [M3DC1 DEBUG] create_vector id=          73  name=73\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 73, #values 1, #dofs 6, name 73
+ [M3DC1 DEBUG] create_vector id=          74  name=74\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 74, #values 1, #dofs 6, name 74
+ [M3DC1 DEBUG] create_vector id=          75  name=75\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 75, #values 1, #dofs 6, name 75
+ [M3DC1 DEBUG] create_vector id=          76  name=76\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 76, #values 1, #dofs 6, name 76
+ [M3DC1 DEBUG] create_vector id=          77  name=77\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 77, #values 1, #dofs 6, name 77
+ [M3DC1 DEBUG] create_vector id=          78  name=78\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 78, #values 3, #dofs 18, name 78
+ [M3DC1 DEBUG] create_vector id=          79  name=79\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 79, #values 3, #dofs 18, name 79
+ [M3DC1 DEBUG] create_vector id=          80  name=80\x00\x00\x00\x00
+[M3D-C1 INFO] m3dc1_field_create_: field 80, #values 1, #dofs 6, name 80
+ Index of U:            1
+ Index of V:            2
+ Index of Chi:            3
+ Index of Psi:            1
+ Index of Bz:            2
+ Index of P:            0
+ Index of n:            1
+ Index of Pe:            3
+ Index of f:            1
+ Index of E:            4
+  Writing scalars
+ Done writing scalars
+   calculating aux fields
+  Calculating diagnostic fields
+    U...
+    psi...
+    V...
+    I...
+    chi...
+    P...
+    n...
+    n^-1...
+    TE...
+    TI...
+    B^-2...
+    eta...
+    kappa...
+    vis...
+  before bdotgradp solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=29 field_id=29
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  5.613E-03 secs
+  before bdotgradt solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=30 field_id=30
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  5.250E-03 secs
+  before torque_density solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=31 field_id=31
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 76
+For mat%imatrix=  22, newsolve takes num_iter=   76, time=  1.178E-01 secs
+  before torque_density_ntv solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=32 field_id=32
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  3.529E-03 secs
+  before mag_reg solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=34 field_id=34
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 58
+For mat%imatrix=  22, newsolve takes num_iter=   58, time=  9.428E-02 secs
+  before ef solve
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=35 field_id=35
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  3.958E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=36 field_id=36
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  3.819E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=37 field_id=37
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  4.047E-03 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=38 field_id=38
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 120
+For mat%imatrix=  22, newsolve takes num_iter=  120, time=  1.008E+00 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=39 field_id=39
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 0
+For mat%imatrix=  22, newsolve takes num_iter=    0, time=  1.518E-02 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=40 field_id=40
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 67
+For mat%imatrix=  22, newsolve takes num_iter=   67, time=  4.064E-01 secs
+[M3DC1 DEBUG] solve: matrix 22 fieldOrdering= 1 rhs=41 field_id=41
+[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs
+[M3DC1 DEBUG] solve: matrix 22 ksp=gmres pc=jacobi solver=(null)
+[M3DC1 DEBUG] solve: matrix 22 row 2 ncols=42 (0,0) (1,1) (2,0) (3,0) (4,0) (5,0) (48,0) (49,0) (50,0) (51,0) (52,0) (53,0) (1056,0) (1057,0) (1058,0) (1059,0) (1060,0) (1061,0) (1188,0) (1189,0) (1190,0) (1191,0) (1192,0) (1193,0) (1344,0) (1345,0) (1346,0) (1347,0) (1348,0) (1349,0) (5532,0) (5533,0) (5534,0) (5535,0) (5536,0) (5537,0) (10602,0) (10603,0) (10604,0) (10605,0) (10606,0) (10607,0)
+	-- # solver iterations 382
+For mat%imatrix=  22, newsolve takes num_iter=  382, time=  5.686E-01 secs
+ before J parallel bootstrap solve
+  Done calculating diagnostic fields
+   writing timeslice
+  Writing time slice file time_000.h5        
+   Writing attr 
+   Writing mesh 
+ Calculating mesh adjacency
+   Writing fields 
+ In output_fields.  ilin=           1
+ Writing psi_plasma
+ Writing phi
+ Writing V
+ Writing Pe
+ Writing P
+ Writing chi
+ Writing den
+ Writing te
+ Writing ti
+ Writing ne
+ Writing psi_coil
+ Writing wall_dist
+ Writing jphi
+ Writing torque_em
+ Writing torque_ntv
+ Writing bdotgradp
+ Writing bdotgradt
+ Writing zeff
+ Writing magnetic_region
+ Writing mesh_zone
+ Writing E_R
+ Writing E_PHI
+ Writing E_Z
+ Writing E_par
+ Writing eta_J
+   Done writing fields            0
+  Writing wall regions
+ linking time_000.h5        
+   End of hdf5_write_time_slice 
+   flushing data to file
+   finalizing output...
+   deleting matrices...
+   unloading mesh...
+ destroy field  1
+ destroy field  2
+ destroy field  3
+ destroy field  4
+ destroy field  5
+ destroy field  6
+ destroy field  7
+ destroy field  8
+ destroy field  9
+ destroy field 10
+ destroy field 11
+ destroy field 12
+ destroy field 13
+ destroy field 14
+ destroy field 15
+ destroy field 16
+ destroy field 17
+ destroy field 18
+ destroy field 19
+ destroy field 20
+ destroy field 21
+ destroy field 22
+ destroy field 23
+ destroy field 24
+ destroy field 25
+ destroy field 26
+ destroy field 27
+ destroy field 28
+ destroy field 64
+ destroy field 65
+ destroy field 66
+ destroy field 67
+ destroy field 68
+ destroy field 69
+ destroy field 70
+ destroy field 71
+ destroy field 72
+ destroy field 73
+ destroy field 74
+ destroy field 75
+ destroy field 76
+ destroy field 77
+ destroy field 78
+ destroy field 79
+ destroy field 80
+
+* [M3D-C1 INFO] run time: 22.1514 (sec)
+   finalizing PETSC...
+ ==============================================================
+ END DATE: 2026 06 04   TIME: 16:53:36.8
+
+   finalizing MPI...
+ Stopped at           0
 
 --- STDERR ---
-[localhost:06563] pmix_ifinit: ioctl(SIOCGIFHWADDR) failed with errno=13
-The 4-th row of A is exactly zero
-[0]PETSC ERROR: ------------------------------------------------------------------------
-[0]PETSC ERROR: Caught signal number 11 SEGV: Segmentation Violation, probably memory access out of range
-[0]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
-[0]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind and https://petsc.org/release/faq/
-[0]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
-[0]PETSC ERROR: to get more information on the crash.
-[0]PETSC ERROR: Run with -malloc_debug to check if memory corruption is causing the crash.
-Abort(59) on node 0 (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 59) - process 0
+[localhost:10613] pmix_ifinit: ioctl(SIOCGIFHWADDR) failed with errno=13

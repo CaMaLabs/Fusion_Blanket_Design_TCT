@@ -1,0 +1,41 @@
+diff --git a/unstructured/wall.f90 b/unstructured/wall.f90
+index 3a9fdc93..edead11f 100644
+--- a/unstructured/wall.f90
++++ b/unstructured/wall.f90
+@@ -21,6 +21,8 @@ contains
+ 
+     type(matrix_type) :: wall_matrix
+     integer :: itri, numelms, ibound, ier
++    integer :: i, index, numnodes, icounter_t
++    character(len=8) :: skip_wall_dist_solve
+     vectype, dimension(dofs_per_element, dofs_per_element) :: mat_dofs
+ 
+     call set_matrix_index(wall_matrix, wall_mat_index)
+@@ -53,9 +55,26 @@ endif
+     ! matrix lifecycle used elsewhere in the codebase.
+     call flush(wall_matrix)
+     call boundary_wall_dist(wall_dist%vec, wall_matrix)
++    numnodes = owned_nodes()
++    do icounter_t=1,numnodes
++       i = nodes_owned(icounter_t)
++       index = node_index(wall_dist%vec, i, 1)
++       call identity_row(wall_matrix, index)
++       call identity_row(wall_matrix, index+1)
++       call identity_row(wall_matrix, index+2)
++       call identity_row(wall_matrix, index+3)
++       call identity_row(wall_matrix, index+4)
++       call identity_row(wall_matrix, index+5)
++    end do
+     call finalize(wall_matrix)
+     
+-    call newsolve(wall_matrix,wall_dist%vec,ier)
++    call get_environment_variable("M3DC1_SKIP_WALL_DIST_SOLVE", skip_wall_dist_solve)
++    if (trim(skip_wall_dist_solve) .eq. "1") then
++       if(myrank.eq.0 .and. iprint.ge.1) print *, &
++            "M3DC1_SKIP_WALL_DIST_SOLVE=1: keeping zero wall_dist smoke-field"
++    else
++       call newsolve(wall_matrix,wall_dist%vec,ier)
++    endif
+ 
+     call destroy_mat(wall_matrix)
+ 

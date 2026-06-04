@@ -88,6 +88,7 @@ def write_report(summary: dict[str, Any], path: Path) -> None:
         f"- Run directory: `{summary['run_dir']}`",
         f"- GEQDSK header: `{summary['geqdsk']['header']}`",
         f"- GEQDSK grid: `{summary['geqdsk']['nw']} x {summary['geqdsk']['nh']}`",
+        f"- M3D-C1 smoke flags: `{', '.join(summary['m3dc1_smoke_flags']) or 'none'}`",
         "",
         "## What This Validates",
         "",
@@ -98,6 +99,7 @@ def write_report(summary: dict[str, Any], path: Path) -> None:
         "",
         "This is not a completed nonlinear M3D-C1 campaign, not a BOUT++ machine-geometry run, and not a direct comparison to raw DIII-D diagnostics.",
         "It should be treated as the first executable gate after GEQDSK/EFIT import: the solver can be launched against the imported equilibrium package and any emitted HDF5 artifacts are inventoried below.",
+        "This run is also not a validation of the M3D-C1 wall-distance auxiliary solve; the smoke harness sets `M3DC1_SKIP_WALL_DIST_SOLVE=1` so the imported-equilibrium startup gate can proceed while keeping `wall_dist` as a neutral zero field.",
         "",
         "## Output Artifacts",
         "",
@@ -181,6 +183,7 @@ def main() -> int:
     env["UCX_NET_DEVICES"] = env.get("UCX_NET_DEVICES", "lo")
     env["UCX_MEMTYPE_CACHE"] = env.get("UCX_MEMTYPE_CACHE", "n")
     env["MPIR_CVAR_CH4_SHM_ENABLE"] = env.get("MPIR_CVAR_CH4_SHM_ENABLE", "0")
+    env["M3DC1_SKIP_WALL_DIST_SOLVE"] = "1"
 
     mpi = shutil.which("mpiexec.mpich") or shutil.which("mpirun")
     if mpi is None:
@@ -254,6 +257,7 @@ def main() -> int:
         "baseline_dir": str(baseline_dir),
         "scaffold_dir": str(scaffold_dir),
         "run_dir": str(run_dir),
+        "m3dc1_smoke_flags": ["M3DC1_SKIP_WALL_DIST_SOLVE=1"],
         "geqdsk": parse_geqdsk_header(run_dir / "geqdsk"),
         "artifacts": artifacts,
         "detected_runtime_conditions": {
