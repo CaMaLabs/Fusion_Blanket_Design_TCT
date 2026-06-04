@@ -1,0 +1,42 @@
+{
+  "status": "M3DC1_STARTUP_PETSC_ABORT_NO_HDF5",
+  "started_utc": "2026-06-04T04:38:00.105277+00:00",
+  "runtime_seconds": 4.287181930034421,
+  "returncode": 15,
+  "timed_out": false,
+  "command": [
+    "/usr/bin/mpiexec.mpich",
+    "-np",
+    "1",
+    "/root/M3DC1/unstructured/build-mpich325/m3dc1_2d"
+  ],
+  "binary": "/root/M3DC1/unstructured/build-mpich325/m3dc1_2d",
+  "baseline_dir": "/root/Fusion_Blanket_Design_TCT/validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796",
+  "scaffold_dir": "/root/M3DC1/unstructured/runs/first_linear",
+  "run_dir": "/root/Fusion_Blanket_Design_TCT/validation_runs/m3dc1_geqdsk_diiid_smoke_default",
+  "geqdsk": {
+    "header": "  EFITD    06/25/2013    #158103  3796ms           3 129 129",
+    "nw": 129,
+    "nh": 129
+  },
+  "artifacts": {
+    "C1.h5": {
+      "exists": false,
+      "size_bytes": 0
+    },
+    "equilibrium.h5": {
+      "exists": false,
+      "size_bytes": 0
+    },
+    "time_000.h5": {
+      "exists": false,
+      "size_bytes": 0
+    }
+  },
+  "detected_runtime_conditions": {
+    "petsc_abort": true,
+    "mesh_missing": false,
+    "emitted_readable_hdf5": false
+  },
+  "log_tail": "[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27316\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27317\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27318\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27328\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27329\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27330\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27334\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27335\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27336\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27340\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27341\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27342\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27346\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27347\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27348\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27364\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27365\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27366\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27370\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27371\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27372\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27376\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27377\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27378\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27382\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27394\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27395\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27396\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27401\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27402\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27408\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27418\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27419\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27420\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27425\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27426\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27430\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27431\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27432\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27436\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27437\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27438\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27442\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27443\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27444\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27448\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27449\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27450\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27454\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27455\n[M3DC1 DEBUG] assemble: matrix 22 regularized near-zero diagonal row 27456\n  done.\n  populating matrix...           1           1\n  done.\n  populating matrix...           1           1\n  done.\n  populating matrix...           1           1\n  applying bcs...\n [M3DC1 DEBUG] create_vector id=          43  name=43\\x00\\x00\\x00\\x00\n[M3D-C1 INFO] m3dc1_field_create_: field 43, #values 1, #dofs 6, name 43\n boundary_dc called\n boundary_dc done\n  done.\n [M3DC1 DEBUG] create_vector id=          44  name=44\\x00\\x00\\x00\\x00\n[M3D-C1 INFO] m3dc1_field_create_: field 44, #values 1, #dofs 6, name 44\n boundary_wall_dist called\n[M3DC1 DEBUG] solve: matrix 64 fieldOrdering= 1 rhs=44 field_id=44\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\n--- STDERR ---\n[localhost:06563] pmix_ifinit: ioctl(SIOCGIFHWADDR) failed with errno=13\nThe 4-th row of A is exactly zero\n[0]PETSC ERROR: ------------------------------------------------------------------------\n[0]PETSC ERROR: Caught signal number 11 SEGV: Segmentation Violation, probably memory access out of range\n[0]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger\n[0]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind and https://petsc.org/release/faq/\n[0]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run \n[0]PETSC ERROR: to get more information on the crash.\n[0]PETSC ERROR: Run with -malloc_debug to check if memory corruption is causing the crash.\nAbort(59) on node 0 (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 59) - process 0"
+}

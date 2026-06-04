@@ -1,0 +1,14 @@
+metric,value
+status,M3DC1_STARTUP_PETSC_ABORT_NO_HDF5
+runtime_seconds,4.287181930034421
+returncode,15
+timed_out,False
+C1.h5_exists,False
+C1.h5_size_bytes,0
+C1.h5_readable_hdf5,
+equilibrium.h5_exists,False
+equilibrium.h5_size_bytes,0
+equilibrium.h5_readable_hdf5,
+time_000.h5_exists,False
+time_000.h5_size_bytes,0
+time_000.h5_readable_hdf5,
