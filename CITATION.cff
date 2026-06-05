@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If this repository, its concepts, simulation structure, candidate geometries, or validation workflow influence downstream work, please cite this public research record."
+title: "Fusion Blanket Design with TCT"
+type: software
+authors:
+  - family-names: Lunsford
+    given-names: Chase
+    alias: chaseakat
+repository-code: "https://github.com/CaMaLabs/Fusion_Blanket_Design_TCT"
+url: "https://github.com/CaMaLabs/Fusion_Blanket_Design_TCT"
+abstract: "Public research workspace for fusion blanket optimization and thickness-controlled tokamak (TCT) concept exploration, including simulation scripts, candidate structures, validation notes, and provenance records."
+keywords:
+  - fusion
+  - tokamak
+  - blanket design
+  - plasma control
+  - TCT
+  - OpenMC
+  - MHD validation
+license: Apache-2.0
