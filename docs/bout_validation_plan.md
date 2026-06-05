@@ -429,3 +429,40 @@ so the imported-equilibrium startup gate can proceed. The exact local M3D-C1
 patch is archived with the run:
 
 - `validation_runs/m3dc1_geqdsk_diiid_smoke_default/m3dc1_wall_dist_smoke_gate.patch`
+
+## HW2D / BOUT++ reduced-turbulence cross-code check
+
+With the M3D-C1 wall-distance path blocked by unavailable upstream tooling, the
+next open-source validation rung is an independent reduced-turbulence
+cross-check:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 hw2d_cross_validation.py \
+  --bout-hw-dir validation_runs/bout_hw_turbulence_sweep_default \
+  --run-dir validation_runs/hw2d_cross_validation_default
+```
+
+Current result:
+
+- Status: `HW2D_BOUT_HW_CROSS_CODE_SUPPORTED`
+- BOUT++ and the HW2D-style solver both show monotonic fixed-control
+  fluctuation-energy reduction across the tested coarse and base grids.
+- BOUT++ integrated-energy reduction from `tct000` to `tct100`:
+  - base grid: 56.95%
+  - coarse grid: 55.33%
+- HW2D-style integrated-energy reduction from `tct000` to `tct100`:
+  - base grid: 48.61%
+  - coarse grid: 48.60%
+- The HW2D timing check preserves the expected ordering that steady moderate
+  early control beats late strong control on both grids.
+
+Interpretation: this is the strongest fully open-source plasma-side rung after
+the M3D-C1 startup/HDF5 gate. It cross-checks the reduced-gradient TCT proxy in
+two independent Hasegawa-Wakatani implementations. It does not prove machine
+geometry, experimental EFIT agreement, or a wall-distance M3D-C1 fix. It also
+does not prove that moderate control is globally optimal: in this reduced HW2D
+timing model, steady strong control has the lowest integrated energy, and
+over-control remains an unresolved actuator-model question. The validated claim
+is narrower and useful: early control beats late intervention in this
+open-source reduced-turbulence check.

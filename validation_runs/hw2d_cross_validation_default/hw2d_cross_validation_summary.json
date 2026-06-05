@@ -1,0 +1,67 @@
+{
+  "bout_hw_dir": "/root/Fusion_Blanket_Design_TCT/validation_runs/bout_hw_turbulence_sweep_default",
+  "fixed_control_comparison": [
+    {
+      "bout_energy_monotonic": true,
+      "bout_energy_reduction_fraction": 0.5164289467445065,
+      "bout_integrated_monotonic": true,
+      "bout_integrated_reduction_fraction": 0.5695159115974724,
+      "grid": "base",
+      "hw2d_energy_monotonic": true,
+      "hw2d_energy_reduction_fraction": 0.4375000000000001,
+      "hw2d_integrated_monotonic": true,
+      "hw2d_integrated_reduction_fraction": 0.48612162655783087
+    },
+    {
+      "bout_energy_monotonic": true,
+      "bout_energy_reduction_fraction": 0.4375000000000001,
+      "bout_integrated_monotonic": true,
+      "bout_integrated_reduction_fraction": 0.5532846842826504,
+      "grid": "coarse",
+      "hw2d_energy_monotonic": true,
+      "hw2d_energy_reduction_fraction": 0.4375000000000001,
+      "hw2d_integrated_monotonic": true,
+      "hw2d_integrated_reduction_fraction": 0.48604878050768485
+    }
+  ],
+  "hw2d_case_count": 16,
+  "interpretation": "PASS: BOUT++ and the independent HW2D-style solver agree on the fixed-control reduced-gradient ordering, and the HW2D timing check preserves the expected result that moderate early control beats late strong control. The timing check does not prove that moderate control is globally optimal; in this reduced model, steady strong control has the lowest integrated energy, while over-control remains an unresolved actuator-model question.",
+  "started_utc": "2026-06-05T04:53:50.341326+00:00",
+  "status": "HW2D_BOUT_HW_CROSS_CODE_SUPPORTED",
+  "timing_ordering": [
+    {
+      "best_by_integrated_energy": "steady_strong",
+      "grid": "base",
+      "late_strong_integrated": 0.013970473325302043,
+      "ordering_by_integrated_energy": [
+        "steady_strong",
+        "over_control",
+        "steady_moderate",
+        "late_strong",
+        "uncontrolled"
+      ],
+      "over_control_integrated": 0.009721818238996286,
+      "steady_moderate_beats_late_strong": true,
+      "steady_moderate_beats_uncontrolled": true,
+      "steady_moderate_integrated": 0.010355476842982795,
+      "uncontrolled_integrated": 0.01424188641244758
+    },
+    {
+      "best_by_integrated_energy": "steady_strong",
+      "grid": "coarse",
+      "late_strong_integrated": 0.014025650821552984,
+      "ordering_by_integrated_energy": [
+        "steady_strong",
+        "over_control",
+        "steady_moderate",
+        "late_strong",
+        "uncontrolled"
+      ],
+      "over_control_integrated": 0.009758825327866712,
+      "steady_moderate_beats_late_strong": true,
+      "steady_moderate_beats_uncontrolled": true,
+      "steady_moderate_integrated": 0.010398221525149597,
+      "uncontrolled_integrated": 0.014299525750845754
+    }
+  ]
+}
