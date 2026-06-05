@@ -4,17 +4,15 @@ This repository is Chase Lunsford's public research workspace for fusion blanket
 
 The project combines a plasma/plant optimizer, blanket design search, TCT/plasmoid-control proxies, wall-event modeling, lithium-wall thermal handling, and OpenMC-style finalist validation workflows.
 
-## Research purpose
+## Citation / attribution
 
-The central research question is whether a fusion reactor design can improve stability and survivability by combining:
+If this repository, its concepts, simulation structure, candidate geometries, validation workflow, or documentation influence downstream work, please cite or link back to this repository and credit:
 
-- a liquid-lithium-facing wall or lithium-coupled first-wall layer,
-- solid breeder / multiplier / armor blanket stacks,
-- TCT-style current-sheet thickness control for plasmoid/reconnection suppression,
-- event-severity reduction as a design objective,
-- and neutronics / power-balance validation of promising blanket candidates.
+> Chase Lunsford / `@chaseakat`  
+> Fusion Blanket Design with TCT  
+> https://github.com/CaMaLabs/Fusion_Blanket_Design_TCT
 
-This repo is intended to preserve the development path, code, assumptions, and candidate designs in a timestamped public form.
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Provenance details are provided in [`PROVENANCE.md`](PROVENANCE.md).
 
 ## Current status
 
@@ -27,6 +25,24 @@ Current emphasis:
 - preserve reproducible scripts and result files,
 - identify candidates worthy of higher-fidelity validation,
 - and bridge the strongest candidates into external validation workflows such as OpenMC and M3D-C1-style plasma validation.
+
+## Research purpose
+
+The central research question is whether a fusion reactor design can improve stability and survivability by combining:
+
+- a liquid-lithium-facing wall or lithium-coupled first-wall layer,
+- solid breeder / multiplier / armor blanket stacks,
+- TCT-style current-sheet thickness control for plasmoid/reconnection suppression,
+- event-severity reduction as a design objective,
+- and neutronics / power-balance validation of promising blanket candidates.
+
+This repo is intended to preserve the development path, code, assumptions, and candidate designs in a timestamped public form.
+
+## Validation and public positioning
+
+TCT is currently treated as an exploratory auxiliary-control hypothesis. Specific results should be interpreted according to the validation levels in [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+
+Public wording and scope guidance are maintained in [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
 
 ## What is validated vs. exploratory
 
@@ -50,6 +66,8 @@ Current emphasis:
 Author / researcher: Chase Lunsford (`@chaseakat`).
 
 This repo was made public to establish visible provenance for the fusion blanket / TCT research path. The commit history, scripts, candidate files, and README notes should be treated as part of the public timestamped record of development.
+
+See [`PROVENANCE.md`](PROVENANCE.md) for the full provenance note.
 
 ## Settings
 
@@ -76,10 +94,9 @@ python run_reactor_optimizer.py
 ## Suggested reading order
 
 1. Start with this README.
-2. Inspect optimizer and candidate-generation scripts.
-3. Review committed result files and finalist candidates.
-4. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
-
-## Citation / attribution request
-
-If this repository, its candidate structures, scripts, or TCT-related concept framing influence downstream work, please cite or link back to this repo and credit Chase Lunsford / `@chaseakat`.
+2. Review [`PROVENANCE.md`](PROVENANCE.md) and [`CITATION.cff`](CITATION.cff).
+3. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
+4. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+5. Inspect optimizer and candidate-generation scripts.
+6. Review committed result files and finalist candidates.
+7. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
