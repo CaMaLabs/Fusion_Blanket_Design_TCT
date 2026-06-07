@@ -16,15 +16,57 @@ Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Provenance deta
 
 ## Current status
 
-This is an active independent research and simulation repository. It should be read as a computational research workspace, not as a finished reactor design or validated engineering claim.
+This repository is a conceptual and computational design study, not a demonstrated reactor design.
 
-Current emphasis:
+Validated / implemented:
 
-- explore blanket candidates and control-coupled operating regimes,
-- separate speculative concept work from simulation outputs,
-- preserve reproducible scripts and result files,
-- identify candidates worthy of higher-fidelity validation,
-- and bridge the strongest candidates into external validation workflows such as OpenMC and M3D-C1-style plasma validation.
+- Open repository structure for blanket / TCT design notes.
+- Python-based optimizer and simulation workflows.
+- Initial geometry and material-stack assumptions.
+- Integrated design variables for blanket, wall, plasma, TCT, and plant-power proxies.
+- Candidate scoring and filtering logic.
+- Explicit-layer validation concepts for finalist blanket candidates.
+- Reproducible scripts and committed outputs where available.
+- Draft reproducibility path for testing assumptions against higher-fidelity validation workflows, including OpenMC-style neutronics and companion M3D-C1/BOUT++/FreeGSNKE validation work.
+
+Speculative / not yet validated:
+
+- Net stabilization effect of the proposed TCT geometry.
+- Practical alpha / electron channel separation.
+- Full thermal survival of the proposed wall stack.
+- Tritium breeding ratio under final geometry.
+- Manufacturability of ribbed / channeled structures.
+- Whether TCT-style current-sheet thickness control can be engineered into a practical tokamak control mechanism.
+- Whether lithium-current coupling provides useful stabilizing leverage in the real plasma edge.
+- Whether event-severity reductions translate into reactor-level reliability improvements.
+
+## What I am looking for
+
+I am looking for technical critique on:
+
+1. plasma stability assumptions,
+2. blanket neutronics / TBR assumptions,
+3. heat-flux handling,
+4. material survivability,
+5. validation strategy.
+
+The most useful response would be to identify a wrong assumption, suggest a better simulation path, point to a benchmark case, or open an issue with a falsification test.
+
+## Fast technical review path
+
+If you have 5 minutes:
+
+1. Read this README.
+2. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
+3. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+
+If you have 30 minutes:
+
+1. Review the proposed wall / blanket stack assumptions.
+2. Review the magnetic / electrostatic channeling assumptions.
+3. Inspect optimizer and candidate-generation scripts.
+4. Review committed result files and finalist candidates.
+5. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
 
 ## Research purpose
 
@@ -43,23 +85,6 @@ This repo is intended to preserve the development path, code, assumptions, and c
 TCT is currently treated as an exploratory auxiliary-control hypothesis. Specific results should be interpreted according to the validation levels in [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
 
 Public wording and scope guidance are maintained in [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-
-## What is validated vs. exploratory
-
-### More concrete / implemented
-
-- Python-based optimizer and simulation workflows.
-- Integrated design variables for blanket, wall, plasma, TCT, and plant-power proxies.
-- Candidate scoring and filtering logic.
-- Explicit-layer validation concepts for finalist blanket candidates.
-- Reproducible scripts and committed outputs where available.
-
-### Exploratory / hypothesis-level
-
-- Whether TCT-style current-sheet thickness control can be engineered into a practical tokamak control mechanism.
-- Whether lithium-current coupling provides useful stabilizing leverage in the real plasma edge.
-- Whether the best optimizer candidates survive high-fidelity neutronics and MHD validation.
-- Whether event-severity reductions translate into reactor-level reliability improvements.
 
 ## Provenance
 
