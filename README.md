@@ -40,6 +40,17 @@ Speculative / not yet validated:
 - Whether lithium-current coupling provides useful stabilizing leverage in the real plasma edge.
 - Whether event-severity reductions translate into reactor-level reliability improvements.
 
+## Project roadmap and funding alignment
+
+- [`ROADMAP.md`](ROADMAP.md) frames the repository as a validation and reproducibility pipeline for fusion concept screening.
+- [`FUNDING.md`](FUNDING.md) maps the pipeline to realistic SBIR/STTR, INFUSE-style partnership, AI-for-science, and later-stage funding paths.
+
+The recommended external framing is:
+
+> Open-source validation and reproducibility pipeline for fusion concept screening and handoff to higher-fidelity neutronics and MHD workflows.
+
+TCT is the first demonstration case. The pipeline should be evaluated independently of whether the specific TCT hypothesis survives later validation.
+
 ## What I am looking for
 
 I am looking for technical critique on:
@@ -119,9 +130,10 @@ python run_reactor_optimizer.py
 ## Suggested reading order
 
 1. Start with this README.
-2. Review [`PROVENANCE.md`](PROVENANCE.md) and [`CITATION.cff`](CITATION.cff).
-3. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-4. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
-5. Inspect optimizer and candidate-generation scripts.
-6. Review committed result files and finalist candidates.
-7. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+2. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
+3. Review [`PROVENANCE.md`](PROVENANCE.md) and [`CITATION.cff`](CITATION.cff).
+4. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
+5. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+6. Inspect optimizer and candidate-generation scripts.
+7. Review committed result files and finalist candidates.
+8. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
