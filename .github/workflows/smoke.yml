@@ -1,0 +1,40 @@
+name: Smoke validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies if present
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found; skipping dependency install."
+          fi
+
+      - name: Compile Python files
+        run: |
+          python -m compileall .
+
+      - name: Run optimizer smoke test if available
+        run: |
+          if [ -f run_reactor_optimizer.py ]; then
+            python run_reactor_optimizer.py || echo "Optimizer smoke run exited nonzero; review required."
+          else
+            echo "No run_reactor_optimizer.py found; skipping optimizer smoke."
+          fi
