@@ -554,3 +554,43 @@ closed-loop validation because the current HW2D setup does not provide a
 comparable growing precursor. The next open-source target is a HW2D initial
 condition or drive configuration with a delayed growth phase, so the predictive
 trigger can be tested against an independent model with a real precursor window.
+
+## HW2D delayed-growth predictive check
+
+The independent HW2D-style follow-up replaces the initialized-decay case with a
+low-amplitude initial state and an explicit delayed density-gradient drive:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 hw2d_delayed_growth_validation.py \
+  --run-dir validation_runs/hw2d_delayed_growth_validation_default
+```
+
+The density-gradient drive is held at a quiet value through time 2 and ramps to
+the target value by time 4. Both coarse and base grids use the same initial
+amplitude, drive schedule, controller sampling interval, filter, magnitude
+threshold, growth-rate threshold, noise fraction, actuator delay, and control
+strengths.
+
+Current result: `HW2D_DELAYED_GROWTH_PREDICTIVE_SUPPORTED`.
+
+- The predictive trigger fired at time 4.305 on the base grid and 4.400 on the
+  coarse grid.
+- The magnitude trigger fired at approximately time 8.0 on both grids.
+- The uncontrolled peak occurred at time 12.0 on both grids.
+- Predictive control reduced peak 95th-percentile absolute vorticity by 28.24%
+  on the base grid and 27.84% on the coarse grid.
+- Predictive control reduced integrated fluctuation energy by 29.65% on the
+  base grid and 29.13% on the coarse grid.
+- The noisy/delayed predictive case reduced both peak and integrated burden on
+  both grids.
+- Predictive control used less integrated actuation effort than continuously
+  applied fixed moderate or fixed strong control.
+
+Interpretation: together with the resolved BOUT++ current-sheet result, this
+supports the predictive growth-rate trigger across two reduced-model
+implementations with a genuine precursor window. It remains a synthetic
+reduced-model validation: the delayed drive schedule is deliberately
+constructed and is not an experimentally measured tokamak precursor. The next
+step is to map the controller onto an EFIT-backed machine-equilibrium case and
+anchor its observable, threshold, noise, and delay to diagnostic data.
