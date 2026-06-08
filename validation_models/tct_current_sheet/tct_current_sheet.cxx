@@ -19,12 +19,18 @@ private:
   BoutReal tct_start_time;
   BoutReal tct_end_time;
   bool feedback_enabled;
+  int feedback_mode;
   BoutReal feedback_threshold;
   BoutReal feedback_delay;
+  BoutReal feedback_min_time;
   BoutReal feedback_noise_fraction;
   BoutReal feedback_trigger_time;
   BoutReal feedback_observable;
+  BoutReal feedback_signal;
+  BoutReal feedback_growth_rate;
   BoutReal feedback_gate;
+  BoutReal previous_feedback_time;
+  BoutReal previous_feedback_observable;
   BRACKET_METHOD bracket_method;
 
   std::unique_ptr<Laplacian> phi_solver;
@@ -40,12 +46,18 @@ protected:
     tct_start_time = options["start_time"].doc("TCT actuator turn-on time").withDefault(0.0);
     tct_end_time = options["end_time"].doc("TCT actuator turn-off time").withDefault(1e30);
     feedback_enabled = options["feedback_enabled"].doc("Enable max-vorticity threshold feedback").withDefault(false);
+    feedback_mode = options["feedback_mode"].doc("0=max-vorticity magnitude, 1=max-vorticity growth rate").withDefault(0);
     feedback_threshold = options["feedback_threshold"].doc("Measured max-vorticity trigger threshold").withDefault(0.02);
     feedback_delay = options["feedback_delay"].doc("Actuator delay after threshold crossing").withDefault(0.0);
+    feedback_min_time = options["feedback_min_time"].doc("Minimum observation time before feedback can trigger").withDefault(0.0);
     feedback_noise_fraction = options["feedback_noise_fraction"].doc("Deterministic sensor-noise fraction").withDefault(0.0);
     feedback_trigger_time = -1.0;
     feedback_observable = 0.0;
+    feedback_signal = 0.0;
+    feedback_growth_rate = 0.0;
     feedback_gate = 0.0;
+    previous_feedback_time = -1.0;
+    previous_feedback_observable = 0.0;
 
     switch (options["bracket"].withDefault(2)) {
     case 0:
@@ -83,6 +95,10 @@ protected:
     state["tct_mask"].assignRepeat(tct_mask).setAttributes({{"long_name", "Resolved TCT actuator mask"}});
     state["feedback_observable"].assignRepeat(feedback_observable).setAttributes(
         {{"long_name", "Measured global max-vorticity feedback observable"}});
+    state["feedback_signal"].assignRepeat(feedback_signal).setAttributes(
+        {{"long_name", "Closed-loop threshold signal"}});
+    state["feedback_growth_rate"].assignRepeat(feedback_growth_rate).setAttributes(
+        {{"long_name", "Measured max-vorticity growth-rate signal"}});
     state["feedback_gate"].assignRepeat(feedback_gate).setAttributes(
         {{"long_name", "Closed-loop TCT actuator gate"}});
     state["feedback_trigger_time"].assignRepeat(feedback_trigger_time).setAttributes(
@@ -98,7 +114,19 @@ protected:
 
     feedback_observable =
         max(abs(omega), true) * (1.0 + feedback_noise_fraction * sin(1.61803398875 * time));
-    if (feedback_enabled && feedback_trigger_time < 0.0 && feedback_observable >= feedback_threshold) {
+    if (previous_feedback_time >= 0.0 && time > previous_feedback_time) {
+      feedback_growth_rate =
+          (feedback_observable - previous_feedback_observable) / (time - previous_feedback_time);
+      previous_feedback_time = time;
+      previous_feedback_observable = feedback_observable;
+    } else if (previous_feedback_time < 0.0) {
+      previous_feedback_time = time;
+      previous_feedback_observable = feedback_observable;
+      feedback_growth_rate = 0.0;
+    }
+    feedback_signal = feedback_mode == 1 ? feedback_growth_rate : feedback_observable;
+    if (feedback_enabled && feedback_trigger_time < 0.0 && time >= feedback_min_time
+        && feedback_signal >= feedback_threshold) {
       feedback_trigger_time = time;
     }
 

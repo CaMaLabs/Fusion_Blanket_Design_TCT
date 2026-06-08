@@ -1,0 +1,48 @@
+
+MYG = 0
+periodicX = true
+
+[mesh]
+nx = 64
+ny = 1
+nz = 64
+dx = 0.18
+dy = 1.0
+dz = 0.18
+
+[tct]
+eta = 7.5e-4
+nu = 1.0e-3
+strength = 0.112431676048
+omega_strength = 0.0562158380238
+start_time = 0.0
+end_time = 1e30
+feedback_enabled = true
+feedback_mode = 0
+feedback_threshold = 0.018
+feedback_delay = 0
+feedback_min_time = 0
+feedback_noise_fraction = 0
+bracket = 2
+
+[psi]
+scale = 1.0
+function = 0.08 * exp(-((x-0.5)/0.07)^2) + 0.006 * cos(z)
+bndry_all = dirichlet_o2
+
+[omega]
+scale = 1.0
+function = 0.01 * sin(z) * exp(-((x-0.5)/(2*0.07))^2)
+bndry_all = dirichlet_o2
+
+[tct_mask]
+scale = 1.0
+function = exp(-((x-0.5)/0.11900000000000001)^2)
+bndry_all = dirichlet_o2
+
+[solver]
+output_step = 1.0
+nout = 18
+mxstep = 10000
+atol = 1e-10
+rtol = 1e-6

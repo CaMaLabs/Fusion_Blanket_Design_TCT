@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "grid": "base",
+      "magnitude_trigger_time": 2.3982320604268548,
+      "model": "BOUT++",
+      "noisy_predictive_duty_fraction": 0.9473684210526315,
+      "noisy_predictive_reduces_integrated": true,
+      "predictive_duty_fraction": 0.9473684210526315,
+      "predictive_effort_below_fixed_strong": true,
+      "predictive_reduces_integrated_vs_uncontrolled": true,
+      "predictive_reduces_peak_vs_magnitude": true,
+      "predictive_reduces_peak_vs_uncontrolled": true,
+      "predictive_trigger_time": 0.3255263388244808,
+      "predictive_triggers_before_magnitude": true,
+      "predictive_within_20pct_fixed_moderate": true
+    },
+    {
+      "grid": "coarse",
+      "magnitude_trigger_time": 4.956656056987873,
+      "model": "BOUT++",
+      "noisy_predictive_duty_fraction": 0.9473684210526315,
+      "noisy_predictive_reduces_integrated": true,
+      "predictive_duty_fraction": 0.9473684210526315,
+      "predictive_effort_below_fixed_strong": true,
+      "predictive_reduces_integrated_vs_uncontrolled": true,
+      "predictive_reduces_peak_vs_magnitude": true,
+      "predictive_reduces_peak_vs_uncontrolled": true,
+      "predictive_trigger_time": 0.3277491697486705,
+      "predictive_triggers_before_magnitude": true,
+      "predictive_within_20pct_fixed_moderate": true
+    },
+    {
+      "grid": "base",
+      "magnitude_trigger_time": 0.0,
+      "model": "HW2D-style",
+      "noisy_predictive_duty_fraction": 0.9047619047619048,
+      "noisy_predictive_reduces_integrated": true,
+      "predictive_duty_fraction": 0.7142857142857143,
+      "predictive_effort_below_fixed_strong": true,
+      "predictive_reduces_integrated_vs_uncontrolled": true,
+      "predictive_reduces_peak_vs_magnitude": false,
+      "predictive_reduces_peak_vs_uncontrolled": false,
+      "predictive_trigger_time": 2.31,
+      "predictive_triggers_before_magnitude": false,
+      "predictive_within_20pct_fixed_moderate": true
+    },
+    {
+      "grid": "coarse",
+      "magnitude_trigger_time": 0.0,
+      "model": "HW2D-style",
+      "noisy_predictive_duty_fraction": 0.9024390243902439,
+      "noisy_predictive_reduces_integrated": true,
+      "predictive_duty_fraction": 0.8292682926829268,
+      "predictive_effort_below_fixed_strong": true,
+      "predictive_reduces_integrated_vs_uncontrolled": true,
+      "predictive_reduces_peak_vs_magnitude": false,
+      "predictive_reduces_peak_vs_uncontrolled": false,
+      "predictive_trigger_time": 1.28,
+      "predictive_triggers_before_magnitude": false,
+      "predictive_within_20pct_fixed_moderate": true
+    }
+  ],
+  "controller": {
+    "bout_growth_threshold": 0.001,
+    "minimum_observation_time": 0.25,
+    "noisy_predictive_case": {
+      "actuator_delay": 0.5,
+      "noise_fraction": 0.2
+    },
+    "observable": "global_max_abs_vorticity_growth_rate"
+  },
+  "interpretation": "PASS: growth-rate feedback triggers earlier than magnitude feedback, suppresses BOUT++ peak and integrated current, approaches fixed-moderate performance with less effort than fixed strong control, and remains beneficial with noise and delay. HW2D-style results remain a limitation because that initialized-decay setup is not a clean precursor-growth test.",
+  "started_utc": "2026-06-08T16:33:28.494887+00:00",
+  "status": "PREDICTIVE_TRIGGER_BOUT_SUPPORTED_HW2D_LIMITED"
+}

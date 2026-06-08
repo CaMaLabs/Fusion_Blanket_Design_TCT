@@ -1,0 +1,23 @@
+{
+  "control": 0.8,
+  "control_duty_fraction": 0.9473684210526315,
+  "control_effort": 17.5,
+  "delay": 0.0,
+  "feedback": true,
+  "feedback_mode": 1,
+  "feedback_trigger_time": 0.3277491697486705,
+  "grid": "coarse",
+  "max_abs_omega": 0.012200747441717686,
+  "max_feedback_growth_rate": 0.0008345597672285307,
+  "max_feedback_observable": 0.012200747441717686,
+  "max_feedback_signal": 0.0008345597672285307,
+  "min_time": 0.25,
+  "model": "BOUT++",
+  "noise": 0.0,
+  "post_initial_max_abs_J": 0.23746789344775657,
+  "strategy": "predictive_growth",
+  "threshold": 0.001,
+  "time_end": 18.0,
+  "time_integrated_max_abs_J": 1.678034311394403,
+  "time_integrated_max_abs_omega": 0.1844799162767004
+}

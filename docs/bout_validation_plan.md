@@ -507,3 +507,50 @@ first peak in the current-sheet case. The next controller should use an earlier
 precursor, such as vorticity growth rate, current-sheet thinning rate, or a
 combined predictive threshold. The claim should not be promoted to successful
 closed-loop peak suppression yet.
+
+## Predictive growth-rate trigger check
+
+The follow-up controller uses measured max-vorticity growth rate instead of
+max-vorticity magnitude:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 predictive_tct_validation.py \
+  --run-dir validation_runs/predictive_tct_validation_default
+```
+
+The BOUT++ model supports this through `feedback_mode = 1`, with a minimum
+observation window of 0.25 time units to prevent the initial solver derivative
+from counting as a precursor. The campaign compares uncontrolled, fixed
+moderate, old magnitude threshold, predictive growth threshold, noisy/delayed
+predictive threshold, and fixed strong control.
+
+Current result: `PREDICTIVE_TRIGGER_BOUT_SUPPORTED_HW2D_LIMITED`.
+
+- BOUT++ predictive trigger time:
+  - base grid: 0.326 time units
+  - coarse grid: 0.328 time units
+- Old BOUT++ magnitude-trigger time:
+  - base grid: 2.398 time units
+  - coarse grid: 4.957 time units
+- BOUT++ predictive control reduced post-initial peak current versus both
+  uncontrolled and the old magnitude-threshold controller on both grids.
+- BOUT++ predictive control reduced integrated current versus uncontrolled and
+  remained within 20% of fixed moderate integrated performance on both grids.
+- The noisy/delayed predictive case remained integrated-beneficial on both
+  BOUT++ grids.
+- BOUT++ predictive duty was output-sampled at 94.74%, below fixed strong
+  continuous actuation, but sub-output delay timing should not be over-read
+  from that duty metric.
+- HW2D-style predictive cases reduced integrated fluctuation energy, but did not
+  reduce the peak or trigger earlier than the magnitude threshold because the
+  initialized-decay HW2D setup is not a clean precursor-growth test.
+
+Interpretation: this repairs the falsification boundary found by the previous
+closed-loop check for the resolved BOUT++ current-sheet model. A predictive
+growth-rate trigger can fire before the first reported current peak and reduce
+both peak and integrated current. The result is not yet a full cross-model
+closed-loop validation because the current HW2D setup does not provide a
+comparable growing precursor. The next open-source target is a HW2D initial
+condition or drive configuration with a delayed growth phase, so the predictive
+trigger can be tested against an independent model with a real precursor window.

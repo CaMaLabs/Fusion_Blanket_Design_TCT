@@ -80,8 +80,10 @@ omega_strength = {0.5 * strength * control:.12g}
 start_time = 0.0
 end_time = 1e30
 feedback_enabled = {str(bool(strategy["feedback"])).lower()}
-feedback_threshold = 0.018
+feedback_mode = {int(strategy.get("feedback_mode", 0))}
+feedback_threshold = {float(strategy.get("threshold", 0.018)):.12g}
 feedback_delay = {float(strategy["delay"]):.12g}
+feedback_min_time = {float(strategy.get("min_time", 0.0)):.12g}
 feedback_noise_fraction = {float(strategy["noise"]):.12g}
 bracket = 2
 
@@ -145,6 +147,8 @@ def _summarize_bout(case_dir: Path) -> dict[str, float]:
         time = np.asarray(ds.variables["t_array"][:], dtype=float)
         gate = _scalar_series(ds, "feedback_gate", len(time))
         observable = _scalar_series(ds, "feedback_observable", len(time))
+        signal = _scalar_series(ds, "feedback_signal", len(time))
+        growth_rate = _scalar_series(ds, "feedback_growth_rate", len(time))
         trigger = _scalar_series(ds, "feedback_trigger_time", len(time))
     axes = tuple(range(1, current.ndim))
     max_j = np.max(np.abs(current), axis=axes)
@@ -158,6 +162,8 @@ def _summarize_bout(case_dir: Path) -> dict[str, float]:
         "time_integrated_max_abs_omega": float(np.trapz(max_omega, time)),
         "feedback_trigger_time": float(np.max(trigger)),
         "max_feedback_observable": float(np.max(observable)),
+        "max_feedback_signal": float(np.max(signal)),
+        "max_feedback_growth_rate": float(np.max(growth_rate)),
         "control_duty_fraction": float(np.mean(active)),
         "control_effort": float(np.trapz(gate, time)),
     }
@@ -176,14 +182,29 @@ def _run_hw_case(grid: dict[str, Any], strategy_name: str, strategy: dict[str, A
     vort_series: list[np.ndarray] = []
     gates: list[float] = []
     observables: list[float] = []
+    signals: list[float] = []
     sample_every = max(1, int(round(0.2 / dt)))
     steps = int(round(t_end / dt))
+    previous_time = -1.0
+    previous_measured = 0.0
+    growth_rate = 0.0
     for step in range(steps + 1):
         t = step * dt
         measured = float(np.max(np.abs(vorticity))) * (
             1.0 + float(strategy["noise"]) * np.sin(1.61803398875 * t)
         )
-        if bool(strategy["feedback"]) and trigger_time < 0.0 and measured >= threshold:
+        if previous_time >= 0.0 and t > previous_time:
+            growth_rate = (measured - previous_measured) / (t - previous_time)
+        previous_time = t
+        previous_measured = measured
+        signal = growth_rate if int(strategy.get("feedback_mode", 0)) == 1 else measured
+        active_threshold = float(strategy.get("threshold", threshold))
+        if (
+            bool(strategy["feedback"])
+            and trigger_time < 0.0
+            and t >= float(strategy.get("min_time", 0.0))
+            and signal >= active_threshold
+        ):
             trigger_time = t
         if bool(strategy["feedback"]):
             gate = 1.0 if trigger_time >= 0.0 and t >= trigger_time + float(strategy["delay"]) else 0.0
@@ -195,6 +216,7 @@ def _run_hw_case(grid: dict[str, Any], strategy_name: str, strategy: dict[str, A
             vort_series.append(vorticity.copy())
             gates.append(gate)
             observables.append(measured)
+            signals.append(signal)
         if step == steps:
             break
         active_control = float(strategy["control"]) * gate
@@ -204,6 +226,8 @@ def _run_hw_case(grid: dict[str, Any], strategy_name: str, strategy: dict[str, A
         {
             "feedback_trigger_time": trigger_time,
             "max_feedback_observable": float(np.max(observables)),
+            "max_feedback_signal": float(np.max(signals)),
+            "max_feedback_growth_rate": float(np.max(signals)) if int(strategy.get("feedback_mode", 0)) == 1 else growth_rate,
             "control_duty_fraction": float(np.mean(np.asarray(gates) > 0.5)),
             "control_effort": float(np.trapz(gates, times)),
         }
