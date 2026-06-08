@@ -466,3 +466,44 @@ timing model, steady strong control has the lowest integrated energy, and
 over-control remains an unresolved actuator-model question. The validated claim
 is narrower and useful: early control beats late intervention in this
 open-source reduced-turbulence check.
+
+## Closed-loop threshold-control check
+
+The next rung replaces prescribed actuator timing with a runtime observable:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 closed_loop_tct_validation.py \
+  --run-dir validation_runs/closed_loop_tct_validation_default
+```
+
+The resolved BOUT++ current-sheet model now supports a latched global
+max-vorticity threshold, deterministic sensor-noise injection, and actuator
+delay. The campaign compares uncontrolled, fixed moderate, threshold
+closed-loop, noisy/delayed closed-loop, and fixed strong strategies across
+BOUT++ and HW2D-style coarse/base grids.
+
+Current result: `CLOSED_LOOP_REDUCED_MODEL_MIXED`.
+
+- Closed-loop control reduced integrated burden versus uncontrolled in every
+  tested model/grid.
+- The noisy/delayed closed-loop case also reduced integrated burden in every
+  tested model/grid.
+- BOUT++ closed-loop duty was 73.68% on the coarse grid and 84.21% on the base
+  grid, below continuous fixed-strong actuation.
+- BOUT++ threshold crossing occurred at approximately 4.96 coarse-grid time
+  units and 2.40 base-grid time units.
+- Closed loop did not reduce the reported peak metric because the threshold
+  fired after the first peak.
+- BOUT++ closed loop did not approach fixed-moderate integrated performance
+  within the predefined 20% criterion.
+- HW2D-style cases crossed the threshold at time zero from their initialized
+  perturbation, so they do not validate precursor detection or lower effort.
+
+Interpretation: this is a useful falsification boundary. A max-vorticity
+threshold can reduce accumulated burden after triggering, including with the
+tested noise and delay, but this observable triggers too late to reduce the
+first peak in the current-sheet case. The next controller should use an earlier
+precursor, such as vorticity growth rate, current-sheet thinning rate, or a
+combined predictive threshold. The claim should not be promoted to successful
+closed-loop peak suppression yet.

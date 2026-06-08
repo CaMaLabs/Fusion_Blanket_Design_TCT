@@ -18,6 +18,13 @@ private:
   BoutReal omega_tct_strength;
   BoutReal tct_start_time;
   BoutReal tct_end_time;
+  bool feedback_enabled;
+  BoutReal feedback_threshold;
+  BoutReal feedback_delay;
+  BoutReal feedback_noise_fraction;
+  BoutReal feedback_trigger_time;
+  BoutReal feedback_observable;
+  BoutReal feedback_gate;
   BRACKET_METHOD bracket_method;
 
   std::unique_ptr<Laplacian> phi_solver;
@@ -32,6 +39,13 @@ protected:
         options["omega_strength"].doc("Localized vorticity actuator damping").withDefault(0.0);
     tct_start_time = options["start_time"].doc("TCT actuator turn-on time").withDefault(0.0);
     tct_end_time = options["end_time"].doc("TCT actuator turn-off time").withDefault(1e30);
+    feedback_enabled = options["feedback_enabled"].doc("Enable max-vorticity threshold feedback").withDefault(false);
+    feedback_threshold = options["feedback_threshold"].doc("Measured max-vorticity trigger threshold").withDefault(0.02);
+    feedback_delay = options["feedback_delay"].doc("Actuator delay after threshold crossing").withDefault(0.0);
+    feedback_noise_fraction = options["feedback_noise_fraction"].doc("Deterministic sensor-noise fraction").withDefault(0.0);
+    feedback_trigger_time = -1.0;
+    feedback_observable = 0.0;
+    feedback_gate = 0.0;
 
     switch (options["bracket"].withDefault(2)) {
     case 0:
@@ -67,6 +81,12 @@ protected:
     state["phi"].assignRepeat(phi).setAttributes({{"long_name", "Electrostatic potential"}});
     state["J"].assignRepeat(J).setAttributes({{"long_name", "Current density proxy"}});
     state["tct_mask"].assignRepeat(tct_mask).setAttributes({{"long_name", "Resolved TCT actuator mask"}});
+    state["feedback_observable"].assignRepeat(feedback_observable).setAttributes(
+        {{"long_name", "Measured global max-vorticity feedback observable"}});
+    state["feedback_gate"].assignRepeat(feedback_gate).setAttributes(
+        {{"long_name", "Closed-loop TCT actuator gate"}});
+    state["feedback_trigger_time"].assignRepeat(feedback_trigger_time).setAttributes(
+        {{"long_name", "Closed-loop threshold crossing time"}});
   }
 
   int rhs(BoutReal time) override {
@@ -76,7 +96,18 @@ protected:
     J = -Delp2(psi);
     mesh->communicate(J);
 
-    const BoutReal actuator_gate = (time >= tct_start_time && time <= tct_end_time) ? 1.0 : 0.0;
+    feedback_observable =
+        max(abs(omega), true) * (1.0 + feedback_noise_fraction * sin(1.61803398875 * time));
+    if (feedback_enabled && feedback_trigger_time < 0.0 && feedback_observable >= feedback_threshold) {
+      feedback_trigger_time = time;
+    }
+
+    const BoutReal time_gate = (time >= tct_start_time && time <= tct_end_time) ? 1.0 : 0.0;
+    feedback_gate = feedback_enabled && feedback_trigger_time >= 0.0
+                            && time >= feedback_trigger_time + feedback_delay
+                        ? 1.0
+                        : 0.0;
+    const BoutReal actuator_gate = feedback_enabled ? feedback_gate : time_gate;
 
     ddt(psi) = -bracket(phi, psi, bracket_method) + eta * Delp2(psi)
                - actuator_gate * tct_strength * tct_mask * psi;

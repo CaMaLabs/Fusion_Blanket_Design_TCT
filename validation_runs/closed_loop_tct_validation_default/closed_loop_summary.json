@@ -1,0 +1,69 @@
+{
+  "controller": {
+    "bout_threshold": 0.018,
+    "hw2d_threshold": 0.105,
+    "noise_model": "deterministic multiplicative sinusoid",
+    "noisy_delay_case": {
+      "actuator_delay": 2.0,
+      "noise_fraction": 0.2
+    },
+    "observable": "global_max_abs_vorticity"
+  },
+  "interpretation": "MIXED: threshold-triggered control reduced integrated burden in every tested model/grid and the noisy/delayed case remained beneficial, but it did not reduce the peak. In BOUT++, the vorticity threshold fired after the first reported current peak and did not approach fixed-moderate integrated performance within 20%. In HW2D-style cases, the initialized perturbation crossed the threshold at time zero, so that model does not validate precursor detection or lower effort than fixed strong control.",
+  "model_checks": [
+    {
+      "closed_loop_duty_fraction": 0.8421052631578947,
+      "closed_loop_effort_below_fixed_strong": true,
+      "closed_loop_reduces_integrated": true,
+      "closed_loop_reduces_peak": false,
+      "closed_loop_trigger_time": 2.3982320604268548,
+      "closed_loop_within_20pct_fixed_moderate": false,
+      "grid": "base",
+      "model": "BOUT++",
+      "noisy_delayed_duty_fraction": 0.6842105263157895,
+      "noisy_delayed_reduces_integrated": true,
+      "noisy_delayed_trigger_time": 3.283649084313121
+    },
+    {
+      "closed_loop_duty_fraction": 0.7368421052631579,
+      "closed_loop_effort_below_fixed_strong": true,
+      "closed_loop_reduces_integrated": true,
+      "closed_loop_reduces_peak": false,
+      "closed_loop_trigger_time": 4.956656056987873,
+      "closed_loop_within_20pct_fixed_moderate": false,
+      "grid": "coarse",
+      "model": "BOUT++",
+      "noisy_delayed_duty_fraction": 0.631578947368421,
+      "noisy_delayed_reduces_integrated": true,
+      "noisy_delayed_trigger_time": 4.126893150997404
+    },
+    {
+      "closed_loop_duty_fraction": 1.0,
+      "closed_loop_effort_below_fixed_strong": false,
+      "closed_loop_reduces_integrated": true,
+      "closed_loop_reduces_peak": false,
+      "closed_loop_trigger_time": 0.0,
+      "closed_loop_within_20pct_fixed_moderate": true,
+      "grid": "base",
+      "model": "HW2D-style",
+      "noisy_delayed_duty_fraction": 0.7380952380952381,
+      "noisy_delayed_reduces_integrated": true,
+      "noisy_delayed_trigger_time": 0.0
+    },
+    {
+      "closed_loop_duty_fraction": 1.0,
+      "closed_loop_effort_below_fixed_strong": false,
+      "closed_loop_reduces_integrated": true,
+      "closed_loop_reduces_peak": false,
+      "closed_loop_trigger_time": 0.0,
+      "closed_loop_within_20pct_fixed_moderate": true,
+      "grid": "coarse",
+      "model": "HW2D-style",
+      "noisy_delayed_duty_fraction": 0.7560975609756098,
+      "noisy_delayed_reduces_integrated": true,
+      "noisy_delayed_trigger_time": 0.0
+    }
+  ],
+  "started_utc": "2026-06-08T12:36:40.993366+00:00",
+  "status": "CLOSED_LOOP_REDUCED_MODEL_MIXED"
+}
