@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "grid": "coarse",
+      "magnitude_trigger_time": 4.3,
+      "noisy_delayed_reduces_integrated": true,
+      "noisy_delayed_reduces_peak": true,
+      "predictive_effort_below_fixed_strong": true,
+      "predictive_reduces_integrated": true,
+      "predictive_reduces_peak": true,
+      "predictive_trigger_time": 2.5,
+      "predictive_triggers_before_magnitude": true,
+      "predictive_triggers_before_peak": true,
+      "predictive_within_20pct_fixed_moderate": true,
+      "uncontrolled_peak_time": 12.0
+    },
+    {
+      "grid": "native",
+      "magnitude_trigger_time": 4.2,
+      "noisy_delayed_reduces_integrated": true,
+      "noisy_delayed_reduces_peak": true,
+      "predictive_effort_below_fixed_strong": true,
+      "predictive_reduces_integrated": true,
+      "predictive_reduces_peak": true,
+      "predictive_trigger_time": 2.5,
+      "predictive_triggers_before_magnitude": true,
+      "predictive_triggers_before_peak": true,
+      "predictive_within_20pct_fixed_moderate": true,
+      "uncontrolled_peak_time": 12.0
+    }
+  ],
+  "controller": {
+    "controller_interval": 0.1,
+    "filter": "ema_0.5",
+    "growth_threshold": 0.03,
+    "magnitude_threshold": 0.15,
+    "noisy_delayed_case": {
+      "delay": 0.5,
+      "noise_fraction": 0.1
+    },
+    "observable": "max_abs_laplacian_perturbation_flux"
+  },
+  "equilibrium": {
+    "bcentr_t": -1.8977622,
+    "current_a": 1339492.25,
+    "header": "EFITD    06/25/2013    #158103  3796ms           3 129 129",
+    "machine": "DIII-D",
+    "native_grid": [
+      129,
+      129
+    ],
+    "path": "/root/Fusion_Blanket_Design_TCT/validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/geqdsk",
+    "sha256": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e",
+    "shot_time": "158103 @ 3796 ms"
+  },
+  "geometry": [
+    {
+      "active_edge_mask_fraction": 0.21372781065088758,
+      "dr_m": 0.026562500000000044,
+      "dz_m": 0.050000000000000044,
+      "grid": "coarse",
+      "nr": 65,
+      "nz": 65
+    },
+    {
+      "active_edge_mask_fraction": 0.21501111712036536,
+      "dr_m": 0.013281250000000022,
+      "dz_m": 0.02499999999999991,
+      "grid": "native",
+      "nr": 129,
+      "nz": 129
+    }
+  ],
+  "interpretation": "PASS: one predictive controller configuration triggers before magnitude feedback and the uncontrolled peak on native and coarse DIII-D EFIT grids, reduces peak and integrated perturbation current, remains beneficial with noise and delay, and approaches fixed-moderate performance with lower effort than fixed strong control. This is an EFIT-backed reduced R-Z model, not a field-aligned BOUT++ or nonlinear M3D-C1 machine-geometry validation; the perturbation drive is synthetic and raw diagnostic timing is unavailable.",
+  "started_utc": "2026-06-09T17:13:28.949801+00:00",
+  "status": "DIIID_EFIT_GRID_PREDICTIVE_REDUCED_SUPPORTED"
+}

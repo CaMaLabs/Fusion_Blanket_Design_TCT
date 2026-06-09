@@ -594,3 +594,46 @@ reduced-model validation: the delayed drive schedule is deliberately
 constructed and is not an experimentally measured tokamak precursor. The next
 step is to map the controller onto an EFIT-backed machine-equilibrium case and
 anchor its observable, threshold, noise, and delay to diagnostic data.
+
+## DIII-D EFIT-grid predictive check
+
+The next rung maps the predictive controller onto the imported DIII-D shot
+158103 at 3796 ms GEQDSK:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 efit_predictive_tct_validation.py \
+  --run-dir validation_runs/efit_predictive_tct_validation_default
+```
+
+The campaign evolves a reduced perturbation-flux equation directly on the real
+EFIT R-Z flux grid. The normalized-flux separatrix geometry defines the edge
+perturbation and actuator masks. The native `129 x 129` GEQDSK grid and a
+downsampled `65 x 65` grid use one controller configuration. The delayed
+perturbation drive remains synthetic because raw diagnostic precursor timing is
+not available in the repository.
+
+Current result: `DIIID_EFIT_GRID_PREDICTIVE_REDUCED_SUPPORTED`.
+
+- Predictive feedback triggered at time 2.5 on both grids.
+- Magnitude feedback triggered at time 4.2 on the native grid and 4.3 on the
+  coarse grid.
+- The uncontrolled perturbation-current peak occurred at time 12.0.
+- Predictive control reduced peak perturbation current by 45.90% on the native
+  grid and 52.50% on the coarse grid.
+- Predictive control reduced integrated perturbation current by 36.89% on the
+  native grid and 42.64% on the coarse grid.
+- The noisy/delayed predictive case reduced both peak and integrated
+  perturbation current on both grids.
+- Predictive integrated performance remained within 20% of fixed moderate
+  control while using less effort than continuously applied fixed strong
+  control.
+
+Interpretation: the controller has now been applied to an actual DIII-D
+EFIT-backed geometry, closing the input-only machine-equilibrium gap. This is
+still a reduced R-Z perturbation-flux model, not a field-aligned BOUT++ run, a
+nonlinear M3D-C1 control run, or validation against raw DIII-D diagnostics. No
+Hypnotoad/BOUT++ machine mesh is available in the current open tooling. The next
+rung requires generating that field-aligned mesh or obtaining a runnable
+machine-geometry control model and anchoring the synthetic drive to diagnostic
+precursor timing.
