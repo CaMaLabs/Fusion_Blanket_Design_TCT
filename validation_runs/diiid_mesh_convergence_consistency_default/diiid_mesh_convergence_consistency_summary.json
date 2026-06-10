@@ -1,0 +1,366 @@
+{
+  "all_required_fields_finite": true,
+  "all_source_checks_pass": true,
+  "convergence": {
+    "field_trends": {
+      "Bpxy": {
+        "base_to_fine_relative_rmse": 0.00485560342993513,
+        "coarse_to_base_relative_rmse": 0.016609788679872797,
+        "improvement_ratio": 0.2923338474389498,
+        "improves": true
+      },
+      "Brxy": {
+        "base_to_fine_relative_rmse": 0.0235893239868055,
+        "coarse_to_base_relative_rmse": 0.052543520733645856,
+        "improvement_ratio": 0.4489482938607167,
+        "improves": true
+      },
+      "Btxy": {
+        "base_to_fine_relative_rmse": 0.0019186894915585225,
+        "coarse_to_base_relative_rmse": 0.004689912418552117,
+        "improvement_ratio": 0.4091098767577553,
+        "improves": true
+      },
+      "Bxy": {
+        "base_to_fine_relative_rmse": 0.0019090504582941045,
+        "coarse_to_base_relative_rmse": 0.004655423285912453,
+        "improvement_ratio": 0.4100702215566494,
+        "improves": true
+      },
+      "Bzxy": {
+        "base_to_fine_relative_rmse": 0.006614689567557959,
+        "coarse_to_base_relative_rmse": 0.0190526568176178,
+        "improvement_ratio": 0.34717937927908415,
+        "improves": true
+      },
+      "J": {
+        "base_to_fine_relative_rmse": 0.025761528165115854,
+        "coarse_to_base_relative_rmse": 0.08017166545000243,
+        "improvement_ratio": 0.321329587211601,
+        "improves": true
+      },
+      "Rxy": {
+        "base_to_fine_relative_rmse": 0.0017683387092259704,
+        "coarse_to_base_relative_rmse": 0.004581286907366048,
+        "improvement_ratio": 0.38599169730730837,
+        "improves": true
+      },
+      "Zxy": {
+        "base_to_fine_relative_rmse": 0.005571550290055817,
+        "coarse_to_base_relative_rmse": 0.012844274734616723,
+        "improvement_ratio": 0.4337769477197401,
+        "improves": true
+      },
+      "g11": {
+        "base_to_fine_relative_rmse": 0.006274441138812609,
+        "coarse_to_base_relative_rmse": 0.022934045840581455,
+        "improvement_ratio": 0.27358631714732506,
+        "improves": true
+      },
+      "g22": {
+        "base_to_fine_relative_rmse": 0.06632014845125253,
+        "coarse_to_base_relative_rmse": 0.2529900828631265,
+        "improvement_ratio": 0.2621452497295448,
+        "improves": true
+      },
+      "g33": {
+        "base_to_fine_relative_rmse": 0.170746491663922,
+        "coarse_to_base_relative_rmse": 0.30319313432847406,
+        "improvement_ratio": 0.563160811810924,
+        "improves": true
+      },
+      "psixy": {
+        "base_to_fine_relative_rmse": 0.0020167438287900645,
+        "coarse_to_base_relative_rmse": 0.00588506013016649,
+        "improvement_ratio": 0.34268873795398425,
+        "improves": true
+      }
+    },
+    "pairs": {
+      "base_to_fine": {
+        "Bpxy": {
+          "maximum_absolute_difference": 0.008349752632290847,
+          "relative_rmse": 0.00485560342993513
+        },
+        "Brxy": {
+          "maximum_absolute_difference": 0.05155553353413689,
+          "relative_rmse": 0.0235893239868055
+        },
+        "Btxy": {
+          "maximum_absolute_difference": 0.08025259682110386,
+          "relative_rmse": 0.0019186894915585225
+        },
+        "Bxy": {
+          "maximum_absolute_difference": 0.08058997290899672,
+          "relative_rmse": 0.0019090504582941045
+        },
+        "Bzxy": {
+          "maximum_absolute_difference": 0.014164835087575586,
+          "relative_rmse": 0.006614689567557959
+        },
+        "J": {
+          "maximum_absolute_difference": 2.030315474411154,
+          "relative_rmse": 0.025761528165115854
+        },
+        "Rxy": {
+          "maximum_absolute_difference": 0.04142422740355034,
+          "relative_rmse": 0.0017683387092259704
+        },
+        "Zxy": {
+          "maximum_absolute_difference": 0.11072080596773914,
+          "relative_rmse": 0.005571550290055817
+        },
+        "g11": {
+          "maximum_absolute_difference": 0.011983777189426337,
+          "relative_rmse": 0.006274441138812609
+        },
+        "g22": {
+          "maximum_absolute_difference": 11972.467702232178,
+          "relative_rmse": 0.06632014845125253
+        },
+        "g33": {
+          "maximum_absolute_difference": 5061.851297846359,
+          "relative_rmse": 0.170746491663922
+        },
+        "psixy": {
+          "maximum_absolute_difference": 0.0003021856246447491,
+          "relative_rmse": 0.0020167438287900645
+        }
+      },
+      "coarse_to_base": {
+        "Bpxy": {
+          "maximum_absolute_difference": 0.030102292812334563,
+          "relative_rmse": 0.016609788679872797
+        },
+        "Brxy": {
+          "maximum_absolute_difference": 0.08698049606336351,
+          "relative_rmse": 0.052543520733645856
+        },
+        "Btxy": {
+          "maximum_absolute_difference": 0.13497034944729824,
+          "relative_rmse": 0.004689912418552117
+        },
+        "Bxy": {
+          "maximum_absolute_difference": 0.13558189124118414,
+          "relative_rmse": 0.004655423285912453
+        },
+        "Bzxy": {
+          "maximum_absolute_difference": 0.024044227050662788,
+          "relative_rmse": 0.0190526568176178
+        },
+        "J": {
+          "maximum_absolute_difference": 5.6402054365416845,
+          "relative_rmse": 0.08017166545000243
+        },
+        "Rxy": {
+          "maximum_absolute_difference": 0.06955057951391508,
+          "relative_rmse": 0.004581286907366048
+        },
+        "Zxy": {
+          "maximum_absolute_difference": 0.1862341515530348,
+          "relative_rmse": 0.012844274734616723
+        },
+        "g11": {
+          "maximum_absolute_difference": 0.04420726337463898,
+          "relative_rmse": 0.022934045840581455
+        },
+        "g22": {
+          "maximum_absolute_difference": 33677.7213788856,
+          "relative_rmse": 0.2529900828631265
+        },
+        "g33": {
+          "maximum_absolute_difference": 5229.717027251445,
+          "relative_rmse": 0.30319313432847406
+        },
+        "psixy": {
+          "maximum_absolute_difference": 0.0008818131185940811,
+          "relative_rmse": 0.00588506013016649
+        }
+      }
+    }
+  },
+  "field_count": 12,
+  "generated_at": "2026-06-10T20:48:09.570068+00:00",
+  "geqdsk": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/geqdsk",
+  "geqdsk_sha256": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e",
+  "improving_field_count": 12,
+  "meshes": {
+    "base": {
+      "finite_fields": {
+        "Bpxy": true,
+        "Brxy": true,
+        "Btxy": true,
+        "Bxy": true,
+        "Bzxy": true,
+        "J": true,
+        "Rxy": true,
+        "Zxy": true,
+        "g11": true,
+        "g22": true,
+        "g33": true,
+        "psixy": true
+      },
+      "pressure": {
+        "connected_region_maximum_absolute_error": 0.0,
+        "connected_region_relative_rmse": 0.0,
+        "divertor_leg_behavior": "Hypnotoad intentionally reflects pressure in private-flux leg regions.",
+        "divertor_leg_direct_profile_relative_rmse": 0.9391508445110217
+      },
+      "required_fields_finite": true,
+      "source_fields": {
+        "Brxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "Btxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "Bzxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "psixy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        }
+      },
+      "topology": {
+        "ixseps1": 24,
+        "ixseps2": 40,
+        "jyseps1_1": 23,
+        "jyseps1_2": 56,
+        "jyseps2_1": 56,
+        "jyseps2_2": 87,
+        "nx": 40,
+        "ny": 112
+      }
+    },
+    "coarse": {
+      "finite_fields": {
+        "Bpxy": true,
+        "Brxy": true,
+        "Btxy": true,
+        "Bxy": true,
+        "Bzxy": true,
+        "J": true,
+        "Rxy": true,
+        "Zxy": true,
+        "g11": true,
+        "g22": true,
+        "g33": true,
+        "psixy": true
+      },
+      "pressure": {
+        "connected_region_maximum_absolute_error": 0.0,
+        "connected_region_relative_rmse": 0.0,
+        "divertor_leg_behavior": "Hypnotoad intentionally reflects pressure in private-flux leg regions.",
+        "divertor_leg_direct_profile_relative_rmse": 0.9391586407580846
+      },
+      "required_fields_finite": true,
+      "source_fields": {
+        "Brxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "Btxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "Bzxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "psixy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        }
+      },
+      "topology": {
+        "ixseps1": 12,
+        "ixseps2": 20,
+        "jyseps1_1": 11,
+        "jyseps1_2": 28,
+        "jyseps2_1": 28,
+        "jyseps2_2": 43,
+        "nx": 20,
+        "ny": 56
+      }
+    },
+    "fine": {
+      "finite_fields": {
+        "Bpxy": true,
+        "Brxy": true,
+        "Btxy": true,
+        "Bxy": true,
+        "Bzxy": true,
+        "J": true,
+        "Rxy": true,
+        "Zxy": true,
+        "g11": true,
+        "g22": true,
+        "g33": true,
+        "psixy": true
+      },
+      "pressure": {
+        "connected_region_maximum_absolute_error": 0.0,
+        "connected_region_relative_rmse": 0.0,
+        "divertor_leg_behavior": "Hypnotoad intentionally reflects pressure in private-flux leg regions.",
+        "divertor_leg_direct_profile_relative_rmse": 0.9391494477202751
+      },
+      "required_fields_finite": true,
+      "source_fields": {
+        "Brxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "Btxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "Bzxy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        },
+        "psixy": {
+          "maximum_absolute_error": 0.0,
+          "relative_rmse": 0.0
+        }
+      },
+      "topology": {
+        "ixseps1": 36,
+        "ixseps2": 60,
+        "jyseps1_1": 35,
+        "jyseps1_2": 84,
+        "jyseps2_1": 84,
+        "jyseps2_2": 131,
+        "nx": 60,
+        "ny": 168
+      }
+    }
+  },
+  "resolutions": {
+    "base": {
+      "nx_core": 24,
+      "nx_sol": 16,
+      "ny_inner_divertor": 24,
+      "ny_outer_divertor": 24,
+      "ny_sol": 64
+    },
+    "coarse": {
+      "nx_core": 12,
+      "nx_sol": 8,
+      "ny_inner_divertor": 12,
+      "ny_outer_divertor": 12,
+      "ny_sol": 32
+    },
+    "fine": {
+      "nx_core": 36,
+      "nx_sol": 24,
+      "ny_inner_divertor": 36,
+      "ny_outer_divertor": 36,
+      "ny_sol": 96
+    }
+  },
+  "status": "DIIID_MESH_CONVERGENCE_AND_GEQDSK_CONSISTENCY_SUPPORTED"
+}

@@ -1,0 +1,12 @@
+orthogonal: true
+psinorm_core: 0.9
+psinorm_pf: 0.9
+psinorm_sol: 1.05
+psinorm_sol_inner: 1.05
+finecontour_Nfine: 200
+number_of_processors: 1
+nx_core: 24
+nx_sol: 16
+ny_inner_divertor: 24
+ny_outer_divertor: 24
+ny_sol: 64

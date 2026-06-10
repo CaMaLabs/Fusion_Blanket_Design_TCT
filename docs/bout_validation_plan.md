@@ -719,3 +719,39 @@ not an exact-divertor-topology result, ELM growth validation, TCT control test,
 or experimental diagnostic comparison. The next rung is an exact-topology
 14-rank run on conventional Linux/HPC infrastructure, followed by a defensible
 `Jpar0` profile and controlled/uncontrolled linear growth-rate comparisons.
+
+## DIII-D mesh-resolution convergence and GEQDSK consistency
+
+The DIII-D field-aligned mesh generation has now been checked across
+proportional coarse, base, and fine resolutions:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+/root/.venvs/hypnotoad/bin/python diiid_mesh_convergence_consistency.py
+```
+
+The campaign independently regenerates `20 x 56`, `40 x 112`, and `60 x 168`
+meshes from the same shot 158103 at 3796 ms GEQDSK. Each mesh is checked against
+the source-equilibrium interpolation at its own points, then all three meshes
+are resampled onto a common logical grid for pairwise resolution comparisons.
+
+Current result: `DIIID_MESH_CONVERGENCE_AND_GEQDSK_CONSISTENCY_SUPPORTED`.
+
+- `psi`, `Br`, `Bz`, and `Bt` match the source-equilibrium representation at
+  every tested mesh point.
+- Pressure matches the source profile in the core/SOL-connected region.
+- Private-flux divertor-leg pressure differs by design because Hypnotoad
+  reflects pressure across flux in those regions.
+- All required mesh fields are finite at all three resolutions.
+- All 12 compared fields have lower base-to-fine error than coarse-to-base
+  error.
+- Base-to-fine relative RMSE is 0.18% for `Rxy`, 0.56% for `Zxy`, 0.20% for
+  `psixy`, 2.36% for `Brxy`, and 2.58% for the Jacobian.
+- Metric convergence remains weaker: base-to-fine relative RMSE is 6.63% for
+  `g22` and 17.07% for `g33`.
+
+Interpretation: the field-aligned mesh shows consistent convergence direction
+and preserves the source equilibrium, but the base grid should not be described
+as fully metric-converged. This is mesh-generation validation, not
+physics-solution convergence, exact-topology BOUT++ evolution, TCT validation,
+or experimental agreement.
