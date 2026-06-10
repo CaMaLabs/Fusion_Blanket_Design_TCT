@@ -1,59 +1,95 @@
 # Validation Status
 
-This repository is a public research workspace for fusion blanket optimization and thickness-controlled tokamak (TCT) concept exploration.
+This file gives a single-page status view for reviewers.
 
-The current codebase should be read as a coupled screening and candidate-ranking workflow. It is not a completed reactor design, and it does not claim that TCT, liquid-lithium coupling, or any finalist blanket geometry has been experimentally validated.
+Nothing in this repository should be interpreted as a demonstrated reactor design. The current value of the repository is the validation pipeline, assumptions registry, candidate-generation code, validation scaffolding, and provenance-preserving development history.
+
+## Status legend
+
+| Status | Meaning |
+|---|---|
+| Implemented | Present in repository code, documents, or committed artifacts. |
+| Smoke-tested | Basic syntax / lightweight CI or startup path exists. |
+| Screening-level | Useful for candidate generation, not final validation. |
+| Preliminary support | Early result or scaffold exists, but not enough for a strong physics claim. |
+| Needs benchmark | Requires a small accepted test case before technical claims are strong. |
+| Needs expert review | Requires review by a domain expert or supported code user. |
+| Not validated | Should not be used as evidence yet. |
+| Provenance only | Retained to preserve development history; not a current recommended code path. |
 
 ## Current validation matrix
 
 | Component | Current status | Evidence in repo | Next validation step |
 |---|---|---|---|
-| Plasma operating point | Proxy / analytic model plus DIII-D EFIT-backed reduced R-Z validation; official BOUT++ `elm-pb` machine-geometry startup smoke passed with serial topology override; Hypnotoad mesh convergence direction supported | `fusion_engine_v5/engine/plasma_model.py`, `efit_predictive_tct_validation.py`, `diiid_hypnotoad_mesh.py`, `diiid_bout_elm_mesh_smoke.py`, `diiid_mesh_convergence_consistency.py`, `validation_runs/diiid_mesh_convergence_consistency_default/` | Run the exact X-point topology with 14 MPI ranks, add `Jpar0`, and perform physics-solution convergence and linear growth-rate checks; add NSTX-U and ITER EFIT/GEQDSK files. |
-| TCT control response | Predictive trigger supported across reduced BOUT++ current-sheet, HW2D-style delayed-growth, and DIII-D EFIT-grid R-Z cases; not yet mapped into the machine-mesh `elm-pb` case | `predictive_tct_validation.py`, `hw2d_delayed_growth_validation.py`, `efit_predictive_tct_validation.py`, `validation_runs/efit_predictive_tct_validation_default/` | Replace synthetic precursor drive with diagnostic-anchored timing and map the controller onto an exact-topology DIII-D BOUT++ case. |
-| Current-sheet / plasmoid suppression | Reduced-MHD slab support for preemptive actuation | `validation_models/tct_current_sheet/`, `validation_runs/bout_tct_current_sheet_sweep_default/` | Test against EFIT-backed machine equilibria and nonlinear MHD tools; late plasmoid-stop claims remain unsupported. |
-| Machine EFIT / GEQDSK inputs | DIII-D baseline imported, converted to proportional coarse/base/fine Hypnotoad meshes, source-equilibrium consistency checked, and ingested by official BOUT++ `elm-pb`; exact X-point evolution remains blocked by local MPI launch restrictions | DIII-D public EFIT `g/a/p` package copied from CaMaLabs/M3DC1; `validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/`; `validation_runs/diiid_mesh_convergence_consistency_default/`; `validation_runs/diiid_bout_elm_mesh_smoke_default/` | Run exact topology on a conventional Linux/HPC host, refine metric-sensitive fields such as `g33`, add real NSTX-U and ITER equilibrium files, and require experimental diagnostics before promoting beyond reduced-model status. |
-| Liquid lithium wall moderation | Heuristic engineering proxy | `fusion_engine_v5/engine/lithium_wall.py`, lithium modifier in `reactor_simulation.py` | Add thermal-hydraulic and MHD drag validation, including flow stability and heat removal. |
-| Blanket / TBR estimate | Dataset/proxy with OpenMC bridge | `fusion_engine_v5/blanket/`, `run_openmc_validation()` calls | Run explicit OpenMC finalist cases with documented geometry, materials, particles, and uncertainty. |
-| Event severity / survivability | Monte Carlo proxy | `_monte_carlo_plasma()` and event-adjusted net power in `reactor_simulation.py` | Compare event rates and damage assumptions with ELM / disruption / reconnection literature or simulation outputs. |
-| Plant power balance | Screening-level model | `fusion_engine_v5/engine/power_balance.py` | Separate physics validation from economic scoring; document assumptions. |
-| Evolutionary candidate search | Implemented screening workflow | `run_evo_reactor_search.py`, `evo_reactor_runs/` outputs | Run reproducible sweeps, preserve seeds, compare Pareto fronts, and promote finalists to OpenMC/MHD validation. |
-| Legacy standalone optimizer | Provenance only | `tct_full_reactor_optimizer.py` | Retained only to show development history; not the current model. |
+| Repository review structure | Implemented | `README.md`, `ROADMAP.md`, `FUNDING.md`, `ARCHIVE_INDEX.md`, `docs/assumptions.md`, `docs/falsification_tests.md`, `docs/benchmark_targets.md` | Get one external reviewer to confirm whether the 5-minute / 30-minute review path is clear. |
+| CI / smoke workflow | Smoke-tested target | `.github/workflows/smoke.yml` | Keep CI lightweight; do not treat CI success as physics validation. Add deterministic artifact summaries later. |
+| Plasma operating point | Screening-level / preliminary support | `fusion_engine_v5/engine/plasma_model.py`, EFIT / GEQDSK-related scripts and validation folders where present | Run exact topology / accepted machine cases in a supported environment and document limitations. |
+| TCT control response | Screening-level / needs benchmark | TCT proxy scripts and validation outputs where present | Replace synthetic precursor drive with diagnostic-anchored timing or a reduced benchmark. |
+| Current-sheet / plasmoid suppression | Needs benchmark / expert review | Reduced current-sheet and BOUT-style scaffolding where present | First test whether thickness / aspect-ratio / plasmoid-marginality variables map to accepted reduced-MHD or reconnection diagnostics. |
+| Machine EFIT / GEQDSK inputs | Preliminary support | `validation_inputs/`, `validation_runs/`, and companion `CaMaLabs/M3DC1` work where present | Run on a conventional Linux/HPC host or supported environment; require experimental diagnostics before promoting claims. |
+| Liquid lithium wall moderation | Speculative / screening-level | `fusion_engine_v5/engine/lithium_wall.py` and related scoring logic where present | Separate wall survivability from MHD claims; add thermal-hydraulic and material compatibility checks. |
+| Blanket / TBR estimate | Screening-level | `fusion_engine_v5/blanket/`, OpenMC-style bridge files where present | Run explicit finalist cases with documented geometry, materials, particle counts, and uncertainty. |
+| Event severity / survivability | Screening-level proxy | Monte Carlo / event severity logic where present | Compare assumptions against ELM / disruption / reconnection literature or simulation outputs. |
+| Plant power balance | Screening-level | power-balance modules and optimizer scoring where present | Separate physics validation from economic scoring; document all assumptions. |
+| Evolutionary candidate search | Implemented screening workflow | optimizer scripts and generated candidate outputs | Add deterministic seeds, manifests, and small reproducible examples. |
+| Historical logs / backups / generated outputs | Provenance only unless specifically referenced | `run.log`, `overnight_campaign.log`, `*.bak`, `*.broken`, `gen_*`, `validation_runs/*` | Preserve but index as historical; do not require reviewers to infer current claims from these files. |
 
 ## What can be claimed from this repo
 
-The repository currently supports this claim:
+The repository currently supports this conservative claim:
 
-> A reproducible proxy workflow has been implemented to screen fusion blanket / lithium-wall / TCT-coupled design candidates and identify cases worth higher-fidelity OpenMC and MHD validation.
+> A public, provenance-preserving proxy workflow has been implemented to screen fusion blanket / lithium-wall / TCT-coupled design candidates and organize them for higher-fidelity OpenMC, reduced-MHD, BOUT++, M3D-C1, JOREK, or comparable expert review.
 
 ## What should not be claimed yet
 
 The repository does not yet prove that:
 
 - TCT suppresses real tokamak plasmoids or ELMs.
+- Current-sheet thickness is a sufficient control target for tokamak edge events.
 - Lithium-current coupling stabilizes a real plasma edge.
 - Any optimizer-selected blanket is experimentally validated.
+- Any finalist geometry has a validated tritium breeding ratio under final engineering constraints.
 - Any candidate is an engineering-ready reactor design.
+- Any local M3D-C1 / JOREK adapter work is equivalent to a supported high-fidelity physics result.
 
 ## Current recommended workflow
 
-1. Run the coupled evolutionary search:
-
-```bash
-python run_evo_reactor_search.py
-```
-
-2. Inspect:
+1. Start with the reviewer-facing documents:
 
 ```text
-evo_reactor_runs/history.csv
-evo_reactor_runs/pareto_front.json
-evo_reactor_runs/best_overall.json
+README.md
+ROADMAP.md
+VALIDATION_STATUS.md
+docs/assumptions.md
+docs/falsification_tests.md
+docs/benchmark_targets.md
 ```
 
-3. Promote only stable Pareto candidates to explicit validation.
+2. Treat historical logs, generated outputs, and backup files as provenance unless they are cited by a current validation report.
 
-4. Validate blanket candidates with OpenMC.
+3. Run only lightweight smoke checks in generic CI.
 
-5. Validate TCT / edge-plasma behavior with M3D-C1, JOREK, or another suitable MHD workflow.
+4. Promote candidate outputs to explicit validation only when they include:
 
-6. Keep speculative concept notes separate from validated outputs.
+```text
+- input assumptions,
+- run command,
+- random seed if applicable,
+- code commit,
+- output manifest,
+- limitations note,
+- interpretation boundary.
+```
+
+5. Validate blanket candidates with explicit OpenMC-style or comparable neutronics cases.
+
+6. Validate TCT / edge-plasma behavior first with reduced benchmarks, then with M3D-C1, JOREK, BOUT++, NIMROD, or another suitable workflow only when supported by experienced users or documented benchmark cases.
+
+## Highest-value next steps
+
+1. Add a deterministic minimal run that produces a small manifest and summary artifact.
+2. Identify one reduced current-sheet / plasmoid benchmark to target.
+3. Identify one explicit blanket neutronics sanity-check case.
+4. Create `validation/manifests/` and `validation/reports/` outputs for new runs.
+5. Open GitHub issues for the highest-priority falsification tests.
+6. Get one external reviewer to answer the benchmark-selection question.
