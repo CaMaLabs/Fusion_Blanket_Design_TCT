@@ -1,0 +1,209 @@
+{
+  "claim_boundary": "Field-aligned mesh input ready; no BOUT++ machine-geometry physics, mesh-convergence, or experimental-diagnostic validation is claimed.",
+  "generated_at": "2026-06-10T00:18:52.183261+00:00",
+  "geqdsk": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/geqdsk",
+  "geqdsk_sha256": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e",
+  "grid": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/diii_d_158103_03796_hypnotoad.grd.nc",
+  "grid_sha256": "0429fbb4c0163512902ee3807b7c4b275772d6ff27b8e8f54846e359a89d5f9e",
+  "grid_size_bytes": 5122147,
+  "inspection": {
+    "auxiliary_nonfinite": {
+      "ShiftAngle": {
+        "finite_values": 24,
+        "shape": [
+          40
+        ],
+        "total_values": 40
+      },
+      "ShiftTorsion_xlow": {
+        "finite_values": 0,
+        "shape": [
+          40,
+          112
+        ],
+        "total_values": 4480
+      },
+      "chi": {
+        "finite_values": 1536,
+        "shape": [
+          40,
+          112
+        ],
+        "total_values": 4480
+      },
+      "chi_xlow": {
+        "finite_values": 0,
+        "shape": [
+          40,
+          112
+        ],
+        "total_values": 4480
+      },
+      "chi_ylow": {
+        "finite_values": 1536,
+        "shape": [
+          40,
+          112
+        ],
+        "total_values": 4480
+      },
+      "total_poloidal_distance": {
+        "finite_values": 24,
+        "shape": [
+          40
+        ],
+        "total_values": 40
+      }
+    },
+    "dimensions": {
+      "x": 40,
+      "y": 112
+    },
+    "embedded_inputs": {
+      "hypnotoad_input_geqdsk_file_contents": true,
+      "hypnotoad_inputs": true,
+      "hypnotoad_inputs_yaml": true
+    },
+    "fields": {
+      "Bpxy": {
+        "finite": true,
+        "maximum": 0.5043957277506462,
+        "minimum": 0.01999731168439717,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "Btxy": {
+        "finite": true,
+        "maximum": -1.4091517597680099,
+        "minimum": -3.218479892697495,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "Bxy": {
+        "finite": true,
+        "maximum": 3.2209017297964357,
+        "minimum": 1.4629436374301803,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "J": {
+        "finite": true,
+        "maximum": 18.037358315922237,
+        "minimum": 0.026583327496659412,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "Rxy": {
+        "finite": true,
+        "maximum": 2.283399085794511,
+        "minimum": 0.9997439621420768,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "Zxy": {
+        "finite": true,
+        "maximum": 1.0465360622018969,
+        "minimum": -1.4780894873117527,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "g11": {
+        "finite": true,
+        "maximum": 0.9317239868660895,
+        "minimum": 0.0006337221526265299,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "g22": {
+        "finite": true,
+        "maximum": 63808.57974528516,
+        "minimum": 0.3159698403611066,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "g33": {
+        "finite": true,
+        "maximum": 10587.05829292582,
+        "minimum": 2.4594993472401487,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "g_11": {
+        "finite": true,
+        "maximum": 1577.9786075891336,
+        "minimum": 1.0732792265696207,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "g_22": {
+        "finite": true,
+        "maximum": 1920.435649466887,
+        "minimum": 0.005201180478104701,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "g_33": {
+        "finite": true,
+        "maximum": 5.213911385007208,
+        "minimum": 0.9994879898395383,
+        "shape": [
+          40,
+          112
+        ]
+      },
+      "psixy": {
+        "finite": true,
+        "maximum": 0.07827731463738584,
+        "minimum": 0.03461439375365384,
+        "shape": [
+          40,
+          112
+        ]
+      }
+    },
+    "provenance": {
+      "grid_id": "e2784663-645e-11f1-8261-efe411948da7",
+      "hypnotoad_geqdsk_filename": "/root/Fusion_Blanket_Design_TCT/validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/geqdsk",
+      "hypnotoad_git_hash": "b17d4f211b95f4e4c573935ed885d8b94bd0b06f",
+      "hypnotoad_version": "0.5.2",
+      "parallel_transform": "shiftedmetric"
+    },
+    "required_fields_finite": true,
+    "topology": {
+      "ixseps1": 24,
+      "ixseps2": 40,
+      "jyseps1_1": 23,
+      "jyseps1_2": 56,
+      "jyseps2_1": 56,
+      "jyseps2_2": 87,
+      "nx": 40,
+      "ny": 112
+    },
+    "topology_valid": true
+  },
+  "options": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/hypnotoad.yml",
+  "options_sha256": "185cd685805ab1ca0325ede9d91ea70b1c22eb6c6beed4fc2b9e60286b74a635",
+  "status": "DIIID_HYPNOTOAD_FIELD_ALIGNED_MESH_READY"
+}

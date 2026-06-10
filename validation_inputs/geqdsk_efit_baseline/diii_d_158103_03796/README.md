@@ -36,6 +36,9 @@ EFITD    06/25/2013    #158103  3796ms           3 129 129
 - `efit/p158103.03796`: profile file used to derive `profile_density.csv`
 - `C1input.geqdsk_baseline`: filled M3D-C1 input deck for this baseline
 - `profile_density.csv`: parsed density profile table
+- `hypnotoad.yml`: production lower-single-null Hypnotoad mesh options
+- `hypnotoad_smoke.yml`: reduced-resolution Hypnotoad smoke-test options
+- `diii_d_158103_03796_hypnotoad.grd.nc`: generated BOUT++ field-aligned mesh
 
 ## SHA-256
 
@@ -50,4 +53,6 @@ EFITD    06/25/2013    #158103  3796ms           3 129 129
 ## Claim Boundary
 
 This is a real imported DIII-D EFIT/GEQDSK baseline input package.
-It is not a completed experimental validation result, not an NSTX/ITER baseline, and not a raw diagnostic archive.
+The included Hypnotoad grid closes the field-aligned mesh-input gap, but it is
+not a completed BOUT++ machine-geometry physics run, experimental validation
+result, NSTX/ITER baseline, or raw diagnostic archive.

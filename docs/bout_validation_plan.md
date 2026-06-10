@@ -633,7 +633,48 @@ Interpretation: the controller has now been applied to an actual DIII-D
 EFIT-backed geometry, closing the input-only machine-equilibrium gap. This is
 still a reduced R-Z perturbation-flux model, not a field-aligned BOUT++ run, a
 nonlinear M3D-C1 control run, or validation against raw DIII-D diagnostics. No
-Hypnotoad/BOUT++ machine mesh is available in the current open tooling. The next
-rung requires generating that field-aligned mesh or obtaining a runnable
-machine-geometry control model and anchoring the synthetic drive to diagnostic
-precursor timing.
+field-aligned BOUT++ physics run is available yet. The next rung requires using
+the generated DIII-D Hypnotoad mesh in a runnable machine-geometry control model
+and anchoring the synthetic drive to diagnostic precursor timing.
+
+## DIII-D Hypnotoad field-aligned mesh
+
+The imported DIII-D shot 158103 at 3796 ms GEQDSK has now been converted into a
+BOUT++ field-aligned grid with Hypnotoad:
+
+```bash
+cd /root/Fusion_Blanket_Design_TCT
+python3 -m venv /root/.venvs/hypnotoad
+/root/.venvs/hypnotoad/bin/pip install -r requirements-hypnotoad.txt
+/root/.venvs/hypnotoad/bin/python diiid_hypnotoad_mesh.py \
+  --generate \
+  --hypnotoad /root/.venvs/hypnotoad/bin/hypnotoad-geqdsk
+```
+
+To validate the committed mesh without regenerating it:
+
+```bash
+/root/.venvs/hypnotoad/bin/python diiid_hypnotoad_mesh.py
+```
+
+The committed production mesh is:
+
+```text
+validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/diii_d_158103_03796_hypnotoad.grd.nc
+```
+
+Current result: `DIIID_HYPNOTOAD_FIELD_ALIGNED_MESH_READY`.
+
+- The mesh is `40 x 112` with a shifted-metric parallel transform.
+- Hypnotoad 0.5.2 generated a lower-single-null grid.
+- The source GEQDSK, Hypnotoad inputs, and input YAML are embedded in the
+  NetCDF output.
+- Required geometry, magnetic-field, Jacobian, and metric arrays are finite.
+- The `psinorm_sol = 1.05` boundary excludes the secondary upper X-point near
+  normalized flux 1.089.
+
+Interpretation: this closes the missing field-aligned mesh-input gap. It is not
+yet a BOUT++ machine-geometry physics pass, a mesh-convergence result, or
+validation against DIII-D diagnostics. The next rung is to run a suitable
+BOUT++ edge or reduced-MHD model on this grid at multiple resolutions and map
+the predictive controller onto machine geometry.
