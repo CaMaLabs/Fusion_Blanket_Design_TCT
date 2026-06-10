@@ -44,6 +44,9 @@ Speculative / not yet validated:
 
 - [`ROADMAP.md`](ROADMAP.md) frames the repository as a validation and reproducibility pipeline for fusion concept screening.
 - [`FUNDING.md`](FUNDING.md) maps the pipeline to realistic SBIR/STTR, INFUSE-style partnership, AI-for-science, and later-stage funding paths.
+- [`docs/assumptions.md`](docs/assumptions.md) lists the assumptions that need review before any result is interpreted as evidence.
+- [`docs/falsification_tests.md`](docs/falsification_tests.md) defines tests that could reject, redirect, or narrow the TCT framing.
+- [`docs/benchmark_targets.md`](docs/benchmark_targets.md) lists candidate benchmark directions for MHD, blanket, and wall validation.
 
 The recommended external framing is:
 
@@ -68,16 +71,17 @@ The most useful response would be to identify a wrong assumption, suggest a bett
 If you have 5 minutes:
 
 1. Read this README.
-2. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-3. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+2. Read [`docs/assumptions.md`](docs/assumptions.md).
+3. Read [`docs/falsification_tests.md`](docs/falsification_tests.md).
 
 If you have 30 minutes:
 
-1. Review the proposed wall / blanket stack assumptions.
-2. Review the magnetic / electrostatic channeling assumptions.
-3. Inspect optimizer and candidate-generation scripts.
-4. Review committed result files and finalist candidates.
-5. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+1. Review [`ROADMAP.md`](ROADMAP.md).
+2. Review [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+3. Review the proposed wall / blanket stack assumptions.
+4. Review the magnetic / electrostatic channeling assumptions.
+5. Inspect optimizer and candidate-generation scripts.
+6. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
 
 ## Research purpose
 
@@ -130,10 +134,11 @@ python run_reactor_optimizer.py
 ## Suggested reading order
 
 1. Start with this README.
-2. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
-3. Review [`PROVENANCE.md`](PROVENANCE.md) and [`CITATION.cff`](CITATION.cff).
-4. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-5. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
-6. Inspect optimizer and candidate-generation scripts.
-7. Review committed result files and finalist candidates.
-8. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+2. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+3. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
+4. Review [`PROVENANCE.md`](PROVENANCE.md) and [`CITATION.cff`](CITATION.cff).
+5. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
+6. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+7. Inspect optimizer and candidate-generation scripts.
+8. Review committed result files and finalist candidates.
+9. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
