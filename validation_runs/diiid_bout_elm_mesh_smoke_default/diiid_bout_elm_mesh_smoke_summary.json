@@ -1,0 +1,184 @@
+{
+  "bout_revision": "3e317cbc18b4ad3839cfff67aded3bff4b5fb9f9",
+  "cases": [
+    {
+      "all_physical_fields_finite": true,
+      "case": "mz8",
+      "fields": {
+        "P": {
+          "final_l2": 1.9403957659026955e-14,
+          "final_max_abs": 4.620787044823424e-13,
+          "guard_cells_contain_nonfinite": false,
+          "initial_max_abs": 0.0,
+          "physical_domain_finite": true,
+          "physical_shape": [
+            3,
+            36,
+            112,
+            8
+          ],
+          "shape": [
+            3,
+            40,
+            116,
+            8
+          ]
+        },
+        "Psi": {
+          "final_l2": 5.659359621187526e-15,
+          "final_max_abs": 9.246898000615046e-14,
+          "guard_cells_contain_nonfinite": false,
+          "initial_max_abs": 0.0,
+          "physical_domain_finite": true,
+          "physical_shape": [
+            3,
+            36,
+            112,
+            8
+          ],
+          "shape": [
+            3,
+            40,
+            116,
+            8
+          ]
+        },
+        "U": {
+          "final_l2": 1.1839376453740055e-08,
+          "final_max_abs": 3.950970971988453e-08,
+          "guard_cells_contain_nonfinite": false,
+          "initial_max_abs": 3.95112623575423e-08,
+          "physical_domain_finite": true,
+          "physical_shape": [
+            3,
+            36,
+            112,
+            8
+          ],
+          "shape": [
+            3,
+            40,
+            116,
+            8
+          ]
+        }
+      },
+      "mz": 8,
+      "times": [
+        0.0,
+        0.0001,
+        0.0002
+      ]
+    },
+    {
+      "all_physical_fields_finite": true,
+      "case": "mz16",
+      "fields": {
+        "P": {
+          "final_l2": 1.9428411583097268e-14,
+          "final_max_abs": 4.620559246888112e-13,
+          "guard_cells_contain_nonfinite": false,
+          "initial_max_abs": 0.0,
+          "physical_domain_finite": true,
+          "physical_shape": [
+            3,
+            36,
+            112,
+            16
+          ],
+          "shape": [
+            3,
+            40,
+            116,
+            16
+          ]
+        },
+        "Psi": {
+          "final_l2": 5.659359620034563e-15,
+          "final_max_abs": 9.645067665487253e-14,
+          "guard_cells_contain_nonfinite": false,
+          "initial_max_abs": 0.0,
+          "physical_domain_finite": true,
+          "physical_shape": [
+            3,
+            36,
+            112,
+            16
+          ],
+          "shape": [
+            3,
+            40,
+            116,
+            16
+          ]
+        },
+        "U": {
+          "final_l2": 1.1839376453701246e-08,
+          "final_max_abs": 3.950970971988454e-08,
+          "guard_cells_contain_nonfinite": false,
+          "initial_max_abs": 3.95112623575423e-08,
+          "physical_domain_finite": true,
+          "physical_shape": [
+            3,
+            36,
+            112,
+            16
+          ],
+          "shape": [
+            3,
+            40,
+            116,
+            16
+          ]
+        }
+      },
+      "mz": 16,
+      "times": [
+        0.0,
+        0.0001,
+        0.0002
+      ]
+    }
+  ],
+  "generated_at": "2026-06-10T03:06:24.563106+00:00",
+  "required_exact_topology_mpi_ranks": 14,
+  "serial_topology_override": {
+    "ixseps1": 40,
+    "ixseps2": 40,
+    "jyseps1_1": -1,
+    "jyseps1_2": 56,
+    "jyseps2_1": 56,
+    "jyseps2_2": 111,
+    "ny_inner": 56
+  },
+  "source_grid": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/diii_d_158103_03796_hypnotoad.grd.nc",
+  "source_grid_sha256": "0429fbb4c0163512902ee3807b7c4b275772d6ff27b8e8f54846e359a89d5f9e",
+  "source_topology": {
+    "ixseps1": 24,
+    "ixseps2": 40,
+    "jyseps1_1": 23,
+    "jyseps1_2": 56,
+    "jyseps2_1": 56,
+    "jyseps2_2": 87,
+    "nx": 40,
+    "ny": 112
+  },
+  "status": "DIIID_BOUT_ELM_PB_SERIAL_TOPOLOGY_SMOKE_PASS_EXACT_TOPOLOGY_MPI_BLOCKED",
+  "toroidal_resolution_check": {
+    "P": {
+      "mz16_final_max_abs": 4.620559246888112e-13,
+      "mz8_final_max_abs": 4.620787044823424e-13,
+      "relative_difference": 4.929851410655044e-05
+    },
+    "Psi": {
+      "mz16_final_max_abs": 9.645067665487253e-14,
+      "mz8_final_max_abs": 9.246898000615046e-14,
+      "relative_difference": 0.041282205442370254
+    },
+    "U": {
+      "mz16_final_max_abs": 3.950970971988454e-08,
+      "mz8_final_max_abs": 3.950970971988453e-08,
+      "relative_difference": 1.67489079199531e-16
+    }
+  }
+}

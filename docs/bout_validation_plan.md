@@ -678,3 +678,44 @@ yet a BOUT++ machine-geometry physics pass, a mesh-convergence result, or
 validation against DIII-D diagnostics. The next rung is to run a suitable
 BOUT++ edge or reduced-MHD model on this grid at multiple resolutions and map
 the predictive controller onto machine geometry.
+
+## DIII-D BOUT++ elm-pb machine-mesh smoke
+
+The official BOUT++ `elm-pb` high-beta reduced-MHD model now loads and evolves
+the DIII-D Hypnotoad geometry:
+
+```bash
+cmake -S /path/to/BOUT-dev -B /tmp/bout-build \
+  -DCMAKE_CXX_COMPILER=/usr/bin/mpicxx.mpich \
+  -DMPI_CXX_COMPILER=/usr/bin/mpicxx.mpich \
+  -DCPPTRACE_GET_SYMBOLS_WITH_NOTHING=ON \
+  -DCPPTRACE_UNWIND_WITH_EXECINFO=ON
+cmake --build /tmp/bout-build --target elm_pb -j2
+python3 diiid_bout_elm_mesh_smoke.py \
+  --executable /tmp/bout-build/examples/elm-pb/elm_pb
+```
+
+Current result:
+`DIIID_BOUT_ELM_PB_SERIAL_TOPOLOGY_SMOKE_PASS_EXACT_TOPOLOGY_MPI_BLOCKED`.
+
+- `MZ = 8` and `MZ = 16` cases completed short reduced-MHD time evolution.
+- Evolved `U`, `P`, and `Psi` fields remained finite in both cases.
+- Final maximum absolute `U` agreed to machine precision across the two tested
+  toroidal resolutions.
+- The model consumed the real DIII-D geometry, pressure, curvature, magnetic,
+  Jacobian, and shifted-metric fields.
+
+The exact lower-single-null topology loads, but its 24/32-cell region structure
+requires a compatible 14-rank Y decomposition. Multi-rank MPI launch is blocked
+on the current Android-hosted environment because network-interface access is
+denied, and the authorized SSH host was unreachable. The completed serial cases
+therefore use a temporary topology override that disables X-point connections
+and fills otherwise undefined `ShiftAngle` values with zero. Physical geometry
+and metric fields are unchanged.
+
+The source mesh also lacks `Jpar0`, so equilibrium-current drive is disabled.
+This is a real BOUT++ machine-geometry ingestion and finite-evolution pass, but
+not an exact-divertor-topology result, ELM growth validation, TCT control test,
+or experimental diagnostic comparison. The next rung is an exact-topology
+14-rank run on conventional Linux/HPC infrastructure, followed by a defensible
+`Jpar0` profile and controlled/uncontrolled linear growth-rate comparisons.
