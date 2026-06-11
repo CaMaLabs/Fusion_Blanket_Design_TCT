@@ -74,6 +74,12 @@ For a narrowly scoped DIII-D diagnostic collaboration request, review:
 - [`validation_runs/diiid_diagnostic_reconstruction_default/diiid_diagnostic_reconstruction_report.md`](validation_runs/diiid_diagnostic_reconstruction_default/diiid_diagnostic_reconstruction_report.md)
 - [`validation_runs/diiid_diagnostic_reconstruction_default/diagnostic_replacement_contract.json`](validation_runs/diiid_diagnostic_reconstruction_default/diagnostic_replacement_contract.json)
 
+For the first open experimental precursor / latency screen, review:
+
+- [`fair_mast_elm_precursor_validation.py`](fair_mast_elm_precursor_validation.py)
+- [`validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_report.md`](validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_report.md)
+- [`validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_summary.json`](validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_summary.json)
+
 ## Fast technical review path
 
 If you have 5 minutes:

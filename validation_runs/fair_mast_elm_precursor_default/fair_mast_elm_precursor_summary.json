@@ -1,0 +1,102 @@
+{
+  "aggregate": {
+    "detected_event_count": 24,
+    "event_count": 28,
+    "false_trigger_count": 20,
+    "latency_feasible_event_count": {
+      "12_ms": 0,
+      "3_ms": 18,
+      "5_ms": 12,
+      "8_ms": 2
+    },
+    "lead_ms": {
+      "maximum": 8.427999999602864,
+      "median": 4.978999999776635,
+      "minimum": 0.6859999996824406
+    },
+    "missed_event_count": 4,
+    "precision": 0.5454545454545454,
+    "recall": 0.8571428571428571
+  },
+  "algorithm": {
+    "dalpha_channel_selection": "largest 99th-percentile minus median dynamic range in the case window",
+    "dalpha_event_prominence": "max(10 * median absolute deviation, 0.03 V)",
+    "minimum_event_separation_ms": 4.0,
+    "mirnov_channel_selection": "largest standard deviation in the case window",
+    "mirnov_high_pass_window_ms": 2.0,
+    "mirnov_rms_window_ms": 0.5,
+    "precursor_association_window_ms": [
+      0.5,
+      15.0
+    ],
+    "trigger_persistence_ms": 0.1,
+    "trigger_threshold": "non-event median + 6 robust sigma"
+  },
+  "cases": [
+    {
+      "archive_url": "https://s3.echo.stfc.ac.uk/mast/level2/shots/30423.zarr",
+      "dalpha_channel_index": 1,
+      "dalpha_event_prominence_v": 1.416015625,
+      "detected_event_count": 6,
+      "event_count": 6,
+      "false_trigger_count": 12,
+      "latency_feasible_event_count": {
+        "12_ms": 0,
+        "3_ms": 4,
+        "5_ms": 4,
+        "8_ms": 2
+      },
+      "lead_ms": {
+        "maximum": 8.427999999602864,
+        "median": 6.165999999613037,
+        "minimum": 0.6939999994942658
+      },
+      "mirnov_channel_index": 2,
+      "mirnov_trigger_threshold_t": 3.0111032149989685e-05,
+      "missed_event_count": 0,
+      "operator_log": "'Good shot - good repeat  - nice regular ELMS'",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "shot": 30423,
+      "window_s": [
+        0.18,
+        0.6
+      ]
+    },
+    {
+      "archive_url": "https://s3.echo.stfc.ac.uk/mast/level2/shots/30311.zarr",
+      "dalpha_channel_index": 1,
+      "dalpha_event_prominence_v": 0.3173828125,
+      "detected_event_count": 18,
+      "event_count": 22,
+      "false_trigger_count": 8,
+      "latency_feasible_event_count": {
+        "12_ms": 0,
+        "3_ms": 14,
+        "5_ms": 8,
+        "8_ms": 0
+      },
+      "lead_ms": {
+        "maximum": 7.79399999978192,
+        "median": 4.8539999997440075,
+        "minimum": 0.6859999996824406
+      },
+      "mirnov_channel_index": 2,
+      "mirnov_trigger_threshold_t": 1.395215652914523e-05,
+      "missed_event_count": 4,
+      "operator_log": "'Good shot - type I ELMs later in H-mode period'",
+      "precision": 0.6923076923076923,
+      "recall": 0.8181818181818182,
+      "shot": 30311,
+      "window_s": [
+        0.2,
+        0.6
+      ]
+    }
+  ],
+  "claim_boundary": "Real MAST retrospective precursor/latency screen only; not TCT actuator, causal suppression, DIII-D, or prospective real-time validation.",
+  "data_source": "FAIR-MAST public Level-2 experimental archive",
+  "data_source_url": "https://mastapp.site/",
+  "generated_at": "2026-06-11T23:48:51.552079+00:00",
+  "status": "MAST_EXPERIMENTAL_PRECURSOR_SCREEN_MIXED"
+}
