@@ -755,3 +755,33 @@ and preserves the source equilibrium, but the base grid should not be described
 as fully metric-converged. This is mesh-generation validation, not
 physics-solution convergence, exact-topology BOUT++ evolution, TCT validation,
 or experimental agreement.
+
+## DIII-D BOUT++ machine-mesh operator identities
+
+A focused BOUT++ operator probe now checks manufactured flux-coordinate
+identities on the proportional DIII-D coarse, base, and fine meshes:
+
+```bash
+cmake -S validation_models/diiid_operator_probe \
+  -B validation_models/diiid_operator_probe/build \
+  -Dbout++_DIR=/tmp/bout-build \
+  -DCMAKE_CXX_COMPILER=/usr/bin/mpicxx.mpich \
+  -DMPI_CXX_COMPILER=/usr/bin/mpicxx.mpich
+cmake --build validation_models/diiid_operator_probe/build -j2
+python3 diiid_bout_operator_validation.py
+```
+
+Current result: `DIIID_BOUT_OPERATOR_IDENTITIES_SUPPORTED_SERIAL_TOPOLOGY`.
+
+- `DDX(psixy) = 1` RMS error decreases from `2.27e-3` on the coarse mesh to
+  `5.53e-4` on the base mesh and `2.44e-4` on the fine mesh.
+- Maximum `DDX(psixy)` error is 0.34% coarse, 0.086% base, and 0.039% fine.
+- `DDY(psixy)`, `Grad_par(psixy)`, `Delp2(1)`, and
+  `bracket(psixy, psixy)` remain near numerical roundoff at every resolution.
+- All physical-domain operator outputs are finite.
+
+The zero-identity errors do not decrease monotonically because they are already
+at roundoff scale. This validates a focused set of machine-mesh operator
+identities with the serial topology override. It is not a complete MMS suite,
+exact-X-point operator validation, physics-solution convergence result, or TCT
+validation.
