@@ -1,0 +1,16 @@
+{
+  "formula": "Jphi=-(R*pprime+F*Fprime/(mu0*R)); Jpol=-(Fprime/mu0)*Bpol; Jpar=J dot B/|B|",
+  "generated_at": "2026-06-11T14:03:45.202772+00:00",
+  "mesh_jpar0": {
+    "finite": true,
+    "maximum_a_per_m2": 0.0,
+    "minimum_a_per_m2": -1220825.773098985,
+    "rms_a_per_m2": 311863.81797277863
+  },
+  "status": "DIIID_GEQDSK_JPAR0_PROVISIONAL_SUPPORTED",
+  "total_current_check": {
+    "efit_reported_current_a": 1339492.25,
+    "reconstructed_current_a": 1373048.2113894403,
+    "relative_error": 0.025051254599972747
+  }
+}

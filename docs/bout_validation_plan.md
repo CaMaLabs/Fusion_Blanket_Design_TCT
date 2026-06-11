@@ -778,6 +778,10 @@ Current result: `DIIID_BOUT_OPERATOR_IDENTITIES_SUPPORTED_SERIAL_TOPOLOGY`.
 - Maximum `DDX(psixy)` error is 0.34% coarse, 0.086% base, and 0.039% fine.
 - `DDY(psixy)`, `Grad_par(psixy)`, `Delp2(1)`, and
   `bracket(psixy, psixy)` remain near numerical roundoff at every resolution.
+- Nontrivial `DDX(psixy^2) = 2 psixy` RMS error decreases from `1.83e-4` to
+  `4.49e-5` to `1.99e-5`.
+- Nontrivial `D2DX2(psixy^2) = 2` RMS error decreases from `3.86e-3` to
+  `1.02e-3` to `4.60e-4`.
 - All physical-domain operator outputs are finite.
 
 The zero-identity errors do not decrease monotonically because they are already
@@ -785,3 +789,50 @@ at roundoff scale. This validates a focused set of machine-mesh operator
 identities with the serial topology override. It is not a complete MMS suite,
 exact-X-point operator validation, physics-solution convergence result, or TCT
 validation.
+
+## DIII-D serial-topology solution convergence
+
+The official BOUT++ `elm-pb` model was run on proportional coarse, base, and
+fine DIII-D meshes, then repeated on the base mesh with half the output
+timestep and doubled toroidal resolution:
+
+```bash
+python3 diiid_bout_elm_solution_convergence.py
+```
+
+Current result: `DIIID_ELM_PB_SERIAL_SOLUTION_CONVERGENCE_SUPPORTED`.
+
+- All `U`, `P`, and `Psi` histories remained finite.
+- The maximum final-norm difference after timestep halving was `2.92e-11`.
+- The maximum final-norm difference between `MZ=8` and `MZ=16` was `1.26e-3`.
+- Final `U` L2 changed from `1.178e-8` coarse to `1.171e-8` base and
+  `1.167e-8` fine.
+
+This supports short-duration linear numerical convergence with the serial
+topology override. It is not exact-X-point evolution, validated ELM growth,
+nonlinear saturation, TCT control validation, or experimental agreement.
+
+## Provisional GEQDSK-derived Jpar0
+
+A reproducible axisymmetric reconstruction now maps the DIII-D GEQDSK pressure
+and poloidal-field-function derivatives onto the Hypnotoad mesh:
+
+```bash
+/root/.venvs/hypnotoad/bin/python diiid_jpar0_reconstruction.py
+python3 diiid_jpar0_elm_response.py
+```
+
+Current results:
+
+- `DIIID_GEQDSK_JPAR0_PROVISIONAL_SUPPORTED`
+- `DIIID_PROVISIONAL_JPAR0_ELM_RESPONSE_SUPPORTED`
+- Reconstructed toroidal-current integral: `1.373048e6 A`.
+- EFIT-reported plasma current: `1.339492e6 A`.
+- Relative total-current difference: `2.505%`.
+- The mesh `Jpar0` field is finite, with RMS `3.119e5 A/m^2`.
+- Enabling the field in a short serial-topology `elm-pb` run remained finite
+  and changed the largest final field norm by `3.33e-5`.
+
+This confirms a provisional current reconstruction and BOUT++ ingestion path.
+It does not independently validate the `Jpar0` profile, establish an ELM
+growth-rate effect, or replace exact-X-point and diagnostic-referenced checks.

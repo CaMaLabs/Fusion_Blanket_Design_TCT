@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import shutil
 import subprocess
@@ -77,8 +78,13 @@ def metrics(case_dir: Path) -> dict[str, Any]:
                 "gradpar_psi",
                 "delp2_one",
                 "bracket_self",
+                "psi",
+                "ddx_psi_squared",
+                "d2dx2_psi_squared",
+                "bracket_psi_squared",
             )
         }
+    psi = fields.pop("psi")
     results = {}
     expected = {
         "ddx_psi": np.ones_like(fields["ddx_psi"]),
@@ -86,6 +92,9 @@ def metrics(case_dir: Path) -> dict[str, Any]:
         "gradpar_psi": np.zeros_like(fields["gradpar_psi"]),
         "delp2_one": np.zeros_like(fields["delp2_one"]),
         "bracket_self": np.zeros_like(fields["bracket_self"]),
+        "ddx_psi_squared": 2.0 * psi,
+        "d2dx2_psi_squared": 2.0 * np.ones_like(psi),
+        "bracket_psi_squared": np.zeros_like(fields["bracket_psi_squared"]),
     }
     for name, values in fields.items():
         error = values - expected[name]
@@ -126,15 +135,19 @@ def write_report(run_dir: Path, summary: dict[str, Any]) -> None:
         "- `Grad_par(psixy) = 0`",
         "- `Delp2(1) = 0`",
         "- `bracket(psixy, psixy) = 0`",
+        "- `DDX(psixy^2) = 2 psixy`",
+        "- `D2DX2(psixy^2) = 2`",
+        "- `bracket(psixy, psixy^2) = 0`",
         "",
-        "| Operator | Coarse RMS error | Base RMS error | Fine RMS error | Improves coarse-to-fine |",
-        "| --- | ---: | ---: | ---: | ---: |",
+        "| Operator | Coarse RMS error | Base RMS error | Fine RMS error | Coarse-base order | Base-fine order |",
+        "| --- | ---: | ---: | ---: | ---: | ---: |",
     ]
     for operator, trend in summary["trends"].items():
         lines.append(
             f"| `{operator}` | {trend['coarse_rms_error']:.6e} | "
             f"{trend['base_rms_error']:.6e} | {trend['fine_rms_error']:.6e} | "
-            f"{trend['coarse_to_fine_improves']} |"
+            f"{trend['coarse_to_base_observed_order']:.3f} | "
+            f"{trend['base_to_fine_observed_order']:.3f} |"
         )
     lines.extend(
         [
@@ -201,6 +214,12 @@ def main() -> int:
             "base_rms_error": values[1],
             "fine_rms_error": values[2],
             "coarse_to_fine_improves": values[2] < values[0],
+            "coarse_to_base_observed_order": math.log(values[0] / values[1]) / math.log(2.0)
+            if values[0] > 0.0 and values[1] > 0.0
+            else None,
+            "base_to_fine_observed_order": math.log(values[1] / values[2]) / math.log(1.5)
+            if values[1] > 0.0 and values[2] > 0.0
+            else None,
         }
 
     tolerances = {
@@ -209,6 +228,9 @@ def main() -> int:
         "gradpar_psi": 1e-10,
         "delp2_one": 1e-8,
         "bracket_self": 1e-12,
+        "ddx_psi_squared": 5e-2,
+        "d2dx2_psi_squared": 2e-1,
+        "bracket_psi_squared": 1e-12,
     }
     all_finite = all(result["finite"] for case in cases.values() for result in case.values())
     identity_pass = all(

@@ -11,6 +11,10 @@ private:
   Field3D gradpar_psi;
   Field3D delp2_one;
   Field3D bracket_self;
+  Field3D psi_squared;
+  Field3D ddx_psi_squared;
+  Field3D d2dx2_psi_squared;
+  Field3D bracket_psi_squared;
 
 protected:
   int init(bool UNUSED(restarting)) override {
@@ -25,8 +29,14 @@ protected:
     gradpar_psi = Grad_par(psi);
     delp2_one = Delp2(one);
     bracket_self = bracket(psi, psi, BRACKET_ARAKAWA);
+    psi_squared = psi * psi;
+    mesh->communicate(psi_squared);
+    ddx_psi_squared = DDX(psi_squared);
+    d2dx2_psi_squared = D2DX2(psi_squared);
+    bracket_psi_squared = bracket(psi, psi_squared, BRACKET_ARAKAWA);
 
     SAVE_ONCE(psi, ddx_psi, ddy_psi, gradpar_psi, delp2_one, bracket_self);
+    SAVE_ONCE(psi_squared, ddx_psi_squared, d2dx2_psi_squared, bracket_psi_squared);
     SOLVE_FOR(state);
     return 0;
   }
