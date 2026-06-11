@@ -1,0 +1,81 @@
+{
+  "claim_boundary": "Experiment-referenced reconstruction and precommitted test only; not raw diagnostic validation.",
+  "generated_at": "2026-06-11T22:13:56.308635+00:00",
+  "profile_group_count": 21,
+  "raw_diagnostics_present": false,
+  "reconstructed_baselines": {
+    "btor_t": -1.8977622,
+    "edge_er_gradient_kv_m_per_psin": -807.6775557312692,
+    "edge_er_kv_m": -33.51463794405594,
+    "edge_ne_1e20_m3": 0.1976785894105894,
+    "edge_ni_1e20_m3": 0.12756543956043956,
+    "edge_pressure_gradient_kpa_per_psin": -209.63482131968033,
+    "edge_ptot_kpa": 6.12462392907093,
+    "edge_te_kev": 0.8456678621378623,
+    "edge_ti_kev": 1.477993082917083,
+    "edge_vpol1_km_s": -8.412581302097905,
+    "edge_vtor1_km_s": 21.826611220779228,
+    "ip_a": 1339492.25
+  },
+  "reference_time_ms": 3796.325,
+  "shot": 158103,
+  "source_files": {
+    "aeqdsk": {
+      "path": "/root/Fusion_Blanket_Design_TCT/validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/efit/a158103.03796",
+      "sha256": "93b33723e39f8b53fb14a4a3a05c1b66cbce84ddb6eee23980381cba935e0c79"
+    },
+    "geqdsk": {
+      "path": "/root/Fusion_Blanket_Design_TCT/validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/geqdsk",
+      "sha256": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e"
+    },
+    "profile": {
+      "path": "/root/Fusion_Blanket_Design_TCT/validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/efit/p158103.03796",
+      "sha256": "e3e90776e20d3eb4deedc0a02538995d51e0b050c3e0d4300d06c7e74317c065"
+    }
+  },
+  "status": "DIIID_DIAGNOSTIC_RECONSTRUCTION_READY_FOR_AUTHORIZED_REPLACEMENT",
+  "timing_hypotheses": [
+    {
+      "assumed_precursor_lead_ms": 6.0,
+      "available_lead_ms": 6.0,
+      "growth_threshold": 0.01719005636424273,
+      "latency_feasibility": {
+        "12_ms": false,
+        "3_ms": true,
+        "5_ms": true,
+        "8_ms": false
+      },
+      "scenario": "late_weak",
+      "threshold_definition": "35% of maximum reconstructed derivative between hypothesized precursor onset and reference_time_minus_2.5_ms; excludes event-marker contamination",
+      "trigger_time_ms": 3790.325
+    },
+    {
+      "assumed_precursor_lead_ms": 15.0,
+      "available_lead_ms": 15.0,
+      "growth_threshold": 0.027973053748503406,
+      "latency_feasibility": {
+        "12_ms": true,
+        "3_ms": true,
+        "5_ms": true,
+        "8_ms": true
+      },
+      "scenario": "nominal",
+      "threshold_definition": "35% of maximum reconstructed derivative between hypothesized precursor onset and reference_time_minus_2.5_ms; excludes event-marker contamination",
+      "trigger_time_ms": 3781.325
+    },
+    {
+      "assumed_precursor_lead_ms": 25.0,
+      "available_lead_ms": 25.0,
+      "growth_threshold": 0.025010536032949046,
+      "latency_feasibility": {
+        "12_ms": true,
+        "3_ms": true,
+        "5_ms": true,
+        "8_ms": true
+      },
+      "scenario": "early_strong",
+      "threshold_definition": "35% of maximum reconstructed derivative between hypothesized precursor onset and reference_time_minus_2.5_ms; excludes event-marker contamination",
+      "trigger_time_ms": 3771.325
+    }
+  ]
+}

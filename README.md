@@ -68,6 +68,12 @@ I am looking for technical critique on:
 
 The most useful response would be to identify a wrong assumption, suggest a better simulation path, point to a benchmark case, or open an issue with a falsification test.
 
+For a narrowly scoped DIII-D diagnostic collaboration request, review:
+
+- [`validation_runs/diiid_diagnostic_reconstruction_default/DIIID_LIMITED_DATA_ACCESS_REQUEST.md`](validation_runs/diiid_diagnostic_reconstruction_default/DIIID_LIMITED_DATA_ACCESS_REQUEST.md)
+- [`validation_runs/diiid_diagnostic_reconstruction_default/diiid_diagnostic_reconstruction_report.md`](validation_runs/diiid_diagnostic_reconstruction_default/diiid_diagnostic_reconstruction_report.md)
+- [`validation_runs/diiid_diagnostic_reconstruction_default/diagnostic_replacement_contract.json`](validation_runs/diiid_diagnostic_reconstruction_default/diagnostic_replacement_contract.json)
+
 ## Fast technical review path
 
 If you have 5 minutes:

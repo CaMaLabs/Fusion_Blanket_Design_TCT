@@ -1,0 +1,59 @@
+{
+  "acceptance_tests": {
+    "cross_channel": "Magnetic precursor timing is corroborated by at least one independent edge channel.",
+    "falsification": "No robust precursor, insufficient lead time, or inconsistent timing across channels falsifies the diagnostic-trigger claim for this event.",
+    "lead_time": "Trigger lead exceeds measured processing plus candidate actuator latency.",
+    "precursor_exists": "A reproducible pre-event growth signal exceeds its noise-derived threshold before the event marker."
+  },
+  "minimum_time_resolution_ms": 0.25,
+  "reference_time_ms": 3796.325,
+  "requested_observables": [
+    {
+      "candidate_source": "PTDATA ip or MDSplus efit01 \\\\ipmhd",
+      "priority": "required",
+      "replacement_column": "ip_a",
+      "standard_name": "plasma_current"
+    },
+    {
+      "candidate_source": "IMAS ece.channel.t_e.data or mapped ECE channels",
+      "priority": "required",
+      "replacement_column": "edge_ece_te_kev",
+      "standard_name": "edge_electron_temperature"
+    },
+    {
+      "candidate_source": "appropriate Mirnov/magnetic probe channels selected by DIII-D reviewer",
+      "priority": "required",
+      "replacement_column": "mirnov_proxy",
+      "standard_name": "magnetic_fluctuation_precursor"
+    },
+    {
+      "candidate_source": "PTDATA dssdenest and/or available interferometer/profile channel",
+      "priority": "required",
+      "replacement_column": "density",
+      "standard_name": "line_or_edge_density"
+    },
+    {
+      "candidate_source": "D-alpha/divertor light or established ELM/event marker",
+      "priority": "required",
+      "replacement_column": "event_marker",
+      "standard_name": "event_timing"
+    },
+    {
+      "candidate_source": "PCS/RMP/coil command and measured response channels applicable to shot",
+      "priority": "preferred",
+      "replacement_column": "actuator",
+      "standard_name": "actuator_command_and_response"
+    },
+    {
+      "candidate_source": "FDP efit01 tree around requested window",
+      "priority": "preferred",
+      "replacement_column": "equilibrium",
+      "standard_name": "efit_time_evolution"
+    }
+  ],
+  "shot": 158103,
+  "window_ms": [
+    3756.325,
+    3806.325
+  ]
+}

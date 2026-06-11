@@ -836,3 +836,31 @@ Current results:
 This confirms a provisional current reconstruction and BOUT++ ingestion path.
 It does not independently validate the `Jpar0` profile, establish an ELM
 growth-rate effect, or replace exact-X-point and diagnostic-referenced checks.
+
+## DIII-D diagnostic reconstruction and limited-access request
+
+The public EFIT `g/a/p` snapshot for shot 158103 at 3796.325 ms now anchors a
+reviewer-facing diagnostic reconstruction package:
+
+```bash
+python3 diiid_diagnostic_reconstruction.py
+```
+
+Current result:
+`DIIID_DIAGNOSTIC_RECONSTRUCTION_READY_FOR_AUTHORIZED_REPLACEMENT`.
+
+- All 21 fitted profile groups in `p158103.03796` are parsed and summarized.
+- Reconstructed edge baselines include density, electron/ion temperature,
+  total pressure, radial electric field, and toroidal/poloidal flow.
+- Three explicit precursor-timing hypotheses define late/weak, nominal, and
+  early/strong cases.
+- A standardized replacement contract requests magnetic precursor, ECE,
+  density, event-marker, plasma-current, actuator, and EFIT-evolution data.
+- The access request is limited to shot 158103 over
+  `3756.325-3806.325 ms` and precommits falsification outcomes.
+- `diiid_fdp_fetch_template.py` provides an authorized-user starting point for
+  replacing reconstructed columns through official `toksearch_d3d` tooling.
+
+The reconstructed traces are not measurements and do not show that an event or
+precursor occurred. Their purpose is to make the experimental question narrow,
+reviewable, and directly replaceable with authorized raw diagnostics.
