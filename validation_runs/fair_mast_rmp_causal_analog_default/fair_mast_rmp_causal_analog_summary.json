@@ -1,0 +1,140 @@
+{
+  "claim_boundary": "Six-shot non-randomized RMP causal analog; not causal TCT validation.",
+  "effects": {
+    "event_rate_directional_permutation_p": 0.06666666666666667,
+    "event_rate_relative_change": 0.5714285714285714,
+    "median_peak_directional_permutation_p": 0.06666666666666667,
+    "median_peak_relative_change": -0.29611492001305906
+  },
+  "generated_at": "2026-06-12T00:21:31.359127+00:00",
+  "groups": {
+    "actuator_active": {
+      "mean_event_rate_hz": 91.66666666666667,
+      "mean_line_average_ne_m3": 4.925664236297529e+19,
+      "mean_median_dalpha_peak_v": 1.31591796875,
+      "mean_nbi_power_w": 3427033.0418402776,
+      "mean_p90_dalpha_peak_v": 1.8994140625,
+      "mean_plasma_current_a": 524335.0778428819,
+      "mean_rog_elm_l01_rms_v": 0.23994891090465661,
+      "shot_count": 4,
+      "shots": [
+        30277,
+        30418,
+        30419,
+        30421
+      ]
+    },
+    "actuator_inactive": {
+      "mean_event_rate_hz": 58.333333333333336,
+      "mean_line_average_ne_m3": 2.51967131318238e+19,
+      "mean_median_dalpha_peak_v": 1.8695068359375,
+      "mean_nbi_power_w": 3105259.3154198155,
+      "mean_p90_dalpha_peak_v": 2.895263671875,
+      "mean_plasma_current_a": 448376.7262622515,
+      "mean_rog_elm_l01_rms_v": 0.013456433523444541,
+      "shot_count": 2,
+      "shots": [
+        30276,
+        30423
+      ]
+    }
+  },
+  "interpretation": "Measured RMP-active shots show higher event pacing and lower median D-alpha peak amplitude, consistent with preventative mitigation.",
+  "shots": [
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": false,
+      "event_count": 10,
+      "event_rate_hz": 55.55555555555556,
+      "mean_line_average_ne_m3": 3.338933529271534e+19,
+      "mean_nbi_power_w": 3511658.4927083333,
+      "mean_plasma_current_a": 434798.0861545139,
+      "median_dalpha_peak_v": 1.683349609375,
+      "operator_log": "'Good shot good beamsELM frequency lower than in coils on shotH mode from 240ms to 630ms.ELM frequency higher towards end of shot.'",
+      "p90_dalpha_peak_v": 1.9062499999999998,
+      "rog_elm_l01_rms_v": 0.012348378082806602,
+      "scenario": 2,
+      "shot": 30276
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": null,
+      "event_count": 13,
+      "event_rate_hz": 72.22222222222223,
+      "mean_line_average_ne_m3": 1.0083105389803615e+20,
+      "mean_nbi_power_w": 3563233.314583333,
+      "mean_plasma_current_a": 422859.56779513886,
+      "median_dalpha_peak_v": 1.34521484375,
+      "operator_log": "'Some increase in ELM frequency compared to 29783 (nearest coils off)Splitting seen on divertor'",
+      "p90_dalpha_peak_v": 1.6162109375,
+      "rog_elm_l01_rms_v": 0.21138029213682122,
+      "scenario": 2,
+      "shot": 30277
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": true,
+      "event_count": 18,
+      "event_rate_hz": 100.0,
+      "mean_line_average_ne_m3": 3.0953433636904346e+19,
+      "mean_nbi_power_w": 3359708.589930556,
+      "mean_plasma_current_a": 421446.72647569445,
+      "median_dalpha_peak_v": 0.989990234375,
+      "operator_log": "'H mode from 270ms to 620 ms. Back transition 450ms to 480ms.High frequency ELMs from 400ms when coils reach full current.All ELM coils fired.'",
+      "p90_dalpha_peak_v": 1.41650390625,
+      "rog_elm_l01_rms_v": 0.2000928233594641,
+      "scenario": 2,
+      "shot": 30418
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": true,
+      "event_count": 14,
+      "event_rate_hz": 77.77777777777779,
+      "mean_line_average_ne_m3": 3.330153903573891e+19,
+      "mean_nbi_power_w": 3379494.7489583334,
+      "mean_plasma_current_a": 625912.2980902778,
+      "median_dalpha_peak_v": 1.563720703125,
+      "operator_log": "'Good shot - SW slightly later than requested.H mode from 280ms with mitigation when coils reach full current at 400msNo back transition seen.All ELM coils fired.'",
+      "p90_dalpha_peak_v": 2.404296875,
+      "rog_elm_l01_rms_v": 0.24211827281237558,
+      "scenario": 3,
+      "shot": 30419
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": true,
+      "event_count": 21,
+      "event_rate_hz": 116.66666666666667,
+      "mean_line_average_ne_m3": 3.194054288122177e+19,
+      "mean_nbi_power_w": 3405695.513888889,
+      "mean_plasma_current_a": 627121.7190104167,
+      "median_dalpha_peak_v": 1.36474609375,
+      "operator_log": "'good shot with good beam -all ELM coils fired'",
+      "p90_dalpha_peak_v": 2.16064453125,
+      "rog_elm_l01_rms_v": 0.30620425530996565,
+      "scenario": 6,
+      "shot": 30421
+    },
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": false,
+      "event_count": 11,
+      "event_rate_hz": 61.111111111111114,
+      "mean_line_average_ne_m3": 1.700409097093226e+19,
+      "mean_nbi_power_w": 2698860.138131297,
+      "mean_plasma_current_a": 461955.3663699892,
+      "median_dalpha_peak_v": 2.0556640625,
+      "operator_log": "'Good shot - good repeat  - nice regular ELMS'",
+      "p90_dalpha_peak_v": 3.88427734375,
+      "rog_elm_l01_rms_v": 0.014564488964082481,
+      "scenario": 5,
+      "shot": 30423
+    }
+  ],
+  "status": "MAST_RMP_CAUSAL_ANALOG_DIRECTIONALLY_SUPPORTIVE_UNDERPOWERED",
+  "window_s": [
+    0.3,
+    0.48
+  ]
+}

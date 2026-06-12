@@ -79,6 +79,8 @@ For the first open experimental precursor / latency screen, review:
 - [`fair_mast_elm_precursor_validation.py`](fair_mast_elm_precursor_validation.py)
 - [`validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_report.md`](validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_report.md)
 - [`validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_summary.json`](validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_summary.json)
+- [`fair_mast_rmp_causal_analog.py`](fair_mast_rmp_causal_analog.py)
+- [`validation_runs/fair_mast_rmp_causal_analog_default/fair_mast_rmp_causal_analog_report.md`](validation_runs/fair_mast_rmp_causal_analog_default/fair_mast_rmp_causal_analog_report.md)
 
 ## Fast technical review path
 
