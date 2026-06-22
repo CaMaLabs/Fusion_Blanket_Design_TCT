@@ -1,0 +1,199 @@
+{
+  "candidate_shots": [
+    30275,
+    30276,
+    30277,
+    30285,
+    30311,
+    30418,
+    30419,
+    30421,
+    30423
+  ],
+  "claim_boundary": "Expanded measured-RMP causal analog only; not causal TCT validation.",
+  "effects": {
+    "event_rate_directional_permutation_p": 0.023809523809523808,
+    "event_rate_relative_change": 0.875,
+    "median_peak_directional_permutation_p": 0.18253968253968253,
+    "median_peak_relative_change": -0.2758296385865914
+  },
+  "generated_at": "2026-06-22T15:15:03.360316+00:00",
+  "groups": {
+    "actuator_active": {
+      "mean_event_rate_hz": 91.66666666666667,
+      "mean_line_average_ne_m3": 4.9194171706313695e+19,
+      "mean_median_dalpha_peak_v": 1.31591796875,
+      "mean_nbi_power_w": 3427832.6010416667,
+      "mean_p90_dalpha_peak_v": 1.8994140625,
+      "mean_plasma_current_a": 524416.7267795139,
+      "mean_rog_elm_l01_rms_v": 0.23994891090465661,
+      "shot_count": 4,
+      "shots": [
+        30277,
+        30418,
+        30419,
+        30421
+      ]
+    },
+    "actuator_inactive": {
+      "mean_event_rate_hz": 48.88888888888889,
+      "mean_line_average_ne_m3": 4.191793124536839e+19,
+      "mean_median_dalpha_peak_v": 1.817138671875,
+      "mean_nbi_power_w": 2266881.944581781,
+      "mean_p90_dalpha_peak_v": 2.749560546875,
+      "mean_plasma_current_a": 479417.9966427564,
+      "mean_rog_elm_l01_rms_v": 0.016611876959433305,
+      "shot_count": 5,
+      "shots": [
+        30275,
+        30276,
+        30285,
+        30311,
+        30423
+      ]
+    }
+  },
+  "shots": [
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": null,
+      "event_count": 14,
+      "event_rate_hz": 77.77777777777779,
+      "mean_line_average_ne_m3": 2.962393134675161e+19,
+      "mean_nbi_power_w": 1600262.87510874,
+      "mean_plasma_current_a": 562560.9979166667,
+      "median_dalpha_peak_v": 1.134033203125,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 1.4584960937500002,
+      "rog_elm_l01_rms_v": 0.018196545020717207,
+      "scenario": null,
+      "shot": 30275
+    },
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": null,
+      "event_count": 10,
+      "event_rate_hz": 55.55555555555556,
+      "mean_line_average_ne_m3": 3.333747054735821e+19,
+      "mean_nbi_power_w": 3507905.4777777777,
+      "mean_plasma_current_a": 434679.56145833334,
+      "median_dalpha_peak_v": 1.683349609375,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 1.9062499999999998,
+      "rog_elm_l01_rms_v": 0.012348378082806602,
+      "scenario": null,
+      "shot": 30276
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": null,
+      "event_count": 13,
+      "event_rate_hz": 72.22222222222223,
+      "mean_line_average_ne_m3": 1.0062357720836202e+20,
+      "mean_nbi_power_w": 3561534.6569444444,
+      "mean_plasma_current_a": 422930.3796875,
+      "median_dalpha_peak_v": 1.34521484375,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 1.6162109375,
+      "rog_elm_l01_rms_v": 0.21138029213682122,
+      "scenario": null,
+      "shot": 30277
+    },
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": null,
+      "event_count": 4,
+      "event_rate_hz": 22.22222222222222,
+      "mean_line_average_ne_m3": 1.8150805807991736e+19,
+      "mean_nbi_power_w": 1784375.8943077573,
+      "mean_plasma_current_a": 373563.11678447423,
+      "median_dalpha_peak_v": 3.243408203125,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 4.834228515625,
+      "rog_elm_l01_rms_v": 0.02036743831710287,
+      "scenario": null,
+      "shot": 30285
+    },
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": null,
+      "event_count": 5,
+      "event_rate_hz": 27.77777777777778,
+      "mean_line_average_ne_m3": 1.1136781414913086e+20,
+      "mean_nbi_power_w": 1727841.8357691658,
+      "mean_plasma_current_a": 563105.5098958333,
+      "median_dalpha_peak_v": 0.9814453125,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 1.66455078125,
+      "rog_elm_l01_rms_v": 0.017582534412457378,
+      "scenario": null,
+      "shot": 30311
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": null,
+      "event_count": 18,
+      "event_rate_hz": 100.0,
+      "mean_line_average_ne_m3": 3.0961867593555153e+19,
+      "mean_nbi_power_w": 3360444.134722222,
+      "mean_plasma_current_a": 421552.28506944445,
+      "median_dalpha_peak_v": 0.989990234375,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 1.41650390625,
+      "rog_elm_l01_rms_v": 0.2000928233594641,
+      "scenario": null,
+      "shot": 30418
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": null,
+      "event_count": 14,
+      "event_rate_hz": 77.77777777777779,
+      "mean_line_average_ne_m3": 3.32740379867668e+19,
+      "mean_nbi_power_w": 3381414.6194444443,
+      "mean_plasma_current_a": 626042.5739583333,
+      "median_dalpha_peak_v": 1.563720703125,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 2.404296875,
+      "rog_elm_l01_rms_v": 0.24211827281237558,
+      "scenario": null,
+      "shot": 30419
+    },
+    {
+      "actuator_active_measured": true,
+      "catalog_rmp_coil": null,
+      "event_count": 21,
+      "event_rate_hz": 116.66666666666667,
+      "mean_line_average_ne_m3": 3.1917204036570804e+19,
+      "mean_nbi_power_w": 3407936.9930555555,
+      "mean_plasma_current_a": 627141.6684027778,
+      "median_dalpha_peak_v": 1.36474609375,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 2.16064453125,
+      "rog_elm_l01_rms_v": 0.30620425530996565,
+      "scenario": null,
+      "shot": 30421
+    },
+    {
+      "actuator_active_measured": false,
+      "catalog_rmp_coil": null,
+      "event_count": 11,
+      "event_rate_hz": 61.111111111111114,
+      "mean_line_average_ne_m3": 1.7109634375609594e+19,
+      "mean_nbi_power_w": 2714023.6399454647,
+      "mean_plasma_current_a": 463180.7971584744,
+      "median_dalpha_peak_v": 2.04345703125,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "p90_dalpha_peak_v": 3.88427734375,
+      "rog_elm_l01_rms_v": 0.014564488964082481,
+      "scenario": null,
+      "shot": 30423
+    }
+  ],
+  "skipped_shots": [],
+  "status": "MAST_RMP_EXPANDED_CAUSAL_ANALOG_COMPLETED",
+  "window_s": [
+    0.3,
+    0.48
+  ]
+}

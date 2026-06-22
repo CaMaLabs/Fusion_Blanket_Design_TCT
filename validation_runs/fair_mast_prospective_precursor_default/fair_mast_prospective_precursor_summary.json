@@ -1,0 +1,346 @@
+{
+  "claim_boundary": "Held-out precursor timing test only; not causal TCT actuator validation.",
+  "data_source": "FAIR-MAST public Level-2 experimental archive",
+  "generated_at": "2026-06-22T15:10:32.218655+00:00",
+  "selected_threshold_sigma": 6.0,
+  "shot_scores": [
+    {
+      "baseline_median": 4.205907236267101e-06,
+      "baseline_sigma": 2.0934535295717953e-06,
+      "detected_event_count": 18,
+      "event_count": 23,
+      "f1": 0.8571428571428571,
+      "false_trigger_count": 1,
+      "lead_ms": {
+        "maximum": 13.70200000000002,
+        "median": 5.278000000000047,
+        "minimum": 0.7739999999999969
+      },
+      "missed_event_count": 5,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 0.9473684210526315,
+      "recall": 0.782608695652174,
+      "shot": 30311,
+      "split": "train",
+      "trigger_threshold": 1.6766628413697874e-05,
+      "window_s": [
+        0.2,
+        0.6
+      ]
+    },
+    {
+      "baseline_median": 4.645126800491899e-06,
+      "baseline_sigma": 4.220800618421404e-06,
+      "detected_event_count": 16,
+      "event_count": 22,
+      "f1": 0.7999999999999999,
+      "false_trigger_count": 2,
+      "lead_ms": {
+        "maximum": 11.260000000000048,
+        "median": 8.01099999999999,
+        "minimum": 0.6740000000000079
+      },
+      "missed_event_count": 6,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 0.8888888888888888,
+      "recall": 0.7272727272727273,
+      "shot": 30423,
+      "split": "train",
+      "trigger_threshold": 2.9969930511020325e-05,
+      "window_s": [
+        0.18,
+        0.6
+      ]
+    },
+    {
+      "baseline_median": 2.3849249155201092e-06,
+      "baseline_sigma": 1.3358817910024324e-06,
+      "detected_event_count": 1,
+      "event_count": 10,
+      "f1": 0.18181818181818182,
+      "false_trigger_count": 0,
+      "lead_ms": {
+        "maximum": 13.716000000000006,
+        "median": 13.716000000000006,
+        "minimum": 13.716000000000006
+      },
+      "missed_event_count": 9,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 1.0,
+      "recall": 0.1,
+      "shot": 30276,
+      "split": "test",
+      "trigger_threshold": 1.0400215661534704e-05,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "baseline_median": 3.2493687555185223e-06,
+      "baseline_sigma": 1.6126223702181574e-06,
+      "detected_event_count": 7,
+      "event_count": 13,
+      "f1": 0.7000000000000001,
+      "false_trigger_count": 0,
+      "lead_ms": {
+        "maximum": 14.957999999999972,
+        "median": 11.266000000000053,
+        "minimum": 8.988000000000051
+      },
+      "missed_event_count": 6,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 1.0,
+      "recall": 0.5384615384615384,
+      "shot": 30277,
+      "split": "test",
+      "trigger_threshold": 1.2925102976827466e-05,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "baseline_median": 3.002127459089968e-06,
+      "baseline_sigma": 1.9667467436968362e-06,
+      "detected_event_count": 12,
+      "event_count": 18,
+      "f1": 0.8,
+      "false_trigger_count": 0,
+      "lead_ms": {
+        "maximum": 13.348000000000082,
+        "median": 9.066000000000018,
+        "minimum": 5.709999999999993
+      },
+      "missed_event_count": 6,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "shot": 30418,
+      "split": "test",
+      "trigger_threshold": 1.4802607921270986e-05,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "baseline_median": 6.134758045081395e-06,
+      "baseline_sigma": 2.651900786310913e-06,
+      "detected_event_count": 8,
+      "event_count": 13,
+      "f1": 0.761904761904762,
+      "false_trigger_count": 0,
+      "lead_ms": {
+        "maximum": 13.006000000000018,
+        "median": 8.410000000000029,
+        "minimum": 3.9899999999999936
+      },
+      "missed_event_count": 5,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 1.0,
+      "recall": 0.6153846153846154,
+      "shot": 30419,
+      "split": "test",
+      "trigger_threshold": 2.204616276294687e-05,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "baseline_median": 2.4967319119329953e-06,
+      "baseline_sigma": 1.4124318484277495e-06,
+      "detected_event_count": 19,
+      "event_count": 19,
+      "f1": 0.9743589743589743,
+      "false_trigger_count": 1,
+      "lead_ms": {
+        "maximum": 14.742000000000088,
+        "median": 4.986000000000046,
+        "minimum": 0.5540000000000544
+      },
+      "missed_event_count": 0,
+      "operator_log": "metadata fetch failed: URLError: <urlopen error timed out>",
+      "precision": 0.95,
+      "recall": 1.0,
+      "shot": 30421,
+      "split": "test",
+      "trigger_threshold": 1.0971323002499492e-05,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    }
+  ],
+  "status": "MAST_HELD_OUT_PRECURSOR_TEST_COMPLETED",
+  "test_aggregate": {
+    "detected_event_count": 47,
+    "event_count": 73,
+    "f1": 0.7768595041322315,
+    "false_trigger_count": 1,
+    "latency_feasible_event_count": {
+      "12_ms": 11,
+      "3_ms": 45,
+      "5_ms": 36,
+      "8_ms": 26
+    },
+    "lead_ms": {
+      "maximum": 14.957999999999972,
+      "median": 8.233000000000047,
+      "minimum": 0.5540000000000544
+    },
+    "missed_event_count": 26,
+    "precision": 0.9791666666666666,
+    "recall": 0.6438356164383562
+  },
+  "threshold_grid": [
+    {
+      "detected_event_count": 36,
+      "event_count": 45,
+      "f1": 0.7741935483870969,
+      "false_trigger_count": 12,
+      "latency_feasible_event_count": {
+        "12_ms": 1,
+        "3_ms": 28,
+        "5_ms": 22,
+        "8_ms": 9
+      },
+      "lead_ms": {
+        "maximum": 14.934000000000031,
+        "median": 6.091000000000013,
+        "minimum": 0.7300000000000639
+      },
+      "missed_event_count": 9,
+      "precision": 0.75,
+      "recall": 0.8,
+      "threshold_sigma": 4.0
+    },
+    {
+      "detected_event_count": 35,
+      "event_count": 45,
+      "f1": 0.8139534883720929,
+      "false_trigger_count": 6,
+      "latency_feasible_event_count": {
+        "12_ms": 1,
+        "3_ms": 29,
+        "5_ms": 22,
+        "8_ms": 9
+      },
+      "lead_ms": {
+        "maximum": 14.830000000000037,
+        "median": 6.132000000000026,
+        "minimum": 0.7040000000000934
+      },
+      "missed_event_count": 10,
+      "precision": 0.8536585365853658,
+      "recall": 0.7777777777777778,
+      "threshold_sigma": 5.0
+    },
+    {
+      "detected_event_count": 34,
+      "event_count": 45,
+      "f1": 0.8292682926829269,
+      "false_trigger_count": 3,
+      "latency_feasible_event_count": {
+        "12_ms": 1,
+        "3_ms": 29,
+        "5_ms": 24,
+        "8_ms": 11
+      },
+      "lead_ms": {
+        "maximum": 13.70200000000002,
+        "median": 6.616000000000039,
+        "minimum": 0.6740000000000079
+      },
+      "missed_event_count": 11,
+      "precision": 0.918918918918919,
+      "recall": 0.7555555555555555,
+      "threshold_sigma": 6.0
+    },
+    {
+      "detected_event_count": 31,
+      "event_count": 45,
+      "f1": 0.7848101265822784,
+      "false_trigger_count": 3,
+      "latency_feasible_event_count": {
+        "12_ms": 0,
+        "3_ms": 26,
+        "5_ms": 20,
+        "8_ms": 9
+      },
+      "lead_ms": {
+        "maximum": 11.220000000000008,
+        "median": 6.714000000000054,
+        "minimum": 0.6440000000000334
+      },
+      "missed_event_count": 14,
+      "precision": 0.9117647058823529,
+      "recall": 0.6888888888888889,
+      "threshold_sigma": 7.0
+    },
+    {
+      "detected_event_count": 17,
+      "event_count": 45,
+      "f1": 0.523076923076923,
+      "false_trigger_count": 3,
+      "latency_feasible_event_count": {
+        "12_ms": 0,
+        "3_ms": 12,
+        "5_ms": 9,
+        "8_ms": 6
+      },
+      "lead_ms": {
+        "maximum": 11.149999999999993,
+        "median": 5.312000000000011,
+        "minimum": 0.6160000000000054
+      },
+      "missed_event_count": 28,
+      "precision": 0.85,
+      "recall": 0.37777777777777777,
+      "threshold_sigma": 8.0
+    },
+    {
+      "detected_event_count": 8,
+      "event_count": 45,
+      "f1": 0.2909090909090909,
+      "false_trigger_count": 2,
+      "latency_feasible_event_count": {
+        "12_ms": 1,
+        "3_ms": 5,
+        "5_ms": 4,
+        "8_ms": 3
+      },
+      "lead_ms": {
+        "maximum": 13.292000000000082,
+        "median": 4.993000000000053,
+        "minimum": 0.5740000000000189
+      },
+      "missed_event_count": 37,
+      "precision": 0.8,
+      "recall": 0.17777777777777778,
+      "threshold_sigma": 10.0
+    },
+    {
+      "detected_event_count": 7,
+      "event_count": 45,
+      "f1": 0.26415094339622647,
+      "false_trigger_count": 1,
+      "latency_feasible_event_count": {
+        "12_ms": 2,
+        "3_ms": 4,
+        "5_ms": 3,
+        "8_ms": 3
+      },
+      "lead_ms": {
+        "maximum": 14.38000000000006,
+        "median": 3.151999999999988,
+        "minimum": 0.53400000000009
+      },
+      "missed_event_count": 38,
+      "precision": 0.875,
+      "recall": 0.15555555555555556,
+      "threshold_sigma": 12.0
+    }
+  ]
+}
