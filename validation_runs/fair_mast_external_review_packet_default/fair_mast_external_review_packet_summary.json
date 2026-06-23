@@ -1,0 +1,28 @@
+{
+  "accepted_true_elm_count": 59,
+  "claim_boundary": "External review packet only; requests expert assessment of event labels, precursor timing, and claim boundaries.",
+  "false_trigger_count": 1,
+  "held_out_shots": [
+    30276,
+    30277,
+    30418,
+    30419,
+    30421
+  ],
+  "machine_reviewed_metrics": {
+    "accepted_detected_count": 39,
+    "accepted_missed_count": 20,
+    "median_lead_ms": 8.376,
+    "precision_on_true_elm": 0.975,
+    "recall_on_true_elm": 0.661
+  },
+  "status": "MAST_EXTERNAL_REVIEW_PACKET_PREPARED",
+  "time_shift_null": {
+    "directional_p_detected_ge_observed": 0.00001999960000799984,
+    "null_detected_count_mean": 27.70022,
+    "null_detected_count_p95": 33.0,
+    "null_max_detected_count": 38,
+    "observed_detected_count": 39,
+    "trials": 50000
+  }
+}

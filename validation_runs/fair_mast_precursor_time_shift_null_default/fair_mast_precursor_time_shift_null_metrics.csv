@@ -1,0 +1,6 @@
+metric,observed,null_mean,null_p50,null_p95,null_max,p_value_ge_observed
+detected_count,39,27.70022,28.0,33.0,38,1.999960000799984e-05
+latency_3_ms_feasible_count,38,19.63272,20.0,25.0,33,1.999960000799984e-05
+latency_5_ms_feasible_count,30,13.74392,14.0,19.0,30,3.999920001599968e-05
+latency_8_ms_feasible_count,23,6.8228,7.0,11.0,21,1.999960000799984e-05
+latency_12_ms_feasible_count,9,1.77096,2.0,4.0,9,3.999920001599968e-05
