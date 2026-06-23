@@ -1,0 +1,31 @@
+{
+  "claim_boundary": "Machine-aided first-pass event-label triage only; not expert-reviewed final labels.",
+  "generated_at": "2026-06-23T20:33:19.644500+00:00",
+  "input_event_count": 73,
+  "label_counts": {
+    "ambiguous": 14,
+    "true_elm": 59
+  },
+  "reviewed_metrics": {
+    "accepted_detected_count": 39,
+    "accepted_missed_count": 20,
+    "accepted_true_elm_count": 59,
+    "f1_on_true_elm": 0.7878787878787878,
+    "false_trigger_count_carried_from_source": 1,
+    "latency_feasible_true_elm_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.957999999999972,
+      "median": 8.375999999999994,
+      "minimum": 2.5540000000000562
+    },
+    "precision_on_true_elm": 0.975,
+    "recall_on_true_elm": 0.6610169491525424
+  },
+  "source_audit_run": "validation_runs/fair_mast_event_label_audit_default",
+  "status": "MAST_MACHINE_AIDED_LABEL_REVIEW_COMPLETED"
+}
