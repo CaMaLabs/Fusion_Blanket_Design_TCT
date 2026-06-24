@@ -35,6 +35,7 @@ Primary reproduction scripts:
 - [`fair_mast_multidiagnostic_precursor_fusion.py`](../../fair_mast_multidiagnostic_precursor_fusion.py)
 - [`fair_mast_sxr_precursor_tradeoff.py`](../../fair_mast_sxr_precursor_tradeoff.py)
 - [`fair_mast_sxr_morphology_gate.py`](../../fair_mast_sxr_morphology_gate.py)
+- [`fair_mast_tct_forward_surrogate.py`](../../fair_mast_tct_forward_surrogate.py)
 
 ## Result Summary
 
@@ -151,6 +152,26 @@ SXR morphology gate:
 - Interpretation: this is the correct next open-data test, but there is no
   morphology-gate metric yet.
 
+FAIR-MAST-seeded forward TCT surrogate:
+
+- Monte Carlo policies: no control, preventative bias only, fixed Mirnov fast
+  boost, Mirnov+toroidal fast boost, Mirnov+toroidal nominal boost, high-recall
+  SXR, precision-gated SXR, false-bounded SXR, and oracle fast upper bound.
+- Calibration: `59` accepted FAIR-MAST true ELMs over `0.90 s` held-out
+  windows, D-alpha contrast severity proxy, held-out trigger/latency metrics,
+  and biased actuator response budgets.
+- Best realizable policy in the proxy: Mirnov+toroidal fast boost, mean proxy
+  loss `358.578`, `51.5%` lower than no control.
+- Preventative bias only: mean proxy loss `556.006`, `24.8%` lower than no
+  control.
+- Noisy high-recall SXR: mean proxy loss `393.099`, `46.8%` lower than no
+  control, worse than Mirnov+toroidal because shorter leads and false triggers
+  reduce control usefulness.
+- Oracle fast upper bound: mean proxy loss `250.005`, `66.2%` lower than no
+  control.
+- Interpretation: this supports the control strategy ranking in a reduced-order
+  proxy, not sustained-fusion validation.
+
 ## Audit Artifacts
 
 - [Held-out precursor report](../fair_mast_prospective_precursor_default/fair_mast_prospective_precursor_report.md)
@@ -165,6 +186,7 @@ SXR morphology gate:
 - [Multi-diagnostic precursor fusion report](../fair_mast_multidiagnostic_precursor_fusion_default/fair_mast_multidiagnostic_precursor_fusion_report.md)
 - [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
 - [SXR morphology gate blocked-run report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
+- [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 
 Representative plots:
 
@@ -199,7 +221,9 @@ Representative plots:
     single-channel trigger, or is the one-event gain too small?
 12. Is the SXR recognition gain physically pre-event, or mostly SXR event
     signature leakage that requires a morphology gate?
-13. What additional FAIR-MAST diagnostics should be included before promoting
+13. Does the forward surrogate use reasonable proxy penalties for event
+    severity, false triggers, and standing-bias cost?
+14. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -216,6 +240,9 @@ Supported:
   with many false triggers and shorter median lead under fixed thresholds.
 - A causal SXR morphology-gate test is implemented and ready to rerun once the
   public archive is reachable.
+- A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
+  boost above no control, preventative bias only, nominal-latency boost, and
+  noisy high-recall SXR under the current proxy assumptions.
 
 Not supported:
 
@@ -229,3 +256,5 @@ Not supported:
 - A substantially better precursor that resolves the latency limitation.
 - A fixed-threshold SXR trigger clean enough to replace Mirnov+toroidal fusion.
 - A completed SXR morphology-gate validation result.
+- Sustained-fusion validation, burn control, alpha heating, transport, wall
+  survival, TBR, or reactor duty-cycle prediction from the forward surrogate.

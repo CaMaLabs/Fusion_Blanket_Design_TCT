@@ -34,6 +34,8 @@
       late-stage event prevention.
 - [ ] Results support preventative/moderate control direction, not causal TCT
       validation.
+- [ ] Forward-surrogate penalties and policy rankings are treated as proxy
+      assumptions, not sustained-fusion performance.
 - [ ] Reviewer agrees with stated claim boundaries.
 
 ## Requested Outcome
