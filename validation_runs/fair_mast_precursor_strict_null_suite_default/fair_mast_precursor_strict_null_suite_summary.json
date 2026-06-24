@@ -1,0 +1,945 @@
+{
+  "claim_boundary": "Stricter timing-specificity null suite only; not causal TCT actuator validation.",
+  "full_shot_results": {
+    "local_event_jitter": {
+      "null_summary": {
+        "detected_count": {
+          "null_max": 40,
+          "null_mean": 32.13736,
+          "null_p50": 32.0,
+          "null_p95": 35.0,
+          "null_p99": 37.0,
+          "observed": 39,
+          "p_value_ge_observed": 0.0002999940001199976
+        },
+        "latency_feasible_count": {
+          "12_ms": {
+            "null_max": 10,
+            "null_mean": 2.48568,
+            "null_p50": 2.0,
+            "null_p95": 5.0,
+            "null_p99": 6.0,
+            "observed": 9,
+            "p_value_ge_observed": 0.0003599928001439971
+          },
+          "3_ms": {
+            "null_max": 34,
+            "null_mean": 22.13222,
+            "null_p50": 22.0,
+            "null_p95": 27.0,
+            "null_p99": 29.0,
+            "observed": 38,
+            "p_value_ge_observed": 1.999960000799984e-05
+          },
+          "5_ms": {
+            "null_max": 28,
+            "null_mean": 15.2957,
+            "null_p50": 15.0,
+            "null_p95": 21.0,
+            "null_p99": 23.0,
+            "observed": 30,
+            "p_value_ge_observed": 1.999960000799984e-05
+          },
+          "8_ms": {
+            "null_max": 20,
+            "null_mean": 8.3796,
+            "null_p50": 8.0,
+            "null_p95": 13.0,
+            "null_p99": 15.0,
+            "observed": 23,
+            "p_value_ge_observed": 1.999960000799984e-05
+          }
+        }
+      },
+      "observed": {
+        "detected_count": 39,
+        "event_count": 59,
+        "latency_feasible_count": {
+          "12_ms": 9,
+          "3_ms": 38,
+          "5_ms": 30,
+          "8_ms": 23
+        },
+        "lead_ms": {
+          "maximum": 14.957999999999972,
+          "median": 8.375999999999994,
+          "minimum": 2.5540000000000562
+        },
+        "recall": 0.6610169491525424,
+        "trigger_count": 46
+      }
+    },
+    "trigger_train_block_shift": {
+      "null_summary": {
+        "detected_count": {
+          "null_max": 39,
+          "null_mean": 27.7251,
+          "null_p50": 28.0,
+          "null_p95": 33.0,
+          "null_p99": 35.0,
+          "observed": 39,
+          "p_value_ge_observed": 5.999880002399952e-05
+        },
+        "latency_feasible_count": {
+          "12_ms": {
+            "null_max": 9,
+            "null_mean": 1.77472,
+            "null_p50": 2.0,
+            "null_p95": 4.0,
+            "null_p99": 5.0,
+            "observed": 9,
+            "p_value_ge_observed": 3.999920001599968e-05
+          },
+          "3_ms": {
+            "null_max": 34,
+            "null_mean": 19.65544,
+            "null_p50": 20.0,
+            "null_p95": 26.0,
+            "null_p99": 28.0,
+            "observed": 38,
+            "p_value_ge_observed": 1.999960000799984e-05
+          },
+          "5_ms": {
+            "null_max": 32,
+            "null_mean": 13.76378,
+            "null_p50": 14.0,
+            "null_p95": 19.0,
+            "null_p99": 22.0,
+            "observed": 30,
+            "p_value_ge_observed": 5.999880002399952e-05
+          },
+          "8_ms": {
+            "null_max": 21,
+            "null_mean": 6.8588,
+            "null_p50": 7.0,
+            "null_p95": 11.0,
+            "null_p99": 14.0,
+            "observed": 23,
+            "p_value_ge_observed": 1.999960000799984e-05
+          }
+        }
+      },
+      "observed": {
+        "detected_count": 39,
+        "event_count": 59,
+        "latency_feasible_count": {
+          "12_ms": 9,
+          "3_ms": 38,
+          "5_ms": 30,
+          "8_ms": 23
+        },
+        "lead_ms": {
+          "maximum": 14.957999999999972,
+          "median": 8.375999999999994,
+          "minimum": 2.5540000000000562
+        },
+        "recall": 0.6610169491525424,
+        "trigger_count": 46
+      }
+    }
+  },
+  "generated_at": "2026-06-24T12:42:12.448454+00:00",
+  "held_out_shots": [
+    30276,
+    30277,
+    30418,
+    30419,
+    30421
+  ],
+  "leave_one_shot_out": [
+    {
+      "excluded_shot": 30276,
+      "observed": {
+        "detected_count": 39,
+        "event_count": 50,
+        "latency_feasible_count": {
+          "12_ms": 9,
+          "3_ms": 38,
+          "5_ms": 30,
+          "8_ms": 23
+        },
+        "lead_ms": {
+          "maximum": 14.957999999999972,
+          "median": 8.375999999999994,
+          "minimum": 2.5540000000000562
+        },
+        "recall": 0.78,
+        "trigger_count": 45
+      },
+      "results": {
+        "local_event_jitter": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 38,
+              "null_mean": 31.54932,
+              "null_p50": 32.0,
+              "null_p95": 35.0,
+              "null_p99": 36.0,
+              "observed": 39,
+              "p_value_ge_observed": 1.999960000799984e-05
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 10,
+                "null_mean": 2.39564,
+                "null_p50": 2.0,
+                "null_p95": 5.0,
+                "null_p99": 6.0,
+                "observed": 9,
+                "p_value_ge_observed": 0.00041999160016799666
+              },
+              "3_ms": {
+                "null_max": 34,
+                "null_mean": 21.6458,
+                "null_p50": 22.0,
+                "null_p95": 27.0,
+                "null_p99": 29.0,
+                "observed": 38,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 28,
+                "null_mean": 14.93996,
+                "null_p50": 15.0,
+                "null_p95": 20.0,
+                "null_p99": 22.0,
+                "observed": 30,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "8_ms": {
+                "null_max": 20,
+                "null_mean": 8.13326,
+                "null_p50": 8.0,
+                "null_p95": 12.0,
+                "null_p99": 14.0,
+                "observed": 23,
+                "p_value_ge_observed": 1.999960000799984e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 39,
+            "event_count": 50,
+            "latency_feasible_count": {
+              "12_ms": 9,
+              "3_ms": 38,
+              "5_ms": 30,
+              "8_ms": 23
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 8.375999999999994,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.78,
+            "trigger_count": 45
+          }
+        },
+        "trigger_train_block_shift": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 38,
+              "null_mean": 26.98204,
+              "null_p50": 27.0,
+              "null_p95": 32.0,
+              "null_p99": 34.0,
+              "observed": 39,
+              "p_value_ge_observed": 1.999960000799984e-05
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 9,
+                "null_mean": 1.61732,
+                "null_p50": 1.0,
+                "null_p95": 4.0,
+                "null_p99": 5.0,
+                "observed": 9,
+                "p_value_ge_observed": 5.999880002399952e-05
+              },
+              "3_ms": {
+                "null_max": 34,
+                "null_mean": 19.05662,
+                "null_p50": 19.0,
+                "null_p95": 25.0,
+                "null_p99": 28.0,
+                "observed": 38,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 30,
+                "null_mean": 13.26252,
+                "null_p50": 13.0,
+                "null_p95": 19.0,
+                "null_p99": 22.0,
+                "observed": 30,
+                "p_value_ge_observed": 5.999880002399952e-05
+              },
+              "8_ms": {
+                "null_max": 20,
+                "null_mean": 6.48242,
+                "null_p50": 6.0,
+                "null_p95": 11.0,
+                "null_p99": 13.0,
+                "observed": 23,
+                "p_value_ge_observed": 1.999960000799984e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 39,
+            "event_count": 50,
+            "latency_feasible_count": {
+              "12_ms": 9,
+              "3_ms": 38,
+              "5_ms": 30,
+              "8_ms": 23
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 8.375999999999994,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.78,
+            "trigger_count": 45
+          }
+        }
+      }
+    },
+    {
+      "excluded_shot": 30277,
+      "observed": {
+        "detected_count": 32,
+        "event_count": 47,
+        "latency_feasible_count": {
+          "12_ms": 6,
+          "3_ms": 31,
+          "5_ms": 23,
+          "8_ms": 16
+        },
+        "lead_ms": {
+          "maximum": 13.348000000000082,
+          "median": 7.832000000000034,
+          "minimum": 2.5540000000000562
+        },
+        "recall": 0.6808510638297872,
+        "trigger_count": 39
+      },
+      "results": {
+        "local_event_jitter": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 34,
+              "null_mean": 26.7694,
+              "null_p50": 27.0,
+              "null_p95": 30.0,
+              "null_p99": 31.0,
+              "observed": 32,
+              "p_value_ge_observed": 0.0019199616007679846
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 9,
+                "null_mean": 2.04836,
+                "null_p50": 2.0,
+                "null_p95": 4.0,
+                "null_p99": 6.0,
+                "observed": 6,
+                "p_value_ge_observed": 0.011099778004439911
+              },
+              "3_ms": {
+                "null_max": 28,
+                "null_mean": 18.10164,
+                "null_p50": 18.0,
+                "null_p95": 23.0,
+                "null_p99": 24.0,
+                "observed": 31,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 24,
+                "null_mean": 12.36132,
+                "null_p50": 12.0,
+                "null_p95": 17.0,
+                "null_p99": 19.0,
+                "observed": 23,
+                "p_value_ge_observed": 0.00017999640007199856
+              },
+              "8_ms": {
+                "null_max": 17,
+                "null_mean": 6.65526,
+                "null_p50": 7.0,
+                "null_p95": 10.0,
+                "null_p99": 12.0,
+                "observed": 16,
+                "p_value_ge_observed": 9.99980000399992e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 32,
+            "event_count": 47,
+            "latency_feasible_count": {
+              "12_ms": 6,
+              "3_ms": 31,
+              "5_ms": 23,
+              "8_ms": 16
+            },
+            "lead_ms": {
+              "maximum": 13.348000000000082,
+              "median": 7.832000000000034,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.6808510638297872,
+            "trigger_count": 39
+          }
+        },
+        "trigger_train_block_shift": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 33,
+              "null_mean": 22.17502,
+              "null_p50": 22.0,
+              "null_p95": 27.0,
+              "null_p99": 29.0,
+              "observed": 32,
+              "p_value_ge_observed": 0.0002999940001199976
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 9,
+                "null_mean": 1.32266,
+                "null_p50": 1.0,
+                "null_p95": 3.0,
+                "null_p99": 4.0,
+                "observed": 6,
+                "p_value_ge_observed": 0.0011799764004719905
+              },
+              "3_ms": {
+                "null_max": 30,
+                "null_mean": 15.2817,
+                "null_p50": 15.0,
+                "null_p95": 21.0,
+                "null_p99": 23.0,
+                "observed": 31,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 25,
+                "null_mean": 10.31928,
+                "null_p50": 10.0,
+                "null_p95": 15.0,
+                "null_p99": 18.0,
+                "observed": 23,
+                "p_value_ge_observed": 0.0003599928001439971
+              },
+              "8_ms": {
+                "null_max": 17,
+                "null_mean": 4.78352,
+                "null_p50": 5.0,
+                "null_p95": 8.0,
+                "null_p99": 11.0,
+                "observed": 16,
+                "p_value_ge_observed": 3.999920001599968e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 32,
+            "event_count": 47,
+            "latency_feasible_count": {
+              "12_ms": 6,
+              "3_ms": 31,
+              "5_ms": 23,
+              "8_ms": 16
+            },
+            "lead_ms": {
+              "maximum": 13.348000000000082,
+              "median": 7.832000000000034,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.6808510638297872,
+            "trigger_count": 39
+          }
+        }
+      }
+    },
+    {
+      "excluded_shot": 30418,
+      "observed": {
+        "detected_count": 29,
+        "event_count": 48,
+        "latency_feasible_count": {
+          "12_ms": 6,
+          "3_ms": 28,
+          "5_ms": 20,
+          "8_ms": 15
+        },
+        "lead_ms": {
+          "maximum": 14.957999999999972,
+          "median": 8.162000000000058,
+          "minimum": 2.5540000000000562
+        },
+        "recall": 0.6041666666666666,
+        "trigger_count": 34
+      },
+      "results": {
+        "local_event_jitter": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 30,
+              "null_mean": 24.66124,
+              "null_p50": 25.0,
+              "null_p95": 27.0,
+              "null_p99": 28.0,
+              "observed": 29,
+              "p_value_ge_observed": 0.006419871602567948
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 9,
+                "null_mean": 2.0336,
+                "null_p50": 2.0,
+                "null_p95": 4.0,
+                "null_p99": 6.0,
+                "observed": 6,
+                "p_value_ge_observed": 0.010219795604087919
+              },
+              "3_ms": {
+                "null_max": 28,
+                "null_mean": 17.05142,
+                "null_p50": 17.0,
+                "null_p95": 21.0,
+                "null_p99": 23.0,
+                "observed": 28,
+                "p_value_ge_observed": 3.999920001599968e-05
+              },
+              "5_ms": {
+                "null_max": 23,
+                "null_mean": 11.90136,
+                "null_p50": 12.0,
+                "null_p95": 16.0,
+                "null_p99": 18.0,
+                "observed": 20,
+                "p_value_ge_observed": 0.0020799584008319833
+              },
+              "8_ms": {
+                "null_max": 17,
+                "null_mean": 6.79878,
+                "null_p50": 7.0,
+                "null_p95": 11.0,
+                "null_p99": 12.0,
+                "observed": 15,
+                "p_value_ge_observed": 0.0005999880002399952
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 29,
+            "event_count": 48,
+            "latency_feasible_count": {
+              "12_ms": 6,
+              "3_ms": 28,
+              "5_ms": 20,
+              "8_ms": 15
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 8.162000000000058,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.6041666666666666,
+            "trigger_count": 34
+          }
+        },
+        "trigger_train_block_shift": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 30,
+              "null_mean": 21.16418,
+              "null_p50": 21.0,
+              "null_p95": 25.0,
+              "null_p99": 27.0,
+              "observed": 29,
+              "p_value_ge_observed": 0.0005799884002319954
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 8,
+                "null_mean": 1.61604,
+                "null_p50": 1.0,
+                "null_p95": 4.0,
+                "null_p99": 5.0,
+                "observed": 6,
+                "p_value_ge_observed": 0.004279914401711966
+              },
+              "3_ms": {
+                "null_max": 27,
+                "null_mean": 14.93472,
+                "null_p50": 15.0,
+                "null_p95": 20.0,
+                "null_p99": 22.0,
+                "observed": 28,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 23,
+                "null_mean": 10.49282,
+                "null_p50": 10.0,
+                "null_p95": 15.0,
+                "null_p99": 17.0,
+                "observed": 20,
+                "p_value_ge_observed": 0.0006799864002719945
+              },
+              "8_ms": {
+                "null_max": 17,
+                "null_mean": 5.66928,
+                "null_p50": 6.0,
+                "null_p95": 9.0,
+                "null_p99": 11.0,
+                "observed": 15,
+                "p_value_ge_observed": 0.00037999240015199694
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 29,
+            "event_count": 48,
+            "latency_feasible_count": {
+              "12_ms": 6,
+              "3_ms": 28,
+              "5_ms": 20,
+              "8_ms": 15
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 8.162000000000058,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.6041666666666666,
+            "trigger_count": 34
+          }
+        }
+      }
+    },
+    {
+      "excluded_shot": 30419,
+      "observed": {
+        "detected_count": 31,
+        "event_count": 46,
+        "latency_feasible_count": {
+          "12_ms": 7,
+          "3_ms": 30,
+          "5_ms": 24,
+          "8_ms": 17
+        },
+        "lead_ms": {
+          "maximum": 14.957999999999972,
+          "median": 8.162000000000058,
+          "minimum": 2.5540000000000562
+        },
+        "recall": 0.6739130434782609,
+        "trigger_count": 38
+      },
+      "results": {
+        "local_event_jitter": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 32,
+              "null_mean": 26.04802,
+              "null_p50": 26.0,
+              "null_p95": 29.0,
+              "null_p99": 30.0,
+              "observed": 31,
+              "p_value_ge_observed": 0.0018399632007359854
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 8,
+                "null_mean": 1.69212,
+                "null_p50": 2.0,
+                "null_p95": 4.0,
+                "null_p99": 5.0,
+                "observed": 7,
+                "p_value_ge_observed": 0.0008199836003279934
+              },
+              "3_ms": {
+                "null_max": 28,
+                "null_mean": 17.89208,
+                "null_p50": 18.0,
+                "null_p95": 22.0,
+                "null_p99": 24.0,
+                "observed": 30,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 24,
+                "null_mean": 12.34272,
+                "null_p50": 12.0,
+                "null_p95": 17.0,
+                "null_p99": 19.0,
+                "observed": 24,
+                "p_value_ge_observed": 3.999920001599968e-05
+              },
+              "8_ms": {
+                "null_max": 18,
+                "null_mean": 6.64082,
+                "null_p50": 7.0,
+                "null_p95": 11.0,
+                "null_p99": 12.0,
+                "observed": 17,
+                "p_value_ge_observed": 3.999920001599968e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 31,
+            "event_count": 46,
+            "latency_feasible_count": {
+              "12_ms": 7,
+              "3_ms": 30,
+              "5_ms": 24,
+              "8_ms": 17
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 8.162000000000058,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.6739130434782609,
+            "trigger_count": 38
+          }
+        },
+        "trigger_train_block_shift": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 32,
+              "null_mean": 22.62354,
+              "null_p50": 23.0,
+              "null_p95": 27.0,
+              "null_p99": 29.0,
+              "observed": 31,
+              "p_value_ge_observed": 0.0016599668006639866
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 8,
+                "null_mean": 1.33232,
+                "null_p50": 1.0,
+                "null_p95": 3.0,
+                "null_p99": 4.0,
+                "observed": 7,
+                "p_value_ge_observed": 0.00023999520009599807
+              },
+              "3_ms": {
+                "null_max": 29,
+                "null_mean": 16.02466,
+                "null_p50": 16.0,
+                "null_p95": 21.0,
+                "null_p99": 24.0,
+                "observed": 30,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 27,
+                "null_mean": 11.1614,
+                "null_p50": 11.0,
+                "null_p95": 16.0,
+                "null_p99": 19.0,
+                "observed": 24,
+                "p_value_ge_observed": 0.0002999940001199976
+              },
+              "8_ms": {
+                "null_max": 17,
+                "null_mean": 5.44094,
+                "null_p50": 5.0,
+                "null_p95": 9.0,
+                "null_p99": 12.0,
+                "observed": 17,
+                "p_value_ge_observed": 0.0001399972000559989
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 31,
+            "event_count": 46,
+            "latency_feasible_count": {
+              "12_ms": 7,
+              "3_ms": 30,
+              "5_ms": 24,
+              "8_ms": 17
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 8.162000000000058,
+              "minimum": 2.5540000000000562
+            },
+            "recall": 0.6739130434782609,
+            "trigger_count": 38
+          }
+        }
+      }
+    },
+    {
+      "excluded_shot": 30421,
+      "observed": {
+        "detected_count": 25,
+        "event_count": 45,
+        "latency_feasible_count": {
+          "12_ms": 8,
+          "3_ms": 25,
+          "5_ms": 23,
+          "8_ms": 21
+        },
+        "lead_ms": {
+          "maximum": 14.957999999999972,
+          "median": 10.828000000000005,
+          "minimum": 3.9899999999999936
+        },
+        "recall": 0.5555555555555556,
+        "trigger_count": 28
+      },
+      "results": {
+        "local_event_jitter": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 26,
+              "null_mean": 19.53084,
+              "null_p50": 20.0,
+              "null_p95": 22.0,
+              "null_p99": 23.0,
+              "observed": 25,
+              "p_value_ge_observed": 0.0008999820003599928
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 8,
+                "null_mean": 1.75176,
+                "null_p50": 2.0,
+                "null_p95": 4.0,
+                "null_p99": 5.0,
+                "observed": 8,
+                "p_value_ge_observed": 0.00011999760004799904
+              },
+              "3_ms": {
+                "null_max": 24,
+                "null_mean": 13.8097,
+                "null_p50": 14.0,
+                "null_p95": 18.0,
+                "null_p99": 20.0,
+                "observed": 25,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "5_ms": {
+                "null_max": 22,
+                "null_mean": 9.71668,
+                "null_p50": 10.0,
+                "null_p95": 14.0,
+                "null_p99": 16.0,
+                "observed": 23,
+                "p_value_ge_observed": 1.999960000799984e-05
+              },
+              "8_ms": {
+                "null_max": 17,
+                "null_mean": 5.31844,
+                "null_p50": 5.0,
+                "null_p95": 9.0,
+                "null_p99": 11.0,
+                "observed": 21,
+                "p_value_ge_observed": 1.999960000799984e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 25,
+            "event_count": 45,
+            "latency_feasible_count": {
+              "12_ms": 8,
+              "3_ms": 25,
+              "5_ms": 23,
+              "8_ms": 21
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 10.828000000000005,
+              "minimum": 3.9899999999999936
+            },
+            "recall": 0.5555555555555556,
+            "trigger_count": 28
+          }
+        },
+        "trigger_train_block_shift": {
+          "null_summary": {
+            "detected_count": {
+              "null_max": 27,
+              "null_mean": 17.9085,
+              "null_p50": 18.0,
+              "null_p95": 22.0,
+              "null_p99": 23.0,
+              "observed": 25,
+              "p_value_ge_observed": 0.0016399672006559868
+            },
+            "latency_feasible_count": {
+              "12_ms": {
+                "null_max": 8,
+                "null_mean": 1.19662,
+                "null_p50": 1.0,
+                "null_p95": 3.0,
+                "null_p99": 4.0,
+                "observed": 8,
+                "p_value_ge_observed": 5.999880002399952e-05
+              },
+              "3_ms": {
+                "null_max": 25,
+                "null_mean": 13.3327,
+                "null_p50": 13.0,
+                "null_p95": 18.0,
+                "null_p99": 20.0,
+                "observed": 25,
+                "p_value_ge_observed": 0.00015999680006399873
+              },
+              "5_ms": {
+                "null_max": 24,
+                "null_mean": 9.77506,
+                "null_p50": 10.0,
+                "null_p95": 15.0,
+                "null_p99": 17.0,
+                "observed": 23,
+                "p_value_ge_observed": 5.999880002399952e-05
+              },
+              "8_ms": {
+                "null_max": 20,
+                "null_mean": 4.92228,
+                "null_p50": 5.0,
+                "null_p95": 9.0,
+                "null_p99": 11.0,
+                "observed": 21,
+                "p_value_ge_observed": 1.999960000799984e-05
+              }
+            }
+          },
+          "observed": {
+            "detected_count": 25,
+            "event_count": 45,
+            "latency_feasible_count": {
+              "12_ms": 8,
+              "3_ms": 25,
+              "5_ms": 23,
+              "8_ms": 21
+            },
+            "lead_ms": {
+              "maximum": 14.957999999999972,
+              "median": 10.828000000000005,
+              "minimum": 3.9899999999999936
+            },
+            "recall": 0.5555555555555556,
+            "trigger_count": 28
+          }
+        }
+      }
+    }
+  ],
+  "seed": 20260624,
+  "source_review_run": "validation_runs/fair_mast_machine_reviewed_labels_default",
+  "status": "MAST_PRECURSOR_STRICT_NULL_SUITE_COMPLETED",
+  "trial_count": 50000
+}

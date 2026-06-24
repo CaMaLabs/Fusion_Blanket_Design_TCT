@@ -17,6 +17,24 @@
     "recall_on_true_elm": 0.661
   },
   "status": "MAST_EXTERNAL_REVIEW_PACKET_PREPARED",
+  "strict_null_suite": {
+    "full_local_event_jitter": {
+      "directional_p_detected_ge_observed": 0.0002999940001199976,
+      "null_detected_count_mean": 32.13736,
+      "null_detected_count_p95": 35.0,
+      "null_max_detected_count": 40,
+      "observed_detected_count": 39
+    },
+    "full_trigger_train_block_shift": {
+      "directional_p_detected_ge_observed": 0.00005999880002399952,
+      "null_detected_count_mean": 27.7251,
+      "null_detected_count_p95": 33.0,
+      "null_max_detected_count": 39,
+      "observed_detected_count": 39
+    },
+    "leave_one_shot_out_result": "significant_for_every_held_out_shot_removed_under_both_null_families",
+    "trials_per_null": 50000
+  },
   "time_shift_null": {
     "directional_p_detected_ge_observed": 0.00001999960000799984,
     "null_detected_count_mean": 27.70022,
