@@ -1,0 +1,273 @@
+{
+  "accepted_true_elm_count": 59,
+  "claim_boundary": "Timing feasibility only; no measured TCT actuator transfer function or suppression physics.",
+  "detected_true_elm_count": 39,
+  "false_trigger_count": 1,
+  "generated_at": "2026-06-24T13:51:16.745781+00:00",
+  "latencies_ms": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    8.0,
+    10.0,
+    12.0
+  ],
+  "lead_distribution_ms": {
+    "maximum": 14.957999999999972,
+    "median": 8.375999999999994,
+    "minimum": 2.5540000000000562,
+    "p25": 5.400000000000044,
+    "p75": 11.141000000000012
+  },
+  "recommended_rows": [
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 0.5,
+      "reachable_detected_fraction": 1.0,
+      "reachable_event_count": 39,
+      "reachable_event_fraction": 0.6610169491525424,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 0.5,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 0.5,
+      "reachable_detected_fraction": 1.0,
+      "reachable_event_count": 39,
+      "reachable_event_fraction": 0.6610169491525424,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 1.5,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 0.5,
+      "reachable_detected_fraction": 1.0,
+      "reachable_event_count": 39,
+      "reachable_event_fraction": 0.6610169491525424,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 2.5,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 1.0,
+      "reachable_detected_fraction": 1.0,
+      "reachable_event_count": 39,
+      "reachable_event_fraction": 0.6610169491525424,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 1.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 1.0,
+      "reachable_detected_fraction": 1.0,
+      "reachable_event_count": 39,
+      "reachable_event_fraction": 0.6610169491525424,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 2.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 1.0,
+      "reachable_detected_fraction": 0.9743589743589743,
+      "reachable_event_count": 38,
+      "reachable_event_fraction": 0.6440677966101694,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 3.0,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 2.0,
+      "reachable_detected_fraction": 1.0,
+      "reachable_event_count": 39,
+      "reachable_event_fraction": 0.6610169491525424,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 2.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 2.0,
+      "reachable_detected_fraction": 0.9743589743589743,
+      "reachable_event_count": 38,
+      "reachable_event_fraction": 0.6440677966101694,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 3.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 2.0,
+      "reachable_detected_fraction": 0.8717948717948718,
+      "reachable_event_count": 34,
+      "reachable_event_fraction": 0.576271186440678,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 4.0,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 3.0,
+      "reachable_detected_fraction": 0.9743589743589743,
+      "reachable_event_count": 38,
+      "reachable_event_fraction": 0.6440677966101694,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 3.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 3.0,
+      "reachable_detected_fraction": 0.8717948717948718,
+      "reachable_event_count": 34,
+      "reachable_event_fraction": 0.576271186440678,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 4.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 3.0,
+      "reachable_detected_fraction": 0.7692307692307693,
+      "reachable_event_count": 30,
+      "reachable_event_fraction": 0.5084745762711864,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 5.0,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "plausible bounded boost with preventative bias",
+      "latency_ms": 5.0,
+      "reachable_detected_fraction": 0.7692307692307693,
+      "reachable_event_count": 30,
+      "reachable_event_fraction": 0.5084745762711864,
+      "recommended_policy": "precursor_gated_boost",
+      "required_lead_ms": 5.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "plausible but constrained; precursor-only not supported",
+      "latency_ms": 5.0,
+      "reachable_detected_fraction": 0.717948717948718,
+      "reachable_event_count": 28,
+      "reachable_event_fraction": 0.4745762711864407,
+      "recommended_policy": "fixed_preventative_bias_plus_limited_boost",
+      "required_lead_ms": 6.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "plausible but constrained; precursor-only not supported",
+      "latency_ms": 5.0,
+      "reachable_detected_fraction": 0.6666666666666666,
+      "reachable_event_count": 26,
+      "reachable_event_fraction": 0.4406779661016949,
+      "recommended_policy": "fixed_preventative_bias_plus_limited_boost",
+      "required_lead_ms": 7.0,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "plausible but constrained; precursor-only not supported",
+      "latency_ms": 8.0,
+      "reachable_detected_fraction": 0.5897435897435898,
+      "reachable_event_count": 23,
+      "reachable_event_fraction": 0.3898305084745763,
+      "recommended_policy": "fixed_preventative_bias_plus_limited_boost",
+      "required_lead_ms": 8.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 8.0,
+      "reachable_detected_fraction": 0.41025641025641024,
+      "reachable_event_count": 16,
+      "reachable_event_fraction": 0.2711864406779661,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 9.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 8.0,
+      "reachable_detected_fraction": 0.38461538461538464,
+      "reachable_event_count": 15,
+      "reachable_event_fraction": 0.2542372881355932,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 10.0,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 10.0,
+      "reachable_detected_fraction": 0.38461538461538464,
+      "reachable_event_count": 15,
+      "reachable_event_fraction": 0.2542372881355932,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 10.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 10.0,
+      "reachable_detected_fraction": 0.3076923076923077,
+      "reachable_event_count": 12,
+      "reachable_event_fraction": 0.2033898305084746,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 11.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 10.0,
+      "reachable_detected_fraction": 0.23076923076923078,
+      "reachable_event_count": 9,
+      "reachable_event_fraction": 0.15254237288135594,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 12.0,
+      "settle_margin_ms": 2.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 12.0,
+      "reachable_detected_fraction": 0.23076923076923078,
+      "reachable_event_count": 9,
+      "reachable_event_fraction": 0.15254237288135594,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 12.0,
+      "settle_margin_ms": 0.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 12.0,
+      "reachable_detected_fraction": 0.1282051282051282,
+      "reachable_event_count": 5,
+      "reachable_event_fraction": 0.0847457627118644,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 13.0,
+      "settle_margin_ms": 1.0
+    },
+    {
+      "claim": "event-specific response too limited; slow preventative scheduling only",
+      "latency_ms": 12.0,
+      "reachable_detected_fraction": 0.02564102564102564,
+      "reachable_event_count": 1,
+      "reachable_event_fraction": 0.01694915254237288,
+      "recommended_policy": "fixed_preventative_bias",
+      "required_lead_ms": 14.0,
+      "settle_margin_ms": 2.0
+    }
+  ],
+  "settle_margins_ms": [
+    0.0,
+    1.0,
+    2.0
+  ],
+  "source_review_run": "validation_runs/fair_mast_machine_reviewed_labels_default",
+  "status": "MAST_ACTUATOR_LATENCY_FEASIBILITY_COMPLETED"
+}

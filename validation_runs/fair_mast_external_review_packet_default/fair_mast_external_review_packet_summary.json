@@ -16,6 +16,15 @@
     "precision_on_true_elm": 0.975,
     "recall_on_true_elm": 0.661
   },
+  "actuator_latency_feasibility": {
+    "detected_lead_distribution_ms": {
+      "maximum": 14.958,
+      "median": 8.376,
+      "minimum": 2.554
+    },
+    "latency_boundary": "precursor_gated_boost_plausible_to_about_5_ms_without_settle_margin_constrained_with_margin_slow_preventative_scheduling_at_8_to_12_ms",
+    "source": "validation_runs/fair_mast_actuator_latency_feasibility_default"
+  },
   "status": "MAST_EXTERNAL_REVIEW_PACKET_PREPARED",
   "strict_null_suite": {
     "full_local_event_jitter": {

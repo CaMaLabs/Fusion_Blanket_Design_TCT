@@ -1,0 +1,25 @@
+latency_ms,settle_margin_ms,required_lead_ms,reachable_event_count,reachable_event_fraction,reachable_detected_fraction,recommended_policy,claim
+0.5,0.0,0.5,39,0.6610169491525424,1.0,precursor_gated_boost,plausible bounded boost with preventative bias
+0.5,1.0,1.5,39,0.6610169491525424,1.0,precursor_gated_boost,plausible bounded boost with preventative bias
+0.5,2.0,2.5,39,0.6610169491525424,1.0,precursor_gated_boost,plausible bounded boost with preventative bias
+1.0,0.0,1.0,39,0.6610169491525424,1.0,precursor_gated_boost,plausible bounded boost with preventative bias
+1.0,1.0,2.0,39,0.6610169491525424,1.0,precursor_gated_boost,plausible bounded boost with preventative bias
+1.0,2.0,3.0,38,0.6440677966101694,0.9743589743589743,precursor_gated_boost,plausible bounded boost with preventative bias
+2.0,0.0,2.0,39,0.6610169491525424,1.0,precursor_gated_boost,plausible bounded boost with preventative bias
+2.0,1.0,3.0,38,0.6440677966101694,0.9743589743589743,precursor_gated_boost,plausible bounded boost with preventative bias
+2.0,2.0,4.0,34,0.576271186440678,0.8717948717948718,precursor_gated_boost,plausible bounded boost with preventative bias
+3.0,0.0,3.0,38,0.6440677966101694,0.9743589743589743,precursor_gated_boost,plausible bounded boost with preventative bias
+3.0,1.0,4.0,34,0.576271186440678,0.8717948717948718,precursor_gated_boost,plausible bounded boost with preventative bias
+3.0,2.0,5.0,30,0.5084745762711864,0.7692307692307693,precursor_gated_boost,plausible bounded boost with preventative bias
+5.0,0.0,5.0,30,0.5084745762711864,0.7692307692307693,precursor_gated_boost,plausible bounded boost with preventative bias
+5.0,1.0,6.0,28,0.4745762711864407,0.717948717948718,fixed_preventative_bias_plus_limited_boost,plausible but constrained; precursor-only not supported
+5.0,2.0,7.0,26,0.4406779661016949,0.6666666666666666,fixed_preventative_bias_plus_limited_boost,plausible but constrained; precursor-only not supported
+8.0,0.0,8.0,23,0.3898305084745763,0.5897435897435898,fixed_preventative_bias_plus_limited_boost,plausible but constrained; precursor-only not supported
+8.0,1.0,9.0,16,0.2711864406779661,0.41025641025641024,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+8.0,2.0,10.0,15,0.2542372881355932,0.38461538461538464,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+10.0,0.0,10.0,15,0.2542372881355932,0.38461538461538464,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+10.0,1.0,11.0,12,0.2033898305084746,0.3076923076923077,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+10.0,2.0,12.0,9,0.15254237288135594,0.23076923076923078,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+12.0,0.0,12.0,9,0.15254237288135594,0.23076923076923078,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+12.0,1.0,13.0,5,0.0847457627118644,0.1282051282051282,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only
+12.0,2.0,14.0,1,0.01694915254237288,0.02564102564102564,fixed_preventative_bias,event-specific response too limited; slow preventative scheduling only

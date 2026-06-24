@@ -30,6 +30,7 @@ Primary reproduction scripts:
 - [`fair_mast_machine_reviewed_label_metrics.py`](../../fair_mast_machine_reviewed_label_metrics.py)
 - [`fair_mast_precursor_time_shift_null.py`](../../fair_mast_precursor_time_shift_null.py)
 - [`fair_mast_precursor_strict_null_suite.py`](../../fair_mast_precursor_strict_null_suite.py)
+- [`fair_mast_actuator_latency_feasibility.py`](../../fair_mast_actuator_latency_feasibility.py)
 
 ## Result Summary
 
@@ -78,6 +79,17 @@ Stricter null suite:
 - Leave-one-shot-out sensitivity remains significant for every held-out shot
   removed under both null families.
 
+Actuator-latency feasibility:
+
+- Detected accepted true-ELM lead distribution: minimum `2.554 ms`, median
+  `8.376 ms`, maximum `14.958 ms`.
+- End-to-end latency <= `3 ms` supports a precursor-gated bounded boost layered
+  on preventative bias.
+- Around `5 ms`, precursor-gated boost is still plausible with no settle margin,
+  but becomes constrained once a `1-2 ms` settle margin is required.
+- At `8-12 ms`, event-specific response is too limited; the defensible policy is
+  slow preventative scheduling with at most limited boost on a subset of events.
+
 ## Audit Artifacts
 
 - [Held-out precursor report](../fair_mast_prospective_precursor_default/fair_mast_prospective_precursor_report.md)
@@ -87,6 +99,7 @@ Stricter null suite:
 - [Machine-reviewed label manifest](../fair_mast_machine_reviewed_labels_default/fair_mast_machine_reviewed_label_manifest.csv)
 - [Time-shift null report](../fair_mast_precursor_time_shift_null_default/fair_mast_precursor_time_shift_null_report.md)
 - [Strict null suite report](../fair_mast_precursor_strict_null_suite_default/fair_mast_precursor_strict_null_suite_report.md)
+- [Actuator-latency feasibility report](../fair_mast_actuator_latency_feasibility_default/fair_mast_actuator_latency_feasibility_report.md)
 
 Representative plots:
 
@@ -111,9 +124,11 @@ Representative plots:
    stricter null be used?
 7. Do the stricter block-shift, event-jitter, and leave-one-shot-out nulls
    adequately address trigger clustering and shot-dominance concerns?
-8. Is `5-8 ms` lead enough to justify bounded actuator adjustment in a future
+8. Does the latency-feasibility sweep draw the correct boundary between
+   precursor-gated boost and slow preventative scheduling?
+9. Is `5-8 ms` lead enough to justify bounded actuator adjustment in a future
    controller, assuming actuator response is independently characterized?
-9. What additional FAIR-MAST diagnostics should be included before promoting
+10. What additional FAIR-MAST diagnostics should be included before promoting
    the claim?
 
 ## Current Claim Boundary
@@ -132,3 +147,4 @@ Not supported:
 - Machine-specific DIII-D, NSTX, ITER, or M3D-C1 validation.
 - Real-time controller deployment readiness.
 - Proof that actuator latency is low enough.
+- Measured TCT actuator transfer function or suppression response.

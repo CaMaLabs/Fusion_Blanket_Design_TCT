@@ -1,0 +1,97 @@
+latency_ms,settle_margin_ms,required_lead_ms,policy,reachable_event_count,accepted_true_elm_count,reachable_event_fraction,reachable_detected_fraction,false_trigger_count,verdict,reason
+0.5,0.0,0.5,fixed_preventative_bias,39,59,0.6610169491525424,1.0,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+0.5,0.0,0.5,precursor_gated_boost,39,59,0.6610169491525424,1.0,1,plausible,Enough accepted events have lead after latency and settle margin.
+0.5,0.0,0.5,precursor_only_control,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+0.5,0.0,0.5,late_strong_pulse,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+0.5,1.0,1.5,fixed_preventative_bias,39,59,0.6610169491525424,1.0,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+0.5,1.0,1.5,precursor_gated_boost,39,59,0.6610169491525424,1.0,1,plausible,Enough accepted events have lead after latency and settle margin.
+0.5,1.0,1.5,precursor_only_control,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+0.5,1.0,1.5,late_strong_pulse,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+0.5,2.0,2.5,fixed_preventative_bias,39,59,0.6610169491525424,1.0,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+0.5,2.0,2.5,precursor_gated_boost,39,59,0.6610169491525424,1.0,1,plausible,Enough accepted events have lead after latency and settle margin.
+0.5,2.0,2.5,precursor_only_control,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+0.5,2.0,2.5,late_strong_pulse,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+1.0,0.0,1.0,fixed_preventative_bias,39,59,0.6610169491525424,1.0,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+1.0,0.0,1.0,precursor_gated_boost,39,59,0.6610169491525424,1.0,1,plausible,Enough accepted events have lead after latency and settle margin.
+1.0,0.0,1.0,precursor_only_control,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+1.0,0.0,1.0,late_strong_pulse,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+1.0,1.0,2.0,fixed_preventative_bias,39,59,0.6610169491525424,1.0,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+1.0,1.0,2.0,precursor_gated_boost,39,59,0.6610169491525424,1.0,1,plausible,Enough accepted events have lead after latency and settle margin.
+1.0,1.0,2.0,precursor_only_control,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+1.0,1.0,2.0,late_strong_pulse,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+1.0,2.0,3.0,fixed_preventative_bias,38,59,0.6440677966101694,0.9743589743589743,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+1.0,2.0,3.0,precursor_gated_boost,38,59,0.6440677966101694,0.9743589743589743,1,plausible,Enough accepted events have lead after latency and settle margin.
+1.0,2.0,3.0,precursor_only_control,38,59,0.6440677966101694,0.9743589743589743,1,not_supported,Too few accepted events have enough measured lead for this policy.
+1.0,2.0,3.0,late_strong_pulse,38,59,0.6440677966101694,0.9743589743589743,1,not_supported,Too few accepted events have enough measured lead for this policy.
+2.0,0.0,2.0,fixed_preventative_bias,39,59,0.6610169491525424,1.0,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+2.0,0.0,2.0,precursor_gated_boost,39,59,0.6610169491525424,1.0,1,plausible,Enough accepted events have lead after latency and settle margin.
+2.0,0.0,2.0,precursor_only_control,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+2.0,0.0,2.0,late_strong_pulse,39,59,0.6610169491525424,1.0,1,not_supported,Too few accepted events have enough measured lead for this policy.
+2.0,1.0,3.0,fixed_preventative_bias,38,59,0.6440677966101694,0.9743589743589743,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+2.0,1.0,3.0,precursor_gated_boost,38,59,0.6440677966101694,0.9743589743589743,1,plausible,Enough accepted events have lead after latency and settle margin.
+2.0,1.0,3.0,precursor_only_control,38,59,0.6440677966101694,0.9743589743589743,1,not_supported,Too few accepted events have enough measured lead for this policy.
+2.0,1.0,3.0,late_strong_pulse,38,59,0.6440677966101694,0.9743589743589743,1,not_supported,Too few accepted events have enough measured lead for this policy.
+2.0,2.0,4.0,fixed_preventative_bias,34,59,0.576271186440678,0.8717948717948718,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+2.0,2.0,4.0,precursor_gated_boost,34,59,0.576271186440678,0.8717948717948718,1,plausible,Enough accepted events have lead after latency and settle margin.
+2.0,2.0,4.0,precursor_only_control,34,59,0.576271186440678,0.8717948717948718,1,not_supported,Too few accepted events have enough measured lead for this policy.
+2.0,2.0,4.0,late_strong_pulse,34,59,0.576271186440678,0.8717948717948718,1,not_supported,Too few accepted events have enough measured lead for this policy.
+3.0,0.0,3.0,fixed_preventative_bias,38,59,0.6440677966101694,0.9743589743589743,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+3.0,0.0,3.0,precursor_gated_boost,38,59,0.6440677966101694,0.9743589743589743,1,plausible,Enough accepted events have lead after latency and settle margin.
+3.0,0.0,3.0,precursor_only_control,38,59,0.6440677966101694,0.9743589743589743,1,not_supported,Too few accepted events have enough measured lead for this policy.
+3.0,0.0,3.0,late_strong_pulse,38,59,0.6440677966101694,0.9743589743589743,1,not_supported,Too few accepted events have enough measured lead for this policy.
+3.0,1.0,4.0,fixed_preventative_bias,34,59,0.576271186440678,0.8717948717948718,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+3.0,1.0,4.0,precursor_gated_boost,34,59,0.576271186440678,0.8717948717948718,1,plausible,Enough accepted events have lead after latency and settle margin.
+3.0,1.0,4.0,precursor_only_control,34,59,0.576271186440678,0.8717948717948718,1,not_supported,Too few accepted events have enough measured lead for this policy.
+3.0,1.0,4.0,late_strong_pulse,34,59,0.576271186440678,0.8717948717948718,1,not_supported,Too few accepted events have enough measured lead for this policy.
+3.0,2.0,5.0,fixed_preventative_bias,30,59,0.5084745762711864,0.7692307692307693,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+3.0,2.0,5.0,precursor_gated_boost,30,59,0.5084745762711864,0.7692307692307693,1,plausible,Enough accepted events have lead after latency and settle margin.
+3.0,2.0,5.0,precursor_only_control,30,59,0.5084745762711864,0.7692307692307693,1,not_supported,Too few accepted events have enough measured lead for this policy.
+3.0,2.0,5.0,late_strong_pulse,30,59,0.5084745762711864,0.7692307692307693,1,not_supported,Too few accepted events have enough measured lead for this policy.
+5.0,0.0,5.0,fixed_preventative_bias,30,59,0.5084745762711864,0.7692307692307693,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+5.0,0.0,5.0,precursor_gated_boost,30,59,0.5084745762711864,0.7692307692307693,1,plausible,Enough accepted events have lead after latency and settle margin.
+5.0,0.0,5.0,precursor_only_control,30,59,0.5084745762711864,0.7692307692307693,1,not_supported,Too few accepted events have enough measured lead for this policy.
+5.0,0.0,5.0,late_strong_pulse,30,59,0.5084745762711864,0.7692307692307693,1,not_supported,Too few accepted events have enough measured lead for this policy.
+5.0,1.0,6.0,fixed_preventative_bias,28,59,0.4745762711864407,0.717948717948718,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+5.0,1.0,6.0,precursor_gated_boost,28,59,0.4745762711864407,0.717948717948718,1,constrained,Usable for a subset of events only; must be paired with preventative bias.
+5.0,1.0,6.0,precursor_only_control,28,59,0.4745762711864407,0.717948717948718,1,not_supported,Too few accepted events have enough measured lead for this policy.
+5.0,1.0,6.0,late_strong_pulse,28,59,0.4745762711864407,0.717948717948718,1,not_supported,Too few accepted events have enough measured lead for this policy.
+5.0,2.0,7.0,fixed_preventative_bias,26,59,0.4406779661016949,0.6666666666666666,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+5.0,2.0,7.0,precursor_gated_boost,26,59,0.4406779661016949,0.6666666666666666,1,constrained,Usable for a subset of events only; must be paired with preventative bias.
+5.0,2.0,7.0,precursor_only_control,26,59,0.4406779661016949,0.6666666666666666,1,not_supported,Too few accepted events have enough measured lead for this policy.
+5.0,2.0,7.0,late_strong_pulse,26,59,0.4406779661016949,0.6666666666666666,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,0.0,8.0,fixed_preventative_bias,23,59,0.3898305084745763,0.5897435897435898,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+8.0,0.0,8.0,precursor_gated_boost,23,59,0.3898305084745763,0.5897435897435898,1,constrained,Usable for a subset of events only; must be paired with preventative bias.
+8.0,0.0,8.0,precursor_only_control,23,59,0.3898305084745763,0.5897435897435898,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,0.0,8.0,late_strong_pulse,23,59,0.3898305084745763,0.5897435897435898,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,1.0,9.0,fixed_preventative_bias,16,59,0.2711864406779661,0.41025641025641024,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+8.0,1.0,9.0,precursor_gated_boost,16,59,0.2711864406779661,0.41025641025641024,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,1.0,9.0,precursor_only_control,16,59,0.2711864406779661,0.41025641025641024,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,1.0,9.0,late_strong_pulse,16,59,0.2711864406779661,0.41025641025641024,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,2.0,10.0,fixed_preventative_bias,15,59,0.2542372881355932,0.38461538461538464,1,plausible_as_baseline,Does not require event-specific lead; fast precursor can only trim/boost.
+8.0,2.0,10.0,precursor_gated_boost,15,59,0.2542372881355932,0.38461538461538464,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,2.0,10.0,precursor_only_control,15,59,0.2542372881355932,0.38461538461538464,1,not_supported,Too few accepted events have enough measured lead for this policy.
+8.0,2.0,10.0,late_strong_pulse,15,59,0.2542372881355932,0.38461538461538464,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,0.0,10.0,fixed_preventative_bias,15,59,0.2542372881355932,0.38461538461538464,1,baseline_only,Slow actuator assumptions leave event-specific response weak; only slow scheduling remains.
+10.0,0.0,10.0,precursor_gated_boost,15,59,0.2542372881355932,0.38461538461538464,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,0.0,10.0,precursor_only_control,15,59,0.2542372881355932,0.38461538461538464,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,0.0,10.0,late_strong_pulse,15,59,0.2542372881355932,0.38461538461538464,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,1.0,11.0,fixed_preventative_bias,12,59,0.2033898305084746,0.3076923076923077,1,baseline_only,Slow actuator assumptions leave event-specific response weak; only slow scheduling remains.
+10.0,1.0,11.0,precursor_gated_boost,12,59,0.2033898305084746,0.3076923076923077,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,1.0,11.0,precursor_only_control,12,59,0.2033898305084746,0.3076923076923077,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,1.0,11.0,late_strong_pulse,12,59,0.2033898305084746,0.3076923076923077,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,2.0,12.0,fixed_preventative_bias,9,59,0.15254237288135594,0.23076923076923078,1,baseline_only,Slow actuator assumptions leave event-specific response weak; only slow scheduling remains.
+10.0,2.0,12.0,precursor_gated_boost,9,59,0.15254237288135594,0.23076923076923078,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,2.0,12.0,precursor_only_control,9,59,0.15254237288135594,0.23076923076923078,1,not_supported,Too few accepted events have enough measured lead for this policy.
+10.0,2.0,12.0,late_strong_pulse,9,59,0.15254237288135594,0.23076923076923078,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,0.0,12.0,fixed_preventative_bias,9,59,0.15254237288135594,0.23076923076923078,1,baseline_only,Slow actuator assumptions leave event-specific response weak; only slow scheduling remains.
+12.0,0.0,12.0,precursor_gated_boost,9,59,0.15254237288135594,0.23076923076923078,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,0.0,12.0,precursor_only_control,9,59,0.15254237288135594,0.23076923076923078,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,0.0,12.0,late_strong_pulse,9,59,0.15254237288135594,0.23076923076923078,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,1.0,13.0,fixed_preventative_bias,5,59,0.0847457627118644,0.1282051282051282,1,baseline_only,Slow actuator assumptions leave event-specific response weak; only slow scheduling remains.
+12.0,1.0,13.0,precursor_gated_boost,5,59,0.0847457627118644,0.1282051282051282,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,1.0,13.0,precursor_only_control,5,59,0.0847457627118644,0.1282051282051282,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,1.0,13.0,late_strong_pulse,5,59,0.0847457627118644,0.1282051282051282,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,2.0,14.0,fixed_preventative_bias,1,59,0.01694915254237288,0.02564102564102564,1,baseline_only,Slow actuator assumptions leave event-specific response weak; only slow scheduling remains.
+12.0,2.0,14.0,precursor_gated_boost,1,59,0.01694915254237288,0.02564102564102564,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,2.0,14.0,precursor_only_control,1,59,0.01694915254237288,0.02564102564102564,1,not_supported,Too few accepted events have enough measured lead for this policy.
+12.0,2.0,14.0,late_strong_pulse,1,59,0.01694915254237288,0.02564102564102564,1,not_supported,Too few accepted events have enough measured lead for this policy.
