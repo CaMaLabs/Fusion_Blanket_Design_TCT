@@ -39,13 +39,16 @@ PRECURSOR_WINDOW_S = (0.0005, 0.015)
 EVENT_SIGNATURE_EXCLUSION_S = 0.002
 MERGE_SEPARATION_S = 0.00035
 LATENCIES_MS = (3.0, 5.0, 8.0, 12.0)
-THRESHOLD_SIGMA_GRID = (4.0, 5.0, 6.0, 7.0, 8.0)
+THRESHOLD_SIGMA_GRID = (4.0, 5.0, 6.0, 7.0, 8.0, 10.0, 12.0)
 
 
 FEATURE_SPECS = (
     {"name": "pol_cc_ch2", "group": "magnetics", "time": "time_mirnov", "field": "b_field_pol_probe_cc_field", "channels": (2,), "kind": "rms"},
     {"name": "pol_cc_all", "group": "magnetics", "time": "time_mirnov", "field": "b_field_pol_probe_cc_field", "channels": (0, 1, 2, 3, 4), "kind": "rms"},
     {"name": "tor_cc_all", "group": "magnetics", "time": "time_mirnov", "field": "b_field_tor_probe_cc_field", "channels": (0, 1, 2), "kind": "rms"},
+    {"name": "sxr_lower_all", "group": "soft_x_rays", "time": "time", "field": "horizontal_cam_lower", "channels": tuple(range(18)), "kind": "rms"},
+    {"name": "sxr_upper_all", "group": "soft_x_rays", "time": "time", "field": "horizontal_cam_upper", "channels": tuple(range(18)), "kind": "rms"},
+    {"name": "sxr_tangential_all", "group": "soft_x_rays", "time": "time", "field": "tangential_cam", "channels": tuple(range(18)), "kind": "rms"},
     {"name": "dalpha_slope", "group": "spectrometer_visible", "time": "time", "field": "filter_spectrometer_dalpha_voltage", "channels": (D_ALPHA_CHANNEL,), "kind": "positive_slope"},
 )
 
@@ -88,12 +91,15 @@ def detect_events(dalpha_time: np.ndarray, dalpha: np.ndarray, window_s: tuple[f
 
 def rms_envelope(time: np.ndarray, values: np.ndarray) -> np.ndarray:
     finite = np.isfinite(values)
+    if np.count_nonzero(finite) < 2:
+        return np.zeros_like(time, dtype=float)
     values = np.interp(time, time[finite], values[finite])
     dt = float(np.nanmedian(np.diff(time)))
     trend_points = max(3, int(0.002 / dt))
     rms_points = max(3, int(0.0005 / dt))
     high_pass = values - uniform_filter1d(values, trend_points, mode="nearest")
-    return np.sqrt(uniform_filter1d(high_pass * high_pass, rms_points, mode="nearest"))
+    power = np.nan_to_num(high_pass * high_pass, nan=0.0, posinf=0.0, neginf=0.0)
+    return np.sqrt(np.maximum(uniform_filter1d(power, rms_points, mode="nearest"), 0.0))
 
 
 def positive_slope_signal(time: np.ndarray, values: np.ndarray) -> np.ndarray:
@@ -281,6 +287,43 @@ def config_score(aggregate_score: dict[str, Any]) -> float:
 def write_report(run_dir: Path, summary: dict[str, Any]) -> None:
     test = summary["test_aggregate_reviewed_labels"]
     baseline = summary["baseline_single_channel_reviewed_labels"]
+    recall_gain = test["detected_event_count"] - baseline["detected_event_count"]
+    false_gain = test["false_trigger_count"] - baseline["false_trigger_count"]
+    if recall_gain > 0 and false_gain <= 0 and test["lead_ms"]["median"] >= baseline["lead_ms"]["median"] - 1.0:
+        interpretation = [
+            "The selected fusion trigger improves accepted-event recognition without",
+            "increasing false triggers or materially collapsing the median lead time.",
+            "That makes it a better trigger candidate than the fixed single-channel",
+            "baseline, subject to the same causal and actuator caveats.",
+        ]
+    elif recall_gain > 0:
+        interpretation = [
+            "The selected fusion trigger improves raw accepted-event recognition,",
+            "but the gain is paid for with more false triggers and/or shorter lead",
+            "time. This is useful as evidence that the added diagnostic contains",
+            "precursor information, but it is not yet a cleaner operational trigger.",
+        ]
+    else:
+        interpretation = [
+            "The selected fusion trigger does not improve accepted-event recognition",
+            "over the fixed single-channel baseline. The added diagnostics should be",
+            "treated as negative or inconclusive for this threshold-fusion design.",
+        ]
+    latency_delta = {
+        key: test["latency_feasible_event_count"][key] - baseline["latency_feasible_event_count"][key]
+        for key in baseline["latency_feasible_event_count"]
+    }
+    if any(value != 0 for value in latency_delta.values()):
+        latency_lines = [
+            "The latency-reachable counts change relative to baseline, so the raw",
+            "recognition gain must be interpreted together with the actuator budget.",
+            f"Delta by budget: `{latency_delta}`.",
+        ]
+    else:
+        latency_lines = [
+            "The latency-reachable counts are unchanged at the tested 3, 5, 8, and 12 ms",
+            "budgets. The result therefore does not solve the actuator timing caveat.",
+        ]
     lines = [
         "# FAIR-MAST Multi-Diagnostic Precursor Fusion",
         "",
@@ -288,7 +331,7 @@ def write_report(run_dir: Path, summary: dict[str, Any]) -> None:
         "- Goal: improve precursor recall beyond the single fixed Mirnov channel while keeping false triggers bounded",
         "- Train split: automatic D-alpha labels on shots `30311`, `30423`",
         "- Test split: accepted machine-reviewed `true_elm` labels on shots `30276`, `30277`, `30418`, `30419`, `30421`",
-        "- Candidate fast diagnostics: multi-channel centre-column poloidal Mirnov, multi-channel centre-column toroidal Mirnov, D-alpha positive slope",
+        "- Candidate fast diagnostics: centre-column poloidal/toroidal Mirnov, soft-X-ray camera envelopes, D-alpha positive slope",
         "",
         "## Selected Fusion",
         "",
@@ -319,15 +362,16 @@ def write_report(run_dir: Path, summary: dict[str, Any]) -> None:
         "",
         "This run tests whether adding fast diagnostics improves the actual",
         "control-relevant metric: accepted true events with enough lead after",
-        "false-trigger constraints. The selected fusion trigger adds the centre-column",
-        "toroidal Mirnov RMS envelope to the fixed poloidal Mirnov channel and recovers",
-        "one additional accepted event without increasing false triggers. That is a",
-        "small precursor improvement, not a step change.",
+        "false-trigger constraints. The selected fusion trigger is compared directly",
+        "with the fixed single-channel Mirnov baseline on accepted held-out events.",
+        "A gain should be treated as useful only if it does not merely add false",
+        "triggers or collapse lead time.",
         "",
-        "The latency-reachable counts are unchanged at the tested 3, 5, 8, and 12 ms",
-        "budgets. The result therefore does not solve the actuator timing caveat: it is",
-        "compatible with fast bounded boost layered on standing bias, but it does not",
-        "make late or slow response chains viable.",
+        *interpretation,
+        "",
+        *latency_lines,
+        "The result remains compatible with fast bounded boost layered on standing",
+        "bias, but it does not make late or slow response chains viable.",
         "",
         "## Claim Boundary",
         "",
@@ -355,19 +399,24 @@ def main() -> int:
     configs = []
     for sigma in THRESHOLD_SIGMA_GRID:
         configs.append({"pol_cc_ch2": sigma})
+    extra_features = (
+        "pol_cc_all",
+        "tor_cc_all",
+        "sxr_lower_all",
+        "sxr_upper_all",
+        "sxr_tangential_all",
+        "dalpha_slope",
+    )
     for pol_sigma in THRESHOLD_SIGMA_GRID:
         configs.append({"pol_cc_all": pol_sigma})
         configs.append({"pol_cc_ch2": pol_sigma, "pol_cc_all": pol_sigma})
-        for tor_sigma in THRESHOLD_SIGMA_GRID:
-            configs.append({"pol_cc_all": pol_sigma, "tor_cc_all": tor_sigma})
-            configs.append({"pol_cc_ch2": pol_sigma, "tor_cc_all": tor_sigma})
-        for dalpha_sigma in THRESHOLD_SIGMA_GRID:
-            configs.append({"pol_cc_all": pol_sigma, "dalpha_slope": dalpha_sigma})
-            configs.append({"pol_cc_ch2": pol_sigma, "dalpha_slope": dalpha_sigma})
-    for tor_sigma in THRESHOLD_SIGMA_GRID:
-        configs.append({"tor_cc_all": tor_sigma})
-    for dalpha_sigma in THRESHOLD_SIGMA_GRID:
-        configs.append({"dalpha_slope": dalpha_sigma})
+        for feature_name in extra_features:
+            for feature_sigma in THRESHOLD_SIGMA_GRID:
+                configs.append({"pol_cc_all": pol_sigma, feature_name: feature_sigma})
+                configs.append({"pol_cc_ch2": pol_sigma, feature_name: feature_sigma})
+    for feature_name in extra_features:
+        for sigma in THRESHOLD_SIGMA_GRID:
+            configs.append({feature_name: sigma})
 
     grid_rows = []
     best_config = None

@@ -23,12 +23,12 @@
     "recall": 0.6610169491525424
   },
   "claim_boundary": "Multi-diagnostic trigger screen only; not causal TCT validation.",
-  "generated_at": "2026-06-24T16:04:17.271542+00:00",
+  "generated_at": "2026-06-24T16:55:39.828822+00:00",
   "selected_config": {
     "pol_cc_ch2": 6.0,
-    "tor_cc_all": 6.0
+    "sxr_tangential_all": 4.0
   },
-  "selected_train_score": 2.08,
+  "selected_train_score": 2.183416075650118,
   "shot_rows": [
     {
       "baseline_detected": 0,
@@ -37,11 +37,11 @@
       "baseline_precision": 0.0,
       "baseline_recall": 0.0,
       "event_count": 9,
-      "fusion_detected": 0,
-      "fusion_false_triggers": 1,
-      "fusion_median_lead_ms": null,
-      "fusion_precision": 0.0,
-      "fusion_recall": 0.0,
+      "fusion_detected": 8,
+      "fusion_false_triggers": 28,
+      "fusion_median_lead_ms": 2.77000000000005,
+      "fusion_precision": 0.2222222222222222,
+      "fusion_recall": 0.8888888888888888,
       "shot": 30276
     },
     {
@@ -51,11 +51,11 @@
       "baseline_precision": 0.875,
       "baseline_recall": 0.5833333333333334,
       "event_count": 12,
-      "fusion_detected": 7,
-      "fusion_false_triggers": 1,
-      "fusion_median_lead_ms": 11.266000000000053,
-      "fusion_precision": 0.875,
-      "fusion_recall": 0.5833333333333334,
+      "fusion_detected": 12,
+      "fusion_false_triggers": 18,
+      "fusion_median_lead_ms": 2.5180000000000478,
+      "fusion_precision": 0.4,
+      "fusion_recall": 1.0,
       "shot": 30277
     },
     {
@@ -65,11 +65,11 @@
       "baseline_precision": 0.9090909090909091,
       "baseline_recall": 0.9090909090909091,
       "event_count": 11,
-      "fusion_detected": 10,
-      "fusion_false_triggers": 1,
-      "fusion_median_lead_ms": 10.00899999999999,
-      "fusion_precision": 0.9090909090909091,
-      "fusion_recall": 0.9090909090909091,
+      "fusion_detected": 11,
+      "fusion_false_triggers": 17,
+      "fusion_median_lead_ms": 6.010000000000071,
+      "fusion_precision": 0.39285714285714285,
+      "fusion_recall": 1.0,
       "shot": 30418
     },
     {
@@ -79,11 +79,11 @@
       "baseline_precision": 1.0,
       "baseline_recall": 0.6153846153846154,
       "event_count": 13,
-      "fusion_detected": 9,
-      "fusion_false_triggers": 0,
-      "fusion_median_lead_ms": 8.379999999999999,
-      "fusion_precision": 1.0,
-      "fusion_recall": 0.6923076923076923,
+      "fusion_detected": 12,
+      "fusion_false_triggers": 11,
+      "fusion_median_lead_ms": 4.068000000000044,
+      "fusion_precision": 0.5217391304347826,
+      "fusion_recall": 0.9230769230769231,
       "shot": 30419
     },
     {
@@ -94,32 +94,32 @@
       "baseline_recall": 1.0,
       "event_count": 14,
       "fusion_detected": 14,
-      "fusion_false_triggers": 5,
-      "fusion_median_lead_ms": 5.175000000000013,
-      "fusion_precision": 0.7368421052631579,
+      "fusion_false_triggers": 15,
+      "fusion_median_lead_ms": 3.898000000000068,
+      "fusion_precision": 0.4827586206896552,
       "fusion_recall": 1.0,
       "shot": 30421
     }
   ],
   "status": "MAST_MULTIDIAGNOSTIC_PRECURSOR_FUSION_COMPLETED",
   "test_aggregate_reviewed_labels": {
-    "detected_event_count": 40,
+    "detected_event_count": 57,
     "event_count": 59,
-    "f1": 0.7476635514018691,
-    "false_trigger_count": 8,
+    "f1": 0.5560975609756097,
+    "false_trigger_count": 89,
     "latency_feasible_event_count": {
-      "12_ms": 9,
-      "3_ms": 38,
-      "5_ms": 30,
-      "8_ms": 23
+      "12_ms": 5,
+      "3_ms": 34,
+      "5_ms": 20,
+      "8_ms": 11
     },
     "lead_ms": {
-      "maximum": 14.957999999999972,
-      "median": 8.360000000000035,
-      "minimum": 0.6940000000000279
+      "maximum": 14.55200000000001,
+      "median": 3.8100000000000356,
+      "minimum": 0.5379999999999829
     },
-    "missed_event_count": 19,
-    "precision": 0.8333333333333334,
-    "recall": 0.6779661016949152
+    "missed_event_count": 2,
+    "precision": 0.3904109589041096,
+    "recall": 0.9661016949152542
   }
 }

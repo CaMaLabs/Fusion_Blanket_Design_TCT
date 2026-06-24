@@ -16,6 +16,8 @@
 - [ ] False-trigger handling is reasonable.
 - [ ] The `0.5-15 ms` association window is defensible.
 - [ ] Multi-diagnostic fusion gain is interpreted as marginal, not decisive.
+- [ ] SXR gains are checked for event-signature leakage before being treated as
+      operational precursors.
 
 ## Null Test
 

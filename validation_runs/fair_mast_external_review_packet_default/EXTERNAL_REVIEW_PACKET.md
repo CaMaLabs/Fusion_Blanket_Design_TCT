@@ -33,6 +33,7 @@ Primary reproduction scripts:
 - [`fair_mast_actuator_latency_feasibility.py`](../../fair_mast_actuator_latency_feasibility.py)
 - [`fair_mast_biased_actuator_response_budget.py`](../../fair_mast_biased_actuator_response_budget.py)
 - [`fair_mast_multidiagnostic_precursor_fusion.py`](../../fair_mast_multidiagnostic_precursor_fusion.py)
+- [`fair_mast_sxr_precursor_tradeoff.py`](../../fair_mast_sxr_precursor_tradeoff.py)
 
 ## Result Summary
 
@@ -106,17 +107,35 @@ Biased actuator response budget:
 Multi-diagnostic precursor fusion:
 
 - Candidate signals: fixed-channel centre-column poloidal Mirnov RMS,
-  multi-channel centre-column poloidal Mirnov RMS, multi-channel
-  centre-column toroidal Mirnov RMS, and D-alpha positive slope.
-- Selected held-out trigger: fixed poloidal Mirnov channel plus toroidal Mirnov
-  RMS, both at `6.0` training-set multipliers.
-- Accepted true ELMs detected: `40/59`, compared with `39/59` for the fixed
+  multi-channel centre-column poloidal/toroidal Mirnov RMS, public soft-X-ray
+  camera envelopes, and D-alpha positive slope.
+- Train-selected SXR-assisted trigger: fixed poloidal Mirnov channel plus
+  tangential SXR aggregate RMS at `4.0` sigma.
+- Accepted true ELMs detected: `57/59`, compared with `39/59` for the fixed
   single-channel baseline.
-- False triggers: unchanged at `8`.
-- Median lead: `8.360 ms`, compared with `8.376 ms` baseline.
-- Latency-reachable event counts are unchanged at `3`, `5`, `8`, and `12 ms`.
-- Interpretation: this is a marginally better diagnostic precursor, but it does
-  not remove the need for very fast response and standing/preventative bias.
+- False triggers: `89`, compared with `8` baseline.
+- Median lead: `3.810 ms`, compared with `8.376 ms` baseline.
+- Latency-reachable event counts fall from `38/30/23/9` to `34/20/11/5` at
+  `3/5/8/12 ms`.
+- Interpretation: public SXR contains substantial precursor/event-recognition
+  information, but this threshold-fusion trigger is not operationally cleaner.
+
+SXR precursor tradeoff:
+
+- Best raw SXR recognition: upper horizontal SXR aggregate RMS at `4.0` sigma,
+  `58/59` detected, `54` false triggers, precision `0.518`, median lead
+  `3.877 ms`.
+- Best false-bounded SXR: lower horizontal SXR aggregate RMS at `4.0` sigma,
+  `40/59` detected, `8` false triggers, precision `0.833`, median lead
+  `8.096 ms`.
+- Best false-bounded tested trigger remains Mirnov+toroidal RMS: `40/59`,
+  `8` false triggers, precision `0.833`, median lead `8.360 ms`.
+- Best SXR result with precision >= `0.75`: tangential SXR at `8.0` sigma,
+  `42/59` detected, `13` false triggers, precision `0.764`, median lead
+  `7.182 ms`.
+- Interpretation: the next improvement path is not another fixed threshold; it
+  is a classifier or morphology gate that separates useful SXR precursors from
+  SXR-only event signatures and shot-specific bursts.
 
 ## Audit Artifacts
 
@@ -130,6 +149,7 @@ Multi-diagnostic precursor fusion:
 - [Actuator-latency feasibility report](../fair_mast_actuator_latency_feasibility_default/fair_mast_actuator_latency_feasibility_report.md)
 - [Biased actuator response-budget report](../fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_report.md)
 - [Multi-diagnostic precursor fusion report](../fair_mast_multidiagnostic_precursor_fusion_default/fair_mast_multidiagnostic_precursor_fusion_report.md)
+- [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
 
 Representative plots:
 
@@ -162,7 +182,9 @@ Representative plots:
     controller, assuming actuator response is independently characterized?
 11. Does the multi-diagnostic fusion result justify replacing the fixed
     single-channel trigger, or is the one-event gain too small?
-12. What additional FAIR-MAST diagnostics should be included before promoting
+12. Is the SXR recognition gain physically pre-event, or mostly SXR event
+    signature leakage that requires a morphology gate?
+13. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -173,8 +195,10 @@ Supported:
   Mirnov-envelope precursor association for many accepted D-alpha events.
 - The association survives conservative machine-aided label triage.
 - The alignment beats a per-shot circular time-shift null.
-- Adding toroidal Mirnov RMS yields a small held-out recall improvement
-  (`40/59` vs `39/59`) without increasing false triggers.
+- Adding toroidal Mirnov RMS or false-bounded SXR yields a small held-out
+  recall improvement (`40/59` vs `39/59`) without increasing false triggers.
+- SXR envelopes can raise raw held-out recognition as high as `58/59`, but only
+  with many false triggers and shorter median lead under fixed thresholds.
 
 Not supported:
 
@@ -186,3 +210,4 @@ Not supported:
 - Measured TCT actuator transfer function or suppression response.
 - Mechanical or thermal liquid-lithium motion as an event-specific actuator.
 - A substantially better precursor that resolves the latency limitation.
+- A fixed-threshold SXR trigger clean enough to replace Mirnov+toroidal fusion.
