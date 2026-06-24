@@ -15,6 +15,7 @@
 - [ ] Sub-1 ms and duplicate-trigger rows are not counted as robust successes.
 - [ ] False-trigger handling is reasonable.
 - [ ] The `0.5-15 ms` association window is defensible.
+- [ ] Multi-diagnostic fusion gain is interpreted as marginal, not decisive.
 
 ## Null Test
 
@@ -43,4 +44,3 @@ Reviewer notes:
 ```text
 
 ```
-

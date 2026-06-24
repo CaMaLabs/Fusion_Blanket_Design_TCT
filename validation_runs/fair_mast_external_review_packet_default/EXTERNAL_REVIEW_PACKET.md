@@ -32,6 +32,7 @@ Primary reproduction scripts:
 - [`fair_mast_precursor_strict_null_suite.py`](../../fair_mast_precursor_strict_null_suite.py)
 - [`fair_mast_actuator_latency_feasibility.py`](../../fair_mast_actuator_latency_feasibility.py)
 - [`fair_mast_biased_actuator_response_budget.py`](../../fair_mast_biased_actuator_response_budget.py)
+- [`fair_mast_multidiagnostic_precursor_fusion.py`](../../fair_mast_multidiagnostic_precursor_fusion.py)
 
 ## Result Summary
 
@@ -102,6 +103,21 @@ Biased actuator response budget:
 - Mechanical/thermal liquid-lithium response (`25.750 ms`) is not
   event-specific; it can only be part of the standing bias interpretation.
 
+Multi-diagnostic precursor fusion:
+
+- Candidate signals: fixed-channel centre-column poloidal Mirnov RMS,
+  multi-channel centre-column poloidal Mirnov RMS, multi-channel
+  centre-column toroidal Mirnov RMS, and D-alpha positive slope.
+- Selected held-out trigger: fixed poloidal Mirnov channel plus toroidal Mirnov
+  RMS, both at `6.0` training-set multipliers.
+- Accepted true ELMs detected: `40/59`, compared with `39/59` for the fixed
+  single-channel baseline.
+- False triggers: unchanged at `8`.
+- Median lead: `8.360 ms`, compared with `8.376 ms` baseline.
+- Latency-reachable event counts are unchanged at `3`, `5`, `8`, and `12 ms`.
+- Interpretation: this is a marginally better diagnostic precursor, but it does
+  not remove the need for very fast response and standing/preventative bias.
+
 ## Audit Artifacts
 
 - [Held-out precursor report](../fair_mast_prospective_precursor_default/fair_mast_prospective_precursor_report.md)
@@ -113,6 +129,7 @@ Biased actuator response budget:
 - [Strict null suite report](../fair_mast_precursor_strict_null_suite_default/fair_mast_precursor_strict_null_suite_report.md)
 - [Actuator-latency feasibility report](../fair_mast_actuator_latency_feasibility_default/fair_mast_actuator_latency_feasibility_report.md)
 - [Biased actuator response-budget report](../fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_report.md)
+- [Multi-diagnostic precursor fusion report](../fair_mast_multidiagnostic_precursor_fusion_default/fair_mast_multidiagnostic_precursor_fusion_report.md)
 
 Representative plots:
 
@@ -142,9 +159,11 @@ Representative plots:
 9. Is the standing lithium/current bias interpretation physically plausible,
    and are the response-budget components reasonable?
 10. Is `5-8 ms` lead enough to justify bounded actuator adjustment in a future
-   controller, assuming actuator response is independently characterized?
-11. What additional FAIR-MAST diagnostics should be included before promoting
-   the claim?
+    controller, assuming actuator response is independently characterized?
+11. Does the multi-diagnostic fusion result justify replacing the fixed
+    single-channel trigger, or is the one-event gain too small?
+12. What additional FAIR-MAST diagnostics should be included before promoting
+    the claim?
 
 ## Current Claim Boundary
 
@@ -154,6 +173,8 @@ Supported:
   Mirnov-envelope precursor association for many accepted D-alpha events.
 - The association survives conservative machine-aided label triage.
 - The alignment beats a per-shot circular time-shift null.
+- Adding toroidal Mirnov RMS yields a small held-out recall improvement
+  (`40/59` vs `39/59`) without increasing false triggers.
 
 Not supported:
 
@@ -164,3 +185,4 @@ Not supported:
 - Proof that actuator latency is low enough.
 - Measured TCT actuator transfer function or suppression response.
 - Mechanical or thermal liquid-lithium motion as an event-specific actuator.
+- A substantially better precursor that resolves the latency limitation.
