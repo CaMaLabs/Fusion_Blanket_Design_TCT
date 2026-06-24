@@ -1,0 +1,6 @@
+{
+  "blocked_on": "Timeout, connector/DNS errors, and incomplete HTTP payloads while reading https://s3.echo.stfc.ac.uk/mast/level2/shots/30311.zarr",
+  "claim_boundary": "Blocked execution artifact only; not a morphology-gate validation result.",
+  "script": "fair_mast_sxr_morphology_gate.py",
+  "status": "BLOCKED_PUBLIC_ARCHIVE_READ_FAILURE"
+}

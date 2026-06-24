@@ -34,6 +34,7 @@ Primary reproduction scripts:
 - [`fair_mast_biased_actuator_response_budget.py`](../../fair_mast_biased_actuator_response_budget.py)
 - [`fair_mast_multidiagnostic_precursor_fusion.py`](../../fair_mast_multidiagnostic_precursor_fusion.py)
 - [`fair_mast_sxr_precursor_tradeoff.py`](../../fair_mast_sxr_precursor_tradeoff.py)
+- [`fair_mast_sxr_morphology_gate.py`](../../fair_mast_sxr_morphology_gate.py)
 
 ## Result Summary
 
@@ -137,6 +138,19 @@ SXR precursor tradeoff:
   is a classifier or morphology gate that separates useful SXR precursors from
   SXR-only event signatures and shot-specific bursts.
 
+SXR morphology gate:
+
+- Implemented but not completed in the current execution.
+- Gate design: retain the fixed Mirnov trigger, then admit SXR candidates only
+  when low-threshold poloidal/toroidal Mirnov state is already elevated or has
+  crossed recently.
+- Train/test protocol: select the gate only on training shots `30311` and
+  `30423`, then evaluate once on held-out reviewed labels.
+- Current blocked reason: public FAIR-MAST archive reads for shot `30311`
+  timed out and then failed DNS resolution for `s3.echo.stfc.ac.uk`.
+- Interpretation: this is the correct next open-data test, but there is no
+  morphology-gate metric yet.
+
 ## Audit Artifacts
 
 - [Held-out precursor report](../fair_mast_prospective_precursor_default/fair_mast_prospective_precursor_report.md)
@@ -150,6 +164,7 @@ SXR precursor tradeoff:
 - [Biased actuator response-budget report](../fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_report.md)
 - [Multi-diagnostic precursor fusion report](../fair_mast_multidiagnostic_precursor_fusion_default/fair_mast_multidiagnostic_precursor_fusion_report.md)
 - [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
+- [SXR morphology gate blocked-run report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 
 Representative plots:
 
@@ -199,6 +214,8 @@ Supported:
   recall improvement (`40/59` vs `39/59`) without increasing false triggers.
 - SXR envelopes can raise raw held-out recognition as high as `58/59`, but only
   with many false triggers and shorter median lead under fixed thresholds.
+- A causal SXR morphology-gate test is implemented and ready to rerun once the
+  public archive is reachable.
 
 Not supported:
 
@@ -211,3 +228,4 @@ Not supported:
 - Mechanical or thermal liquid-lithium motion as an event-specific actuator.
 - A substantially better precursor that resolves the latency limitation.
 - A fixed-threshold SXR trigger clean enough to replace Mirnov+toroidal fusion.
+- A completed SXR morphology-gate validation result.
