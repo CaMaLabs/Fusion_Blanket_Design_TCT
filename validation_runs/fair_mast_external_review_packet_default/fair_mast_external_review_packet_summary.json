@@ -25,6 +25,27 @@
     "latency_boundary": "precursor_gated_boost_plausible_to_about_5_ms_without_settle_margin_constrained_with_margin_slow_preventative_scheduling_at_8_to_12_ms",
     "source": "validation_runs/fair_mast_actuator_latency_feasibility_default"
   },
+  "biased_actuator_response_budget": {
+    "cold_start_current_pulse": {
+      "total_response_ms": 9.0,
+      "verdict": "fails_event_specific_boost"
+    },
+    "flow_or_thermal_lithium_response": {
+      "total_response_ms": 25.75,
+      "verdict": "not_event_specific"
+    },
+    "prebiased_current_sheet_fast": {
+      "reachable_true_elm_count": 38,
+      "total_response_ms": 2.75,
+      "verdict": "passes_for_bounded_boost"
+    },
+    "prebiased_current_sheet_nominal": {
+      "reachable_true_elm_count": 30,
+      "total_response_ms": 5.25,
+      "verdict": "passes_for_bounded_boost"
+    },
+    "source": "validation_runs/fair_mast_biased_actuator_response_budget_default"
+  },
   "status": "MAST_EXTERNAL_REVIEW_PACKET_PREPARED",
   "strict_null_suite": {
     "full_local_event_jitter": {

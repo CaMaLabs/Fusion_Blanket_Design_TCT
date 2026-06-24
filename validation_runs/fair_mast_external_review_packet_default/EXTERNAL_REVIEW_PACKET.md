@@ -31,6 +31,7 @@ Primary reproduction scripts:
 - [`fair_mast_precursor_time_shift_null.py`](../../fair_mast_precursor_time_shift_null.py)
 - [`fair_mast_precursor_strict_null_suite.py`](../../fair_mast_precursor_strict_null_suite.py)
 - [`fair_mast_actuator_latency_feasibility.py`](../../fair_mast_actuator_latency_feasibility.py)
+- [`fair_mast_biased_actuator_response_budget.py`](../../fair_mast_biased_actuator_response_budget.py)
 
 ## Result Summary
 
@@ -90,6 +91,17 @@ Actuator-latency feasibility:
 - At `8-12 ms`, event-specific response is too limited; the defensible policy is
   slow preventative scheduling with at most limited boost on a subset of events.
 
+Biased actuator response budget:
+
+- Fast prebiased current-sheet modulation budget: `2.750 ms`, reaches `38/59`
+  accepted true ELMs, verdict `passes_for_bounded_boost`.
+- Nominal prebiased current-sheet modulation budget: `5.250 ms`, reaches
+  `30/59` accepted true ELMs, verdict `passes_for_bounded_boost`.
+- Slow prebiased chain (`8.250 ms`) and cold-start current pulse (`9.000 ms`)
+  fail reliable event-specific boost.
+- Mechanical/thermal liquid-lithium response (`25.750 ms`) is not
+  event-specific; it can only be part of the standing bias interpretation.
+
 ## Audit Artifacts
 
 - [Held-out precursor report](../fair_mast_prospective_precursor_default/fair_mast_prospective_precursor_report.md)
@@ -100,6 +112,7 @@ Actuator-latency feasibility:
 - [Time-shift null report](../fair_mast_precursor_time_shift_null_default/fair_mast_precursor_time_shift_null_report.md)
 - [Strict null suite report](../fair_mast_precursor_strict_null_suite_default/fair_mast_precursor_strict_null_suite_report.md)
 - [Actuator-latency feasibility report](../fair_mast_actuator_latency_feasibility_default/fair_mast_actuator_latency_feasibility_report.md)
+- [Biased actuator response-budget report](../fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_report.md)
 
 Representative plots:
 
@@ -126,9 +139,11 @@ Representative plots:
    adequately address trigger clustering and shot-dominance concerns?
 8. Does the latency-feasibility sweep draw the correct boundary between
    precursor-gated boost and slow preventative scheduling?
-9. Is `5-8 ms` lead enough to justify bounded actuator adjustment in a future
+9. Is the standing lithium/current bias interpretation physically plausible,
+   and are the response-budget components reasonable?
+10. Is `5-8 ms` lead enough to justify bounded actuator adjustment in a future
    controller, assuming actuator response is independently characterized?
-10. What additional FAIR-MAST diagnostics should be included before promoting
+11. What additional FAIR-MAST diagnostics should be included before promoting
    the claim?
 
 ## Current Claim Boundary
@@ -148,3 +163,4 @@ Not supported:
 - Real-time controller deployment readiness.
 - Proof that actuator latency is low enough.
 - Measured TCT actuator transfer function or suppression response.
+- Mechanical or thermal liquid-lithium motion as an event-specific actuator.
