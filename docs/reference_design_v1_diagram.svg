@@ -1,1 +1,104 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><rect width='100%' height='100%' fill='white'/><text x='40' y='60' font-size='42' font-family='Arial' font-weight='bold'>Fusion Engine Reference Design V1</text><text x='40' y='95' font-size='22'>DT Tokamak • Liquid Lithium Wall • be_outer_killer Blanket Basin</text><circle cx='500' cy='430' r='110' fill='#ff66cc'/><circle cx='500' cy='430' r='150' fill='none' stroke='#4aa3ff' stroke-width='35'/><circle cx='500' cy='430' r='190' fill='none' stroke='#d9c27a' stroke-width='35'/><circle cx='500' cy='430' r='230' fill='none' stroke='#8fd16a' stroke-width='35'/><circle cx='500' cy='430' r='270' fill='none' stroke='#66bb66' stroke-width='35'/><circle cx='500' cy='430' r='310' fill='none' stroke='#888888' stroke-width='35'/><text x='455' y='430' font-size='36' fill='white'>DT</text><text x='425' y='470' font-size='36' fill='white'>PLASMA</text><text x='860' y='200' font-size='24'>Layer Stack</text><text x='860' y='250' font-size='22'>Liquid Lithium Wall</text><text x='860' y='290' font-size='22'>Inner Be</text><text x='860' y='330' font-size='22'>Li2O</text><text x='860' y='370' font-size='22'>Li2O</text><text x='860' y='410' font-size='22'>W-Ti-B4C</text><text x='860' y='450' font-size='22'>Outer Be</text><text x='860' y='540' font-size='24'>Control Architecture</text><text x='860' y='580' font-size='20'>Mirnov/Toroidal Precursors</text><text x='860' y='610' font-size='20'>Standing Preventative Bias</text><text x='860' y='640' font-size='20'>Fast Bounded Boost</text><text x='860' y='670' font-size='20'>Event Severity Reduction Proxy</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Fusion Engine Reference Design V1</title>
+  <desc id="desc">Hand-authored engineering vector diagram of the Reference Design V1 DT tokamak, liquid lithium wall, be_outer_killer blanket stack, edge-control proxy architecture, and validation evidence chain.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}.ink{fill:#071b45}.muted{fill:#4d5b73}.panel{fill:#fff;stroke:#c7d2e3;stroke-width:2}.head{fill:#06245a}.headText{fill:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:20px}.label{font-family:Arial,sans-serif;fill:#071b45;font-size:18px}.small{font-family:Arial,sans-serif;fill:#071b45;font-size:15px}.tiny{font-family:Arial,sans-serif;fill:#4d5b73;font-size:13px}.mono{font-family:Consolas,monospace;fill:#071b45;font-size:15px}.line{stroke:#26364f;stroke-width:2;fill:none}.arrow{stroke:#26364f;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.check{fill:#eaf8ef;stroke:#21823b;stroke-width:2}.warn{fill:#fff7df;stroke:#d2a72d;stroke-width:1.5}.plasma{fill:#ff4fb8;stroke:#a30065;stroke-width:3}.liwall{fill:none;stroke:#42b7e9;stroke-width:32}.beinner{fill:none;stroke:#f39c12;stroke-width:34}.li2o1{fill:none;stroke:#62b146;stroke-width:38}.li2o2{fill:none;stroke:#2f8f35;stroke-width:76}.wtib4c{fill:none;stroke:#1f69c9;stroke-width:38}.beouter{fill:none;stroke:#6f4aa8;stroke-width:26}.vessel{fill:none;stroke:#30343a;stroke-width:42}.thin{fill:none;stroke:#111827;stroke-width:2}.dash{stroke-dasharray:8 8}.boxText{font-family:Arial,sans-serif;fill:#071b45;font-size:16px}.callout{font-family:Arial,sans-serif;font-size:15px;fill:#071b45}.red{fill:#d21f3c}.green{fill:#147a35}.blue{fill:#1457b7}.orange{fill:#ef8a00}.purple{fill:#6f35a5}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#26364f"/></marker>
+    <linearGradient id="flux" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#e53935"/><stop offset="35%" stop-color="#ffb300"/><stop offset="70%" stop-color="#43a047"/><stop offset="100%" stop-color="#1e88e5"/></linearGradient>
+  </defs>
+
+  <rect class="bg" width="1800" height="1100"/>
+  <text x="36" y="58" font-family="Arial,sans-serif" font-size="44" font-weight="800" class="ink">FUSION ENGINE - REFERENCE DESIGN V1</text>
+  <text x="38" y="94" font-family="Arial,sans-serif" font-size="23" font-weight="700" class="ink">DT Tokamak • Liquid Lithium Wall • be_outer_killer Blanket Basin</text>
+  <text x="38" y="122" font-family="Arial,sans-serif" font-size="17" class="muted">Current best validation basin from OpenMC screening, FAIR-MAST proxy validation, and M3D-C1 handoff work. Not a demonstrated reactor.</text>
+
+  <!-- Reactor cross section panel -->
+  <rect x="24" y="145" width="870" height="535" rx="10" class="panel"/>
+  <rect x="24" y="145" width="870" height="34" rx="10" class="head"/>
+  <text x="42" y="168" class="headText">TOKAMAK CROSS-SECTION / LAYER STACK</text>
+
+  <!-- Poloidal rings, intentionally vector and editable -->
+  <g transform="translate(435,430)">
+    <ellipse rx="262" ry="288" class="vessel"/>
+    <ellipse rx="230" ry="254" class="beouter"/>
+    <ellipse rx="205" ry="226" class="wtib4c"/>
+    <ellipse rx="168" ry="184" class="li2o2"/>
+    <ellipse rx="124" ry="136" class="li2o1"/>
+    <ellipse rx="92" ry="101" class="beinner"/>
+    <ellipse rx="70" ry="78" class="liwall"/>
+    <ellipse rx="54" ry="61" class="plasma"/>
+    <ellipse rx="44" ry="50" fill="none" stroke="#ffd1ef" stroke-width="2" opacity="0.75"/>
+    <ellipse rx="34" ry="39" fill="none" stroke="#ffd1ef" stroke-width="1.5" opacity="0.75"/>
+    <line x1="0" y1="-305" x2="0" y2="305" class="thin dash"/>
+    <line x1="-292" y1="0" x2="292" y2="0" class="thin dash"/>
+    <text x="-31" y="-5" font-family="Arial,sans-serif" font-size="30" font-weight="800" fill="#fff">DT</text>
+    <text x="-62" y="32" font-family="Arial,sans-serif" font-size="30" font-weight="800" fill="#fff">PLASMA</text>
+    <rect x="-80" y="210" width="160" height="44" rx="6" fill="#0b75bd" stroke="#073b6d" stroke-width="2"/>
+    <text x="-60" y="237" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">LIQUID Li WALL</text>
+  </g>
+
+  <!-- Layer callouts -->
+  <g class="callout">
+    <text x="52" y="226" font-weight="700">Vacuum vessel</text><line x1="180" y1="220" x2="206" y2="220" class="line"/><circle cx="210" cy="220" r="4" fill="#30343a"/>
+    <text x="52" y="278" font-weight="700" class="purple">Outer Be</text><line x1="145" y1="272" x2="218" y2="272" class="line"/><circle cx="222" cy="272" r="4" fill="#6f4aa8"/>
+    <text x="52" y="330" font-weight="700" class="blue">W-Ti-B4C</text><line x1="151" y1="324" x2="238" y2="324" class="line"/><circle cx="242" cy="324" r="4" fill="#1f69c9"/>
+    <text x="52" y="382" font-weight="700" class="green">Li2O breeder 2</text><line x1="190" y1="376" x2="270" y2="376" class="line"/><circle cx="274" cy="376" r="4" fill="#2f8f35"/>
+    <text x="52" y="434" font-weight="700" class="green">Li2O breeder 1</text><line x1="190" y1="428" x2="300" y2="428" class="line"/><circle cx="304" cy="428" r="4" fill="#62b146"/>
+    <text x="52" y="486" font-weight="700" class="orange">Inner Be</text><line x1="135" y1="480" x2="330" y2="480" class="line"/><circle cx="334" cy="480" r="4" fill="#f39c12"/>
+    <text x="52" y="538" font-weight="700" class="blue">Liquid lithium wall</text><line x1="215" y1="532" x2="382" y2="532" class="line"/><circle cx="386" cy="532" r="4" fill="#42b7e9"/>
+    <text x="52" y="590" font-weight="700" class="red">DT plasma</text><line x1="140" y1="584" x2="410" y2="584" class="line"/><circle cx="414" cy="584" r="4" fill="#ff4fb8"/>
+  </g>
+
+  <!-- Neutron flux arrows -->
+  <g>
+    <rect x="732" y="190" width="132" height="212" rx="8" class="panel"/>
+    <rect x="732" y="190" width="132" height="32" rx="8" class="head"/>
+    <text x="746" y="211" class="headText" font-size="15">NEUTRON FLUX</text>
+    <rect x="804" y="250" width="18" height="115" fill="url(#flux)" stroke="#333"/>
+    <text x="832" y="256" class="small">High</text><text x="832" y="366" class="small">Low</text>
+    <path d="M675 263 C720 258 735 260 785 250" stroke="#e53935" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+    <path d="M675 315 C722 314 742 314 786 304" stroke="#fb8c00" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M675 370 C724 374 744 374 786 365" stroke="#fdd835" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M675 430 C724 438 744 438 786 431" stroke="#43a047" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M675 492 C724 506 744 506 786 498" stroke="#1e88e5" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+    <text x="723" y="646" class="tiny">Z axial</text><line x1="705" y1="620" x2="705" y2="580" class="arrow"/><text x="770" y="646" class="tiny">R radial</text><line x1="720" y1="620" x2="785" y2="620" class="arrow"/>
+  </g>
+
+  <!-- Blanket layout table -->
+  <rect x="920" y="145" width="835" height="300" rx="10" class="panel"/>
+  <rect x="920" y="145" width="835" height="34" rx="10" class="head"/>
+  <text x="1115" y="168" class="headText">BLANKET LAYOUT (Radial: Inboard to Outboard)</text>
+  <g class="small" font-weight="700">
+    <text x="960" y="210">Layer</text><text x="1060" y="210">Material</text><text x="1240" y="210">Function</text><text x="1510" y="210">Split</text><text x="1610" y="210">Thickness</text>
+  </g>
+  <g class="small">
+    <rect x="940" y="230" width="60" height="38" fill="#f39c12"/><text x="965" y="255" fill="#fff" font-weight="700">1</text><text x="1052" y="255" font-weight="700">Inner Be</text><text x="1225" y="247">Neutron multiplication</text><text x="1225" y="265">and shaping</text><text x="1515" y="255" font-weight="700">0.15</text><text x="1625" y="255">15%</text>
+    <rect x="940" y="268" width="60" height="38" fill="#62b146"/><text x="965" y="293" fill="#fff" font-weight="700">2</text><text x="1068" y="293" font-weight="700">Li2O</text><text x="1225" y="293">Tritium breeding</text><text x="1515" y="293" font-weight="700">0.20</text><text x="1625" y="293">20%</text>
+    <rect x="940" y="306" width="60" height="38" fill="#2f8f35"/><text x="965" y="331" fill="#fff" font-weight="700">3</text><text x="1068" y="331" font-weight="700">Li2O</text><text x="1225" y="331">Tritium breeding</text><text x="1515" y="331" font-weight="700">0.40</text><text x="1625" y="331">40%</text>
+    <rect x="940" y="344" width="60" height="38" fill="#1f69c9"/><text x="965" y="369" fill="#fff" font-weight="700">4</text><text x="1042" y="361" font-weight="700">W-Ti-B4C</text><text x="1045" y="379">60/30/10</text><text x="1225" y="361">Neutron attenuation</text><text x="1225" y="379">heat handling</text><text x="1515" y="369" font-weight="700">0.15</text><text x="1625" y="369">15%</text>
+    <rect x="940" y="382" width="60" height="38" fill="#6f4aa8"/><text x="965" y="407" fill="#fff" font-weight="700">5</text><text x="1050" y="407" font-weight="700">Outer Be</text><text x="1225" y="399">Structural support</text><text x="1225" y="417">neutron shaping</text><text x="1515" y="407" font-weight="700">0.10</text><text x="1625" y="407">10%</text>
+  </g>
+  <line x1="920" y1="225" x2="1755" y2="225" stroke="#c7d2e3"/><line x1="1025" y1="180" x2="1025" y2="445" stroke="#c7d2e3"/><line x1="1190" y1="180" x2="1190" y2="445" stroke="#c7d2e3"/><line x1="1485" y1="180" x2="1485" y2="445" stroke="#c7d2e3"/><line x1="1590" y1="180" x2="1590" y2="445" stroke="#c7d2e3"/>
+  <text x="955" y="435" class="small" font-weight="700">Total split = 1.00</text><text x="1165" y="435" class="small" font-weight="700">Blanket thickness approx. 1.25 m</text><text x="1460" y="435" class="small" font-weight="700">Outer axial cap approx. 0.6 m</text>
+
+  <!-- Machine parameters and design targets -->
+  <rect x="920" y="465" width="405" height="190" rx="10" class="panel"/><rect x="920" y="465" width="405" height="32" rx="10" class="head"/><text x="965" y="487" class="headText">PLASMA / MACHINE PARAMETERS</text>
+  <g class="small"><text x="945" y="525">Major radius R</text><text x="1130" y="525" font-weight="700">5.5 m</text><text x="945" y="555">Minor radius a</text><text x="1130" y="555" font-weight="700">1.8 m</text><text x="945" y="585">Toroidal field B0</text><text x="1130" y="585" font-weight="700">7.2 T</text><text x="945" y="615">Plasma current Ip</text><text x="1130" y="615" font-weight="700">14 MA</text><text x="945" y="645">Elongation kappa</text><text x="1130" y="645" font-weight="700">1.9</text><text x="1205" y="525">Triangularity delta</text><text x="1280" y="525" font-weight="700">0.35</text><text x="1205" y="555">H98</text><text x="1280" y="555" font-weight="700">1.35</text><text x="1205" y="585">Greenwald fraction</text><text x="1280" y="585" font-weight="700">0.83</text><text x="1205" y="615">Target betaN</text><text x="1280" y="615" font-weight="700">2.7</text></g>
+  <rect x="1345" y="465" width="410" height="190" rx="10" class="panel"/><rect x="1345" y="465" width="410" height="32" rx="10" class="head"/><text x="1455" y="487" class="headText">DESIGN TARGETS</text>
+  <g class="small"><text x="1395" y="525">High tritium breeding ratio target</text><text x="1395" y="555">Low nuclear heating in magnets</text><text x="1395" y="585">High power-handling capability</text><text x="1395" y="615">Structural integrity and manufacturability</text><text x="1395" y="645">Edge-control compatibility</text><circle cx="1370" cy="519" r="9" fill="#ef8a00"/><circle cx="1370" cy="549" r="9" fill="#1f69c9"/><circle cx="1370" cy="579" r="9" fill="#2f8f35"/><circle cx="1370" cy="609" r="9" fill="#6f4aa8"/><circle cx="1370" cy="639" r="9" fill="#d21f3c"/></g>
+
+  <!-- Bottom panels -->
+  <rect x="24" y="705" width="620" height="215" rx="10" class="panel"/><rect x="24" y="705" width="620" height="32" rx="10" fill="#4b167c"/><text x="185" y="727" class="headText">EDGE-CONTROL ARCHITECTURE</text><text x="420" y="727" font-family="Arial,sans-serif" font-size="14" font-style="italic" fill="#fff">TCT-inspired edge-control hypothesis</text>
+  <g class="small"><rect x="45" y="760" width="92" height="62" rx="6" fill="#fff" stroke="#c7d2e3"/><text x="55" y="782">Mirnov /</text><text x="55" y="800">toroidal</text><text x="55" y="818">sensors</text><rect x="175" y="760" width="92" height="62" rx="6" fill="#fff" stroke="#c7d2e3"/><text x="188" y="790">Precursor</text><text x="190" y="810">detection</text><rect x="305" y="760" width="92" height="62" rx="6" fill="#fff" stroke="#c7d2e3"/><text x="319" y="790">Control</text><text x="316" y="810">supervisor</text><rect x="435" y="750" width="105" height="84" rx="8" fill="#1f69c9"/><text x="451" y="777" fill="#fff" font-weight="700">Standing</text><text x="445" y="797" fill="#fff" font-weight="700">preventative</text><text x="472" y="817" fill="#fff" font-weight="700">bias</text><rect x="435" y="850" width="105" height="44" rx="8" fill="#6f4aa8"/><text x="452" y="877" fill="#fff" font-weight="700">Fast boost</text><path d="M137 791 H173" class="arrow"/><path d="M267 791 H303" class="arrow"/><path d="M397 791 H433" class="arrow"/><path d="M540 790 H590" class="arrow"/><circle cx="602" cy="790" r="28" class="check"/><text x="593" y="800" font-size="30" class="green">✓</text><text x="560" y="855">Reduced event</text><text x="560" y="875">severity proxy</text><text x="45" y="900" class="tiny">Strategy: early detection -> bounded response -> current-profile modification proxy -> event-severity reduction proxy.</text></g>
+
+  <rect x="665" y="705" width="330" height="215" rx="10" class="panel"/><rect x="665" y="705" width="330" height="32" rx="10" class="head"/><text x="720" y="727" class="headText">NEUTRON FLOW / FUNCTION</text><g class="small"><text x="705" y="765">• Neutrons born in DT plasma</text><text x="705" y="795">• Multiply in inner Be</text><text x="705" y="825">• Breed tritium in Li2O layers</text><text x="705" y="855">• Attenuate in W-Ti-B4C</text><text x="705" y="885">• Shape / cleanup at outer Be</text></g>
+
+  <rect x="1015" y="705" width="345" height="215" rx="10" class="panel"/><rect x="1015" y="705" width="345" height="32" rx="10" fill="#0b5b3a"/><text x="1085" y="727" class="headText">VALIDATION STATUS</text><g class="small"><text x="1045" y="765">OpenMC screening: be_outer_killer basin</text><text x="1045" y="795">FAIR-MAST proxy: Mirnov/toroidal best policy class</text><text x="1045" y="825">M3D-C1: Candidate-0 defined for validation</text><text x="1045" y="855">BOUT++/MHD: next validation target</text><text x="1045" y="885">Integrated reactor: not demonstrated</text></g>
+
+  <rect x="1380" y="705" width="375" height="215" rx="10" class="panel"/><rect x="1380" y="705" width="375" height="32" rx="10" class="head"/><text x="1453" y="727" class="headText">EVIDENCE CHAIN</text><g class="small" text-anchor="middle"><circle cx="1425" cy="785" r="24" fill="#fff3e0" stroke="#ef8a00" stroke-width="3"/><text x="1425" y="827">DT</text><path d="M1455 785 H1490" class="arrow"/><circle cx="1520" cy="785" r="24" fill="#e8f1ff" stroke="#1f69c9" stroke-width="3"/><text x="1520" y="827">OpenMC</text><path d="M1550 785 H1585" class="arrow"/><circle cx="1615" cy="785" r="24" fill="#eaf8ef" stroke="#2f8f35" stroke-width="3"/><text x="1615" y="827">be_outer</text><path d="M1645 785 H1680" class="arrow"/><circle cx="1710" cy="785" r="24" fill="#f4eaff" stroke="#6f4aa8" stroke-width="3"/><text x="1710" y="827">MHD</text><text x="1568" y="875" text-anchor="middle" class="tiny">Screening -> reference basin -> proxy control -> validation target</text></g>
+
+  <rect x="24" y="945" width="1731" height="120" rx="10" class="panel"/>
+  <g class="small"><text x="50" y="980" font-weight="700">REFERENCE DESIGN V1 SUMMARY</text><text x="50" y="1010">Current best validation basin: DT tokamak + liquid lithium wall + be_outer_killer blanket + precursor-triggered edge-control proxy.</text><text x="50" y="1040">Deferred branches: p-B11, direct conversion, alpha/electron extraction, graphene routing, and multi-channel plasma routing.</text><text x="1125" y="980" font-weight="700">Citation</text><text x="1125" y="1010">Chase Lunsford (@chaseakat)</text><text x="1125" y="1040">github.com/CaMaLabs/Fusion_Blanket_Design_TCT</text><text x="1485" y="980" font-weight="700">Terminology</text><text x="1485" y="1010">Use TCT-inspired edge-control hypothesis</text><text x="1485" y="1040">See docs/TCT_LANGUAGE_TRANSLATION.md</text></g>
+</svg>
