@@ -36,6 +36,8 @@
       validation.
 - [ ] Forward-surrogate penalties and policy rankings are treated as proxy
       assumptions, not sustained-fusion performance.
+- [ ] Sensitivity grid is broad enough, or stricter falsification assumptions
+      are requested.
 - [ ] Reviewer agrees with stated claim boundaries.
 
 ## Requested Outcome

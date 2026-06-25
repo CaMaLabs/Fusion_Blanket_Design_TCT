@@ -1,0 +1,50 @@
+{
+  "boost_reduction_grid": [
+    0.25,
+    0.4,
+    0.55,
+    0.7
+  ],
+  "claim_boundary": "Reduced-order proxy sensitivity only; not sustained-fusion validation.",
+  "event_rate_hz": 65.55555555555556,
+  "event_rate_multipliers": [
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "false_trigger_cost_multipliers": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "falsifier_count": 0,
+  "falsifier_examples": [],
+  "generated_at": "2026-06-25T00:48:52.305190+00:00",
+  "horizon_s": 10.0,
+  "maximum_mirnov_loss_reduction_vs_no_control": 0.643013031407792,
+  "mean_mirnov_loss_reduction_vs_no_control": 0.4597103194812776,
+  "mean_severity": 1.129463933780055,
+  "minimum_mirnov_loss_reduction_vs_no_control": 0.2304227033290539,
+  "mirnov_toroidal_tied_best_count": 320,
+  "mirnov_toroidal_tied_best_fraction": 1.0,
+  "mirnov_toroidal_within_1pct_count": 320,
+  "mirnov_toroidal_within_1pct_fraction": 1.0,
+  "scenario_count": 320,
+  "standing_bias_grid": [
+    0.1,
+    0.2,
+    0.25,
+    0.35
+  ],
+  "status": "MAST_TCT_FORWARD_SENSITIVITY_COMPLETED",
+  "win_rate_rows": [
+    {
+      "policy": "baseline_mirnov_fast_boost",
+      "win_count": 320,
+      "win_fraction": 1.0
+    }
+  ]
+}

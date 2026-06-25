@@ -36,6 +36,7 @@ Primary reproduction scripts:
 - [`fair_mast_sxr_precursor_tradeoff.py`](../../fair_mast_sxr_precursor_tradeoff.py)
 - [`fair_mast_sxr_morphology_gate.py`](../../fair_mast_sxr_morphology_gate.py)
 - [`fair_mast_tct_forward_surrogate.py`](../../fair_mast_tct_forward_surrogate.py)
+- [`fair_mast_tct_forward_sensitivity.py`](../../fair_mast_tct_forward_sensitivity.py)
 
 ## Result Summary
 
@@ -172,6 +173,21 @@ FAIR-MAST-seeded forward TCT surrogate:
 - Interpretation: this supports the control strategy ranking in a reduced-order
   proxy, not sustained-fusion validation.
 
+Forward-surrogate sensitivity / falsification sweep:
+
+- Scenarios: `320` deterministic expected-loss cases.
+- Swept assumptions: standing-bias reduction `0.10-0.35`, boost reduction
+  `0.25-0.70`, false-trigger penalty `0-5x`, and event-rate multiplier
+  `0.25-2x`.
+- Result: Mirnov+toroidal fast boost is tied for best realizable policy in
+  `320/320` scenarios and within `1%` of best in `320/320` scenarios.
+- Deterministic tie-break note: fixed Mirnov baseline is listed as winner in
+  the win-rate table because it has the same `3 ms` reachability and false
+  trigger count as Mirnov+toroidal in the input table.
+- Mean Mirnov+toroidal loss reduction vs no control across the sweep: `46.0%`.
+- Range of Mirnov/toroidal loss reduction vs no control: `23.0%` to `64.3%`.
+- Falsifier rows found: `0` within the swept parameter grid.
+
 ## Audit Artifacts
 
 - [Held-out precursor report](../fair_mast_prospective_precursor_default/fair_mast_prospective_precursor_report.md)
@@ -187,6 +203,7 @@ FAIR-MAST-seeded forward TCT surrogate:
 - [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
 - [SXR morphology gate blocked-run report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
+- [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
 Representative plots:
 
@@ -223,7 +240,10 @@ Representative plots:
     signature leakage that requires a morphology gate?
 13. Does the forward surrogate use reasonable proxy penalties for event
     severity, false triggers, and standing-bias cost?
-14. What additional FAIR-MAST diagnostics should be included before promoting
+14. Is the sensitivity grid broad enough to stress the forward-surrogate
+    ranking, or should reviewers add harsher false-trigger or weaker-boost
+    assumptions?
+15. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -243,6 +263,8 @@ Supported:
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
+- Sensitivity sweep finds no falsifier rows for Mirnov/toroidal fast boost
+  within the current reduced-order proxy grid.
 
 Not supported:
 
@@ -258,3 +280,4 @@ Not supported:
 - A completed SXR morphology-gate validation result.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
+- Robustness outside the stated sensitivity grid.
