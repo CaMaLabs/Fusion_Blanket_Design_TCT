@@ -1,6 +1,115 @@
 {
-  "blocked_on": "Timeout, connector/DNS errors, and incomplete HTTP payloads while reading https://s3.echo.stfc.ac.uk/mast/level2/shots/30311.zarr",
-  "claim_boundary": "Blocked execution artifact only; not a morphology-gate validation result.",
-  "script": "fair_mast_sxr_morphology_gate.py",
-  "status": "BLOCKED_PUBLIC_ARCHIVE_READ_FAILURE"
+  "baseline_single_channel_reviewed_labels": {
+    "detected_event_count": 39,
+    "event_count": 59,
+    "f1": 0.7358490566037736,
+    "false_trigger_count": 8,
+    "latency_feasible_event_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.957999999999972,
+      "median": 8.375999999999994,
+      "minimum": 2.5540000000000562
+    },
+    "missed_event_count": 20,
+    "precision": 0.8297872340425532,
+    "recall": 0.6610169491525424
+  },
+  "claim_boundary": "Offline public-data SXR morphology gate only; not causal TCT validation.",
+  "generated_at": "2026-06-25T02:49:01.647555+00:00",
+  "mirnov_toroidal_reviewed_labels": {
+    "detected_event_count": 40,
+    "event_count": 59,
+    "f1": 0.7476635514018691,
+    "false_trigger_count": 8,
+    "latency_feasible_event_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.957999999999972,
+      "median": 8.360000000000035,
+      "minimum": 0.6940000000000279
+    },
+    "missed_event_count": 19,
+    "precision": 0.8333333333333334,
+    "recall": 0.6779661016949152
+  },
+  "raw_sxr_reference_reviewed_labels": {
+    "detected_event_count": 58,
+    "event_count": 59,
+    "f1": 0.6783625730994153,
+    "false_trigger_count": 54,
+    "latency_feasible_event_count": {
+      "12_ms": 0,
+      "3_ms": 32,
+      "5_ms": 24,
+      "8_ms": 10
+    },
+    "lead_ms": {
+      "maximum": 9.824000000000055,
+      "median": 3.877000000000047,
+      "minimum": 0.5479999999999929
+    },
+    "missed_event_count": 1,
+    "precision": 0.5178571428571429,
+    "recall": 0.9830508474576272
+  },
+  "selected_config": {
+    "deadtime_ms": 0.35,
+    "mag_features": [],
+    "mag_mode": "none",
+    "mag_sigma": 0.0,
+    "mag_window_ms": 0.0,
+    "sxr_feature": "sxr_tangential_all",
+    "sxr_sigma": 4.0
+  },
+  "selected_gate_reviewed_labels": {
+    "detected_event_count": 57,
+    "event_count": 59,
+    "f1": 0.5560975609756097,
+    "false_trigger_count": 89,
+    "latency_feasible_event_count": {
+      "12_ms": 5,
+      "3_ms": 34,
+      "5_ms": 20,
+      "8_ms": 11
+    },
+    "lead_ms": {
+      "maximum": 14.55200000000001,
+      "median": 3.8100000000000356,
+      "minimum": 0.5379999999999829
+    },
+    "missed_event_count": 2,
+    "precision": 0.3904109589041096,
+    "recall": 0.9661016949152542
+  },
+  "selected_train_labels": {
+    "detected_event_count": 40,
+    "event_count": 45,
+    "f1": 0.8695652173913044,
+    "false_trigger_count": 7,
+    "latency_feasible_event_count": {
+      "12_ms": 1,
+      "3_ms": 33,
+      "5_ms": 26,
+      "8_ms": 12
+    },
+    "lead_ms": {
+      "maximum": 13.70200000000002,
+      "median": 6.191000000000058,
+      "minimum": 0.6740000000000079
+    },
+    "missed_event_count": 5,
+    "precision": 0.851063829787234,
+    "recall": 0.8888888888888888
+  },
+  "selected_train_score": 2.3876288416075653,
+  "status": "MAST_SXR_MORPHOLOGY_GATE_COMPLETED"
 }

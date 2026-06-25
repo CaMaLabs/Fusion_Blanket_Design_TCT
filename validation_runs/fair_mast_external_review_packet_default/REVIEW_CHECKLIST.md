@@ -18,8 +18,8 @@
 - [ ] Multi-diagnostic fusion gain is interpreted as marginal, not decisive.
 - [ ] SXR gains are checked for event-signature leakage before being treated as
       operational precursors.
-- [ ] SXR morphology-gate results are not counted until the blocked public-data
-      run completes.
+- [ ] Completed SXR morphology-gate result is treated as negative for this
+      simple gate family, not as operational trigger support.
 
 ## Null Test
 

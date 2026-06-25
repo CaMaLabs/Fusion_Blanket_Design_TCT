@@ -24,6 +24,7 @@ duty-cycle behavior.
 | Fixed Mirnov precursor | `39/59` accepted events detected, median lead `8.376 ms` |
 | Mirnov+toroidal fusion | `40/59` accepted events detected, `8` false triggers |
 | Raw SXR recognition ceiling | up to `58/59` detected, but `54` false triggers and shorter lead |
+| SXR morphology gate | completed; selected gate detects `57/59` but with `89` false triggers, so not operationally better |
 | Strict nulls | block-shift and event-jitter nulls remain significant |
 | Fast response budget | prebiased fast current-sheet budget reaches `38/59` accepted events |
 | Forward surrogate | Mirnov+toroidal fast boost gives `51.5%` proxy loss reduction vs no control |
@@ -40,16 +41,16 @@ duty-cycle behavior.
 - Reviewer-selected false-trigger penalties, weaker boost efficacy, or
   standing-bias costs fall outside the sensitivity grid and reverse the policy
   ranking.
-- The SXR morphology-gate run completes and shows that SXR gains are mostly
-  event-signature leakage.
+- A stronger SXR morphology/classifier gate cannot reduce false triggers without
+  losing the recognition advantage.
 
 ## Open Gaps
 
 - No expert-reviewed ELM label set.
 - No measured TCT actuator transfer function.
 - No causal suppression experiment.
-- No completed SXR morphology-gate result; the run is currently blocked by
-  public FAIR-MAST archive read instability.
+- No SXR morphology/classifier trigger clean enough to replace Mirnov/toroidal
+  fusion.
 - No DIII-D/NSTX/ITER EFIT/MHD experimental validation of TCT.
 - No reactor burn, transport, neutronics, material-survival, or TBR validation
   from the FAIR-MAST pipeline.
@@ -67,7 +68,7 @@ Primary recent reports:
 - [SXR precursor tradeoff](validation_runs/fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
 - [Forward surrogate](validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [Forward sensitivity sweep](validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
-- [SXR morphology gate blocked run](validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
+- [SXR morphology gate](validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 
 ## Public Wording
 

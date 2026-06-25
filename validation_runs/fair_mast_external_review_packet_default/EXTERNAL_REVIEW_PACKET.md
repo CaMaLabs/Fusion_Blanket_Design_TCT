@@ -142,16 +142,18 @@ SXR precursor tradeoff:
 
 SXR morphology gate:
 
-- Implemented but not completed in the current execution.
 - Gate design: retain the fixed Mirnov trigger, then admit SXR candidates only
   when low-threshold poloidal/toroidal Mirnov state is already elevated or has
   crossed recently.
 - Train/test protocol: select the gate only on training shots `30311` and
   `30423`, then evaluate once on held-out reviewed labels.
-- Current blocked reason: public FAIR-MAST archive reads for shot `30311`
-  timed out and then failed DNS resolution for `s3.echo.stfc.ac.uk`.
-- Interpretation: this is the correct next open-data test, but there is no
-  morphology-gate metric yet.
+- Selected gate: tangential SXR aggregate RMS at `4.0` sigma with no magnetic
+  gate requirement.
+- Held-out result: `57/59` accepted events detected, `89` false triggers,
+  precision `0.390`, median lead `3.810 ms`.
+- Interpretation: this simple causal gate did not beat Mirnov+toroidal fusion;
+  a stronger classifier or additional diagnostic features are needed before SXR
+  can be treated as an operational trigger.
 
 FAIR-MAST-seeded forward TCT surrogate:
 
@@ -201,7 +203,7 @@ Forward-surrogate sensitivity / falsification sweep:
 - [Biased actuator response-budget report](../fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_report.md)
 - [Multi-diagnostic precursor fusion report](../fair_mast_multidiagnostic_precursor_fusion_default/fair_mast_multidiagnostic_precursor_fusion_report.md)
 - [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
-- [SXR morphology gate blocked-run report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
+- [SXR morphology gate report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
@@ -258,8 +260,8 @@ Supported:
   recall improvement (`40/59` vs `39/59`) without increasing false triggers.
 - SXR envelopes can raise raw held-out recognition as high as `58/59`, but only
   with many false triggers and shorter median lead under fixed thresholds.
-- A causal SXR morphology-gate test is implemented and ready to rerun once the
-  public archive is reachable.
+- The simple causal SXR morphology gate completed but did not produce a clean
+  operational trigger.
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
@@ -277,7 +279,8 @@ Not supported:
 - Mechanical or thermal liquid-lithium motion as an event-specific actuator.
 - A substantially better precursor that resolves the latency limitation.
 - A fixed-threshold SXR trigger clean enough to replace Mirnov+toroidal fusion.
-- A completed SXR morphology-gate validation result.
+- A fixed-threshold or simple morphology-gated SXR trigger clean enough to
+  replace Mirnov+toroidal fusion.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
 - Robustness outside the stated sensitivity grid.

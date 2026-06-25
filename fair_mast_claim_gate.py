@@ -77,6 +77,16 @@ def gate_status(artifacts: dict[str, dict[str, Any] | None]) -> dict[str, Any]:
     if str(morphology.get("status", "")).startswith("BLOCKED"):
         flags.append("MISSING_MORPHOLOGY_GATE_RUN")
         blockers.append("sxr_morphology_gate_blocked")
+    elif morphology.get("status") == "MAST_SXR_MORPHOLOGY_GATE_COMPLETED":
+        selected = morphology.get("selected_gate_reviewed_labels", {})
+        reference = morphology.get("mirnov_toroidal_reviewed_labels", {})
+        if (
+            selected.get("false_trigger_count", 10**9) <= reference.get("false_trigger_count", -1)
+            and selected.get("detected_event_count", -1) >= reference.get("detected_event_count", 10**9)
+        ):
+            flags.append("SXR_MORPHOLOGY_GATE_IMPROVES_TRIGGER")
+        else:
+            flags.append("SXR_MORPHOLOGY_GATE_COMPLETED_NO_OPERATIONAL_IMPROVEMENT")
 
     sensitivity = artifacts.get("forward_sensitivity") or {}
     if sensitivity.get("falsifier_count") == 0:

@@ -1,37 +1,47 @@
 # FAIR-MAST SXR Morphology Gate
 
-- Status: `BLOCKED_PUBLIC_ARCHIVE_READ_FAILURE`
-- Goal: train/test a causal morphology gate to keep SXR precursor recognition while rejecting SXR-only false-trigger bursts
-- Script: `fair_mast_sxr_morphology_gate.py`
-- Data source: public FAIR-MAST Level-2 archive at `https://s3.echo.stfc.ac.uk/mast/level2/shots`
-- Attempted first shot: `30311`
+- Status: `MAST_SXR_MORPHOLOGY_GATE_COMPLETED`
+- Goal: keep SXR recognition gains while rejecting SXR-only false-trigger bursts
+- Train split: automatic D-alpha labels on shots `30311`, `30423`
+- Test split: accepted machine-reviewed `true_elm` labels on shots `30276`, `30277`, `30418`, `30419`, `30421`
+- Gate family: SXR threshold crossings plus causal magnetic level/recent-crossing requirements
 
-## What Was Implemented
+## Selected Gate
 
-The script implements a causal gate family:
+- Selected config: `{'sxr_feature': 'sxr_tangential_all', 'sxr_sigma': 4.0, 'deadtime_ms': 0.35, 'mag_mode': 'none', 'mag_features': [], 'mag_sigma': 0.0, 'mag_window_ms': 0.0}`
+- Train selection score: `2.388`
 
-- baseline fixed-channel Mirnov trigger is retained,
-- SXR candidates are generated from upper-horizontal or tangential SXR aggregate RMS envelopes,
-- candidate SXR triggers are accepted only when low-threshold poloidal/toroidal Mirnov state is already elevated or has crossed recently,
-- configuration selection is performed only on training shots `30311` and `30423`,
-- the selected gate is then evaluated once on held-out reviewed labels for shots `30276`, `30277`, `30418`, `30419`, and `30421`.
+## Held-Out Accepted-Label Result
 
-## Run Outcome
+| Trigger | Events | Detected | Missed | False triggers | Precision | Recall | Median lead |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Single-channel baseline | 59 | 39 | 20 | 8 | 0.830 | 0.661 | 8.376 ms |
+| Mirnov+toroidal reference | 59 | 40 | 19 | 8 | 0.833 | 0.678 | 8.360 ms |
+| Raw SXR reference | 59 | 58 | 1 | 54 | 0.518 | 0.983 | 3.877 ms |
+| Selected morphology gate | 59 | 57 | 2 | 89 | 0.390 | 0.966 | 3.810 ms |
 
-The screen could not complete in this execution because the public FAIR-MAST object store failed during the first training-shot load.
+## Latency-Reachable Accepted Events
 
-Observed failures:
+| Required latency | Baseline | Mirnov+toroidal | Raw SXR | Morphology gate |
+| --- | ---: | ---: | ---: | ---: |
+| `3_ms` | 38 | 38 | 32 | 34 |
+| `5_ms` | 30 | 30 | 24 | 20 |
+| `8_ms` | 23 | 23 | 10 | 11 |
+| `12_ms` | 9 | 9 | 0 | 5 |
 
-- `ShotLoadTimeout` while reading shot `30311` after a 120 s per-shot load timeout.
-- `ClientConnectorDNSError` and `ClientConnectorError` while connecting to `s3.echo.stfc.ac.uk:443` on subsequent retries.
-- `ClientPayloadError` / incomplete content-length payload while opening `30311.zarr` after DNS recovered.
+## Interpretation
 
-Because the training shot could not be loaded, no morphology-gate validation metric is reported here.
+This is a causal gate in the limited sense that it uses only current or
+prior diagnostic state at the candidate trigger time. It does not use the
+future D-alpha event label except during offline train/test scoring.
 
-## Current Interpretation
-
-This does not change the previous SXR result: SXR envelopes contain substantial recognition information, but fixed-threshold SXR triggers are too false-trigger-heavy. The morphology-gate path remains the next reasonable open-data test once the FAIR-MAST archive is reachable again.
+If the selected gate does not beat the Mirnov+toroidal reference on held-out
+reviewed labels, then the fixed-threshold SXR morphology path should be
+treated as useful diagnostic evidence but not an improved operational
+trigger. A stronger model would need additional features, more shots, or
+expert-reviewed labels.
 
 ## Claim Boundary
 
-This is a blocked execution artifact, not a validation pass or failure of the morphology gate.
+This is an offline public-data gate screen. It is not causal TCT validation,
+a measured actuator response, or a deployable controller.
