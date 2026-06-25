@@ -1,0 +1,75 @@
+shot,event_number,event_time_s,local_peak_v,pre_event_median_v,local_peak_minus_pre_median_v,review_label,review_notes
+30260,1,0.30444000000000004,1.21337890625,0.23193359375,0.9814453125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,2,0.31828,1.96044921875,0.2294921875,1.73095703125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,3,0.33582,1.9189453125,0.2197265625,1.69921875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,4,0.35612000000000005,1.63818359375,0.21240234375,1.42578125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,5,0.37188000000000004,1.59912109375,0.25634765625,1.3427734375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,6,0.38218,1.16943359375,0.3271484375,0.84228515625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,7,0.39528,1.75537109375,0.33935546875,1.416015625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,8,0.4067,0.98388671875,0.361328125,0.62255859375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,9,0.41944000000000004,1.064453125,0.361328125,0.703125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,10,0.43014,0.95947265625,0.36865234375,0.5908203125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,11,0.44110000000000005,1.0693359375,0.37353515625,0.69580078125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,12,0.44966,1.0205078125,0.38330078125,0.63720703125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,13,0.45904,1.34765625,0.40283203125,0.94482421875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,14,0.46848,1.2939453125,0.39794921875,0.89599609375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30260,15,0.47800000000000004,1.27197265625,0.40771484375,0.8642578125,ambiguous,Machine first pass: event is close to the fresh-split analysis-window boundary.
+30261,1,0.30438000000000004,1.24755859375,0.27587890625,0.9716796875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,2,0.31474,1.15966796875,0.26611328125,0.8935546875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,3,0.32112,0.99365234375,0.28564453125,0.7080078125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,4,0.32868,0.615234375,0.31494140625,0.30029296875,ambiguous,Machine first pass: D-alpha peak/contrast is below conservative morphology threshold.
+30261,5,0.34486,0.8984375,0.29541015625,0.60302734375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,6,0.35092,0.693359375,0.2880859375,0.4052734375,ambiguous,Machine first pass: D-alpha peak/contrast is below conservative morphology threshold.
+30261,7,0.3589,0.7763671875,0.29052734375,0.48583984375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,8,0.36512,0.98388671875,0.27587890625,0.7080078125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,9,0.37012,0.80810546875,0.2880859375,0.52001953125,ambiguous,Machine first pass: close neighboring peak with only moderate contrast; possible split label.
+30261,10,0.3803,0.68359375,0.3076171875,0.3759765625,ambiguous,Machine first pass: D-alpha peak/contrast is below conservative morphology threshold.
+30261,11,0.38714000000000004,0.92041015625,0.31982421875,0.6005859375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,12,0.3941,0.77880859375,0.3369140625,0.44189453125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,13,0.40194,0.849609375,0.33935546875,0.51025390625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,14,0.40940000000000004,0.791015625,0.34912109375,0.44189453125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,15,0.41768000000000005,1.19384765625,0.3564453125,0.83740234375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,16,0.42496,1.28173828125,0.36865234375,0.9130859375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,17,0.43368,0.9228515625,0.3662109375,0.556640625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,18,0.44066000000000005,0.947265625,0.37353515625,0.57373046875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,19,0.44808000000000003,1.259765625,0.380859375,0.87890625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,20,0.45594,1.142578125,0.38330078125,0.75927734375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,21,0.46436000000000005,1.3330078125,0.38818359375,0.94482421875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,22,0.47032,1.4453125,0.3955078125,1.0498046875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30261,23,0.47856000000000004,1.66748046875,0.400390625,1.26708984375,ambiguous,Machine first pass: event is close to the fresh-split analysis-window boundary.
+30262,1,0.30456,1.77978515625,0.28564453125,1.494140625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,2,0.31438,1.1083984375,0.29296875,0.8154296875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,3,0.31974,0.88623046875,0.31982421875,0.56640625,ambiguous,Machine first pass: close neighboring peak with only moderate contrast; possible split label.
+30262,4,0.33344,1.16455078125,0.49560546875,0.6689453125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,5,0.43450000000000005,0.80078125,0.36865234375,0.43212890625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,6,0.44132000000000005,0.83740234375,0.3857421875,0.45166015625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,7,0.45378,0.80322265625,0.40283203125,0.400390625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,8,0.46148000000000006,0.91552734375,0.400390625,0.51513671875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30262,9,0.47112000000000004,0.8447265625,0.46630859375,0.37841796875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,1,0.3114,1.30126953125,0.27099609375,1.0302734375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,2,0.32444,1.39892578125,0.3076171875,1.09130859375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,3,0.33464,1.15966796875,0.35888671875,0.80078125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,4,0.34406000000000003,1.689453125,0.38330078125,1.30615234375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,5,0.3528,1.0498046875,0.400390625,0.6494140625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,6,0.35996,1.42822265625,0.41015625,1.01806640625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,7,0.36612,0.8984375,0.4248046875,0.4736328125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,8,0.37266000000000005,0.791015625,0.4248046875,0.3662109375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30263,9,0.37888000000000005,0.7666015625,0.41259765625,0.35400390625,ambiguous,Machine first pass: close neighboring peak with only moderate contrast; possible split label.
+30263,10,0.38348000000000004,0.77392578125,0.44921875,0.32470703125,ambiguous,Machine first pass: D-alpha peak/contrast is below conservative morphology threshold.
+30263,11,0.39198000000000005,0.7275390625,0.5419921875,0.185546875,ambiguous,Machine first pass: D-alpha peak/contrast is below conservative morphology threshold.
+30263,12,0.39764000000000005,0.8056640625,0.44189453125,0.36376953125,ambiguous,Machine first pass: close neighboring peak with only moderate contrast; possible split label.
+30263,13,0.45688,0.78857421875,0.4052734375,0.38330078125,ambiguous,Machine first pass: close neighboring peak with only moderate contrast; possible split label.
+30263,14,0.46244,0.88623046875,0.40771484375,0.478515625,ambiguous,Machine first pass: close neighboring peak with only moderate contrast; possible split label.
+30263,15,0.47434000000000004,0.78857421875,0.4296875,0.35888671875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,1,0.3181,2.66357421875,0.19287109375,2.470703125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,2,0.3426,2.490234375,0.27587890625,2.21435546875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,3,0.35538000000000003,1.87744140625,0.302734375,1.57470703125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,4,0.36584,2.06298828125,0.3173828125,1.74560546875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,5,0.38770000000000004,2.1533203125,0.33935546875,1.81396484375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,6,0.40084000000000003,1.62353515625,0.34912109375,1.2744140625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,7,0.41838000000000003,1.88720703125,0.36865234375,1.5185546875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,8,0.42624,2.00927734375,0.37841796875,1.630859375,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,9,0.43746,2.646484375,0.37109375,2.275390625,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,10,0.4529,2.00439453125,0.39306640625,1.611328125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,11,0.46204,2.2607421875,0.39794921875,1.86279296875,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.
+30265,12,0.47542,2.7978515625,0.40283203125,2.39501953125,true_elm,Machine first pass: D-alpha morphology accepted; trigger timing not used for this fresh-split label.

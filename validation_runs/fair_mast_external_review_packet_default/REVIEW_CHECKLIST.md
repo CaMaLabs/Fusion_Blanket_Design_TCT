@@ -28,6 +28,8 @@
       pre-event timing rather than counted as broad cross-shot improvement.
 - [ ] The extra OMV6 false trigger in shot `30421` is considered when deciding
       whether the recall gain is worth the noise cost.
+- [ ] The fresh-split OMV6 result is treated as negative for fixed-threshold
+      OMV replacement because recall is unchanged and false triggers increase.
 
 ## Null Test
 

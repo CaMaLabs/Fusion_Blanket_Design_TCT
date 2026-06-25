@@ -1,0 +1,5 @@
+shot,event_time_s,transition,trigger_time_s,lead_ms,sources
+30260,0.37188,newly_detected_by_omv6,0.36107,10.810000000000041,pol_omv_rms
+30263,0.3114,newly_detected_by_omv6,0.307358,4.04199999999999,pol_omv_rms
+30265,0.43746,lost_by_omv6_merge_or_rematch,0.425852,11.608000000000008,pol_cc_ch2
+30265,0.47542,lost_by_omv6_merge_or_rematch,0.46158200000000005,13.837999999999962,pol_cc_ch2

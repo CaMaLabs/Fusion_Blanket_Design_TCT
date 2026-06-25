@@ -1,0 +1,170 @@
+{
+  "baseline": {
+    "detected_event_count": 50,
+    "event_count": 61,
+    "f1": 0.6097560975609756,
+    "false_trigger_count": 53,
+    "latency_feasible_event_count": {
+      "12_ms": 8,
+      "3_ms": 47,
+      "5_ms": 46,
+      "8_ms": 29
+    },
+    "lead_ms": {
+      "maximum": 14.072000000000084,
+      "median": 8.517000000000081,
+      "minimum": 0.5580000000000029
+    },
+    "missed_event_count": 11,
+    "precision": 0.4854368932038835,
+    "recall": 0.819672131147541
+  },
+  "baseline_config": {
+    "pol_cc_ch2": 6.0
+  },
+  "baseline_score": 0.7026937768581885,
+  "candidate_count": 40,
+  "claim_boundary": "Fresh public-shot trigger generalization only; labels are machine morphology triage, not expert labels.",
+  "detected_delta_omv6_vs_baseline": 0,
+  "discovery_ranges": [
+    [
+      30260,
+      30319
+    ],
+    [
+      30400,
+      30444
+    ]
+  ],
+  "event_label_rule": "D-alpha morphology triage only; trigger timing not used.",
+  "excluded_prior_shots": [
+    30276,
+    30277,
+    30311,
+    30418,
+    30419,
+    30421,
+    30423
+  ],
+  "false_trigger_delta_omv6_vs_baseline": 6,
+  "fresh_shot_count": 5,
+  "fresh_shots": [
+    30260,
+    30261,
+    30262,
+    30263,
+    30265
+  ],
+  "fresh_split_verdict": "fresh_split_does_not_support_omv6_candidate",
+  "generated_at": "2026-06-25T15:41:08.708143+00:00",
+  "label_counts": {
+    "ambiguous": 13,
+    "true_elm": 61
+  },
+  "lost_by_omv6_count": 2,
+  "min_automatic_events": 5,
+  "newly_detected_by_omv6_count": 2,
+  "omv10_prior_train_selected": {
+    "detected_event_count": 49,
+    "event_count": 61,
+    "f1": 0.6012269938650306,
+    "false_trigger_count": 53,
+    "latency_feasible_event_count": {
+      "12_ms": 8,
+      "3_ms": 45,
+      "5_ms": 44,
+      "8_ms": 27
+    },
+    "lead_ms": {
+      "maximum": 14.072000000000084,
+      "median": 8.388000000000062,
+      "minimum": 0.5139999999999589
+    },
+    "missed_event_count": 12,
+    "precision": 0.4803921568627451,
+    "recall": 0.8032786885245902
+  },
+  "omv10_prior_train_selected_config": {
+    "pol_cc_ch2": 6.0,
+    "pol_omv_rms": 10.0
+  },
+  "omv10_score": 0.6658711025393762,
+  "omv6_fixed_candidate": {
+    "detected_event_count": 50,
+    "event_count": 61,
+    "f1": 0.5882352941176472,
+    "false_trigger_count": 59,
+    "latency_feasible_event_count": {
+      "12_ms": 6,
+      "3_ms": 44,
+      "5_ms": 41,
+      "8_ms": 25
+    },
+    "lead_ms": {
+      "maximum": 13.894000000000073,
+      "median": 8.047000000000054,
+      "minimum": 0.5479999999999929
+    },
+    "missed_event_count": 11,
+    "precision": 0.45871559633027525,
+    "recall": 0.819672131147541
+  },
+  "omv6_fixed_candidate_config": {
+    "pol_cc_ch2": 6.0,
+    "pol_omv_rms": 6.0
+  },
+  "omv6_score": 0.5313167393593021,
+  "score_delta_omv6_vs_baseline": -0.17137703749888633,
+  "selected_candidates": [
+    {
+      "automatic_event_count": 15,
+      "eligible": true,
+      "shot": 30260,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "automatic_event_count": 23,
+      "eligible": true,
+      "shot": 30261,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "automatic_event_count": 9,
+      "eligible": true,
+      "shot": 30262,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "automatic_event_count": 15,
+      "eligible": true,
+      "shot": 30263,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    },
+    {
+      "automatic_event_count": 12,
+      "eligible": true,
+      "shot": 30265,
+      "window_s": [
+        0.3,
+        0.48
+      ]
+    }
+  ],
+  "status": "MAST_OMV_FRESH_SPLIT_COMPLETED",
+  "window_s": [
+    0.3,
+    0.48
+  ]
+}

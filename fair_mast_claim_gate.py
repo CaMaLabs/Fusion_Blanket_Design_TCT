@@ -22,6 +22,7 @@ REQUIRED = {
     "morphology_gate": REPO / "validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_summary.json",
     "other_trigger_screen": REPO / "validation_runs/fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_summary.json",
     "omv_followup": REPO / "validation_runs/fair_mast_omv_followup_default/fair_mast_omv_followup_summary.json",
+    "omv_fresh_split": REPO / "validation_runs/fair_mast_omv_fresh_split_default/fair_mast_omv_fresh_split_summary.json",
     "forward_surrogate": REPO / "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
     "forward_sensitivity": REPO / "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
 }
@@ -122,6 +123,16 @@ def gate_status(artifacts: dict[str, dict[str, Any] | None]) -> dict[str, Any]:
                 flags.append("OMV_FOLLOWUP_GAIN_WITH_FALSE_TRIGGER_COST")
         else:
             flags.append("OMV_FOLLOWUP_NO_ROBUST_GAIN")
+
+    omv_fresh_split = artifacts.get("omv_fresh_split") or {}
+    if omv_fresh_split.get("status") == "MAST_OMV_FRESH_SPLIT_COMPLETED":
+        verdict = str(omv_fresh_split.get("fresh_split_verdict", ""))
+        if verdict == "fresh_split_supports_omv6_candidate":
+            flags.append("OMV_FRESH_SPLIT_SUPPORTS_FIXED_CANDIDATE")
+        elif verdict == "fresh_split_mixed_gain_with_noise_cost":
+            flags.append("OMV_FRESH_SPLIT_MIXED_GAIN_WITH_NOISE_COST")
+        else:
+            flags.append("OMV_FRESH_SPLIT_DOES_NOT_SUPPORT_FIXED_CANDIDATE")
 
     sensitivity = artifacts.get("forward_sensitivity") or {}
     if sensitivity.get("falsifier_count") == 0:

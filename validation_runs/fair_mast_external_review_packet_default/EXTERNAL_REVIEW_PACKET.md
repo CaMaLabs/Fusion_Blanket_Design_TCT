@@ -37,6 +37,7 @@ Primary reproduction scripts:
 - [`fair_mast_sxr_morphology_gate.py`](../../fair_mast_sxr_morphology_gate.py)
 - [`fair_mast_other_trigger_screen.py`](../../fair_mast_other_trigger_screen.py)
 - [`fair_mast_omv_followup.py`](../../fair_mast_omv_followup.py)
+- [`fair_mast_omv_fresh_split.py`](../../fair_mast_omv_fresh_split.py)
 - [`fair_mast_tct_forward_surrogate.py`](../../fair_mast_tct_forward_surrogate.py)
 - [`fair_mast_tct_forward_sensitivity.py`](../../fair_mast_tct_forward_sensitivity.py)
 
@@ -192,6 +193,23 @@ OMV lower-threshold follow-up:
 - Interpretation: OMV `6.0` is a plausible follow-up candidate for a fresh
   pre-registered split, not a broadly validated trigger improvement.
 
+OMV fresh split:
+
+- Fixed candidate: Mirnov `6.0` plus OMV `6.0`, tested without retuning.
+- Fresh-shot rule: exclude all prior train/test/reviewed shots, then use the
+  first `5` unused shots with required D-alpha/Mirnov/OMV arrays and at least
+  `5` automatic D-alpha events in the fixed `0.30-0.48 s` window.
+- Selected fresh shots: `30260`, `30261`, `30262`, `30263`, `30265`.
+- Event labels: machine D-alpha morphology triage only; trigger timing is not
+  used for fresh labels.
+- Baseline Mirnov `6.0`: `50/61` accepted events detected, `53` false
+  triggers, precision `0.485`, median lead `8.517 ms`.
+- OMV `6.0`: `50/61` accepted events detected, `59` false triggers,
+  precision `0.459`, median lead `8.047 ms`.
+- Net result: no recall gain, `+6` false triggers, `-0.171` score delta.
+- Interpretation: the fresh split does not support OMV `6.0` as a replacement
+  trigger. The prior OMV lead should be treated as shot/window-specific.
+
 FAIR-MAST-seeded forward TCT surrogate:
 
 - Monte Carlo policies: no control, preventative bias only, fixed Mirnov fast
@@ -243,6 +261,7 @@ Forward-surrogate sensitivity / falsification sweep:
 - [SXR morphology gate report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 - [Other trigger screen report](../fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_report.md)
 - [OMV follow-up report](../fair_mast_omv_followup_default/fair_mast_omv_followup_report.md)
+- [OMV fresh split report](../fair_mast_omv_fresh_split_default/fair_mast_omv_fresh_split_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
@@ -289,7 +308,9 @@ Representative plots:
     artifact?
 16. Are the three OMV-only detections in shot `30276` physically plausible
     pre-event precursors, or are they shot-specific artifacts?
-17. What additional FAIR-MAST diagnostics should be included before promoting
+17. Does the fresh-split OMV negative result close the lower-threshold OMV
+    branch, or should a morphology/classifier version be tested separately?
+18. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -312,6 +333,9 @@ Supported:
 - OMV `6.0` follow-up shows an aggregate exploratory gain (`42/59` vs
   `39/59`) but that gain is localized to shot `30276`, with one extra false
   trigger in shot `30421`.
+- Fresh-split OMV `6.0` does not generalize as a replacement trigger: it
+  matches baseline recall (`50/61`) while increasing false triggers (`59` vs
+  `53`).
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
@@ -335,6 +359,7 @@ Not supported:
   held-out Mirnov baseline.
 - A broadly distributed lower-threshold OMV improvement across multiple
   held-out shots.
+- A fresh-split lower-threshold OMV trigger improvement.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
 - Robustness outside the stated sensitivity grid.
