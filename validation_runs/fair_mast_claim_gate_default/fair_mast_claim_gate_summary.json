@@ -1,0 +1,36 @@
+{
+  "artifact_paths": {
+    "actuator_budget": "validation_runs/fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_summary.json",
+    "forward_sensitivity": "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
+    "forward_surrogate": "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
+    "machine_labels": "validation_runs/fair_mast_machine_reviewed_labels_default/fair_mast_machine_reviewed_label_summary.json",
+    "morphology_gate": "validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_summary.json",
+    "strict_nulls": "validation_runs/fair_mast_precursor_strict_null_suite_default/fair_mast_precursor_strict_null_suite_summary.json",
+    "sxr_tradeoff": "validation_runs/fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_summary.json"
+  },
+  "blockers": [
+    "sxr_morphology_gate_blocked"
+  ],
+  "claim_not_supported": [
+    "causal TCT actuator suppression",
+    "sustained fusion",
+    "reactor burn physics",
+    "expert-reviewed final ELM labels",
+    "measured TCT actuator transfer function"
+  ],
+  "claim_supported": "FAIR-MAST reduced-order timing/control-policy prerequisite",
+  "flags": [
+    "FAST_BIASED_RESPONSE_BUDGET_COMPATIBLE",
+    "FORWARD_PROXY_NO_SWEPT_FALSIFIERS",
+    "HELD_OUT_EVENT_LABELS_PRESENT",
+    "MISSING_EXPERT_LABELS",
+    "MISSING_MEASURED_TCT_ACTUATOR",
+    "MISSING_MORPHOLOGY_GATE_RUN",
+    "MISSING_REACTOR_PHYSICS_VALIDATION",
+    "NOT_CAUSAL_VALIDATION",
+    "STRICT_NULLS_COMPLETED",
+    "SUPPORTED_PROXY_ONLY"
+  ],
+  "generated_at": "2026-06-25T02:40:17.995620+00:00",
+  "status": "SUPPORTED_PROXY_WITH_BLOCKERS"
+}

@@ -74,6 +74,13 @@ For a narrowly scoped DIII-D diagnostic collaboration request, review:
 - [`validation_runs/diiid_diagnostic_reconstruction_default/diiid_diagnostic_reconstruction_report.md`](validation_runs/diiid_diagnostic_reconstruction_default/diiid_diagnostic_reconstruction_report.md)
 - [`validation_runs/diiid_diagnostic_reconstruction_default/diagnostic_replacement_contract.json`](validation_runs/diiid_diagnostic_reconstruction_default/diagnostic_replacement_contract.json)
 
+For the current FAIR-MAST/TCT validation state, review:
+
+- [`FAIR_MAST_TCT_VALIDATION_SUMMARY.md`](FAIR_MAST_TCT_VALIDATION_SUMMARY.md)
+- [`fair_mast_claim_gate.py`](fair_mast_claim_gate.py)
+- [`validation_runs/fair_mast_claim_gate_default/fair_mast_claim_gate_report.md`](validation_runs/fair_mast_claim_gate_default/fair_mast_claim_gate_report.md)
+- [`validation_runs/fair_mast_external_review_packet_default/EXTERNAL_REVIEW_PACKET.md`](validation_runs/fair_mast_external_review_packet_default/EXTERNAL_REVIEW_PACKET.md)
+
 For the first open experimental precursor / latency screen, review:
 
 - [`fair_mast_elm_precursor_validation.py`](fair_mast_elm_precursor_validation.py)
