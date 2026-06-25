@@ -26,6 +26,7 @@ duty-cycle behavior.
 | Raw SXR recognition ceiling | up to `58/59` detected, but `54` false triggers and shorter lead |
 | SXR morphology gate | completed; selected gate detects `57/59` but with `89` false triggers, so not operationally better |
 | Other-trigger screen | OMV/BES/density/bolometer/controller/gas/coil/radiation screen completed; train-selected OMV augmentation was held-out neutral (`39/59`, `8` false triggers), while exploratory held-out ranking found only a marginal OMV lead (`42/59`, `9` false triggers) |
+| OMV follow-up | OMV `6 sigma` adds `3` detections and `1` false trigger, loses no baseline detections, and is positive in `4/5` leave-one-shot-out folds; the recall gain is localized to shot `30276`, so this remains exploratory |
 | Strict nulls | block-shift and event-jitter nulls remain significant |
 | Fast response budget | prebiased fast current-sheet budget reaches `38/59` accepted events |
 | Forward surrogate | Mirnov+toroidal fast boost gives `51.5%` proxy loss reduction vs no control |
@@ -55,6 +56,8 @@ duty-cycle behavior.
 - No train-selected non-SXR public diagnostic trigger that improves the
   held-out Mirnov baseline; the best exploratory OMV result needs a fresh
   pre-registered validation split.
+- No evidence yet that lower-threshold OMV improves recall broadly across
+  shots; the current gain comes from one held-out shot.
 - No DIII-D/NSTX/ITER EFIT/MHD experimental validation of TCT.
 - No reactor burn, transport, neutronics, material-survival, or TBR validation
   from the FAIR-MAST pipeline.
@@ -74,6 +77,7 @@ Primary recent reports:
 - [Forward sensitivity sweep](validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 - [SXR morphology gate](validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 - [Other trigger screen](validation_runs/fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_report.md)
+- [OMV follow-up](validation_runs/fair_mast_omv_followup_default/fair_mast_omv_followup_report.md)
 
 ## Public Wording
 

@@ -24,6 +24,10 @@
       improve on held-out labels under train-only selection.
 - [ ] Lower-threshold OMV is treated as a follow-up candidate, not a validated
       replacement trigger.
+- [ ] The three OMV-only shot `30276` detections are reviewed for physical
+      pre-event timing rather than counted as broad cross-shot improvement.
+- [ ] The extra OMV6 false trigger in shot `30421` is considered when deciding
+      whether the recall gain is worth the noise cost.
 
 ## Null Test
 

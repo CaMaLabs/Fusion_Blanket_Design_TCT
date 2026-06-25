@@ -36,6 +36,7 @@ Primary reproduction scripts:
 - [`fair_mast_sxr_precursor_tradeoff.py`](../../fair_mast_sxr_precursor_tradeoff.py)
 - [`fair_mast_sxr_morphology_gate.py`](../../fair_mast_sxr_morphology_gate.py)
 - [`fair_mast_other_trigger_screen.py`](../../fair_mast_other_trigger_screen.py)
+- [`fair_mast_omv_followup.py`](../../fair_mast_omv_followup.py)
 - [`fair_mast_tct_forward_surrogate.py`](../../fair_mast_tct_forward_surrogate.py)
 - [`fair_mast_tct_forward_sensitivity.py`](../../fair_mast_tct_forward_sensitivity.py)
 
@@ -173,6 +174,24 @@ Other public diagnostic trigger screen:
   found. The lower-threshold OMV result is a lead for a future pre-registered
   split, not a validation-selected replacement trigger.
 
+OMV lower-threshold follow-up:
+
+- Candidate: fixed Mirnov plus OMV RMS at `6.0` sigma, compared with fixed
+  Mirnov `6.0` and the train-selected OMV `10.0` reference.
+- Aggregate held-out result: OMV `6.0` reaches `42/59` detected with `9`
+  false triggers, precision `0.824`, and median lead `8.413 ms`.
+- Baseline: fixed Mirnov `6.0` reaches `39/59` detected with `8` false
+  triggers, precision `0.830`, and median lead `8.384 ms`.
+- Attribution: OMV `6.0` adds `3` detections, loses no baseline detections,
+  and adds `1` false trigger.
+- Per-shot localization: all `3` added detections occur in shot `30276`; the
+  extra false trigger occurs in shot `30421`.
+- Leave-one-shot-out: OMV `6.0` has positive detected/score delta in `4/5`
+  omitted-shot folds, but the fold omitting `30276` has no recall gain and a
+  negative score delta.
+- Interpretation: OMV `6.0` is a plausible follow-up candidate for a fresh
+  pre-registered split, not a broadly validated trigger improvement.
+
 FAIR-MAST-seeded forward TCT surrogate:
 
 - Monte Carlo policies: no control, preventative bias only, fixed Mirnov fast
@@ -223,6 +242,7 @@ Forward-surrogate sensitivity / falsification sweep:
 - [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
 - [SXR morphology gate report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
 - [Other trigger screen report](../fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_report.md)
+- [OMV follow-up report](../fair_mast_omv_followup_default/fair_mast_omv_followup_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
@@ -267,7 +287,9 @@ Representative plots:
 15. Does the exploratory lower-threshold OMV result justify a fresh
     pre-registered validation split, or is it likely another shot/window
     artifact?
-16. What additional FAIR-MAST diagnostics should be included before promoting
+16. Are the three OMV-only detections in shot `30276` physically plausible
+    pre-event precursors, or are they shot-specific artifacts?
+17. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -287,6 +309,9 @@ Supported:
 - The broad non-SXR trigger screen found no train-selected held-out
   improvement over the fixed Mirnov baseline; lower-threshold OMV is only an
   exploratory follow-up candidate.
+- OMV `6.0` follow-up shows an aggregate exploratory gain (`42/59` vs
+  `39/59`) but that gain is localized to shot `30276`, with one extra false
+  trigger in shot `30421`.
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
@@ -308,6 +333,8 @@ Not supported:
   replace Mirnov+toroidal fusion.
 - A train-selected public non-SXR trigger that substantially improves the
   held-out Mirnov baseline.
+- A broadly distributed lower-threshold OMV improvement across multiple
+  held-out shots.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
 - Robustness outside the stated sensitivity grid.

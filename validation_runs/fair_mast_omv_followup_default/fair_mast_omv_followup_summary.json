@@ -1,0 +1,86 @@
+{
+  "baseline": {
+    "detected_event_count": 39,
+    "event_count": 59,
+    "f1": 0.7358490566037736,
+    "false_trigger_count": 8,
+    "latency_feasible_event_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.96000000000003,
+      "median": 8.384000000000002,
+      "minimum": 2.5519999999999987
+    },
+    "missed_event_count": 20,
+    "precision": 0.8297872340425532,
+    "recall": 0.6610169491525424
+  },
+  "baseline_config": {
+    "pol_cc_ch2": 6.0
+  },
+  "baseline_score": 1.7858636855391274,
+  "claim_boundary": "Exploratory OMV follow-up only; not independent validation or causal TCT validation.",
+  "detected_delta_omv6_vs_baseline": 3,
+  "false_trigger_delta_omv6_vs_baseline": 1,
+  "generated_at": "2026-06-25T14:47:44.999413+00:00",
+  "jackknife_fold_count": 5,
+  "lost_by_omv6_count": 0,
+  "newly_detected_by_omv6_count": 3,
+  "omv10_score": 1.7858636855391274,
+  "omv10_train_selected": {
+    "detected_event_count": 39,
+    "event_count": 59,
+    "f1": 0.7358490566037736,
+    "false_trigger_count": 8,
+    "latency_feasible_event_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.96000000000003,
+      "median": 8.384000000000002,
+      "minimum": 2.5519999999999987
+    },
+    "missed_event_count": 20,
+    "precision": 0.8297872340425532,
+    "recall": 0.6610169491525424
+  },
+  "omv10_train_selected_config": {
+    "pol_cc_ch2": 6.0,
+    "pol_omv_rms": 10.0
+  },
+  "omv6_exploratory": {
+    "detected_event_count": 42,
+    "event_count": 59,
+    "f1": 0.7636363636363636,
+    "false_trigger_count": 9,
+    "latency_feasible_event_count": {
+      "12_ms": 8,
+      "3_ms": 39,
+      "5_ms": 33,
+      "8_ms": 26
+    },
+    "lead_ms": {
+      "maximum": 14.96000000000003,
+      "median": 8.413000000000004,
+      "minimum": 0.5340000000000344
+    },
+    "missed_event_count": 17,
+    "precision": 0.8235294117647058,
+    "recall": 0.711864406779661
+  },
+  "omv6_exploratory_config": {
+    "pol_cc_ch2": 6.0,
+    "pol_omv_rms": 6.0
+  },
+  "omv6_score": 1.8575523429710867,
+  "positive_jackknife_folds": 4,
+  "robustness_verdict": "mostly_stable_exploratory_gain",
+  "status": "MAST_OMV_FOLLOWUP_COMPLETED"
+}

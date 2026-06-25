@@ -21,6 +21,7 @@ REQUIRED = {
     "sxr_tradeoff": REPO / "validation_runs/fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_summary.json",
     "morphology_gate": REPO / "validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_summary.json",
     "other_trigger_screen": REPO / "validation_runs/fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_summary.json",
+    "omv_followup": REPO / "validation_runs/fair_mast_omv_followup_default/fair_mast_omv_followup_summary.json",
     "forward_surrogate": REPO / "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
     "forward_sensitivity": REPO / "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
 }
@@ -108,6 +109,19 @@ def gate_status(artifacts: dict[str, dict[str, Any] | None]) -> dict[str, Any]:
             flags.append("OTHER_TRIGGER_SCREEN_EXPLORATORY_OMV_LEAD_ONLY")
         else:
             flags.append("OTHER_TRIGGER_SCREEN_COMPLETED_NO_OPERATIONAL_IMPROVEMENT")
+
+    omv_followup = artifacts.get("omv_followup") or {}
+    if omv_followup.get("status") == "MAST_OMV_FOLLOWUP_COMPLETED":
+        verdict = omv_followup.get("robustness_verdict")
+        detected_delta = int(omv_followup.get("detected_delta_omv6_vs_baseline", 0) or 0)
+        false_delta = int(omv_followup.get("false_trigger_delta_omv6_vs_baseline", 0) or 0)
+        if verdict in {"broad_exploratory_gain", "mostly_stable_exploratory_gain"} and detected_delta > 0:
+            if false_delta <= 1:
+                flags.append("OMV_FOLLOWUP_SHOT_LOCALIZED_EXPLORATORY_LEAD")
+            else:
+                flags.append("OMV_FOLLOWUP_GAIN_WITH_FALSE_TRIGGER_COST")
+        else:
+            flags.append("OMV_FOLLOWUP_NO_ROBUST_GAIN")
 
     sensitivity = artifacts.get("forward_sensitivity") or {}
     if sensitivity.get("falsifier_count") == 0:
