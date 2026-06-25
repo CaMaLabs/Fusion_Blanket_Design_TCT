@@ -30,6 +30,8 @@
       whether the recall gain is worth the noise cost.
 - [ ] The fresh-split OMV6 result is treated as negative for fixed-threshold
       OMV replacement because recall is unchanged and false triggers increase.
+- [ ] Later unused-shot trigger searches are treated as recall/noise tradeoffs,
+      not clean operational trigger improvements.
 
 ## Null Test
 

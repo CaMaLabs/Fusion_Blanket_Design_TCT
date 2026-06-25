@@ -1,0 +1,124 @@
+{
+  "best_exploratory_test": {
+    "detected_event_count": 25,
+    "event_count": 59,
+    "f1": 0.5681818181818181,
+    "false_trigger_count": 4,
+    "latency_feasible_event_count": {
+      "12_ms": 1,
+      "3_ms": 19,
+      "5_ms": 16,
+      "8_ms": 9
+    },
+    "lead_ms": {
+      "maximum": 13.319999999999999,
+      "median": 7.379999999999997,
+      "minimum": 0.5399999999999849
+    },
+    "missed_event_count": 34,
+    "precision": 0.8620689655172413,
+    "recall": 0.423728813559322
+  },
+  "best_exploratory_test_config": {
+    "dalpha_ch0_abs_slope": 4.0
+  },
+  "best_exploratory_test_score": 1.5695265926358855,
+  "candidate_count": 40,
+  "candidate_skip_count": 20,
+  "claim_boundary": "Fresh unused-shot trigger search only; not expert-reviewed or causal validation.",
+  "config_count": 231,
+  "excluded_prior_shots": [
+    30276,
+    30277,
+    30311,
+    30418,
+    30419,
+    30421,
+    30423
+  ],
+  "feature_names": [
+    "dalpha_ch0_abs_slope",
+    "density_gradient_abs_slope",
+    "pol_cc_all",
+    "pol_cc_ch2",
+    "pol_omv_rms",
+    "saddle_tor_rms",
+    "summary_radiated_abs_slope",
+    "tor_cc_all",
+    "tor_omaha_rms"
+  ],
+  "generated_at": "2026-06-25T17:51:07.059110+00:00",
+  "search_verdict": "train_selected_trigger_improves_fresh_test_score",
+  "selected_config": {
+    "pol_cc_all": 5.0
+  },
+  "selected_train_score": 1.6321780436312456,
+  "skipped_candidate_count": 0,
+  "status": "MAST_FRESH_TRIGGER_SEARCH_COMPLETED",
+  "test_baseline": {
+    "detected_event_count": 35,
+    "event_count": 59,
+    "f1": 0.564516129032258,
+    "false_trigger_count": 30,
+    "latency_feasible_event_count": {
+      "12_ms": 0,
+      "3_ms": 26,
+      "5_ms": 22,
+      "8_ms": 12
+    },
+    "lead_ms": {
+      "maximum": 11.929999999999996,
+      "median": 6.36800000000004,
+      "minimum": 0.5000000000001115
+    },
+    "missed_event_count": 24,
+    "precision": 0.5384615384615384,
+    "recall": 0.5932203389830508
+  },
+  "test_baseline_score": 0.6749022164276399,
+  "test_selected": {
+    "detected_event_count": 43,
+    "event_count": 59,
+    "f1": 0.618705035971223,
+    "false_trigger_count": 37,
+    "latency_feasible_event_count": {
+      "12_ms": 1,
+      "3_ms": 31,
+      "5_ms": 23,
+      "8_ms": 12
+    },
+    "lead_ms": {
+      "maximum": 13.31600000000005,
+      "median": 5.160000000000053,
+      "minimum": 0.5020000000000024
+    },
+    "missed_event_count": 16,
+    "precision": 0.5375,
+    "recall": 0.7288135593220338
+  },
+  "test_selected_detected_delta_vs_baseline": 8,
+  "test_selected_false_trigger_delta_vs_baseline": 7,
+  "test_selected_score": 0.7001271186440674,
+  "test_selected_score_delta_vs_baseline": 0.02522490221642748,
+  "test_shots": [
+    30404,
+    30407,
+    30412,
+    30417,
+    30422,
+    30424
+  ],
+  "train_shots": [
+    30299,
+    30304,
+    30305,
+    30306,
+    30310,
+    30316,
+    30400
+  ],
+  "window_s": [
+    0.3,
+    0.48
+  ]
+}

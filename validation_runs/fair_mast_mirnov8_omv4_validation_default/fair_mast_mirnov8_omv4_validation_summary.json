@@ -1,0 +1,73 @@
+{
+  "baseline": {
+    "detected_event_count": 43,
+    "event_count": 78,
+    "f1": 0.581081081081081,
+    "false_trigger_count": 27,
+    "latency_feasible_event_count": {
+      "12_ms": 10,
+      "3_ms": 33,
+      "5_ms": 28,
+      "8_ms": 19
+    },
+    "lead_ms": {
+      "maximum": 14.426000000000105,
+      "median": 6.384,
+      "minimum": 0.8060000000000844
+    },
+    "missed_event_count": 35,
+    "precision": 0.6142857142857143,
+    "recall": 0.5512820512820513
+  },
+  "baseline_config": {
+    "pol_cc_ch2": 6.0
+  },
+  "baseline_score": 0.7718498168498169,
+  "candidate": {
+    "detected_event_count": 53,
+    "event_count": 78,
+    "f1": 0.5792349726775956,
+    "false_trigger_count": 52,
+    "latency_feasible_event_count": {
+      "12_ms": 10,
+      "3_ms": 34,
+      "5_ms": 28,
+      "8_ms": 20
+    },
+    "lead_ms": {
+      "maximum": 14.408000000000031,
+      "median": 5.1960000000000335,
+      "minimum": 0.5100000000000104
+    },
+    "missed_event_count": 25,
+    "precision": 0.5047619047619047,
+    "recall": 0.6794871794871795
+  },
+  "candidate_config": {
+    "pol_cc_ch2": 8.0,
+    "pol_omv_rms": 4.0
+  },
+  "candidate_score": 0.04373626373626349,
+  "claim_boundary": "Fresh unused-shot fixed-candidate validation only; not expert-reviewed or causal validation.",
+  "detected_delta_vs_baseline": 10,
+  "discovery_skip_count": 20,
+  "false_trigger_delta_vs_baseline": 25,
+  "generated_at": "2026-06-25T17:07:40.913607+00:00",
+  "score_delta_vs_baseline": -0.7281135531135534,
+  "skipped_candidate_count": 0,
+  "status": "MAST_MIRNOV8_OMV4_VALIDATION_COMPLETED",
+  "validation_shot_count": 10,
+  "validation_shots": [
+    30299,
+    30304,
+    30305,
+    30306,
+    30310,
+    30316,
+    30400,
+    30404,
+    30407,
+    30412
+  ],
+  "validation_verdict": "mixed_candidate_gain_with_noise_cost"
+}

@@ -3,11 +3,14 @@
     "actuator_budget": "validation_runs/fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_summary.json",
     "forward_sensitivity": "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
     "forward_surrogate": "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
+    "fresh_trigger_search": "validation_runs/fair_mast_fresh_trigger_search_default/fair_mast_fresh_trigger_search_summary.json",
     "machine_labels": "validation_runs/fair_mast_machine_reviewed_labels_default/fair_mast_machine_reviewed_label_summary.json",
+    "mirnov8_omv4_validation": "validation_runs/fair_mast_mirnov8_omv4_validation_default/fair_mast_mirnov8_omv4_validation_summary.json",
     "morphology_gate": "validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_summary.json",
     "omv_followup": "validation_runs/fair_mast_omv_followup_default/fair_mast_omv_followup_summary.json",
     "omv_fresh_split": "validation_runs/fair_mast_omv_fresh_split_default/fair_mast_omv_fresh_split_summary.json",
     "other_trigger_screen": "validation_runs/fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_summary.json",
+    "rolling_fresh_trigger_search": "validation_runs/fair_mast_fresh_trigger_search_skip20_small_default/fair_mast_fresh_trigger_search_summary.json",
     "strict_nulls": "validation_runs/fair_mast_precursor_strict_null_suite_default/fair_mast_precursor_strict_null_suite_summary.json",
     "sxr_tradeoff": "validation_runs/fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_summary.json"
   },
@@ -23,7 +26,9 @@
   "flags": [
     "FAST_BIASED_RESPONSE_BUDGET_COMPATIBLE",
     "FORWARD_PROXY_NO_SWEPT_FALSIFIERS",
+    "FRESH_TRIGGER_SEARCH_NO_TRAIN_SELECTED_IMPROVEMENT",
     "HELD_OUT_EVENT_LABELS_PRESENT",
+    "MIRNOV8_OMV4_RECALL_GAIN_WITH_FALSE_TRIGGER_COST",
     "MISSING_EXPERT_LABELS",
     "MISSING_MEASURED_TCT_ACTUATOR",
     "MISSING_REACTOR_PHYSICS_VALIDATION",
@@ -31,10 +36,11 @@
     "OMV_FOLLOWUP_SHOT_LOCALIZED_EXPLORATORY_LEAD",
     "OMV_FRESH_SPLIT_DOES_NOT_SUPPORT_FIXED_CANDIDATE",
     "OTHER_TRIGGER_SCREEN_EXPLORATORY_OMV_LEAD_ONLY",
+    "ROLLING_FRESH_SEARCH_MARGINAL_RECALL_NOISE_TRADEOFF",
     "STRICT_NULLS_COMPLETED",
     "SUPPORTED_PROXY_ONLY",
     "SXR_MORPHOLOGY_GATE_COMPLETED_NO_OPERATIONAL_IMPROVEMENT"
   ],
-  "generated_at": "2026-06-25T15:43:58.385924+00:00",
+  "generated_at": "2026-06-25T17:54:44.429068+00:00",
   "status": "SUPPORTED_PROXY_ONLY"
 }

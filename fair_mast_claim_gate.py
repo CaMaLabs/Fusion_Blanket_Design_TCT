@@ -23,6 +23,9 @@ REQUIRED = {
     "other_trigger_screen": REPO / "validation_runs/fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_summary.json",
     "omv_followup": REPO / "validation_runs/fair_mast_omv_followup_default/fair_mast_omv_followup_summary.json",
     "omv_fresh_split": REPO / "validation_runs/fair_mast_omv_fresh_split_default/fair_mast_omv_fresh_split_summary.json",
+    "fresh_trigger_search": REPO / "validation_runs/fair_mast_fresh_trigger_search_default/fair_mast_fresh_trigger_search_summary.json",
+    "mirnov8_omv4_validation": REPO / "validation_runs/fair_mast_mirnov8_omv4_validation_default/fair_mast_mirnov8_omv4_validation_summary.json",
+    "rolling_fresh_trigger_search": REPO / "validation_runs/fair_mast_fresh_trigger_search_skip20_small_default/fair_mast_fresh_trigger_search_summary.json",
     "forward_surrogate": REPO / "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
     "forward_sensitivity": REPO / "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
 }
@@ -133,6 +136,36 @@ def gate_status(artifacts: dict[str, dict[str, Any] | None]) -> dict[str, Any]:
             flags.append("OMV_FRESH_SPLIT_MIXED_GAIN_WITH_NOISE_COST")
         else:
             flags.append("OMV_FRESH_SPLIT_DOES_NOT_SUPPORT_FIXED_CANDIDATE")
+
+    fresh_search = artifacts.get("fresh_trigger_search") or {}
+    if fresh_search.get("status") == "MAST_FRESH_TRIGGER_SEARCH_COMPLETED":
+        verdict = str(fresh_search.get("search_verdict", ""))
+        if verdict == "train_selected_trigger_improves_fresh_test_score":
+            flags.append("FRESH_TRIGGER_SEARCH_TRAIN_SELECTED_IMPROVES")
+        else:
+            flags.append("FRESH_TRIGGER_SEARCH_NO_TRAIN_SELECTED_IMPROVEMENT")
+
+    mirnov8_omv4 = artifacts.get("mirnov8_omv4_validation") or {}
+    if mirnov8_omv4.get("status") == "MAST_MIRNOV8_OMV4_VALIDATION_COMPLETED":
+        verdict = str(mirnov8_omv4.get("validation_verdict", ""))
+        if verdict == "validated_candidate_improves_score":
+            flags.append("MIRNOV8_OMV4_VALIDATES")
+        elif verdict == "mixed_candidate_gain_with_noise_cost":
+            flags.append("MIRNOV8_OMV4_RECALL_GAIN_WITH_FALSE_TRIGGER_COST")
+        else:
+            flags.append("MIRNOV8_OMV4_DOES_NOT_GENERALIZE")
+
+    rolling_search = artifacts.get("rolling_fresh_trigger_search") or {}
+    if rolling_search.get("status") == "MAST_FRESH_TRIGGER_SEARCH_COMPLETED":
+        score_delta = float(rolling_search.get("test_selected_score_delta_vs_baseline", 0.0) or 0.0)
+        false_delta = int(rolling_search.get("test_selected_false_trigger_delta_vs_baseline", 0) or 0)
+        detected_delta = int(rolling_search.get("test_selected_detected_delta_vs_baseline", 0) or 0)
+        if score_delta > 0.1 and false_delta <= 0:
+            flags.append("ROLLING_FRESH_SEARCH_CLEAN_IMPROVEMENT")
+        elif score_delta > 0.0 and detected_delta > 0:
+            flags.append("ROLLING_FRESH_SEARCH_MARGINAL_RECALL_NOISE_TRADEOFF")
+        else:
+            flags.append("ROLLING_FRESH_SEARCH_NO_IMPROVEMENT")
 
     sensitivity = artifacts.get("forward_sensitivity") or {}
     if sensitivity.get("falsifier_count") == 0:

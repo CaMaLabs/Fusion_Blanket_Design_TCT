@@ -210,6 +210,24 @@ OMV fresh split:
 - Interpretation: the fresh split does not support OMV `6.0` as a replacement
   trigger. The prior OMV lead should be treated as shot/window-specific.
 
+Fresh unused-shot trigger searches:
+
+- First fresh search: train on unused shots `30260-30272` subset and test on
+  unused shots `30275-30298` subset. Train-selected `tor_cc_all=10` failed on
+  fresh test, detecting `57/102` vs baseline `73/102` with more false triggers.
+- Exploratory lead from that test block: `pol_cc_ch2=8 + pol_omv_rms=4`
+  detected `75/102` vs baseline `73/102` and reduced false triggers from `9`
+  to `8`, but this was test-ranked and required separate validation.
+- Fixed validation of `pol_cc_ch2=8 + pol_omv_rms=4` on later unused shots
+  `30299`, `30304`, `30305`, `30306`, `30310`, `30316`, `30400`, `30404`,
+  `30407`, `30412`: detected `53/78` vs baseline `43/78`, but false triggers
+  increased from `27` to `52`, so the score worsened.
+- Rolling smaller search on later unused shots selected `pol_cc_all=5`, which
+  detected `43/59` vs baseline `35/59` but increased false triggers from `30`
+  to `37`; the score improvement was marginal (`+0.025`).
+- Interpretation: continued searching found recall/noise tradeoffs, not a clean
+  better operational trigger.
+
 FAIR-MAST-seeded forward TCT surrogate:
 
 - Monte Carlo policies: no control, preventative bias only, fixed Mirnov fast
@@ -262,6 +280,9 @@ Forward-surrogate sensitivity / falsification sweep:
 - [Other trigger screen report](../fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_report.md)
 - [OMV follow-up report](../fair_mast_omv_followup_default/fair_mast_omv_followup_report.md)
 - [OMV fresh split report](../fair_mast_omv_fresh_split_default/fair_mast_omv_fresh_split_report.md)
+- [Fresh trigger search report](../fair_mast_fresh_trigger_search_default/fair_mast_fresh_trigger_search_report.md)
+- [Mirnov8+OMV4 validation report](../fair_mast_mirnov8_omv4_validation_default/fair_mast_mirnov8_omv4_validation_report.md)
+- [Rolling fresh trigger search report](../fair_mast_fresh_trigger_search_skip20_small_default/fair_mast_fresh_trigger_search_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
@@ -310,7 +331,10 @@ Representative plots:
     pre-event precursors, or are they shot-specific artifacts?
 17. Does the fresh-split OMV negative result close the lower-threshold OMV
     branch, or should a morphology/classifier version be tested separately?
-18. What additional FAIR-MAST diagnostics should be included before promoting
+18. Are the later fresh-search recall/noise tradeoffs worth operational
+    consideration, or should fixed-threshold public diagnostics be treated as
+    exhausted?
+19. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -336,6 +360,8 @@ Supported:
 - Fresh-split OMV `6.0` does not generalize as a replacement trigger: it
   matches baseline recall (`50/61`) while increasing false triggers (`59` vs
   `53`).
+- Later unused-shot trigger searches found recall/noise tradeoffs but no clean
+  fixed-threshold replacement trigger.
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
@@ -360,6 +386,7 @@ Not supported:
 - A broadly distributed lower-threshold OMV improvement across multiple
   held-out shots.
 - A fresh-split lower-threshold OMV trigger improvement.
+- A clean later fresh-search trigger improvement without false-trigger cost.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
 - Robustness outside the stated sensitivity grid.
