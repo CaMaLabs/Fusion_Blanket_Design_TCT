@@ -4,6 +4,18 @@ This repository is Chase Lunsford's public research workspace for fusion blanket
 
 The project combines a plasma/plant optimizer, blanket design search, TCT/plasmoid-control proxies, wall-event modeling, lithium-wall thermal handling, and OpenMC-style finalist validation workflows.
 
+## Current best configuration
+
+For the current mainline candidate and best-supported screening/validation basin, start here:
+
+- [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md)
+
+Current short form:
+
+> DT tokamak screening configuration with liquid-lithium-facing wall, lithium-current coupling retained as a hypothesis, `be_outer_kill` / `be_outer_killer` Be/Li2O/W-Ti-B4C/Be blanket basin, and Mirnov/toroidal-triggered standing-bias plus fast bounded-boost TCT proxy control.
+
+This is not a demonstrated reactor design. It is the current best configuration for deeper validation and review.
+
 ## Citation / attribution
 
 If this repository, its concepts, simulation structure, candidate geometries, validation workflow, or documentation influence downstream work, please cite or link back to this repository and credit:
@@ -94,19 +106,21 @@ For the first open experimental precursor / latency screen, review:
 If you have 5 minutes:
 
 1. Read this README.
-2. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
-3. Read [`docs/assumptions.md`](docs/assumptions.md).
-4. Read [`docs/falsification_tests.md`](docs/falsification_tests.md).
+2. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
+3. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
+4. Read [`docs/assumptions.md`](docs/assumptions.md).
+5. Read [`docs/falsification_tests.md`](docs/falsification_tests.md).
 
 If you have 30 minutes:
 
-1. Review [`ROADMAP.md`](ROADMAP.md).
-2. Review [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
-3. Review [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) before interpreting historical logs or generated outputs.
-4. Review the proposed wall / blanket stack assumptions.
-5. Review the magnetic / electrostatic channeling assumptions.
-6. Inspect optimizer and candidate-generation scripts.
-7. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+1. Review [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
+2. Review [`ROADMAP.md`](ROADMAP.md).
+3. Review [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+4. Review [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) before interpreting historical logs or generated outputs.
+5. Review the proposed wall / blanket stack assumptions.
+6. Review the magnetic / electrostatic channeling assumptions.
+7. Inspect optimizer and candidate-generation scripts.
+8. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
 
 ## Research purpose
 
@@ -159,12 +173,13 @@ python run_reactor_optimizer.py
 ## Suggested reading order
 
 1. Start with this README.
-2. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
-3. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
-4. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
-5. Review [`PROVENANCE.md`](PROVENANCE.md), [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md), and [`CITATION.cff`](CITATION.cff).
-6. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-7. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
-8. Inspect optimizer and candidate-generation scripts.
-9. Review committed result files and finalist candidates.
-10. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+2. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
+3. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
+4. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+5. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
+6. Review [`PROVENANCE.md`](PROVENANCE.md), [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md), and [`CITATION.cff`](CITATION.cff).
+7. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
+8. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+9. Inspect optimizer and candidate-generation scripts.
+10. Review committed result files and finalist candidates.
+11. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
