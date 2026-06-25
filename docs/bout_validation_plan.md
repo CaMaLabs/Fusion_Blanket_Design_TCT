@@ -864,3 +864,37 @@ Current result:
 The reconstructed traces are not measurements and do not show that an event or
 precursor occurred. Their purpose is to make the experimental question narrow,
 reviewable, and directly replaceable with authorized raw diagnostics.
+
+## Closed-loop trigger validation result
+
+The closed-loop reduced-MHD trigger bridge now uses the existing resolved
+BOUT++ current-sheet actuator framework with diagnostic trigger policies:
+
+```bash
+source /root/Documents/Codex/2026-05-26/can-you-make-a-list-of/bout-env.sh
+cd /root/Fusion_Blanket_Design_TCT
+python3 closed_loop_tct_trigger_validation.py \
+  --skip-build \
+  --run-dir validation_runs/closed_loop_tct_trigger_default \
+  --nout 18
+```
+
+Current result: `PASS_WITH_REDUCED_MODEL_BOUNDARIES`.
+
+- Nominal J-threshold closed-loop control fired before the uncontrolled
+  current-sheet peak on both base and fine grids.
+- Base-grid nominal post-initial peak `|J|` reduction was `14.16%`; fine-grid
+  direction matched with `14.05%` peak reduction.
+- Base-grid nominal time-integrated max `|J|` reduction was `65.33%`; fine-grid
+  direction matched with `65.08%` integrated reduction.
+- The +20% strength case produced the strongest integrated-current reduction in
+  this pass, but it remains a reduced actuator-strength sensitivity case.
+- A delayed falsification case preserved the known timing boundary: integrated
+  max `|J|` still fell, while peak-current reduction was `0.0%`.
+- The run writes an M3D-C1-compatible diagnostic contract at
+  `validation_runs/closed_loop_tct_trigger_default/m3dc1_diagnostic_contract.json`.
+
+Interpretation: this is closed-loop reduced-MHD trigger validation and
+M3D-C1-compatible diagnostic-contract evidence. It is not full tokamak-grade
+validation, not a real M3D-C1 reactor output, not experimental diagnostic
+agreement, and not proof of a physical liquid-lithium TCT actuator.

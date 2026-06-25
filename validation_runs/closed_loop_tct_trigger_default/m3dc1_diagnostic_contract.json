@@ -1,0 +1,53 @@
+{
+  "artifact_label": "M3D-C1-compatible diagnostic/control contract for closed-loop reduced-MHD TCT trigger validation",
+  "artifact_type": "diagnostic_control_contract",
+  "backend_compatibility": {
+    "existing_proxy_schema": "May consume the existing helical proxy C1.h5 field names when present.",
+    "m3dc1_helical_proxy_c1_h5_schema": "compatible when psi/time and either J or fields sufficient to compute -Delp2(psi) are present",
+    "scope": "diagnostic/control handoff contract only"
+  },
+  "failure_modes": [
+    "no pre-peak trigger",
+    "trigger after peak",
+    "integrated current reduction but no peak-current reduction",
+    "grid-sensitive sign reversal"
+  ],
+  "labeling": "This is a diagnostic/control contract and proxy bridge, not a real M3D-C1 run or real M3D-C1 reactor output.",
+  "not_real_m3dc1_output": true,
+  "required_diagnostic_inputs": {
+    "J": {
+      "description": "Current density/current-sheet diagnostic if directly available.",
+      "required": false
+    },
+    "computable_J": {
+      "formula": "J = -Delp2(psi)",
+      "required": true
+    },
+    "mirnov_or_toroidal_proxy_signal": {
+      "description": "Optional magnetic precursor/proxy signal.",
+      "required": false
+    },
+    "phi": {
+      "description": "Toroidal angle or phase coordinate when available.",
+      "required": true
+    },
+    "psi": {
+      "description": "Poloidal flux or reduced-MHD flux field.",
+      "required": true
+    },
+    "time": {
+      "description": "Monotonic sample time for trigger evaluation.",
+      "required": true
+    }
+  },
+  "schema_version": "1.0",
+  "status_phrase": "PASS_WITH_REDUCED_MODEL_BOUNDARIES",
+  "trigger_outputs": {
+    "actuator_center": "Radial/current-sheet actuator center in normalized coordinates.",
+    "actuator_end_time": "Actuator shutoff time or open-ended sentinel.",
+    "actuator_start_time": "Time supplied to the reduced actuator backend.",
+    "actuator_strength": "Reduced-MHD actuator strength used by the backend.",
+    "actuator_width": "Radial/current-sheet actuator width in normalized coordinates.",
+    "trigger_time": "First diagnostic threshold crossing time after latency/jitter model."
+  }
+}

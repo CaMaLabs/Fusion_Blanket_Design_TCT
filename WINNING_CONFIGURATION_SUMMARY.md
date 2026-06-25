@@ -147,6 +147,7 @@ Use this as the mainline v6 candidate until a newer manifest supersedes it:
 | Lithium current | `li_current = 0.1` / proxy `0.10` | Retained as hypothesis, not proven actuator |
 | TCT control | Standing bias + fast bounded boost | Best reduced-order control proxy |
 | Trigger | Mirnov/toroidal precursor logic | Best current FAIR-MAST proxy result |
+| Closed-loop BOUT++ trigger bridge | J/dJdt reduced current-sheet trigger contract | `PASS_WITH_REDUCED_MODEL_BOUNDARIES`; reduced-model evidence only |
 | TCT physical claim | Auxiliary edge-event control hypothesis | Not experimentally proven |
 | p-B11 | Not mainline | Keep as later exploratory branch only |
 | PbLi | Not current winner | Keep as future variant / hybrid check |
@@ -169,3 +170,4 @@ Not defensible yet:
 4. Keep PbLi as a non-mainline physics variant.
 5. Map the TCT current-profile / current-sheet language to accepted reduced-MHD, reconnection, peeling-ballooning, RMP, or edge-stability variables.
 6. Continue using Mirnov/toroidal precursor logic as the current best control trigger until a cleaner SXR classifier beats it under false-trigger and latency penalties.
+7. Replace the closed-loop reduced-MHD `J`/`dJdt` trigger bridge with authorized M3D-C1 fields or experimental magnetic diagnostics before claiming tokamak-grade validation.
