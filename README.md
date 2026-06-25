@@ -12,6 +12,7 @@ For the current mainline candidate and best-supported screening/validation basin
 
 - [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md)
 - [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md)
+- [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md)
 - [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md)
 - [`docs/reference_design_v1_diagram.svg`](docs/reference_design_v1_diagram.svg)
 
@@ -113,22 +114,24 @@ If you have 5 minutes:
 1. Read this README.
 2. Review the figure at [`docs/reference_design_v1_diagram.svg`](docs/reference_design_v1_diagram.svg).
 3. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
-4. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
-5. Read [`docs/assumptions.md`](docs/assumptions.md).
-6. Read [`docs/falsification_tests.md`](docs/falsification_tests.md).
+4. Read [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
+5. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
+6. Read [`docs/assumptions.md`](docs/assumptions.md).
+7. Read [`docs/falsification_tests.md`](docs/falsification_tests.md).
 
 If you have 30 minutes:
 
 1. Review [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
 2. Review [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md).
-3. Review [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
-4. Review [`ROADMAP.md`](ROADMAP.md).
-5. Review [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
-6. Review [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) before interpreting historical logs or generated outputs.
-7. Review the proposed wall / blanket stack assumptions.
-8. Review the magnetic / electrostatic channeling assumptions.
-9. Inspect optimizer and candidate-generation scripts.
-10. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+3. Review [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
+4. Review [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
+5. Review [`ROADMAP.md`](ROADMAP.md).
+6. Review [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+7. Review [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) before interpreting historical logs or generated outputs.
+8. Review the proposed wall / blanket stack assumptions.
+9. Review the magnetic / electrostatic channeling assumptions.
+10. Inspect optimizer and candidate-generation scripts.
+11. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
 
 ## Research purpose
 
@@ -184,13 +187,14 @@ python run_reactor_optimizer.py
 2. Review [`docs/reference_design_v1_diagram.svg`](docs/reference_design_v1_diagram.svg).
 3. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
 4. Read [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md).
-5. Read [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
-6. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
-7. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
-8. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
-9. Review [`PROVENANCE.md`](PROVENANCE.md), [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md), and [`CITATION.cff`](CITATION.cff).
-10. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-11. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
-12. Inspect optimizer and candidate-generation scripts.
-13. Review committed result files and finalist candidates.
-14. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+5. Read [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
+6. Read [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
+7. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
+8. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+9. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
+10. Review [`PROVENANCE.md`](PROVENANCE.md), [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md), and [`CITATION.cff`](CITATION.cff).
+11. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
+12. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+13. Inspect optimizer and candidate-generation scripts.
+14. Review committed result files and finalist candidates.
+15. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
