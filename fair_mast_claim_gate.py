@@ -26,6 +26,7 @@ REQUIRED = {
     "fresh_trigger_search": REPO / "validation_runs/fair_mast_fresh_trigger_search_default/fair_mast_fresh_trigger_search_summary.json",
     "mirnov8_omv4_validation": REPO / "validation_runs/fair_mast_mirnov8_omv4_validation_default/fair_mast_mirnov8_omv4_validation_summary.json",
     "rolling_fresh_trigger_search": REPO / "validation_runs/fair_mast_fresh_trigger_search_skip20_small_default/fair_mast_fresh_trigger_search_summary.json",
+    "morphology_classifier": REPO / "validation_runs/fair_mast_morphology_classifier_trigger_default/fair_mast_morphology_classifier_summary.json",
     "forward_surrogate": REPO / "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
     "forward_sensitivity": REPO / "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
 }
@@ -166,6 +167,16 @@ def gate_status(artifacts: dict[str, dict[str, Any] | None]) -> dict[str, Any]:
             flags.append("ROLLING_FRESH_SEARCH_MARGINAL_RECALL_NOISE_TRADEOFF")
         else:
             flags.append("ROLLING_FRESH_SEARCH_NO_IMPROVEMENT")
+
+    classifier = artifacts.get("morphology_classifier") or {}
+    if classifier.get("status") == "MAST_MORPHOLOGY_CLASSIFIER_TRIGGER_COMPLETED":
+        verdict = str(classifier.get("classifier_verdict", ""))
+        if verdict == "classifier_cleanly_improves_baseline":
+            flags.append("MORPHOLOGY_CLASSIFIER_CLEAN_IMPROVEMENT")
+        elif verdict in {"classifier_recall_gain_with_tradeoff", "classifier_recall_gain_with_unfavorable_noise"}:
+            flags.append("MORPHOLOGY_CLASSIFIER_RECALL_NOISE_TRADEOFF")
+        else:
+            flags.append("MORPHOLOGY_CLASSIFIER_DOES_NOT_IMPROVE_BASELINE")
 
     sensitivity = artifacts.get("forward_sensitivity") or {}
     if sensitivity.get("falsifier_count") == 0:

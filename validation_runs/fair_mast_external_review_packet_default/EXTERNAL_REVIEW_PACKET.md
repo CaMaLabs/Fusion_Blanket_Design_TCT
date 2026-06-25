@@ -225,6 +225,9 @@ Fresh unused-shot trigger searches:
 - Rolling smaller search on later unused shots selected `pol_cc_all=5`, which
   detected `43/59` vs baseline `35/59` but increased false triggers from `30`
   to `37`; the score improvement was marginal (`+0.025`).
+- Causal morphology classifier over pre-trigger magnetic/OMV/D-alpha-slope
+  features underperformed on the same later test block: `33/59` detected with
+  `43` false triggers vs baseline `35/59` with `30` false triggers.
 - Interpretation: continued searching found recall/noise tradeoffs, not a clean
   better operational trigger.
 
@@ -283,6 +286,7 @@ Forward-surrogate sensitivity / falsification sweep:
 - [Fresh trigger search report](../fair_mast_fresh_trigger_search_default/fair_mast_fresh_trigger_search_report.md)
 - [Mirnov8+OMV4 validation report](../fair_mast_mirnov8_omv4_validation_default/fair_mast_mirnov8_omv4_validation_report.md)
 - [Rolling fresh trigger search report](../fair_mast_fresh_trigger_search_skip20_small_default/fair_mast_fresh_trigger_search_report.md)
+- [Morphology classifier trigger report](../fair_mast_morphology_classifier_trigger_default/fair_mast_morphology_classifier_trigger_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
@@ -334,7 +338,9 @@ Representative plots:
 18. Are the later fresh-search recall/noise tradeoffs worth operational
     consideration, or should fixed-threshold public diagnostics be treated as
     exhausted?
-19. What additional FAIR-MAST diagnostics should be included before promoting
+19. Does the negative simple morphology-classifier result close this public
+    feature family, or is a richer model with expert labels still justified?
+20. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -362,6 +368,8 @@ Supported:
   `53`).
 - Later unused-shot trigger searches found recall/noise tradeoffs but no clean
   fixed-threshold replacement trigger.
+- A simple causal morphology classifier over public pre-trigger features did
+  not improve the fresh-shot baseline.
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
@@ -387,6 +395,7 @@ Not supported:
   held-out shots.
 - A fresh-split lower-threshold OMV trigger improvement.
 - A clean later fresh-search trigger improvement without false-trigger cost.
+- A simple public-feature morphology classifier trigger improvement.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
 - Robustness outside the stated sensitivity grid.

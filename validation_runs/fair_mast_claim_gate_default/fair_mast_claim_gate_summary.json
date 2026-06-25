@@ -6,6 +6,7 @@
     "fresh_trigger_search": "validation_runs/fair_mast_fresh_trigger_search_default/fair_mast_fresh_trigger_search_summary.json",
     "machine_labels": "validation_runs/fair_mast_machine_reviewed_labels_default/fair_mast_machine_reviewed_label_summary.json",
     "mirnov8_omv4_validation": "validation_runs/fair_mast_mirnov8_omv4_validation_default/fair_mast_mirnov8_omv4_validation_summary.json",
+    "morphology_classifier": "validation_runs/fair_mast_morphology_classifier_trigger_default/fair_mast_morphology_classifier_summary.json",
     "morphology_gate": "validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_summary.json",
     "omv_followup": "validation_runs/fair_mast_omv_followup_default/fair_mast_omv_followup_summary.json",
     "omv_fresh_split": "validation_runs/fair_mast_omv_fresh_split_default/fair_mast_omv_fresh_split_summary.json",
@@ -32,6 +33,7 @@
     "MISSING_EXPERT_LABELS",
     "MISSING_MEASURED_TCT_ACTUATOR",
     "MISSING_REACTOR_PHYSICS_VALIDATION",
+    "MORPHOLOGY_CLASSIFIER_DOES_NOT_IMPROVE_BASELINE",
     "NOT_CAUSAL_VALIDATION",
     "OMV_FOLLOWUP_SHOT_LOCALIZED_EXPLORATORY_LEAD",
     "OMV_FRESH_SPLIT_DOES_NOT_SUPPORT_FIXED_CANDIDATE",
@@ -41,6 +43,6 @@
     "SUPPORTED_PROXY_ONLY",
     "SXR_MORPHOLOGY_GATE_COMPLETED_NO_OPERATIONAL_IMPROVEMENT"
   ],
-  "generated_at": "2026-06-25T17:54:44.429068+00:00",
+  "generated_at": "2026-06-25T18:38:13.371068+00:00",
   "status": "SUPPORTED_PROXY_ONLY"
 }

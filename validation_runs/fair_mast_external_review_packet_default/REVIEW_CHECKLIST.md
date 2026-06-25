@@ -32,6 +32,8 @@
       OMV replacement because recall is unchanged and false triggers increase.
 - [ ] Later unused-shot trigger searches are treated as recall/noise tradeoffs,
       not clean operational trigger improvements.
+- [ ] The simple morphology-classifier trigger is treated as negative unless a
+      richer model is justified by expert-reviewed labels or additional data.
 
 ## Null Test
 
