@@ -35,6 +35,7 @@ Primary reproduction scripts:
 - [`fair_mast_multidiagnostic_precursor_fusion.py`](../../fair_mast_multidiagnostic_precursor_fusion.py)
 - [`fair_mast_sxr_precursor_tradeoff.py`](../../fair_mast_sxr_precursor_tradeoff.py)
 - [`fair_mast_sxr_morphology_gate.py`](../../fair_mast_sxr_morphology_gate.py)
+- [`fair_mast_other_trigger_screen.py`](../../fair_mast_other_trigger_screen.py)
 - [`fair_mast_tct_forward_surrogate.py`](../../fair_mast_tct_forward_surrogate.py)
 - [`fair_mast_tct_forward_sensitivity.py`](../../fair_mast_tct_forward_sensitivity.py)
 
@@ -155,6 +156,23 @@ SXR morphology gate:
   a stronger classifier or additional diagnostic features are needed before SXR
   can be treated as an operational trigger.
 
+Other public diagnostic trigger screen:
+
+- Candidate families: OMV/OMAHA/saddle magnetics, sparse BES,
+  density-gradient, alternate D-alpha channels, bolometer, controller/gas,
+  coil/passive-current, and summary radiation traces.
+- Train/test protocol: select candidate thresholds on training shots `30311`
+  and `30423`, then evaluate once on held-out reviewed labels.
+- Train-selected result: fixed Mirnov plus OMV at `10.0` sigma is held-out
+  neutral against the fixed Mirnov baseline, with `39/59` detected and `8`
+  false triggers.
+- Exploratory held-out oracle ranking: fixed Mirnov plus OMV at `6.0` sigma
+  reaches `42/59` detected with `9` false triggers, precision `0.824`, and
+  median lead `8.413 ms`.
+- Interpretation: no clean train-selected non-SXR trigger improvement was
+  found. The lower-threshold OMV result is a lead for a future pre-registered
+  split, not a validation-selected replacement trigger.
+
 FAIR-MAST-seeded forward TCT surrogate:
 
 - Monte Carlo policies: no control, preventative bias only, fixed Mirnov fast
@@ -204,6 +222,7 @@ Forward-surrogate sensitivity / falsification sweep:
 - [Multi-diagnostic precursor fusion report](../fair_mast_multidiagnostic_precursor_fusion_default/fair_mast_multidiagnostic_precursor_fusion_report.md)
 - [SXR precursor tradeoff report](../fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_report.md)
 - [SXR morphology gate report](../fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_report.md)
+- [Other trigger screen report](../fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_report.md)
 - [TCT forward surrogate report](../fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_report.md)
 - [TCT forward sensitivity report](../fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_report.md)
 
@@ -245,7 +264,10 @@ Representative plots:
 14. Is the sensitivity grid broad enough to stress the forward-surrogate
     ranking, or should reviewers add harsher false-trigger or weaker-boost
     assumptions?
-15. What additional FAIR-MAST diagnostics should be included before promoting
+15. Does the exploratory lower-threshold OMV result justify a fresh
+    pre-registered validation split, or is it likely another shot/window
+    artifact?
+16. What additional FAIR-MAST diagnostics should be included before promoting
     the claim?
 
 ## Current Claim Boundary
@@ -262,6 +284,9 @@ Supported:
   with many false triggers and shorter median lead under fixed thresholds.
 - The simple causal SXR morphology gate completed but did not produce a clean
   operational trigger.
+- The broad non-SXR trigger screen found no train-selected held-out
+  improvement over the fixed Mirnov baseline; lower-threshold OMV is only an
+  exploratory follow-up candidate.
 - A reduced-order forward surrogate ranks standing bias plus fast Mirnov/toroidal
   boost above no control, preventative bias only, nominal-latency boost, and
   noisy high-recall SXR under the current proxy assumptions.
@@ -281,6 +306,8 @@ Not supported:
 - A fixed-threshold SXR trigger clean enough to replace Mirnov+toroidal fusion.
 - A fixed-threshold or simple morphology-gated SXR trigger clean enough to
   replace Mirnov+toroidal fusion.
+- A train-selected public non-SXR trigger that substantially improves the
+  held-out Mirnov baseline.
 - Sustained-fusion validation, burn control, alpha heating, transport, wall
   survival, TBR, or reactor duty-cycle prediction from the forward surrogate.
 - Robustness outside the stated sensitivity grid.

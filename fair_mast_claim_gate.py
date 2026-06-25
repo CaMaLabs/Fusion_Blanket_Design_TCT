@@ -20,6 +20,7 @@ REQUIRED = {
     "actuator_budget": REPO / "validation_runs/fair_mast_biased_actuator_response_budget_default/fair_mast_biased_actuator_response_budget_summary.json",
     "sxr_tradeoff": REPO / "validation_runs/fair_mast_sxr_precursor_tradeoff_default/fair_mast_sxr_precursor_tradeoff_summary.json",
     "morphology_gate": REPO / "validation_runs/fair_mast_sxr_morphology_gate_default/fair_mast_sxr_morphology_gate_summary.json",
+    "other_trigger_screen": REPO / "validation_runs/fair_mast_other_trigger_screen_default/fair_mast_other_trigger_screen_summary.json",
     "forward_surrogate": REPO / "validation_runs/fair_mast_tct_forward_surrogate_default/fair_mast_tct_forward_surrogate_summary.json",
     "forward_sensitivity": REPO / "validation_runs/fair_mast_tct_forward_sensitivity_default/fair_mast_tct_forward_sensitivity_summary.json",
 }
@@ -87,6 +88,26 @@ def gate_status(artifacts: dict[str, dict[str, Any] | None]) -> dict[str, Any]:
             flags.append("SXR_MORPHOLOGY_GATE_IMPROVES_TRIGGER")
         else:
             flags.append("SXR_MORPHOLOGY_GATE_COMPLETED_NO_OPERATIONAL_IMPROVEMENT")
+
+    other_trigger = artifacts.get("other_trigger_screen") or {}
+    if other_trigger.get("status") == "MAST_OTHER_TRIGGER_SCREEN_COMPLETED":
+        selected = other_trigger.get("selected_reviewed_labels", {})
+        baseline = other_trigger.get("baseline_reviewed_labels", {})
+        exploratory = other_trigger.get("best_exploratory_reviewed_labels", {})
+        selected_improves = (
+            selected.get("false_trigger_count", 10**9) <= baseline.get("false_trigger_count", -1)
+            and selected.get("detected_event_count", -1) > baseline.get("detected_event_count", 10**9)
+        )
+        exploratory_improves = (
+            exploratory.get("detected_event_count", -1) > baseline.get("detected_event_count", 10**9)
+            and exploratory.get("false_trigger_count", 10**9) <= baseline.get("false_trigger_count", 10**9) + 1
+        )
+        if selected_improves:
+            flags.append("OTHER_TRIGGER_SCREEN_IMPROVES_TRIGGER")
+        elif exploratory_improves:
+            flags.append("OTHER_TRIGGER_SCREEN_EXPLORATORY_OMV_LEAD_ONLY")
+        else:
+            flags.append("OTHER_TRIGGER_SCREEN_COMPLETED_NO_OPERATIONAL_IMPROVEMENT")
 
     sensitivity = artifacts.get("forward_sensitivity") or {}
     if sensitivity.get("falsifier_count") == 0:

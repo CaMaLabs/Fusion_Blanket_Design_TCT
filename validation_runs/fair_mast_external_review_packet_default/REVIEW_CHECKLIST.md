@@ -20,6 +20,10 @@
       operational precursors.
 - [ ] Completed SXR morphology-gate result is treated as negative for this
       simple gate family, not as operational trigger support.
+- [ ] Other public diagnostic triggers are treated as exploratory unless they
+      improve on held-out labels under train-only selection.
+- [ ] Lower-threshold OMV is treated as a follow-up candidate, not a validated
+      replacement trigger.
 
 ## Null Test
 

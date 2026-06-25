@@ -1,0 +1,77 @@
+{
+  "baseline_reviewed_labels": {
+    "detected_event_count": 39,
+    "event_count": 59,
+    "f1": 0.7358490566037736,
+    "false_trigger_count": 8,
+    "latency_feasible_event_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.96000000000003,
+      "median": 8.384000000000002,
+      "minimum": 2.5519999999999987
+    },
+    "missed_event_count": 20,
+    "precision": 0.8297872340425532,
+    "recall": 0.6610169491525424
+  },
+  "best_exploratory_config": {
+    "pol_cc_ch2": 6.0,
+    "pol_omv_rms": 6.0
+  },
+  "best_exploratory_reviewed_labels": {
+    "detected_event_count": 42,
+    "event_count": 59,
+    "f1": 0.7636363636363636,
+    "false_trigger_count": 9,
+    "latency_feasible_event_count": {
+      "12_ms": 8,
+      "3_ms": 39,
+      "5_ms": 33,
+      "8_ms": 26
+    },
+    "lead_ms": {
+      "maximum": 14.96000000000003,
+      "median": 8.413000000000004,
+      "minimum": 0.5340000000000344
+    },
+    "missed_event_count": 17,
+    "precision": 0.8235294117647058,
+    "recall": 0.711864406779661
+  },
+  "best_exploratory_score": 1.8575523429710867,
+  "claim_boundary": "Broad FAIR-MAST diagnostic trigger screen only; not causal validation.",
+  "config_count": 156,
+  "feature_count": 13,
+  "generated_at": "2026-06-25T12:49:17.711070+00:00",
+  "selected_config": {
+    "pol_cc_ch2": 6.0,
+    "pol_omv_rms": 10.0
+  },
+  "selected_reviewed_labels": {
+    "detected_event_count": 39,
+    "event_count": 59,
+    "f1": 0.7358490566037736,
+    "false_trigger_count": 8,
+    "latency_feasible_event_count": {
+      "12_ms": 9,
+      "3_ms": 38,
+      "5_ms": 30,
+      "8_ms": 23
+    },
+    "lead_ms": {
+      "maximum": 14.96000000000003,
+      "median": 8.384000000000002,
+      "minimum": 2.5519999999999987
+    },
+    "missed_event_count": 20,
+    "precision": 0.8297872340425532,
+    "recall": 0.6610169491525424
+  },
+  "selected_train_score": 2.3094444444444444,
+  "status": "MAST_OTHER_TRIGGER_SCREEN_COMPLETED"
+}
