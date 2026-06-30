@@ -1,0 +1,383 @@
+#!/usr/bin/env python3
+"""Dedalus toy reduced-MHD current-sheet benchmark with optional TCT-style forcing.
+
+This is a deliberately small 2D periodic reduced/resistive-MHD problem. It is
+intended to test whether current-sheet diagnostics are useful in a reconnection
+proxy problem. It is not a reactor model, tokamak model, or TCT validation.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import logging
+from dataclasses import asdict, dataclass
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+
+try:
+    import dedalus.public as d3
+except ModuleNotFoundError as exc:  # pragma: no cover - exercised only without Dedalus installed
+    d3 = None
+    DEDALUS_IMPORT_ERROR = exc
+else:
+    DEDALUS_IMPORT_ERROR = None
+
+
+LOGGER = logging.getLogger(__name__)
+
+
+@dataclass(frozen=True)
+class BenchmarkConfig:
+    # Grid and domain. A double-Harris sheet is used so the domain can remain
+    # periodic in both coordinates.
+    nx: int = 192
+    nz: int = 192
+    lx: float = 12.8
+    lz: float = 12.8
+    dealias: float = 1.5
+
+    # Reduced-MHD transport parameters.
+    eta: float = 2.5e-3
+    nu: float = 2.5e-3
+
+    # Initial double-Harris current sheet.
+    delta0: float = 0.30
+    perturbation_amplitude: float = 2.0e-3
+    perturbation_kx: int = 1
+
+    # Time integration.
+    timestep: float = 2.0e-3
+    stop_time: float = 3.0
+    diagnostic_cadence: int = 10
+    snapshot_cadence: int = 100
+    max_steps: int = 200000
+
+    # Transparent TCT-style proxy. The control is a localized extra resistive
+    # smoothing term, activated only after the measured aspect ratio crosses a
+    # threshold. Set enabled=False or strength=0 to disable.
+    control_enabled: bool = False
+    control_aspect_threshold: float = 18.0
+    control_strength: float = 8.0e-3
+    control_width: float = 0.70
+
+    # Island proxy thresholds.
+    onset_island_count_threshold: int = 3
+    island_o_point_prominence: float = 2.0e-4
+
+
+def _require_dedalus() -> None:
+    if d3 is None:
+        raise SystemExit(
+            "Dedalus is not installed in this Python environment. Install Dedalus "
+            "and rerun this benchmark. Original import error: "
+            f"{DEDALUS_IMPORT_ERROR}"
+        )
+
+
+def _double_harris_psi(z: np.ndarray, cfg: BenchmarkConfig) -> np.ndarray:
+    """Return periodic double-Harris flux psi(z).
+
+    The in-plane magnetic field is B = zhat x grad(psi), so Bx = -dpsi/dz.
+    The selected psi produces two oppositely signed Harris current sheets at
+    z = +/- Lz/4 while remaining approximately periodic at the box edges.
+    """
+    zp = z + cfg.lz / 4.0
+    zm = z - cfg.lz / 4.0
+    return -cfg.delta0 * np.log(np.cosh(zp / cfg.delta0)) + cfg.delta0 * np.log(np.cosh(zm / cfg.delta0)) + z
+
+
+def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
+    _require_dedalus()
+    coords = d3.CartesianCoordinates("x", "z")
+    dist = d3.Distributor(coords, dtype=np.float64)
+    xbasis = d3.RealFourier(coords["x"], size=cfg.nx, bounds=(-cfg.lx / 2.0, cfg.lx / 2.0), dealias=cfg.dealias)
+    zbasis = d3.RealFourier(coords["z"], size=cfg.nz, bounds=(-cfg.lz / 2.0, cfg.lz / 2.0), dealias=cfg.dealias)
+    bases = (xbasis, zbasis)
+
+    psi = dist.Field(name="psi", bases=bases)
+    omega = dist.Field(name="omega", bases=bases)
+    phi = dist.Field(name="phi", bases=bases)
+    tau_phi = dist.Field(name="tau_phi")
+    control = dist.Field(name="control", bases=bases)
+
+    x, z = dist.local_grids(xbasis, zbasis)
+    psi["g"] = _double_harris_psi(z, cfg)
+    psi["g"] += cfg.perturbation_amplitude * np.cos(2 * np.pi * cfg.perturbation_kx * x / cfg.lx) * np.cos(4 * np.pi * z / cfg.lz)
+    omega["g"] = 0.0
+    phi["g"] = 0.0
+    control["g"] = 0.0
+
+    dx = lambda a: d3.Differentiate(a, coords["x"])
+    dz = lambda a: d3.Differentiate(a, coords["z"])
+    lap = lambda a: d3.Laplacian(a)
+    bracket = lambda a, b: dx(a) * dz(b) - dz(a) * dx(b)
+    j_expr = -lap(psi)
+
+    problem = d3.IVP([psi, omega, phi, tau_phi], namespace=locals())
+    problem.add_equation("dt(psi) - eta*lap(psi) = -bracket(phi, psi) + control")
+    problem.add_equation("dt(omega) - nu*lap(omega) = -bracket(phi, omega) + bracket(psi, j_expr)")
+    problem.add_equation("lap(phi) + tau_phi + omega = 0")
+    problem.add_equation("integ(phi) = 0")
+
+    solver = problem.build_solver(d3.RK222)
+    solver.stop_sim_time = cfg.stop_time
+    solver.stop_iteration = cfg.max_steps
+
+    return {
+        "coords": coords,
+        "dist": dist,
+        "bases": bases,
+        "xbasis": xbasis,
+        "zbasis": zbasis,
+        "x": x,
+        "z": z,
+        "psi": psi,
+        "omega": omega,
+        "phi": phi,
+        "control": control,
+        "j_expr": j_expr,
+        "solver": solver,
+    }
+
+
+def _periodic_gradient(values: np.ndarray, spacing: float, axis: int) -> np.ndarray:
+    return (np.roll(values, -1, axis=axis) - np.roll(values, 1, axis=axis)) / (2.0 * spacing)
+
+
+def _periodic_laplacian(values: np.ndarray, dx: float, dz: float) -> np.ndarray:
+    return (
+        (np.roll(values, -1, axis=0) - 2.0 * values + np.roll(values, 1, axis=0)) / dx**2
+        + (np.roll(values, -1, axis=1) - 2.0 * values + np.roll(values, 1, axis=1)) / dz**2
+    )
+
+
+def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig) -> dict[str, float]:
+    """Compute sheet and reconnection diagnostics from psi on the grid.
+
+    The current density proxy is J = -Delp2(psi). The sheet half-thickness delta
+    is estimated from each strong current-sheet peak using the half-maximum
+    width in z, then averaged over the two strongest sheets. Sheet length L is
+    estimated as the x-extent where the sheet current exceeds half of its local
+    peak. Island count is a simple count of robust local extrema of psi.
+    """
+    dx = cfg.lx / cfg.nx
+    dz = cfg.lz / cfg.nz
+    current = -_periodic_laplacian(psi_grid, dx, dz)
+    abs_j = np.abs(current)
+    j_profile = np.mean(abs_j, axis=0)
+    peak_indices = np.argsort(j_profile)[-2:]
+
+    deltas = []
+    lengths = []
+    for iz in peak_indices:
+        peak = float(j_profile[iz])
+        half = 0.5 * peak
+        left = iz
+        right = iz
+        while j_profile[left % cfg.nz] >= half and (iz - left) < cfg.nz // 2:
+            left -= 1
+        while j_profile[right % cfg.nz] >= half and (right - iz) < cfg.nz // 2:
+            right += 1
+        full_width = max(1, right - left - 1) * dz
+        deltas.append(0.5 * full_width)
+
+        sheet_row = abs_j[:, iz]
+        active = sheet_row >= half
+        lengths.append(float(np.count_nonzero(active) * dx))
+
+    delta = float(np.mean(deltas))
+    length = float(np.max(lengths))
+    aspect = float(length / delta) if delta > 0 else float("inf")
+
+    bx = -_periodic_gradient(psi_grid, dz, axis=1)
+    bz = _periodic_gradient(psi_grid, dx, axis=0)
+    magnetic_energy = float(0.5 * np.mean(bx * bx + bz * bz))
+
+    center_x = cfg.nx // 2
+    center_z = int(peak_indices[np.argmax(j_profile[peak_indices])])
+    reconnection_rate_proxy = float(cfg.eta * abs_j[center_x, center_z])
+
+    island_count = _count_island_proxy(psi_grid, cfg)
+    return {
+        "time": float(time),
+        "delta": delta,
+        "sheet_length": length,
+        "aspect_ratio": aspect,
+        "max_abs_J": float(np.max(abs_j)),
+        "J_p99": float(np.percentile(abs_j, 99.0)),
+        "reconnection_rate_proxy": reconnection_rate_proxy,
+        "magnetic_energy": magnetic_energy,
+        "island_count_proxy": int(island_count),
+    }
+
+
+def _count_island_proxy(psi_grid: np.ndarray, cfg: BenchmarkConfig) -> int:
+    """Count robust local extrema of psi as a cheap island/plasmoid proxy."""
+    prominence = cfg.island_o_point_prominence
+    extrema = 0
+    greater_than_neighbors = np.ones_like(psi_grid, dtype=bool)
+    less_than_neighbors = np.ones_like(psi_grid, dtype=bool)
+    for ax in (-1, 0, 1):
+        for az in (-1, 0, 1):
+            if ax == 0 and az == 0:
+                continue
+            neighbor = np.roll(np.roll(psi_grid, ax, axis=0), az, axis=1)
+            greater_than_neighbors &= psi_grid > neighbor + prominence
+            less_than_neighbors &= psi_grid < neighbor - prominence
+    extrema += int(np.count_nonzero(greater_than_neighbors))
+    extrema += int(np.count_nonzero(less_than_neighbors))
+    return extrema
+
+
+def _update_control(state: dict[str, Any], metrics: dict[str, float], cfg: BenchmarkConfig) -> bool:
+    """Activate transparent smoothing forcing after aspect-ratio threshold crossing."""
+    control = state["control"]
+    if not cfg.control_enabled or cfg.control_strength <= 0.0:
+        control["g"] = 0.0
+        return False
+    if metrics["aspect_ratio"] < cfg.control_aspect_threshold:
+        control["g"] = 0.0
+        return False
+
+    psi_grid = np.array(state["psi"]["g"], copy=False)
+    z = state["z"]
+    current = -_periodic_laplacian(psi_grid, cfg.lx / cfg.nx, cfg.lz / cfg.nz)
+    iz = int(np.argmax(np.mean(np.abs(current), axis=0)))
+    z0 = float(z[0, iz])
+    mask = np.exp(-((z - z0) / cfg.control_width) ** 2)
+    # This term is intentionally simple: additional localized resistive
+    # smoothing, proportional to Delp2(psi), near the active sheet.
+    control["g"] = cfg.control_strength * _periodic_laplacian(psi_grid, cfg.lx / cfg.nx, cfg.lz / cfg.nz) * mask
+    return True
+
+
+def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, Any]:
+    state = _build_problem(cfg)
+    solver = state["solver"]
+    case_dir = run_dir / case_name
+    case_dir.mkdir(parents=True, exist_ok=True)
+
+    diagnostics: list[dict[str, Any]] = []
+    snapshots: list[np.ndarray] = []
+    snapshot_times: list[float] = []
+    control_active_once = False
+    onset_time = None
+
+    while solver.proceed:
+        if solver.iteration % cfg.diagnostic_cadence == 0:
+            psi_grid = np.array(state["psi"]["g"], copy=True)
+            metrics = compute_diagnostics(psi_grid, solver.sim_time, cfg)
+            control_active = _update_control(state, metrics, cfg)
+            control_active_once = control_active_once or control_active
+            metrics["control_active"] = bool(control_active)
+            diagnostics.append(metrics)
+            if onset_time is None and metrics["island_count_proxy"] >= cfg.onset_island_count_threshold:
+                onset_time = float(metrics["time"])
+        if solver.iteration % cfg.snapshot_cadence == 0:
+            snapshots.append(np.array(state["psi"]["g"], copy=True))
+            snapshot_times.append(float(solver.sim_time))
+        solver.step(cfg.timestep)
+
+    if not diagnostics:
+        psi_grid = np.array(state["psi"]["g"], copy=True)
+        diagnostics.append(compute_diagnostics(psi_grid, solver.sim_time, cfg))
+
+    _write_csv(case_dir / "diagnostics.csv", diagnostics)
+    np.savez_compressed(
+        case_dir / "snapshots.npz",
+        times=np.asarray(snapshot_times, dtype=float),
+        psi=np.asarray(snapshots, dtype=float),
+        config=json.dumps(asdict(cfg), sort_keys=True),
+    )
+    max_aspect = max(row["aspect_ratio"] for row in diagnostics)
+    min_delta = min(row["delta"] for row in diagnostics)
+    final_energy = diagnostics[-1]["magnetic_energy"]
+    initial_energy = diagnostics[0]["magnetic_energy"]
+    summary = {
+        "case": case_name,
+        "control_enabled": cfg.control_enabled,
+        "control_active_once": control_active_once,
+        "time_to_secondary_island_proxy": onset_time,
+        "max_aspect_ratio": max_aspect,
+        "min_delta": min_delta,
+        "initial_magnetic_energy": initial_energy,
+        "final_magnetic_energy": final_energy,
+        "magnetic_energy_decay_fraction": 1.0 - final_energy / initial_energy if initial_energy else None,
+        "final_island_count_proxy": diagnostics[-1]["island_count_proxy"],
+        "diagnostic_rows": len(diagnostics),
+    }
+    (case_dir / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8")
+    return summary
+
+
+def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkConfig:
+    return BenchmarkConfig(
+        nx=args.nx,
+        nz=args.nz,
+        lx=args.lx,
+        lz=args.lz,
+        eta=args.eta,
+        nu=args.nu,
+        delta0=args.delta0,
+        timestep=args.timestep,
+        stop_time=args.stop_time,
+        diagnostic_cadence=args.diagnostic_cadence,
+        snapshot_cadence=args.snapshot_cadence,
+        control_enabled=control_enabled,
+        control_aspect_threshold=args.control_aspect_threshold,
+        control_strength=args.control_strength,
+        control_width=args.control_width,
+    )
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-dir", type=Path, default=Path("validation_runs/dedalus_current_sheet_default"))
+    parser.add_argument("--nx", type=int, default=BenchmarkConfig.nx)
+    parser.add_argument("--nz", type=int, default=BenchmarkConfig.nz)
+    parser.add_argument("--lx", type=float, default=BenchmarkConfig.lx)
+    parser.add_argument("--lz", type=float, default=BenchmarkConfig.lz)
+    parser.add_argument("--eta", type=float, default=BenchmarkConfig.eta)
+    parser.add_argument("--nu", type=float, default=BenchmarkConfig.nu)
+    parser.add_argument("--delta0", type=float, default=BenchmarkConfig.delta0)
+    parser.add_argument("--timestep", type=float, default=BenchmarkConfig.timestep)
+    parser.add_argument("--stop-time", type=float, default=BenchmarkConfig.stop_time)
+    parser.add_argument("--diagnostic-cadence", type=int, default=BenchmarkConfig.diagnostic_cadence)
+    parser.add_argument("--snapshot-cadence", type=int, default=BenchmarkConfig.snapshot_cadence)
+    parser.add_argument("--control-aspect-threshold", type=float, default=BenchmarkConfig.control_aspect_threshold)
+    parser.add_argument("--control-strength", type=float, default=BenchmarkConfig.control_strength)
+    parser.add_argument("--control-width", type=float, default=BenchmarkConfig.control_width)
+    parser.add_argument("--case", choices=("both", "baseline", "perturbed"), default="both")
+    args = parser.parse_args()
+
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    args.run_dir.mkdir(parents=True, exist_ok=True)
+    summaries = []
+    if args.case in {"both", "baseline"}:
+        summaries.append(run_case("baseline", build_config(args, control_enabled=False), args.run_dir))
+    if args.case in {"both", "perturbed"}:
+        summaries.append(run_case("tct_style_perturbed", build_config(args, control_enabled=True), args.run_dir))
+    output = {
+        "artifact_type": "dedalus_reduced_mhd_toy_benchmark",
+        "not_reactor_claim": True,
+        "not_tokamak_validation": True,
+        "cases": summaries,
+    }
+    (args.run_dir / "benchmark_summary.json").write_text(json.dumps(output, indent=2, sort_keys=True), encoding="utf-8")
+    print(json.dumps(output, indent=2, sort_keys=True))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
