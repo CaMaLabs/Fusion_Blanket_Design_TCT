@@ -129,8 +129,10 @@ def _case_output_name(benchmark_case: str) -> str:
 def _load_summary(case_dir: Path, case: dict[str, Any]) -> dict[str, Any]:
     output_case = _case_output_name(str(case["benchmark_case"]))
     summary = json.loads((case_dir / output_case / "summary.json").read_text(encoding="utf-8"))
+    summary.pop("case", None)
     return {
-        "case": case["case"],
+        "matrix_case": case["case"],
+        "benchmark_case": output_case,
         "description": case["description"],
         **summary,
     }
@@ -165,7 +167,7 @@ def main() -> int:
         _run([args.python, str(PLOTTER), "--run-dir", str(case_dir)], REPO)
         rows.append(_load_summary(case_dir, case))
 
-    baseline = next(row for row in rows if row["case"] == "baseline")
+    baseline = next(row for row in rows if row["matrix_case"] == "baseline")
     for row in rows:
         base_islands = float(baseline["final_island_count_proxy"])
         base_energy = float(baseline["final_magnetic_energy"])
@@ -186,6 +188,7 @@ def main() -> int:
 
     summary = {
         "artifact_type": "dedalus_biased_tct_wall_current_proxy_matrix",
+        "schema_version": "2.0",
         "not_reactor_claim": True,
         "not_liquid_lithium_physics": True,
         "interpretation": (

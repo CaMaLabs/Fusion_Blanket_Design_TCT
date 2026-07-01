@@ -101,6 +101,24 @@ The runner computes:
 The island count is a deliberately cheap local-extrema proxy on `psi`; it is a
 screening diagnostic, not a rigorous magnetic-island topology classifier.
 
+Implementation details:
+
+- `final_island_count_proxy` is the final count of robust local maxima and
+  minima of the perturbation flux `psi - <psi>_x`. The x-averaged Harris-sheet
+  equilibrium is subtracted before extrema are counted, so the proxy responds to
+  island-like perturbation structure rather than the background sheet.
+- `time_to_secondary_island_proxy` is the first diagnostic time after `t=0` when
+  the island proxy reaches `max(onset_island_count_threshold,
+  initial_island_count_proxy + 1)`.
+- `delta` is estimated from the half-maximum current-sheet width in `z`.
+- `L` is estimated as the active `x` extent where sheet current exceeds half of
+  the local sheet peak.
+- `max_aspect_ratio` and `min_delta` can remain identical across matrix cases
+  when the proxy changes island content or magnetic energy without changing the
+  half-maximum sheet-width diagnostic on this coarse grid. In that situation the
+  island proxy and current/energy metrics are more sensitive than the simple
+  width metric.
+
 ## Example
 
 Install Dedalus in the active Python environment first. Dedalus can be sensitive
@@ -152,14 +170,33 @@ python3 validation_models/dedalus_current_sheet/dedalus_current_sheet_benchmark.
 For a compact biased TCT matrix:
 
 ```bash
-python3 validation_models/dedalus_current_sheet/run_biased_tct_matrix.py \
-  --run-dir validation_runs/dedalus_current_sheet_biased_tct_matrix
+. .venv-dedalus/bin/activate
+export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/mpich/lib:/usr/lib/aarch64-linux-gnu:${LD_LIBRARY_PATH:-}
+export UCX_TLS=self
+export OMP_NUM_THREADS=1
+python validation_models/dedalus_current_sheet/run_biased_tct_matrix.py \
+  --run-dir validation_runs/dedalus_current_sheet_biased_tct_matrix \
+  --python /root/Fusion_Blanket_Design_TCT/.venv-dedalus/bin/python
 ```
 
 The matrix compares baseline, smoothing-only, positive/negative bias-only, and
 smoothing-plus-bias cases. The polarity comparison is a falsification check: a
 biased mode that only helps for one sign should be treated as sign-sensitive
 reduced-model behavior, not general validation.
+
+Matrix cases:
+
+| `matrix_case` | Meaning |
+| --- | --- |
+| `baseline` | Finite-pulse driven island-onset stress test with no TCT proxy. |
+| `smoothing_only` | Aspect-triggered localized smoothing proxy only. |
+| `bias_positive_standing` | Standing positive biased wall-current proxy only. |
+| `bias_negative_standing` | Standing negative biased wall-current proxy only. |
+| `smoothing_plus_bias_positive` | Smoothing proxy plus positive biased wall-current proxy. |
+| `smoothing_plus_bias_negative` | Smoothing proxy plus negative biased wall-current proxy. |
+
+The output also includes `benchmark_case`, which records the underlying
+single-case benchmark directory name: `baseline` or `tct_style_perturbed`.
 
 ## Limitations
 
