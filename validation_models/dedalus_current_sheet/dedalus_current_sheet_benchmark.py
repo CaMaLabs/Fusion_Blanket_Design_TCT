@@ -79,6 +79,17 @@ class BenchmarkConfig:
     drive_kx: int = 4
     drive_width: float = 0.45
 
+    # Optional biased wall-current proxy. This is a prescribed reduced-MHD flux
+    # source near the two current-sheet/wall-proxy layers. It is not a liquid
+    # lithium model; it only tests polarity and trigger sensitivity.
+    bias_enabled: bool = False
+    bias_mode: str = "standing"
+    bias_strength: float = 0.0
+    bias_polarity: float = 1.0
+    bias_kx: int = 1
+    bias_width: float = 0.55
+    bias_aspect_threshold: float = 80.0
+
 
 def _require_dedalus() -> None:
     if d3 is None:
@@ -115,6 +126,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     tau_phi = dist.Field(name="tau_phi")
     control = dist.Field(name="control", bases=bases)
     drive = dist.Field(name="drive", bases=bases)
+    bias = dist.Field(name="bias", bases=bases)
 
     x, z = dist.local_grids(xbasis, zbasis)
     psi["g"] = _double_harris_psi(z, cfg)
@@ -123,6 +135,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     phi["g"] = 0.0
     control["g"] = 0.0
     drive["g"] = 0.0
+    bias["g"] = 0.0
 
     eta = cfg.eta
     nu = cfg.nu
@@ -133,7 +146,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     j_expr = -lap(psi)
 
     problem = d3.IVP([psi, omega, phi, tau_phi], namespace=locals())
-    problem.add_equation("dt(psi) - eta*lap(psi) = -bracket(phi, psi) + control + drive")
+    problem.add_equation("dt(psi) - eta*lap(psi) = -bracket(phi, psi) + control + drive + bias")
     problem.add_equation("dt(omega) - nu*lap(omega) = -bracket(phi, omega) + bracket(psi, j_expr)")
     problem.add_equation("lap(phi) + tau_phi + omega = 0")
     problem.add_equation("integ(phi) = 0")
@@ -155,6 +168,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
         "phi": phi,
         "control": control,
         "drive": drive,
+        "bias": bias,
         "j_expr": j_expr,
         "solver": solver,
     }
@@ -301,6 +315,31 @@ def _update_drive(state: dict[str, Any], sim_time: float, cfg: BenchmarkConfig) 
     return True
 
 
+def _update_bias(state: dict[str, Any], metrics: dict[str, float], cfg: BenchmarkConfig) -> bool:
+    """Apply a standing or threshold-triggered biased wall-current proxy."""
+    bias = state["bias"]
+    bias.change_scales(1)
+    bias.require_grid_space()
+    if not cfg.bias_enabled or cfg.bias_strength == 0.0:
+        bias["g"] = 0.0
+        return False
+    if cfg.bias_mode == "triggered" and metrics["aspect_ratio"] < cfg.bias_aspect_threshold:
+        bias["g"] = 0.0
+        return False
+    if cfg.bias_mode not in {"standing", "triggered"}:
+        raise ValueError(f"Unsupported bias mode: {cfg.bias_mode}")
+
+    x = state["x"]
+    z = state["z"]
+    upper_mask = np.exp(-((z - cfg.lz / 4.0) / cfg.bias_width) ** 2)
+    lower_mask = np.exp(-((z + cfg.lz / 4.0) / cfg.bias_width) ** 2)
+    # Opposite signs across the two sheets mimic a closed current path through
+    # a conducting wall layer in this reduced Cartesian proxy.
+    wall_current_shape = (upper_mask - lower_mask) * np.cos(2.0 * np.pi * cfg.bias_kx * x / cfg.lx)
+    bias["g"] = cfg.bias_polarity * cfg.bias_strength * wall_current_shape
+    return True
+
+
 def _psi_grid(state: dict[str, Any]) -> np.ndarray:
     """Return psi in physical grid layout at scale 1."""
     psi = state["psi"]
@@ -327,6 +366,7 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
     snapshot_times: list[float] = []
     control_active_once = False
     drive_active_once = False
+    bias_active_once = False
     onset_time = None
     initial_island_count = None
 
@@ -340,8 +380,11 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
             control_active_once = control_active_once or control_active
             drive_active = _update_drive(state, solver.sim_time, cfg)
             drive_active_once = drive_active_once or drive_active
+            bias_active = _update_bias(state, metrics, cfg)
+            bias_active_once = bias_active_once or bias_active
             metrics["control_active"] = bool(control_active)
             metrics["drive_active"] = bool(drive_active)
+            metrics["bias_active"] = bool(bias_active)
             diagnostics.append(metrics)
             onset_count = max(cfg.onset_island_count_threshold, int(initial_island_count) + 1)
             if onset_time is None and metrics["time"] > 0.0 and metrics["island_count_proxy"] >= onset_count:
@@ -372,6 +415,11 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "control_active_once": control_active_once,
         "drive_enabled": cfg.drive_enabled,
         "drive_active_once": drive_active_once,
+        "bias_enabled": cfg.bias_enabled,
+        "bias_active_once": bias_active_once,
+        "bias_mode": cfg.bias_mode,
+        "bias_strength": cfg.bias_strength,
+        "bias_polarity": cfg.bias_polarity,
         "initial_island_count_proxy": int(initial_island_count) if initial_island_count is not None else None,
         "time_to_secondary_island_proxy": onset_time,
         "max_aspect_ratio": max_aspect,
@@ -413,6 +461,13 @@ def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkCo
         drive_strength=args.drive_strength,
         drive_kx=args.drive_kx,
         drive_width=args.drive_width,
+        bias_enabled=args.bias_enabled,
+        bias_mode=args.bias_mode,
+        bias_strength=args.bias_strength,
+        bias_polarity=args.bias_polarity,
+        bias_kx=args.bias_kx,
+        bias_width=args.bias_width,
+        bias_aspect_threshold=args.bias_aspect_threshold,
     )
 
 
@@ -443,6 +498,13 @@ def main() -> int:
     parser.add_argument("--drive-strength", type=float, default=BenchmarkConfig.drive_strength)
     parser.add_argument("--drive-kx", type=int, default=BenchmarkConfig.drive_kx)
     parser.add_argument("--drive-width", type=float, default=BenchmarkConfig.drive_width)
+    parser.add_argument("--bias-enabled", action="store_true")
+    parser.add_argument("--bias-mode", choices=("standing", "triggered"), default=BenchmarkConfig.bias_mode)
+    parser.add_argument("--bias-strength", type=float, default=BenchmarkConfig.bias_strength)
+    parser.add_argument("--bias-polarity", type=float, default=BenchmarkConfig.bias_polarity)
+    parser.add_argument("--bias-kx", type=int, default=BenchmarkConfig.bias_kx)
+    parser.add_argument("--bias-width", type=float, default=BenchmarkConfig.bias_width)
+    parser.add_argument("--bias-aspect-threshold", type=float, default=BenchmarkConfig.bias_aspect_threshold)
     parser.add_argument("--case", choices=("both", "baseline", "perturbed"), default="both")
     args = parser.parse_args()
 

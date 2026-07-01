@@ -1,0 +1,21 @@
+{
+  "artifact_type": "dedalus_reduced_mhd_toy_diagnostics",
+  "cases": [
+    {
+      "case": "tct_style_perturbed",
+      "diagnostic_rows": 41,
+      "final_island_count_proxy": 20,
+      "final_magnetic_energy": 0.46388672864252256,
+      "initial_island_count_proxy": 0,
+      "initial_magnetic_energy": 0.46746107662319925,
+      "magnetic_energy_decay_fraction": 0.0076463007497794555,
+      "max_aspect_ratio": 128.0,
+      "min_delta": 0.1,
+      "time_end": 1.9999999999998905,
+      "time_start": 0.0,
+      "time_to_secondary_island_proxy": 0.5500000000000004
+    }
+  ],
+  "not_reactor_claim": true,
+  "not_tokamak_validation": true
+}

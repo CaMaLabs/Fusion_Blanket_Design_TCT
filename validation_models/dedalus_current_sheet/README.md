@@ -57,6 +57,18 @@ control = control_strength * Delp2(psi) * exp(-((z - z_sheet)/control_width)^2)
 This should be interpreted only as a TCT-style proxy perturbation for diagnostic
 testing. It is not a physical liquid-lithium actuator model.
 
+The benchmark also supports a biased wall-current proxy:
+
+```text
+bias = bias_polarity * bias_strength * wall_current_shape(x, z)
+```
+
+This is a prescribed reduced-MHD flux source near the two current-sheet/wall
+proxy layers. It can be run as a standing bias or an aspect-ratio-triggered
+bias. It is only meant to test whether a current-through-wall-style reduced
+proxy changes island count, peak current, or reconnection diagnostics. It is not
+liquid-lithium MHD, not an electrode/contact model, and not wall engineering.
+
 ## Outputs
 
 Each case writes:
@@ -137,6 +149,18 @@ python3 validation_models/dedalus_current_sheet/dedalus_current_sheet_benchmark.
   --stop-time 2.0
 ```
 
+For a compact biased TCT matrix:
+
+```bash
+python3 validation_models/dedalus_current_sheet/run_biased_tct_matrix.py \
+  --run-dir validation_runs/dedalus_current_sheet_biased_tct_matrix
+```
+
+The matrix compares baseline, smoothing-only, positive/negative bias-only, and
+smoothing-plus-bias cases. The polarity comparison is a falsification check: a
+biased mode that only helps for one sign should be treated as sign-sensitive
+reduced-model behavior, not general validation.
+
 ## Limitations
 
 - Periodic double-Harris geometry is a convenience, not tokamak geometry.
@@ -147,6 +171,9 @@ python3 validation_models/dedalus_current_sheet/dedalus_current_sheet_benchmark.
 - The optional drive term is artificial. It can test whether diagnostics respond
   when island-like structures are forced to appear, but it is not natural
   plasmoid onset.
+- The biased wall-current proxy is a prescribed flux source. It does not model
+  liquid-lithium flow, free surfaces, electrodes, contact resistance, sheath
+  physics, or wall engineering.
 - The plasmoid/island metric is a proxy based on local extrema, not a full
   magnetic-topology analysis.
 
