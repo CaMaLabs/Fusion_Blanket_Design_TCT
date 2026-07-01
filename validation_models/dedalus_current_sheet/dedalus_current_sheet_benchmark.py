@@ -111,6 +111,8 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     phi["g"] = 0.0
     control["g"] = 0.0
 
+    eta = cfg.eta
+    nu = cfg.nu
     dx = lambda a: d3.Differentiate(a, coords["x"])
     dz = lambda a: d3.Differentiate(a, coords["z"])
     lap = lambda a: d3.Laplacian(a)
@@ -236,6 +238,8 @@ def _count_island_proxy(psi_grid: np.ndarray, cfg: BenchmarkConfig) -> int:
 def _update_control(state: dict[str, Any], metrics: dict[str, float], cfg: BenchmarkConfig) -> bool:
     """Activate transparent smoothing forcing after aspect-ratio threshold crossing."""
     control = state["control"]
+    control.change_scales(1)
+    control.require_grid_space()
     if not cfg.control_enabled or cfg.control_strength <= 0.0:
         control["g"] = 0.0
         return False
@@ -243,7 +247,7 @@ def _update_control(state: dict[str, Any], metrics: dict[str, float], cfg: Bench
         control["g"] = 0.0
         return False
 
-    psi_grid = np.array(state["psi"]["g"], copy=False)
+    psi_grid = _psi_grid(state)
     z = state["z"]
     current = -_periodic_laplacian(psi_grid, cfg.lx / cfg.nx, cfg.lz / cfg.nz)
     iz = int(np.argmax(np.mean(np.abs(current), axis=0)))
@@ -253,6 +257,14 @@ def _update_control(state: dict[str, Any], metrics: dict[str, float], cfg: Bench
     # smoothing, proportional to Delp2(psi), near the active sheet.
     control["g"] = cfg.control_strength * _periodic_laplacian(psi_grid, cfg.lx / cfg.nx, cfg.lz / cfg.nz) * mask
     return True
+
+
+def _psi_grid(state: dict[str, Any]) -> np.ndarray:
+    """Return psi in physical grid layout at scale 1."""
+    psi = state["psi"]
+    psi.change_scales(1)
+    psi.require_grid_space()
+    return np.array(psi["g"], copy=True)
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
@@ -276,7 +288,7 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
 
     while solver.proceed:
         if solver.iteration % cfg.diagnostic_cadence == 0:
-            psi_grid = np.array(state["psi"]["g"], copy=True)
+            psi_grid = _psi_grid(state)
             metrics = compute_diagnostics(psi_grid, solver.sim_time, cfg)
             control_active = _update_control(state, metrics, cfg)
             control_active_once = control_active_once or control_active
@@ -285,12 +297,12 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
             if onset_time is None and metrics["island_count_proxy"] >= cfg.onset_island_count_threshold:
                 onset_time = float(metrics["time"])
         if solver.iteration % cfg.snapshot_cadence == 0:
-            snapshots.append(np.array(state["psi"]["g"], copy=True))
+            snapshots.append(_psi_grid(state))
             snapshot_times.append(float(solver.sim_time))
         solver.step(cfg.timestep)
 
     if not diagnostics:
-        psi_grid = np.array(state["psi"]["g"], copy=True)
+        psi_grid = _psi_grid(state)
         diagnostics.append(compute_diagnostics(psi_grid, solver.sim_time, cfg))
 
     _write_csv(case_dir / "diagnostics.csv", diagnostics)
