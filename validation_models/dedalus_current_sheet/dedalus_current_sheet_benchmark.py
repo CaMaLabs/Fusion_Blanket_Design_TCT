@@ -68,6 +68,17 @@ class BenchmarkConfig:
     onset_island_count_threshold: int = 3
     island_o_point_prominence: float = 2.0e-4
 
+    # Optional transparent onset driver. This is off by default. When enabled,
+    # the same small multimode flux source is applied to baseline and perturbed
+    # cases after drive_start_time, so the benchmark can exercise island-onset
+    # diagnostics without claiming spontaneous plasmoid formation.
+    drive_enabled: bool = False
+    drive_start_time: float = 0.5
+    drive_end_time: float = 0.7
+    drive_strength: float = 0.0
+    drive_kx: int = 4
+    drive_width: float = 0.45
+
 
 def _require_dedalus() -> None:
     if d3 is None:
@@ -103,6 +114,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     phi = dist.Field(name="phi", bases=bases)
     tau_phi = dist.Field(name="tau_phi")
     control = dist.Field(name="control", bases=bases)
+    drive = dist.Field(name="drive", bases=bases)
 
     x, z = dist.local_grids(xbasis, zbasis)
     psi["g"] = _double_harris_psi(z, cfg)
@@ -110,6 +122,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     omega["g"] = 0.0
     phi["g"] = 0.0
     control["g"] = 0.0
+    drive["g"] = 0.0
 
     eta = cfg.eta
     nu = cfg.nu
@@ -120,7 +133,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
     j_expr = -lap(psi)
 
     problem = d3.IVP([psi, omega, phi, tau_phi], namespace=locals())
-    problem.add_equation("dt(psi) - eta*lap(psi) = -bracket(phi, psi) + control")
+    problem.add_equation("dt(psi) - eta*lap(psi) = -bracket(phi, psi) + control + drive")
     problem.add_equation("dt(omega) - nu*lap(omega) = -bracket(phi, omega) + bracket(psi, j_expr)")
     problem.add_equation("lap(phi) + tau_phi + omega = 0")
     problem.add_equation("integ(phi) = 0")
@@ -141,6 +154,7 @@ def _build_problem(cfg: BenchmarkConfig) -> dict[str, Any]:
         "omega": omega,
         "phi": phi,
         "control": control,
+        "drive": drive,
         "j_expr": j_expr,
         "solver": solver,
     }
@@ -218,18 +232,24 @@ def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig)
 
 
 def _count_island_proxy(psi_grid: np.ndarray, cfg: BenchmarkConfig) -> int:
-    """Count robust local extrema of psi as a cheap island/plasmoid proxy."""
+    """Count robust local extrema of perturbed psi as an island/plasmoid proxy.
+
+    The Harris equilibrium contributes a large x-averaged flux variation. We
+    subtract the x-average before looking for extrema so the proxy is sensitive
+    to island-like perturbation flux rather than to the background sheet.
+    """
+    psi_perturb = psi_grid - np.mean(psi_grid, axis=0, keepdims=True)
     prominence = cfg.island_o_point_prominence
     extrema = 0
-    greater_than_neighbors = np.ones_like(psi_grid, dtype=bool)
-    less_than_neighbors = np.ones_like(psi_grid, dtype=bool)
+    greater_than_neighbors = np.ones_like(psi_perturb, dtype=bool)
+    less_than_neighbors = np.ones_like(psi_perturb, dtype=bool)
     for ax in (-1, 0, 1):
         for az in (-1, 0, 1):
             if ax == 0 and az == 0:
                 continue
-            neighbor = np.roll(np.roll(psi_grid, ax, axis=0), az, axis=1)
-            greater_than_neighbors &= psi_grid > neighbor + prominence
-            less_than_neighbors &= psi_grid < neighbor - prominence
+            neighbor = np.roll(np.roll(psi_perturb, ax, axis=0), az, axis=1)
+            greater_than_neighbors &= psi_perturb > neighbor + prominence
+            less_than_neighbors &= psi_perturb < neighbor - prominence
     extrema += int(np.count_nonzero(greater_than_neighbors))
     extrema += int(np.count_nonzero(less_than_neighbors))
     return extrema
@@ -259,6 +279,28 @@ def _update_control(state: dict[str, Any], metrics: dict[str, float], cfg: Bench
     return True
 
 
+def _update_drive(state: dict[str, Any], sim_time: float, cfg: BenchmarkConfig) -> bool:
+    """Apply the optional transparent island-onset drive after start time."""
+    drive = state["drive"]
+    drive.change_scales(1)
+    drive.require_grid_space()
+    if (
+        not cfg.drive_enabled
+        or cfg.drive_strength <= 0.0
+        or sim_time < cfg.drive_start_time
+        or sim_time > cfg.drive_end_time
+    ):
+        drive["g"] = 0.0
+        return False
+
+    x = state["x"]
+    z = state["z"]
+    sheet_mask = np.exp(-((z - cfg.lz / 4.0) / cfg.drive_width) ** 2) + np.exp(-((z + cfg.lz / 4.0) / cfg.drive_width) ** 2)
+    phase = 2.0 * np.pi * cfg.drive_kx * x / cfg.lx
+    drive["g"] = cfg.drive_strength * np.cos(phase) * sheet_mask
+    return True
+
+
 def _psi_grid(state: dict[str, Any]) -> np.ndarray:
     """Return psi in physical grid layout at scale 1."""
     psi = state["psi"]
@@ -284,17 +326,25 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
     snapshots: list[np.ndarray] = []
     snapshot_times: list[float] = []
     control_active_once = False
+    drive_active_once = False
     onset_time = None
+    initial_island_count = None
 
     while solver.proceed:
         if solver.iteration % cfg.diagnostic_cadence == 0:
             psi_grid = _psi_grid(state)
             metrics = compute_diagnostics(psi_grid, solver.sim_time, cfg)
+            if initial_island_count is None:
+                initial_island_count = int(metrics["island_count_proxy"])
             control_active = _update_control(state, metrics, cfg)
             control_active_once = control_active_once or control_active
+            drive_active = _update_drive(state, solver.sim_time, cfg)
+            drive_active_once = drive_active_once or drive_active
             metrics["control_active"] = bool(control_active)
+            metrics["drive_active"] = bool(drive_active)
             diagnostics.append(metrics)
-            if onset_time is None and metrics["island_count_proxy"] >= cfg.onset_island_count_threshold:
+            onset_count = max(cfg.onset_island_count_threshold, int(initial_island_count) + 1)
+            if onset_time is None and metrics["time"] > 0.0 and metrics["island_count_proxy"] >= onset_count:
                 onset_time = float(metrics["time"])
         if solver.iteration % cfg.snapshot_cadence == 0:
             snapshots.append(_psi_grid(state))
@@ -320,6 +370,9 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "case": case_name,
         "control_enabled": cfg.control_enabled,
         "control_active_once": control_active_once,
+        "drive_enabled": cfg.drive_enabled,
+        "drive_active_once": drive_active_once,
+        "initial_island_count_proxy": int(initial_island_count) if initial_island_count is not None else None,
         "time_to_secondary_island_proxy": onset_time,
         "max_aspect_ratio": max_aspect,
         "min_delta": min_delta,
@@ -342,6 +395,8 @@ def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkCo
         eta=args.eta,
         nu=args.nu,
         delta0=args.delta0,
+        perturbation_amplitude=args.perturbation_amplitude,
+        perturbation_kx=args.perturbation_kx,
         timestep=args.timestep,
         stop_time=args.stop_time,
         diagnostic_cadence=args.diagnostic_cadence,
@@ -350,6 +405,14 @@ def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkCo
         control_aspect_threshold=args.control_aspect_threshold,
         control_strength=args.control_strength,
         control_width=args.control_width,
+        onset_island_count_threshold=args.onset_island_count_threshold,
+        island_o_point_prominence=args.island_o_point_prominence,
+        drive_enabled=args.drive_enabled,
+        drive_start_time=args.drive_start_time,
+        drive_end_time=args.drive_end_time,
+        drive_strength=args.drive_strength,
+        drive_kx=args.drive_kx,
+        drive_width=args.drive_width,
     )
 
 
@@ -363,6 +426,8 @@ def main() -> int:
     parser.add_argument("--eta", type=float, default=BenchmarkConfig.eta)
     parser.add_argument("--nu", type=float, default=BenchmarkConfig.nu)
     parser.add_argument("--delta0", type=float, default=BenchmarkConfig.delta0)
+    parser.add_argument("--perturbation-amplitude", type=float, default=BenchmarkConfig.perturbation_amplitude)
+    parser.add_argument("--perturbation-kx", type=int, default=BenchmarkConfig.perturbation_kx)
     parser.add_argument("--timestep", type=float, default=BenchmarkConfig.timestep)
     parser.add_argument("--stop-time", type=float, default=BenchmarkConfig.stop_time)
     parser.add_argument("--diagnostic-cadence", type=int, default=BenchmarkConfig.diagnostic_cadence)
@@ -370,6 +435,14 @@ def main() -> int:
     parser.add_argument("--control-aspect-threshold", type=float, default=BenchmarkConfig.control_aspect_threshold)
     parser.add_argument("--control-strength", type=float, default=BenchmarkConfig.control_strength)
     parser.add_argument("--control-width", type=float, default=BenchmarkConfig.control_width)
+    parser.add_argument("--onset-island-count-threshold", type=int, default=BenchmarkConfig.onset_island_count_threshold)
+    parser.add_argument("--island-o-point-prominence", type=float, default=BenchmarkConfig.island_o_point_prominence)
+    parser.add_argument("--drive-enabled", action="store_true")
+    parser.add_argument("--drive-start-time", type=float, default=BenchmarkConfig.drive_start_time)
+    parser.add_argument("--drive-end-time", type=float, default=BenchmarkConfig.drive_end_time)
+    parser.add_argument("--drive-strength", type=float, default=BenchmarkConfig.drive_strength)
+    parser.add_argument("--drive-kx", type=int, default=BenchmarkConfig.drive_kx)
+    parser.add_argument("--drive-width", type=float, default=BenchmarkConfig.drive_width)
     parser.add_argument("--case", choices=("both", "baseline", "perturbed"), default="both")
     args = parser.parse_args()
 

@@ -37,6 +37,17 @@ The runner executes two cases by default:
   smoothing term is activated when the measured sheet aspect ratio `L/delta`
   crosses `control_aspect_threshold`.
 
+An optional onset driver can be enabled with `--drive-enabled`. This applies the
+same small, multimode flux source to both baseline and perturbed cases over a
+finite time window:
+
+```text
+drive_start_time <= t <= drive_end_time
+```
+
+Use this only as a driven-onset stress test. It is not spontaneous plasmoid
+formation from the unforced sheet.
+
 The control term is intentionally simple and easy to disable:
 
 ```text
@@ -107,6 +118,25 @@ python3 validation_models/dedalus_current_sheet/dedalus_current_sheet_benchmark.
   --snapshot-cadence 20
 ```
 
+For a finite-pulse island-onset stress test:
+
+```bash
+python3 validation_models/dedalus_current_sheet/dedalus_current_sheet_benchmark.py \
+  --run-dir validation_runs/dedalus_current_sheet_driven_pulse_compare \
+  --case both \
+  --nx 64 --nz 64 \
+  --eta 2e-4 --nu 2e-4 \
+  --delta0 0.16 \
+  --perturbation-amplitude 0.001 \
+  --drive-enabled \
+  --drive-start-time 0.5 \
+  --drive-end-time 0.7 \
+  --drive-strength 0.002 \
+  --drive-kx 4 \
+  --control-aspect-threshold 80 \
+  --stop-time 2.0
+```
+
 ## Limitations
 
 - Periodic double-Harris geometry is a convenience, not tokamak geometry.
@@ -114,6 +144,9 @@ python3 validation_models/dedalus_current_sheet/dedalus_current_sheet_benchmark.
 - There are no particles, no PIC effects, no kinetic closures, no sheath
   physics, and no experimental diagnostics.
 - The control term is a diagnostic perturbation, not a validated actuator.
+- The optional drive term is artificial. It can test whether diagnostics respond
+  when island-like structures are forced to appear, but it is not natural
+  plasmoid onset.
 - The plasmoid/island metric is a proxy based on local extrema, not a full
   magnetic-topology analysis.
 

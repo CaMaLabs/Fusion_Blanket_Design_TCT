@@ -21,7 +21,7 @@ def _float_series(rows: list[dict[str, Any]], key: str) -> np.ndarray:
     return np.asarray([float(row[key]) for row in rows], dtype=float)
 
 
-def _case_summary(case: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
+def _case_summary(case: str, rows: list[dict[str, Any]], case_dir: Path) -> dict[str, Any]:
     time = _float_series(rows, "time")
     aspect = _float_series(rows, "aspect_ratio")
     delta = _float_series(rows, "delta")
@@ -31,6 +31,8 @@ def _case_summary(case: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
     hits = np.where(island_count >= 3)[0]
     if len(hits):
         onset = float(time[int(hits[0])])
+    summary_path = case_dir / "summary.json"
+    run_summary = json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {}
     return {
         "case": case,
         "diagnostic_rows": len(rows),
@@ -38,7 +40,8 @@ def _case_summary(case: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
         "time_end": float(time[-1]),
         "min_delta": float(np.min(delta)),
         "max_aspect_ratio": float(np.max(aspect)),
-        "time_to_secondary_island_proxy": onset,
+        "time_to_secondary_island_proxy": run_summary.get("time_to_secondary_island_proxy", onset),
+        "initial_island_count_proxy": run_summary.get("initial_island_count_proxy"),
         "initial_magnetic_energy": float(energy[0]),
         "final_magnetic_energy": float(energy[-1]),
         "magnetic_energy_decay_fraction": float(1.0 - energy[-1] / energy[0]) if energy[0] else None,
@@ -102,7 +105,7 @@ def main() -> int:
     if not case_rows:
         raise SystemExit(f"No case diagnostics found under {args.run_dir}")
 
-    summaries = [_case_summary(case, rows) for case, rows in case_rows.items()]
+    summaries = [_case_summary(case, rows, args.run_dir / case) for case, rows in case_rows.items()]
     if not args.no_plots:
         _plot(args.run_dir, case_rows)
     output = {
