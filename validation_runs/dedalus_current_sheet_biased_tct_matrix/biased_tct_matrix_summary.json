@@ -23,6 +23,8 @@
       "magnetic_energy_decay_fraction": 0.000818211240572686,
       "matrix_case": "baseline",
       "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.71609619665357,
+      "min_current_weighted_delta_rms": 0.18360178923234677,
       "min_delta": 0.1,
       "onset_delay_vs_baseline": 0.0,
       "time_to_secondary_island_proxy": 0.5500000000000004
@@ -49,6 +51,8 @@
       "magnetic_energy_decay_fraction": 0.0076463007497794555,
       "matrix_case": "smoothing_only",
       "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.311232696211,
+      "min_current_weighted_delta_rms": 0.1846742512299847,
       "min_delta": 0.1,
       "onset_delay_vs_baseline": 0.0,
       "time_to_secondary_island_proxy": 0.5500000000000004
@@ -75,6 +79,8 @@
       "magnetic_energy_decay_fraction": 0.0008176212256176818,
       "matrix_case": "bias_positive_standing",
       "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.311232696211,
+      "min_current_weighted_delta_rms": 0.1846742512299847,
       "min_delta": 0.1,
       "onset_delay_vs_baseline": 0.050000000000000044,
       "time_to_secondary_island_proxy": 0.6000000000000004
@@ -101,6 +107,8 @@
       "magnetic_energy_decay_fraction": 0.0008176212256310045,
       "matrix_case": "bias_negative_standing",
       "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.311232696211,
+      "min_current_weighted_delta_rms": 0.1846742512299847,
       "min_delta": 0.1,
       "onset_delay_vs_baseline": 0.050000000000000044,
       "time_to_secondary_island_proxy": 0.6000000000000004
@@ -127,6 +135,8 @@
       "magnetic_energy_decay_fraction": 0.007645644243746252,
       "matrix_case": "smoothing_plus_bias_positive",
       "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.311232696211,
+      "min_current_weighted_delta_rms": 0.1846742512299847,
       "min_delta": 0.1,
       "onset_delay_vs_baseline": 0.050000000000000044,
       "time_to_secondary_island_proxy": 0.6000000000000004
@@ -153,6 +163,8 @@
       "magnetic_energy_decay_fraction": 0.007645644261199069,
       "matrix_case": "smoothing_plus_bias_negative",
       "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.311232696211,
+      "min_current_weighted_delta_rms": 0.1846742512299847,
       "min_delta": 0.1,
       "onset_delay_vs_baseline": 0.050000000000000044,
       "time_to_secondary_island_proxy": 0.6000000000000004

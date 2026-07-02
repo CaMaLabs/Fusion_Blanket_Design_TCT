@@ -90,6 +90,8 @@ The runner computes:
 - current-sheet half-thickness `delta`
 - sheet length `L`
 - aspect ratio `L/delta`
+- RMS current-profile width `current_weighted_delta_rms`
+- RMS-width aspect ratio `current_weighted_aspect_ratio`
 - max `|J|`
 - `J` p99
 - reconnection-rate proxy `eta max(|J|)` at the active sheet
@@ -98,8 +100,9 @@ The runner computes:
 - time-to-onset of secondary islands, based on the island proxy crossing a
   configurable count threshold
 
-The island count is a deliberately cheap local-extrema proxy on `psi`; it is a
-screening diagnostic, not a rigorous magnetic-island topology classifier.
+The island count is a deliberately cheap local-extrema proxy on the perturbation
+flux; it is a screening diagnostic, not a rigorous magnetic-island topology
+classifier.
 
 Implementation details:
 
@@ -107,17 +110,35 @@ Implementation details:
   minima of the perturbation flux `psi - <psi>_x`. The x-averaged Harris-sheet
   equilibrium is subtracted before extrema are counted, so the proxy responds to
   island-like perturbation structure rather than the background sheet.
+- Candidate O-point proxies are detected on the periodic grid by comparing each
+  cell to its eight neighbors. A local maximum must exceed all neighbors by
+  `island_o_point_prominence`; a local minimum must be lower than all neighbors
+  by the same prominence.
 - `time_to_secondary_island_proxy` is the first diagnostic time after `t=0` when
   the island proxy reaches `max(onset_island_count_threshold,
   initial_island_count_proxy + 1)`.
 - `delta` is estimated from the half-maximum current-sheet width in `z`.
 - `L` is estimated as the active `x` extent where sheet current exceeds half of
   the local sheet peak.
+- `current_weighted_delta_rms` is a smoother RMS width of the x-averaged `|J|`
+  profile around each of the two strongest current-sheet peaks. A +/- `nz/4`
+  window prevents the two periodic sheets from being mixed.
+- `current_weighted_aspect_ratio` is `L/current_weighted_delta_rms`.
 - `max_aspect_ratio` and `min_delta` can remain identical across matrix cases
   when the proxy changes island content or magnetic energy without changing the
   half-maximum sheet-width diagnostic on this coarse grid. In that situation the
-  island proxy and current/energy metrics are more sensitive than the simple
-  width metric.
+  island proxy, current/energy metrics, and RMS-width diagnostic are more
+  sensitive than the simple half-width metric.
+
+Island proxy failure modes:
+
+- It is not a topological magnetic-island count and does not trace separatrices.
+- It does not robustly distinguish all O-points from X-points.
+- It can count grid noise if `island_o_point_prominence` is too small.
+- It can miss broad or weak islands if the prominence threshold is too large.
+- It can double-count one physical island if multiple extrema sit inside the
+  same island-like structure.
+- It can be resolution and cadence sensitive.
 
 ## Example
 
@@ -197,6 +218,45 @@ Matrix cases:
 
 The output also includes `benchmark_case`, which records the underlying
 single-case benchmark directory name: `baseline` or `tct_style_perturbed`.
+
+For the compact parameter sweep:
+
+```bash
+. .venv-dedalus/bin/activate
+export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/mpich/lib:/usr/lib/aarch64-linux-gnu:${LD_LIBRARY_PATH:-}
+export UCX_TLS=self
+export OMP_NUM_THREADS=1
+python validation_models/dedalus_current_sheet/run_biased_tct_parameter_sweep.py \
+  --run-dir validation_runs/dedalus_current_sheet_biased_tct_parameter_sweep \
+  --python /root/Fusion_Blanket_Design_TCT/.venv-dedalus/bin/python
+```
+
+This sweep includes one unbiased baseline reference plus the requested 16-case
+grid:
+
+- `bias_strength`: `0.0005`, `0.0010`, `0.0015`, `0.0020`
+- `bias_polarity`: `+1`, `-1`
+- `control_enabled`: `false`, `true`
+
+Reductions are computed relative to `reference_unbiased_baseline`.
+
+For the first resolution sanity check:
+
+```bash
+. .venv-dedalus/bin/activate
+export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/mpich/lib:/usr/lib/aarch64-linux-gnu:${LD_LIBRARY_PATH:-}
+export UCX_TLS=self
+export OMP_NUM_THREADS=1
+python validation_models/dedalus_current_sheet/run_biased_tct_resolution_check.py \
+  --run-dir validation_runs/dedalus_current_sheet_biased_tct_resolution_check \
+  --python /root/Fusion_Blanket_Design_TCT/.venv-dedalus/bin/python
+```
+
+The resolution check compares `baseline`, `smoothing_only`, and
+`smoothing_plus_bias_positive` at `64x64` and `96x96`. Reductions are computed
+relative to the baseline at the same resolution. Passing this check only means
+the direction of the island-proxy reduction persists qualitatively across this
+small grid change.
 
 ## Limitations
 

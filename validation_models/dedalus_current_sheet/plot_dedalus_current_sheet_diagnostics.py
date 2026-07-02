@@ -25,6 +25,8 @@ def _case_summary(case: str, rows: list[dict[str, Any]], case_dir: Path) -> dict
     time = _float_series(rows, "time")
     aspect = _float_series(rows, "aspect_ratio")
     delta = _float_series(rows, "delta")
+    weighted_aspect = _float_series(rows, "current_weighted_aspect_ratio") if "current_weighted_aspect_ratio" in rows[0] else None
+    weighted_delta = _float_series(rows, "current_weighted_delta_rms") if "current_weighted_delta_rms" in rows[0] else None
     energy = _float_series(rows, "magnetic_energy")
     island_count = _float_series(rows, "island_count_proxy")
     onset = None
@@ -40,6 +42,8 @@ def _case_summary(case: str, rows: list[dict[str, Any]], case_dir: Path) -> dict
         "time_end": float(time[-1]),
         "min_delta": float(np.min(delta)),
         "max_aspect_ratio": float(np.max(aspect)),
+        "min_current_weighted_delta_rms": None if weighted_delta is None else float(np.min(weighted_delta)),
+        "max_current_weighted_aspect_ratio": None if weighted_aspect is None else float(np.max(weighted_aspect)),
         "time_to_secondary_island_proxy": run_summary.get("time_to_secondary_island_proxy", onset),
         "initial_island_count_proxy": run_summary.get("initial_island_count_proxy"),
         "initial_magnetic_energy": float(energy[0]),
@@ -56,13 +60,17 @@ def _plot(run_dir: Path, case_rows: dict[str, list[dict[str, Any]]]) -> None:
     plot_dir.mkdir(parents=True, exist_ok=True)
     metrics = [
         ("delta", "Current-sheet half-thickness delta"),
+        ("current_weighted_delta_rms", "RMS current-profile width"),
         ("aspect_ratio", "Sheet aspect ratio L/delta"),
+        ("current_weighted_aspect_ratio", "RMS-width sheet aspect ratio"),
         ("reconnection_rate_proxy", "Reconnection rate proxy eta max|J|"),
         ("magnetic_energy", "Magnetic energy"),
         ("island_count_proxy", "Island/plasmoid count proxy"),
         ("max_abs_J", "Max |J|"),
     ]
     for key, ylabel in metrics:
+        if not all(key in rows[0] for rows in case_rows.values()):
+            continue
         fig, ax = plt.subplots(figsize=(7, 4), dpi=140)
         for case, rows in case_rows.items():
             ax.plot(_float_series(rows, "time"), _float_series(rows, key), label=case)

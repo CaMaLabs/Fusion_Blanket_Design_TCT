@@ -188,11 +188,12 @@ def _periodic_laplacian(values: np.ndarray, dx: float, dz: float) -> np.ndarray:
 def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig) -> dict[str, float]:
     """Compute sheet and reconnection diagnostics from psi on the grid.
 
-    The current density proxy is J = -Delp2(psi). The sheet half-thickness delta
-    is estimated from each strong current-sheet peak using the half-maximum
-    width in z, then averaged over the two strongest sheets. Sheet length L is
-    estimated as the x-extent where the sheet current exceeds half of its local
-    peak. Island count is a simple count of robust local extrema of psi.
+    The current density proxy is J = -Delp2(psi). The legacy delta/aspect
+    metric is a half-maximum current-profile diagnostic: find the two strongest
+    peaks in <|J|>_x, estimate each sheet's z-width above half maximum, and
+    average those half-widths. Sheet length L is the x-extent where |J| at the
+    active sheet exceeds half of its local peak. These metrics can be insensitive
+    on coarse grids, so an RMS current-profile width is also reported.
     """
     dx = cfg.lx / cfg.nx
     dz = cfg.lz / cfg.nz
@@ -202,6 +203,7 @@ def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig)
     peak_indices = np.argsort(j_profile)[-2:]
 
     deltas = []
+    weighted_deltas = []
     lengths = []
     for iz in peak_indices:
         peak = float(j_profile[iz])
@@ -215,13 +217,27 @@ def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig)
         full_width = max(1, right - left - 1) * dz
         deltas.append(0.5 * full_width)
 
+        # A smoother companion diagnostic: RMS width of <|J|>_x around the sheet
+        # peak. The +/- nz/4 window avoids mixing the two sheets in the periodic
+        # double-Harris box. This is still a profile proxy, not a separatrix fit.
+        offsets = np.arange(cfg.nz) - int(iz)
+        offsets = (offsets + cfg.nz // 2) % cfg.nz - cfg.nz // 2
+        window = np.abs(offsets) <= cfg.nz // 4
+        weights = np.where(window, j_profile, 0.0)
+        weight_sum = float(np.sum(weights))
+        if weight_sum > 0.0:
+            distances = offsets * dz
+            weighted_deltas.append(float(np.sqrt(np.sum(weights * distances * distances) / weight_sum)))
+
         sheet_row = abs_j[:, iz]
         active = sheet_row >= half
         lengths.append(float(np.count_nonzero(active) * dx))
 
     delta = float(np.mean(deltas))
+    weighted_delta = float(np.mean(weighted_deltas)) if weighted_deltas else float("nan")
     length = float(np.max(lengths))
     aspect = float(length / delta) if delta > 0 else float("inf")
+    weighted_aspect = float(length / weighted_delta) if weighted_delta > 0 else float("inf")
 
     bx = -_periodic_gradient(psi_grid, dz, axis=1)
     bz = _periodic_gradient(psi_grid, dx, axis=0)
@@ -234,6 +250,12 @@ def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig)
     island_count = _count_island_proxy(psi_grid, cfg)
     return {
         "time": float(time),
+        "current_profile_delta_halfmax": delta,
+        "current_profile_sheet_length_halfmax": length,
+        "current_profile_aspect_ratio_halfmax": aspect,
+        "current_weighted_delta_rms": weighted_delta,
+        "current_weighted_aspect_ratio": weighted_aspect,
+        # Backward-compatible aliases used by older artifact scripts.
         "delta": delta,
         "sheet_length": length,
         "aspect_ratio": aspect,
@@ -252,6 +274,15 @@ def _count_island_proxy(psi_grid: np.ndarray, cfg: BenchmarkConfig) -> int:
     subtract the x-average before looking for extrema so the proxy is sensitive
     to island-like perturbation flux rather than to the background sheet.
     """
+    # Field analyzed: perturbation flux psi - <psi>_x, not the raw equilibrium
+    # flux. Candidate O-point proxies are local maxima and local minima on the
+    # periodic grid. A candidate must exceed every one of its eight neighboring
+    # cells by `island_o_point_prominence` for maxima, or be lower by that same
+    # prominence for minima. This is a deliberately cheap morphology diagnostic:
+    # it does not trace separatrices, distinguish all O-points from X-points, or
+    # merge duplicate extrema belonging to one physical island. It can fail by
+    # counting grid noise, missing weak/broad islands, double-counting periodic
+    # structures, or changing with the prominence threshold.
     psi_perturb = psi_grid - np.mean(psi_grid, axis=0, keepdims=True)
     prominence = cfg.island_o_point_prominence
     extrema = 0
@@ -407,6 +438,8 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
     )
     max_aspect = max(row["aspect_ratio"] for row in diagnostics)
     min_delta = min(row["delta"] for row in diagnostics)
+    max_weighted_aspect = max(row["current_weighted_aspect_ratio"] for row in diagnostics)
+    min_weighted_delta = min(row["current_weighted_delta_rms"] for row in diagnostics)
     final_energy = diagnostics[-1]["magnetic_energy"]
     initial_energy = diagnostics[0]["magnetic_energy"]
     summary = {
@@ -424,6 +457,8 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "time_to_secondary_island_proxy": onset_time,
         "max_aspect_ratio": max_aspect,
         "min_delta": min_delta,
+        "max_current_weighted_aspect_ratio": max_weighted_aspect,
+        "min_current_weighted_delta_rms": min_weighted_delta,
         "initial_magnetic_energy": initial_energy,
         "final_magnetic_energy": final_energy,
         "magnetic_energy_decay_fraction": 1.0 - final_energy / initial_energy if initial_energy else None,

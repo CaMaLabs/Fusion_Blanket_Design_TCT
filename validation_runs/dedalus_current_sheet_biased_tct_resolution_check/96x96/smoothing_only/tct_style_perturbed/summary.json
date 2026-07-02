@@ -1,0 +1,21 @@
+{
+  "bias_active_once": false,
+  "bias_enabled": false,
+  "bias_mode": "standing",
+  "bias_polarity": 1.0,
+  "bias_strength": 0.0,
+  "case": "tct_style_perturbed",
+  "control_active_once": false,
+  "control_enabled": true,
+  "diagnostic_rows": 41,
+  "drive_active_once": true,
+  "drive_enabled": true,
+  "final_island_count_proxy": 24,
+  "final_magnetic_energy": 0.47095301224968406,
+  "initial_island_count_proxy": 0,
+  "initial_magnetic_energy": 0.471394053279803,
+  "magnetic_energy_decay_fraction": 0.0009356100847057736,
+  "max_aspect_ratio": 64.0,
+  "min_delta": 0.2,
+  "time_to_secondary_island_proxy": 0.6500000000000005
+}

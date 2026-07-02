@@ -1,0 +1,28 @@
+{
+  "artifact_type": "dedalus_reduced_mhd_toy_benchmark",
+  "cases": [
+    {
+      "bias_active_once": true,
+      "bias_enabled": true,
+      "bias_mode": "standing",
+      "bias_polarity": 1.0,
+      "bias_strength": 0.001,
+      "case": "baseline",
+      "control_active_once": false,
+      "control_enabled": false,
+      "diagnostic_rows": 41,
+      "drive_active_once": true,
+      "drive_enabled": true,
+      "final_island_count_proxy": 15,
+      "final_magnetic_energy": 0.46707871729742667,
+      "initial_island_count_proxy": 0,
+      "initial_magnetic_energy": 0.46746107662319925,
+      "magnetic_energy_decay_fraction": 0.0008179490120003852,
+      "max_aspect_ratio": 128.0,
+      "min_delta": 0.1,
+      "time_to_secondary_island_proxy": 0.6000000000000004
+    }
+  ],
+  "not_reactor_claim": true,
+  "not_tokamak_validation": true
+}
