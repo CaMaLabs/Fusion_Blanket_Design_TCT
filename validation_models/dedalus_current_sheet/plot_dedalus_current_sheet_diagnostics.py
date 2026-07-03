@@ -29,6 +29,7 @@ def _case_summary(case: str, rows: list[dict[str, Any]], case_dir: Path) -> dict
     weighted_delta = _float_series(rows, "current_weighted_delta_rms") if "current_weighted_delta_rms" in rows[0] else None
     energy = _float_series(rows, "magnetic_energy")
     island_count = _float_series(rows, "island_count_proxy")
+    component_count = _float_series(rows, "component_count_proxy") if "component_count_proxy" in rows[0] else None
     onset = None
     hits = np.where(island_count >= 3)[0]
     if len(hits):
@@ -50,6 +51,7 @@ def _case_summary(case: str, rows: list[dict[str, Any]], case_dir: Path) -> dict
         "final_magnetic_energy": float(energy[-1]),
         "magnetic_energy_decay_fraction": float(1.0 - energy[-1] / energy[0]) if energy[0] else None,
         "final_island_count_proxy": int(island_count[-1]),
+        "final_component_count_proxy": None if component_count is None else int(component_count[-1]),
     }
 
 
@@ -66,6 +68,7 @@ def _plot(run_dir: Path, case_rows: dict[str, list[dict[str, Any]]]) -> None:
         ("reconnection_rate_proxy", "Reconnection rate proxy eta max|J|"),
         ("magnetic_energy", "Magnetic energy"),
         ("island_count_proxy", "Island/plasmoid count proxy"),
+        ("component_count_proxy", "Component count morphology proxy"),
         ("max_abs_J", "Max |J|"),
     ]
     for key, ylabel in metrics:

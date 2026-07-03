@@ -67,6 +67,8 @@ class BenchmarkConfig:
     # Island proxy thresholds.
     onset_island_count_threshold: int = 3
     island_o_point_prominence: float = 2.0e-4
+    component_threshold_fraction: float = 0.30
+    component_min_cells: int = 3
 
     # Optional transparent onset driver. This is off by default. When enabled,
     # the same small multimode flux source is applied to baseline and perturbed
@@ -248,6 +250,7 @@ def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig)
     reconnection_rate_proxy = float(cfg.eta * abs_j[center_x, center_z])
 
     island_count = _count_island_proxy(psi_grid, cfg)
+    component_count = _count_component_proxy(psi_grid, cfg)
     return {
         "time": float(time),
         "current_profile_delta_halfmax": delta,
@@ -264,6 +267,7 @@ def compute_diagnostics(psi_grid: np.ndarray, time: float, cfg: BenchmarkConfig)
         "reconnection_rate_proxy": reconnection_rate_proxy,
         "magnetic_energy": magnetic_energy,
         "island_count_proxy": int(island_count),
+        "component_count_proxy": int(component_count),
     }
 
 
@@ -298,6 +302,50 @@ def _count_island_proxy(psi_grid: np.ndarray, cfg: BenchmarkConfig) -> int:
     extrema += int(np.count_nonzero(greater_than_neighbors))
     extrema += int(np.count_nonzero(less_than_neighbors))
     return extrema
+
+
+def _count_component_proxy(psi_grid: np.ndarray, cfg: BenchmarkConfig) -> int:
+    """Count connected perturbation-flux structures as a second morphology proxy.
+
+    This diagnostic subtracts the x-averaged equilibrium flux, thresholds
+    positive and negative perturbation lobes, and counts periodic 4-connected
+    components with at least `component_min_cells`. The threshold is the larger
+    of `component_threshold_fraction * max(abs(psi_perturb))` and five times the
+    local-extrema prominence. It is independent of the extrema detector but is
+    still not a magnetic-topology count; broad, merged, or threshold-sensitive
+    structures can be over- or under-counted.
+    """
+    psi_perturb = psi_grid - np.mean(psi_grid, axis=0, keepdims=True)
+    amplitude = float(np.max(np.abs(psi_perturb)))
+    if amplitude <= 0.0:
+        return 0
+    threshold = max(cfg.component_threshold_fraction * amplitude, 5.0 * cfg.island_o_point_prominence)
+    return _count_periodic_components(psi_perturb > threshold, cfg.component_min_cells) + _count_periodic_components(
+        psi_perturb < -threshold, cfg.component_min_cells
+    )
+
+
+def _count_periodic_components(mask: np.ndarray, min_cells: int) -> int:
+    """Count periodic 4-connected components in a boolean mask."""
+    visited = np.zeros_like(mask, dtype=bool)
+    nx, nz = mask.shape
+    components = 0
+    for start_x, start_z in zip(*np.nonzero(mask)):
+        if visited[start_x, start_z]:
+            continue
+        stack = [(int(start_x), int(start_z))]
+        visited[start_x, start_z] = True
+        size = 0
+        while stack:
+            x, z = stack.pop()
+            size += 1
+            for nx_i, nz_i in (((x + 1) % nx, z), ((x - 1) % nx, z), (x, (z + 1) % nz), (x, (z - 1) % nz)):
+                if mask[nx_i, nz_i] and not visited[nx_i, nz_i]:
+                    visited[nx_i, nz_i] = True
+                    stack.append((nx_i, nz_i))
+        if size >= min_cells:
+            components += 1
+    return components
 
 
 def _update_control(state: dict[str, Any], metrics: dict[str, float], cfg: BenchmarkConfig) -> bool:
@@ -399,7 +447,9 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
     drive_active_once = False
     bias_active_once = False
     onset_time = None
+    component_onset_time = None
     initial_island_count = None
+    initial_component_count = None
 
     while solver.proceed:
         if solver.iteration % cfg.diagnostic_cadence == 0:
@@ -407,6 +457,8 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
             metrics = compute_diagnostics(psi_grid, solver.sim_time, cfg)
             if initial_island_count is None:
                 initial_island_count = int(metrics["island_count_proxy"])
+            if initial_component_count is None:
+                initial_component_count = int(metrics["component_count_proxy"])
             control_active = _update_control(state, metrics, cfg)
             control_active_once = control_active_once or control_active
             drive_active = _update_drive(state, solver.sim_time, cfg)
@@ -420,6 +472,13 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
             onset_count = max(cfg.onset_island_count_threshold, int(initial_island_count) + 1)
             if onset_time is None and metrics["time"] > 0.0 and metrics["island_count_proxy"] >= onset_count:
                 onset_time = float(metrics["time"])
+            component_onset_count = max(cfg.onset_island_count_threshold, int(initial_component_count) + 1)
+            if (
+                component_onset_time is None
+                and metrics["time"] > 0.0
+                and metrics["component_count_proxy"] >= component_onset_count
+            ):
+                component_onset_time = float(metrics["time"])
         if solver.iteration % cfg.snapshot_cadence == 0:
             snapshots.append(_psi_grid(state))
             snapshot_times.append(float(solver.sim_time))
@@ -440,6 +499,8 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
     min_delta = min(row["delta"] for row in diagnostics)
     max_weighted_aspect = max(row["current_weighted_aspect_ratio"] for row in diagnostics)
     min_weighted_delta = min(row["current_weighted_delta_rms"] for row in diagnostics)
+    max_abs_j = max(row["max_abs_J"] for row in diagnostics)
+    max_j_p99 = max(row["J_p99"] for row in diagnostics)
     final_energy = diagnostics[-1]["magnetic_energy"]
     initial_energy = diagnostics[0]["magnetic_energy"]
     summary = {
@@ -455,14 +516,19 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "bias_polarity": cfg.bias_polarity,
         "initial_island_count_proxy": int(initial_island_count) if initial_island_count is not None else None,
         "time_to_secondary_island_proxy": onset_time,
+        "initial_component_count_proxy": int(initial_component_count) if initial_component_count is not None else None,
+        "time_to_secondary_component_proxy": component_onset_time,
         "max_aspect_ratio": max_aspect,
         "min_delta": min_delta,
         "max_current_weighted_aspect_ratio": max_weighted_aspect,
         "min_current_weighted_delta_rms": min_weighted_delta,
+        "max_abs_J": max_abs_j,
+        "max_J_p99": max_j_p99,
         "initial_magnetic_energy": initial_energy,
         "final_magnetic_energy": final_energy,
         "magnetic_energy_decay_fraction": 1.0 - final_energy / initial_energy if initial_energy else None,
         "final_island_count_proxy": diagnostics[-1]["island_count_proxy"],
+        "final_component_count_proxy": diagnostics[-1]["component_count_proxy"],
         "diagnostic_rows": len(diagnostics),
     }
     (case_dir / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8")
@@ -490,6 +556,8 @@ def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkCo
         control_width=args.control_width,
         onset_island_count_threshold=args.onset_island_count_threshold,
         island_o_point_prominence=args.island_o_point_prominence,
+        component_threshold_fraction=args.component_threshold_fraction,
+        component_min_cells=args.component_min_cells,
         drive_enabled=args.drive_enabled,
         drive_start_time=args.drive_start_time,
         drive_end_time=args.drive_end_time,
@@ -527,6 +595,8 @@ def main() -> int:
     parser.add_argument("--control-width", type=float, default=BenchmarkConfig.control_width)
     parser.add_argument("--onset-island-count-threshold", type=int, default=BenchmarkConfig.onset_island_count_threshold)
     parser.add_argument("--island-o-point-prominence", type=float, default=BenchmarkConfig.island_o_point_prominence)
+    parser.add_argument("--component-threshold-fraction", type=float, default=BenchmarkConfig.component_threshold_fraction)
+    parser.add_argument("--component-min-cells", type=int, default=BenchmarkConfig.component_min_cells)
     parser.add_argument("--drive-enabled", action="store_true")
     parser.add_argument("--drive-start-time", type=float, default=BenchmarkConfig.drive_start_time)
     parser.add_argument("--drive-end-time", type=float, default=BenchmarkConfig.drive_end_time)

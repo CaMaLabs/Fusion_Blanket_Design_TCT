@@ -97,6 +97,7 @@ The runner computes:
 - reconnection-rate proxy `eta max(|J|)` at the active sheet
 - magnetic energy
 - island/plasmoid proxy count
+- connected-component morphology proxy count
 - time-to-onset of secondary islands, based on the island proxy crossing a
   configurable count threshold
 
@@ -124,6 +125,11 @@ Implementation details:
   profile around each of the two strongest current-sheet peaks. A +/- `nz/4`
   window prevents the two periodic sheets from being mixed.
 - `current_weighted_aspect_ratio` is `L/current_weighted_delta_rms`.
+- `component_count_proxy` is an independent morphology proxy. It thresholds the
+  positive and negative lobes of perturbation flux `psi - <psi>_x` and counts
+  periodic 4-connected components with at least `component_min_cells`. The
+  threshold is `max(component_threshold_fraction * max(abs(psi_perturb)),
+  5 * island_o_point_prominence)`.
 - `max_aspect_ratio` and `min_delta` can remain identical across matrix cases
   when the proxy changes island content or magnetic energy without changing the
   half-maximum sheet-width diagnostic on this coarse grid. In that situation the
@@ -139,6 +145,15 @@ Island proxy failure modes:
 - It can double-count one physical island if multiple extrema sit inside the
   same island-like structure.
 - It can be resolution and cadence sensitive.
+
+Component proxy failure modes:
+
+- It is also not a topological island count.
+- It can merge nearby structures into one component.
+- It can split one broad structure if the contour is noisy.
+- It depends on the threshold fraction and minimum cell count.
+- It can disagree with the local-extrema proxy; such disagreement should be
+  treated as a warning, not averaged away.
 
 ## Example
 
@@ -257,6 +272,30 @@ The resolution check compares `baseline`, `smoothing_only`, and
 relative to the baseline at the same resolution. Passing this check only means
 the direction of the island-proxy reduction persists qualitatively across this
 small grid change.
+
+For the compact numerical falsification study:
+
+```bash
+. .venv-dedalus/bin/activate
+export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/mpich/lib:/usr/lib/aarch64-linux-gnu:${LD_LIBRARY_PATH:-}
+export UCX_TLS=self
+export OMP_NUM_THREADS=1
+python validation_models/dedalus_current_sheet/run_biased_tct_falsification_study.py \
+  --run-dir validation_runs/dedalus_current_sheet_biased_tct_falsification_study \
+  --python /root/Fusion_Blanket_Design_TCT/.venv-dedalus/bin/python
+```
+
+This study compares `baseline`, `smoothing_only`,
+`smoothing_plus_bias_positive_0.0015`, and
+`smoothing_plus_bias_negative_0.0020` across a compact grid:
+
+- `64x64` and `96x96` at nominal timestep and prominence.
+- `64x64` at half timestep.
+- `64x64` across local-extrema prominence `5e-6`, `1e-5`, and `2e-5`.
+
+The intended falsification readout is strict: a candidate is more credible only
+if both island and component morphology proxies improve versus the matched
+condition baseline, and if resolution/timestep changes do not flip the result.
 
 ## Limitations
 
