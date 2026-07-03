@@ -3,7 +3,7 @@
 ## Source
 
 - Uploaded audio:
-  `/tmp/codex-web-uploads/f-3YI40T/Liquid_lithium_actuators_for_fusion_stability.m4a`
+  `validation_runs/notebooklm_audio_review_default/Liquid_lithium_actuators_for_fusion_stability.m4a`
 - Duration: approximately `2155.09 s` (`35.9 min`)
 - Transcript artifact:
   `validation_runs/notebooklm_audio_review_default/liquid_lithium_actuators_transcript_tiny_en.txt`

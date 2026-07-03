@@ -6,6 +6,20 @@ This repository is Chase Lunsford's public research workspace for fusion blanket
 
 The project combines a plasma/plant optimizer, blanket design search, TCT/plasmoid-control proxies, wall-event modeling, lithium-wall thermal handling, and OpenMC-style finalist validation workflows.
 
+## Audio overview
+
+Start here for a narrative overview of the liquid-lithium actuator / TCT
+hypothesis:
+
+- [`Liquid_lithium_actuators_for_fusion_stability.m4a`](validation_runs/notebooklm_audio_review_default/Liquid_lithium_actuators_for_fusion_stability.m4a)
+- [`NotebookLM audio review note`](validation_runs/notebooklm_audio_review_default/NOTEBOOKLM_AUDIO_REVIEW.md)
+- [`Automatic transcript`](validation_runs/notebooklm_audio_review_default/liquid_lithium_actuators_transcript_tiny_en.txt)
+
+Important boundary: the audio is a front-facing narrative and review aid, not
+validation evidence. The current committed evidence supports reduced-model
+toy/proxy studies and validation harnesses, not full tokamak-grade or
+liquid-lithium actuator validation.
+
 ## Current best configuration
 
 For the current mainline candidate and best-supported screening/validation basin, start here:
