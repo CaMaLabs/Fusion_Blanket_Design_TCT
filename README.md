@@ -4,7 +4,12 @@
 
 This repository is Chase Lunsford's public research workspace for fusion blanket optimization and thickness-controlled tokamak (TCT) concept exploration.
 
-The project combines a plasma/plant optimizer, blanket design search, TCT/plasmoid-control proxies, wall-event modeling, lithium-wall thermal handling, and OpenMC-style finalist validation workflows.
+The project combines a plasma/plant optimizer, blanket design search,
+TCT/plasmoid-control proxies, wall-event modeling, lithium-wall thermal
+handling, OpenMC-style finalist validation workflows, FAIR-MAST experimental
+precursor screens, BOUT++ reduced-MHD actuator studies, Dedalus current-sheet
+toy falsification studies, GEQDSK/EFIT anchoring, and M3D-C1-facing diagnostic
+contracts.
 
 ## Audio overview
 
@@ -36,6 +41,30 @@ Current short form:
 
 This is not a demonstrated reactor design. It is the current best configuration for deeper validation and review.
 
+## Repository-wide status snapshot
+
+This repo is now best read as an open validation and falsification pipeline, not
+as a single simulation result. The strongest committed evidence currently spans:
+
+| Area | Current evidence | Claim boundary |
+| --- | --- | --- |
+| Blanket / neutronics screening | OpenMC-style and optimizer artifacts favor the `be_outer_kill` / `be_outer_killer` Be/Li2O/W-Ti-B4C/Be basin. | Screening basin only; final TBR and engineering constraints are not experimentally validated. |
+| Experimental precursor timing | FAIR-MAST public diagnostics provide held-out timing support for Mirnov/toroidal precursor logic, including claim gates, nulls, fresh-trigger searches, and external-review packets. | Supports a timing prerequisite for preventative control; does not prove causal TCT suppression. |
+| Forward control policy | FAIR-MAST reduced-order forward surrogate and sensitivity sweeps favor standing preventative bias plus fast bounded boost for the current trigger family. | Reduced-order policy evidence only; no measured TCT actuator transfer function. |
+| BOUT++ reduced-MHD bridge | Resolved actuator robustness and closed-loop trigger studies pass with `PASS_WITH_REDUCED_MODEL_BOUNDARIES`; delayed triggers preserve the known timing falsification boundary. | Reduced-model current-sheet actuator evidence, not tokamak-grade validation. |
+| Dedalus toy falsification | Biased current-sheet toy studies include matrix, parameter sweep, resolution check, and compact falsification study with an independent component proxy. | Numerical toy stress test with prescribed source terms; not liquid-lithium wall physics. |
+| M3D-C1 / GEQDSK path | Candidate-0 handoff, public `C1.h5` integration checks, DIII-D GEQDSK/EFIT anchors, and M3D-C1-compatible contracts exist. | Harness/proxy/integration evidence only; not full M3D-C1 reactor validation. |
+| Narrative / external review aids | NotebookLM audio overview, transcript, review note, and public positioning docs are committed. | Review/navigation aids only; not validation evidence. |
+
+The conservative whole-repo claim is:
+
+> This repository preserves a public, reproducible screening and falsification
+> pipeline for a liquid-lithium-wall / TCT-coupled fusion concept. Current
+> evidence is strongest for precursor timing, reduced-model current-sheet
+> response, and reviewable validation scaffolding. It does not yet prove TCT,
+> liquid-lithium actuation, final blanket TBR, sustained fusion, or reactor
+> engineering viability.
+
 ## Citation / attribution
 
 If this repository, its concepts, simulation structure, candidate geometries, validation workflow, or documentation influence downstream work, please cite or link back to this repository and credit:
@@ -59,7 +88,15 @@ Validated / implemented:
 - Candidate scoring and filtering logic.
 - Explicit-layer validation concepts for finalist blanket candidates.
 - Reproducible scripts and committed outputs where available.
-- Draft reproducibility path for testing assumptions against higher-fidelity validation workflows, including OpenMC-style neutronics and companion M3D-C1/BOUT++/FreeGSNKE validation work.
+- FAIR-MAST experimental precursor/latency screens, fresh-trigger searches, null
+  tests, and external-review packets.
+- BOUT++ reduced-MHD actuator robustness and closed-loop trigger bridge with
+  `PASS_WITH_REDUCED_MODEL_BOUNDARIES`.
+- Dedalus reduced-MHD current-sheet toy matrix, parameter sweep, resolution
+  check, and compact falsification study.
+- GEQDSK/EFIT readiness artifacts and DIII-D anchoring/probe paths.
+- M3D-C1-facing proxy/candidate artifacts and diagnostic/control contracts.
+- NotebookLM audio overview, transcript, and claim-boundary review note.
 
 Speculative / not yet validated:
 
@@ -71,6 +108,10 @@ Speculative / not yet validated:
 - Whether TCT-style current-sheet thickness control can be engineered into a practical tokamak control mechanism.
 - Whether lithium-current coupling provides useful stabilizing leverage in the real plasma edge.
 - Whether event-severity reductions translate into reactor-level reliability improvements.
+- Whether Dedalus/BOUT++ source terms map to a physically realizable
+  liquid-metal actuator.
+- Whether M3D-C1/JOREK/NIMROD or experimental diagnostic data reproduce the
+  reduced-model trigger and actuator effects.
 
 ## Project roadmap and funding alignment
 
@@ -127,25 +168,25 @@ For the first open experimental precursor / latency screen, review:
 If you have 5 minutes:
 
 1. Read this README.
-2. Review the figure at [`docs/reference_design_v1_diagram.svg`](docs/reference_design_v1_diagram.svg).
-3. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
-4. Read [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
-5. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
-6. Read [`docs/assumptions.md`](docs/assumptions.md).
-7. Read [`docs/falsification_tests.md`](docs/falsification_tests.md).
+2. Listen to or skim the [`Audio overview`](validation_runs/notebooklm_audio_review_default/Liquid_lithium_actuators_for_fusion_stability.m4a), then read the [`audio review note`](validation_runs/notebooklm_audio_review_default/NOTEBOOKLM_AUDIO_REVIEW.md) for claim boundaries.
+3. Review the figure at [`docs/reference_design_v1_diagram.svg`](docs/reference_design_v1_diagram.svg).
+4. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
+5. Read [`FAIR_MAST_TCT_VALIDATION_SUMMARY.md`](FAIR_MAST_TCT_VALIDATION_SUMMARY.md).
+6. Read [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
+7. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
 
 If you have 30 minutes:
 
 1. Review [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
-2. Review [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md).
+2. Review [`FAIR_MAST_TCT_VALIDATION_SUMMARY.md`](FAIR_MAST_TCT_VALIDATION_SUMMARY.md).
 3. Review [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
-4. Review [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
-5. Review [`ROADMAP.md`](ROADMAP.md).
-6. Review [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
-7. Review [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) before interpreting historical logs or generated outputs.
-8. Review the proposed wall / blanket stack assumptions.
-9. Review the magnetic / electrostatic channeling assumptions.
-10. Inspect optimizer and candidate-generation scripts.
+4. Review [`validation_runs/closed_loop_tct_trigger_default/closed_loop_trigger_report.md`](validation_runs/closed_loop_tct_trigger_default/closed_loop_trigger_report.md).
+5. Review [`validation_runs/dedalus_current_sheet_biased_tct_falsification_study/ARTIFACT_NOTES.md`](validation_runs/dedalus_current_sheet_biased_tct_falsification_study/ARTIFACT_NOTES.md).
+6. Review [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md).
+7. Review [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
+8. Review [`ROADMAP.md`](ROADMAP.md).
+9. Review [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+10. Review [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) before interpreting historical logs or generated outputs.
 11. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
 
 ## Research purpose
@@ -201,15 +242,15 @@ python run_reactor_optimizer.py
 1. Start with this README.
 2. Review [`docs/reference_design_v1_diagram.svg`](docs/reference_design_v1_diagram.svg).
 3. Read [`WINNING_CONFIGURATION_SUMMARY.md`](WINNING_CONFIGURATION_SUMMARY.md).
-4. Read [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md).
+4. Read [`FAIR_MAST_TCT_VALIDATION_SUMMARY.md`](FAIR_MAST_TCT_VALIDATION_SUMMARY.md).
 5. Read [`M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md`](M3DC1_BOUT_GEQDSK_VALIDATION_SUMMARY.md).
-6. Read [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
-7. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
-8. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
-9. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
-10. Review [`PROVENANCE.md`](PROVENANCE.md), [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md), and [`CITATION.cff`](CITATION.cff).
-11. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md).
-12. Read [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
-13. Inspect optimizer and candidate-generation scripts.
-14. Review committed result files and finalist candidates.
-15. Compare finalist assumptions against higher-fidelity OpenMC / M3D-C1 validation work.
+6. Read [`validation_runs/closed_loop_tct_trigger_default/closed_loop_trigger_report.md`](validation_runs/closed_loop_tct_trigger_default/closed_loop_trigger_report.md).
+7. Read [`validation_runs/dedalus_current_sheet_biased_tct_falsification_study/ARTIFACT_NOTES.md`](validation_runs/dedalus_current_sheet_biased_tct_falsification_study/ARTIFACT_NOTES.md).
+8. Read [`REFERENCE_DESIGN_V1.md`](REFERENCE_DESIGN_V1.md).
+9. Read [`TCT_LANGUAGE_TRANSLATION.md`](TCT_LANGUAGE_TRANSLATION.md).
+10. Read [`VALIDATION_STATUS.md`](VALIDATION_STATUS.md).
+11. Read [`docs/assumptions.md`](docs/assumptions.md), [`docs/falsification_tests.md`](docs/falsification_tests.md), and [`docs/benchmark_targets.md`](docs/benchmark_targets.md).
+12. Review [`ROADMAP.md`](ROADMAP.md) and [`FUNDING.md`](FUNDING.md).
+13. Review [`PROVENANCE.md`](PROVENANCE.md), [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md), and [`CITATION.cff`](CITATION.cff).
+14. Read [`docs/TCT_Public_Positioning.md`](docs/TCT_Public_Positioning.md) and [`docs/TCT_Validation_Matrix.md`](docs/TCT_Validation_Matrix.md).
+15. Inspect optimizer and candidate-generation scripts, committed result files, and finalist candidates.
