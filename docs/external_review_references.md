@@ -16,8 +16,11 @@ Status:
 - Contents were not accessible from this environment without Google account
   access.
 - Rechecked on 2026-07-03 after public sharing was reported; unauthenticated
-  access still redirected to Google sign-in, so the notebook/audio contents were
-  not reviewed or transcribed here.
+  access still redirected to Google sign-in, so the notebook contents were not
+  reviewed through the share link.
+- A user-uploaded `.m4a` audio export from the notebook was reviewed on
+  2026-07-03 using an automatic `faster-whisper tiny.en` transcript. See
+  `validation_runs/notebooklm_audio_review_default/NOTEBOOKLM_AUDIO_REVIEW.md`.
 - Because the notebook contents are not committed here, this link must not be
   cited as independent validation, expert review, or a reproducible artifact.
 

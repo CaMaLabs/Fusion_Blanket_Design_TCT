@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .venv-dedalus/
+.venv-transcribe/
 
 .BOUT.pid.*
 BOUT.restart.*.nc
