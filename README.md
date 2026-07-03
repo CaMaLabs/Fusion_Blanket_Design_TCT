@@ -66,6 +66,7 @@ Speculative / not yet validated:
 - [`ARCHIVE_INDEX.md`](ARCHIVE_INDEX.md) explains how historical logs, backups, generated outputs, and validation-run folders should be interpreted without deleting provenance.
 - [`docs/assumptions.md`](docs/assumptions.md) lists the assumptions that need review before any result is interpreted as evidence.
 - [`docs/falsification_tests.md`](docs/falsification_tests.md) defines tests that could reject, redirect, or narrow the TCT framing.
+- [`docs/external_review_references.md`](docs/external_review_references.md) lists external review/navigation links that are not themselves validation evidence.
 - [`docs/benchmark_targets.md`](docs/benchmark_targets.md) lists candidate benchmark directions for MHD, blanket, and wall validation.
 
 The recommended external framing is:
