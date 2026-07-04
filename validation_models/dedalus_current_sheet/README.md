@@ -69,6 +69,17 @@ bias. It is only meant to test whether a current-through-wall-style reduced
 proxy changes island count, peak current, or reconnection diagnostics. It is not
 liquid-lithium MHD, not an electrode/contact model, and not wall engineering.
 
+Additional segmented source modes are available for actuator-shape
+falsification:
+
+- `rib_matrix`: tanh-smoothed toroidal rib-like source bands.
+- `mesh`: rib-like source bands with an additional cross modulation.
+- `phase_locked_rib`: rib-like source bands shifted by `bias_phase`.
+
+These modes are prescribed source-shape proxies only. They do not model
+electrodes, insulators, sheaths, contact resistance, arcing, material response,
+or `J x B` structural loading.
+
 ## Outputs
 
 Each case writes:
@@ -297,6 +308,23 @@ The intended falsification readout is strict: a candidate is more credible only
 if both island and component morphology proxies improve versus the matched
 condition baseline, and if resolution/timestep changes do not flip the result.
 
+For the segmented rib/mesh actuator-shape matrix:
+
+```bash
+. .venv-dedalus/bin/activate
+export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/mpich/lib:/usr/lib/aarch64-linux-gnu:${LD_LIBRARY_PATH:-}
+export UCX_TLS=self
+export OMP_NUM_THREADS=1
+python validation_models/dedalus_current_sheet/run_segmented_bias_actuator_matrix.py \
+  --run-dir validation_runs/dedalus_segmented_bias_actuator_matrix_default \
+  --python /root/Fusion_Blanket_Design_TCT/.venv-dedalus/bin/python
+```
+
+The first segmented matrix is a negative/diagnostic result for sharp rib
+forcing: smooth standing bias remains strongest, while sharp rib variants
+increase island and component morphology proxies. Mesh-like forcing is less
+harmful but weaker than smooth standing bias in this toy setup.
+
 ## Limitations
 
 - Periodic double-Harris geometry is a convenience, not tokamak geometry.
@@ -310,6 +338,8 @@ condition baseline, and if resolution/timestep changes do not flip the result.
 - The biased wall-current proxy is a prescribed flux source. It does not model
   liquid-lithium flow, free surfaces, electrodes, contact resistance, sheath
   physics, or wall engineering.
+- Segmented rib/mesh modes are source-shape tests only. They do not validate or
+  invalidate real electrode-rib hardware.
 - The plasmoid/island metric is a proxy based on local extrema, not a full
   magnetic-topology analysis.
 

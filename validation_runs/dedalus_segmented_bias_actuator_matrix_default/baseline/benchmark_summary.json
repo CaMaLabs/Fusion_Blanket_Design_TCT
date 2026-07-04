@@ -1,0 +1,40 @@
+{
+  "artifact_type": "dedalus_reduced_mhd_toy_benchmark",
+  "cases": [
+    {
+      "bias_active_once": false,
+      "bias_enabled": false,
+      "bias_kx": 1,
+      "bias_mode": "standing",
+      "bias_phase": 0.0,
+      "bias_polarity": 1.0,
+      "bias_rib_count": 8,
+      "bias_rib_duty": 0.35,
+      "bias_strength": 0.0,
+      "bias_width": 0.55,
+      "case": "baseline",
+      "control_active_once": false,
+      "control_enabled": false,
+      "diagnostic_rows": 41,
+      "drive_active_once": true,
+      "drive_enabled": true,
+      "final_component_count_proxy": 12,
+      "final_island_count_proxy": 30,
+      "final_magnetic_energy": 0.46707859471577595,
+      "initial_component_count_proxy": 8,
+      "initial_island_count_proxy": 0,
+      "initial_magnetic_energy": 0.46746107662319925,
+      "magnetic_energy_decay_fraction": 0.000818211240572686,
+      "max_J_p99": 5.08660794729927,
+      "max_abs_J": 5.087141929507099,
+      "max_aspect_ratio": 128.0,
+      "max_current_weighted_aspect_ratio": 69.71609619665357,
+      "min_current_weighted_delta_rms": 0.18360178923234677,
+      "min_delta": 0.1,
+      "time_to_secondary_component_proxy": 0.7000000000000005,
+      "time_to_secondary_island_proxy": 0.5500000000000004
+    }
+  ],
+  "not_reactor_claim": true,
+  "not_tokamak_validation": true
+}

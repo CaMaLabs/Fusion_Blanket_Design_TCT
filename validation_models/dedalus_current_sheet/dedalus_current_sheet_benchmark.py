@@ -91,6 +91,9 @@ class BenchmarkConfig:
     bias_kx: int = 1
     bias_width: float = 0.55
     bias_aspect_threshold: float = 80.0
+    bias_rib_count: int = 8
+    bias_rib_duty: float = 0.35
+    bias_phase: float = 0.0
 
 
 def _require_dedalus() -> None:
@@ -395,28 +398,72 @@ def _update_drive(state: dict[str, Any], sim_time: float, cfg: BenchmarkConfig) 
 
 
 def _update_bias(state: dict[str, Any], metrics: dict[str, float], cfg: BenchmarkConfig) -> bool:
-    """Apply a standing or threshold-triggered biased wall-current proxy."""
+    """Apply a prescribed edge-current bias source.
+
+    These modes are deliberately simple reduced-MHD flux-source proxies:
+
+    - `standing` / `triggered`: smooth liquid-wall-style standing bias.
+    - `rib_matrix`: segmented toroidal rib-like source with localized x bands.
+    - `mesh`: crossed rib/mesh-like source with additional z modulation.
+    - `phase_locked_rib`: rib matrix shifted by `bias_phase` to mimic selecting
+      an actuator sector from a mode-phase estimate.
+
+    None of these modes model electrodes, sheaths, contact resistance, material
+    response, or real liquid-metal MHD.
+    """
     bias = state["bias"]
     bias.change_scales(1)
     bias.require_grid_space()
     if not cfg.bias_enabled or cfg.bias_strength == 0.0:
         bias["g"] = 0.0
         return False
-    if cfg.bias_mode == "triggered" and metrics["aspect_ratio"] < cfg.bias_aspect_threshold:
+    triggered_modes = {"triggered"}
+    if cfg.bias_mode in triggered_modes and metrics["aspect_ratio"] < cfg.bias_aspect_threshold:
         bias["g"] = 0.0
         return False
-    if cfg.bias_mode not in {"standing", "triggered"}:
+    if cfg.bias_mode not in {"standing", "triggered", "rib_matrix", "mesh", "phase_locked_rib"}:
         raise ValueError(f"Unsupported bias mode: {cfg.bias_mode}")
 
     x = state["x"]
     z = state["z"]
     upper_mask = np.exp(-((z - cfg.lz / 4.0) / cfg.bias_width) ** 2)
     lower_mask = np.exp(-((z + cfg.lz / 4.0) / cfg.bias_width) ** 2)
-    # Opposite signs across the two sheets mimic a closed current path through
-    # a conducting wall layer in this reduced Cartesian proxy.
-    wall_current_shape = (upper_mask - lower_mask) * np.cos(2.0 * np.pi * cfg.bias_kx * x / cfg.lx)
+    sheet_shape = upper_mask - lower_mask
+    phase = 2.0 * np.pi * cfg.bias_kx * x / cfg.lx + cfg.bias_phase
+
+    if cfg.bias_mode in {"standing", "triggered"}:
+        # Smooth standing source used by the earlier liquid-wall proxy.
+        wall_current_shape = sheet_shape * np.cos(phase)
+    elif cfg.bias_mode == "rib_matrix":
+        rib_shape = _rib_pattern(x, cfg)
+        wall_current_shape = sheet_shape * rib_shape
+    elif cfg.bias_mode == "mesh":
+        rib_shape = _rib_pattern(x, cfg)
+        z_mesh = np.cos(2.0 * np.pi * cfg.bias_kx * z / cfg.lz)
+        wall_current_shape = sheet_shape * rib_shape * z_mesh
+    else:
+        # Phase-locked ribs use the same segmented geometry, shifted in x by
+        # bias_phase. This mimics selecting a sector relative to measured mode
+        # phase, without implementing a real feedback controller here.
+        rib_shape = _rib_pattern(x, cfg)
+        wall_current_shape = sheet_shape * rib_shape
+
     bias["g"] = cfg.bias_polarity * cfg.bias_strength * wall_current_shape
     return True
+
+
+def _rib_pattern(x: np.ndarray, cfg: BenchmarkConfig) -> np.ndarray:
+    """Return a smooth signed rib/mesh pattern in x.
+
+    The square-wave-like rib mask is represented by a tanh-smoothed cosine so
+    the Dedalus run receives a bounded, differentiable-ish source. `bias_rib_duty`
+    controls how much of each rib period is energized.
+    """
+    rib_count = max(1, int(cfg.bias_rib_count))
+    duty = min(max(float(cfg.bias_rib_duty), 0.05), 0.95)
+    phase = 2.0 * np.pi * rib_count * x / cfg.lx + cfg.bias_phase
+    threshold = np.cos(np.pi * duty)
+    return np.tanh(8.0 * (np.cos(phase) - threshold))
 
 
 def _psi_grid(state: dict[str, Any]) -> np.ndarray:
@@ -514,6 +561,11 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "bias_mode": cfg.bias_mode,
         "bias_strength": cfg.bias_strength,
         "bias_polarity": cfg.bias_polarity,
+        "bias_kx": cfg.bias_kx,
+        "bias_width": cfg.bias_width,
+        "bias_rib_count": cfg.bias_rib_count,
+        "bias_rib_duty": cfg.bias_rib_duty,
+        "bias_phase": cfg.bias_phase,
         "initial_island_count_proxy": int(initial_island_count) if initial_island_count is not None else None,
         "time_to_secondary_island_proxy": onset_time,
         "initial_component_count_proxy": int(initial_component_count) if initial_component_count is not None else None,
@@ -571,6 +623,9 @@ def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkCo
         bias_kx=args.bias_kx,
         bias_width=args.bias_width,
         bias_aspect_threshold=args.bias_aspect_threshold,
+        bias_rib_count=args.bias_rib_count,
+        bias_rib_duty=args.bias_rib_duty,
+        bias_phase=args.bias_phase,
     )
 
 
@@ -604,12 +659,19 @@ def main() -> int:
     parser.add_argument("--drive-kx", type=int, default=BenchmarkConfig.drive_kx)
     parser.add_argument("--drive-width", type=float, default=BenchmarkConfig.drive_width)
     parser.add_argument("--bias-enabled", action="store_true")
-    parser.add_argument("--bias-mode", choices=("standing", "triggered"), default=BenchmarkConfig.bias_mode)
+    parser.add_argument(
+        "--bias-mode",
+        choices=("standing", "triggered", "rib_matrix", "mesh", "phase_locked_rib"),
+        default=BenchmarkConfig.bias_mode,
+    )
     parser.add_argument("--bias-strength", type=float, default=BenchmarkConfig.bias_strength)
     parser.add_argument("--bias-polarity", type=float, default=BenchmarkConfig.bias_polarity)
     parser.add_argument("--bias-kx", type=int, default=BenchmarkConfig.bias_kx)
     parser.add_argument("--bias-width", type=float, default=BenchmarkConfig.bias_width)
     parser.add_argument("--bias-aspect-threshold", type=float, default=BenchmarkConfig.bias_aspect_threshold)
+    parser.add_argument("--bias-rib-count", type=int, default=BenchmarkConfig.bias_rib_count)
+    parser.add_argument("--bias-rib-duty", type=float, default=BenchmarkConfig.bias_rib_duty)
+    parser.add_argument("--bias-phase", type=float, default=BenchmarkConfig.bias_phase)
     parser.add_argument("--case", choices=("both", "baseline", "perturbed"), default="both")
     args = parser.parse_args()
 
