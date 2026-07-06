@@ -94,6 +94,14 @@ class BenchmarkConfig:
     bias_rib_count: int = 8
     bias_rib_duty: float = 0.35
     bias_phase: float = 0.0
+    bias_smoothness: float = 8.0
+    bias_time_profile: str = "steady"
+    bias_start_time: float = 0.0
+    bias_end_time: float = 1.0e30
+    bias_ramp_time: float = 0.0
+    surface_capillary_damping: float = 0.0
+    surface_magnetic_stiffening: float = 0.0
+    surface_channel_count: int = 1
 
 
 def _require_dedalus() -> None:
@@ -397,14 +405,22 @@ def _update_drive(state: dict[str, Any], sim_time: float, cfg: BenchmarkConfig) 
     return True
 
 
-def _update_bias(state: dict[str, Any], metrics: dict[str, float], cfg: BenchmarkConfig) -> bool:
+def _update_bias(state: dict[str, Any], metrics: dict[str, float], sim_time: float, cfg: BenchmarkConfig) -> bool:
     """Apply a prescribed edge-current bias source.
 
     These modes are deliberately simple reduced-MHD flux-source proxies:
 
     - `standing` / `triggered`: smooth liquid-wall-style standing bias.
     - `rib_matrix`: segmented toroidal rib-like source with localized x bands.
+    - `smooth_rib_matrix`: sinusoidal rib-like source with reduced sharpness.
     - `mesh`: crossed rib/mesh-like source with additional z modulation.
+    - `smooth_mesh`: smooth crossed source with reduced sharpness.
+    - `channelized`: low-frequency channel-like source intended to mimic
+      geometrically constrained lithium streams.
+    - `capillary_stabilized`: smooth standing source with high-spatial-frequency
+      attenuation from `surface_capillary_damping`.
+    - `magnetic_stiffened`: smooth standing source with a simple magnetic
+      stiffening attenuation factor.
     - `phase_locked_rib`: rib matrix shifted by `bias_phase` to mimic selecting
       an actuator sector from a mode-phase estimate.
 
@@ -417,11 +433,26 @@ def _update_bias(state: dict[str, Any], metrics: dict[str, float], cfg: Benchmar
     if not cfg.bias_enabled or cfg.bias_strength == 0.0:
         bias["g"] = 0.0
         return False
+    time_envelope = _bias_time_envelope(sim_time, cfg)
+    if time_envelope <= 0.0:
+        bias["g"] = 0.0
+        return False
     triggered_modes = {"triggered"}
     if cfg.bias_mode in triggered_modes and metrics["aspect_ratio"] < cfg.bias_aspect_threshold:
         bias["g"] = 0.0
         return False
-    if cfg.bias_mode not in {"standing", "triggered", "rib_matrix", "mesh", "phase_locked_rib"}:
+    if cfg.bias_mode not in {
+        "standing",
+        "triggered",
+        "rib_matrix",
+        "smooth_rib_matrix",
+        "mesh",
+        "smooth_mesh",
+        "channelized",
+        "capillary_stabilized",
+        "magnetic_stiffened",
+        "phase_locked_rib",
+    }:
         raise ValueError(f"Unsupported bias mode: {cfg.bias_mode}")
 
     x = state["x"]
@@ -431,16 +462,30 @@ def _update_bias(state: dict[str, Any], metrics: dict[str, float], cfg: Benchmar
     sheet_shape = upper_mask - lower_mask
     phase = 2.0 * np.pi * cfg.bias_kx * x / cfg.lx + cfg.bias_phase
 
-    if cfg.bias_mode in {"standing", "triggered"}:
+    if cfg.bias_mode in {"standing", "triggered", "capillary_stabilized", "magnetic_stiffened"}:
         # Smooth standing source used by the earlier liquid-wall proxy.
         wall_current_shape = sheet_shape * np.cos(phase)
+        if cfg.bias_mode == "capillary_stabilized":
+            wall_current_shape = _attenuate_high_frequency_source(wall_current_shape, cfg.surface_capillary_damping)
+        elif cfg.bias_mode == "magnetic_stiffened":
+            wall_current_shape = wall_current_shape / (1.0 + max(0.0, cfg.surface_magnetic_stiffening))
     elif cfg.bias_mode == "rib_matrix":
         rib_shape = _rib_pattern(x, cfg)
+        wall_current_shape = sheet_shape * rib_shape
+    elif cfg.bias_mode == "smooth_rib_matrix":
+        rib_shape = np.cos(2.0 * np.pi * max(1, cfg.bias_rib_count) * x / cfg.lx + cfg.bias_phase)
         wall_current_shape = sheet_shape * rib_shape
     elif cfg.bias_mode == "mesh":
         rib_shape = _rib_pattern(x, cfg)
         z_mesh = np.cos(2.0 * np.pi * cfg.bias_kx * z / cfg.lz)
         wall_current_shape = sheet_shape * rib_shape * z_mesh
+    elif cfg.bias_mode == "smooth_mesh":
+        rib_shape = np.cos(2.0 * np.pi * max(1, cfg.bias_rib_count) * x / cfg.lx + cfg.bias_phase)
+        z_mesh = np.cos(2.0 * np.pi * max(1, cfg.surface_channel_count) * z / cfg.lz)
+        wall_current_shape = sheet_shape * rib_shape * z_mesh
+    elif cfg.bias_mode == "channelized":
+        channel_shape = np.cos(2.0 * np.pi * max(1, cfg.surface_channel_count) * x / cfg.lx + cfg.bias_phase)
+        wall_current_shape = sheet_shape * channel_shape
     else:
         # Phase-locked ribs use the same segmented geometry, shifted in x by
         # bias_phase. This mimics selecting a sector relative to measured mode
@@ -448,7 +493,7 @@ def _update_bias(state: dict[str, Any], metrics: dict[str, float], cfg: Benchmar
         rib_shape = _rib_pattern(x, cfg)
         wall_current_shape = sheet_shape * rib_shape
 
-    bias["g"] = cfg.bias_polarity * cfg.bias_strength * wall_current_shape
+    bias["g"] = cfg.bias_polarity * cfg.bias_strength * time_envelope * wall_current_shape
     return True
 
 
@@ -463,7 +508,67 @@ def _rib_pattern(x: np.ndarray, cfg: BenchmarkConfig) -> np.ndarray:
     duty = min(max(float(cfg.bias_rib_duty), 0.05), 0.95)
     phase = 2.0 * np.pi * rib_count * x / cfg.lx + cfg.bias_phase
     threshold = np.cos(np.pi * duty)
-    return np.tanh(8.0 * (np.cos(phase) - threshold))
+    return np.tanh(max(0.1, cfg.bias_smoothness) * (np.cos(phase) - threshold))
+
+
+def _attenuate_high_frequency_source(source: np.ndarray, damping: float) -> np.ndarray:
+    """Apply a small periodic nearest-neighbor low-pass proxy to a source term."""
+    damping = min(max(float(damping), 0.0), 0.95)
+    if damping <= 0.0:
+        return source
+    neighbor_avg = 0.25 * (
+        np.roll(source, 1, axis=0) + np.roll(source, -1, axis=0) + np.roll(source, 1, axis=1) + np.roll(source, -1, axis=1)
+    )
+    return (1.0 - damping) * source + damping * neighbor_avg
+
+
+def _bias_time_envelope(sim_time: float, cfg: BenchmarkConfig) -> float:
+    """Return a bounded temporal pulse envelope for bias source terms."""
+    if cfg.bias_time_profile == "steady":
+        return 1.0
+    if sim_time < cfg.bias_start_time or sim_time > cfg.bias_end_time:
+        return 0.0
+    ramp = max(0.0, cfg.bias_ramp_time)
+    if cfg.bias_time_profile == "boxcar" or ramp <= 0.0:
+        return 1.0
+    if cfg.bias_time_profile != "smooth_pulse":
+        raise ValueError(f"Unsupported bias time profile: {cfg.bias_time_profile}")
+    rise = min(1.0, max(0.0, (sim_time - cfg.bias_start_time) / ramp))
+    fall = min(1.0, max(0.0, (cfg.bias_end_time - sim_time) / ramp))
+    return float(np.sin(0.5 * np.pi * rise) ** 2 * np.sin(0.5 * np.pi * fall) ** 2)
+
+
+def _bias_source_metrics(state: dict[str, Any], cfg: BenchmarkConfig) -> dict[str, float]:
+    """Return source-gradient proxies used as liquid-surface stress indicators."""
+    bias = state["bias"]
+    bias.change_scales(1)
+    bias.require_grid_space()
+    source = np.asarray(bias["g"], dtype=float)
+    if not np.any(source):
+        return {
+            "bias_source_rms": 0.0,
+            "bias_source_max_abs": 0.0,
+            "bias_source_gradient_rms": 0.0,
+            "bias_source_laplacian_rms": 0.0,
+            "surface_displacement_risk_proxy": 0.0,
+        }
+    dx = cfg.lx / cfg.nx
+    dz = cfg.lz / cfg.nz
+    gx = _periodic_gradient(source, dx, axis=0)
+    gz = _periodic_gradient(source, dz, axis=1)
+    lap = _periodic_laplacian(source, dx, dz)
+    grad_rms = float(np.sqrt(np.mean(gx * gx + gz * gz)))
+    lap_rms = float(np.sqrt(np.mean(lap * lap)))
+    risk = grad_rms + 0.1 * lap_rms
+    risk /= (1.0 + max(0.0, cfg.surface_capillary_damping) + max(0.0, cfg.surface_magnetic_stiffening))
+    risk /= max(1, cfg.surface_channel_count)
+    return {
+        "bias_source_rms": float(np.sqrt(np.mean(source * source))),
+        "bias_source_max_abs": float(np.max(np.abs(source))),
+        "bias_source_gradient_rms": grad_rms,
+        "bias_source_laplacian_rms": lap_rms,
+        "surface_displacement_risk_proxy": risk,
+    }
 
 
 def _psi_grid(state: dict[str, Any]) -> np.ndarray:
@@ -510,11 +615,12 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
             control_active_once = control_active_once or control_active
             drive_active = _update_drive(state, solver.sim_time, cfg)
             drive_active_once = drive_active_once or drive_active
-            bias_active = _update_bias(state, metrics, cfg)
+            bias_active = _update_bias(state, metrics, solver.sim_time, cfg)
             bias_active_once = bias_active_once or bias_active
             metrics["control_active"] = bool(control_active)
             metrics["drive_active"] = bool(drive_active)
             metrics["bias_active"] = bool(bias_active)
+            metrics.update(_bias_source_metrics(state, cfg))
             diagnostics.append(metrics)
             onset_count = max(cfg.onset_island_count_threshold, int(initial_island_count) + 1)
             if onset_time is None and metrics["time"] > 0.0 and metrics["island_count_proxy"] >= onset_count:
@@ -548,6 +654,9 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
     min_weighted_delta = min(row["current_weighted_delta_rms"] for row in diagnostics)
     max_abs_j = max(row["max_abs_J"] for row in diagnostics)
     max_j_p99 = max(row["J_p99"] for row in diagnostics)
+    max_surface_risk = max(row.get("surface_displacement_risk_proxy", 0.0) for row in diagnostics)
+    max_bias_grad = max(row.get("bias_source_gradient_rms", 0.0) for row in diagnostics)
+    max_bias_lap = max(row.get("bias_source_laplacian_rms", 0.0) for row in diagnostics)
     final_energy = diagnostics[-1]["magnetic_energy"]
     initial_energy = diagnostics[0]["magnetic_energy"]
     summary = {
@@ -566,6 +675,14 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "bias_rib_count": cfg.bias_rib_count,
         "bias_rib_duty": cfg.bias_rib_duty,
         "bias_phase": cfg.bias_phase,
+        "bias_smoothness": cfg.bias_smoothness,
+        "bias_time_profile": cfg.bias_time_profile,
+        "bias_start_time": cfg.bias_start_time,
+        "bias_end_time": cfg.bias_end_time,
+        "bias_ramp_time": cfg.bias_ramp_time,
+        "surface_capillary_damping": cfg.surface_capillary_damping,
+        "surface_magnetic_stiffening": cfg.surface_magnetic_stiffening,
+        "surface_channel_count": cfg.surface_channel_count,
         "initial_island_count_proxy": int(initial_island_count) if initial_island_count is not None else None,
         "time_to_secondary_island_proxy": onset_time,
         "initial_component_count_proxy": int(initial_component_count) if initial_component_count is not None else None,
@@ -576,6 +693,9 @@ def run_case(case_name: str, cfg: BenchmarkConfig, run_dir: Path) -> dict[str, A
         "min_current_weighted_delta_rms": min_weighted_delta,
         "max_abs_J": max_abs_j,
         "max_J_p99": max_j_p99,
+        "max_surface_displacement_risk_proxy": max_surface_risk,
+        "max_bias_source_gradient_rms": max_bias_grad,
+        "max_bias_source_laplacian_rms": max_bias_lap,
         "initial_magnetic_energy": initial_energy,
         "final_magnetic_energy": final_energy,
         "magnetic_energy_decay_fraction": 1.0 - final_energy / initial_energy if initial_energy else None,
@@ -626,6 +746,14 @@ def build_config(args: argparse.Namespace, control_enabled: bool) -> BenchmarkCo
         bias_rib_count=args.bias_rib_count,
         bias_rib_duty=args.bias_rib_duty,
         bias_phase=args.bias_phase,
+        bias_smoothness=args.bias_smoothness,
+        bias_time_profile=args.bias_time_profile,
+        bias_start_time=args.bias_start_time,
+        bias_end_time=args.bias_end_time,
+        bias_ramp_time=args.bias_ramp_time,
+        surface_capillary_damping=args.surface_capillary_damping,
+        surface_magnetic_stiffening=args.surface_magnetic_stiffening,
+        surface_channel_count=args.surface_channel_count,
     )
 
 
@@ -661,7 +789,18 @@ def main() -> int:
     parser.add_argument("--bias-enabled", action="store_true")
     parser.add_argument(
         "--bias-mode",
-        choices=("standing", "triggered", "rib_matrix", "mesh", "phase_locked_rib"),
+        choices=(
+            "standing",
+            "triggered",
+            "rib_matrix",
+            "smooth_rib_matrix",
+            "mesh",
+            "smooth_mesh",
+            "channelized",
+            "capillary_stabilized",
+            "magnetic_stiffened",
+            "phase_locked_rib",
+        ),
         default=BenchmarkConfig.bias_mode,
     )
     parser.add_argument("--bias-strength", type=float, default=BenchmarkConfig.bias_strength)
@@ -672,6 +811,14 @@ def main() -> int:
     parser.add_argument("--bias-rib-count", type=int, default=BenchmarkConfig.bias_rib_count)
     parser.add_argument("--bias-rib-duty", type=float, default=BenchmarkConfig.bias_rib_duty)
     parser.add_argument("--bias-phase", type=float, default=BenchmarkConfig.bias_phase)
+    parser.add_argument("--bias-smoothness", type=float, default=BenchmarkConfig.bias_smoothness)
+    parser.add_argument("--bias-time-profile", choices=("steady", "boxcar", "smooth_pulse"), default=BenchmarkConfig.bias_time_profile)
+    parser.add_argument("--bias-start-time", type=float, default=BenchmarkConfig.bias_start_time)
+    parser.add_argument("--bias-end-time", type=float, default=BenchmarkConfig.bias_end_time)
+    parser.add_argument("--bias-ramp-time", type=float, default=BenchmarkConfig.bias_ramp_time)
+    parser.add_argument("--surface-capillary-damping", type=float, default=BenchmarkConfig.surface_capillary_damping)
+    parser.add_argument("--surface-magnetic-stiffening", type=float, default=BenchmarkConfig.surface_magnetic_stiffening)
+    parser.add_argument("--surface-channel-count", type=int, default=BenchmarkConfig.surface_channel_count)
     parser.add_argument("--case", choices=("both", "baseline", "perturbed"), default="both")
     args = parser.parse_args()
 

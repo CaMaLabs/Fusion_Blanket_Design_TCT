@@ -73,12 +73,33 @@ Additional segmented source modes are available for actuator-shape
 falsification:
 
 - `rib_matrix`: tanh-smoothed toroidal rib-like source bands.
+- `smooth_rib_matrix`: sinusoidal rib-like source envelope with reduced sharp
+  transitions.
 - `mesh`: rib-like source bands with an additional cross modulation.
+- `smooth_mesh`: crossed sinusoidal mesh-like source envelope.
+- `channelized`: low-spatial-frequency channel-like source intended to mimic
+  geometrically constrained flow/source paths.
+- `capillary_stabilized`: smooth standing source with high-spatial-frequency
+  attenuation and a capillary-damping risk proxy.
+- `magnetic_stiffened`: smooth standing source attenuated by a magnetic
+  pressure/stiffening proxy.
 - `phase_locked_rib`: rib-like source bands shifted by `bias_phase`.
 
 These modes are prescribed source-shape proxies only. They do not model
 electrodes, insulators, sheaths, contact resistance, arcing, material response,
 or `J x B` structural loading.
+
+The benchmark also records source-sharpness proxies for biased runs:
+
+- `bias_source_gradient_rms`: RMS gradient of the prescribed bias source.
+- `bias_source_laplacian_rms`: RMS laplacian of the prescribed bias source.
+- `surface_displacement_risk_proxy`: a scalar source-risk proxy based on source
+  gradient plus laplacian, attenuated by the configured capillary,
+  magnetic-stiffening, and channel-count proxy factors.
+
+These are not free-surface MHD quantities. They are only cheap diagnostics for
+whether a prescribed source is spatially sharp enough that it should be treated
+as a higher surface-disturbance risk in the toy model.
 
 ## Outputs
 
@@ -325,6 +346,42 @@ forcing: smooth standing bias remains strongest, while sharp rib variants
 increase island and component morphology proxies. Mesh-like forcing is less
 harmful but weaker than smooth standing bias in this toy setup.
 
+For the non-acoustic surface-stabilized bias matrix:
+
+```bash
+. .venv-dedalus/bin/activate
+export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/mpich/lib:/usr/lib/aarch64-linux-gnu:${LD_LIBRARY_PATH:-}
+export UCX_TLS=self
+export OMP_NUM_THREADS=1
+python validation_models/dedalus_current_sheet/run_surface_stabilized_bias_matrix.py \
+  --run-dir validation_runs/dedalus_surface_stabilized_bias_matrix_default \
+  --python /root/Fusion_Blanket_Design_TCT/.venv-dedalus/bin/python
+```
+
+This matrix tests every current surface-stabilization proxy except acoustics:
+
+| `surface_case` | Meaning |
+| --- | --- |
+| `baseline` | Driven island-onset stress test without smoothing or bias. |
+| `smooth_standing_bias_positive` | Smooth standing bias source; source-risk reference. |
+| `smooth_rib_bias_positive` | Smoothed rib envelope instead of sharp segmented ribs. |
+| `smooth_mesh_bias_positive` | Smoothed crossed mesh-like source envelope. |
+| `capillary_stabilized_bias` | Standing source with capillary damping and high-frequency source attenuation proxies. |
+| `magnetic_stiffened_bias` | Standing source attenuated by magnetic pressure/stiffening proxy. |
+| `channelized_bias` | Low-frequency source divided across nominal channels. |
+| `prebiased_smooth_pulse` | Smooth source applied as a finite smooth pulse. |
+| `smoothing_only` | Aspect-triggered localized smoothing proxy only. |
+| `smoothing_plus_capillary_stabilized` | Localized smoothing plus capillary-stabilized source proxy. |
+| `smoothing_plus_magnetic_stiffened` | Localized smoothing plus magnetic-stiffening source proxy. |
+| `smoothing_plus_channelized` | Localized smoothing plus channelized source proxy. |
+| `smoothing_plus_smooth_rib` | Localized smoothing plus smoothed rib source envelope. |
+| `smoothing_plus_prebiased_smooth_pulse` | Localized smoothing plus finite smooth pulse bias source. |
+
+The surface-stabilized matrix is still a prescribed-source reduced-MHD toy
+study. It does not model acoustic damping, active wave cancellation,
+capillary-wave dynamics, wall wetting, lithium flow, liquid-metal MHD,
+electrodes, or real Lorentz-force loading.
+
 ## Limitations
 
 - Periodic double-Harris geometry is a convenience, not tokamak geometry.
@@ -340,6 +397,9 @@ harmful but weaker than smooth standing bias in this toy setup.
   physics, or wall engineering.
 - Segmented rib/mesh modes are source-shape tests only. They do not validate or
   invalidate real electrode-rib hardware.
+- Surface-stabilized source modes are source-shaping and source-risk proxies
+  only. They are not capillary, channel-flow, magnetic-pressure, or pulse-power
+  engineering models.
 - The plasmoid/island metric is a proxy based on local extrema, not a full
   magnetic-topology analysis.
 
