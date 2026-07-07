@@ -6,7 +6,7 @@ This repository is Chase Lunsford's public research workspace for fusion blanket
 
 The project combines a plasma/plant optimizer, blanket design search,
 TCT/plasmoid-control proxies, wall-event modeling, lithium-wall thermal
-handling, OpenMC-style finalist validation workflows, FAIR-MAST experimental
+handling and surface-stability prioritization, OpenMC-style finalist validation workflows, FAIR-MAST experimental
 precursor screens, BOUT++ reduced-MHD actuator studies, Dedalus current-sheet
 toy falsification studies, GEQDSK/EFIT anchoring, and M3D-C1-facing diagnostic
 contracts.
@@ -53,6 +53,7 @@ as a single simulation result. The strongest committed evidence currently spans:
 | Forward control policy | FAIR-MAST reduced-order forward surrogate and sensitivity sweeps favor standing preventative bias plus fast bounded boost for the current trigger family. | Reduced-order policy evidence only; no measured TCT actuator transfer function. |
 | BOUT++ reduced-MHD bridge | Resolved actuator robustness and closed-loop trigger studies pass with `PASS_WITH_REDUCED_MODEL_BOUNDARIES`; delayed triggers preserve the known timing falsification boundary. | Reduced-model current-sheet actuator evidence, not tokamak-grade validation. |
 | Dedalus toy falsification | Biased current-sheet toy studies include matrix, parameter sweep, resolution check, and compact falsification study with an independent component proxy. | Numerical toy stress test with prescribed source terms; not liquid-lithium wall physics. |
+| Liquid-lithium surface stability | New reduced scenario matrix maps capillary/porous confinement, wetting microtexture, vapor-film risk, bubble/coalescence suppression, argon/plasma boundary damping, and magnetic damping into smoke-testable outputs. | Bench-test prioritization only; not free-surface MHD, not lithium material validation, and not reactor surface-stability proof. |
 | M3D-C1 / GEQDSK path | Candidate-0 handoff, public `C1.h5` integration checks, DIII-D GEQDSK/EFIT anchors, and M3D-C1-compatible contracts exist. | Harness/proxy/integration evidence only; not full M3D-C1 reactor validation. |
 | Narrative / external review aids | NotebookLM audio overview, transcript, review note, and public positioning docs are committed. | Review/navigation aids only; not validation evidence. |
 
@@ -94,6 +95,9 @@ Validated / implemented:
   `PASS_WITH_REDUCED_MODEL_BOUNDARIES`.
 - Dedalus reduced-MHD current-sheet toy matrix, parameter sweep, resolution
   check, and compact falsification study.
+- Liquid-lithium surface-stability reduced matrix for capillary/porous,
+  microtexture/rewetting, vapor-film, bubble/coalescence, plasma boundary-layer,
+  and magnetic-damping bench-test prioritization.
 - GEQDSK/EFIT readiness artifacts and DIII-D anchoring/probe paths.
 - M3D-C1-facing proxy/candidate artifacts and diagnostic/control contracts.
 - NotebookLM audio overview, transcript, and claim-boundary review note.
@@ -123,6 +127,7 @@ Speculative / not yet validated:
 - [`docs/falsification_tests.md`](docs/falsification_tests.md) defines tests that could reject, redirect, or narrow the TCT framing.
 - [`docs/external_review_references.md`](docs/external_review_references.md) lists external review/navigation links that are not themselves validation evidence.
 - [`docs/benchmark_targets.md`](docs/benchmark_targets.md) lists candidate benchmark directions for MHD, blanket, and wall validation.
+- [`LIQUID_LITHIUM_STABILIZATION_LITERATURE.md`](LIQUID_LITHIUM_STABILIZATION_LITERATURE.md) maps three supplied surface-stabilization literature directions into conservative reduced-model hooks.
 
 The recommended external framing is:
 
@@ -162,6 +167,14 @@ For the first open experimental precursor / latency screen, review:
 - [`validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_summary.json`](validation_runs/fair_mast_elm_precursor_default/fair_mast_elm_precursor_summary.json)
 - [`fair_mast_rmp_causal_analog.py`](fair_mast_rmp_causal_analog.py)
 - [`validation_runs/fair_mast_rmp_causal_analog_default/fair_mast_rmp_causal_analog_report.md`](validation_runs/fair_mast_rmp_causal_analog_default/fair_mast_rmp_causal_analog_report.md)
+
+For the liquid-lithium surface-stability prioritization layer, review:
+
+- [`LIQUID_LITHIUM_STABILIZATION_LITERATURE.md`](LIQUID_LITHIUM_STABILIZATION_LITERATURE.md)
+- [`liquid_lithium_stability/README.md`](liquid_lithium_stability/README.md)
+- [`scripts/run_liquid_lithium_stability.py`](scripts/run_liquid_lithium_stability.py)
+- [`validation_runs/liquid_lithium_stability_default/LIQUID_LITHIUM_STABILITY_REPORT.md`](validation_runs/liquid_lithium_stability_default/LIQUID_LITHIUM_STABILITY_REPORT.md)
+- [`validation_runs/liquid_lithium_stability_default/liquid_lithium_stability_summary.json`](validation_runs/liquid_lithium_stability_default/liquid_lithium_stability_summary.json)
 
 ## Fast technical review path
 

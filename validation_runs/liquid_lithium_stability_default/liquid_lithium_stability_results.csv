@@ -1,0 +1,15 @@
+scenario,scenario_family,is_falsification_case,initial_amplitude,growth_decay_rate,final_surface_amplitude,stability_margin,bubble_coalescence_risk_score,vapor_film_risk_score,lithium_retention_score,regime_label,viscosity_damping,magnetic_damping,capillary_stabilization,microtexture_wetting,rewetting_strength,vapor_film_penalty,plasma_shear_damping,bubble_coalescence_suppression,heat_flux_drive,dryout_penalty,surface_drive
+free_lithium_pool_baseline,baseline,False,0.1,0.056232,0.1568086365,-0.3124,0.4346,0.4092,0.5736970636,unstable,0.08,0.1,0.0,0.0,0.0,0.15,0.0,0.0,0.22,0.0,0.16
+ribbed_substrate,single_mechanism,False,0.1,0.009252,0.1076824035,-0.0514,0.3792,0.3308,0.6818919828,marginal,0.08,0.1,0.18,0.06,0.04,0.15,0.0,0.0,0.22,0.0,0.14
+porous_wick_cps_substrate,single_mechanism,False,0.1,-0.089928,0.0487032706,0.4996,0.1998,0.1824,0.877956888,stable,0.08,0.1,0.42,0.18,0.18,0.15,0.0,0.22,0.22,0.0,0.12
+microtextured_high_wetting_surface,single_mechanism,False,0.1,-0.10062,0.044710581,0.559,0.2521,0.044,0.9366204024,stable,0.08,0.1,0.2,0.42,0.34,0.08,0.0,0.1,0.22,0.0,0.13
+vapor_film_prone_hot_surface,adverse_baseline,False,0.14,0.20268,0.7084520811,-1.126,0.6031,0.9316,0.1958882924,vapor-film dominated,0.08,0.06,0.0,0.0,0.0,0.62,0.0,0.0,0.62,0.0,0.23
+argon_cover_gas_only,single_mechanism,False,0.1,0.046512,0.1450772249,-0.2584,0.41105,0.4092,0.5819247435,unstable,0.09,0.1,0.0,0.0,0.0,0.15,0.02,0.04,0.22,0.0,0.155
+weak_plasma_ion_wind_boundary_layer,single_mechanism,False,0.1,0.018072,0.1155549513,-0.1004,0.36795,0.4092,0.5997203165,marginal,0.08,0.1,0.0,0.0,0.0,0.15,0.18,0.08,0.22,0.0,0.145
+combined_porous_microtexture_plasma,combined,False,0.1,-0.231444,0.0156993324,1.2858,0.0556,0.0,1.0,stable,0.09,0.14,0.48,0.46,0.4,0.06,0.2,0.3,0.2,0.0,0.1
+falsification_high_heat_flux_vapor_blanketing,falsification,True,0.16,0.145008,0.5104219901,-0.8056,0.535,1.0,0.3953565234,vapor-film dominated,0.08,0.1,0.34,0.28,0.24,0.86,0.12,0.1,0.92,0.16,0.26
+falsification_insufficient_wetting,falsification,True,0.15,0.115668,0.3784103898,-0.6426,0.5149,0.6732,0.4446984675,unstable,0.08,0.1,0.14,0.03,0.02,0.46,0.0,0.0,0.42,0.0,0.22
+falsification_excessive_perturbation,falsification,True,0.72,0.001332,0.7277133437,-0.0074,0.6794,0.194,0.6064854631,bubble-coalescence dominated,0.08,0.1,0.44,0.34,0.26,0.15,0.18,0.2,0.44,0.0,0.46
+falsification_plasma_shear_too_weak,falsification,True,0.1,0.10881,0.2388056846,-0.6045,0.4909,0.6104,0.4753240672,unstable,0.08,0.1,0.0,0.0,0.0,0.34,0.01,0.02,0.36,0.0,0.21
+falsification_porous_dryout_saturation,falsification,True,0.18,0.090828,0.3722556505,-0.5046,0.4222,0.7444,0.4881170788,vapor-film dominated,0.08,0.1,0.42,0.22,0.16,0.5,0.0,0.16,0.58,0.38,0.24
+falsification_magnetic_damping_absent,falsification,True,0.1,0.062334,0.1646533222,-0.3463,0.4274,0.522,0.6384858705,unstable,0.08,0.0,0.24,0.18,0.12,0.38,0.05,0.12,0.46,0.0,0.28

@@ -60,3 +60,14 @@ jobs:
           else
             echo "No run_reactor_optimizer.py found; skipping optimizer report."
           fi
+
+      - name: Run liquid lithium surface stability smoke test
+        run: |
+          python scripts/run_liquid_lithium_stability.py \
+            --run-dir validation_runs/liquid_lithium_stability_ci_smoke \
+            --no-plots \
+            --check
+
+      - name: Run lightweight pytest suite
+        run: |
+          pytest -q tests
