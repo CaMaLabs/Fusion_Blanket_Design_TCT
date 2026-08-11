@@ -1,0 +1,31 @@
+{
+  "classification": "PHYSICAL_CHANNEL_CONSTRAINT_IDENTIFIED",
+  "rate_optimum": {
+    "target_lab_keV": 638.0,
+    "mean_Ecm_keV": 591.4875538335709,
+    "mean_sigma_barn": 0.9462437138289578,
+    "sigma_v_m3_s": 1.0469440450729252e-21,
+    "sigma_path_m2": 9.473516398977108e-29
+  },
+  "path_optimum": {
+    "target_lab_keV": 616.0,
+    "mean_Ecm_keV": 571.6816158713519,
+    "mean_sigma_barn": 0.9493147339524556,
+    "sigma_v_m3_s": 1.0368506541728847e-21,
+    "sigma_path_m2": 9.545497301470025e-29
+  },
+  "ne_repo_scaled_anchor_m3": 1.3368052430557294e+20,
+  "required_boron_column_per_effective_pass_m2": 6.59140679277747e+21,
+  "required_mass_areal_density_g_cm2": 1.2050002316549618e-05,
+  "current_Te_keV": 16.67,
+  "current_Ti_keV": 55.358,
+  "current_lnLambda15": [
+    {"fB": 0.1, "nB_m3": 2.673610486111459e+18, "required_path_m": 2465.3579221871305, "loss_eV_per_effective_pass": 493.7537551676465, "electron_loss_fraction": 0.8066542610872592, "fusion_energy_per_collision_loss": 0.01100267202637862, "collisional_MeV_per_initial_proton": 182.1258504475796},
+    {"fB": 0.25, "nB_m3": 6.684026215278647e+18, "required_path_m": 986.1431688748521, "loss_eV_per_effective_pass": 194.21587280930933, "electron_loss_fraction": 0.8203007607413768, "fusion_energy_per_collision_loss": 0.0279720218091364, "collisional_MeV_per_initial_proton": 71.63840403361488},
+    {"fB": 0.5, "nB_m3": 1.3368052430557295e+19, "required_path_m": 493.07158443742605, "loss_eV_per_effective_pass": 94.36991202319699, "electron_loss_fraction": 0.8441007562578089, "fusion_energy_per_collision_loss": 0.057567189726393686, "collisional_MeV_per_initial_proton": 34.80925522895997},
+    {"fB": 0.75, "nB_m3": 2.005207864583594e+19, "required_path_m": 328.71438962495074, "loss_eV_per_effective_pass": 61.08792509449287, "electron_loss_fraction": 0.8693230725335243, "fusion_energy_per_collision_loss": 0.08893100594756029, "collisional_MeV_per_initial_proton": 22.532872294075002},
+    {"fB": 1.0, "nB_m3": 2.673610486111459e+19, "required_path_m": 246.53579221871303, "loss_eV_per_effective_pass": 44.446931630140796, "electron_loss_fraction": 0.8960991364896062, "fusion_energy_per_collision_loss": 0.12222689915041167, "collisional_MeV_per_initial_proton": 16.394680826632516}
+  ],
+  "interpretation": "Per-pass loss is small in a material-avoiding hot channel, but at current Te integrated classical electron drag still exceeds p-B11 fusion energy. Density/path changes do not improve that local ratio.",
+  "guardrails": ["boron_areal_density in the reactor surrogate has no physical units", "23.033% burnup remains a surrogate anchor", "Coulomb log is swept", "OpenMC attenuation is not applied to proton stopping"]
+}
