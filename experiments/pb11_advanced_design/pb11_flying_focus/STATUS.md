@@ -1,14 +1,26 @@
 # Flying-Focus p-B11 Audit Status
 
-Current canonical result: **HYBRID_ALPHA_LOOP_CONDITIONAL_WINDOW_IDENTIFIED**
+Current canonical result:
 
-Study order:
+**ISOTROPIC_ELECTRON_HOLE_RECIRCULATION_FAILS_POWER_GATE**
 
-1. `results/` — first resonance/rephasing screen; established repeated FF rephasing as the useful mechanism.
-2. `ignition_bridge/` — first energy-accounting bridge; retained for provenance, but its 600-keV target is superseded by the CM/lab correction.
-3. `physical_channel/` — physical boron-column and classical stopping audit; corrected rate target to ~638 keV lab and showed tens-of-eV loss per effective pass.
-4. `power_flow/` — current result; conserves alpha power and couples the physical drag result to p-B11 alpha channeling, the selected DT-alpha assist, direct conversion, and a bremsstrahlung/beam-density screen.
+Chronology:
 
-The current result is **not** a p-B11 ignition claim. It identifies a conditional hybrid operating window around a boron-rich channel, ~0.64-MeV protons, and a ~70–100-keV local electron velocity scale when alpha-to-fast-proton transfer is strong.
+1. `results/` — repeated FF rephasing identified as the useful resonance mechanism.
+2. `ignition_bridge/` — first energy bridge; retained for provenance.
+3. `physical_channel/` — corrected the CM/lab target to ~638 keV and physicalized the boron column/stopping.
+4. `power_flow/` — conserved p-B11/DT alpha power and identified a scalar-electron-drag closure window.
+5. `distribution_kinetic/` — current result; replaces scalar `Te` with an explicit isotropic electron distribution and charges the e-e phase-space recirculation needed to maintain it.
 
-The next promotion gate is an explicit non-Maxwellian 0D/1D kinetic distribution model. Do not increase `pB11_net_delta` or `ignition_margin_proxy` from these results yet.
+The distribution-resolved result shows that a deep sub-keV electron hole can
+indeed suppress fast-proton drag enough to close the alpha-supported proton
+loop. However, maintaining that isotropic hole against electron-electron
+relaxation costs orders of magnitude more phase-space recirculating power than
+the local p-B11 fusion output.
+
+Do **not** promote electron-hole shaping, `pB11_net_delta`, or ignition margin
+from this branch.
+
+The next credible gate is anisotropic/directed electron control or a full
+Landau/Fokker-Planck calculation with an explicit wave operator. The repo's
+isotropic scalar-Te shortcut is now superseded for this question.

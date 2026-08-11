@@ -1,0 +1,10 @@
+{
+  "maxwellian_drag_factor_should_be_1": 1.0,
+  "maxwellian_electron_shape_recirc_should_be_0": 0.0,
+  "max_abs_projected_number_residual_s-1": 3.637978807091713e-12,
+  "max_abs_projected_energy_residual_keV_s-1": 1.1436895874794573e-10,
+  "quasineutrality_enforced": true,
+  "burn_replacement_energy_included": true,
+  "same_electron_distribution_used_for_drag_and_bremsstrahlung": true,
+  "alpha_partition_conserved": true
+}
