@@ -22,4 +22,8 @@ Current surrogate conclusion:
 - Best full-DT auxiliary hybrid: net `12.624`, ignition `12.184`, auxiliary gross `3.275`, auxiliary fraction `20.0%`, TBR `1.283`, liquid-lithium heat `2.666`, Be/B4C heat `2.354`.
 - Forced resonant racetrack reduces physical recirculation from `100k` to about `15.7k` hardware passes and lowers wall heat, but remains slightly net-negative versus the unconstrained best.
 
+## Flying-focus kinetic audit
+
+A standalone flying-focus proton resonance/rephasing screening study is in [`pb11_flying_focus/`](pb11_flying_focus/). Its nominal result favors repeated ~675-keV rephasing rather than flying-focus injection alone, but it is a kinetic screening surrogate with explicit stopping/trapping/spread/jitter uncertainty and is not folded into the reactor net-power proxy.
+
 This is a surrogate screening model, not a validated physics result. Use it to prioritize MHD/M3DC1 cases and sensitivity studies, not as a design claim.
