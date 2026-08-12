@@ -1,93 +1,67 @@
-# p-B11 Flying-Focus Resonance Audit
+# p-B11 Flying-Focus Audit Program
 
-This directory adds a standalone screening audit for applying flying-focus (FF) proton acceleration/rephasing to the advanced p-B11 branch. It is intentionally separate from `m3dc1_tct_hybrid_bridge.py` because the current surrogate already saturates `proton_window_fraction` at 1.0 for the selected 120-keV case, so adding a simple FF bonus there would not be informative.
+This directory contains a staged falsification/optimization program for applying flying-focus (FF) proton acceleration and rephasing to the advanced p-B11 branch. It remains intentionally separate from `m3dc1_tct_hybrid_bridge.py`: results are promoted only after each physical power-flow gate survives.
 
-## What this audit tests
+## Current canonical result
 
-The audit asks a narrower question:
+**SURVIVING_FF_WINDOW_IDENTIFIED_DRAG_RECOVERY_REQUIRED**
 
-> Can a programmable FF proton injector/rephaser keep a nonthermal proton packet near the broad ~675-keV p-B11 resonance more effectively, per delivered proton energy, than the present 120-keV hold or a one-shot 675-keV beam?
+The current program no longer assumes that electron drag can be cheaply suppressed. Both isotropic and directed electron-distribution approaches failed their recirculating-power gates. The surviving strategy is to accept classical drag, optimize p-B11 reaction probability and charged-particle return per unit drag, and ask whether the deposited collision energy can be recovered.
 
-It does **not** predict ignition, reactor gain, an absolute fusion rate, stopping power, or MHD stability.
+## Stage chronology
 
-## Literature anchors
+1. `results/` — resonance/rephasing screen. Repeated FF rephasing, not narrow injection by itself, is the useful mechanism.
+2. `ignition_bridge/` — first energy-accounting bridge; retained for provenance.
+3. `physical_channel/` — corrected center-of-mass/lab energy handling, physicalized the boron column, and calculated classical stopping.
+4. `power_flow/` — conserved alpha power and identified electron drag as the dominant remaining burden.
+5. `distribution_kinetic/` — isotropic sub-keV electron holes suppress drag but require ~2.2e3 `P_fusion` of distribution maintenance.
+6. `anisotropic_kinetic/` — directed/two-stream electrons suppress drag more efficiently but still require ~2e2 `P_fusion` of maintenance and enter an instability-risk regime.
+7. `surviving_optimizer/` — accepts the drag floor and optimizes FF energy, fast-proton fraction, alpha return, phase recovery, residence, compression, bremsstrahlung, and recoverable collision energy.
 
-- Z. Gong, S. Cao, J. P. Palastro, and M. R. Edwards, "Laser wakefield acceleration of ions with a transverse flying focus," *Physical Review Letters* **133**, 265002 (2024), DOI: `10.1103/PhysRevLett.133.265002`, arXiv: `2405.02690`. The published 3-D PIC case produced a 1.6-GeV proton beam with 3.7% relative energy spread; this audit uses **3.7% only as an optimistic spread anchor**, not as a demonstrated result at 675 keV.
-- E. Gerstmayr et al., "Experimental demonstration of Flying-Focus enhanced Thomson scattering," arXiv: `2607.15805` (2026). This is used as an experimental anchor for matching a programmable focal trajectory to a particle trajectory over an extended interaction.
-- V. F. Dmitriev, "Alpha-particle spectrum in the reaction p + 11B -> 3 alpha," arXiv: `0812.2538`, discussing the 675-keV proton resonance.
-- Modern p-B11 work continues to emphasize the importance of fast/nonthermal proton populations and alpha handling; see I. E. Ochs et al., *Physical Review E* **106**, 055215 (2022), DOI: `10.1103/PhysRevE.106.055215`.
+## Current FF operating targets
 
-## Model
+The physically useful FF setpoint depends on the objective:
 
-`pb11_flying_focus_audit.py` tracks proton energy packets over repeated idealized boron-sheet encounters. Each encounter applies a configurable stopping-energy decrement and straggling. FF cases may rephase a configurable fraction of the packet back toward 675 keV with configurable spread and target jitter.
+- **~638 keV lab** — maximum `<sigma v>` / peak instantaneous reaction rate.
+- **~616 keV lab** — maximum fusion probability per unit path.
+- **~600 keV lab** — minimum classical collision burden plus fused-proton replacement per p-B11 fusion energy.
+- **~584–600 keV lab with ~4% fast protons** — current hybrid compromise after adding the bremsstrahlung and drag-recovery gates.
 
-The nuclear response is a **normalized two-resonance proxy**, not an evaluated cross-section table. It preserves a broad primary feature around 675 keV and a smaller low-energy feature near 148 keV so the existing 120-keV repository operating point is not artificially scored as zero.
+The FF actuator should therefore be treated as programmable rather than assigned one immutable p-B11 target.
 
-Nominal run:
+## Current promotion gate: recover the drag energy
 
-```bash
-python pb11_flying_focus_audit.py --output-dir results
-```
+At the recovery-gated center (`~584 keV`, `n_fast ~ 0.04 ne`) and using 90% alpha-to-fast-proton coupling, 95% FF phase-energy recovery, and the selected DT-alpha-assist cap, the reduced model requires approximately:
 
-Default nominal assumptions:
+- **64.3% recovery of total non-radiative electron + boron collision energy**, or
+- **73.8% recovery of the non-radiative electron-drag/exhaust stream alone**
 
-- 120,000 macro-particles
-- 32 reaction-sheet encounters
-- 20 keV stopping decrement per encounter
-- 4 keV straggling
-- FF injector spread: 3.7%
-- FF rephase trapping: 85%
-- synchronized FF + sheet trapping: 92%
-- explicit 384-case falsification sweep over stopping loss, trapping, spread, and jitter
+to close the remaining fast-proton support deficit.
 
-## Nominal results
+These are thresholds, not efficiencies credited to the design.
 
-| Case | Mean resonance score | Mean 550-800 keV occupancy | Exposure vs one-shot 675 keV | Exposure / delivered MeV |
-|---|---:|---:|---:|---:|
-| 120-keV autoresonant hold | 0.2132 | 0.0000 | 0.733x | 8.789 |
-| conventional 675-keV injection | 0.2909 | 0.2113 | 1.000x | 13.793 |
-| FF 675-keV injection only | 0.2944 | 0.2117 | 1.012x | 13.956 |
-| FF 675-keV rephase | 0.9674 | 0.9999 | 3.325x | 20.861 |
-| FF rephase + synchronized sheet | 0.9715 | 1.0000 | 3.339x | 20.977 |
+The same point has `P_brem/P_pB11 ~ 0.997`, so a fast-proton fraction near 4% is a natural reduced-model knee: lower beam fraction improves drag economy but lets bremsstrahlung exceed p-B11 fusion power density.
 
-The main result is that **narrower FF injection alone does almost nothing once stopping drift dominates**. The large effect comes from repeated rephasing. In the nominal case, FF rephasing keeps the packet in the 550-800 keV window for all 32 modeled encounters and raises cumulative resonance exposure by ~3.33x versus a one-shot 675-keV beam.
+## Residence / compression requirement
 
-The synchronized boron-sheet case adds only ~0.4% cumulative exposure over ordinary FF rephasing under the nominal assumptions. That means the first hardware/physics priority should be the rephaser itself; sheet synchronization is a second-order optimization unless a higher-fidelity model shows a stronger transport benefit.
+Using the inherited 23.033% burn target only as a hazard target:
 
-## Falsification sweep
+- readable density anchor (`ne ~ 1.34e20 m^-3`): **~10.3 s** proton residence;
+- `419246` effective passes: **~260 m effective reaction path/pass**, **~45 eV/pass** collision loss;
+- `100000` hardware passes: **~1090 m/pass**, **~190 eV/pass**.
 
-The sensitivity grid spans:
+A particle-conserving interpretation of the surrogate `volume_compression_factor = 0.074` corresponds to ~13.5x whole-channel density and reduces the residence target to **~0.76 s**, but raises the local beta=1-equivalent field to **~5.6 T** and the p-B11 power density to **~35 MW/m^3**. This is an engineering sensitivity, not a claim that the reactor achieves that compression.
 
-- stopping decrement: 10, 20, 35, 50 keV/encounter
-- FF trapped fraction: 0.30-0.95
-- FF energy spread: 3.7-15%
-- target jitter: 0-50 keV
+## Claim boundary
 
-Of 384 cases:
+- Wang et al. 2026 p-B11 cross section is evaluated in center-of-mass energy and convolved with the selected B-11 ion temperature.
+- The 3.7% FF packet spread is an optimistic literature anchor, not a demonstrated 0.6-MeV reactor injector result.
+- Classical Maxwellian stopping remains the drag floor; no magnetic or exotic-electron suppression multiplier is applied.
+- OpenMC blanket attenuation is not proton stopping.
+- DT-alpha assist is mapped from repository surrogate power ratios and is explicitly an opportunity cost, not free power.
+- The 23.033% burn fraction is a surrogate anchor/target hazard, not a validated burn prediction.
+- No reactor net-power or p-B11 ignition claim is made.
 
-- 255 (66.4%) passed the strong gate: mean resonance score >= 0.75 and mean primary-window occupancy >= 0.75
-- 379 (98.7%) passed the acceptable gate: both metrics >= 0.60
-- worst case: 50-keV loss, 30% trapping, 15% spread, 50-keV jitter -> resonance score 0.546 and window occupancy 0.539
-- best case: 10-keV loss, 95% trapping, 3.7% spread, zero target jitter -> resonance score 0.974 and window occupancy 1.000
+## Next gate
 
-So the concept is **not unconditionally favorable**. It breaks down when trapping is poor at the same time that stopping, spread, and target jitter are all large.
-
-## Driver-efficiency result
-
-The nominal synchronized FF case has 20.977 normalized resonance-exposure units per delivered proton MeV versus 13.793 for conventional 675-keV injection. Therefore, within this model, FF only needs an optical-to-proton efficiency of about **65.8% of the conventional driver's proton-energy efficiency** to match it on resonance exposure per source-energy input.
-
-Example: if a conventional injector were 20% efficient from source energy to proton kinetic energy, the FF path would need about 13.2% optical-to-proton efficiency to match its normalized resonance-exposure efficiency. This is a **relative screening threshold**, not a measured laser-system efficiency claim.
-
-## Files
-
-- `pb11_flying_focus_audit.py` - standalone reproducible audit
-- `results/case_summary.csv` - nominal five-case comparison
-- `results/cycle_history.csv` - per-cycle resonance score and window occupancy
-- `results/sensitivity.csv` - 384-case falsification sweep
-- `results/driver_efficiency_thresholds.csv` - relative FF efficiency thresholds
-- `results/optical_efficiency_sensitivity.csv` - source-energy sensitivity for the nominal synchronized FF case
-- `results/summary.json` - machine-readable audit summary and guardrails
-
-## Interpretation / next physics step
-
-This audit justifies promoting FF rephasing to a higher-fidelity kinetic study. The next useful step is **not** to increase the surrogate `pB11_net_delta` directly. It is to replace the assumed stopping decrement and trapping fraction with values from a low-energy PIC/stopping calculation for the actual proton channel and boron-sheet density, then hand only surviving operating points back into the reactor-level surrogate.
+Build a coupled orbit/geometry + collision-energy-routing audit around the `~0.58–0.60 MeV`, `~4% fast-proton` window. A candidate must simultaneously preserve wall clearance and residence, achieve a defensible compression/dwell time, meet the 64–74% drag-recovery threshold, and remain compatible with TCT/MHD and liquid-lithium wall constraints before anything is promoted into the reactor surrogate.
