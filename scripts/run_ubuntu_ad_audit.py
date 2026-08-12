@@ -14,7 +14,9 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
+import importlib.util
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -25,16 +27,39 @@ REPO = Path(__file__).resolve().parents[1]
 DEFAULT_RUN_DIR = REPO / "validation_runs" / "ubuntu_ad_audit_default"
 
 
+def subprocess_env() -> dict[str, str]:
+    """Return an environment that can import repository modules from scripts/.
+
+    Python sets sys.path[0] to the directory containing the invoked script. That
+    means executing a file under ``scripts/`` does not reliably put the repo root
+    on sys.path. Prefixing PYTHONPATH here makes every audit subprocess behave the
+    same way whether invoked from an activated conda env, a shell launcher, or
+    directly with an absolute Python path.
+    """
+    env = os.environ.copy()
+    existing = env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = str(REPO) if not existing else f"{REPO}{os.pathsep}{existing}"
+    return env
+
+
 def run(cmd: list[str], cwd: Path, log_path: Path) -> dict[str, Any]:
     proc = subprocess.run(
         cmd,
         cwd=cwd,
+        env=subprocess_env(),
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
     )
     log_path.write_text(proc.stdout, encoding="utf-8")
     return {"command": cmd, "returncode": proc.returncode, "log": str(log_path)}
+
+
+def module_available(name: str) -> bool:
+    try:
+        return importlib.util.find_spec(name) is not None
+    except (ImportError, AttributeError, ValueError):
+        return False
 
 
 def contains(path: Path, *needles: str) -> dict[str, bool]:
@@ -60,6 +85,7 @@ def main() -> int:
         "repo": str(REPO),
         "python": sys.version,
         "platform": sys.platform,
+        "pythonpath_repo_root_injected": True,
     }
 
     # A audit: existing Dedalus bias is prescribed; Ruzic gate adds a physical
@@ -127,6 +153,7 @@ def main() -> int:
         "missing": missing_features,
         "openmc_python_importable": False,
         "openmc_executable": shutil.which("openmc"),
+        "cross_sections_env": os.environ.get("OPENMC_CROSS_SECTIONS"),
     }
     try:
         import openmc  # type: ignore  # noqa: F401
@@ -154,11 +181,20 @@ def main() -> int:
     evidence["D"] = d_status
 
     if args.with_pytest:
-        evidence["pytest"] = run(
-            [sys.executable, "-m", "pytest", "-q", "tests/test_ruzic_fiflis_2016.py"],
-            REPO,
-            run_dir / "pytest_ruzic.log",
-        )
+        if module_available("pytest"):
+            evidence["pytest"] = run(
+                [sys.executable, "-m", "pytest", "-q", "tests/test_ruzic_fiflis_2016.py"],
+                REPO,
+                run_dir / "pytest_ruzic.log",
+            )
+            evidence["pytest"]["status"] = "ran"
+        else:
+            evidence["pytest"] = {
+                "status": "skipped",
+                "returncode": 0,
+                "reason": "pytest_not_installed",
+                "note": "Optional test stage skipped; install pytest to execute it.",
+            }
 
     evidence["overall"] = {
         "A_closed": False,
@@ -170,9 +206,15 @@ def main() -> int:
     out_json = run_dir / "ubuntu_ad_audit_summary.json"
     out_json.write_text(json.dumps(evidence, indent=2) + "\n", encoding="utf-8")
 
+    pytest_status = evidence.get("pytest", {}).get("status", "not_requested")
     report = f"""# Ubuntu A/D Validation Audit
 
 Generated: {evidence['generated_utc']}
+
+## Runtime portability
+
+Repository root injected into subprocess `PYTHONPATH`: yes
+Optional pytest stage: {pytest_status}
 
 ## A - lithium current / edge-plasma actuation
 
@@ -196,6 +238,7 @@ Current geometry builder engineering omissions detected:
 
 OpenMC Python importable: {d_status['openmc_python_importable']}
 OpenMC executable: {d_status['openmc_executable']}
+OPENMC_CROSS_SECTIONS: {d_status['cross_sections_env']}
 
 ## Result
 
