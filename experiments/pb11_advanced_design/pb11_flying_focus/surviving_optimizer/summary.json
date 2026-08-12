@@ -1,0 +1,10 @@
+{
+  "classification": "SURVIVING_FF_WINDOW_IDENTIFIED_DRAG_RECOVERY_REQUIRED",
+  "rate_lock_target": {"E_lab_keV": 638.0, "mean_Ecm_keV": 591.582774566575, "mean_sigma_barn": 0.9443143236596286, "sigma_v_m3_s": 1.044750397102023e-21, "sigma_path_m2": 9.454234802290131e-29},
+  "path_probability_target": {"E_lab_keV": 616.0, "mean_Ecm_keV": 571.4240609496226, "mean_sigma_barn": 0.948298250121313, "sigma_v_m3_s": 1.03553763347235e-21, "sigma_path_m2": 9.533471937098691e-29},
+  "drag_economy_target": {"E_lab_keV": 600.0, "ffast": 0.005, "collision_over_fusion": 8.023415737931437, "replacement_over_fusion": 0.06896551724137932, "basic_demand_over_fusion": 8.092381255172816},
+  "corrected_DT_alpha_normalization": {"DT_alpha_to_pB11_gross_ratio": 0.8309226025498891, "selected_DT_alpha_assist_fraction": 0.85, "physical_baseline_Pfusion_W_m3": 832776.478199925, "absolute_DT_alpha_assist_screen_W_m3": 588176.8788169809},
+  "recovery_gated_operating_center": {"E_lab_keV": 584.0, "ffast": 0.04, "Pbrems_over_Pfusion": 0.9967509001847298, "collision_over_Pfusion": 8.317536489883524, "fast_loop_deficit_after_pb11_plus_DT_alpha_over_Pfusion": 4.7087322367181885, "total_nonradiative_drag_over_Pfusion": 7.320785589698795, "electron_nonradiative_drag_over_Pfusion": 6.380571471314577, "required_total_drag_recovery_fraction": 0.6432004023371383, "required_electron_exhaust_recovery_fraction": 0.7379797025842353, "brems_gate_Pbrems_le_Pfusion": true},
+  "guardrails": ["No electron-drag suppression from exotic electron distributions is credited.", "DT-alpha assist is a fixed surrogate-anchored screening power and not a dimensional reactor result.", "The phase-shape term is an optimistic energy-conserving BGK lower bound.", "The density multiplier scales the whole quasineutral channel.", "The 23.033% burn remains a target hazard inherited from the surrogate.", "No reactor net-power or p-B11 ignition claim is made."],
+  "next_gate": "Coupled orbit/geometry plus electron-exhaust energy-routing audit in the ~0.58-0.60 MeV / ~4% fast-proton window."
+}
