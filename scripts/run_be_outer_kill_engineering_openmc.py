@@ -183,11 +183,17 @@ def build_existing_material(openmc: Any, name: str, li6_enrich: float, packing: 
 def build_engineering_materials(openmc: Any, case: EngineeringCase) -> dict[str, Any]:
     mats: dict[str, Any] = {}
 
-    mats["plasma"] = openmc.Material(name="plasma_void_proxy")
-    mats["plasma"].set_density("g/cm3", 1e-12)
-    mats["plasma"].add_nuclide("H1", 1.0)
+    plasma = openmc.Material(name="plasma_void_proxy")
+    plasma.set_density("g/cm3", 1e-12)
+    plasma.add_nuclide("H1", 1.0)
+    mats["plasma"] = plasma
 
-    mats["liquid_wall"] = build_existing_material(openmc, "Li", 0.95 * case.li6_enrichment_scale, 1.0)
+    mats["liquid_wall"] = build_existing_material(
+        openmc,
+        "Li",
+        0.95 * case.li6_enrichment_scale,
+        1.0,
+    )
 
     for idx, name in enumerate(MATERIAL_ORDER):
         li6 = min(0.999, BASE_LI6[idx] * case.li6_enrichment_scale)
@@ -243,7 +249,14 @@ def _union(regions: list[Any]) -> Any | None:
     return out
 
 
-def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, particles: int, batches: int):
+def build_model(
+    openmc: Any,
+    case: EngineeringCase,
+    run_dir: Path,
+    seed: int,
+    particles: int,
+    batches: int,
+) -> dict[str, Any]:
     mats = build_engineering_materials(openmc, case)
 
     r0 = PLASMA_RADIUS_CM
@@ -268,11 +281,23 @@ def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, pa
 
     c0 = openmc.ZCylinder(r=r0)
     c1 = openmc.ZCylinder(r=r1)
-    c6 = openmc.ZCylinder(r=r6, boundary_type="vacuum" if case.shield_thickness_cm <= 0.0 else "transmission")
-    if case.shield_thickness_cm > 0.0:
-        c_outer = openmc.ZCylinder(r=r_outer, boundary_type="vacuum")
-    else:
-        c_outer = c6
+    c6 = openmc.ZCylinder(
+        r=r6,
+        boundary_type="vacuum" if case.shield_thickness_cm <= 0.0 else "transmission",
+    )
+    c_outer = (
+        openmc.ZCylinder(r=r_outer, boundary_type="vacuum")
+        if case.shield_thickness_cm > 0.0
+        else c6
+    )
+
+    # Share exact radial boundary objects between adjacent cells. Only an
+    # optional structural interface creates an additional surface inside a
+    # layer. This avoids coincident-but-distinct CSG surfaces at layer joins.
+    layer_boundaries: list[Any] = [c1]
+    for radius in bounds[1:-1]:
+        layer_boundaries.append(openmc.ZCylinder(r=radius))
+    layer_boundaries.append(c6)
 
     core_axial = +zmin_core & -zmax_core
     whole_axial = +zmin_outer & -zmax_outer
@@ -294,15 +319,33 @@ def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, pa
             z_positions = [0.0]
         else:
             span = 0.30 * z1
-            z_positions = [(-span + 2.0 * span * i / (pair_count - 1)) for i in range(pair_count)]
+            z_positions = [
+                -span + 2.0 * span * i / (pair_count - 1)
+                for i in range(pair_count)
+            ]
+
         x_pos_start = openmc.XPlane(x0=r0)
-        x_pos_end = openmc.XPlane(x0=r_outer)
-        x_neg_start = openmc.XPlane(x0=-r_outer)
+        x_pos_end = openmc.XPlane(x0=r_outer, boundary_type="vacuum")
+        x_neg_start = openmc.XPlane(x0=-r_outer, boundary_type="vacuum")
         x_neg_end = openmc.XPlane(x0=-r0)
+
         for z0 in z_positions:
             tube = openmc.XCylinder(y0=0.0, z0=z0, r=case.port_radius_cm)
-            port_regions.append(-tube & +x_pos_start & -x_pos_end & core_axial)
-            port_regions.append(-tube & +x_neg_start & -x_neg_end & core_axial)
+            positive_port = (
+                -tube
+                & +x_pos_start
+                & -x_pos_end
+                & -c_outer
+                & core_axial
+            )
+            negative_port = (
+                -tube
+                & +x_neg_start
+                & -x_neg_end
+                & -c_outer
+                & core_axial
+            )
+            port_regions.extend([positive_port, negative_port])
     port_union = _union(port_regions)
 
     def subtract_parasitics(region: Any, include_coolant: bool = True) -> Any:
@@ -316,22 +359,41 @@ def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, pa
     cells: list[Any] = []
     material_cells: list[Any] = []
 
-    plasma_cell = openmc.Cell(name="plasma", region=-c0 & core_axial, fill=mats["plasma"])
+    plasma_cell = openmc.Cell(
+        name="plasma",
+        region=-c0 & core_axial,
+        fill=mats["plasma"],
+    )
     cells.append(plasma_cell)
 
-    liquid_region = subtract_parasitics(+c0 & -c1 & core_axial, include_coolant=False)
-    liquid_cell = openmc.Cell(name="liquid_wall", region=liquid_region, fill=mats["liquid_wall"])
+    liquid_region = subtract_parasitics(
+        +c0 & -c1 & core_axial,
+        include_coolant=False,
+    )
+    liquid_cell = openmc.Cell(
+        name="liquid_wall",
+        region=liquid_region,
+        fill=mats["liquid_wall"],
+    )
     cells.append(liquid_cell)
     material_cells.append(liquid_cell)
 
     for idx, (layer_inner, layer_outer) in enumerate(zip(bounds[:-1], bounds[1:])):
         layer_total = layer_outer - layer_inner
         structural_thickness = layer_total * case.structural_fraction
-        functional_outer = layer_outer - structural_thickness
 
-        inner_surface = openmc.ZCylinder(r=layer_inner)
-        functional_outer_surface = openmc.ZCylinder(r=functional_outer)
-        functional_region = subtract_parasitics(+inner_surface & -functional_outer_surface & core_axial)
+        inner_surface = layer_boundaries[idx]
+        outer_surface = layer_boundaries[idx + 1]
+
+        if structural_thickness > 0.0:
+            functional_outer_radius = layer_outer - structural_thickness
+            functional_outer_surface = openmc.ZCylinder(r=functional_outer_radius)
+        else:
+            functional_outer_surface = outer_surface
+
+        functional_region = subtract_parasitics(
+            +inner_surface & -functional_outer_surface & core_axial
+        )
         functional_cell = openmc.Cell(
             name=f"l{idx + 1}_{MATERIAL_ORDER[idx]}_functional",
             region=functional_region,
@@ -341,8 +403,9 @@ def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, pa
         material_cells.append(functional_cell)
 
         if structural_thickness > 0.0:
-            outer_surface = openmc.ZCylinder(r=layer_outer)
-            structural_region = subtract_parasitics(+functional_outer_surface & -outer_surface & core_axial)
+            structural_region = subtract_parasitics(
+                +functional_outer_surface & -outer_surface & core_axial
+            )
             structural_cell = openmc.Cell(
                 name=f"l{idx + 1}_structural_skin",
                 region=structural_region,
@@ -351,39 +414,75 @@ def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, pa
             cells.append(structural_cell)
             material_cells.append(structural_cell)
 
-    coolant_cell = None
     if coolant_union is not None:
         coolant_region = coolant_union & +c1 & -c6 & core_axial
         if port_union is not None:
             coolant_region = coolant_region & ~port_union
-        coolant_cell = openmc.Cell(name="helium_coolant_channels", region=coolant_region, fill=mats["coolant"])
+        coolant_cell = openmc.Cell(
+            name="helium_coolant_channels",
+            region=coolant_region,
+            fill=mats["coolant"],
+        )
         cells.append(coolant_cell)
         material_cells.append(coolant_cell)
 
     port_cell = None
     if port_union is not None:
-        port_cell = openmc.Cell(name="radial_port_voids", region=port_union, fill=None)
+        port_cell = openmc.Cell(
+            name="radial_port_voids",
+            region=port_union,
+            fill=None,
+        )
         cells.append(port_cell)
 
-    top_inner = openmc.Cell(name="top_cap_inner", region=-c6 & top_inner_axial, fill=mats["layer_1"])
-    bot_inner = openmc.Cell(name="bot_cap_inner", region=-c6 & bot_inner_axial, fill=mats["layer_1"])
-    top_outer = openmc.Cell(name="top_cap_outer", region=-c6 & top_outer_axial, fill=mats["layer_5"])
-    bot_outer = openmc.Cell(name="bot_cap_outer", region=-c6 & bot_outer_axial, fill=mats["layer_5"])
-    for cap in (top_inner, bot_inner, top_outer, bot_outer):
-        cells.append(cap)
-        material_cells.append(cap)
+    cap_cells = [
+        openmc.Cell(
+            name="top_cap_inner",
+            region=-c6 & top_inner_axial,
+            fill=mats["layer_1"],
+        ),
+        openmc.Cell(
+            name="bot_cap_inner",
+            region=-c6 & bot_inner_axial,
+            fill=mats["layer_1"],
+        ),
+        openmc.Cell(
+            name="top_cap_outer",
+            region=-c6 & top_outer_axial,
+            fill=mats["layer_5"],
+        ),
+        openmc.Cell(
+            name="bot_cap_outer",
+            region=-c6 & bot_outer_axial,
+            fill=mats["layer_5"],
+        ),
+    ]
+    cells.extend(cap_cells)
+    material_cells.extend(cap_cells)
 
     shield_cell = None
     if case.shield_thickness_cm > 0.0:
         shield_region = +c6 & -c_outer & whole_axial
         if port_union is not None:
             shield_region = shield_region & ~port_union
-        shield_cell = openmc.Cell(name="outer_borated_steel_shield", region=shield_region, fill=mats["shield"])
+        shield_cell = openmc.Cell(
+            name="outer_borated_steel_shield",
+            region=shield_region,
+            fill=mats["shield"],
+        )
         cells.append(shield_cell)
         material_cells.append(shield_cell)
 
     openmc.Materials(list(mats.values())).export_to_xml(run_dir / "materials.xml")
-    openmc.Geometry(cells).export_to_xml(run_dir / "geometry.xml")
+
+    geometry = openmc.Geometry(cells)
+    # Shared boundaries already remove the important coincident-surface risk.
+    # Use OpenMC's redundant-surface cleanup when available as an additional
+    # guard without making the runner version-dependent.
+    remove_redundant = getattr(geometry, "remove_redundant_surfaces", None)
+    if callable(remove_redundant):
+        remove_redundant()
+    geometry.export_to_xml(run_dir / "geometry.xml")
 
     source = openmc.IndependentSource()
     source.space = openmc.stats.Point((0.0, 0.0, 0.0))
@@ -449,10 +548,22 @@ def build_model(openmc: Any, case: EngineeringCase, run_dir: Path, seed: int, pa
             "axial_caps_cm": [AXIAL_INNER_CAP_CM, AXIAL_OUTER_CAP_CM],
             "coolant_channel_centers": channel_centers(case, r1, r6),
         },
-        "claim_boundary": "Engineering degradation/sensitivity model only; not engineering-complete blanket validation.",
+        "claim_boundary": (
+            "Engineering degradation/sensitivity model only; "
+            "not engineering-complete blanket validation."
+        ),
     }
-    (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    return {"r0": r0, "r6": r6, "r_outer": r_outer, "nr": nr, "material_cells": material_cells}
+    (run_dir / "manifest.json").write_text(
+        json.dumps(manifest, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    return {
+        "r0": r0,
+        "r6": r6,
+        "r_outer": r_outer,
+        "nr": nr,
+    }
 
 
 def _sum_with_sigma(tally: Any) -> tuple[float, float]:
@@ -465,31 +576,59 @@ def _sum_with_sigma(tally: Any) -> tuple[float, float]:
     return total, total_sigma
 
 
-def extract_result(openmc: Any, statepoint_path: Path, case: EngineeringCase, seed: int, geom: dict[str, Any]) -> dict[str, Any]:
+def extract_result(
+    openmc: Any,
+    statepoint_path: Path,
+    case: EngineeringCase,
+    seed: int,
+    geom: dict[str, Any],
+) -> dict[str, Any]:
     import numpy as np
 
     with openmc.StatePoint(str(statepoint_path)) as sp:
-        tbr, tbr_sigma = _sum_with_sigma(sp.get_tally(name="h3_prod_engineering"))
-        heating_ev, heating_sigma_ev = _sum_with_sigma(sp.get_tally(name="heating_engineering"))
+        tbr, tbr_sigma = _sum_with_sigma(
+            sp.get_tally(name="h3_prod_engineering")
+        )
+        heating_ev, heating_sigma_ev = _sum_with_sigma(
+            sp.get_tally(name="heating_engineering")
+        )
 
         flux_tally = sp.get_tally(name="radial_flux_engineering")
         flux = np.asarray(flux_tally.mean, dtype=float).reshape(-1)
         flux_sigma = np.asarray(flux_tally.std_dev, dtype=float).reshape(-1)
         nr = int(geom["nr"])
-        centers = [(geom["r_outer"] * (i + 0.5) / nr) for i in range(nr)]
-        front_index = next((i for i, center in enumerate(centers) if center >= geom["r0"]), 0)
+        centers = [
+            geom["r_outer"] * (i + 0.5) / nr
+            for i in range(nr)
+        ]
+        front_index = next(
+            (i for i, center in enumerate(centers) if center >= geom["r0"]),
+            0,
+        )
         back_index = len(flux) - 1
         front_flux = float(flux[front_index])
         back_flux = float(flux[back_index])
-        attenuation = 1.0 - back_flux / front_flux if front_flux > 0.0 else float("nan")
+        attenuation = (
+            1.0 - back_flux / front_flux
+            if front_flux > 0.0
+            else float("nan")
+        )
 
         port_flux_value = float("nan")
         if case.port_count > 0:
-            port_flux_value = float(np.asarray(sp.get_tally(name="port_tracklength_flux").mean).reshape(-1)[0])
+            port_flux_value = float(
+                np.asarray(
+                    sp.get_tally(name="port_tracklength_flux").mean
+                ).reshape(-1)[0]
+            )
 
         shield_flux_value = float("nan")
         if case.shield_thickness_cm > 0.0:
-            shield_flux_value = float(np.asarray(sp.get_tally(name="shield_tracklength_flux").mean).reshape(-1)[0])
+            shield_flux_value = float(
+                np.asarray(
+                    sp.get_tally(name="shield_tracklength_flux").mean
+                ).reshape(-1)[0]
+            )
 
     return {
         "case": case.name,
@@ -504,7 +643,11 @@ def extract_result(openmc: Any, statepoint_path: Path, case: EngineeringCase, se
         "li6_enrichment_scale": case.li6_enrichment_scale,
         "TBR": tbr,
         "TBR_sigma": tbr_sigma,
-        "TBR_rel_sigma": (tbr_sigma / abs(tbr)) if tbr else float("nan"),
+        "TBR_rel_sigma": (
+            tbr_sigma / abs(tbr)
+            if tbr
+            else float("nan")
+        ),
         "heating_ev_per_source": heating_ev,
         "heating_sigma_ev_per_source": heating_sigma_ev,
         "front_flux": front_flux,
@@ -517,24 +660,51 @@ def extract_result(openmc: Any, statepoint_path: Path, case: EngineeringCase, se
     }
 
 
-def run_case(case: EngineeringCase, seed: int, run_dir: Path, particles: int, batches: int, cross_sections: str | None) -> dict[str, Any]:
+def run_case(
+    case: EngineeringCase,
+    seed: int,
+    run_dir: Path,
+    particles: int,
+    batches: int,
+    cross_sections: str | None,
+) -> dict[str, Any]:
     try:
         import openmc
     except Exception as exc:  # pragma: no cover - environment-specific
-        return {"case": case.name, "seed": seed, "returncode": 127, "error": f"openmc_import_failed: {exc!r}"}
+        return {
+            "case": case.name,
+            "seed": seed,
+            "returncode": 127,
+            "error": f"openmc_import_failed: {exc!r}",
+        }
 
     case_dir = run_dir / case.name / f"seed_{seed}"
     case_dir.mkdir(parents=True, exist_ok=True)
-    geom = build_model(openmc, case, case_dir, seed, particles, batches)
+    geom = build_model(
+        openmc,
+        case,
+        case_dir,
+        seed,
+        particles,
+        batches,
+    )
 
     env = os.environ.copy()
-    env["OMP_NUM_THREADS"] = env.get("OMP_NUM_THREADS", str(max(1, os.cpu_count() or 1)))
+    env["OMP_NUM_THREADS"] = env.get(
+        "OMP_NUM_THREADS",
+        str(max(1, os.cpu_count() or 1)),
+    )
     if cross_sections:
         env["OPENMC_CROSS_SECTIONS"] = cross_sections
 
     executable = shutil.which("openmc")
     if not executable:
-        return {"case": case.name, "seed": seed, "returncode": 127, "error": "openmc_executable_not_found"}
+        return {
+            "case": case.name,
+            "seed": seed,
+            "returncode": 127,
+            "error": "openmc_executable_not_found",
+        }
 
     proc = subprocess.run(
         [executable],
@@ -556,9 +726,20 @@ def run_case(case: EngineeringCase, seed: int, run_dir: Path, particles: int, ba
 
     statepoints = sorted(case_dir.glob("statepoint.*.h5"))
     if not statepoints:
-        return {"case": case.name, "seed": seed, "returncode": 2, "error": "statepoint_missing"}
+        return {
+            "case": case.name,
+            "seed": seed,
+            "returncode": 2,
+            "error": "statepoint_missing",
+        }
 
-    result = extract_result(openmc, statepoints[-1], case, seed, geom)
+    result = extract_result(
+        openmc,
+        statepoints[-1],
+        case,
+        seed,
+        geom,
+    )
     result["returncode"] = 0
     result["statepoint"] = str(statepoints[-1])
     return result
@@ -568,43 +749,101 @@ def finite(values: list[float]) -> list[float]:
     return [x for x in values if math.isfinite(x)]
 
 
-def aggregate(rows: list[dict[str, Any]], cases: list[EngineeringCase]) -> list[dict[str, Any]]:
+def aggregate(
+    rows: list[dict[str, Any]],
+    cases: list[EngineeringCase],
+) -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     for case in cases:
-        subset = [row for row in rows if row.get("case") == case.name and row.get("returncode") == 0]
+        subset = [
+            row
+            for row in rows
+            if row.get("case") == case.name
+            and row.get("returncode") == 0
+        ]
         if not subset:
             out.append({"case": case.name, "successful_seeds": 0})
             continue
+
         tbrs = finite([float(row["TBR"]) for row in subset])
-        attenuations = finite([float(row["radial_attenuation"]) for row in subset])
-        heating = finite([float(row["heating_ev_per_source"]) for row in subset])
-        rel_sigmas = finite([float(row["TBR_rel_sigma"]) for row in subset])
-        port_flux = finite([float(row["port_tracklength_flux"]) for row in subset])
-        shield_flux = finite([float(row["shield_tracklength_flux"]) for row in subset])
+        attenuations = finite(
+            [float(row["radial_attenuation"]) for row in subset]
+        )
+        heating = finite(
+            [float(row["heating_ev_per_source"]) for row in subset]
+        )
+        rel_sigmas = finite(
+            [float(row["TBR_rel_sigma"]) for row in subset]
+        )
+        port_flux = finite(
+            [float(row["port_tracklength_flux"]) for row in subset]
+        )
+        shield_flux = finite(
+            [float(row["shield_tracklength_flux"]) for row in subset]
+        )
+
         out.append(
             {
                 "case": case.name,
                 "successful_seeds": len(subset),
                 "TBR_mean": statistics.fmean(tbrs),
-                "TBR_seed_stdev": statistics.stdev(tbrs) if len(tbrs) > 1 else 0.0,
-                "TBR_mean_reported_rel_sigma": statistics.fmean(rel_sigmas) if rel_sigmas else float("nan"),
-                "radial_attenuation_mean": statistics.fmean(attenuations) if attenuations else float("nan"),
-                "heating_ev_per_source_mean": statistics.fmean(heating) if heating else float("nan"),
-                "port_tracklength_flux_mean": statistics.fmean(port_flux) if port_flux else float("nan"),
-                "shield_tracklength_flux_mean": statistics.fmean(shield_flux) if shield_flux else float("nan"),
+                "TBR_seed_stdev": (
+                    statistics.stdev(tbrs)
+                    if len(tbrs) > 1
+                    else 0.0
+                ),
+                "TBR_mean_reported_rel_sigma": (
+                    statistics.fmean(rel_sigmas)
+                    if rel_sigmas
+                    else float("nan")
+                ),
+                "radial_attenuation_mean": (
+                    statistics.fmean(attenuations)
+                    if attenuations
+                    else float("nan")
+                ),
+                "heating_ev_per_source_mean": (
+                    statistics.fmean(heating)
+                    if heating
+                    else float("nan")
+                ),
+                "port_tracklength_flux_mean": (
+                    statistics.fmean(port_flux)
+                    if port_flux
+                    else float("nan")
+                ),
+                "shield_tracklength_flux_mean": (
+                    statistics.fmean(shield_flux)
+                    if shield_flux
+                    else float("nan")
+                ),
             }
         )
 
-    control = next((row for row in out if row["case"] == "idealized_control" and row.get("successful_seeds", 0) > 0), None)
+    control = next(
+        (
+            row
+            for row in out
+            if row["case"] == "idealized_control"
+            and row.get("successful_seeds", 0) > 0
+        ),
+        None,
+    )
     if control:
+        c_tbr = float(control["TBR_mean"])
+        c_heat = float(control["heating_ev_per_source_mean"])
         for row in out:
             if row.get("successful_seeds", 0) <= 0:
                 continue
-            c_tbr = float(control["TBR_mean"])
-            c_heat = float(control["heating_ev_per_source_mean"])
-            row["TBR_delta_fraction_vs_control"] = (float(row["TBR_mean"]) - c_tbr) / c_tbr if c_tbr else float("nan")
+            row["TBR_delta_fraction_vs_control"] = (
+                (float(row["TBR_mean"]) - c_tbr) / c_tbr
+                if c_tbr
+                else float("nan")
+            )
             row["heating_delta_fraction_vs_control"] = (
-                (float(row["heating_ev_per_source_mean"]) - c_heat) / c_heat if c_heat else float("nan")
+                (float(row["heating_ev_per_source_mean"]) - c_heat) / c_heat
+                if c_heat
+                else float("nan")
             )
     return out
 
@@ -618,7 +857,11 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
             if key not in fields:
                 fields.append(key)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fields,
+            extrasaction="ignore",
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -633,19 +876,34 @@ def fmt(value: Any, digits: int = 6) -> str:
         return str(value)
 
 
-def write_report(path: Path, aggregates: list[dict[str, Any]], failures: list[dict[str, Any]], particles: int, batches: int, seeds: list[int]) -> None:
+def write_report(
+    path: Path,
+    aggregates: list[dict[str, Any]],
+    failures: list[dict[str, Any]],
+    particles: int,
+    batches: int,
+    seeds: list[int],
+) -> None:
     lines = [
         "# be_outer_kill Engineering OpenMC Degradation Report",
         "",
         f"Status: `{STATUS}`",
         "",
-        "This family measures how explicit engineering parasitics change the local `be_outer_kill` OpenMC control. It does not claim an engineering-complete blanket.",
+        (
+            "This family measures how explicit engineering parasitics change "
+            "the local `be_outer_kill` OpenMC control. It does not claim an "
+            "engineering-complete blanket."
+        ),
         "",
-        f"Transport: {particles} particles/batch × {batches} batches per seed; seeds `{','.join(str(s) for s in seeds)}`.",
+        (
+            f"Transport: {particles} particles/batch × {batches} batches per "
+            f"seed; seeds `{','.join(str(s) for s in seeds)}`."
+        ),
         "",
         "| Case | Seeds | TBR mean | seed σ | tally rel σ | ΔTBR vs control | attenuation | heating eV/source |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
+
     for row in aggregates:
         lines.append(
             "| {case} | {n} | {tbr} | {seed_sd} | {tally_sd} | {dtbr} | {attn} | {heat} |".format(
@@ -659,26 +917,42 @@ def write_report(path: Path, aggregates: list[dict[str, Any]], failures: list[di
                 heat=fmt(row.get("heating_ev_per_source_mean")),
             )
         )
+
     lines.extend(
         [
             "",
             "## What changed relative to the control",
             "",
             "- Each functional radial layer gives up the configured thickness fraction to an explicit reduced ferritic-steel skin.",
-            "- Helium coolant channels are explicit Z-oriented cylindrical void/material regions cut through the blanket layers.",
+            "- Helium coolant channels are explicit Z-oriented cylindrical material regions cut through the blanket layers.",
             "- Radial diagnostic/heating penetrations are explicit finite X-oriented void channels cut through blanket and shield.",
             "- The engineering cases add an explicit borated-steel radial shield.",
             "- Breeder packing and Li-6 enrichment are varied only as declared sensitivity-envelope assumptions.",
             "",
             "## Remaining D limitations",
             "",
-            "This is still a reduced cylindrical engineering-degradation model. It does not yet include a CAD-derived tokamak blanket, real port shapes and sector coverage, manifolds, first-wall support mechanics, magnet/shield integration, coolant thermohydraulics, tritium extraction, activation/DPA/He production, thermal stress, or manufacturing tolerances. The outer shield is radial and simplified. Therefore a favorable result narrows D but does not close it.",
+            (
+                "This is still a reduced cylindrical engineering-degradation "
+                "model. It does not yet include a CAD-derived tokamak blanket, "
+                "real port shapes and sector coverage, manifolds, first-wall "
+                "support mechanics, magnet/shield integration, coolant "
+                "thermohydraulics, tritium extraction, activation/DPA/He "
+                "production, thermal stress, or manufacturing tolerances. The "
+                "outer shield is radial and simplified. Therefore a favorable "
+                "result narrows D but does not close it."
+            ),
         ]
     )
+
     if failures:
         lines.extend(["", "## Failed runs", ""])
         for failure in failures:
-            lines.append(f"- `{failure.get('case')}` seed `{failure.get('seed')}`: `{failure.get('error')}` (return code {failure.get('returncode')})")
+            lines.append(
+                f"- `{failure.get('case')}` seed `{failure.get('seed')}`: "
+                f"`{failure.get('error')}` "
+                f"(return code {failure.get('returncode')})"
+            )
+
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -688,8 +962,15 @@ def main() -> int:
     parser.add_argument("--particles", type=int, default=8000)
     parser.add_argument("--batches", type=int, default=20)
     parser.add_argument("--seeds", default="104729,130363,169087")
-    parser.add_argument("--case", action="append", help="run only named case; may be repeated")
-    parser.add_argument("--cross-sections", default=os.environ.get("OPENMC_CROSS_SECTIONS"))
+    parser.add_argument(
+        "--case",
+        action="append",
+        help="run only named case; may be repeated",
+    )
+    parser.add_argument(
+        "--cross-sections",
+        default=os.environ.get("OPENMC_CROSS_SECTIONS"),
+    )
     parser.add_argument("--plan-only", action="store_true")
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--strict", action="store_true")
@@ -699,15 +980,25 @@ def main() -> int:
     selected = all_cases
     if args.case:
         wanted = set(args.case)
-        selected = [case for case in all_cases if case.name in wanted]
-        missing = sorted(wanted - {case.name for case in selected})
+        selected = [
+            case
+            for case in all_cases
+            if case.name in wanted
+        ]
+        missing = sorted(
+            wanted - {case.name for case in selected}
+        )
         if missing:
-            raise SystemExit(f"unknown case(s): {', '.join(missing)}")
+            raise SystemExit(
+                f"unknown case(s): {', '.join(missing)}"
+            )
+
     seeds = parse_ints(args.seeds)
     validate_plan(all_cases, seeds)
 
     run_dir = args.run_dir.resolve()
     run_dir.mkdir(parents=True, exist_ok=True)
+
     plan = {
         "status": STATUS,
         "generated_utc": datetime.now(timezone.utc).isoformat(),
@@ -717,14 +1008,22 @@ def main() -> int:
         "batches": args.batches,
         "seeds": seeds,
         "selected_cases": [asdict(case) for case in selected],
-        "claim_boundary": "Engineering degradation/sensitivity model only; not engineering-complete blanket validation.",
+        "claim_boundary": (
+            "Engineering degradation/sensitivity model only; "
+            "not engineering-complete blanket validation."
+        ),
     }
-    (run_dir / "engineering_plan.json").write_text(json.dumps(plan, indent=2) + "\n", encoding="utf-8")
+    (run_dir / "engineering_plan.json").write_text(
+        json.dumps(plan, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     if args.check:
-        assert args.particles > 0 and args.batches > 0
+        assert args.particles > 0
+        assert args.batches > 0
         assert selected
         print("plan check: PASS")
+
     if args.plan_only:
         print(json.dumps(plan, indent=2))
         return 0
@@ -733,35 +1032,75 @@ def main() -> int:
     for case in selected:
         for seed in seeds:
             print(f"[run] {case.name} seed={seed}", flush=True)
-            result = run_case(case, seed, run_dir, args.particles, args.batches, args.cross_sections)
+            result = run_case(
+                case,
+                seed,
+                run_dir,
+                args.particles,
+                args.batches,
+                args.cross_sections,
+            )
             rows.append(result)
+
             if result.get("returncode") != 0:
-                print(f"[fail] {case.name} seed={seed}: {result.get('error')}", flush=True)
+                print(
+                    f"[fail] {case.name} seed={seed}: "
+                    f"{result.get('error')}",
+                    flush=True,
+                )
                 if args.strict:
-                    write_csv(run_dir / "engineering_seed_results.csv", rows)
+                    write_csv(
+                        run_dir / "engineering_seed_results.csv",
+                        rows,
+                    )
                     return 1
             else:
                 print(
-                    f"[ok] {case.name} seed={seed} TBR={result['TBR']:.6g} "
-                    f"rel_sigma={result['TBR_rel_sigma']:.3g} attenuation={result['radial_attenuation']:.6g}",
+                    f"[ok] {case.name} seed={seed} "
+                    f"TBR={result['TBR']:.6g} "
+                    f"rel_sigma={result['TBR_rel_sigma']:.3g} "
+                    f"attenuation={result['radial_attenuation']:.6g}",
                     flush=True,
                 )
 
-    write_csv(run_dir / "engineering_seed_results.csv", rows)
+    write_csv(
+        run_dir / "engineering_seed_results.csv",
+        rows,
+    )
     aggregates = aggregate(rows, selected)
-    write_csv(run_dir / "engineering_case_summary.csv", aggregates)
-    failures = [row for row in rows if row.get("returncode") != 0]
+    write_csv(
+        run_dir / "engineering_case_summary.csv",
+        aggregates,
+    )
+    failures = [
+        row
+        for row in rows
+        if row.get("returncode") != 0
+    ]
 
     summary = {
         "status": STATUS,
         "generated_utc": datetime.now(timezone.utc).isoformat(),
-        "successful_runs": sum(row.get("returncode") == 0 for row in rows),
+        "successful_runs": sum(
+            row.get("returncode") == 0
+            for row in rows
+        ),
         "failed_runs": len(failures),
         "cases": aggregates,
         "claim_boundary": plan["claim_boundary"],
     }
-    (run_dir / "engineering_summary.json").write_text(json.dumps(summary, indent=2, allow_nan=True) + "\n", encoding="utf-8")
-    write_report(run_dir / "BE_OUTER_KILL_ENGINEERING_REPORT.md", aggregates, failures, args.particles, args.batches, seeds)
+    (run_dir / "engineering_summary.json").write_text(
+        json.dumps(summary, indent=2, allow_nan=True) + "\n",
+        encoding="utf-8",
+    )
+    write_report(
+        run_dir / "BE_OUTER_KILL_ENGINEERING_REPORT.md",
+        aggregates,
+        failures,
+        args.particles,
+        args.batches,
+        seeds,
+    )
 
     print(json.dumps(summary, indent=2, allow_nan=True))
     return 1 if args.strict and failures else 0
