@@ -17,4 +17,6 @@ if [[ " $* " != *" --plan-only "* ]] && ! command -v openmc >/dev/null 2>&1; the
   exit 127
 fi
 
-exec "$PYTHON_BIN" scripts/run_be_outer_kill_engineering_openmc.py "$@"
+# The Ubuntu launcher is strict by default: any failed OpenMC case/seed returns
+# non-zero instead of leaving a superficially successful matrix.
+exec "$PYTHON_BIN" scripts/run_be_outer_kill_engineering_openmc.py --strict "$@"
