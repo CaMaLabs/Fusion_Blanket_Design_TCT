@@ -2,7 +2,7 @@
 
 Current canonical result:
 
-**SURVIVING_FF_WINDOW_IDENTIFIED_DRAG_RECOVERY_REQUIRED**
+**GEOMETRY_CONDITIONAL_PASS_RESIDENCE_AND_ROUTING_UPGRADE_REQUIRED**
 
 Study chronology:
 
@@ -10,16 +10,45 @@ Study chronology:
 2. `ignition_bridge/` — first energy bridge; retained for provenance.
 3. `physical_channel/` — corrected CM/lab target to ~638 keV and physicalized stopping.
 4. `power_flow/` — conserved alpha power and identified electron drag as the dominant remaining burden.
-5. `distribution_kinetic/` — isotropic low-energy electron holes reduce drag but fail by ~2.2e3 `P_fusion` of phase-space maintenance.
-6. `anisotropic_kinetic/` — directed/two-stream electrons reduce drag but still fail at ~2e2 `P_fusion` of maintenance plus instability risk.
-7. `surviving_optimizer/` — current result. Electron drag is accepted rather than suppressed. The optimizer separates the ~638-keV rate target, ~616-keV path target, and ~600-keV drag-economy target, then identifies a ~584–600-keV / ~4%-fast-proton hybrid window where bremsstrahlung is not above p-B11 fusion.
+5. `distribution_kinetic/` — isotropic electron holes suppress drag but fail by ~2.2e3 `P_fusion` of maintenance.
+6. `anisotropic_kinetic/` — directed/two-stream electrons suppress drag but fail at ~2e2 `P_fusion` maintenance plus instability risk.
+7. `surviving_optimizer/` — accepts the drag floor and identifies the ~584–600-keV / ~4%-fast-proton drag-recovery window.
+8. `orbit_energy_routing/` — current result. Candidate-0 orbit size, wall clearance, classical-diffusion lower bound, and betaN volume screening are conditionally compatible with a narrow edge-biased reaction sheet, but the corrected residence remains multi-second and the existing electron-energy routing equations cannot meet the required recovery.
 
-The new promotion gate is **drag-energy recovery**, not drag cancellation.
+## Compression-semantics correction
 
-At the recovery-gated operating center, approximately 64% of total non-radiative collision energy—or about 74% of the electron-drag/exhaust stream alone—must be recovered and returned to the fast-proton loop. These are thresholds, not credited efficiencies.
+`volume_compression_factor = 0.074` is an actuator/proxy magnitude in
+`m3dc1_tct_hybrid_bridge.py`, not a remaining-volume fraction.
 
-The inherited 23.033% burn target also requires ~10.3 s residence at the readable density anchor. A particle-conserving interpretation of the surrogate `volume_compression_factor=0.074` would reduce that to ~0.76 s but raises local pressure and power-density requirements.
+The previous `1/0.074 ~= 13.5x` density interpretation and `~0.76 s` residence
+sensitivity are superseded.
 
-Do **not** promote `pB11_net_delta` or ignition margin yet.
+Using the explicit selected `compression_amplitude_pct = 10%` only as a
+particle-conserving geometric sensitivity gives about `1.23–1.37x` density and
+about `8.35–7.52 s` residence.
 
-Next gate: coupled orbit/geometry + electron-exhaust energy-routing audit in the ~0.58–0.60 MeV / ~4% fast-proton window, with TCT/MHD and wall-clearance gates.
+## Current surviving geometry
+
+For the 584-keV, 4%-fast-proton center, an edge-biased passing packet can fit
+inside a few-centimeter reaction sheet with large LCFS clearance and remain
+below the Candidate-0 `betaN = 2.7` volume screen.
+
+However, the required burn-target residence still corresponds to roughly
+2–3 million toroidal circuits. The selected handoff has `edge_racetrack = off`
+and `racetrack_guidance_factor = 0`, so that residence is not validated.
+
+## Current failing gate
+
+Stage 7 requires 73.8% returned electron-drag energy.
+
+- selected exhaust proxy: ~29.6%
+- maximum reachable with the current repository channel/RF controls: ~68.4%
+- required extraction at 92% conversion × 95% FF return: ~84.4%
+
+The existing electron-channel equations therefore fail the routing gate.
+
+Do **not** promote `pB11_net_delta` or ignition margin.
+
+Next gate: explicit guiding-center orbit integration plus a redesigned
+electron-energy collector model with independent extraction, conversion, and
+return efficiencies.

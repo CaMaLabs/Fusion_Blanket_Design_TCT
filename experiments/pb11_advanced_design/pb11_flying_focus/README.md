@@ -1,67 +1,81 @@
 # p-B11 Flying-Focus Audit Program
 
-This directory contains a staged falsification/optimization program for applying flying-focus (FF) proton acceleration and rephasing to the advanced p-B11 branch. It remains intentionally separate from `m3dc1_tct_hybrid_bridge.py`: results are promoted only after each physical power-flow gate survives.
+This directory is a staged falsification/optimization program for applying
+flying-focus proton acceleration and rephasing to the advanced p-B11 branch.
+It remains separate from `m3dc1_tct_hybrid_bridge.py`; physical effects are not
+promoted into the reactor surrogate until their downstream gates survive.
 
 ## Current canonical result
 
-**SURVIVING_FF_WINDOW_IDENTIFIED_DRAG_RECOVERY_REQUIRED**
-
-The current program no longer assumes that electron drag can be cheaply suppressed. Both isotropic and directed electron-distribution approaches failed their recirculating-power gates. The surviving strategy is to accept classical drag, optimize p-B11 reaction probability and charged-particle return per unit drag, and ask whether the deposited collision energy can be recovered.
+**GEOMETRY_CONDITIONAL_PASS_RESIDENCE_AND_ROUTING_UPGRADE_REQUIRED**
 
 ## Stage chronology
 
-1. `results/` — resonance/rephasing screen. Repeated FF rephasing, not narrow injection by itself, is the useful mechanism.
-2. `ignition_bridge/` — first energy-accounting bridge; retained for provenance.
-3. `physical_channel/` — corrected center-of-mass/lab energy handling, physicalized the boron column, and calculated classical stopping.
-4. `power_flow/` — conserved alpha power and identified electron drag as the dominant remaining burden.
-5. `distribution_kinetic/` — isotropic sub-keV electron holes suppress drag but require ~2.2e3 `P_fusion` of distribution maintenance.
-6. `anisotropic_kinetic/` — directed/two-stream electrons suppress drag more efficiently but still require ~2e2 `P_fusion` of maintenance and enter an instability-risk regime.
-7. `surviving_optimizer/` — accepts the drag floor and optimizes FF energy, fast-proton fraction, alpha return, phase recovery, residence, compression, bremsstrahlung, and recoverable collision energy.
+1. `results/` — repeated FF rephasing identified as the useful resonance mechanism.
+2. `ignition_bridge/` — first energy bridge; retained for provenance.
+3. `physical_channel/` — corrected CM/lab energy handling and physical stopping.
+4. `power_flow/` — conserved alpha power and identified electron drag as the dominant burden.
+5. `distribution_kinetic/` — isotropic drag suppression fails its recirculating-power gate.
+6. `anisotropic_kinetic/` — directed/two-stream drag suppression also fails its power/stability gate.
+7. `surviving_optimizer/` — accepts classical drag and identifies the ~584–600-keV / ~4%-fast-proton recovery window.
+8. `orbit_energy_routing/` — couples that window to Candidate-0 orbit geometry, betaN, wall clearance, corrected compression semantics, and the repository electron-exhaust routing model.
 
 ## Current FF operating targets
 
-The physically useful FF setpoint depends on the objective:
-
-- **~638 keV lab** — maximum `<sigma v>` / peak instantaneous reaction rate.
+- **~638 keV lab** — maximum `<sigma v>` / instantaneous p-B11 rate.
 - **~616 keV lab** — maximum fusion probability per unit path.
-- **~600 keV lab** — minimum classical collision burden plus fused-proton replacement per p-B11 fusion energy.
-- **~584–600 keV lab with ~4% fast protons** — current hybrid compromise after adding the bremsstrahlung and drag-recovery gates.
+- **~600 keV lab** — minimum classical drag + fused-proton replacement per fusion energy.
+- **~584–600 keV lab with ~4% fast protons** — current hybrid drag-recovery / bremsstrahlung compromise.
 
-The FF actuator should therefore be treated as programmable rather than assigned one immutable p-B11 target.
+## Compression correction
 
-## Current promotion gate: recover the drag energy
+The prior Stage-7 interpretation of `volume_compression_factor = 0.074` as a
+physical remaining-volume fraction was incorrect.
 
-At the recovery-gated center (`~584 keV`, `n_fast ~ 0.04 ne`) and using 90% alpha-to-fast-proton coupling, 95% FF phase-energy recovery, and the selected DT-alpha-assist cap, the reduced model requires approximately:
+The bridge computes it as a bounded actuator/proxy magnitude. Therefore
+`1/0.074 ~= 13.5x` density and the associated `~0.76 s` residence are
+superseded.
 
-- **64.3% recovery of total non-radiative electron + boron collision energy**, or
-- **73.8% recovery of the non-radiative electron-drag/exhaust stream alone**
+The explicit selected `compression_amplitude_pct = 10%` supports only a
+bounded geometric sensitivity of roughly `1.23–1.37x` particle-conserving
+density, leaving the inherited burn-target residence near **7.5–8.4 s**.
 
-to close the remaining fast-proton support deficit.
+## Stage-8 geometry result
 
-These are thresholds, not efficiencies credited to the design.
+Candidate-0 machine anchors are `R=5.5 m`, `a=1.8 m`, `B0=7.2 T`,
+`Ip=14 MA`, `kappa=1.9`.
 
-The same point has `P_brem/P_pB11 ~ 0.997`, so a fast-proton fraction near 4% is a natural reduced-model knee: lower beam fraction improves drag economy but lets bremsstrahlung exceed p-B11 fusion power density.
+At 584 keV, a small-pitch passing proton packet has a centimeter-scale orbit
+envelope. A narrow edge-biased reaction sheet can pass simple wall-clearance,
+classical radial-diffusion, and volume-averaged betaN screens.
 
-## Residence / compression requirement
+But multi-second residence still means roughly **2–3 million toroidal
+circuits**. The selected handoff has `edge_racetrack = off` and
+`racetrack_guidance_factor = 0`, so long residence remains unvalidated.
 
-Using the inherited 23.033% burn target only as a hazard target:
+## Stage-8 routing result
 
-- readable density anchor (`ne ~ 1.34e20 m^-3`): **~10.3 s** proton residence;
-- `419246` effective passes: **~260 m effective reaction path/pass**, **~45 eV/pass** collision loss;
-- `100000` hardware passes: **~1090 m/pass**, **~190 eV/pass**.
+The upstream fast-loop requires **73.8% returned electron-drag energy**.
 
-A particle-conserving interpretation of the surrogate `volume_compression_factor = 0.074` corresponds to ~13.5x whole-channel density and reduces the residence target to **~0.76 s**, but raises the local beta=1-equivalent field to **~5.6 T** and the p-B11 power density to **~35 MW/m^3**. This is an engineering sensitivity, not a claim that the reactor achieves that compression.
+The selected repository state has about **29.6% electron exhaust**. Sweeping
+the existing electron-channel and RF-grating controls only reaches about
+**68.4%**.
 
-## Claim boundary
+At **92% electron-energy conversion** and **95% return-to-FF efficiency**, the
+required extraction fraction is about **84.4%**.
 
-- Wang et al. 2026 p-B11 cross section is evaluated in center-of-mass energy and convolved with the selected B-11 ion temperature.
-- The 3.7% FF packet spread is an optimistic literature anchor, not a demonstrated 0.6-MeV reactor injector result.
-- Classical Maxwellian stopping remains the drag floor; no magnetic or exotic-electron suppression multiplier is applied.
-- OpenMC blanket attenuation is not proton stopping.
-- DT-alpha assist is mapped from repository surrogate power ratios and is explicitly an opportunity cost, not free power.
-- The 23.033% burn fraction is a surrogate anchor/target hazard, not a validated burn prediction.
-- No reactor net-power or p-B11 ignition claim is made.
+Therefore the current electron-channel equations cannot close the fast-proton
+loop. A dedicated electron-energy collector/routing extension is required.
 
-## Next gate
+## Current decision
 
-Build a coupled orbit/geometry + collision-energy-routing audit around the `~0.58–0.60 MeV`, `~4% fast-proton` window. A candidate must simultaneously preserve wall clearance and residence, achieve a defensible compression/dwell time, meet the 64–74% drag-recovery threshold, and remain compatible with TCT/MHD and liquid-lithium wall constraints before anything is promoted into the reactor surrogate.
+Do not promote `pB11_net_delta`, ignition margin, or a p-B11 net-power claim.
+
+The next two gates are:
+
+1. guiding-center orbit integration over the required multi-second residence
+   with ripple/TCT-event perturbations and wall geometry;
+2. a redesigned electron-energy collector model with separate extraction,
+   conversion, and FF-return efficiencies.
+
+Only a case that survives both should be promoted into the reactor surrogate.
