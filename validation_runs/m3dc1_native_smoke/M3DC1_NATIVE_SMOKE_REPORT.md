@@ -1,80 +1,11 @@
-# M3D-C1 Native Smoke Report
+# Native M3D-C1 Smoke And KPRAD Reference Provenance
 
 Status: `NATIVE_M3DC1_EXECUTION_PASS_REFERENCE_REGRESSION_UNRESOLVED`
 
-This package records a native execution attempt using the public Princeton M3D-C1 solver. It is not a TCT physics result and does not validate reconnection suppression, reactor behavior, or plasma predictive capability.
+A 48-rank native M3D-C1 run completed all five KPRAD_2D timesteps and wrote populated HDF5 output, proving native execution. It fails the bundled C1ke regression at t=0 on magnetic-energy columns.
 
-## Build
+The bundled C1ke reference belongs to the historical single-mesh/split_smb workflow. Evidence: current source with the stored single-part `analytic-2K0.smb` plus `geqdsk` reproduces the bundled C1ke under upstream `compare.py` (return code 0). The checked-in 48-part mesh, introduced later, gives `Volume=0` and `emagp=2.8222e24` at t=0.
 
-- Upstream: `PrincetonUniversity/M3DC1`
-- Upstream commit: `e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b`
-- Build directory: `/home/ubuntu/M3DC1-official/build-ubuntu-2d`
-- Binary: `/home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d`
-- Local build-system compatibility patch: added `signal_handler.f90` to `unstructured/CMakeLists.txt`
-- CMake compatibility flag: `-DCMAKE_POLICY_VERSION_MINIMUM=3.5`
-- MPI stack: Spack `m3dc1-deps`, OpenMPI-only dependency DAG
+Do not update `unstructured/regtest/KPRAD_2D/base/C1ke` from the 48-rank run. The current public 48-part mesh is not demonstrated to be a faithful replacement for the historical split_smb partitioning in this environment.
 
-## Safestop Diagnosis
-
-The earlier 1-rank `KPRAD_2D` run reached `Defining initial conditions`, printed `Error reading geqdsk file`, and exited with `Stopped at 1`. The immediate cause was missing `geqdsk` in the staged run directory, not an HDF5 restart path.
-
-A correctly staged 1-rank diagnostic with `geqdsk` present still is not a valid official regression substitute because PUMI reports that the shipped mesh partition count does not match the MPI rank count.
-
-## Native Official Case Execution
-
-- Case: `unstructured/regtest/KPRAD_2D/base`
-- Mesh staging: bundled 48 `part*.smb` files from `unstructured/regtest/KPRAD_2D/mesh`
-- Ranks: `48` with OpenMPI `--oversubscribe` on a 16-core Ubuntu host
-- Command: `mpirun --oversubscribe -n 48 /home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d -pc_factor_mat_solver_type mumps`
-- Return code: `0`
-- Final solver line: `Stopped at           0`
-- Timesteps reached: yes, `TIME STEP` entries 1 through 5
-- Native `C1.h5`: populated; `328296` bytes in the run directory
-
-## C1ke Reference Comparison
-
-The generated `C1ke` has the same row and column count as the bundled reference, but it fails the upstream `compare.py` tolerance.
-
-- Upstream tolerance: fractional `1e-3`, with `etot` skipped
-- Comparison pass: `False`
-- First failing row/column: row `0`, `emagp`
-- Reference value: `0.11787`
-- Generated value: `2.8222e+24`
-- Maximum absolute difference: `3.811100e+25`
-- Maximum finite relative difference: `2.394333e+25`
-
-This means Level 3 and Level 5 evidence were achieved, but Level 4 reference reproduction was not achieved.
-
-## Evidence Level
-
-- Level 1: real public M3D-C1 source compiled into `m3dc1_2d`: achieved.
-- Level 2: MPI/PETSc/SCOREC/native runtime initialization: achieved.
-- Level 3: official bundled case reaches timestep loop and exits normally: achieved for 48-rank KPRAD_2D staging.
-- Level 4: generated `C1ke` reproduces official reference: not achieved.
-- Level 5: populated native `C1.h5` produced: achieved.
-- Level 6: baseline-vs-TCT M3D-C1 handoff: not attempted.
-
-## Claim Boundary
-
-This establishes that the public M3D-C1 executable can be built and can run the bundled `KPRAD_2D` case to normal solver termination in this Ubuntu/Spack/OpenMPI environment. It does not establish an official passing M3D-C1 regression, because the `C1ke` reference comparison fails. It does not validate TCT physics, reactor behavior, or plasma predictive capability.
-
-## C1ke Provenance Analysis
-
-The `C1ke` writer is `unstructured/output.f90:output`. The column order is:
-
-`ntime, time, ekin, gamma_gr, ekinp, ekint, ekin3, emagp, emagt, emag3, etot`
-
-The failed t=0 comparison is concentrated in the magnetic-energy columns before any timestep evolution. The first upstream `compare.py` failure is `emagp` at row 0: reference `0.11787`, generated `2.8222e+24`. The generated HDF5 scalar tree is populated and includes the corresponding scalar datasets (`E_MP`, `E_MT`, `E_P`, etc.).
-
-Git provenance shows that `unstructured/regtest/KPRAD_2D/base/C1ke` was last updated in 2020 (`8964f6bf`, with row 0 inherited from 2019), while current `diagnostics.f90` has later energy/scalar diagnostic changes. The evidence supports a diagnostic/reference provenance or build/reference mismatch rather than timestep instability, but the exact numerical equivalence is not resolved and the official comparison still fails. The successful run log reports `b0_norm = 10000` and `n0_norm = 1e14`, and current `Total energy` diagnostics are order `1e25`; the bundled reference magnetic-energy columns are order unity.
-
-Additional artifacts added in this update:
-
-- `C1ke_t0_comparison.csv`
-- `c1ke_column_provenance.md`
-- `reference_provenance.txt`
-- `regression_compare_output.txt`
-- `geqdsk.sha256`
-- `mesh_provenance.txt`
-- `hdf5_structure.txt`
-- `compact_stdout.log`
+Key files: `KPRAD_REFERENCE_TIMELINE.md`, `c1ke_column_provenance.md`, `C1ke_t0_comparison.csv`, `kprad_t0_initialization_trace.txt`, `mesh_provenance_comparison.md`.

@@ -1,12 +1,5 @@
-command: python3 /home/ubuntu/M3DC1-official/unstructured/regtest/compare.py C1ke.reference C1ke
-returncode: 1
-
-stdout:
 Files differ at time 0
 emagp  (base) =  0.11787
 emagp  (new) =  2.8222e+24
 Fractional difference =  2.3943327394587255e+25
 Tolerance =  0.001
-
-stderr:
-
