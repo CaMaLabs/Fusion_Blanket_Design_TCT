@@ -1,0 +1,32 @@
+{
+  "c1ke_max_abs_diff": 3.8111e+25,
+  "c1ke_max_finite_rel_diff": 2.3943327394587255e+25,
+  "c1ke_reference_compare_pass": false,
+  "c1ke_reference_compare_tolerance": "upstream compare.py fractional 1e-3, etot skipped",
+  "case": "unstructured/regtest/KPRAD_2D/base",
+  "claim_boundary": "Native public M3D-C1 build and KPRAD_2D execution evidence only. Official C1ke regression comparison is not passing, so this is not M3D-C1 physics validation or TCT validation.",
+  "cmake_compatibility_flags": [
+    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+  ],
+  "first_failing_column": "emagp",
+  "first_failing_generated": 2.8222e+24,
+  "first_failing_reference": 0.11787,
+  "first_failing_row": 0,
+  "generated_c1ke_rows": 6,
+  "generated_utc": "2026-08-20T14:00:55.505533+00:00",
+  "hdf5_artifact_policy": "C1.h5 not committed; compact h5ls listing committed",
+  "local_patches": [
+    "Added signal_handler.f90 to unstructured/CMakeLists.txt source list"
+  ],
+  "native_c1h5_populated": true,
+  "native_c1h5_size_bytes": 328296,
+  "native_run_returncode": 0,
+  "one_rank_failure_cause": "official shipped mesh has 48 partitions; 1-rank staging aborts in PUMI with partition/rank mismatch",
+  "rank_count": 48,
+  "reached_timestep_loop": true,
+  "reference_c1ke_rows": 6,
+  "status": "NATIVE_M3DC1_BUILD_PASS_REGRESSION_NOT_YET_PASSING",
+  "stopped_at": 0,
+  "upstream_commit": "e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b",
+  "upstream_repo": "https://github.com/PrincetonUniversity/M3DC1"
+}

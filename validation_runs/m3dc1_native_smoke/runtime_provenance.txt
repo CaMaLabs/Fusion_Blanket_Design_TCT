@@ -1,0 +1,23 @@
+M3D-C1 native smoke runtime provenance
+run_dir: /home/ubuntu/m3dc1_runs/KPRAD_2D_48rank_official
+case: unstructured/regtest/KPRAD_2D/base
+rank_count: 48
+launch_command: mpirun --oversubscribe -n 48 /home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d -pc_factor_mat_solver_type mumps > C1stdout 2>&1
+real 22.40
+user 240.14
+sys 106.42
+
+return_code: 0
+safestop: Stopped at 0
+C1_h5_size_bytes: 328296
+C1_h5_committed: false; compact h5ls listing committed instead
+one_rank_diagnostic: invalid for official shipped mesh; PUMI reported # mesh partitions != # MPI ranks
+upstream_compare_returncode: 1
+upstream_compare_stdout:
+Files differ at time 0
+emagp  (base) =  0.11787
+emagp  (new) =  2.8222e+24
+Fractional difference =  2.3943327394587255e+25
+Tolerance =  0.001
+upstream_compare_stderr:
+

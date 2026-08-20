@@ -381,3 +381,8 @@ It does not yet support:
 > The complete reactor is proven stable.
 
 That distinction is the best way to defend the work without weakening it. The reduced models have already shown measurable effects. The next task is to make the wall/liquid-lithium branch as explicit, deterministic, and falsifiable as the BOUT++ closed-loop current-sheet branch.
+
+
+## Native M3D-C1 Smoke Boundary
+
+A native public M3D-C1 build/run package is available at `validation_runs/m3dc1_native_smoke/`. The solver at upstream commit `e17c0b7` runs the bundled `KPRAD_2D` 48-partition case to normal termination (`Stopped at 0`) and writes populated native HDF5 output. The official `C1ke` regression comparison fails under the upstream 1e-3 fractional tolerance, so the result is a build/runtime smoke success with unresolved regression-reference mismatch. No M3D-C1 TCT physics claim is made.

@@ -1,0 +1,12 @@
+diff --git a/unstructured/CMakeLists.txt b/unstructured/CMakeLists.txt
+index ac86dd2a..f2e67415 100644
+--- a/unstructured/CMakeLists.txt
++++ b/unstructured/CMakeLists.txt
+@@ -54,6 +54,7 @@ set(SOURCES
+     read_gyro.f90
+     read_neo.f90
+     region.f90
++    signal_handler.f90
+     radiation.f90
+     element.f90
+     field.f90

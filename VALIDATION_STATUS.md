@@ -104,3 +104,10 @@ docs/benchmark_targets.md
 4. Derive or cite a defensible liquid-metal current-coupling source term before interpreting biased Dedalus results as actuator-like.
 5. Re-run the `be_outer_kill` blanket basin with fixed seeds, material definitions, uncertainty reporting, and a compact manifest.
 6. Get one external MHD/reconnection reviewer to assess whether the current-sheet framing maps to accepted benchmark variables.
+
+
+## Native M3D-C1 Smoke
+
+A compact native M3D-C1 evidence package is recorded in `validation_runs/m3dc1_native_smoke/`. The public Princeton M3D-C1 checkout at commit `e17c0b7` builds with a local build-system compatibility patch adding `signal_handler.f90` to the CMake source list. The official `KPRAD_2D` case, staged with the bundled 48-partition mesh and `geqdsk`, reaches five timesteps and exits with `Stopped at 0`, producing a populated native `C1.h5` in the external run directory.
+
+The official `C1ke` reference comparison does not pass: the generated file differs from the bundled reference by orders of magnitude in magnetic-energy columns under upstream `compare.py`. This is therefore classified as `NATIVE_M3DC1_BUILD_PASS_REGRESSION_NOT_YET_PASSING`, not M3D-C1 validation and not TCT validation.

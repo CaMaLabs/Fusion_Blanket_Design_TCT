@@ -1,0 +1,51 @@
+M3D-C1 native smoke build provenance
+generated_utc: 2026-08-20T14:00:52.300218+00:00
+upstream_repo: https://github.com/PrincetonUniversity/M3DC1.git
+upstream_commit: e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b
+local_patch: added signal_handler.f90 to unstructured/CMakeLists.txt source list
+cmake_policy_flag: -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+binary: /home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d
+binary_size: 3379440
+cmake_cache_compilers:
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_CXX_COMPILER:STRING=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/mpicxx
+CMAKE_C_COMPILER:STRING=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/mpicc
+CMAKE_Fortran_COMPILER:STRING=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/mpifort
+CMAKE_Fortran_FLAGS:STRING=
+CMAKE_Fortran_FLAGS_DEBUG:STRING=-g
+CMAKE_Fortran_FLAGS_MINSIZEREL:STRING=-Os
+CMAKE_Fortran_FLAGS_RELEASE:STRING=-O3
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO:STRING=-O2 -g
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS
+CMAKE_Fortran_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_DEBUG
+CMAKE_Fortran_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_MINSIZEREL
+CMAKE_Fortran_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_RELEASE
+CMAKE_Fortran_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_RELWITHDEBINFO
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+fortran_target_flags:
+23:Fortran_FLAGS = -O3 -fdefault-real-8 -fallow-argument-mismatch -ffree-line-length-512
+spack_env: /home/ubuntu/spack, environment m3dc1-deps
+spack_roots:
+==> In environment m3dc1-deps (9 root specs)
+[+] mqmin5h fftw+mpi
+[+] hfcxnru gsl
+[+] uoyar6d hdf5+fortran+mpi
+[+] iuha3g7 netcdf-c+mpi
+[+] el2mtnc netcdf-fortran
+[+] vpxup55 openmpi
+[+] nw3jibr petsc+complex+fortran+hdf5+mpi+mumps+superlu-dist
+[+] ewrr4c3 pumi+shared
+[+] joaymou zoltan+fortran+mpi+parmetis
+compiler_versions:
+GNU Fortran (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+mpi_version:
+mpirun (Open MPI) 5.0.10
+hdf5_version: 1.14.6
+netcdf_fortran_version: netCDF-Fortran 4.6.2

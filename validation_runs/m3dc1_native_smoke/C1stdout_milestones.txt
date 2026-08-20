@@ -1,0 +1,41 @@
+9:  Reading input
+10:Reading input file C1input...
+11:  validating input
+13:  VALIDATING INPUT
+608:  Loading mesh nplane=
+716:  Allocating arrays
+770:  Initializing variables
+837:  Generating newvar matrices
+863:  Defining initial conditions
+3682:  Writing simulation parameters
+3775:   transport coefficients
+3798: Calculating transport coefficients
+3887:  Initializing timestep
+4081: TIME STEP:            1
+4082:  Calling onestep
+4170:   transport coefficients
+4171: Calculating transport coefficients
+4473:  Writing output.
+4481: TIME STEP:            2
+4482:  Calling onestep
+4570:   transport coefficients
+4571: Calculating transport coefficients
+4873:  Writing output.
+4881: TIME STEP:            3
+4882:  Calling onestep
+4970:   transport coefficients
+4971: Calculating transport coefficients
+5273:  Writing output.
+5281: TIME STEP:            4
+5282:  Calling onestep
+5370:   transport coefficients
+5371: Calculating transport coefficients
+5673:  Writing output.
+5681: TIME STEP:            5
+5682:  Calling onestep
+5770:   transport coefficients
+5771: Calculating transport coefficients
+6073:  Writing output.
+6237: Done time loop.
+6240:   unloading mesh...
+6301: Stopped at           0
