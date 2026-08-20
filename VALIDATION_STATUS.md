@@ -110,4 +110,6 @@ docs/benchmark_targets.md
 
 A compact native M3D-C1 evidence package is recorded in `validation_runs/m3dc1_native_smoke/`. The public Princeton M3D-C1 checkout at commit `e17c0b7` builds with a local build-system compatibility patch adding `signal_handler.f90` to the CMake source list. The official `KPRAD_2D` case, staged with the bundled 48-partition mesh and `geqdsk`, reaches five timesteps and exits with `Stopped at 0`, producing a populated native `C1.h5` in the external run directory.
 
-The official `C1ke` reference comparison does not pass: the generated file differs from the bundled reference by orders of magnitude in magnetic-energy columns under upstream `compare.py`. This is therefore classified as `NATIVE_M3DC1_BUILD_PASS_REGRESSION_NOT_YET_PASSING`, not M3D-C1 validation and not TCT validation.
+The official `C1ke` reference comparison does not pass: the generated file differs from the bundled reference by orders of magnitude in magnetic-energy columns under upstream `compare.py`. This is therefore classified as `NATIVE_M3DC1_EXECUTION_PASS_REFERENCE_REGRESSION_UNRESOLVED`, not M3D-C1 validation and not TCT validation.
+
+C1ke column provenance was traced to `unstructured/output.f90`; the mismatch is already present in t=0 magnetic-energy diagnostics, so Level 4 remains unresolved and no M3D-C1 TCT validation claim is made.

@@ -1,0 +1,12 @@
+column,reference,generated,absolute_difference,relative_difference,near_zero_reference
+ntime,0.0,0.0,0.0,,True
+time,0.0,0.0,0.0,,True
+ekin,0.0,0.0,0.0,,True
+gamma_gr,0.0,0.0,0.0,,True
+ekinp,0.0,0.0,0.0,,True
+ekint,0.0,0.0,0.0,,True
+ekin3,0.0,0.0,0.0,,True
+emagp,0.11787,2.8222e+24,2.8222e+24,2.3943327394587255e+25,False
+emagt,2.3202,3.4868e+25,3.4868e+25,1.5028014826308078e+25,False
+emag3,0.086708,4.212e+23,4.212e+23,4.857683258753518e+24,False
+etot,2.52482,3.8111e+25,3.8111e+25,1.50945413930498e+25,False

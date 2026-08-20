@@ -1,6 +1,6 @@
 # M3D-C1 Native Smoke Report
 
-Status: `NATIVE_M3DC1_BUILD_PASS_REGRESSION_NOT_YET_PASSING`
+Status: `NATIVE_M3DC1_EXECUTION_PASS_REFERENCE_REGRESSION_UNRESOLVED`
 
 This package records a native execution attempt using the public Princeton M3D-C1 solver. It is not a TCT physics result and does not validate reconnection suppression, reactor behavior, or plasma predictive capability.
 
@@ -57,3 +57,24 @@ This means Level 3 and Level 5 evidence were achieved, but Level 4 reference rep
 ## Claim Boundary
 
 This establishes that the public M3D-C1 executable can be built and can run the bundled `KPRAD_2D` case to normal solver termination in this Ubuntu/Spack/OpenMPI environment. It does not establish an official passing M3D-C1 regression, because the `C1ke` reference comparison fails. It does not validate TCT physics, reactor behavior, or plasma predictive capability.
+
+## C1ke Provenance Analysis
+
+The `C1ke` writer is `unstructured/output.f90:output`. The column order is:
+
+`ntime, time, ekin, gamma_gr, ekinp, ekint, ekin3, emagp, emagt, emag3, etot`
+
+The failed t=0 comparison is concentrated in the magnetic-energy columns before any timestep evolution. The first upstream `compare.py` failure is `emagp` at row 0: reference `0.11787`, generated `2.8222e+24`. The generated HDF5 scalar tree is populated and includes the corresponding scalar datasets (`E_MP`, `E_MT`, `E_P`, etc.).
+
+Git provenance shows that `unstructured/regtest/KPRAD_2D/base/C1ke` was last updated in 2020 (`8964f6bf`, with row 0 inherited from 2019), while current `diagnostics.f90` has later energy/scalar diagnostic changes. The evidence supports a diagnostic/reference provenance or build/reference mismatch rather than timestep instability, but the exact numerical equivalence is not resolved and the official comparison still fails. The successful run log reports `b0_norm = 10000` and `n0_norm = 1e14`, and current `Total energy` diagnostics are order `1e25`; the bundled reference magnetic-energy columns are order unity.
+
+Additional artifacts added in this update:
+
+- `C1ke_t0_comparison.csv`
+- `c1ke_column_provenance.md`
+- `reference_provenance.txt`
+- `regression_compare_output.txt`
+- `geqdsk.sha256`
+- `mesh_provenance.txt`
+- `hdf5_structure.txt`
+- `compact_stdout.log`

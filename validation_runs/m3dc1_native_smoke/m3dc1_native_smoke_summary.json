@@ -1,13 +1,30 @@
 {
+  "analysis_updated_utc": "2026-08-20T14:16:52.532683+00:00",
+  "c1ke_column_order": [
+    "ntime",
+    "time",
+    "ekin",
+    "gamma_gr",
+    "ekinp",
+    "ekint",
+    "ekin3",
+    "emagp",
+    "emagt",
+    "emag3",
+    "etot"
+  ],
   "c1ke_max_abs_diff": 3.8111e+25,
   "c1ke_max_finite_rel_diff": 2.3943327394587255e+25,
   "c1ke_reference_compare_pass": false,
   "c1ke_reference_compare_tolerance": "upstream compare.py fractional 1e-3, etot skipped",
+  "c1ke_writer": "unstructured/output.f90: output(); writes ntime,time,ekin,gamma_gr,ekinp,ekint,ekin3,emagp,emagt,emag3,etot",
   "case": "unstructured/regtest/KPRAD_2D/base",
+  "cause_of_t0_mismatch": "Localized but not fully corrected: generated t=0 magnetic-energy diagnostics are dimensional/native-scale O(1e25), inconsistent with order-unity bundled reference values. File provenance shows the C1ke reference predates later diagnostics/scalar changes; upstream compare.py still fails.",
   "claim_boundary": "Native public M3D-C1 build and KPRAD_2D execution evidence only. Official C1ke regression comparison is not passing, so this is not M3D-C1 physics validation or TCT validation.",
   "cmake_compatibility_flags": [
     "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
   ],
+  "current_diagnostics_changed_after_reference": true,
   "first_failing_column": "emagp",
   "first_failing_generated": 2.8222e+24,
   "first_failing_reference": 0.11787,
@@ -15,18 +32,23 @@
   "generated_c1ke_rows": 6,
   "generated_utc": "2026-08-20T14:00:55.505533+00:00",
   "hdf5_artifact_policy": "C1.h5 not committed; compact h5ls listing committed",
+  "level_4_regression_pass": false,
   "local_patches": [
     "Added signal_handler.f90 to unstructured/CMakeLists.txt source list"
   ],
   "native_c1h5_populated": true,
   "native_c1h5_size_bytes": 328296,
   "native_run_returncode": 0,
+  "normalization_observation": "C1stdout reports b0_norm=10000 and n0_norm=1e14; current Total energy prints are O(1e25), while bundled C1ke reference magnetic-energy columns are O(1).",
   "one_rank_failure_cause": "official shipped mesh has 48 partitions; 1-rank staging aborts in PUMI with partition/rank mismatch",
   "rank_count": 48,
   "reached_timestep_loop": true,
   "reference_c1ke_rows": 6,
-  "status": "NATIVE_M3DC1_BUILD_PASS_REGRESSION_NOT_YET_PASSING",
+  "reference_last_updated": "KPRAD_2D/base/C1ke last updated in 2020 commit 8964f6bf; row 0 inherited from 2019 commit 2855e08b",
+  "resolved_cause": "Not fully resolved. Evidence supports a C1ke diagnostic/reference provenance mismatch or build-option/reference mismatch, not timestep instability. No physics values were changed to force a pass.",
+  "status": "NATIVE_M3DC1_EXECUTION_PASS_REFERENCE_REGRESSION_UNRESOLVED",
   "stopped_at": 0,
+  "time_zero_mismatch_classification": "magnetic-energy diagnostic/reference mismatch present before timestep evolution",
   "upstream_commit": "e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b",
   "upstream_repo": "https://github.com/PrincetonUniversity/M3DC1"
 }

@@ -49,3 +49,127 @@ mpi_version:
 mpirun (Open MPI) 5.0.10
 hdf5_version: 1.14.6
 netcdf_fortran_version: netCDF-Fortran 4.6.2
+
+CMake build-option audit:
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_Fortran_FLAGS:STRING=
+CMAKE_Fortran_FLAGS_DEBUG:STRING=-g
+CMAKE_Fortran_FLAGS_MINSIZEREL:STRING=-Os
+CMAKE_Fortran_FLAGS_RELEASE:STRING=-O3
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO:STRING=-O2 -g
+CMAKE_LIBRARY_PATH:UNINITIALIZED=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib64;/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn/lib
+CMAKE_PREFIX_PATH:UNINITIALIZED=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view;/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn
+ENABLE_3D:BOOL=OFF
+ENABLE_COMPLEX:BOOL=OFF
+ENABLE_OPENMP:BOOL=OFF
+//Enable Zoltan interface [ON|OFF]
+ENABLE_ZOLTAN:BOOL=ON
+//HDF5 file differencing tool.
+HDF5_DIFF_EXECUTABLE:FILEPATH=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/h5diff
+//The directory containing a CMake configuration file for HDF5.
+HDF5_DIR:PATH=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/cmake
+SCOREC_INCLUDE_DIR:PATH=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include
+SCOREC_LIB_DIR:UNINITIALIZED=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib
+ZOLTAN_INCLUDE_DIR:PATH=/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn/include
+ZOLTAN_LIBRARY:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn/lib/libzoltan.so
+//Zoltan install directory
+ZOLTAN_PREFIX:STRING=/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn
+m3dc1_scorec_BINARY_DIR:STATIC=/home/ubuntu/M3DC1-official/build-ubuntu-2d/m3dc1_scorec
+m3dc1_scorec_IS_TOP_LEVEL:STATIC=OFF
+m3dc1_scorec_LIB_DEPENDS:STATIC=general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libcrv.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libph.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libsam.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libspr.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libma.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libapf_zoltan.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libparma.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmds.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libapf.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/liblion.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmth.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libgmi.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libpcu.so;general;/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn/lib/libzoltan.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libparmetis.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmetis.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libpetsc.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libparmetis.so;general;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmetis.so;
+m3dc1_scorec_SOURCE_DIR:STATIC=/home/ubuntu/M3DC1-official/m3dc1_scorec
+pkgcfg_lib_PETSC_hdf5:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib/libhdf5.so
+pkgcfg_lib_PETSC_hdf5_f90cstub:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib/libhdf5_f90cstub.so
+pkgcfg_lib_PETSC_hdf5_fortran:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib/libhdf5_fortran.so
+pkgcfg_lib_PETSC_hdf5_hl:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib/libhdf5_hl.so
+pkgcfg_lib_PETSC_hdf5_hl_f90cstub:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib/libhdf5_hl_f90cstub.so
+pkgcfg_lib_PETSC_hdf5_hl_fortran:FILEPATH=/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib/libhdf5_hl_fortran.so
+scoreclib:FILEPATH=/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libpcu.so
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS
+CMAKE_Fortran_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_DEBUG
+CMAKE_Fortran_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_MINSIZEREL
+CMAKE_Fortran_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_RELEASE
+CMAKE_Fortran_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_RELWITHDEBINFO
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//Details about finding HDF5
+FIND_PACKAGE_MESSAGE_DETAILS_HDF5:INTERNAL=[hdf5_fortran-shared][/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include][found components: Fortran HL ][v1.14.6()]
+//Details about finding SCOREC
+FIND_PACKAGE_MESSAGE_DETAILS_SCOREC:INTERNAL=[/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libcrv.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libph.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libsam.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libspr.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libma.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libapf_zoltan.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libparma.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmds.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libapf.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/liblion.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmth.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libgmi.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libpcu.so][/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include][v()]
+//Details about finding Scorec
+FIND_PACKAGE_MESSAGE_DETAILS_Scorec:INTERNAL=[/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libpumi.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libcrv.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libph.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libsam.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libspr.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libma.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libapf_zoltan.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libparma.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmds.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libapf.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/liblion.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libmth.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libgmi.so;/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/lib/libpcu.so][/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include][v()]
+//Details about finding Zoltan
+FIND_PACKAGE_MESSAGE_DETAILS_Zoltan:INTERNAL=[/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn/lib/libzoltan.so][/home/ubuntu/spack/opt/spack/linux-skylake/zoltan-3.901-joaymounr7bryj5snprlp33flnrugjpn/include][v()]
+//ADVANCED property for variable: HDF5_DIFF_EXECUTABLE
+HDF5_DIFF_EXECUTABLE-ADVANCED:INTERNAL=1
+NETCDF-Fortran_STATIC_LDFLAGS:INTERNAL=-L/home/ubuntu/spack/opt/spack/linux-skylake/netcdf-fortran-4.6.2-el2mtnc5axvucnjulowko2xwznqobjhy/lib;-lnetcdff;-L/home/ubuntu/spack/opt/spack/linux-skylake/netcdf-fortran-4.6.2-el2mtnc5axvucnjulowko2xwznqobjhy/lib;-lnetcdff;-L/home/ubuntu/spack/opt/spack/linux-skylake/netcdf-c-4.10.0-iuha3g75w6kqg7t2qv3tnzgwfitfchun/lib;-lnetcdf;-lhdf5_hl;-lhdf5;-lm;-lz;-lsz;-lbz2;-lzstd;-lblosc
+NETCDF-Fortran_STATIC_LIBRARIES:INTERNAL=netcdff;netcdff;netcdf;hdf5_hl;hdf5;m;z;sz;bz2;zstd;blosc
+NETCDF_STATIC_LDFLAGS:INTERNAL=-L/home/ubuntu/spack/opt/spack/linux-skylake/netcdf-c-4.10.0-iuha3g75w6kqg7t2qv3tnzgwfitfchun/lib;-lnetcdf;-lhdf5_hl;-lhdf5;-lm;-lz;-lsz;-lbz2;-lzstd;-lblosc
+NETCDF_STATIC_LIBRARIES:INTERNAL=netcdf;hdf5_hl;hdf5;m;z;sz;bz2;zstd;blosc
+PETSC_PETSc_VERSION:INTERNAL=
+PETSC_STATIC_LDFLAGS:INTERNAL=-L/home/ubuntu/spack/opt/spack/linux-skylake/petsc-3.25.4-nw3jibrmyklmg5t37abojwj3h7unul6s/lib;-lpetsc;-L/home/ubuntu/spack/opt/spack/linux-skylake/mumps-5.9.1-afohaghnngqlavpscyr2g2us5rmzw2gn/lib;-L/home/ubuntu/spack/opt/spack/linux-skylake/netlib-scalapack-2.2.3-bsnoxvet57xagf3ga6bqsn5y2bbrf2zj/lib;-L/home/ubuntu/spack/opt/spack/linux-skylake/superlu-dist-9.2.1-bvw3o3xwy7sjybvssh7xfphujnksw625/lib;-L/home/ubuntu/spack/opt/spack/linux-skylake/openblas-0.3.34-z55epfxllv66xz47ngs6ddckhfxehovh/lib;-L/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib;-L/home/ubuntu/spack/opt/spack/linux-skylake/zlib-ng-2.3.3-mxb3l7kcrtlilx6jclvgqt5gkxg5n2bz/lib;-L/home/ubuntu/spack/opt/spack/linux-skylake/openmpi-5.0.10-vpxup55aa7z35lhewtycknt2ukw6bn3d/lib;-L/usr/lib/gcc/x86_64-linux-gnu/15;-lcmumps;-ldmumps;-lsmumps;-lzmumps;-lmumps_common;-lpord;-lscalapack;-lsuperlu_dist;-lopenblas;-lhdf5_hl_fortran;-lhdf5_hl_f90cstub;-lhdf5_hl;-lhdf5_fortran;-lhdf5_f90cstub;-lhdf5;-lm;-lz;-lmpi_usempif08;-lmpi_usempi_ignore_tkr;-lmpi_mpifh;-lmpi;-lgfortran;-lm;-lgfortran;-lm;-lgcc_s;-lquadmath;-lstdc++;-lquadmath
+PETSC_STATIC_LIBRARIES:INTERNAL=petsc;cmumps;dmumps;smumps;zmumps;mumps_common;pord;scalapack;superlu_dist;openblas;hdf5_hl_fortran;hdf5_hl_f90cstub;hdf5_hl;hdf5_fortran;hdf5_f90cstub;hdf5;m;z;mpi_usempif08;mpi_usempi_ignore_tkr;mpi_mpifh;mpi;gfortran;m;gfortran;m;gcc_s;quadmath;stdc++;quadmath
+PETSC_STATIC_LIBRARY_DIRS:INTERNAL=/home/ubuntu/spack/opt/spack/linux-skylake/petsc-3.25.4-nw3jibrmyklmg5t37abojwj3h7unul6s/lib;/home/ubuntu/spack/opt/spack/linux-skylake/mumps-5.9.1-afohaghnngqlavpscyr2g2us5rmzw2gn/lib;/home/ubuntu/spack/opt/spack/linux-skylake/netlib-scalapack-2.2.3-bsnoxvet57xagf3ga6bqsn5y2bbrf2zj/lib;/home/ubuntu/spack/opt/spack/linux-skylake/superlu-dist-9.2.1-bvw3o3xwy7sjybvssh7xfphujnksw625/lib;/home/ubuntu/spack/opt/spack/linux-skylake/openblas-0.3.34-z55epfxllv66xz47ngs6ddckhfxehovh/lib;/home/ubuntu/spack/opt/spack/linux-skylake/hdf5-1.14.6-uoyar6dpmk3uncnm7a5mogs4losjyziw/lib;/home/ubuntu/spack/opt/spack/linux-skylake/zlib-ng-2.3.3-mxb3l7kcrtlilx6jclvgqt5gkxg5n2bz/lib;/home/ubuntu/spack/opt/spack/linux-skylake/openmpi-5.0.10-vpxup55aa7z35lhewtycknt2ukw6bn3d/lib;/usr/lib/gcc/x86_64-linux-gnu/15
+PETSC_VERSION:INTERNAL=3.25.4
+//ADVANCED property for variable: SCOREC_INCLUDE_DIR
+SCOREC_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//SCOREC library present
+SCOREC_apf_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_apf_zoltan_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_crv_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_gmi_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_lion_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_ma_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_mds_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_mth_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_parma_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_pcu_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_ph_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_pumi_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_sam_FOUND:INTERNAL=TRUE
+//SCOREC library present
+SCOREC_spr_FOUND:INTERNAL=TRUE
+//ADVANCED property for variable: ZOLTAN_INCLUDE_DIR
+ZOLTAN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZOLTAN_LIBRARY
+ZOLTAN_LIBRARY-ADVANCED:INTERNAL=1
+
+Generated Fortran flags:
+# CMAKE generated file: DO NOT EDIT!
+# Generated by "Unix Makefiles" Generator, CMake Version 4.2
+
+# compile C with /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/mpicc
+# compile CXX with /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/mpicxx
+# compile Fortran with /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/mpifort
+C_DEFINES = -DDATE_BUILT="'Wed Aug 19 09:04:41 PM PDT 2026'" -DH5_BUILT_AS_DYNAMIC_LIB -DMAX_PTS=25 -DPETSC_VERSION=990 -DRELEASE_VERSION="'1.16-devel'" -DUSEBLAS -DUSESCOREC -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_POSIX_C_SOURCE=200809L -Dmatrix_mod=scorec_matrix_mod -Dmatrix_type=scorec_matrix -Dmesh_mod=scorec_mesh_mod -Dvector_mod=scorec_vector_mod -Dvector_type=scorec_vector -Dvectype=real
+
+C_INCLUDES = -isystem /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/netcdf-fortran-4.6.2-el2mtnc5axvucnjulowko2xwznqobjhy/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/netcdf-c-4.10.0-iuha3g75w6kqg7t2qv3tnzgwfitfchun/include -isystem /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/mod/shared -isystem /home/ubuntu/spack/opt/spack/linux-skylake/petsc-3.25.4-nw3jibrmyklmg5t37abojwj3h7unul6s/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/fftw-3.3.11-mqmin5hta4l7pvjkixeh6fpcny5g3eji/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/gsl-2.8-hfcxnru3gnsqub26arfw4wihsotmddm3/include
+
+C_FLAGS = -O3 -DNDEBUG
+
+CXX_DEFINES = -DDATE_BUILT="'Wed Aug 19 09:04:41 PM PDT 2026'" -DH5_BUILT_AS_DYNAMIC_LIB -DMAX_PTS=25 -DPETSC_VERSION=990 -DRELEASE_VERSION="'1.16-devel'" -DUSEBLAS -DUSESCOREC -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_POSIX_C_SOURCE=200809L -Dmatrix_mod=scorec_matrix_mod -Dmatrix_type=scorec_matrix -Dmesh_mod=scorec_mesh_mod -Dvector_mod=scorec_vector_mod -Dvector_type=scorec_vector -Dvectype=real
+
+CXX_INCLUDES = -isystem /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/netcdf-fortran-4.6.2-el2mtnc5axvucnjulowko2xwznqobjhy/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/netcdf-c-4.10.0-iuha3g75w6kqg7t2qv3tnzgwfitfchun/include -isystem /home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/mod/shared -isystem /home/ubuntu/spack/opt/spack/linux-skylake/petsc-3.25.4-nw3jibrmyklmg5t37abojwj3h7unul6s/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/fftw-3.3.11-mqmin5hta4l7pvjkixeh6fpcny5g3eji/include -isystem /home/ubuntu/spack/opt/spack/linux-skylake/gsl-2.8-hfcxnru3gnsqub26arfw4wihsotmddm3/include
+
+CXX_FLAGS = -O3 -DNDEBUG
+
+Fortran_DEFINES = -DDATE_BUILT="'Wed Aug 19 09:04:41 PM PDT 2026'" -DH5_BUILT_AS_DYNAMIC_LIB -DMAX_PTS=25 -DPETSC_VERSION=990 -DRELEASE_VERSION="'1.16-devel'" -DUSEBLAS -DUSESCOREC -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_POSIX_C_SOURCE=200809L -Dmatrix_mod=scorec_matrix_mod -Dmatrix_type=scorec_matrix -Dmesh_mod=scorec_mesh_mod -Dvector_mod=scorec_vector_mod -Dvector_type=scorec_vector -Dvectype=real
+
+Fortran_INCLUDES = -I/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/include -I/home/ubuntu/spack/opt/spack/linux-skylake/netcdf-fortran-4.6.2-el2mtnc5axvucnjulowko2xwznqobjhy/include -I/home/ubuntu/spack/opt/spack/linux-skylake/netcdf-c-4.10.0-iuha3g75w6kqg7t2qv3tnzgwfitfchun/include -I/home/ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/mod/shared -I/home/ubuntu/spack/opt/spack/linux-skylake/petsc-3.25.4-nw3jibrmyklmg5t37abojwj3h7unul6s/include -I/home/ubuntu/spack/opt/spack/linux-skylake/fftw-3.3.11-mqmin5hta4l7pvjkixeh6fpcny5g3eji/include -I/home/ubuntu/spack/opt/spack/linux-skylake/gsl-2.8-hfcxnru3gnsqub26arfw4wihsotmddm3/include
+
+Fortran_FLAGS = -O3 -fdefault-real-8 -fallow-argument-mismatch -ffree-line-length-512
