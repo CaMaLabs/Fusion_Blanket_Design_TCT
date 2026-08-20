@@ -1,0 +1,108 @@
+KPRAD_2D t=0 initialization trace
+=================================
+
+[48-part checked-in mesh]
+68: b0_norm              = 10000 
+93: bzero                = 0.4395 
+421: l0_norm              = 100 
+445: n0_norm              = 1e+14 
+510: rzero                = 0.991 
+511: rzero_rekc           = 0 
+534: tcuro                = -0.5821 
+559: verzero              = 0 
+913: Setting bzero, rzero =      -0.3814      0.9910
+865:  Reading EQDSK g-file
+875:  Magnetic axis:   0.9910E+00 -0.1531E-01
+876:  Toroidal field on axis:  -0.4395E+00
+877:  Plasma current:   0.5821E+06
+878:  Poloidal flux at axis, boundary -0.3564E-01  0.1859E-01
+881:  normalized current   0.73153987704154999     
+913: Setting bzero, rzero =      -0.3814      0.9910
+611: [M3DC1_INFO] Regenerate model/mesh files using the latest mesh generation program
+614: mesh entity counts: v 1323 e 3841 f 2519 r 0
+715: mesh shape: "Linear"
+3873:  Total energy =    3.8110972082588682E+025   2.8222212474590603E+024   3.4867550876060306E+025   4.2119995906931434E+023
+3876:    Area =    5.1329892717307095E+025
+3877:    Toroidal current =    6.3919829268209504E+021
+3878:    Toroidal flux =   -3.1050351832079547E+025
+3879:    Volume =    0.0000000000000000     
+4393:  Total energy =    3.8110628351855196E+025   2.8222215171644565E+024   3.4867550628770967E+025   4.2085620578764526E+023
+4396:    Area =    5.1329892717307095E+025
+4397:    Toroidal current =    6.1674920266743132E+021
+4398:    Toroidal flux =   -3.1050351811833415E+025
+4399:    Volume =    0.0000000000000000     
+4793:  Total energy =    3.8110527013411447E+025   2.8222218155772810E+024   3.4867550727237216E+025   4.2075446932644854E+023
+4796:    Area =    5.1329892717307095E+025
+4797:    Toroidal current =    3.6236762073498109E+021
+4798:    Toroidal flux =   -3.1050351959699999E+025
+4799:    Volume =    0.0000000000000000     
+5193:  Total energy =    3.8110573082698753E+025   2.8222220755351329E+024   3.4867551365284638E+025   4.2079963991546639E+023
+5196:    Area =    5.1329892717307095E+025
+5197:    Toroidal current =    2.0946310363734968E+021
+5198:    Toroidal flux =   -3.1050352381033954E+025
+5199:    Volume =    0.0000000000000000     
+5593:  Total energy =    3.8110722052310650E+025   2.8222222817659978E+024   3.4867552624466073E+025   4.2094714349848886E+023
+5596:    Area =    5.1329892717307095E+025
+5597:    Toroidal current =    2.0483354558105426E+021
+5598:    Toroidal flux =   -3.1050353127747657E+025
+5599:    Volume =    0.0000000000000000     
+5993:  Total energy =    3.8110945485320101E+025   2.8222224346461312E+024   3.4867554524218653E+025   4.2116852340591527E+023
+5996:    Area =    5.1329892717307095E+025
+5997:    Toroidal current =    2.0288916924337810E+021
+5998:    Toroidal flux =   -3.1050354219115305E+025
+5999:    Volume =    0.0000000000000000     
+6301:  Stopped at           0
+
+[single-part diagnostic mesh]
+68: b0_norm              = 10000 
+93: bzero                = 0.4395 
+421: l0_norm              = 100 
+445: n0_norm              = 1e+14 
+510: rzero                = 0.991 
+511: rzero_rekc           = 0 
+534: tcuro                = -0.5821 
+559: verzero              = 0 
+819: Setting bzero, rzero =      -0.3814      0.9910
+771:  Reading EQDSK g-file
+781:  Magnetic axis:   0.9910E+00 -0.1531E-01
+782:  Toroidal field on axis:  -0.4395E+00
+783:  Plasma current:   0.5821E+06
+784:  Poloidal flux at axis, boundary -0.3564E-01  0.1859E-01
+787:  normalized current   0.73153987704154999     
+819: Setting bzero, rzero =      -0.3814      0.9910
+611: [M3DC1_INFO] Regenerate model/mesh files using the latest mesh generation program
+614: mesh entity counts: v 1323 e 3841 f 2519 r 0
+621: mesh shape: "Linear"
+3779:  Total energy =    2.5248178012976585       0.11786782577516655        2.3202424558189985        8.6707519703493677E-002
+3782:    Area =    3.3235605856997252     
+3783:    Toroidal current =   0.72992563532107457     
+3784:    Toroidal flux =   -1.9374767299068203     
+3785:    Volume =    17.013944217427440     
+4299:  Total energy =    2.5248105314098881       0.11786781801945123        2.3202424591121833        8.6700664770926708E-002
+4302:    Area =    3.3235605856997252     
+4303:    Toroidal current =   0.72992538968173415     
+4304:    Toroidal flux =   -1.9374767299068245     
+4305:    Volume =    17.013944217427440     
+4699:  Total energy =    2.5248085667159303       0.11786780845077831        2.3202424631628444        8.6693745308745060E-002
+4702:    Area =    3.3235605856997252     
+4703:    Toroidal current =   0.72992457138734501     
+4704:    Toroidal flux =   -1.9374767299068172     
+4705:    Volume =    17.013944217427440     
+5099:  Total energy =    2.5248036824017754       0.11786779815678801        2.3202424674478443        8.6686488609115583E-002
+5102:    Area =    3.3235605856997252     
+5103:    Toroidal current =   0.72992474564158683     
+5104:    Toroidal flux =   -1.9374767299068214     
+5105:    Volume =    17.013944217427440     
+5499:  Total energy =    2.5247974830895279       0.11786778755572537        2.3202424718057233        8.6678674157156674E-002
+5502:    Area =    3.3235605856997252     
+5503:    Toroidal current =   0.72992597502956402     
+5504:    Toroidal flux =   -1.9374767299068190     
+5505:    Volume =    17.013944217427440     
+5899:  Total energy =    2.5247903325217487       0.11786777673205216        2.3202424762051161        8.6670284396130962E-002
+5902:    Area =    3.3235605856997252     
+5903:    Toroidal current =   0.72992809541548487     
+5904:    Toroidal flux =   -1.9374767299068154     
+5905:    Volume =    17.013944217427440     
+6207:  Stopped at           0
+
+Interpretation: both runs use the same source, C1input, geqdsk, and initial single mesh family. The 48-part checked-in mesh reports Volume=0 at t=0 and enormous magnetic energies; the single-part stored mesh reports Volume=17.0139442174 and reproduces C1ke under upstream compare.py.

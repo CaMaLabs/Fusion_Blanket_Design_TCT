@@ -1,0 +1,12 @@
+column,variable,reference_t0,generated_t0,absolute_difference,relative_difference,reference_near_zero,notes
+1,ntime,0,0,0,,True,integer time-step index written by output.f90
+2,time,0,0,0,,True,simulation time
+3,ekin,0,0,0,,True,total kinetic energy = ekinp + ekint + ekin3
+4,gamma_gr,0,0,0,,True,growth-rate diagnostic based on kinetic energy
+5,ekinp,0,0,0,,True,poloidal-flow kinetic-energy contribution from energy_kp()
+6,ekint,0,0,0,,True,toroidal-flow kinetic-energy contribution from energy_kt()
+7,ekin3,0,0,0,,True,third/parallel-flow kinetic-energy contribution from energy_k3()
+8,emagp,0.11787,2.8222e+24,2.8222e+24,2.3943327394587255e+25,False,poloidal magnetic-energy contribution from energy_mp(); t=0 mismatch localizes to magnetic/energy diagnostics for the 48-part checked-in mesh
+9,emagt,2.3201999999999998,3.4867999999999999e+25,3.4867999999999999e+25,1.5028014826308078e+25,False,toroidal magnetic-energy contribution from energy_mt(); t=0 mismatch localizes to magnetic/energy diagnostics for the 48-part checked-in mesh
+10,emag3,0.086707999999999993,4.2120000000000001e+23,4.2120000000000001e+23,4.857683258753518e+24,False,pressure/internal-energy-like magnetic/pressure scalar from energy_p(); t=0 mismatch localizes to magnetic/energy diagnostics for the 48-part checked-in mesh
+11,etot,2.5248200000000001,3.8110999999999998e+25,3.8110999999999998e+25,1.50945413930498e+25,False,total energy diagnostic = ekin + emag - ptoto; upstream compare ignores this column; t=0 mismatch localizes to magnetic/energy diagnostics for the 48-part checked-in mesh
