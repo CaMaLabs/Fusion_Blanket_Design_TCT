@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "run_dir": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_BASELINE_SINGLEPART",
+  "run_status": "return_code=0",
+  "actuator_scale_ext_field": 1.0,
+  "volume": 30.34131507302172,
+  "magnetic_energy": 6.3656e-05,
+  "kinetic_energy": 0.0,
+  "current": 1.7078579011628232,
+  "flux": -6.207993656572769,
+  "finite_checks": {
+    "volume": true,
+    "magnetic_energy": true,
+    "kinetic_energy": true,
+    "current": true,
+    "flux": true
+  },
+  "mesh_check": {
+    "mesh_counts_v_e_f_r": [
+      2249,
+      6632,
+      4384,
+      0
+    ],
+    "partition_count": 1,
+    "status": "PASS"
+  },
+  "region_check": {
+    "expected_regions_present": "not explicitly enumerated in stdout; C1input has plasma/conductor/vacuum zone_type and positive volume",
+    "status": "PASS"
+  },
+  "repeatability": {
+    "status": "not_repeated",
+    "reason": "single baseline run; upstream C1ke reference comparison used as t0 repeatability proxy"
+  },
+  "reference_check": {
+    "available": true,
+    "reference_path": "/home/ubuntu/M3DC1-official/unstructured/regtest/RMP/base/C1ke",
+    "t0_max_abs_difference_excluding_etot": 0.0,
+    "matches_required_columns": true
+  },
+  "warnings": [
+    "WARNING: rzero <= 0"
+  ],
+  "fail_reason": null
+}

@@ -1,0 +1,19 @@
+e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b
+ M unstructured/CMakeLists.txt
+?? build-ubuntu-2d-complex/
+?? build-ubuntu-2d/
+?? build-ubuntu-3d/
+
+3D build: /home/ubuntu/M3DC1-official/build-ubuntu-3d/unstructured/m3dc1_3d
+2D complex build: /home/ubuntu/M3DC1-official/build-ubuntu-2d-complex/unstructured/m3dc1_2d_complex
+==> In environment m3dc1-deps (9 root specs)
+[+] fftw+mpi
+[+] gsl
+[+] hdf5+fortran+mpi
+[+] netcdf-c+mpi
+[+] netcdf-fortran
+[+] openmpi
+[+] petsc+complex+fortran+hdf5+mpi+mumps+superlu-dist
+[+] pumi+shared
+[+] zoltan+fortran+mpi+parmetis
+

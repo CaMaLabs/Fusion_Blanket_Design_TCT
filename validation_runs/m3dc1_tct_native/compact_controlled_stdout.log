@@ -1,0 +1,17 @@
+ WARNING: rzero <= 0
+model_info           = dummyInfo 
+scale_ext_field      = 0.856636 
+mesh entity counts: v 2249 e 6632 f 4384 r 0
+ Poloidal flux at axis, boundary -0.2444E+00  0.7108E-01
+ Total energy =    6.3656291327758672E-005   0.0000000000000000        0.0000000000000000        6.3656291327758672E-005
+ Total energy lost =    6.2099366565686570E-004
+   Toroidal current =    1.7078579011628232     
+   Toroidal flux =   -6.2079936565727687     
+   Volume =    30.341315073021718     
+ TIME STEP:            1
+ Total energy =   -4.1940645235064483E-004   5.5740546256514206E-006   3.4803245816974529E-007   5.1286887119677939E-005
+ Total energy lost =    9.4325859900518550E-004
+   Toroidal current =    1.7078726296939981     
+   Toroidal flux =   -6.2079783486146818     
+   Volume =    30.341315073021718     
+ Stopped at           0

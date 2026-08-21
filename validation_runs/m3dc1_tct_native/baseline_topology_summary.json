@@ -1,0 +1,13 @@
+{
+  "status": "SCALAR_ONLY_TOPOLOGY_PROXY",
+  "native_case": "RMP linear response",
+  "explicit_xpoint_opoint_tracking": "not available in extracted scalar set",
+  "psi_extrema_available": [
+    "psimin",
+    "psi_lcfs",
+    "psi0"
+  ],
+  "flux_transfer_proxy": 1.5307958086907547e-05,
+  "time_of_peak_current": 1.0,
+  "time_of_first_topology_change": "not detected in one-step scalar output"
+}

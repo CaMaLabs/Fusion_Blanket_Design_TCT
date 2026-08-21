@@ -1,0 +1,2 @@
+control,status,scale_ext_field,peak_current_proxy,integrated_current_proxy,magnetic_energy_final,flux_transfer_proxy,interpretation
+sign_reversed,COMPLETED,-0.8566360855,1.7078726296939981,3.4157305308568215,5.7209129999999996e-05,1.5307958086907547e-05,same scalar trajectory as baseline/control; code path does not affect this case over one-step native scalar outputs

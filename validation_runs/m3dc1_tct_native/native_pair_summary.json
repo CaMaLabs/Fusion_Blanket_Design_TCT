@@ -1,0 +1,18 @@
+{
+  "classification": "NATIVE_TCT_NO_EFFECT",
+  "selected_case": "official RMP regtest, single-part source mesh, m3dc1_2d_complex, 1 MPI rank",
+  "why_selected": "Smallest official non-KPRAD case exercising native RMP/current-response machinery with positive volume and exact bundled C1ke reference match on this runtime. RMP_nonlin and partitioned RMP were rejected by initialization gate.",
+  "baseline_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_BASELINE_SINGLEPART",
+  "controlled_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_CONTROLLED",
+  "falsification_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_FALSIFICATION_REVERSE",
+  "actuator": "scale_ext_field = 0.8566360855; one scalar multiplier of native RMP external-field read path",
+  "baseline_peak_current_proxy": 1.7078726296939981,
+  "controlled_peak_current_proxy": 1.7078726296939981,
+  "peak_current_reduction_pct": -0.0,
+  "integrated_current_loading_change_pct": 0.0,
+  "magnetic_energy_change_pct": 0.0,
+  "flux_transfer_proxy_change_pct": 0.0,
+  "topology_result": "No explicit island/X-point topology change in this one-step linear-response case; derived flux-transfer proxy unchanged.",
+  "refinement": "Skipped by rule because paired result is exactly zero/nonzero effect gate not met.",
+  "claim_scope": "Native M3D-C1 actuator-mapping falsification of this scalar external-field mapping only; not reactor validation, ELM suppression, or reconnection suppression."
+}

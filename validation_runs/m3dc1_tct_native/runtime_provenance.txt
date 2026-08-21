@@ -1,0 +1,10 @@
+{
+  "baseline": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_BASELINE_SINGLEPART",
+  "controlled": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_CONTROLLED",
+  "falsification_reverse": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_FALSIFICATION_REVERSE",
+  "invalid_candidates": [
+    "/home/ubuntu/m3dc1_runs/TCT_NATIVE_BASELINE_INVALID_16PART",
+    "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_BASELINE"
+  ],
+  "mpi_layout": "RMP baseline/control use 1 MPI rank with single-part source mesh; rejected RMP_nonlin tests used 64/4 ranks and failed gate"
+}

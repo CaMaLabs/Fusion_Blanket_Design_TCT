@@ -1,0 +1,10 @@
+metric,value,definition
+peak_current_reduction_pct,-0.0,native toroidal_current scalar used as current-loading proxy
+integrated_current_loading_change_pct,0.0,sum |toroidal_current| over available native output times
+current_sheet_width_change_pct,,not available from scalar-only native RMP outputs
+magnetic_energy_change_pct,0.0,C1ke magnetic block E_MP+E_MT+E_P at final output
+kinetic_energy_change_pct,0.0,C1ke ekin final output
+island_width_change_pct,,not available from scalar-only native RMP outputs
+reconnection_metric_change_pct,0.0,DERIVED flux-transfer proxy |toroidal_flux(t)-toroidal_flux(0)|
+topology_change_time_shift,0,no native topology transition detected in one-step linear-response case
+peak_current_time_shift,0,peak proxy occurs at final output in both runs
