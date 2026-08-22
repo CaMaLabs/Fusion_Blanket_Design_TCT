@@ -12,6 +12,7 @@ from pathlib import Path
 REPO = Path("/home/ubuntu/work/openmc/sweep")
 OUT = REPO / "validation_runs/m3dc1_tct_native"
 BASE = Path("/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_BASELINE_SINGLEPART")
+REPEAT = Path("/home/ubuntu/m3dc1_runs/TCT_NATIVE_BASELINE_REPEAT")
 CTRL = Path("/home/ubuntu/m3dc1_runs/TCT_NATIVE_CONTROLLED")
 REV = Path("/home/ubuntu/m3dc1_runs/TCT_NATIVE_FALSIFICATION_REVERSE")
 BAD1 = Path("/home/ubuntu/m3dc1_runs/TCT_NATIVE_BASELINE_INVALID_16PART")
@@ -66,7 +67,43 @@ def grepvals(path: Path) -> dict:
     return vals
 
 
-def gate(path: Path, ref: Path | None = None, expected_scale: float | None = None) -> dict:
+def repeatability(path: Path, repeat_path: Path | None = None) -> dict:
+    if repeat_path is None or not repeat_path.exists():
+        return {"status": "FAIL", "reason": "repeat run directory missing"}
+    if status(repeat_path) != "return_code=0":
+        return {"status": "FAIL", "repeat_run": str(repeat_path), "run_status": status(repeat_path)}
+    rows = c1ke(path)
+    repeat_rows = c1ke(repeat_path)
+    g = grepvals(path)
+    repeat_g = grepvals(repeat_path)
+    t0 = rows[0]
+    repeat_t0 = repeat_rows[0]
+    c1ke_max_abs = max(
+        abs(row[k] - repeat_row[k])
+        for row, repeat_row in zip(rows, repeat_rows)
+        for k in COLS
+    )
+    scalar_diffs = {
+        "volume": abs(g["volume"][0] - repeat_g["volume"][0]),
+        "current": abs(g["toroidal_current"][0] - repeat_g["toroidal_current"][0]),
+        "flux": abs(g["toroidal_flux"][0] - repeat_g["toroidal_flux"][0]),
+        "t0_magnetic_energy": abs(
+            (t0["emagp"] + t0["emagt"] + t0["emag3"])
+            - (repeat_t0["emagp"] + repeat_t0["emagt"] + repeat_t0["emag3"])
+        ),
+        "t0_kinetic_energy": abs(t0["ekin"] - repeat_t0["ekin"]),
+    }
+    ok = c1ke_max_abs == 0.0 and all(v == 0.0 for v in scalar_diffs.values())
+    return {
+        "status": "PASS" if ok else "FAIL",
+        "repeat_run": str(repeat_path),
+        "run_status": status(repeat_path),
+        "c1ke_max_abs_difference": c1ke_max_abs,
+        "initialization_scalar_abs_differences": scalar_diffs,
+    }
+
+
+def gate(path: Path, ref: Path | None = None, expected_scale: float | None = None, repeat_path: Path | None = None) -> dict:
     rows = c1ke(path)
     g = grepvals(path)
     t0 = rows[0]
@@ -91,11 +128,14 @@ def gate(path: Path, ref: Path | None = None, expected_scale: float | None = Non
             "t0_max_abs_difference_excluding_etot": max_abs,
             "matches_required_columns": max_abs < 1e-9,
         }
-    repeat = {
-        "status": "not_repeated",
-        "reason": "single baseline run; upstream C1ke reference comparison used as t0 repeatability proxy",
-    }
-    ok = all(finite.values()) and first_volume > 0 and not g["nan_inf_present"] and (not ref or ref_check["matches_required_columns"])
+    repeat = repeatability(path, repeat_path)
+    ok = (
+        all(finite.values())
+        and first_volume > 0
+        and not g["nan_inf_present"]
+        and (not ref or ref_check["matches_required_columns"])
+        and repeat["status"] == "PASS"
+    )
     return {
         "status": "PASS" if ok else "FAIL",
         "run_dir": str(path),
@@ -138,8 +178,8 @@ def main() -> None:
     ctrl_g = grepvals(CTRL)
     rev_g = grepvals(REV)
 
-    (OUT / "initialization_gate_baseline.json").write_text(json.dumps(gate(BASE, SRC / "unstructured/regtest/RMP/base", 1.0), indent=2) + "\n")
-    (OUT / "initialization_gate_controlled.json").write_text(json.dumps(gate(CTRL, None, 0.8566360855), indent=2) + "\n")
+    (OUT / "initialization_gate_baseline.json").write_text(json.dumps(gate(BASE, SRC / "unstructured/regtest/RMP/base", 1.0, REPEAT), indent=2) + "\n")
+    (OUT / "initialization_gate_controlled.json").write_text(json.dumps(gate(CTRL, None, 0.8566360855, BASE), indent=2) + "\n")
 
     with (OUT / "baseline_timeseries.csv").open("w", newline="") as f:
         w = csv.writer(f)
@@ -303,7 +343,7 @@ Primary classification: `NATIVE_TCT_NO_EFFECT`
 
 A native M3D-C1 first-rung paired test was run using the smallest official non-KPRAD case that passed initialization on this runtime: `RMP` with the bundled single-part source mesh and `m3dc1_2d_complex`. The partitioned `RMP` and `RMP_nonlin` meshes failed hard initialization gates, so they were not used as physics baselines.
 
-Baseline and controlled runs both completed with return code 0. Baseline exactly matches the bundled `RMP/base/C1ke` under upstream `compare.py`. The controlled case differs by one scalar only: `scale_ext_field = 0.8566360855`.
+Baseline and controlled runs both completed with return code 0. Baseline exactly matches the bundled `RMP/base/C1ke` under upstream `compare.py`, and an independent baseline repeat produced byte-identical `C1ke` and identical t=0 volume/current/flux/energy scalars. The controlled case differs by one scalar only: `scale_ext_field = 0.8566360855`.
 
 ## Result
 
@@ -328,6 +368,7 @@ It does not establish reactor stabilization, ELM suppression, experimental valid
 
     for name, path in [
         ("baseline", BASE),
+        ("baseline_repeat", REPEAT),
         ("controlled", CTRL),
         ("falsification_reverse", REV),
         ("invalid_rmp_nonlin_16part", BAD1),
@@ -354,16 +395,14 @@ It does not establish reactor stabilization, ELM suppression, experimental valid
     )
     (OUT / "runtime_provenance.txt").write_text(json.dumps({
         "baseline": str(BASE),
+        "baseline_repeat": str(REPEAT),
         "controlled": str(CTRL),
         "falsification_reverse": str(REV),
         "invalid_candidates": [str(BAD1), str(BAD2)],
         "mpi_layout": "RMP baseline/control use 1 MPI rank with single-part source mesh; rejected RMP_nonlin tests used 64/4 ranks and failed gate",
     }, indent=2) + "\n")
-    (OUT / "launch_commands.sh").write_text("\n\n".join((p / "launch_command.sh").read_text() for p in [BASE, CTRL, REV] if (p / "launch_command.sh").exists()))
-    (OUT / "extraction_scripts" / "extract_native_rmp_pair.py").write_text("""#!/usr/bin/env python3
-# Re-run extraction by executing /home/ubuntu/make_tct_native_package.py on the remote host.
-# The script parses C1ke/stdout and records HDF5 structure with h5dump; it does not copy large HDF5 files into git.
-""")
+    (OUT / "launch_commands.sh").write_text("\n\n".join((p / "launch_command.sh").read_text() for p in [BASE, REPEAT, CTRL, REV] if (p / "launch_command.sh").exists()))
+    shutil.copy2(Path(__file__), OUT / "extraction_scripts" / "extract_native_rmp_pair.py")
     print(f"Wrote {OUT}")
 
 

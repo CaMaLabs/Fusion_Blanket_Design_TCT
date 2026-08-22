@@ -4,7 +4,7 @@ Primary classification: `NATIVE_TCT_NO_EFFECT`
 
 A native M3D-C1 first-rung paired test was run using the smallest official non-KPRAD case that passed initialization on this runtime: `RMP` with the bundled single-part source mesh and `m3dc1_2d_complex`. The partitioned `RMP` and `RMP_nonlin` meshes failed hard initialization gates, so they were not used as physics baselines.
 
-Baseline and controlled runs both completed with return code 0. Baseline exactly matches the bundled `RMP/base/C1ke` under upstream `compare.py`. The controlled case differs by one scalar only: `scale_ext_field = 0.8566360855`.
+Baseline and controlled runs both completed with return code 0. Baseline exactly matches the bundled `RMP/base/C1ke` under upstream `compare.py`, and an independent baseline repeat produced byte-identical `C1ke` and identical t=0 volume/current/flux/energy scalars. The controlled case differs by one scalar only: `scale_ext_field = 0.8566360855`.
 
 ## Result
 

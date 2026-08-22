@@ -30,8 +30,17 @@
     "status": "PASS"
   },
   "repeatability": {
-    "status": "not_repeated",
-    "reason": "single baseline run; upstream C1ke reference comparison used as t0 repeatability proxy"
+    "status": "PASS",
+    "repeat_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_BASELINE_SINGLEPART",
+    "run_status": "return_code=0",
+    "c1ke_max_abs_difference": 0.0,
+    "initialization_scalar_abs_differences": {
+      "volume": 0.0,
+      "current": 0.0,
+      "flux": 0.0,
+      "t0_magnetic_energy": 0.0,
+      "t0_kinetic_energy": 0.0
+    }
   },
   "reference_check": {
     "available": false
