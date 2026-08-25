@@ -1,0 +1,17 @@
+{
+  "classification": "NATIVE_TCT_NO_EFFECT",
+  "selected_case": "exploratory native GEM reconnection initializer on official RMP_nonlin single-part circle mesh carrier",
+  "baseline_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_BASELINE_AXISFIX",
+  "controlled_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_CONTROLLED_EPS0856636",
+  "falsification_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_FALSIFICATION_EPS_NEG0856636",
+  "actuator": "eps = 8.566360855e-4 versus baseline eps = 1e-3; native GEM magnetic-flux perturbation amplitude only",
+  "baseline_peak_current_proxy": 0.2989737256258354,
+  "controlled_peak_current_proxy": 0.29897503120684166,
+  "peak_current_reduction_pct": -0.00043668753952112895,
+  "integrated_current_loading_change_pct": -1.5900994212018672e-06,
+  "magnetic_energy_change_pct": -0.002886183359228921,
+  "native_reconnected_flux_change_pct": -20.527173710641733,
+  "topology_result": "native Reconnected_Flux decreases in proportion to the deliberately reduced initial GEM perturbation amplitude; this is not accompanied by current-loading reduction and is reproduced as sign reversal under negative eps",
+  "reliability_warning": "X-point/magnetic-axis search is intermittent on this coarse circular carrier mesh",
+  "refinement": "Skipped: no same-physical-state finer mesh available in bundled artifacts"
+}

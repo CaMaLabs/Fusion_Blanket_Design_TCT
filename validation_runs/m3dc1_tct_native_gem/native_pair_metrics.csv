@@ -1,0 +1,6 @@
+metric,value,definition
+peak_current_reduction_pct,-0.00043668753952112895,max |native toroidal_current| scalar
+integrated_current_loading_change_pct,-1.5900994212018672e-06,sum |native toroidal_current| over output times
+magnetic_energy_change_pct,-0.002886183359228921,final E_MP+E_MT+E_P from C1ke
+native_reconnected_flux_change_pct,-20.527173710641733,final native /scalars/Reconnected_Flux
+topology_search_intermittency,baseline and controlled have intermittent X-point/axis search misses,diagnostic reliability warning

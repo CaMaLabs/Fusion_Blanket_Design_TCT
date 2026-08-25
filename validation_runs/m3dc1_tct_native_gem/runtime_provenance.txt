@@ -1,0 +1,9 @@
+{
+  "baseline": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_BASELINE_AXISFIX",
+  "baseline_repeat": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_BASELINE_REPEAT",
+  "controlled": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_CONTROLLED_EPS0856636",
+  "falsification_reverse": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_FALSIFICATION_EPS_NEG0856636",
+  "invalid_rmp_nonlin_checked_mesh": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_NONLIN_BASELINE_3D_CLEAN",
+  "invalid_rmp_nonlin_regenerated_split": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_RMP_NONLIN_REGENERATED_16PART",
+  "mpi_layout": "1 MPI rank for GEM 2D real single-part mesh carrier"
+}

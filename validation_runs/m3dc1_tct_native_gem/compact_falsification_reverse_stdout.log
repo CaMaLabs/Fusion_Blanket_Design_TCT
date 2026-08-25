@@ -1,0 +1,66 @@
+mesh entity counts: v 535 e 1538 f 1004 r 0
+  Finding magnetic axis.  FX =  T
+  magnetic axis:   0.1000E+02  0.8624E+00
+  psi at magnetic axis:   0.1808E+01
+  Finding X-point
+  X-point 1 found at   0.1000E+02  0.8626E+00
+ Total energy =    210.80296039416828        97.995365908670564        98.086703275348100        14.720891210149608     
+ Total energy lost =    5.5645593953502047E-018
+   Toroidal current =   -7.4370637838693714E-004
+   Toroidal flux =    3.1221037630362480     
+   Volume =    196.16172400432043     
+ TIME STEP:            1
+  Finding magnetic axis.  FX =  T
+  no magnetic axis found near   0.1009E+02  0.1112E+01
+  Finding X-point
+  X-point 1 NOT found near   0.9940E+01  0.1134E+01
+ Total energy =    210.01813854703309        97.209687749398199        98.087479385563256        14.720971382063585     
+ Total energy lost =   -3.8140904013887524E-006
+   Toroidal current =  -0.29899063382307539     
+   Toroidal flux =    3.1221161150099088     
+   Volume =    196.16172400432043     
+ TIME STEP:            2
+  Finding magnetic axis.  FX =  T
+  magnetic axis:   0.1003E+02  0.9794E+00
+  psi at magnetic axis:   0.1703E+01
+  Finding X-point
+  X-point 1 found at   0.9940E+01  0.9748E+00
+ Total energy =    209.33658832603933        96.773406928470877        97.865535947924442        14.684729436981868     
+ Total energy lost =    3.4864881994485196E-003
+   Toroidal current =  -0.18540055129315516     
+   Toroidal flux =    3.1185127067928593     
+   Volume =    196.16172400432043     
+ TIME STEP:            3
+  Finding magnetic axis.  FX =  T
+  no magnetic axis found near   0.1005E+02  0.1110E+01
+  Finding X-point
+  X-point 1 NOT found near   0.9944E+01  0.1119E+01
+ Total energy =    208.63958625622672        96.310870779070768        97.658604165348024        14.648904573851469     
+ Total energy lost =    4.0576746593396660E-003
+   Toroidal current =  -0.20671551102990088     
+   Toroidal flux =    3.1151022505397279     
+   Volume =    196.16172400432043     
+ TIME STEP:            4
+  Finding magnetic axis.  FX =  T
+  magnetic axis:   0.1002E+02  0.1003E+01
+  psi at magnetic axis:   0.1691E+01
+  Finding X-point
+  X-point 1 found at   0.9990E+01  0.9723E+00
+ Total energy =    208.13250282686178        95.924265390586257        97.566759472001920        14.612915279640333     
+ Total energy lost =    4.3437088289901352E-003
+   Toroidal current =  -0.19935264117057186     
+   Toroidal flux =    3.1135357588468660     
+   Volume =    196.16172400432043     
+ TIME STEP:            5
+  Finding magnetic axis.  FX =  T
+  magnetic axis:   0.1002E+02  0.9751E+00
+  psi at magnetic axis:   0.1683E+01
+  Finding X-point
+  X-point 1 found at   0.1002E+02  0.9982E+00
+ Total energy =    207.84132918427622        95.664340417183197        97.564395386435791        14.579821586567041     
+ Total energy lost =    4.3351134438609626E-003
+   Toroidal current =  -0.19800000907914569     
+   Toroidal flux =    3.1134171010154135     
+   Volume =    196.16172400432043     
+ Done time loop.
+ Stopped at           0

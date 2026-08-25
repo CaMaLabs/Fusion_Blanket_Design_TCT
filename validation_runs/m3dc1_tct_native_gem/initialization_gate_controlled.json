@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "run_dir": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_CONTROLLED_EPS0856636",
+  "run_status": "return_code=0",
+  "eps": 0.0008566360855,
+  "volume": 196.16172400432043,
+  "magnetic_energy": 210.95100000000002,
+  "kinetic_energy": 0.0,
+  "current": -0.0007437108733309643,
+  "flux": 3.122103763036248,
+  "finite_checks": {
+    "volume": true,
+    "magnetic_energy": true,
+    "kinetic_energy": true,
+    "current": true,
+    "flux": true
+  },
+  "mesh_check": {
+    "mesh_counts_v_e_f_r": [
+      535,
+      1538,
+      1004,
+      0
+    ],
+    "partition_count": 1,
+    "status": "PASS"
+  },
+  "topology_search_check": {
+    "xpoint_found_count": 4,
+    "xpoint_not_found_count": 2,
+    "axis_not_found_count": 3,
+    "status": "WARN_INTERMITTENT"
+  },
+  "repeatability": {
+    "status": "not_requested"
+  },
+  "reference_check": {
+    "available": true,
+    "comparison_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_GEM_CIRCLE_BASELINE_AXISFIX",
+    "t0_max_abs_difference": 0.012000000000000455,
+    "note": "Controlled t=0 differs in the intended GEM eps perturbation; mesh/transport/equilibrium settings are otherwise identical."
+  },
+  "warnings": [],
+  "fail_reason": null
+}

@@ -1,0 +1,16 @@
+split_smb: /home/ubuntu/M3DC1-reference-era/m3dc1_scorec/test/create_smb/split_smb.cc:71: void {anonymous}::getConfig(int, char**): Assertion `partitionFactor <= PCU_Comm_Peers()' failed.
+[ubuntu:3995883] *** Process received signal ***
+[ubuntu:3995883] Signal: Aborted (6)
+[ubuntu:3995883] Signal code:  (-6)
+[ubuntu:3995883] [ 0] /usr/lib/x86_64-linux-gnu/libc.so.6(+0x45cb0) [0x7201e1bc1cb0]
+[ubuntu:3995883] [ 1] /usr/lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c) [0x7201e1c2248c]
+[ubuntu:3995883] [ 2] /usr/lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e) [0x7201e1bc1b7e]
+[ubuntu:3995883] [ 3] /usr/lib/x86_64-linux-gnu/libc.so.6(abort+0x27) [0x7201e1ba48ec]
+[ubuntu:3995883] [ 4] /usr/lib/x86_64-linux-gnu/libc.so.6(+0x29979) [0x7201e1ba5979]
+[ubuntu:3995883] [ 5] /usr/lib/x86_64-linux-gnu/libc.so.6(__assert_fail+0xb5) [0x7201e1bb7f75]
+[ubuntu:3995883] [ 6] /home/ubuntu/m3dc1_runs/historical_split_smb_tools/split_smb(+0x288c) [0x5ade8fc8788c]
+[ubuntu:3995883] [ 7] /home/ubuntu/m3dc1_runs/historical_split_smb_tools/split_smb(+0x28ee) [0x5ade8fc878ee]
+[ubuntu:3995883] [ 8] /usr/lib/x86_64-linux-gnu/libc.so.6(+0x2a601) [0x7201e1ba6601]
+[ubuntu:3995883] [ 9] /usr/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x88) [0x7201e1ba6718]
+[ubuntu:3995883] [10] /home/ubuntu/m3dc1_runs/historical_split_smb_tools/split_smb(+0x2505) [0x5ade8fc87505]
+[ubuntu:3995883] *** End of error message ***

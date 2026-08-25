@@ -1,0 +1,8 @@
+{
+  "status": "PASS_WITH_INTERMITTENT_SEARCH_WARNING",
+  "native_metric": "C1.h5:/scalars/Reconnected_Flux",
+  "baseline_final_reconnected_flux": 0.000349069,
+  "time_of_peak_current": 0.05,
+  "xpoint_search": 4,
+  "xpoint_search_misses": 2
+}
