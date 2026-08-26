@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "run_dir": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_BASELINE",
+  "run_status": "return_code=0",
+  "finite_checks": {
+    "volume": true,
+    "magnetic_energy": true,
+    "kinetic_energy": true,
+    "toroidal_current": true,
+    "toroidal_flux": true,
+    "Reconnected_Flux": true,
+    "max_abs_jphi": true
+  },
+  "volume": 196.162,
+  "magnetic_energy": 210.96300000000002,
+  "kinetic_energy": 0.0,
+  "toroidal_current": -0.000743711,
+  "Reconnected_Flux": 0.0005,
+  "max_abs_jphi": 2.03083,
+  "reference_check": {
+    "available": false
+  },
+  "field_reference_check": {
+    "available": false
+  },
+  "warnings": [],
+  "fail_reason": null
+}

@@ -1,0 +1,21 @@
+{
+  "peak_abs_jphi_baseline": 9.45085,
+  "peak_abs_jphi_controlled": 9.45036,
+  "peak_abs_jphi_change_fraction": -5.184718834824271e-05,
+  "integrated_high_jphi_baseline": 92.680507,
+  "integrated_high_jphi_controlled": 92.630499,
+  "integrated_high_jphi_change_fraction": -0.0005395740875695186,
+  "final_reconnected_flux_baseline": 0.000349069,
+  "final_reconnected_flux_controlled": 0.000349067,
+  "final_reconnected_flux_change_fraction": -5.729526254056592e-06,
+  "peak_abs_reconnected_flux_change_fraction": 0.0,
+  "peak_reconnection_rate_change_fraction": 0.0,
+  "final_magnetic_energy_change_fraction": -2.4051527993688275e-05,
+  "final_kinetic_energy_change_fraction": 7.812703455808905e-05,
+  "baseline_peak_time": 0.15,
+  "controlled_peak_time": 0.15,
+  "classification": "NATIVE_TCT_V2_LOCAL_CURRENT_AND_TOPOLOGY_IMPROVEMENT",
+  "baseline_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_BASELINE",
+  "controlled_run": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_CONTROLLED",
+  "minimum_source_to_sheet_centroid_distance": 0.3256709866213146
+}

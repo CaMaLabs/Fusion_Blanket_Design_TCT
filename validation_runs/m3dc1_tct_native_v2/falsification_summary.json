@@ -1,0 +1,18 @@
+{
+  "peak_abs_jphi_baseline": 9.45085,
+  "peak_abs_jphi_controlled": 9.45394,
+  "peak_abs_jphi_change_fraction": 0.0003269547183585056,
+  "integrated_high_jphi_baseline": 92.680507,
+  "integrated_high_jphi_controlled": 92.686912,
+  "integrated_high_jphi_change_fraction": 6.91083832763332e-05,
+  "final_reconnected_flux_baseline": 0.000349069,
+  "final_reconnected_flux_controlled": 0.000349069,
+  "final_reconnected_flux_change_fraction": 0.0,
+  "peak_abs_reconnected_flux_change_fraction": 0.0,
+  "peak_reconnection_rate_change_fraction": 0.0,
+  "final_magnetic_energy_change_fraction": 9.620611197338593e-06,
+  "final_kinetic_energy_change_fraction": -5.2084689705513165e-05,
+  "baseline_peak_time": 0.15,
+  "controlled_peak_time": 0.15,
+  "classification_note": "displaced source falsification; compare response locality against controlled"
+}

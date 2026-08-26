@@ -1,0 +1,8 @@
+Remote host: ubuntu@45.50.0.74
+CaMaLabs checkout: /home/ubuntu/work/openmc/sweep
+Branch: agent/m3dc1-native-tct
+M3D-C1 source: /home/ubuntu/M3DC1-official
+M3D-C1 upstream commit: e17c0b7e
+Executable: /home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d
+MPI layout: 1 rank, OpenMPI from Spack environment m3dc1-deps
+Runtime note: /tmp was full; launch scripts set TMPDIR and OMPI temp base to /var/tmp.

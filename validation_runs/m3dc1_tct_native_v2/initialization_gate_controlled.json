@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "run_dir": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_CONTROLLED",
+  "run_status": "return_code=0",
+  "finite_checks": {
+    "volume": true,
+    "magnetic_energy": true,
+    "kinetic_energy": true,
+    "toroidal_current": true,
+    "toroidal_flux": true,
+    "Reconnected_Flux": true,
+    "max_abs_jphi": true
+  },
+  "volume": 196.162,
+  "magnetic_energy": 210.96300000000002,
+  "kinetic_energy": 0.0,
+  "toroidal_current": -0.000743711,
+  "Reconnected_Flux": 0.0005,
+  "max_abs_jphi": 2.03083,
+  "reference_check": {
+    "available": true,
+    "run_dir": "/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_BASELINE",
+    "t0_abs_diff": {
+      "volume": 0.0,
+      "magnetic_energy": 0.0,
+      "kinetic_energy": 0.0,
+      "toroidal_current": 0.0,
+      "toroidal_flux": 0.0,
+      "Reconnected_Flux": 0.0,
+      "max_abs_jphi": 0.0,
+      "integrated_abs_jphi": 0.0
+    }
+  },
+  "field_reference_check": {
+    "available": true,
+    "max_abs_field_diff_t0": {
+      "psi": 0.0,
+      "jphi": 0.0,
+      "I": 0.0,
+      "phi": 0.0,
+      "V": 0.0,
+      "E_R": 0.0,
+      "E_PHI": 0.0,
+      "E_Z": 0.0,
+      "E_par": 0.0
+    }
+  },
+  "warnings": [],
+  "fail_reason": null
+}

@@ -1,0 +1,3 @@
+control,run_dir,status,J_0cd,R_0cd,Z_0cd,W_cd,peak_abs_jphi_change_fraction,integrated_high_jphi_change_fraction,final_reconnected_flux_change_fraction,interpretation
+localized_control,/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_CONTROLLED,return_code=0,-0.0203083,10.0,1.0,0.561,-5.184718834824271e-05,-0.0005395740875695186,-5.729526254056592e-06,weak local current-loading reduction with no reconnection scalar worsening
+displaced_same_amplitude,/home/ubuntu/m3dc1_runs/TCT_NATIVE_V2_FALSIFICATION_DISPLACED,return_code=0,-0.0203083,10.0,-1.5,0.561,0.0003269547183585056,6.91083832763332e-05,0.0,does not reproduce local reduction; slight peak-current increase
