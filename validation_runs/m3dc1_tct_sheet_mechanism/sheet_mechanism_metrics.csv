@@ -1,0 +1,28 @@
+metric,value,definition
+classification,M3DC1_SHEET_BROADENING_RAPIDLY_RELAXES,current-conserving analytic GEM sheet broadening A/B comparison
+qualification,TARGET_FIELD_LEVEL_BROADENING_NOT_CLEANLY_ACHIEVED,current-conserving analytic GEM sheet broadening A/B comparison
+baseline_analytic_fwhm,0.8813735870195432,current-conserving analytic GEM sheet broadening A/B comparison
+broad10_analytic_fwhm,0.9695109457214975,current-conserving analytic GEM sheet broadening A/B comparison
+requested_analytic_broadening_fraction,0.1,current-conserving analytic GEM sheet broadening A/B comparison
+achieved_analytic_broadening_fraction,0.1,current-conserving analytic GEM sheet broadening A/B comparison
+analytic_total_current_conservation_error_fraction,0.0,current-conserving analytic GEM sheet broadening A/B comparison
+t0_field_level_width_gain_fraction_rms_equiv,0.0021624622297935266,current-conserving analytic GEM sheet broadening A/B comparison
+t0_field_level_width_gain_pct_rms_equiv,0.21624622297935267,current-conserving analytic GEM sheet broadening A/B comparison
+t0_field_level_width_gain_shortfall_fraction,0.09783753777020648,current-conserving analytic GEM sheet broadening A/B comparison
+t0_profile_signed_current_change_fraction,0.0868801518987641,current-conserving analytic GEM sheet broadening A/B comparison
+t0_profile_abs_current_change_fraction,0.08577441477203632,current-conserving analytic GEM sheet broadening A/B comparison
+initial_state_mismatch_confound,"analytic integrated sheet current is conserved exactly, but coarse native field-profile diagnostics realize only weak width gain and show about 8.6% local sheet-current mismatch",current-conserving analytic GEM sheet broadening A/B comparison
+t0_peak_j_change_fraction,-0.05095178315228531,current-conserving analytic GEM sheet broadening A/B comparison
+first_post_t0_time,0.05,current-conserving analytic GEM sheet broadening A/B comparison
+first_post_t0_width_change_fraction,-0.03437765200259841,current-conserving analytic GEM sheet broadening A/B comparison
+first_post_t0_peak_j_change_fraction,0.13764267630486485,current-conserving analytic GEM sheet broadening A/B comparison
+min_post_t0_width_change_fraction,-0.03647188452376195,current-conserving analytic GEM sheet broadening A/B comparison
+dynamic_post_t0_peak_j_change_fraction,0.13764267630486485,current-conserving analytic GEM sheet broadening A/B comparison
+post_t0_integrated_abs_sheet_current_change_fraction,0.11960051863750056,current-conserving analytic GEM sheet broadening A/B comparison
+fwhm_relax_time_to_within_2pct_baseline,,current-conserving analytic GEM sheet broadening A/B comparison
+peak_reconnection_rate_change_fraction,-0.022964670086615457,current-conserving analytic GEM sheet broadening A/B comparison
+final_reconnected_flux_change_fraction,0.009490960239952599,current-conserving analytic GEM sheet broadening A/B comparison
+final_magnetic_energy_change_fraction,-0.001890450100294875,current-conserving analytic GEM sheet broadening A/B comparison
+final_kinetic_energy_change_fraction,0.30112763353212313,current-conserving analytic GEM sheet broadening A/B comparison
+topology_event_timing_shift,0.0,current-conserving analytic GEM sheet broadening A/B comparison
+island_width_result,not robustly derivable from coarse GEM scalar/element-center output; X/O scalars tracked instead,current-conserving analytic GEM sheet broadening A/B comparison

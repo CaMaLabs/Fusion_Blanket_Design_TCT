@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "run_dir": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE",
+  "run_status": "return_code=0",
+  "finite_checks": {
+    "volume": true,
+    "magnetic_energy": true,
+    "kinetic_energy": true,
+    "toroidal_current": true,
+    "toroidal_flux": true,
+    "Reconnected_Flux": true,
+    "max_abs_jphi_profile": true
+  },
+  "volume": 196.162,
+  "magnetic_energy": 210.96300000000002,
+  "kinetic_energy": 0.0,
+  "native_scalar_toroidal_current": -0.000743711,
+  "Reconnected_Flux": 0.0005,
+  "measured_profile_fwhm_Z_discrete": 0.0,
+  "measured_profile_fwhm_Z_rms_equiv": 1.349033795236279,
+  "profile_signed_current_weighted": 1.689962461608383,
+  "profile_abs_current_weighted": 1.7095573744672674,
+  "analytic_sheet_current": {
+    "scale": 1.0,
+    "fwhm": 0.8813735870195432,
+    "integrated_current_exact": 2.0,
+    "peak_j": 2.0
+  },
+  "reference_check": {
+    "available": false
+  },
+  "warnings": [],
+  "fail_reason": null
+}

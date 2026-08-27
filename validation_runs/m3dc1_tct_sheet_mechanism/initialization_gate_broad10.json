@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "run_dir": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BROAD10",
+  "run_status": "return_code=0",
+  "finite_checks": {
+    "volume": true,
+    "magnetic_energy": true,
+    "kinetic_energy": true,
+    "toroidal_current": true,
+    "toroidal_flux": true,
+    "Reconnected_Flux": true,
+    "max_abs_jphi_profile": true
+  },
+  "volume": 196.162,
+  "magnetic_energy": 210.96800000000002,
+  "kinetic_energy": 0.0,
+  "native_scalar_toroidal_current": -0.00159354,
+  "Reconnected_Flux": 0.0005,
+  "measured_profile_fwhm_Z_discrete": 0.0,
+  "measured_profile_fwhm_Z_rms_equiv": 1.3519510298651924,
+  "profile_signed_current_weighted": 1.8367866569761286,
+  "profile_abs_current_weighted": 1.8561936577814162,
+  "analytic_sheet_current": {
+    "scale": 1.1,
+    "fwhm": 0.9695109457214975,
+    "integrated_current_exact": 2.0,
+    "peak_j": 1.8181818181818181
+  },
+  "reference_check": {
+    "available": true,
+    "run_dir": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE",
+    "baseline_analytic_fwhm": 0.8813735870195432,
+    "achieved_broadening_fraction": 0.10000000000000007,
+    "profile_signed_current_error_fraction": 0.0868801518987641,
+    "profile_abs_current_error_fraction": 0.08577441477203632,
+    "native_scalar_toroidal_current_abs_diff": 0.0008498290000000001,
+    "native_scalar_toroidal_current_fractional_change_warn_near_zero": 1.1426871459478212,
+    "magnetic_energy_change_fraction": 2.3700838535645834e-05,
+    "pressure_Bz_profile_changed_for_force_balance": true
+  },
+  "warnings": [],
+  "fail_reason": null
+}

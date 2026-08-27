@@ -1,0 +1,55 @@
+{
+  "classification": "M3DC1_TCT_CONTROL_AUTHORITY_INSUFFICIENT",
+  "predeclared_cases": [
+    {
+      "case": "A1",
+      "factor_vs_previous_native_scale": 1.0,
+      "J_0cd": 0.0203083,
+      "run_status": "return_code=0",
+      "min_dW_dt_active": -1.8609495442099093,
+      "baseline_min_dW_dt_active": -1.8390386614487313,
+      "peak_Jpk_active": 2.34622,
+      "baseline_peak_Jpk_active": 2.34622,
+      "peak_Jpk_change_pct_active": 0.0,
+      "mean_width_gain_pct_active": -0.005859249607463901,
+      "max_abs_net_source_ratio": 3.475774473584426e-17,
+      "final_magnetic_energy_change_pct": 0.0,
+      "final_kinetic_energy_change_pct": 0.0026042344852575876,
+      "final_reconnected_flux_change_pct": 0.0
+    },
+    {
+      "case": "A2",
+      "factor_vs_previous_native_scale": 4.0,
+      "J_0cd": 0.0812332,
+      "run_status": "return_code=0",
+      "min_dW_dt_active": -1.9263370988563682,
+      "baseline_min_dW_dt_active": -1.8390386614487313,
+      "peak_Jpk_active": 2.34622,
+      "baseline_peak_Jpk_active": 2.34622,
+      "peak_Jpk_change_pct_active": 0.0,
+      "mean_width_gain_pct_active": -0.022440187330205974,
+      "max_abs_net_source_ratio": 3.475774473584426e-17,
+      "final_magnetic_energy_change_pct": 0.0,
+      "final_kinetic_energy_change_pct": 0.010416937941084562,
+      "final_reconnected_flux_change_pct": 0.0
+    },
+    {
+      "case": "A3",
+      "factor_vs_previous_native_scale": 8.0,
+      "J_0cd": 0.1624664,
+      "run_status": "return_code=0",
+      "min_dW_dt_active": -2.014113353398233,
+      "baseline_min_dW_dt_active": -1.8390386614487313,
+      "peak_Jpk_active": 2.34622,
+      "baseline_peak_Jpk_active": 2.34622,
+      "peak_Jpk_change_pct_active": 0.0,
+      "mean_width_gain_pct_active": -0.04080901357546084,
+      "max_abs_net_source_ratio": 3.475774473584426e-17,
+      "final_magnetic_energy_change_pct": -0.0004810305598737655,
+      "final_kinetic_energy_change_pct": 0.023438110367444785,
+      "final_reconnected_flux_change_pct": 0.0
+    }
+  ],
+  "minimum_authority_opposing_narrowing": null,
+  "interpretation": "actuator/controller mapping remains the bottleneck; do not falsify current-sheet mechanism"
+}

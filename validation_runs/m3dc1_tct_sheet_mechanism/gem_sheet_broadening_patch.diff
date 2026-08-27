@@ -1,0 +1,159 @@
+diff --git a/unstructured/M3Dmodules.f90 b/unstructured/M3Dmodules.f90
+index 8c7e0c95..217795d2 100644
+--- a/unstructured/M3Dmodules.f90
++++ b/unstructured/M3Dmodules.f90
+@@ -204,6 +204,7 @@ module basic
+   integer :: iread_pscale
+   real :: ln          ! length of equilibrium gradient
+   real :: eps         ! size of initial perturbation
++  real :: gem_sheet_scale ! GEM sheet-width scale; 1 preserves upstream GEM
+   integer :: iwave    ! which wave to initialize in wave prop. equilibrium
+   integer :: irmp     ! 1 = read rmp coil/currents from rmp_coil.dat, rmp_current.dat
+   integer :: iread_ext_field
+@@ -405,6 +406,10 @@ module basic
+   real :: z_0cd          ! z coordinate of peak
+   real :: w_cd           ! width of Gaussian
+   real :: delta_cd       ! shift of Gaussian
++  real :: w_cd_shoulder  ! width of shoulder Gaussians for neutral redistribution
++  real :: cd_t_on        ! current-drive turn-on time
++  real :: cd_t_ramp      ! current-drive smooth ramp duration
++  real :: cd_t_off       ! current-drive turn-off time
+ 
+   ! xray diagnostic parameters
+   integer :: xray_detector_enabled ! 1 = enable xray diagnostic
+diff --git a/unstructured/init_gem.f90 b/unstructured/init_gem.f90
+index 04c57ce5..6dc4d981 100644
+--- a/unstructured/init_gem.f90
++++ b/unstructured/init_gem.f90
+@@ -49,69 +49,75 @@ subroutine gem_reconnection_equ(x, z)
+   implicit none
+ 
+   real, intent(in) :: x, z
++  real :: sheet_s, sheet_k, sheet_sech2, sheet_tanh
++
++  sheet_s = max(gem_sheet_scale, 1.e-6)
++  sheet_k = 2./sheet_s
++  sheet_tanh = tanh(sheet_k*z)
++  sheet_sech2 = sech(sheet_k*z)**2
+ 
+   call constant_field(  u0_l, 0.)
+   if(numvar.ge.2) call constant_field( vz0_l, 0.)
+   if(numvar.ge.3) call constant_field(chi0_l, 0.)
+ 
+-  psi0_l(1) = 0.5*alog(cosh(2.*z))
++  psi0_l(1) = alog(cosh(sheet_k*z))/sheet_k
+   psi0_l(2) = 0.0
+-  psi0_l(3) = tanh(2.*z)  
++  psi0_l(3) = sheet_tanh
+   psi0_l(4) = 0.0
+   psi0_l(5) = 0.0
+-  psi0_l(6) = 2.*sech(2.*z)**2
++  psi0_l(6) = sheet_k*sheet_sech2
+ 
+   ! if numvar = 2, then use Bz to satisfy force balance
+   if(numvar.eq.2) then
+-     bz0_l(1) = sqrt(bzero**2 + sech(2.*z)**2)
++     bz0_l(1) = sqrt(bzero**2 + sheet_sech2)
+      bz0_l(2) = 0.
+-     bz0_l(3) = -2.*tanh(2.*z)*sech(2.*z)**2/bz0_l(1)
++     bz0_l(3) = -sheet_k*sheet_tanh*sheet_sech2/bz0_l(1)
+      bz0_l(4) = 0.
+      bz0_l(5) = 0.
+-     bz0_l(6) = (2.*sech(2.*z)**2/bz0_l(1))                      &
+-          *(bz0_l(3)*tanh(2.*z)/bz0_l(1)                          &
+-          - 2.*sech(2.*z)**2 + 4.*tanh(2.*z)**2)
++     bz0_l(6) = (sheet_k*sheet_sech2/bz0_l(1))                    &
++          *(bz0_l(3)*sheet_tanh/bz0_l(1)                          &
++          - sheet_k*sheet_sech2 + 2.*sheet_k*sheet_tanh**2)
+   endif
+ 
+   ! if numvar >= 3, then use pressure to satisfy force balance
+   if(numvar.ge.3) then
+ 
+      if(bzero.eq.0) then
+-        bz0_l(1) = sqrt(1.-2.*p0)*sech(2.*z)
++        bz0_l(1) = sqrt(1.-2.*p0)*sqrt(sheet_sech2)
+         bz0_l(2) = 0.
+-        bz0_l(3) = -2.*bz0_l(1)*tanh(2.*z)
++        bz0_l(3) = -sheet_k*bz0_l(1)*sheet_tanh
+         bz0_l(4) = 0.
+         bz0_l(5) = 0.
+-        bz0_l(6) = -2.*bz0_l(3)*tanh(2.*z) &
+-             -4.*bz0_l(1)*(1.-tanh(2.*z)**2)
++        bz0_l(6) = -sheet_k*bz0_l(3)*sheet_tanh &
++             -sheet_k**2*bz0_l(1)*(1.-sheet_tanh**2)
+      else
+-        bz0_l(1) = sqrt(bzero**2 + (1.-2.*p0)*sech(2.*z)**2)
++        bz0_l(1) = sqrt(bzero**2 + (1.-2.*p0)*sheet_sech2)
+         bz0_l(2) = 0.
+-        bz0_l(3) = -(1.-2.*p0)*2.*tanh(2.*z)*sech(2.*z)**2/bz0_l(1)
++        bz0_l(3) = -(1.-2.*p0)*sheet_k*sheet_tanh*sheet_sech2/bz0_l(1)
+         bz0_l(4) = 0.
+         bz0_l(5) = 0.
+-        bz0_l(6) = (1.-2.*p0)*(2.*sech(2.*z)**2/bz0_l(1))            &
+-             *(bz0_l(3)*tanh(2.*z)/bz0_l(1)                          &
+-             - 2.*sech(2.*z)**2 + 4.*tanh(2.*z)**2)
++        bz0_l(6) = (1.-2.*p0)*(sheet_k*sheet_sech2/bz0_l(1))        &
++             *(bz0_l(3)*sheet_tanh/bz0_l(1)                         &
++             - sheet_k*sheet_sech2 + 2.*sheet_k*sheet_tanh**2)
+      endif
+   endif
+ 
+-  p0_l(1) = p0*(sech(2.*z)**2 + 0.2)
++  p0_l(1) = p0*(sheet_sech2 + 0.2)
+   p0_l(2) = 0.
+-  p0_l(3) = p0*(-4.*sech(2.*z)**2*tanh(2.*z))
++  p0_l(3) = p0*(-2.*sheet_k*sheet_sech2*sheet_tanh)
+   p0_l(4) = 0.
+   p0_l(5) = 0.
+-  p0_l(6) = p0*(-8.*sech(2.*z)**2*(sech(2.*z)**2-2.*tanh(2.*z)**2)) 
++  p0_l(6) = p0*(-2.*sheet_k**2*sheet_sech2*(sheet_sech2-2.*sheet_tanh**2))
+ 
+   pe0_l = p0_l*pefac
+ 
+   if(idens.eq.1) then
+-     den0_l(1) = sech(2*z)**2 + 0.2
++     den0_l(1) = sheet_sech2 + 0.2
+      den0_l(2) = 0.
+-     den0_l(3) = -4.*sech(2*z)**2*tanh(2*z)
++     den0_l(3) = -2.*sheet_k*sheet_sech2*sheet_tanh
+      den0_l(4) = 0.
+      den0_l(5) = 0.
+-     den0_l(6) = -8.*sech(2*z)**2*(sech(2*z)**2-2.*tanh(2*z)**2)
++     den0_l(6) = -2.*sheet_k**2*sheet_sech2*(sheet_sech2-2.*sheet_tanh**2)
+   else
+      call constant_field(den0_l, 1.)
+   endif
+diff --git a/unstructured/input.f90 b/unstructured/input.f90
+index 6795686c..49a20e2f 100644
+--- a/unstructured/input.f90
++++ b/unstructured/input.f90
+@@ -580,6 +580,8 @@ subroutine set_defaults
+   call add_var_int("iwave", iwave, 0, "", eq_grp)
+   call add_var_double("eps", eps, 0.01, &
+        "Magnitude of initial perturbations*", eq_grp)
++  call add_var_double("gem_sheet_scale", gem_sheet_scale, 1., &
++       "GEM current-sheet width scale; preserves integrated current analytically", eq_grp)
+   call add_var_int("maxn", maxn, 200, "", eq_grp)
+   call add_var_int("irmp", irmp, 0, &
+        "1: Apply nonaxisym. fields throughout plasma|&
+@@ -982,6 +984,14 @@ subroutine set_defaults
+        "width of cd gaussian", source_grp)
+   call add_var_double("delta_cd", delta_cd, 0., &
+        "shift of cd gaussian", source_grp)
++  call add_var_double("W_cd_shoulder", w_cd_shoulder, 0., &
++       "shoulder width for neutral center-plus-shoulder cd source", source_grp)
++  call add_var_double("cd_t_on", cd_t_on, 0., &
++       "time when current drive turns on", source_grp)
++  call add_var_double("cd_t_ramp", cd_t_ramp, 0., &
++       "smooth current-drive ramp duration", source_grp)
++  call add_var_double("cd_t_off", cd_t_off, 1.e30, &
++       "time when current drive turns off", source_grp)
+ 
+   ! poloidal momentum source
+   call add_var_int("ipforce", ipforce, 0, &
+@@ -1873,4 +1883,3 @@ subroutine validate_input
+   end if
+ 
+ end subroutine validate_input
+-

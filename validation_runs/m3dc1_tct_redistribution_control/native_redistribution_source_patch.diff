@@ -1,0 +1,139 @@
+diff --git a/unstructured/M3Dmodules.f90 b/unstructured/M3Dmodules.f90
+index 8c7e0c95..217795d2 100644
+--- a/unstructured/M3Dmodules.f90
++++ b/unstructured/M3Dmodules.f90
+@@ -204,6 +204,7 @@ module basic
+   integer :: iread_pscale
+   real :: ln          ! length of equilibrium gradient
+   real :: eps         ! size of initial perturbation
++  real :: gem_sheet_scale ! GEM sheet-width scale; 1 preserves upstream GEM
+   integer :: iwave    ! which wave to initialize in wave prop. equilibrium
+   integer :: irmp     ! 1 = read rmp coil/currents from rmp_coil.dat, rmp_current.dat
+   integer :: iread_ext_field
+@@ -405,6 +406,10 @@ module basic
+   real :: z_0cd          ! z coordinate of peak
+   real :: w_cd           ! width of Gaussian
+   real :: delta_cd       ! shift of Gaussian
++  real :: w_cd_shoulder  ! width of shoulder Gaussians for neutral redistribution
++  real :: cd_t_on        ! current-drive turn-on time
++  real :: cd_t_ramp      ! current-drive smooth ramp duration
++  real :: cd_t_off       ! current-drive turn-off time
+ 
+   ! xray diagnostic parameters
+   integer :: xray_detector_enabled ! 1 = enable xray diagnostic
+diff --git a/unstructured/input.f90 b/unstructured/input.f90
+index 6795686c..49a20e2f 100644
+--- a/unstructured/input.f90
++++ b/unstructured/input.f90
+@@ -580,6 +580,8 @@ subroutine set_defaults
+   call add_var_int("iwave", iwave, 0, "", eq_grp)
+   call add_var_double("eps", eps, 0.01, &
+        "Magnitude of initial perturbations*", eq_grp)
++  call add_var_double("gem_sheet_scale", gem_sheet_scale, 1., &
++       "GEM current-sheet width scale; preserves integrated current analytically", eq_grp)
+   call add_var_int("maxn", maxn, 200, "", eq_grp)
+   call add_var_int("irmp", irmp, 0, &
+        "1: Apply nonaxisym. fields throughout plasma|&
+@@ -982,6 +984,14 @@ subroutine set_defaults
+        "width of cd gaussian", source_grp)
+   call add_var_double("delta_cd", delta_cd, 0., &
+        "shift of cd gaussian", source_grp)
++  call add_var_double("W_cd_shoulder", w_cd_shoulder, 0., &
++       "shoulder width for neutral center-plus-shoulder cd source", source_grp)
++  call add_var_double("cd_t_on", cd_t_on, 0., &
++       "time when current drive turns on", source_grp)
++  call add_var_double("cd_t_ramp", cd_t_ramp, 0., &
++       "smooth current-drive ramp duration", source_grp)
++  call add_var_double("cd_t_off", cd_t_off, 1.e30, &
++       "time when current drive turns off", source_grp)
+ 
+   ! poloidal momentum source
+   call add_var_int("ipforce", ipforce, 0, &
+@@ -1873,4 +1883,3 @@ subroutine validate_input
+   end if
+ 
+ end subroutine validate_input
+-
+diff --git a/unstructured/transport.f90 b/unstructured/transport.f90
+index 9d4da850..58a17671 100644
+--- a/unstructured/transport.f90
++++ b/unstructured/transport.f90
+@@ -931,14 +931,24 @@ function cd_func()
+   integer :: iregion, j, nvals
+   vectype, dimension(dofs_per_element) :: temp
+   real, allocatable :: xvals(:), yvals(:)
++  real :: cd_gate, cd_tau, cd_w_center, cd_w_sh, cd_sep
++  real :: cd_area, cd_net
+ 
+   temp = 0.
++  if(time.lt.cd_t_on .or. time.ge.cd_t_off) then
++     cd_gate = 0.
++  else if(cd_t_ramp.gt.0. .and. time.lt.cd_t_on+cd_t_ramp) then
++     cd_tau = (time-cd_t_on)/cd_t_ramp
++     cd_gate = cd_tau*cd_tau*(3. - 2.*cd_tau)
++  else
++     cd_gate = 1.
++  end if
+ 
+   ! Gaussian source
+   if(icd_source.eq.1) then
+      do j=1,npoints
+-        temp79a(j) = J_0cd * exp( -(x_79(j)-R_0cd)**2/w_cd**2 &
+-             - (z_79(j)-Z_0cd)**2/w_cd**2 ) - delta_cd
++        temp79a(j) = cd_gate * (J_0cd * exp( -(x_79(j)-R_0cd)**2/w_cd**2 &
++             - (z_79(j)-Z_0cd)**2/w_cd**2 ) - delta_cd)
+         call magnetic_region(pst79(j,OP_1),pst79(j,OP_DR),pst79(j,OP_DZ), &
+              x_79(j),z_79(j),iregion)
+         if(iregion.ne.REGION_PLASMA) temp79a(j) = 0.
+@@ -947,7 +957,7 @@ function cd_func()
+ #ifdef USEST
+   else if(icd_source.eq.2) then
+      temp79b = sqrt((xl_79-xcenter)**2 +(zl_79-zcenter)**2)
+-     temp79a = J_0cd/sqrt(2.*pi*w_cd**2) & 
++     temp79a = cd_gate * J_0cd/sqrt(2.*pi*w_cd**2) & 
+           *exp(-(temp79b - delta_cd)**2/(2.*w_cd**2))
+      temp = temp + intx2(mu79(:,:,OP_1),temp79a)
+   else if(icd_source.eq.3) then
+@@ -965,9 +975,41 @@ function cd_func()
+      do j=1,npoints
+         call evaluate_spline(cd_spline, temp79b(j)**2, temp79a(j))
+      end do
+-     temp79a = temp79a*r_79
++     temp79a = cd_gate*temp79a*r_79
+      temp = temp + intx2(mu79(:,:,OP_1),temp79a)
+ #endif
++  else if(icd_source.eq.4) then
++     cd_w_center = max(w_cd, 1.e-30)
++     if(w_cd_shoulder.gt.0.) then
++        cd_w_sh = w_cd_shoulder
++     else
++        cd_w_sh = cd_w_center
++     end if
++     cd_sep = abs(delta_cd)
++     temp79a = 0.
++     temp79b = 0.
++     do j=1,npoints
++        call magnetic_region(pst79(j,OP_1),pst79(j,OP_DR),pst79(j,OP_DZ), &
++             x_79(j),z_79(j),iregion)
++        if(iregion.eq.REGION_PLASMA) then
++           temp79a(j) = -exp( -(x_79(j)-R_0cd)**2/cd_w_center**2 &
++                - (z_79(j)-Z_0cd)**2/cd_w_center**2 ) &
++                + 0.5*exp( -(x_79(j)-R_0cd)**2/cd_w_sh**2 &
++                - (z_79(j)-(Z_0cd-cd_sep))**2/cd_w_sh**2 ) &
++                + 0.5*exp( -(x_79(j)-R_0cd)**2/cd_w_sh**2 &
++                - (z_79(j)-(Z_0cd+cd_sep))**2/cd_w_sh**2 )
++           temp79b(j) = 1.
++        end if
++     enddo
++     cd_area = real(int1(temp79b))
++     if(cd_area.gt.0.) then
++        cd_net = real(int1(temp79a))/cd_area
++        do j=1,npoints
++           if(real(temp79b(j)).gt.0.) temp79a(j) = temp79a(j) - cd_net
++        enddo
++     end if
++     temp79a = cd_gate * J_0cd * temp79a
++     temp = temp + intx2(mu79(:,:,OP_1),temp79a)
+   endif
+ 
+   cd_func = temp
