@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tct-mechanism-explorer"
+version = "0.1.0"
+description = "Constrained M3D-C1 TCT mechanism and controller explorer"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+tct-explorer = "tct_explorer.cli:main"
+
+[tool.setuptools]
+packages = ["tct_explorer"]
