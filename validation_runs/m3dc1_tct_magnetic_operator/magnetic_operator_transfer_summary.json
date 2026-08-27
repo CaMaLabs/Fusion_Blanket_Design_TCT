@@ -1,0 +1,85 @@
+{
+  "classification": "M3DC1_MAGNETIC_OPERATOR_SHEET_AUTHORITY_PASS",
+  "operator": "localized flux/vector-potential source in flux_nolin",
+  "predeclared_matrix": [
+    [
+      "zero",
+      0.0
+    ],
+    [
+      "plus",
+      0.01
+    ],
+    [
+      "minus",
+      -0.01
+    ]
+  ],
+  "operator_definition": {
+    "imag_control": 1,
+    "mag_ctrl_r0": 10.0,
+    "mag_ctrl_z0": 1.0,
+    "mag_ctrl_wr": 0.5,
+    "mag_ctrl_wz": 0.5,
+    "mag_ctrl_t_on": 0.0,
+    "mag_ctrl_t_ramp": 0.0,
+    "mag_ctrl_t_off": 0.05
+  },
+  "reachable_field_level": true,
+  "sheet_authority_gate_pass": true,
+  "selected_transfer_sign": "minus",
+  "cases": [
+    {
+      "case": "zero",
+      "mag_ctrl_amp": 0.0,
+      "run_status": "return_code=0",
+      "max_abs_delta_psi_span": 0.0,
+      "max_abs_delta_Bz_proxy": 0.0,
+      "final_dW_dA": 0.0,
+      "final_dJpk_dA": 0.0,
+      "final_dJcenter_dA": 0.0,
+      "final_dJshoulder_dA": 0.0,
+      "final_dReconnectedFlux_dA": 0.0,
+      "final_dMagneticEnergy_dA": 0.0,
+      "final_delta_W": 0.0,
+      "final_delta_Jpk": 0.0,
+      "final_delta_Jcenter": 0.0,
+      "final_delta_Jshoulder": 0.0
+    },
+    {
+      "case": "plus",
+      "mag_ctrl_amp": 0.01,
+      "run_status": "return_code=0",
+      "max_abs_delta_psi_span": 7.00000000000145e-05,
+      "max_abs_delta_Bz_proxy": 1.0000166669410504e-05,
+      "final_dW_dA": -0.538453655871951,
+      "final_dJpk_dA": 0.3601999999999994,
+      "final_dJcenter_dA": -0.014153468292998905,
+      "final_dJshoulder_dA": -0.1553523926793976,
+      "final_dReconnectedFlux_dA": -3.299999999997749e-06,
+      "final_dMagneticEnergy_dA": 0.49999999999954525,
+      "final_delta_W": -0.00538453655871951,
+      "final_delta_Jpk": 0.003601999999999994,
+      "final_delta_Jcenter": -0.00014153468292998905,
+      "final_delta_Jshoulder": -0.001553523926793976
+    },
+    {
+      "case": "minus",
+      "mag_ctrl_amp": -0.01,
+      "run_status": "return_code=0",
+      "max_abs_delta_psi_span": 7.00000000000145e-05,
+      "max_abs_delta_Bz_proxy": 1.0000166669410504e-05,
+      "final_dW_dA": -1.17982301091768,
+      "final_dJpk_dA": 0.3601999999999994,
+      "final_dJcenter_dA": -0.01418221230800043,
+      "final_dJshoulder_dA": -0.15532814818010054,
+      "final_dReconnectedFlux_dA": -3.30000000000317e-06,
+      "final_dMagneticEnergy_dA": 0.6000000000000227,
+      "final_delta_W": 0.0117982301091768,
+      "final_delta_Jpk": -0.003601999999999994,
+      "final_delta_Jcenter": 0.0001418221230800043,
+      "final_delta_Jshoulder": 0.0015532814818010054
+    }
+  ],
+  "lithium_bridge": "requires dimensional magnetic calibration before Ruzic/Fiflis evaluation"
+}

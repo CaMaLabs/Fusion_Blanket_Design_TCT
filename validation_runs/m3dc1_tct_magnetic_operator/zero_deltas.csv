@@ -1,0 +1,4 @@
+case,mag_ctrl_amp,time,delta_roi_psi_span,d_roi_psi_span_dA,delta_roi_Bz_proxy_dpsi_dZ,d_roi_Bz_proxy_dpsi_dZ_dA,delta_Jpk,d_Jpk_dA,delta_W_fwhm_equiv,d_W_fwhm_equiv_dA,delta_center_abs_current,d_center_abs_current_dA,delta_shoulder_abs_current,d_shoulder_abs_current_dA,delta_Jint_abs,d_Jint_abs_dA,delta_Reconnected_Flux,d_Reconnected_Flux_dA,delta_magnetic_energy,d_magnetic_energy_dA,delta_toroidal_current,d_toroidal_current_dA
+zero,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+zero,0.0,0.05,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+zero,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,14 @@
+{
+  "classification": "M3DC1_MAGNETIC_OPERATOR_FAILS_SUSTAINED_CONTROL",
+  "case": "sustained_minus",
+  "mag_ctrl_amp": -0.01,
+  "active_window": [
+    0.0,
+    0.25
+  ],
+  "mean_active_width_gain_pct": -0.3335980466948199,
+  "min_active_width_gain_pct": -0.8670759535614795,
+  "max_active_Jpk_change_pct": 0.36143243174125184,
+  "final_reconnected_flux_delta": -5.599999999996016e-08,
+  "final_magnetic_energy_delta": -0.019000000000005457
+}
