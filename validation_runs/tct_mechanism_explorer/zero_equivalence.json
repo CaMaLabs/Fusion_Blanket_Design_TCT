@@ -1,0 +1,202 @@
+{
+  "magnetic_pulse": {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": 0.0,
+        "r0": 10.257954402940303,
+        "z0": 0.920571580830845,
+        "wr": 0.4071334002343707,
+        "wz": 0.6090197770948869,
+        "t_on": 0.08908551023909114,
+        "duration": 0.20135468253282385,
+        "ramp": 0.015165636303946373
+      },
+      "parents": [],
+      "generation": -1,
+      "origin": "zero_equivalence",
+      "candidate_id": "0539c854390a79e6"
+    },
+    "stage": {
+      "stage": "impulse",
+      "status": "RUN_COMPLETE",
+      "return_code": 0,
+      "metrics": {
+        "mean_active_width_gain_pct": 0.0,
+        "min_active_width_gain_pct": 0.0,
+        "max_active_width_gain_pct": 0.0,
+        "max_active_peak_j_change_pct": 0.0,
+        "mean_active_peak_j_change_pct": 0.0,
+        "mean_active_high_j_change_pct": 0.0,
+        "max_abs_magnetic_energy_change_pct": 0.0,
+        "max_abs_toroidal_current_change_pct": 0.0,
+        "final_reconnected_flux_change_pct": 0.0,
+        "peak_reconnection_rate_change_pct": 0.0,
+        "final_center_to_shoulder_change_pct": 0.0,
+        "final_psi_span_delta": 0.0,
+        "final_bz_proxy_delta": 0.0,
+        "elapsed_seconds": 9.341965675354004
+      },
+      "gates": {
+        "reachable": false,
+        "authority": false
+      },
+      "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/0539c854390a79e6/impulse",
+      "input_sha256": "245eff78b062e08735a67541b3415df5d3cb532bee31b8ea5f079d0a2022eb77",
+      "error": null
+    },
+    "zero_equivalence_pass": true,
+    "max_abs_metric_delta": 0.0
+  },
+  "current_drive": {
+    "candidate": {
+      "mechanism": "current_drive",
+      "params": {
+        "amp": 0.0,
+        "r0": 10.083382039455032,
+        "z0": 1.4081128851953353,
+        "width": 0.6037494846539122,
+        "t_on": 0.06200432576793484,
+        "duration": 0.1950559459353754,
+        "ramp": 0.030918449833766584
+      },
+      "parents": [],
+      "generation": -1,
+      "origin": "zero_equivalence",
+      "candidate_id": "34cb5187ac528956"
+    },
+    "stage": {
+      "stage": "impulse",
+      "status": "RUN_COMPLETE",
+      "return_code": 0,
+      "metrics": {
+        "mean_active_width_gain_pct": 0.0,
+        "min_active_width_gain_pct": 0.0,
+        "max_active_width_gain_pct": 0.0,
+        "max_active_peak_j_change_pct": 0.0,
+        "mean_active_peak_j_change_pct": 0.0,
+        "mean_active_high_j_change_pct": 0.0,
+        "max_abs_magnetic_energy_change_pct": 0.0,
+        "max_abs_toroidal_current_change_pct": 0.0,
+        "final_reconnected_flux_change_pct": 0.0,
+        "peak_reconnection_rate_change_pct": 0.0,
+        "final_center_to_shoulder_change_pct": 0.0,
+        "final_psi_span_delta": 0.0,
+        "final_bz_proxy_delta": 0.0,
+        "elapsed_seconds": 9.447515726089478
+      },
+      "gates": {
+        "reachable": false,
+        "authority": false
+      },
+      "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/34cb5187ac528956/impulse",
+      "input_sha256": "16eaebe2659cba28102cb03ea9de66a9a845fac7ac30a8ca1d955a7828f5eb9a",
+      "error": null
+    },
+    "zero_equivalence_pass": true,
+    "max_abs_metric_delta": 0.0
+  },
+  "current_redistribution": {
+    "candidate": {
+      "mechanism": "current_redistribution",
+      "params": {
+        "amp": 0.0,
+        "r0": 10.40974625596824,
+        "z0": 1.482785476037653,
+        "center_width": 0.6766412033977832,
+        "shoulder_width": 0.7364078677857288,
+        "shoulder_delta": 0.4791328123873994,
+        "t_on": 0.16056298461722832,
+        "duration": 0.22723861479279853,
+        "ramp": 0.034199196595772065
+      },
+      "parents": [],
+      "generation": -1,
+      "origin": "zero_equivalence",
+      "candidate_id": "cbffcb85ecd8cd0a"
+    },
+    "stage": {
+      "stage": "impulse",
+      "status": "RUN_COMPLETE",
+      "return_code": 0,
+      "metrics": {
+        "mean_active_width_gain_pct": 0.0,
+        "min_active_width_gain_pct": 0.0,
+        "max_active_width_gain_pct": 0.0,
+        "max_active_peak_j_change_pct": 0.0,
+        "mean_active_peak_j_change_pct": 0.0,
+        "mean_active_high_j_change_pct": 0.0,
+        "max_abs_magnetic_energy_change_pct": 0.0,
+        "max_abs_toroidal_current_change_pct": 0.0,
+        "final_reconnected_flux_change_pct": 0.0,
+        "peak_reconnection_rate_change_pct": 0.0,
+        "final_center_to_shoulder_change_pct": 0.0,
+        "final_psi_span_delta": 0.0,
+        "final_bz_proxy_delta": 0.0,
+        "elapsed_seconds": 9.44245433807373
+      },
+      "gates": {
+        "reachable": false,
+        "authority": false
+      },
+      "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/cbffcb85ecd8cd0a/impulse",
+      "input_sha256": "00d986fc546ca2f0c75982d3e405964d89973c823c4adb44d177f036393d5090",
+      "error": null
+    },
+    "zero_equivalence_pass": true,
+    "max_abs_metric_delta": 0.0
+  },
+  "hybrid_mag_redistribution": {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": 0.0,
+        "redistribution_amp": 0.0,
+        "r0": 9.934171835453784,
+        "z0": 1.1108869734438016,
+        "mag_wr": 0.9304088425903185,
+        "mag_wz": 0.9732850942166071,
+        "center_width": 0.4600563547592661,
+        "shoulder_width": 0.7124514530515661,
+        "shoulder_delta": 0.4344430793527635,
+        "t_on": 0.1771061219428649,
+        "duration": 0.1484573433630076,
+        "ramp": 0.0007020850082009478
+      },
+      "parents": [],
+      "generation": -1,
+      "origin": "zero_equivalence",
+      "candidate_id": "4ef32558cade3a70"
+    },
+    "stage": {
+      "stage": "impulse",
+      "status": "RUN_COMPLETE",
+      "return_code": 0,
+      "metrics": {
+        "mean_active_width_gain_pct": 0.0,
+        "min_active_width_gain_pct": 0.0,
+        "max_active_width_gain_pct": 0.0,
+        "max_active_peak_j_change_pct": 0.0,
+        "mean_active_peak_j_change_pct": 0.0,
+        "mean_active_high_j_change_pct": 0.0,
+        "max_abs_magnetic_energy_change_pct": 0.0,
+        "max_abs_toroidal_current_change_pct": 0.0,
+        "final_reconnected_flux_change_pct": 0.0,
+        "peak_reconnection_rate_change_pct": 0.0,
+        "final_center_to_shoulder_change_pct": 0.0,
+        "final_psi_span_delta": 0.0,
+        "final_bz_proxy_delta": 0.0,
+        "elapsed_seconds": 9.442429542541504
+      },
+      "gates": {
+        "reachable": false,
+        "authority": false
+      },
+      "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/4ef32558cade3a70/impulse",
+      "input_sha256": "a89bac76dcfce1045778de856535b7bf3aa3844af6b4be05413edae9514ae92e",
+      "error": null
+    },
+    "zero_equivalence_pass": true,
+    "max_abs_metric_delta": 0.0
+  }
+}

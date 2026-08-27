@@ -1,0 +1,1759 @@
+[
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1550276034132851,
+        "wr": 0.48892946386637537,
+        "wz": 0.5472272403684588,
+        "t_on": 0.10889714873262285,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [],
+      "generation": 0,
+      "origin": "random",
+      "candidate_id": "6d78a99d045496fb"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.003437715752485637,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.029542950558170133,
+          "final_psi_span_delta": 1.700000000059987e-05,
+          "final_bz_proxy_delta": -1.1666861116088612e-06,
+          "elapsed_seconds": 9.34313440322876
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/6d78a99d045496fb/impulse",
+        "input_sha256": "f55e02bd29c2c41f959caf89447baefbcb79c571068b0c3bbe63cd35167dc742",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [],
+      "generation": 0,
+      "origin": "random",
+      "candidate_id": "0de840b77b81f29a"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.01336071175046527,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.3338143825531
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/0de840b77b81f29a/impulse",
+        "input_sha256": "281aa729015af9abf88d6022e284deccd5bd0f7bfc3bf6339693a9a940a91269",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "current_redistribution",
+      "params": {
+        "amp": -0.1699595687614785,
+        "r0": 9.725769813388085,
+        "z0": 1.4605335347572506,
+        "center_width": 0.3634167538059928,
+        "shoulder_width": 0.5788270129207083,
+        "shoulder_delta": 0.6061298045171537,
+        "t_on": 0.15127113532384398,
+        "duration": 0.17560588959924978,
+        "ramp": 0.01146910602723103
+      },
+      "parents": [],
+      "generation": 0,
+      "origin": "random",
+      "candidate_id": "ce3d68552e23e8ae"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.04864654553591308,
+          "final_psi_span_delta": 1.000000000139778e-06,
+          "final_bz_proxy_delta": -1.666694445789929e-07,
+          "elapsed_seconds": 9.335963487625122
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/ce3d68552e23e8ae/impulse",
+        "input_sha256": "9b487b85b34fd4b852a6698fdd00ef124da23e57009c095eddf63a793d5c1f09",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": 0.015751842702069724,
+        "redistribution_amp": 0.17900334035377374,
+        "r0": 10.095071925742571,
+        "z0": 0.7181040173740727,
+        "mag_wr": 0.544263491895177,
+        "mag_wz": 0.9769983357155259,
+        "center_width": 0.600392031932106,
+        "shoulder_width": 0.7802266657058015,
+        "shoulder_delta": 0.8684591946549489,
+        "t_on": 0.12091749906710116,
+        "duration": 0.1090826018991799,
+        "ramp": 0.007515548908353393
+      },
+      "parents": [],
+      "generation": 0,
+      "origin": "random",
+      "candidate_id": "7be58a4c9e034599"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": -0.03552306277555539,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": 0.06754190165156881,
+          "final_psi_span_delta": -0.00014299999999956015,
+          "final_bz_proxy_delta": 1.5500258337519668e-05,
+          "elapsed_seconds": 9.343535423278809
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/7be58a4c9e034599/impulse",
+        "input_sha256": "643cdef3c043fb33814294d08b8c858ddf6ef47afd8930fd3ba8b2010576869f",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.397031149787334,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "e57b7e8aefd59657",
+        "0de840b77b81f29a"
+      ],
+      "generation": 1,
+      "origin": "crossover",
+      "candidate_id": "7b6d8b9332484df6"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0005729526254105721,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.016410211788242535,
+          "final_psi_span_delta": 3.000000000419334e-06,
+          "final_bz_proxy_delta": -5.000083335149341e-07,
+          "elapsed_seconds": 9.348314046859741
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/7b6d8b9332484df6/impulse",
+        "input_sha256": "6fb9e8c2f6e8e07898ecdb504497b72ff579ba962ef145b1b887122a59c1978a",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.235712144229986,
+        "z0": 1.1550276034132851,
+        "wr": 0.48892946386637537,
+        "wz": 0.5617759854684021,
+        "t_on": 0.15303015619595822,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "6d78a99d045496fb"
+      ],
+      "generation": 1,
+      "origin": "mutation",
+      "candidate_id": "12661ae9dacd9608"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": -0.008880765693886072,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": 0.0871511918879575,
+          "final_psi_span_delta": -3.999999999937387e-05,
+          "final_bz_proxy_delta": 5.000083334705252e-06,
+          "elapsed_seconds": 9.442349672317505
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/12661ae9dacd9608/impulse",
+        "input_sha256": "38ac70fd12b2eb405cca9bc8408c3d64a9ad026de1d93b97df52d7014fa1b67f",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.434180700890678,
+        "z0": 1.2090141830372436,
+        "wr": 0.48892946386637537,
+        "wz": 0.5472272403684588,
+        "t_on": 0.10889714873262285,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "6d78a99d045496fb"
+      ],
+      "generation": 1,
+      "origin": "mutation",
+      "candidate_id": "65e1289665443b1e"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.003151239439769249,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.027478466285513203,
+          "final_psi_span_delta": 1.5000000000320313e-05,
+          "final_bz_proxy_delta": -8.333472225618976e-07,
+          "elapsed_seconds": 9.337093591690063
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/65e1289665443b1e/impulse",
+        "input_sha256": "1e1bd8f4a78f74453759e64a954b70a48099dc048e7ae84dbcd8690bd86a6cb9",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.16019684407202353,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.09154643503572837,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "0de840b77b81f29a"
+      ],
+      "generation": 1,
+      "origin": "mutation",
+      "candidate_id": "d0f275c2fa48d750"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.015551976882555163,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.448773860931396
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/d0f275c2fa48d750/impulse",
+        "input_sha256": "51bab8248fbb180c3a56547f911f5f2974ccb9ef3efc32a20f3a625434d1c8e0",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.21442477289016945,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "1ad8a995a524b190",
+        "0de840b77b81f29a"
+      ],
+      "generation": 1,
+      "origin": "crossover",
+      "candidate_id": "e531687b6a8d2510"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.013445127908806587,
+          "final_psi_span_delta": 1.000000000139778e-06,
+          "final_bz_proxy_delta": -1.666694445789929e-07,
+          "elapsed_seconds": 9.438588857650757
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/e531687b6a8d2510/impulse",
+        "input_sha256": "db742f49e07177f81055fd88aec19e485c06517407f737288e4e399f27ff09e5",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1550276034132851,
+        "wr": 0.3643951886445412,
+        "wz": 0.5472272403684588,
+        "t_on": 0.10889714873262285,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "e1dcc292d62765a9",
+        "6d78a99d045496fb"
+      ],
+      "generation": 1,
+      "origin": "crossover",
+      "candidate_id": "81f20416e1f1b2af"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.002864763127075065,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.02328909307475202,
+          "final_psi_span_delta": 1.3000000000040757e-05,
+          "final_bz_proxy_delta": -5.000083335149341e-07,
+          "elapsed_seconds": 9.343639612197876
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/81f20416e1f1b2af/impulse",
+        "input_sha256": "7a8a50476068be94cb49f15b30cf9cc75ef202cc3608d87881be7dcb418076a7",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1550276034132851,
+        "wr": 0.32730185656190247,
+        "wz": 0.5472272403684588,
+        "t_on": 0.14497846151913515,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "6d78a99d045496fb"
+      ],
+      "generation": 1,
+      "origin": "mutation",
+      "candidate_id": "18b18ff5e6db7671"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.0011850566923321537,
+          "final_psi_span_delta": 1.000000000139778e-06,
+          "final_bz_proxy_delta": -1.666694445789929e-07,
+          "elapsed_seconds": 9.340372323989868
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/18b18ff5e6db7671/impulse",
+        "input_sha256": "191fb701fefb8d090d7864b938e568f2d2b6b7c3b5802439938b9e8127da0913",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.24652467720476984,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "0de840b77b81f29a"
+      ],
+      "generation": 1,
+      "origin": "mutation",
+      "candidate_id": "22f53da179c3f7ca"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.010116372119062245,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.349159479141235
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/22f53da179c3f7ca/impulse",
+        "input_sha256": "09196730313b86a16c072183c2f157486d53d614b37d0e44fe56c0e9ae96ebae",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.03525517355597012,
+        "r0": 9.694273359093803,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "0de840b77b81f29a"
+      ],
+      "generation": 2,
+      "origin": "mutation",
+      "candidate_id": "8fea21834db952b7"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.0025274940188779738,
+          "final_psi_span_delta": 1.000000000139778e-06,
+          "final_bz_proxy_delta": -1.666694445789929e-07,
+          "elapsed_seconds": 9.340310335159302
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/8fea21834db952b7/impulse",
+        "input_sha256": "c47e563fad055b4611af77fc37bc1965acab806296c84b32dfed5324d542f440",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1550276034132851,
+        "wr": 0.48892946386637537,
+        "wz": 0.5472272403684588,
+        "t_on": 0.10889714873262285,
+        "duration": 0.025,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "9966943621d26bfb",
+        "6d78a99d045496fb"
+      ],
+      "generation": 2,
+      "origin": "crossover",
+      "candidate_id": "f0e3c0bdffa48b0e"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.003437715752485637,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.029542950558170133,
+          "final_psi_span_delta": 1.700000000059987e-05,
+          "final_bz_proxy_delta": -1.1666861116088612e-06,
+          "elapsed_seconds": 9.439310550689697
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/f0e3c0bdffa48b0e/impulse",
+        "input_sha256": "f55e02bd29c2c41f959caf89447baefbcb79c571068b0c3bbe63cd35167dc742",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "current_drive",
+      "params": {
+        "amp": -0.07307457062747957,
+        "r0": 9.88524873535836,
+        "z0": 1.3866477865905826,
+        "width": 0.8383646040900705,
+        "t_on": 0.09107625537270043,
+        "duration": 0.08190741563475942,
+        "ramp": 0.04965301532048891
+      },
+      "parents": [],
+      "generation": 2,
+      "origin": "random",
+      "candidate_id": "e35f7f9b9f34087f"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.09564101164948324,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.447636604309082
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/e35f7f9b9f34087f/impulse",
+        "input_sha256": "5d685fd008fbbc2c795f5cce9601a0391e9ff0678495845c81e88830045c34ba",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "current_drive",
+      "params": {
+        "amp": 0.15658415301658934,
+        "r0": 9.585099615643491,
+        "z0": 1.246821822695686,
+        "width": 0.4793228719392259,
+        "t_on": 0.013107036084670615,
+        "duration": 0.1493995137563833,
+        "ramp": 0.03884514633524245
+      },
+      "parents": [],
+      "generation": 2,
+      "origin": "random",
+      "candidate_id": "b2d7feace6e4634b"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0002864763127163883,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": 0.06728287932507016,
+          "final_psi_span_delta": 2.000000000279556e-06,
+          "final_bz_proxy_delta": -3.333388890469635e-07,
+          "elapsed_seconds": 9.339177370071411
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/b2d7feace6e4634b/impulse",
+        "input_sha256": "b6625cb736e0d1d25877a9de59e1d5ffd46e0b579a9c63f333550c1b5149b6f1",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6641514235587188,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029837905107972976
+      },
+      "parents": [
+        "0de840b77b81f29a"
+      ],
+      "generation": 2,
+      "origin": "mutation",
+      "candidate_id": "52b9837d57355e6f"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.013523768772116807,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.349047899246216
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/52b9837d57355e6f/impulse",
+        "input_sha256": "c0bdff4e6487aa68dfc97a53a929196b5920b5f96e4cd547836503df2091e395",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1482176769161125,
+        "wr": 0.48892946386637537,
+        "wz": 0.5472272403684588,
+        "t_on": 0.10889714873262285,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "6d78a99d045496fb"
+      ],
+      "generation": 2,
+      "origin": "mutation",
+      "candidate_id": "8b75aeaf09a353cb"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0037241920652020255,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.029985442141466923,
+          "final_psi_span_delta": 1.700000000059987e-05,
+          "final_bz_proxy_delta": -1.1666861116088612e-06,
+          "elapsed_seconds": 9.341268062591553
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/8b75aeaf09a353cb/impulse",
+        "input_sha256": "e87ff1334851a6545befe2fa49da92730c3b01d706df0cf8e50f5811d8c421ce",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3567020288487424,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.020582941641433726
+      },
+      "parents": [
+        "0de840b77b81f29a"
+      ],
+      "generation": 3,
+      "origin": "mutation",
+      "candidate_id": "2a860fd7b3025454"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.012620976935573402,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.443179368972778
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/2a860fd7b3025454/impulse",
+        "input_sha256": "858d828ec6efd4dc060f004583f5c9234d714b3ff199a27f52c46019d2272ee6",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1088340710125317,
+        "wr": 0.48892946386637537,
+        "wz": 0.5472272403684588,
+        "t_on": 0.10922180375608294,
+        "duration": 0.044303919454976845,
+        "ramp": 0.0382723678300364
+      },
+      "parents": [
+        "6d78a99d045496fb"
+      ],
+      "generation": 3,
+      "origin": "mutation",
+      "candidate_id": "6e38fa6f4804b13e"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.004010668377896209,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.03220637738784449,
+          "final_psi_span_delta": 1.8999999999991246e-05,
+          "final_bz_proxy_delta": -1.5000250005448024e-06,
+          "elapsed_seconds": 9.432295560836792
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/6e38fa6f4804b13e/impulse",
+        "input_sha256": "2fb4715c216db75b6960905a4d06d72f927baa064ed1e938bed06e13bebad80a",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.44216227695523885,
+        "t_on": 0.0030106113128197977,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "d54e235f18361462",
+        "0de840b77b81f29a"
+      ],
+      "generation": 3,
+      "origin": "crossover",
+      "candidate_id": "f2b7d0f2673cd6c7"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.01584271926515779,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.43510127067566
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/f2b7d0f2673cd6c7/impulse",
+        "input_sha256": "acc3732dc756bb31ceedff6d654d9f987057ac1446b3103b2dd8231e89d5ac40",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": 0.0056277555083340675,
+        "redistribution_amp": 0.2167321477887597,
+        "r0": 10.026736146577518,
+        "z0": 0.6892483421338736,
+        "mag_wr": 0.8667547112159599,
+        "mag_wz": 0.23275998021441888,
+        "center_width": 0.3410164608464261,
+        "shoulder_width": 0.5280397425214348,
+        "shoulder_delta": 0.21657046949138653,
+        "t_on": 0.12760500338162487,
+        "duration": 0.1936302239211666,
+        "ramp": 0.0199617875064092
+      },
+      "parents": [],
+      "generation": 3,
+      "origin": "random",
+      "candidate_id": "d4ede27851f0aa49"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": -0.00687543150494907,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.029375584946067512,
+          "final_psi_span_delta": -3.0999999999892225e-05,
+          "final_bz_proxy_delta": 3.5000583343824943e-06,
+          "elapsed_seconds": 9.442706108093262
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/d4ede27851f0aa49/impulse",
+        "input_sha256": "105b356dc37a4e834d8e6899686b8c1949441f0a9b5aa8822f3c510f44652e2b",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.007312559070011007,
+        "r0": 10.465659912501323,
+        "z0": 1.1550276034132851,
+        "wr": 0.48892946386637537,
+        "wz": 0.7440417589581395,
+        "t_on": 0.10889714873262285,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "aa798ddd878eb6a6",
+        "6d78a99d045496fb"
+      ],
+      "generation": 3,
+      "origin": "crossover",
+      "candidate_id": "aa798ddd878eb6a6"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.005729526254127926,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.03666545867079263,
+          "final_psi_span_delta": 1.600000000046009e-05,
+          "final_bz_proxy_delta": -2.666711111931619e-06,
+          "elapsed_seconds": 9.443739175796509
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/aa798ddd878eb6a6/impulse",
+        "input_sha256": "8d15c8f48c3349b2b642e7f84dcbdc5155deac4f21d61caecd71fd989f968f95",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.01915380475589326,
+        "redistribution_amp": 0.17255977634421404,
+        "r0": 10.366888924612788,
+        "z0": 1.2583384085365776,
+        "mag_wr": 0.7507126929981607,
+        "mag_wz": 0.6698548656152457,
+        "center_width": 0.41316762397023765,
+        "shoulder_width": 0.21219688163564615,
+        "shoulder_delta": 0.40408354093782217,
+        "t_on": 0.0774544824517536,
+        "duration": 0.2132490716873584,
+        "ramp": 0.030791027400724688
+      },
+      "parents": [],
+      "generation": 3,
+      "origin": "random",
+      "candidate_id": "03e9bc14b5dd4203"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": -0.010313147257412503,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.470799264826971,
+          "final_psi_span_delta": -4.699999999946414e-05,
+          "final_bz_proxy_delta": 6.1667694460920686e-06,
+          "elapsed_seconds": 9.34134578704834
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/03e9bc14b5dd4203/impulse",
+        "input_sha256": "54ed8d5c85de163e5998c53e8185758492d85e70613e575f7b4144e5d70689b5",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "magnetic_pulse",
+      "params": {
+        "amp": -0.00047946359965658856,
+        "r0": 10.465659912501323,
+        "z0": 1.1550276034132851,
+        "wr": 0.48892946386637537,
+        "wz": 0.5512653478121371,
+        "t_on": 0.10889714873262285,
+        "duration": 0.044303919454976845,
+        "ramp": 0.03703294762067429
+      },
+      "parents": [
+        "6d78a99d045496fb"
+      ],
+      "generation": 3,
+      "origin": "mutation",
+      "candidate_id": "dc20e187b99ee7eb"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0002864763127163883,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": -0.0020814607041730326,
+          "final_psi_span_delta": 1.000000000139778e-06,
+          "final_bz_proxy_delta": -1.666694445789929e-07,
+          "elapsed_seconds": 9.343445777893066
+        },
+        "gates": {
+          "reachable": true,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/dc20e187b99ee7eb/impulse",
+        "input_sha256": "d33a27fe78c7092c2d174b66f7f4b1a71ecbddcbcd9e791e02569f92ef8ebf51",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  },
+  {
+    "candidate": {
+      "mechanism": "hybrid_mag_redistribution",
+      "params": {
+        "mag_amp": -0.013985298887698755,
+        "redistribution_amp": -0.1365090998788145,
+        "r0": 9.56070152044432,
+        "z0": 1.3323493720443578,
+        "mag_wr": 0.5363889341022261,
+        "mag_wz": 0.20354769519337967,
+        "center_width": 0.6469335937017954,
+        "shoulder_width": 0.45031070811970797,
+        "shoulder_delta": 0.3595499501617639,
+        "t_on": 0.05578250288187339,
+        "duration": 0.04933060105558715,
+        "ramp": 0.029293296642531542
+      },
+      "parents": [
+        "0de840b77b81f29a"
+      ],
+      "generation": 3,
+      "origin": "mutation",
+      "candidate_id": "787206c3b587e6c9"
+    },
+    "stages": [
+      {
+        "stage": "impulse",
+        "status": "RUN_COMPLETE",
+        "return_code": 0,
+        "metrics": {
+          "mean_active_width_gain_pct": 0.0,
+          "min_active_width_gain_pct": 0.0,
+          "max_active_width_gain_pct": 0.0,
+          "max_active_peak_j_change_pct": 0.0,
+          "mean_active_peak_j_change_pct": 0.0,
+          "mean_active_high_j_change_pct": 0.0,
+          "max_abs_magnetic_energy_change_pct": 0.0,
+          "max_abs_toroidal_current_change_pct": 0.0,
+          "final_reconnected_flux_change_pct": 0.0,
+          "peak_reconnection_rate_change_pct": 0.0,
+          "final_center_to_shoulder_change_pct": 0.015324507010006094,
+          "final_psi_span_delta": 0.0,
+          "final_bz_proxy_delta": 0.0,
+          "elapsed_seconds": 9.346199989318848
+        },
+        "gates": {
+          "reachable": false,
+          "authority": false
+        },
+        "run_dir": "/home/ubuntu/m3dc1_runs/TCT_EXPLORER/787206c3b587e6c9/impulse",
+        "input_sha256": "dae93a4dc01257b23a0111bb3a6e5c702d42afcc02178d13d15b6d9f89825e02",
+        "error": null
+      }
+    ],
+    "deepest_stage": "impulse",
+    "feasible": false,
+    "objectives": {
+      "width_gain": 0.001,
+      "peak_j_reduction": -0.0,
+      "high_j_reduction": -0.0,
+      "reconnection_reduction": -0.0,
+      "low_energy_perturbation": -0.0,
+      "low_net_current_perturbation": -0.0,
+      "ruzic_margin": -1000.0
+    },
+    "physical_gate": {
+      "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+      "reason": "physical_mapping.enabled=false"
+    }
+  }
+]
