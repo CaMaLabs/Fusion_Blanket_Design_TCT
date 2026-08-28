@@ -9,7 +9,7 @@ import unittest
 
 HERE=Path(__file__).resolve().parents[1];sys.path.insert(0,str(HERE))
 from tct_explorer.config import DEFAULT_CONFIG, load_config, write_default
-from tct_explorer.mechanisms import FORBIDDEN_PHYSICS_KEYS, REGISTRY, candidate_updates, random_candidate, validate_updates, zero_candidate
+from tct_explorer.mechanisms import FORBIDDEN_PHYSICS_KEYS, REGISTRY, candidate_updates, random_candidate, staged_times, validate_updates, zero_candidate
 from tct_explorer.models import Candidate, Evaluation
 from tct_explorer.extract import compare_series
 from tct_explorer.gates import authority_gate, reachability_gate
@@ -26,6 +26,10 @@ class ExplorerTests(unittest.TestCase):
         for name in REGISTRY:
             candidate=zero_candidate(name,rng);updates=candidate_updates(candidate,"impulse",DEFAULT_CONFIG)
             self.assertEqual(float(updates.get("mag_ctrl_amp",0.0)),0.0)
+            self.assertEqual(float(updates.get("mag_ctrl_bias_amp",0.0)),0.0)
+            self.assertEqual(float(updates.get("mag_ctrl_early_amp",0.0)),0.0)
+            self.assertEqual(float(updates.get("mag_ctrl_aggressive_amp",0.0)),0.0)
+            self.assertEqual(float(updates.get("mag_ctrl_hold_amp",0.0)),0.0)
             self.assertEqual(float(updates.get("J_0cd",0.0)),0.0)
             self.assertEqual(float(updates.get("aforce",0.0)),0.0)
 
@@ -38,6 +42,24 @@ class ExplorerTests(unittest.TestCase):
         self.assertEqual(u["ipforce"],1)
         self.assertAlmostEqual(float(u["aforce"]),0.005)
         self.assertEqual(u["imag_control"],0)
+
+    def test_staged_family_has_ordered_transitions(self):
+        p={
+            "bias_amp":-0.002,"early_amp":-0.006,"aggressive_amp":-0.012,"hold_amp":-0.003,
+            "early_start":0.025,"early_duration":0.05,"aggressive_duration":0.05,"hold_duration":0.08,
+            "ramp":0.0,"r0":10.0,"z0":1.0,"mag_wr":0.5,"mag_wz":0.5,
+            "momentum_amp":-0.005,"force_width":0.12,"force_x":0.5,"force_n":0,
+        }
+        t0,t1,t2,t3=staged_times(p)
+        self.assertTrue(t0<t1<t2<t3)
+        c=Candidate("staged_mag_momentum",p)
+        u=candidate_updates(c,"sustained",DEFAULT_CONFIG)
+        self.assertEqual(u["imag_control_staged"],1)
+        self.assertEqual(u["ipforce"],1)
+        self.assertAlmostEqual(u["mag_ctrl_t_early"],t0)
+        self.assertAlmostEqual(u["mag_ctrl_t_aggressive"],t1)
+        self.assertAlmostEqual(u["mag_ctrl_t_hold"],t2)
+        self.assertAlmostEqual(u["mag_ctrl_t_off"],t3)
 
     def test_forbidden_physics_key_rejected(self):
         with self.assertRaises(ValueError):validate_updates({"eta":1e-3})
