@@ -86,6 +86,26 @@ def _load_ruzic(repo_root: Path):
     return module
 
 
+def _candidate_magnetic_amplitude(candidate) -> float | None:
+    """Return the peak absolute normalized magnetic command for physical screening."""
+    if "mag" not in candidate.mechanism:
+        return None
+    values = []
+    for key in (
+        "amp",
+        "mag_amp",
+        "bias_amp",
+        "early_amp",
+        "aggressive_amp",
+        "hold_amp",
+    ):
+        if key in candidate.params:
+            values.append(float(candidate.params[key]))
+    if not values:
+        return None
+    return max(values, key=lambda x: abs(x))
+
+
 def physical_lithium_gate(candidate, cfg: dict[str, Any]) -> dict[str, Any]:
     mapping = cfg["physical_mapping"]
     if not mapping.get("enabled"):
@@ -99,14 +119,12 @@ def physical_lithium_gate(candidate, cfg: dict[str, Any]) -> dict[str, Any]:
             "classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
             "reason": "mag_ctrl_amp_to_deltaB_T is not calibrated",
         }
-    if "mag" not in candidate.mechanism:
+    amp = _candidate_magnetic_amplitude(candidate)
+    if amp is None:
         return {
             "classification": "LITHIUM_MAPPING_NOT_APPLICABLE",
             "reason": "candidate has no magnetic-control amplitude",
         }
-    amp = candidate.params.get("amp", candidate.params.get("mag_amp"))
-    if amp is None:
-        return {"classification": "LITHIUM_MAPPING_NOT_APPLICABLE"}
     delta_b = abs(float(amp) * float(scale))
     mu0 = 4.0e-7 * math.pi
     surface_k = delta_b / mu0
@@ -128,6 +146,7 @@ def physical_lithium_gate(candidate, cfg: dict[str, Any]) -> dict[str, Any]:
             if result.stable_by_eq23
             else "LITHIUM_RUZIC_SURFACE_GATE_FAIL"
         ),
+        "normalized_magnetic_command_used": amp,
         "deltaB_T": delta_b,
         "surface_current_K_A_m": surface_k,
         "lithium_current_density_kA_m2": j_ka_m2,
