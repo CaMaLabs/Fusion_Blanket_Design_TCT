@@ -1,25 +1,7 @@
 {
   "magnetic_pulse": {
-    "count": 14,
-    "impulse_authority": 0,
-    "sustained": 0,
-    "feasible": 0
-  },
-  "hybrid_mag_redistribution": {
-    "count": 13,
-    "impulse_authority": 0,
-    "sustained": 0,
-    "feasible": 0
-  },
-  "current_redistribution": {
     "count": 1,
-    "impulse_authority": 0,
-    "sustained": 0,
-    "feasible": 0
-  },
-  "current_drive": {
-    "count": 2,
-    "impulse_authority": 0,
+    "impulse_authority": 1,
     "sustained": 0,
     "feasible": 0
   }
