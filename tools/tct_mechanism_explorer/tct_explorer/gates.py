@@ -24,7 +24,14 @@ def reachability_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
 
 
 def authority_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
-    return metrics.get("max_active_width_gain_pct", -math.inf) >= float(cfg["stages"]["authority_width_gain_pct"]) and metrics.get("mean_active_peak_j_change_pct", math.inf) <= float(cfg["stages"]["authority_peak_j_change_pct"])
+    """Require co-located favorable width, Jpk, and redistribution response."""
+    return (
+        metrics.get("peak_favorable_width_gain_pct", -math.inf)
+        >= float(cfg["stages"]["authority_width_gain_pct"])
+        and metrics.get("peak_favorable_jpk_change_pct", math.inf)
+        <= float(cfg["stages"]["authority_peak_j_change_pct"])
+        and metrics.get("peak_favorable_center_to_shoulder_change_pct", math.inf) < 0.0
+    )
 
 
 def sustained_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
