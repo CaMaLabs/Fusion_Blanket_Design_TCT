@@ -21,7 +21,9 @@
     "enabled_mechanisms": [
       "magnetic_pulse",
       "poloidal_momentum_bias",
-      "hybrid_mag_momentum"
+      "hybrid_mag_momentum",
+      "staged_magnetic",
+      "staged_mag_momentum"
     ],
     "elite_fraction": 0.25,
     "mutation_probability": 0.75,
@@ -93,6 +95,46 @@
           "t_on": 0.05,
           "duration": 0.05,
           "ramp": 0.0
+        }
+      },
+      {
+        "mechanism": "staged_magnetic",
+        "params": {
+          "bias_amp": -0.002,
+          "early_amp": -0.006,
+          "aggressive_amp": -0.012,
+          "hold_amp": -0.003,
+          "early_start": 0.025,
+          "early_duration": 0.05,
+          "aggressive_duration": 0.05,
+          "hold_duration": 0.08,
+          "ramp": 0.0,
+          "r0": 10.0,
+          "z0": 1.0,
+          "mag_wr": 0.5,
+          "mag_wz": 0.5
+        }
+      },
+      {
+        "mechanism": "staged_mag_momentum",
+        "params": {
+          "bias_amp": -0.002,
+          "early_amp": -0.006,
+          "aggressive_amp": -0.012,
+          "hold_amp": -0.003,
+          "early_start": 0.025,
+          "early_duration": 0.05,
+          "aggressive_duration": 0.05,
+          "hold_duration": 0.08,
+          "ramp": 0.0,
+          "r0": 10.0,
+          "z0": 1.0,
+          "mag_wr": 0.5,
+          "mag_wz": 0.5,
+          "momentum_amp": -0.005,
+          "force_width": 0.12,
+          "force_x": 0.5,
+          "force_n": 0
         }
       }
     ]
