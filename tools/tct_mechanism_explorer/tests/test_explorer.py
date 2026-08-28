@@ -79,6 +79,29 @@ class ExplorerTests(unittest.TestCase):
         cfg=load_config(None)
         self.assertTrue(reachability_gate({"final_psi_span_delta":0.0,"final_bz_proxy_delta":0.0,"final_kinetic_energy_delta":1e-6},cfg))
 
+    def test_nonredistribution_authority_does_not_require_shape_ratio(self):
+        cfg=load_config(None)
+        metrics={
+            "peak_favorable_width_gain_pct":1.0,
+            "peak_favorable_jpk_change_pct":-0.02,
+            "peak_favorable_high_j_change_pct":-0.2,
+            "peak_favorable_center_to_shoulder_change_pct":0.08,
+        }
+        self.assertTrue(authority_gate(metrics,cfg,"hybrid_mag_momentum"))
+        self.assertTrue(authority_gate(metrics,cfg))
+
+    def test_redistribution_authority_keeps_shape_requirement(self):
+        cfg=load_config(None)
+        metrics={
+            "peak_favorable_width_gain_pct":1.0,
+            "peak_favorable_jpk_change_pct":-0.02,
+            "peak_favorable_high_j_change_pct":-0.2,
+            "peak_favorable_center_to_shoulder_change_pct":0.08,
+        }
+        self.assertFalse(authority_gate(metrics,cfg,"current_redistribution"))
+        metrics["peak_favorable_center_to_shoulder_change_pct"]=-0.08
+        self.assertTrue(authority_gate(metrics,cfg,"current_redistribution"))
+
     def test_post_turnoff_peak_can_pass_impulse_gate(self):
         def row(t, w, j, ratio):
             return {"time":t,"W_sheet":w,"Jpk":j,"Jint_high":1.0,
