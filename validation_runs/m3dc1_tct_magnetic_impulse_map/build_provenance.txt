@@ -1,0 +1,7 @@
+repo=/home/ubuntu/work/openmc/sweep
+branch=agent/tct-mechanism-explorer
+head=3d339d75eb9579b12b523e798a4b1651bacc9e8e
+baseline_input_sha256=94608ee1c8d8928c581faa9cbb2e1014184b819572a7ad38481c841236756a43
+executable=/home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d
+executable_sha256=f1d6d2ae968fdca22eb25b5b6da85966e5a6df23cbafd42f80ce4f8d87f305f1
+m3dc1_diff_sha256=a7036e666a6307e5f60839f040413a5248e2f8165e3826d37042f082d13a5333

@@ -1,0 +1,115 @@
+{
+  "primary_classification": "M3DC1_MAGNETIC_RESPONSE_SIGN_REVERSAL",
+  "lithium_classification": "LITHIUM_DIMENSIONAL_TRANSFER_UNRESOLVED",
+  "pulse_amp": -0.01,
+  "pulse_duration": 0.05,
+  "pulse_times": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "dt": 0.01,
+  "ntimemax": 40,
+  "response_horizon": 0.1,
+  "zero_equivalence": {
+    "zero_equivalence_pass": true,
+    "max_abs_metric_delta": 0.0,
+    "noise_threshold_used": 1e-10
+  },
+  "case_classifications": {
+    "impulse_t000": "BROADENING_RESPONSE",
+    "impulse_t005": "BROADENING_RESPONSE",
+    "impulse_t010": "BROADENING_RESPONSE",
+    "impulse_t015": "BROADENING_RESPONSE",
+    "impulse_t020": "BROADENING_RESPONSE"
+  },
+  "field_reachable": {
+    "impulse_t000": true,
+    "impulse_t005": true,
+    "impulse_t010": true,
+    "impulse_t015": true,
+    "impulse_t020": true
+  },
+  "sheet_authority": {
+    "impulse_t000": true,
+    "impulse_t005": true,
+    "impulse_t010": true,
+    "impulse_t015": true,
+    "impulse_t020": true
+  },
+  "jpk_consistent": {
+    "impulse_t000": false,
+    "impulse_t005": false,
+    "impulse_t010": false,
+    "impulse_t015": false,
+    "impulse_t020": false
+  },
+  "redistribution_consistent": {
+    "impulse_t000": false,
+    "impulse_t005": false,
+    "impulse_t010": false,
+    "impulse_t015": false,
+    "impulse_t020": false
+  },
+  "full_impulse_authority": {
+    "impulse_t000": false,
+    "impulse_t005": false,
+    "impulse_t010": false,
+    "impulse_t015": false,
+    "impulse_t020": false
+  },
+  "sign_reversal_times": {
+    "impulse_t000": 0.07,
+    "impulse_t005": 0.13,
+    "impulse_t010": 0.17,
+    "impulse_t015": 0.22,
+    "impulse_t020": 0.27
+  },
+  "convergence_shared_times": [
+    {
+      "time": 0.0,
+      "delta_W_sheet": 0.0,
+      "delta_Jpk": 0.0,
+      "delta_Reconnected_Flux": 0.0,
+      "delta_magnetic_energy": 0.0
+    },
+    {
+      "time": 0.05,
+      "delta_W_sheet": -0.3294774359985484,
+      "delta_Jpk": -1.26286,
+      "delta_Reconnected_Flux": 7.0584e-05,
+      "delta_magnetic_energy": -0.3429999999999609
+    },
+    {
+      "time": 0.1,
+      "delta_W_sheet": -1.134384338272936,
+      "delta_Jpk": -0.08241299999999996,
+      "delta_Reconnected_Flux": -5.6506000000000004e-05,
+      "delta_magnetic_energy": -0.4299999999999784
+    },
+    {
+      "time": 0.15,
+      "delta_W_sheet": -1.3042088747606906,
+      "delta_Jpk": 0.384174,
+      "delta_Reconnected_Flux": 3.870300000000001e-05,
+      "delta_magnetic_energy": -0.21299999999999386
+    },
+    {
+      "time": 0.2,
+      "delta_W_sheet": -1.1982101822439148,
+      "delta_Jpk": -0.010630000000000028,
+      "delta_Reconnected_Flux": -2.5998000000000004e-05,
+      "delta_magnetic_energy": -0.03899999999998727
+    },
+    {
+      "time": 0.25,
+      "delta_W_sheet": -0.989876818226059,
+      "delta_Jpk": -0.009112000000000009,
+      "delta_Reconnected_Flux": 1.7365000000000034e-05,
+      "delta_magnetic_energy": -0.0049999999999954525
+    }
+  ],
+  "claim_boundary": "Native M3D-C1 normalized magnetic impulse timing map only; not TCT validation and not lithium-current dimensional transfer."
+}
