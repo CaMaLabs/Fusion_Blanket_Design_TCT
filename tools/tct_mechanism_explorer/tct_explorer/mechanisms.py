@@ -11,6 +11,9 @@ from .models import Candidate
 SAFE_INPUT_KEYS = {
     "imag_control", "mag_ctrl_amp", "mag_ctrl_r0", "mag_ctrl_z0", "mag_ctrl_wr", "mag_ctrl_wz",
     "mag_ctrl_t_on", "mag_ctrl_t_ramp", "mag_ctrl_t_off",
+    "imag_control_staged", "mag_ctrl_bias_amp", "mag_ctrl_early_amp",
+    "mag_ctrl_aggressive_amp", "mag_ctrl_hold_amp", "mag_ctrl_t_early",
+    "mag_ctrl_t_aggressive", "mag_ctrl_t_hold",
     "icd_source", "J_0cd", "R_0cd", "Z_0cd", "W_cd", "W_cd_shoulder", "delta_cd",
     "cd_t_on", "cd_t_ramp", "cd_t_off",
     # Native M3D-C1 poloidal momentum source. This is used as a standing flow/shear-bias
@@ -67,8 +70,21 @@ def _times(params: dict[str, Any], stage: str, cfg: dict[str, Any]) -> tuple[flo
     return t_on, t_on + max(duration, 0.0)
 
 
+def staged_times(params: dict[str, Any]) -> tuple[float, float, float, float]:
+    """Return monotonic early/aggressive/hold/off boundaries from positive durations."""
+    t_early = float(params["early_start"])
+    t_aggressive = t_early + float(params["early_duration"])
+    t_hold = t_aggressive + float(params["aggressive_duration"])
+    t_off = t_hold + float(params["hold_duration"])
+    return t_early, t_aggressive, t_hold, t_off
+
+
 def _no_momentum() -> dict[str, Any]:
     return {"ipforce": 0, "aforce": 0.0}
+
+
+def _no_staged() -> dict[str, Any]:
+    return {"imag_control_staged": 0}
 
 
 def _momentum_inputs(p: dict[str, Any]) -> dict[str, Any]:
@@ -95,6 +111,7 @@ def _magnetic(p: dict[str, Any], stage: str, cfg: dict[str, Any]) -> dict[str, A
         "mag_ctrl_t_off": t_off,
         "icd_source": 0,
         "J_0cd": 0.0,
+        **_no_staged(),
         **_no_momentum(),
     }
 
@@ -112,6 +129,7 @@ def _current_drive(p: dict[str, Any], stage: str, cfg: dict[str, Any]) -> dict[s
         "cd_t_on": t_on,
         "cd_t_ramp": p["ramp"],
         "cd_t_off": t_off,
+        **_no_staged(),
         **_no_momentum(),
     }
 
@@ -131,6 +149,7 @@ def _redistribution(p: dict[str, Any], stage: str, cfg: dict[str, Any]) -> dict[
         "cd_t_on": t_on,
         "cd_t_ramp": p["ramp"],
         "cd_t_off": t_off,
+        **_no_staged(),
         **_no_momentum(),
     }
 
@@ -157,6 +176,7 @@ def _hybrid_mag_redistribution(p: dict[str, Any], stage: str, cfg: dict[str, Any
         "cd_t_on": t_on,
         "cd_t_ramp": p["ramp"],
         "cd_t_off": t_off,
+        **_no_staged(),
         **_no_momentum(),
     }
 
@@ -169,6 +189,7 @@ def _poloidal_momentum_bias(p: dict[str, Any], stage: str, cfg: dict[str, Any]) 
         "mag_ctrl_amp": 0.0,
         "icd_source": 0,
         "J_0cd": 0.0,
+        **_no_staged(),
         **_momentum_inputs(p),
     }
 
@@ -186,6 +207,50 @@ def _hybrid_mag_momentum(p: dict[str, Any], stage: str, cfg: dict[str, Any]) -> 
         "mag_ctrl_t_on": t_on,
         "mag_ctrl_t_ramp": p["ramp"],
         "mag_ctrl_t_off": t_off,
+        "icd_source": 0,
+        "J_0cd": 0.0,
+        **_no_staged(),
+        **_momentum_inputs(p),
+    }
+
+
+def _staged_magnetic_common(p: dict[str, Any]) -> dict[str, Any]:
+    t_early, t_aggressive, t_hold, t_off = staged_times(p)
+    return {
+        "imag_control": 1,
+        "imag_control_staged": 1,
+        "mag_ctrl_amp": 0.0,
+        "mag_ctrl_bias_amp": p["bias_amp"],
+        "mag_ctrl_early_amp": p["early_amp"],
+        "mag_ctrl_aggressive_amp": p["aggressive_amp"],
+        "mag_ctrl_hold_amp": p["hold_amp"],
+        "mag_ctrl_t_early": t_early,
+        "mag_ctrl_t_aggressive": t_aggressive,
+        "mag_ctrl_t_hold": t_hold,
+        "mag_ctrl_t_on": 0.0,
+        "mag_ctrl_t_ramp": p["ramp"],
+        "mag_ctrl_t_off": t_off,
+        "mag_ctrl_r0": p["r0"],
+        "mag_ctrl_z0": p["z0"],
+        "mag_ctrl_wr": p["mag_wr"],
+        "mag_ctrl_wz": p["mag_wz"],
+    }
+
+
+def _staged_magnetic(p: dict[str, Any], stage: str, cfg: dict[str, Any]) -> dict[str, Any]:
+    return {
+        **_staged_magnetic_common(p),
+        "icd_source": 0,
+        "J_0cd": 0.0,
+        **_no_momentum(),
+    }
+
+
+def _staged_mag_momentum(p: dict[str, Any], stage: str, cfg: dict[str, Any]) -> dict[str, Any]:
+    # Baseline-informed scheduled magnetic waveform + standing native momentum bias.
+    # This is deliberately labelled open-loop until a state-triggered native controller exists.
+    return {
+        **_staged_magnetic_common(p),
         "icd_source": 0,
         "J_0cd": 0.0,
         **_momentum_inputs(p),
@@ -218,6 +283,7 @@ def _hybrid_mag_momentum_redistribution(
         "cd_t_on": t_on,
         "cd_t_ramp": p["ramp"],
         "cd_t_off": t_off,
+        **_no_staged(),
         **_momentum_inputs(p),
     }
 
@@ -234,6 +300,21 @@ MOMENTUM = {
     "force_width": Param(0.02, 0.50),
     "force_x": Param(0.0, 1.0),
     "force_n": Param(0, 8, "int"),
+}
+STAGED_MAG = {
+    "bias_amp": Param(-0.01, 0.01),
+    "early_amp": Param(-0.02, 0.02),
+    "aggressive_amp": Param(-0.03, 0.03),
+    "hold_amp": Param(-0.01, 0.01),
+    "early_start": Param(0.0, 0.08),
+    "early_duration": Param(0.02, 0.10),
+    "aggressive_duration": Param(0.02, 0.10),
+    "hold_duration": Param(0.03, 0.15),
+    "ramp": Param(0.0, 0.03),
+    "r0": Param(9.5, 10.5),
+    "z0": Param(0.5, 1.5),
+    "mag_wr": Param(0.2, 1.0),
+    "mag_wz": Param(0.2, 1.0),
 }
 
 REGISTRY = {
@@ -283,6 +364,18 @@ REGISTRY = {
          "mag_wr": Param(0.2, 1.0), "mag_wz": Param(0.2, 1.0), **COMMON_TIME},
         _hybrid_mag_momentum,
         "Standing native poloidal-momentum bias plus bounded magnetic boost.",
+    ),
+    "staged_magnetic": Mechanism(
+        "staged_magnetic",
+        {**STAGED_MAG},
+        _staged_magnetic,
+        "Scheduled standing-bias -> early -> aggressive -> hold magnetic waveform.",
+    ),
+    "staged_mag_momentum": Mechanism(
+        "staged_mag_momentum",
+        {**STAGED_MAG, **MOMENTUM},
+        _staged_mag_momentum,
+        "Scheduled magnetic bias/boost/hold waveform plus standing native poloidal-momentum bias.",
     ),
     "hybrid_mag_momentum_redistribution": Mechanism(
         "hybrid_mag_momentum_redistribution",
@@ -336,8 +429,8 @@ def zero_candidate(mechanism: str, rng: random.Random | None = None) -> Candidat
     rng = rng or random.Random(0)
     c = random_candidate(mechanism, rng)
     p = dict(c.params)
-    # Generic zeroing covers amp, mag_amp, momentum_amp and redistribution_amp
-    # without accidentally zeroing "ramp".
+    # Generic zeroing covers amp, mag_amp, momentum_amp, redistribution_amp,
+    # and every staged *_amp without accidentally zeroing "ramp".
     for key in list(p):
         if key == "amp" or key.endswith("_amp"):
             p[key] = 0.0
