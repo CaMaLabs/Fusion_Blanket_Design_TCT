@@ -103,7 +103,9 @@ class Evaluator:
             metrics["elapsed_seconds"] = elapsed
             result.metrics = metrics
             result.gates["reachable"] = reachability_gate(metrics, self.cfg)
-            result.gates["authority"] = authority_gate(metrics, self.cfg)
+            result.gates["authority"] = authority_gate(
+                metrics, self.cfg, candidate.mechanism
+            )
             if stage in {"sustained", "full"}:
                 result.gates["sustained"] = sustained_gate(metrics, self.cfg)
             if stage == "full":
