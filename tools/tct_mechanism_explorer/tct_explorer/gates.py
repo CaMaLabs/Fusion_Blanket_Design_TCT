@@ -41,15 +41,38 @@ def reachability_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
     )
 
 
-def authority_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
-    """Require co-located favorable width, Jpk, and redistribution response."""
-    return (
+def authority_gate(
+    metrics: dict[str, float],
+    cfg: dict[str, Any],
+    mechanism: str | None = None,
+) -> bool:
+    """Mechanism-aware short-response sheet-authority gate.
+
+    All actuator families must produce a co-located favorable sheet response:
+    measurable broadening, reduced peak current, and no increase in high-J
+    loading at the peak favorable width sample.
+
+    Only mechanisms whose declared purpose is center/shoulder current
+    redistribution are additionally required to reduce the center-to-shoulder
+    current ratio. Applying that shape-specific criterion to magnetic or
+    momentum/flow families would incorrectly reject real sheet authority that
+    does not act through the same redistribution geometry.
+    """
+    common = (
         metrics.get("peak_favorable_width_gain_pct", -math.inf)
         >= float(cfg["stages"]["authority_width_gain_pct"])
         and metrics.get("peak_favorable_jpk_change_pct", math.inf)
         <= float(cfg["stages"]["authority_peak_j_change_pct"])
-        and metrics.get("peak_favorable_center_to_shoulder_change_pct", math.inf) < 0.0
+        and metrics.get("peak_favorable_high_j_change_pct", math.inf)
+        <= float(cfg["stages"].get("authority_high_j_change_pct", 0.0))
     )
+    if not common:
+        return False
+
+    if mechanism and "redistribution" in mechanism:
+        return metrics.get("peak_favorable_center_to_shoulder_change_pct", math.inf) < 0.0
+
+    return True
 
 
 def sustained_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
