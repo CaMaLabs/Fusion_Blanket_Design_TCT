@@ -5,7 +5,8 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$HERE/../.." && pwd)"
 CONFIG="${CONFIG:-$HERE/explorer.control_v2.json}"
 M3D_ROOT="${M3D_ROOT:-/home/ubuntu/M3DC1-official}"
-EXE="${M3D_EXE:-$M3D_ROOT/build-ubuntu-2d/unstructured/m3dc1_2d}"
+M3D_BUILD="${M3D_BUILD:-$M3D_ROOT/build-ubuntu-2d}"
+EXE="${M3D_EXE:-$M3D_BUILD/unstructured/m3dc1_2d}"
 POPULATION="${POPULATION:-8}"
 GENERATIONS="${GENERATIONS:-4}"
 SEED="${SEED:-8776}"
@@ -14,10 +15,6 @@ cd "$HERE"
 
 if [[ ! -f "$CONFIG" ]]; then
   echo "Missing config: $CONFIG" >&2
-  exit 2
-fi
-if [[ ! -x "$EXE" ]]; then
-  echo "Missing M3D-C1 executable: $EXE" >&2
   exit 2
 fi
 if [[ ! -f "$M3D_ROOT/unstructured/input.f90" ]]; then
@@ -30,7 +27,7 @@ if ! grep -q 'add_var_int("ipforce"' "$M3D_ROOT/unstructured/input.f90"; then
 fi
 if ! grep -q 'imag_control' "$M3D_ROOT/unstructured/input.f90"; then
   echo "The previously validated imag_control input is not installed in this M3D-C1 checkout." >&2
-  echo "Run the existing magnetic-operator installer/pulse-train install step first." >&2
+  echo "Restore/install the native magnetic-operator patch before running Control V2." >&2
   exit 2
 fi
 
@@ -44,18 +41,28 @@ echo "=== TCT CONTROL ARCHITECTURE V2 ==="
 echo "repo:        $REPO_ROOT"
 echo "config:      $CONFIG"
 echo "m3d:         $M3D_ROOT"
-echo "executable:  $EXE"
+echo "build:       $M3D_BUILD"
 echo "population:  $POPULATION"
 echo "generations: $GENERATIONS"
 echo "seed:        $SEED"
 echo
 
+echo "=== INSTALL/VERIFY DEFAULT-OFF STAGED MAGNETIC SELECTOR ==="
+M3D_ROOT="$M3D_ROOT" M3D_BUILD="$M3D_BUILD" \
+  python3 install_control_v2_operator.py all
+
+if [[ ! -x "$EXE" ]]; then
+  echo "Missing M3D-C1 executable after build: $EXE" >&2
+  exit 2
+fi
+
+echo
 echo "=== UNIT TESTS ==="
 python3 -m unittest discover -s tests -v
 
 echo
 echo "=== BOUNDED CANDIDATE DRY RUN ==="
-python3 -m tct_explorer.cli dry-run --config "$CONFIG" --count 6 --seed "$SEED"
+python3 -m tct_explorer.cli dry-run --config "$CONFIG" --count 8 --seed "$SEED"
 
 echo
 echo "=== ZERO-ACTUATION EQUIVALENCE ==="
