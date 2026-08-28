@@ -38,7 +38,7 @@ class Evaluator:
             result=StageResult(stage=stage,status="RUN_FAILED" if rc else "RUN_COMPLETE",return_code=rc,run_dir=str(run_dir),input_sha256=manifest["input_sha256"],metrics={"elapsed_seconds":elapsed})
             if rc:
                 result.error=(run_dir/"launcher.stderr").read_text(errors="replace")[-4000:] if (run_dir/"launcher.stderr").exists() else "";return result
-            controlled=extract_series(run_dir,self.cfg);baseline=self.baseline(len(controlled));t_on,t_off=_active_window(candidate,stage,self.cfg);metrics=compare_series(baseline,controlled,t_on,t_off);metrics["elapsed_seconds"]=elapsed;result.metrics=metrics
+            controlled=extract_series(run_dir,self.cfg);baseline=self.baseline(len(controlled));t_on,t_off=_active_window(candidate,stage,self.cfg);metrics=compare_series(baseline,controlled,t_on,t_off,response_horizon=float(self.cfg["stages"].get("impulse_response_horizon",0.05)),time_tolerance=float(self.cfg["stages"].get("time_match_tolerance",1e-9)));metrics["elapsed_seconds"]=elapsed;result.metrics=metrics
             result.gates["reachable"]=reachability_gate(metrics,self.cfg);result.gates["authority"]=authority_gate(metrics,self.cfg)
             if stage in {"sustained","full"}:result.gates["sustained"]=sustained_gate(metrics,self.cfg)
             if stage=="full":result.gates["topology"]=topology_gate(metrics,self.cfg)
