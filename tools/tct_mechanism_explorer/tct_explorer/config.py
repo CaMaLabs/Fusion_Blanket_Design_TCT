@@ -40,6 +40,8 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "sustained_ntimemax": 5,
         "full_ntimemax": 6,
         "ntimepr": 1,
+        "impulse_response_horizon": 0.05,
+        "time_match_tolerance": 1e-9,
         "authority_width_gain_pct": 0.02,
         "authority_peak_j_change_pct": -0.01,
         "sustained_width_gain_pct": 0.02,
@@ -61,6 +63,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "verify_zero_before_search": True,
         "evaluate_full_topology": True,
         "seed_candidates": [
+            {"mechanism":"magnetic_pulse","params":{"amp":-0.01,"r0":10.0,"z0":1.0,"wr":0.5,"wz":0.5,"t_on":0.0,"duration":0.05,"ramp":0.0}},
             {"mechanism":"magnetic_pulse","params":{"amp":-0.01,"r0":10.0,"z0":1.0,"wr":0.5,"wz":0.5,"t_on":0.05,"duration":0.05,"ramp":0.0}},
             {"mechanism":"magnetic_pulse","params":{"amp":-0.01,"r0":10.0,"z0":1.0,"wr":0.5,"wz":0.5,"t_on":0.10,"duration":0.05,"ramp":0.0}},
             {"mechanism":"magnetic_pulse","params":{"amp":-0.01,"r0":10.0,"z0":1.0,"wr":0.5,"wz":0.5,"t_on":0.15,"duration":0.05,"ramp":0.0}},
