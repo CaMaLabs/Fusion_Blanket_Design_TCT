@@ -19,7 +19,7 @@ from .gates import (
     sustained_gate,
     topology_gate,
 )
-from .mechanisms import REGISTRY, crossover, mutate, random_candidate, zero_candidate
+from .mechanisms import REGISTRY, crossover, mutate, random_candidate, staged_times, zero_candidate
 from .models import Candidate, Evaluation, StageResult
 from .objectives import make_objectives, pareto_front
 from .runner import M3DRunner
@@ -38,6 +38,12 @@ def _active_window(
         if stage in {"sustained", "full"}:
             duration = 1.0e30
         return t_on, t_on + duration
+
+    if candidate.mechanism in {"staged_magnetic", "staged_mag_momentum"}:
+        _t_early, _t_aggressive, _t_hold, t_off = staged_times(candidate.params)
+        if stage == "impulse":
+            return 0.0, float(cfg["stages"]["probe_duration"])
+        return 0.0, t_off
 
     t_on = float(candidate.params.get("t_on", 0.0))
     duration = float(candidate.params.get("duration", cfg["stages"]["probe_duration"]))
@@ -249,7 +255,8 @@ def search(
             "rule": (
                 "Agent may only propose bounded control-layer genomes; "
                 "physics keys are immutable. Native ipforce is a standing "
-                "flow/shear-bias audit channel, not a calibrated hardware actuator."
+                "flow/shear-bias audit channel. Staged magnetic families are "
+                "scheduled open-loop bias/early/aggressive/hold waveforms, not closed-loop feedback."
             ),
         }
         advice = agent.advise(generation, summary)
