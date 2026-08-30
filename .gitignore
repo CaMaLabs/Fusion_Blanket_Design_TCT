@@ -7,3 +7,4 @@ __pycache__/
 BOUT.restart.*.nc
 
 validation_models/**/build/
+.dashboard_runs/
