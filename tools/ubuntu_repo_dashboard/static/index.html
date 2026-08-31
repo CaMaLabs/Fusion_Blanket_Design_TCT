@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ubuntu Repo Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Ubuntu Repo Dashboard</h1>
+          <p id="repoPath">Loading repo status...</p>
+        </div>
+        <div class="top-actions">
+          <input id="token" type="password" placeholder="Token" autocomplete="off" />
+          <button id="refresh" type="button">Refresh</button>
+        </div>
+      </header>
+
+      <section class="status-grid" aria-label="Repository status">
+        <article class="panel status-panel">
+          <span class="label">Branch</span>
+          <strong id="branch">-</strong>
+          <span id="head" class="muted">-</span>
+        </article>
+        <article class="panel status-panel">
+          <span class="label">Remote Delta</span>
+          <strong id="delta">-</strong>
+          <span id="upstream" class="muted">-</span>
+        </article>
+        <article class="panel status-panel">
+          <span class="label">Worker</span>
+          <strong id="worker">-</strong>
+          <span id="dirtyCount" class="muted">-</span>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <aside class="panel actions">
+          <div class="section-head">
+            <h2>Actions</h2>
+            <span id="tokenState" class="chip">local</span>
+          </div>
+          <label class="field">
+            <span>Target branch</span>
+            <input id="branchInput" type="text" value="agent/tct-pulse-train-audit" />
+          </label>
+          <div id="actions" class="action-list"></div>
+        </aside>
+
+        <section class="panel terminal-panel">
+          <div class="section-head">
+            <h2>Run Output</h2>
+            <select id="jobSelect" aria-label="Job selector"></select>
+          </div>
+          <pre id="log" class="terminal">No jobs yet.</pre>
+        </section>
+      </section>
+
+      <section class="lower-grid">
+        <article class="panel">
+          <div class="section-head">
+            <h2>Incoming Files</h2>
+            <span id="incomingCount" class="chip">0</span>
+          </div>
+          <ul id="incoming" class="file-list"></ul>
+        </article>
+        <article class="panel">
+          <div class="section-head">
+            <h2>Working Tree</h2>
+            <span id="dirtyChip" class="chip">0</span>
+          </div>
+          <ul id="dirty" class="file-list"></ul>
+        </article>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
