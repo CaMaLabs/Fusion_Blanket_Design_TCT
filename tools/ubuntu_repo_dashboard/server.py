@@ -232,9 +232,15 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802
         parsed = urlparse(self.path)
         if parsed.path == "/api/status":
+            if not self.authorized():
+                self.send_json({"error": "unauthorized"}, HTTPStatus.UNAUTHORIZED)
+                return
             self.send_json(self.state.snapshot())
             return
         if parsed.path == "/api/job":
+            if not self.authorized():
+                self.send_json({"error": "unauthorized"}, HTTPStatus.UNAUTHORIZED)
+                return
             job_id = parse_qs(parsed.query).get("id", [""])[0]
             job = self.state.get_job(job_id)
             if not job:
