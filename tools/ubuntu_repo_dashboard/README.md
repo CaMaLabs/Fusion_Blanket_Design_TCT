@@ -6,7 +6,7 @@ Ubuntu runner and launching whitelisted validation commands.
 ## Start
 
 ```bash
-cd /root/Fusion_Blanket_Design_TCT
+cd /home/ubuntu/Fusion_Blanket_Design_TCT
 bash tools/ubuntu_repo_dashboard/run_dashboard.sh
 ```
 
@@ -53,11 +53,11 @@ After=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/root/Fusion_Blanket_Design_TCT
+WorkingDirectory=/home/ubuntu/Fusion_Blanket_Design_TCT
 Environment=DASHBOARD_REPO=/home/ubuntu/Fusion_Blanket_Design_TCT
 Environment=DASHBOARD_HOST=0.0.0.0
 Environment=DASHBOARD_PORT=8765
-ExecStart=/usr/bin/python3 /root/Fusion_Blanket_Design_TCT/tools/ubuntu_repo_dashboard/server.py
+ExecStart=/usr/bin/python3 /home/ubuntu/Fusion_Blanket_Design_TCT/tools/ubuntu_repo_dashboard/server.py
 Restart=on-failure
 RestartSec=5
 
