@@ -199,6 +199,13 @@ button:disabled {
   margin-bottom: 14px;
 }
 
+.automation {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 .action-list {
   display: grid;
   gap: 10px;
@@ -249,7 +256,7 @@ button:disabled {
 
 .lower-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
   gap: 14px;
   margin-top: 14px;
 }
@@ -270,6 +277,28 @@ button:disabled {
   padding: 8px 10px;
   font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   overflow-wrap: anywhere;
+}
+
+.file-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.file-row strong,
+.file-row span {
+  display: block;
+}
+
+.file-row span {
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.file-row button {
+  min-height: 32px;
+  padding: 0 10px;
 }
 
 .ok {

@@ -1,6 +1,7 @@
 const state = {
   selectedJob: null,
   pollTimer: null,
+  resultFiles: [],
 };
 
 const $ = (id) => document.getElementById(id);
@@ -43,6 +44,54 @@ function renderFiles(node, items, emptyText) {
     const li = document.createElement("li");
     li.textContent = item;
     node.appendChild(li);
+  }
+}
+
+function formatBytes(bytes) {
+  if (!Number.isFinite(bytes)) return "-";
+  const units = ["B", "KB", "MB", "GB"];
+  let value = bytes;
+  let unit = units[0];
+  for (let i = 1; i < units.length && value >= 1024; i += 1) {
+    value /= 1024;
+    unit = units[i];
+  }
+  return `${value.toFixed(value >= 10 || unit === "B" ? 0 : 1)} ${unit}`;
+}
+
+function renderBranches(branches) {
+  const list = $("branchList");
+  list.innerHTML = "";
+  for (const branch of branches || []) {
+    const option = document.createElement("option");
+    option.value = branch;
+    list.appendChild(option);
+  }
+}
+
+function renderResultFiles(files) {
+  state.resultFiles = files || [];
+  const host = $("resultFiles");
+  host.innerHTML = "";
+  if (state.resultFiles.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "No result files found in configured result paths.";
+    host.appendChild(li);
+    return;
+  }
+  for (const file of state.resultFiles) {
+    const li = document.createElement("li");
+    li.className = "file-row";
+    const meta = document.createElement("div");
+    const modified = file.mtime ? new Date(file.mtime * 1000).toLocaleString() : "-";
+    meta.innerHTML = `<strong>${file.path}</strong><span>${formatBytes(file.size)} | ${modified}</span>`;
+    const button = document.createElement("button");
+    button.className = "secondary";
+    button.type = "button";
+    button.textContent = "Download";
+    button.addEventListener("click", () => downloadFile(file));
+    li.append(meta, button);
+    host.appendChild(li);
   }
 }
 
@@ -99,7 +148,10 @@ function renderStatus(payload) {
   $("incomingCount").textContent = String((git.incoming || []).length);
   $("dirtyChip").textContent = String((git.dirty || []).length);
   $("tokenState").textContent = payload.token_required ? "token" : "local";
+  $("automation").textContent = `Auto fetch ${payload.auto_fetch_interval || 0}s | auto push ${payload.auto_push ? "on" : "off"} | self update ${payload.auto_self_update_interval || 0}s`;
   $("branchInput").value = $("branchInput").value || payload.default_branch || git.branch || "";
+  renderBranches(payload.remote_branches || []);
+  renderResultFiles(payload.result_files || []);
   renderFiles($("incoming"), git.incoming || [], "No incoming files. Run Fetch + Inspect to refresh.");
   renderFiles($("dirty"), git.dirty || [], "Working tree is clean.");
   renderActions(payload.actions || {}, payload.busy);
@@ -114,6 +166,33 @@ function renderLog(job) {
   const head = `[${job.id}] ${job.label} | ${job.status} | ${started} ${duration}`;
   $("log").textContent = `${head}\n\n${(job.log || []).join("\n")}`;
   $("log").scrollTop = $("log").scrollHeight;
+}
+
+async function refreshFiles() {
+  try {
+    const payload = await getJson("/api/files");
+    renderResultFiles(payload.files || []);
+  } catch (err) {
+    renderFiles($("resultFiles"), [`Could not load result files: ${err.message}`], "");
+  }
+}
+
+async function downloadFile(file) {
+  try {
+    const res = await fetch(file.download_url, { headers: tokenHeader() });
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = file.name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
+  } catch (err) {
+    $("log").textContent = `Could not download ${file.path}: ${err.message}`;
+  }
 }
 
 async function refresh() {
@@ -148,6 +227,7 @@ async function runAction(action) {
 }
 
 $("refresh").addEventListener("click", refresh);
+$("reloadFiles").addEventListener("click", refreshFiles);
 $("jobSelect").addEventListener("change", (event) => {
   state.selectedJob = event.target.value;
   refreshJob();

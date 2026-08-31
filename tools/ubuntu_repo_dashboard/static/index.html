@@ -45,8 +45,10 @@
           </div>
           <label class="field">
             <span>Target branch</span>
-            <input id="branchInput" type="text" value="agent/tct-pulse-train-audit" />
+            <input id="branchInput" type="text" value="agent/tct-pulse-train-audit" list="branchList" />
+            <datalist id="branchList"></datalist>
           </label>
+          <p id="automation" class="automation">Automation status pending.</p>
           <div id="actions" class="action-list"></div>
         </aside>
 
@@ -60,6 +62,13 @@
       </section>
 
       <section class="lower-grid">
+        <article class="panel result-browser">
+          <div class="section-head">
+            <h2>Result Files</h2>
+            <button id="reloadFiles" class="secondary" type="button">Reload</button>
+          </div>
+          <ul id="resultFiles" class="file-list"></ul>
+        </article>
         <article class="panel">
           <div class="section-head">
             <h2>Incoming Files</h2>
