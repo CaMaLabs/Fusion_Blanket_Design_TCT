@@ -167,6 +167,33 @@ button:disabled {
   align-items: stretch;
 }
 
+.fusion-panel {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.fusion-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.fusion-grid > div {
+  min-height: 94px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+}
+
+.fusion-grid strong {
+  font-size: 22px;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
 .actions,
 .terminal-panel,
 .lower-grid .panel {
@@ -191,6 +218,16 @@ button:disabled {
   padding: 0 9px;
   font-size: 12px;
   font-weight: 750;
+}
+
+.ok-chip {
+  background: #e9f7ef;
+  color: var(--good);
+}
+
+.warn-chip {
+  background: #fff4de;
+  color: var(--warn);
 }
 
 .field {
@@ -327,7 +364,8 @@ button:disabled {
 
   .status-grid,
   .workspace,
-  .lower-grid {
+  .lower-grid,
+  .fusion-grid {
     grid-template-columns: 1fr;
   }
 
