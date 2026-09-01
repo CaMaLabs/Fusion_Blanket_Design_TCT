@@ -7,4 +7,4 @@ export OUT="${OUT:-$(cd "$HERE/../.." && pwd)/validation_runs/tct_control_archit
 export RUN_LABEL="TCT CONTROL ARCHITECTURE V2C — SUSTAINMENT AND ABLATION"
 export POPULATION="${POPULATION:-6}"
 export GENERATIONS="${GENERATIONS:-1}"
-exec "$HERE/run_control_v2b.sh"
+exec bash "$HERE/run_control_v2b.sh"
