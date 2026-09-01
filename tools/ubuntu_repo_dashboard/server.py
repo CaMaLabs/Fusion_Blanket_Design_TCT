@@ -30,6 +30,8 @@ DEFAULT_RESULT_PATHS = (
     "explorer_run.log",
     "tools/tct_mechanism_explorer/explorer.json",
 )
+FUSION_ENGINE_PACKAGE = "fusion_engine_v5"
+FUSION_ENGINE_OUT = "validation_runs/fusion_engine_v5_dashboard"
 
 
 @dataclass
@@ -102,6 +104,7 @@ class DashboardState:
             "busy": self.repo_lock.locked(),
             "token_required": bool(self.token),
             "actions": action_catalog(self.repo),
+            "fusion_engine_v5": fusion_engine_status(self.repo),
             "remote_branches": remote_branches,
             "auto_fetch_interval": self.auto_fetch_interval,
             "auto_push": self.auto_push,
@@ -436,6 +439,44 @@ def list_result_files(repo: Path, allowed_prefixes: tuple[str, ...], limit: int 
     return files[:limit]
 
 
+def fusion_engine_status(repo: Path) -> dict[str, Any]:
+    package_dir = repo / FUSION_ENGINE_PACKAGE
+    out_dir = repo / FUSION_ENGINE_OUT
+    latest_summary = out_dir / "latest_summary.json"
+    data: dict[str, Any] = {
+        "present": package_dir.is_dir(),
+        "package_path": str(package_dir) if package_dir.exists() else None,
+        "latest_summary": None,
+        "latest_report": f"{FUSION_ENGINE_OUT}/latest_report.md" if (out_dir / "latest_report.md").is_file() else None,
+        "latest_metrics": {},
+        "error": None,
+    }
+    if not latest_summary.is_file():
+        return data
+    try:
+        payload = json.loads(latest_summary.read_text(encoding="utf-8"))
+        result = payload.get("result") if isinstance(payload.get("result"), dict) else {}
+        data["latest_summary"] = f"{FUSION_ENGINE_OUT}/latest_summary.json"
+        data["latest_metrics"] = {
+            key: result.get(key)
+            for key in (
+                "score",
+                "net_electric",
+                "TBR",
+                "fail_rate",
+                "wall_load",
+                "blanket_model",
+                "tct_control_strength",
+            )
+            if key in result
+        }
+        data["generated_at"] = payload.get("generated_at")
+        data["mode"] = payload.get("mode")
+    except Exception as exc:  # noqa: BLE001
+        data["error"] = str(exc)
+    return data
+
+
 def runnable_actions(repo: Path) -> set[str]:
     return set(action_catalog(repo)) - {"fetch_status", "pull_ff", "self_update"}
 
@@ -452,6 +493,9 @@ def action_catalog(repo: Path) -> dict[str, dict[str, str]]:
         actions["explorer_tests"] = {"label": "Explorer Tests", "detail": "Run tools/tct_mechanism_explorer tests."}
     if (repo / "tools/tct_mechanism_explorer/run_control_v2b.sh").exists():
         actions["control_v2b"] = {"label": "Control V2B", "detail": "Run the M3D-C1 control V2B runner."}
+    if (repo / FUSION_ENGINE_PACKAGE).is_dir():
+        actions["fusion_v5_inventory"] = {"label": "Fusion V5 Inventory", "detail": "Map Fusion Engine V5 modules and write a dashboard result."}
+        actions["fusion_v5_simulate"] = {"label": "Fusion V5 Simulate", "detail": "Run Fusion Engine V5 DEFAULT_DESIGN simulation and publish metrics."}
     return actions
 
 
@@ -471,6 +515,10 @@ def commands_for(action: str, repo: Path, remote: str, branch: str | None) -> li
         return [["python3", "-m", "pytest", "-q", "tools/tct_mechanism_explorer/tests"]]
     if action == "control_v2b":
         return [["bash", "tools/tct_mechanism_explorer/run_control_v2b.sh"]]
+    if action == "fusion_v5_inventory":
+        return [["python3", str(ROOT / "fusion_engine_v5_runner.py"), "--mode", "inventory"]]
+    if action == "fusion_v5_simulate":
+        return [["python3", str(ROOT / "fusion_engine_v5_runner.py"), "--mode", "simulate"]]
     raise ValueError(f"Unknown action: {action}")
 
 
