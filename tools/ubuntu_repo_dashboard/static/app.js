@@ -113,6 +113,33 @@ function renderActions(actions, busy) {
   }
 }
 
+function formatMetric(value, digits = 3) {
+  if (typeof value === "number" && Number.isFinite(value)) return value.toFixed(digits);
+  return text(value);
+}
+
+function renderFusionEngine(info) {
+  const present = Boolean(info && info.present);
+  $("fusionState").textContent = present ? "present" : "missing";
+  $("fusionState").className = present ? "chip ok-chip" : "chip warn-chip";
+  if (!present) {
+    $("fusionRun").textContent = "Not on this branch";
+    $("fusionMode").textContent = "Select a branch containing fusion_engine_v5.";
+    $("fusionScore").textContent = "-";
+    $("fusionNet").textContent = "-";
+    $("fusionTbr").textContent = "-";
+    $("fusionFail").textContent = "-";
+    return;
+  }
+  const metrics = info.latest_metrics || {};
+  $("fusionRun").textContent = text(info.generated_at, "No dashboard run yet");
+  $("fusionMode").textContent = text(info.mode, "Run Fusion V5 Simulate to generate metrics.");
+  $("fusionScore").textContent = formatMetric(metrics.score, 2);
+  $("fusionNet").textContent = formatMetric(metrics.net_electric, 2);
+  $("fusionTbr").textContent = formatMetric(metrics.TBR, 4);
+  $("fusionFail").textContent = `fail ${formatMetric(metrics.fail_rate, 6)} | blanket ${text(metrics.blanket_model)}`;
+}
+
 function renderJobs(jobs) {
   const select = $("jobSelect");
   const previous = select.value;
@@ -151,6 +178,7 @@ function renderStatus(payload) {
   $("automation").textContent = `Auto fetch ${payload.auto_fetch_interval || 0}s | auto push ${payload.auto_push ? "on" : "off"} | self update ${payload.auto_self_update_interval || 0}s`;
   $("branchInput").value = $("branchInput").value || payload.default_branch || git.branch || "";
   renderBranches(payload.remote_branches || []);
+  renderFusionEngine(payload.fusion_engine_v5 || {});
   renderResultFiles(payload.result_files || []);
   renderFiles($("incoming"), git.incoming || [], "No incoming files. Run Fetch + Inspect to refresh.");
   renderFiles($("dirty"), git.dirty || [], "Working tree is clean.");
