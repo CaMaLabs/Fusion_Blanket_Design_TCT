@@ -54,6 +54,10 @@ python3 tools/ubuntu_repo_dashboard/server.py \
 - `tests`: run `python3 -m pytest -q tests`.
 - `explorer_tests`: run `python3 -m pytest -q tools/tct_mechanism_explorer/tests` if present.
 - `control_v2b`: run `bash tools/tct_mechanism_explorer/run_control_v2b.sh` if present.
+- `fusion_v5_inventory`: map the `fusion_engine_v5` Python package and write a
+  dashboard result if present on the selected branch.
+- `fusion_v5_simulate`: run `fusion_engine_v5.engine.reactor_simulation.simulate_reactor`
+  with `DEFAULT_DESIGN` and write JSON, Markdown, and CSV outputs.
 
 The browser cannot submit arbitrary shell commands.
 
@@ -74,6 +78,12 @@ validation_runs/
 validation_models/
 explorer_run.log
 tools/tct_mechanism_explorer/explorer.json
+```
+
+Fusion Engine V5 dashboard runs are written under:
+
+```text
+validation_runs/fusion_engine_v5_dashboard/
 ```
 
 Pre-existing dirty files are not staged. To disable result publishing:
