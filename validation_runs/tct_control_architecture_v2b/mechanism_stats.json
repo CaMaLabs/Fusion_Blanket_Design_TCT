@@ -1,0 +1,32 @@
+{
+  "magnetic_pulse": {
+    "count": 3,
+    "impulse_authority": 1,
+    "sustained": 1,
+    "feasible": 1
+  },
+  "poloidal_momentum_bias": {
+    "count": 5,
+    "impulse_authority": 0,
+    "sustained": 0,
+    "feasible": 0
+  },
+  "hybrid_mag_momentum": {
+    "count": 19,
+    "impulse_authority": 11,
+    "sustained": 8,
+    "feasible": 8
+  },
+  "staged_magnetic": {
+    "count": 2,
+    "impulse_authority": 0,
+    "sustained": 0,
+    "feasible": 0
+  },
+  "staged_mag_momentum": {
+    "count": 2,
+    "impulse_authority": 1,
+    "sustained": 1,
+    "feasible": 1
+  }
+}
