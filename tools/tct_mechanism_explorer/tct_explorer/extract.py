@@ -227,6 +227,7 @@ def compare_series(
         "response_latency": peak["time"] - active_start,
         "response_duration": duration,
         "integrated_width_gain_pct_time": integral,
+        "positive_width_sample_fraction": sum(x > 0.0 for x in widths) / len(widths),
         "post_peak_sign_reversal": any(x["time"] > peak["time"] and x["width"] < 0 for x in samples),
         "mean_response_width_gain_pct": sum(widths) / len(widths),
         "mean_response_peak_j_change_pct": sum(jpks) / len(jpks),

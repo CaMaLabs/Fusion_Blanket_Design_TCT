@@ -69,3 +69,47 @@ exit "$rc"
         run_dir,manifest=self.prepare(candidate,stage); started=time.time(); p=subprocess.run(["bash",str(run_dir/"launch_command.sh")],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT); elapsed=time.time()-started
         (run_dir/"launcher_wrapper_stdout.log").write_text(p.stdout or "",encoding="utf-8")
         return p.returncode,run_dir,manifest,elapsed
+
+    def prepare_reference(self,stage:str,overwrite:bool=True)->tuple[Path,dict[str,Any]]:
+        """Prepare a zero-actuation reference with the exact stage horizon."""
+        run_dir=self.run_root/"_stage_reference"/stage
+        if overwrite and run_dir.exists(): shutil.rmtree(run_dir)
+        run_dir.mkdir(parents=True,exist_ok=True); self._copy_baseline_assets(run_dir)
+        text=(self.baseline/"C1input").read_text(encoding="utf-8")
+        updates={
+            "imag_control":0,"mag_ctrl_amp":0.0,"imag_control_staged":0,
+            "icd_source":0,"J_0cd":0.0,"ipforce":0,"aforce":0.0,
+            "ntimepr":int(self.cfg["stages"]["ntimepr"]),
+            "ntimemax":int(
+                self.cfg["stages"]["probe_ntimemax"] if stage=="impulse" else
+                self.cfg["stages"]["sustained_ntimemax"] if stage=="sustained" else
+                self.cfg["stages"]["full_ntimemax"]
+            ),
+        }
+        for key,value in updates.items(): text=replace_or_add(text,key,value)
+        input_path=run_dir/"C1input"; input_path.write_text(text,encoding="utf-8")
+        manifest={"stage":stage,"updates":updates,"baseline":str(self.baseline),"executable":str(self.executable),"input_sha256":sha256_file(input_path)}
+        (run_dir/"reference_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
+        rt=self.cfg["runtime"]; extra=" ".join(str(x) for x in rt["mpirun_extra"]); petsc=" ".join(str(x) for x in rt["petsc_args"])
+        launch=f'''#!/usr/bin/env bash
+set -euo pipefail
+export TMPDIR={rt["tmpdir"]}
+export OMPI_MCA_orte_tmpdir_base={rt["tmpdir"]}
+source "{rt["spack_setup"]}"
+spack env activate {rt["spack_env"]}
+cd "{run_dir}"
+set +e
+timeout {int(rt["timeout_seconds"])}s mpirun {extra} -n {int(rt["mpi_ranks"])} "{self.executable}" {petsc} > C1stdout 2> launcher.stderr
+rc=$?
+set -e
+printf 'return_code=%s\n' "$rc" > run_status.txt
+exit "$rc"
+'''
+        launch_path=run_dir/"launch_command.sh"; launch_path.write_text(launch,encoding="utf-8"); launch_path.chmod(0o755)
+        return run_dir,manifest
+
+    def execute_reference(self,stage:str)->tuple[int,Path,dict[str,Any],float]:
+        run_dir,manifest=self.prepare_reference(stage); started=time.time()
+        p=subprocess.run(["bash",str(run_dir/"launch_command.sh")],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT); elapsed=time.time()-started
+        (run_dir/"launcher_wrapper_stdout.log").write_text(p.stdout or "",encoding="utf-8")
+        return p.returncode,run_dir,manifest,elapsed

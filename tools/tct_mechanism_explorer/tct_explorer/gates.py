@@ -76,8 +76,16 @@ def authority_gate(
 
 
 def sustained_gate(metrics: dict[str, float], cfg: dict[str, Any]) -> bool:
-    return metrics.get("mean_active_width_gain_pct", -math.inf) >= float(
-        cfg["stages"]["sustained_width_gain_pct"]
+    stages = cfg["stages"]
+    return (
+        metrics.get("mean_active_width_gain_pct", -math.inf)
+        >= float(stages["sustained_width_gain_pct"])
+        and metrics.get("integrated_width_gain_pct_time", -math.inf)
+        >= float(stages.get("sustained_integrated_width_gain_pct_time", 0.0))
+        and metrics.get("positive_width_sample_fraction", 0.0)
+        >= float(stages.get("sustained_positive_width_fraction", 0.6))
+        and metrics.get("max_active_peak_j_change_pct", math.inf)
+        <= float(stages.get("sustained_max_peak_j_increase_pct", 0.5))
     )
 
 

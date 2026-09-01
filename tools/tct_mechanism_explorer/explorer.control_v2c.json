@@ -1,0 +1,36 @@
+{
+  "paths": {
+    "repo_root": "${REPO_ROOT}",
+    "m3dc1_root": "/home/ubuntu/M3DC1-official",
+    "baseline_dir": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE",
+    "executable": "/home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d",
+    "run_root": "/home/ubuntu/m3dc1_runs/TCT_CONTROL_V2C",
+    "output_dir": "${REPO_ROOT}/validation_runs/tct_control_architecture_v2c",
+    "h5dump": ""
+  },
+  "stages": {
+    "probe_ntimemax": 5,
+    "sustained_ntimemax": 20,
+    "full_ntimemax": 40,
+    "ntimepr": 1,
+    "impulse_response_horizon": 0.05,
+    "sustained_width_gain_pct": 0.02,
+    "sustained_integrated_width_gain_pct_time": 0.0,
+    "sustained_positive_width_fraction": 0.60,
+    "sustained_max_peak_j_increase_pct": 0.50
+  },
+  "search": {
+    "enabled_mechanisms": ["magnetic_pulse", "poloidal_momentum_bias", "hybrid_mag_momentum", "staged_magnetic", "staged_mag_momentum"],
+    "verify_zero_before_search": true,
+    "evaluate_full_topology": true,
+    "seed_candidates": [
+      {"mechanism":"magnetic_pulse","params":{"amp":-0.01,"r0":10.0,"z0":1.0,"wr":0.5,"wz":0.5,"t_on":0.05,"duration":0.05,"ramp":0.0}},
+      {"mechanism":"hybrid_mag_momentum","params":{"mag_amp":-0.01,"momentum_amp":0.0,"force_width":0.12,"force_x":0.5,"force_n":0,"r0":10.0,"z0":1.0,"mag_wr":0.5,"mag_wz":0.5,"t_on":0.05,"duration":0.05,"ramp":0.0}},
+      {"mechanism":"hybrid_mag_momentum","params":{"mag_amp":-0.01,"momentum_amp":-0.005,"force_width":0.12,"force_x":0.5,"force_n":0,"r0":10.0,"z0":1.0,"mag_wr":0.5,"mag_wz":0.5,"t_on":0.05,"duration":0.05,"ramp":0.0}},
+      {"mechanism":"hybrid_mag_momentum","params":{"mag_amp":-0.01,"momentum_amp":0.005,"force_width":0.12,"force_x":0.5,"force_n":0,"r0":10.0,"z0":1.0,"mag_wr":0.5,"mag_wz":0.5,"t_on":0.05,"duration":0.05,"ramp":0.0}},
+      {"mechanism":"hybrid_mag_momentum","params":{"mag_amp":-0.019804649444832775,"momentum_amp":0.0,"force_width":0.26687888592813247,"force_x":0.5,"force_n":0,"r0":10.0,"z0":1.0,"mag_wr":0.5,"mag_wz":0.5744024213731853,"t_on":0.05,"duration":0.05,"ramp":0.0}},
+      {"mechanism":"hybrid_mag_momentum","params":{"mag_amp":-0.019804649444832775,"momentum_amp":0.005,"force_width":0.26687888592813247,"force_x":0.5,"force_n":0,"r0":10.0,"z0":1.0,"mag_wr":0.5,"mag_wz":0.5744024213731853,"t_on":0.05,"duration":0.05,"ramp":0.0}}
+    ]
+  },
+  "physical_mapping": {"enabled":false,"mag_ctrl_amp_to_deltaB_T":null}
+}

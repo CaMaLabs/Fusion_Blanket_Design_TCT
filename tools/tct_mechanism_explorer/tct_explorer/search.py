@@ -59,10 +59,13 @@ class Evaluator:
         self.runner = M3DRunner(cfg)
         self.baseline_cache = {}
 
-    def baseline(self, max_rows: int | None = None):
-        key = int(max_rows or -1)
+    def baseline(self, stage: str, max_rows: int | None = None):
+        key = (stage, int(max_rows or -1))
         if key not in self.baseline_cache:
-            rows = extract_series(self.cfg["paths"]["baseline_dir"], self.cfg)
+            rc, run_dir, _manifest, _elapsed = self.runner.execute_reference(stage)
+            if rc:
+                raise RuntimeError(f"stage reference failed for {stage}: {run_dir}")
+            rows = extract_series(run_dir, self.cfg)
             self.baseline_cache[key] = rows if max_rows is None else rows[:max_rows]
         return self.baseline_cache[key]
 
@@ -86,16 +89,22 @@ class Evaluator:
                 return result
 
             controlled = extract_series(run_dir, self.cfg)
-            baseline = self.baseline(len(controlled))
+            baseline = self.baseline(stage, len(controlled))
             t_on, t_off = _active_window(candidate, stage, self.cfg)
+            response_horizon = float(
+                self.cfg["stages"].get("impulse_response_horizon", 0.05)
+            )
+            if stage in {"sustained", "full"}:
+                # Sustainment must cover the complete equal-time trajectory,
+                # including decay/reformation after a transient command ends.
+                t_off = float(controlled[-1]["time"])
+                response_horizon = 0.0
             metrics = compare_series(
                 baseline,
                 controlled,
                 t_on,
                 t_off,
-                response_horizon=float(
-                    self.cfg["stages"].get("impulse_response_horizon", 0.05)
-                ),
+                response_horizon=response_horizon,
                 time_tolerance=float(
                     self.cfg["stages"].get("time_match_tolerance", 1e-9)
                 ),
@@ -154,7 +163,7 @@ class Evaluator:
 def verify_zero(cfg: dict[str, Any]) -> dict[str, Any]:
     store = Store(cfg["paths"]["output_dir"])
     evaluator = Evaluator(cfg, store)
-    baseline = evaluator.baseline(int(cfg["stages"]["probe_ntimemax"]) + 1)
+    baseline = evaluator.baseline("impulse", int(cfg["stages"]["probe_ntimemax"]) + 1)
     rng = random.Random(0)
     report = {}
     for mechanism in cfg["search"]["enabled_mechanisms"]:

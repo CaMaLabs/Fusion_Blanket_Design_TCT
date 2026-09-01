@@ -10,7 +10,8 @@ EXE="${M3D_EXE:-$M3D_BUILD/unstructured/m3dc1_2d}"
 POPULATION="${POPULATION:-8}"
 GENERATIONS="${GENERATIONS:-4}"
 SEED="${SEED:-8776}"
-OUT="$REPO_ROOT/validation_runs/tct_control_architecture_v2b"
+OUT="${OUT:-$REPO_ROOT/validation_runs/tct_control_architecture_v2b}"
+RUN_LABEL="${RUN_LABEL:-TCT CONTROL ARCHITECTURE V2B}"
 
 cd "$HERE"
 mkdir -p "$OUT"
@@ -38,7 +39,7 @@ export OMPI_MCA_orte_tmpdir_base="$TMPDIR"
 source "$HOME/spack/share/spack/setup-env.sh"
 spack env activate m3dc1-deps
 
-echo "=== TCT CONTROL ARCHITECTURE V2B ==="
+echo "=== $RUN_LABEL ==="
 echo "Mechanism-aware authority gate; V2 results are preserved separately."
 echo "repo:        $REPO_ROOT"
 echo "config:      $CONFIG"

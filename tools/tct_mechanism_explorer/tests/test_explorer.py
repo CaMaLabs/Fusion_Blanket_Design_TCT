@@ -12,7 +12,7 @@ from tct_explorer.config import DEFAULT_CONFIG, load_config, write_default
 from tct_explorer.mechanisms import FORBIDDEN_PHYSICS_KEYS, REGISTRY, candidate_updates, random_candidate, staged_times, validate_updates, zero_candidate
 from tct_explorer.models import Candidate, Evaluation
 from tct_explorer.extract import compare_series
-from tct_explorer.gates import authority_gate, reachability_gate
+from tct_explorer.gates import authority_gate, reachability_gate, sustained_gate
 from tct_explorer.objectives import make_objectives, pareto_front
 
 class ExplorerTests(unittest.TestCase):
@@ -125,5 +125,21 @@ class ExplorerTests(unittest.TestCase):
         metrics=compare_series([row(.05,1),row(.10,1)],[row(.05,2),row(.10,1.01)],.05,.10,0)
         self.assertEqual(metrics["impulse_sample_count"],1)
         self.assertAlmostEqual(metrics["immediate_width_gain_pct"],1.0)
+
+    def test_sustained_gate_rejects_transient_with_adverse_jpk(self):
+        cfg=load_config(None)
+        metrics={"mean_active_width_gain_pct":0.4,"integrated_width_gain_pct_time":0.02,
+            "positive_width_sample_fraction":0.8,"max_active_peak_j_change_pct":0.8}
+        self.assertFalse(sustained_gate(metrics,cfg))
+        metrics["max_active_peak_j_change_pct"]=0.2
+        self.assertTrue(sustained_gate(metrics,cfg))
+
+    def test_stage_horizons_are_distinct(self):
+        c=Candidate("magnetic_pulse",{"amp":-0.01,"r0":10.0,"z0":1.0,"wr":0.5,"wz":0.5,"t_on":0.05,"duration":0.05,"ramp":0.0})
+        impulse=candidate_updates(c,"impulse",DEFAULT_CONFIG)
+        sustained=candidate_updates(c,"sustained",DEFAULT_CONFIG)
+        full=candidate_updates(c,"full",DEFAULT_CONFIG)
+        self.assertLess(impulse["ntimemax"],sustained["ntimemax"])
+        self.assertLess(sustained["ntimemax"],full["ntimemax"])
 
 if __name__=="__main__":unittest.main()
