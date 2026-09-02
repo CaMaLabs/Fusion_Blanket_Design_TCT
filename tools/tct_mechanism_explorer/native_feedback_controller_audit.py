@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import json
 import math
-import re
 import shutil
 import time
 from pathlib import Path
@@ -34,7 +33,11 @@ SEGMENT_STEPS = 5
 SEGMENT_DURATION = DT * SEGMENT_STEPS
 MAX_SEGMENTS = 8
 NTIMEPR = 1
-RESTART_KEY = "restart"
+# Native M3D-C1 restart controls.  irestart selects restart mode;
+# iwrite_restart causes the preceding segment to emit restart state.
+RESTART_KEY = "irestart"
+IRESTART_SLICE_KEY = "irestart_slice"
+IWRITE_RESTART_KEY = "iwrite_restart"
 
 # Control policy thresholds are control-layer values, not physics changes.
 THINNING_RATE_THRESHOLD = -0.05
@@ -49,7 +52,8 @@ R0 = 10.0
 Z0 = 1.0
 
 NATIVE_CONTROL_KEYS = {
-    "dt", "ntimemax", "ntimepr", "restart", "imag_control", "mag_ctrl_amp",
+    "dt", "ntimemax", "ntimepr", "irestart", "irestart_slice", "iwrite_restart",
+    "imag_control", "mag_ctrl_amp",
     "icd_source", "J_0cd", "R_0cd", "Z_0cd", "W_cd", "W_cd_shoulder",
     "delta_cd", "cd_t_on", "cd_t_ramp", "cd_t_off",
 }
@@ -72,6 +76,9 @@ def write_input(name: str, source: int, amp: float, restart: int,
         "dt": f"{DT:.10g}",
         "ntimemax": str(SEGMENT_STEPS),
         "ntimepr": str(NTIMEPR),
+        RESTART_KEY: str(restart),
+        IRESTART_SLICE_KEY: "-1",
+        IWRITE_RESTART_KEY: "1",
         "imag_control": "0",
         "mag_ctrl_amp": "0.0",
         "icd_source": str(source),
@@ -89,13 +96,14 @@ def write_input(name: str, source: int, amp: float, restart: int,
         if key not in NATIVE_CONTROL_KEYS:
             raise RuntimeError(f"non-allow-listed control key: {key}")
         text = pta.replace_or_add(text, key, value)
-    # Fresh runs must not add an unknown restart keyword. For restart segments,
-    # add it only when the source did not already expose the assignment; the
-    # run-time probe below will classify unsupported restart behavior explicitly.
-    if re.search(r"^\\s*restart\\s*=", text, re.I | re.M):
-        text = pta.replace_or_add(text, RESTART_KEY, str(restart))
-    elif restart:
-        text = pta.replace_or_add(text, RESTART_KEY, str(restart))
+    # Always write native restart controls explicitly. irestart=0 starts a
+    # fresh run; irestart=1 consumes restart state copied from the prior segment.
+    for key, value in {
+        RESTART_KEY: str(restart),
+        IRESTART_SLICE_KEY: "-1",
+        IWRITE_RESTART_KEY: "1",
+    }.items():
+        text = pta.replace_or_add(text, key, value)
     (d / "C1input").write_text(text)
     launch = f'''#!/usr/bin/env bash
 set -euo pipefail
@@ -124,7 +132,10 @@ def copy_restart_state(previous: Path, current: Path) -> None:
                          "run_status.txt", "wrapper_stdout.log", "elapsed_seconds.txt"}:
             continue
         target = current / item.name
-        if item.is_file():
+        if item.is_dir():
+            # Some builds place restart metadata in a directory.
+            shutil.copytree(item, target, dirs_exist_ok=True)
+        elif item.is_file():
             shutil.copy2(item, target)
 
 
@@ -234,7 +245,17 @@ def main() -> int:
     for b, z in zip(baseline_rows, zero_rows):
         for key in ("W_sheet", "Jpk", "Jint_high", "Reconnected_Flux", "magnetic_energy"):
             max_zero = max(max_zero, abs(z[key] - b[key]))
-    report["zero_equivalence"] = {"max_abs_metric_delta": max_zero, "tolerance": 1e-12, "pass": max_zero <= 1e-12}
+    report["zero_equivalence"] = {
+        "comparison": "icd_source=1,J_0cd=0 versus native icd_source=0 baseline",
+        "max_abs_metric_delta": max_zero,
+        "tolerance": 1e-12,
+        "pass": max_zero <= 1e-12,
+        "interpretation": (
+            "A nonzero delta is a source-mode side effect, not controller authority. "
+            "Current-drive authority must compare controlled segments against this "
+            "same-mode zero case and against the native no-actuator baseline."
+        ),
+    }
 
     # First controlled segment starts from the same frozen initial condition.
     previous_dir = write_input("segment_000", 1, BIAS_AMP, 0, 0.0, SEGMENT_DURATION)
