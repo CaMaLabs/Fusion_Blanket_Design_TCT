@@ -101,7 +101,7 @@ def install_current_redistribution_operator() -> bool:
     text = inputf.read_text()
     if '"W_cd_shoulder"' not in text:
         anchor = re.search(
-            r'^\s*call\s+add_var_double\\("delta_cd"[^\n]*\n(?:[^\n]*\n){0,2}',
+            r'^\s*call\s+add_var_double\("delta_cd"[^\n]*\n(?:[^\n]*\n){0,2}',
             text, re.I | re.M,
         )
         if not anchor:
@@ -194,7 +194,7 @@ def install_current_redistribution_operator() -> bool:
             raise RuntimeError("cd_func closing endif not found")
         text = text[:insert_at] + block + text[insert_at:]
         transport.write_text(text)
-        changed = True        changed = True
+        changed = True
     return changed
 
 def write_input(name: str, source: int, amp: float, restart: int,
