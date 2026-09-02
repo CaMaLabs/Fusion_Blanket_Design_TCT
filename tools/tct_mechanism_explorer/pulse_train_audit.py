@@ -131,7 +131,7 @@ def install_operator() -> bool:
         changed = True
 
     text = ludef.read_text()
-    if "mag_phase" not in text:
+    if False:
         # Different official M3D-C1 checkouts spell/order these locals differently.
         # Add the new phase variable independently so the patch is portable.
         if not re.search(r"^\\s*(?:real(?:\\*\\d+)?|double\\s+precision)\\s*::[^\\n]*\\bmag_phase\\b", text, re.M):
@@ -164,11 +164,11 @@ def install_operator() -> bool:
      if(time.lt.mag_ctrl_t_on .or. time.ge.mag_ctrl_t_off) then
         mag_gate = 0.
      else if(mag_ctrl_period.gt.0. .and. mag_ctrl_pulse_width.gt.0.) then
-        mag_phase = modulo(time-mag_ctrl_t_on, mag_ctrl_period)
-        if(mag_phase.ge.mag_ctrl_pulse_width) then
+        mag_tau = modulo(time-mag_ctrl_t_on, mag_ctrl_period)
+        if(mag_tau.ge.mag_ctrl_pulse_width) then
            mag_gate = 0.
-        else if(mag_ctrl_t_ramp.gt.0. .and. mag_phase.lt.mag_ctrl_t_ramp) then
-           mag_tau = mag_phase/mag_ctrl_t_ramp
+        else if(mag_ctrl_t_ramp.gt.0. .and. mag_tau.lt.mag_ctrl_t_ramp) then
+           mag_tau = mag_tau/mag_ctrl_t_ramp
            mag_gate = mag_tau*mag_tau*(3. - 2.*mag_tau)
         else
            mag_gate = 1.
