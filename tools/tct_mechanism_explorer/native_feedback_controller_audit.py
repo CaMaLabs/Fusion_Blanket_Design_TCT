@@ -87,13 +87,13 @@ def install_current_redistribution_operator() -> bool:
         "cd_t_off": "  real :: cd_t_off       ! current-drive turn-off time",
     }
     for name, declaration in declarations.items():
-        if not re.search(rf"\\b{re.escape(name)}\\b", text, re.I):
+        if not re.search(rf"\b{re.escape(name)}\b", text, re.I):
             missing.append(declaration)
     if missing:
-        anchor = re.search(r"^\\s*real\\s*::\\s*delta_cd\\b[^\\n]*$", text, re.I | re.M)
+        anchor = re.search(r"^\s*real\s*::\s*delta_cd\b[^\n]*$", text, re.I | re.M)
         if not anchor:
             raise RuntimeError("current-drive module declaration anchor not found")
-        addition = anchor.group(0) + "\\n" + "\\n".join(missing)
+        addition = anchor.group(0) + "\n" + "\n".join(missing)
         text = text[:anchor.start()] + addition + text[anchor.end():]
         modules.write_text(text)
         changed = True
@@ -101,20 +101,20 @@ def install_current_redistribution_operator() -> bool:
     text = inputf.read_text()
     if '"W_cd_shoulder"' not in text:
         anchor = re.search(
-            r'^\\s*call\\s+add_var_double\\("delta_cd"[^\\n]*\\n(?:[^\\n]*\\n){0,2}',
+            r'^\s*call\s+add_var_double\\("delta_cd"[^\n]*\n(?:[^\n]*\n){0,2}',
             text, re.I | re.M,
         )
         if not anchor:
             raise RuntimeError("delta_cd input registration anchor not found")
         regs = anchor.group(0) + (
-            '  call add_var_double("W_cd_shoulder", w_cd_shoulder, 0., &\\n'
-            '       "shoulder width for neutral center-plus-shoulder cd source", source_grp)\\n'
-            '  call add_var_double("cd_t_on", cd_t_on, 0., &\\n'
-            '       "time when current drive turns on", source_grp)\\n'
-            '  call add_var_double("cd_t_ramp", cd_t_ramp, 0., &\\n'
-            '       "smooth current-drive ramp duration", source_grp)\\n'
-            '  call add_var_double("cd_t_off", cd_t_off, 1.e30, &\\n'
-            '       "time when current drive turns off", source_grp)\\n'
+            '  call add_var_double("W_cd_shoulder", w_cd_shoulder, 0., &\n'
+            '       "shoulder width for neutral center-plus-shoulder cd source", source_grp)\n'
+            '  call add_var_double("cd_t_on", cd_t_on, 0., &\n'
+            '       "time when current drive turns on", source_grp)\n'
+            '  call add_var_double("cd_t_ramp", cd_t_ramp, 0., &\n'
+            '       "smooth current-drive ramp duration", source_grp)\n'
+            '  call add_var_double("cd_t_off", cd_t_off, 1.e30, &\n'
+            '       "time when current drive turns off", source_grp)\n'
         )
         text = text[:anchor.start()] + regs + text[anchor.end():]
         inputf.write_text(text)
@@ -162,21 +162,39 @@ def install_current_redistribution_operator() -> bool:
      temp79a = cd_gate * J_0cd * temp79a
      temp = temp + intx2(mu79(:,:,OP_1),temp79a)
 """
-        # The validated source patch declares these locals in cd_func.
+        # Add the gate and neutral-profile locals to the native cd_func.
         decl = re.search(
-            r"^\\s*real\\s*::\\s*cd_gate\\s*,\\s*cd_tau[^\\n]*$",
+            r"^\s*real,\s*allocatable\s*::\s*xvals\(:\),\s*yvals\(:\)\s*$",
             text[start:end], re.I | re.M,
         )
         if not decl:
-            local_start = start + decl.start() if decl else -1
             raise RuntimeError("cd_func local declaration anchor not found")
         decl_end = start + decl.end()
-        local_add = "\\n  real :: cd_w_center, cd_w_sh, cd_sep\\n  real :: cd_area, cd_net"
+        local_add = "\n  real :: cd_gate, cd_tau, cd_w_center, cd_w_sh, cd_sep\n  real :: cd_area, cd_net"
         text = text[:decl_end] + local_add + text[decl_end:]
-        insert_at += len(local_add)
+        end += len(local_add)
+        temp_match = re.search(r"^\s*temp\s*=\s*0\.\s*$", text[decl_end:end], re.I | re.M)
+        if not temp_match:
+            raise RuntimeError("cd_func temp initialization anchor not found")
+        gate_pos = decl_end + temp_match.end()
+        gate = (
+            "  if(time.lt.cd_t_on .or. time.ge.cd_t_off) then\n"
+            "     cd_gate = 0.\n"
+            "  else if(cd_t_ramp.gt.0. .and. time.lt.cd_t_on+cd_t_ramp) then\n"
+            "     cd_tau = (time-cd_t_on)/cd_t_ramp\n"
+            "     cd_gate = cd_tau*cd_tau*(3. - 2.*cd_tau)\n"
+            "  else\n"
+            "     cd_gate = 1.\n"
+            "  end if\n"
+        )
+        text = text[:gate_pos] + "\n" + gate + text[gate_pos:]
+        end += len(gate) + 1
+        insert_at = text.rfind("  endif", start, end)
+        if insert_at < 0:
+            raise RuntimeError("cd_func closing endif not found")
         text = text[:insert_at] + block + text[insert_at:]
         transport.write_text(text)
-        changed = True
+        changed = True        changed = True
     return changed
 
 def write_input(name: str, source: int, amp: float, restart: int,
