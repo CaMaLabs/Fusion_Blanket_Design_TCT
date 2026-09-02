@@ -1,0 +1,220 @@
+diff --git a/unstructured/M3Dmodules.f90 b/unstructured/M3Dmodules.f90
+index 8c7e0c95..beab6683 100644
+--- a/unstructured/M3Dmodules.f90
++++ b/unstructured/M3Dmodules.f90
+@@ -204,6 +204,7 @@ module basic
+   integer :: iread_pscale
+   real :: ln          ! length of equilibrium gradient
+   real :: eps         ! size of initial perturbation
++  real :: gem_sheet_scale ! GEM sheet-width scale; 1 preserves upstream GEM
+   integer :: iwave    ! which wave to initialize in wave prop. equilibrium
+   integer :: irmp     ! 1 = read rmp coil/currents from rmp_coil.dat, rmp_current.dat
+   integer :: iread_ext_field
+@@ -405,6 +406,29 @@ module basic
+   real :: z_0cd          ! z coordinate of peak
+   real :: w_cd           ! width of Gaussian
+   real :: delta_cd       ! shift of Gaussian
++  real :: w_cd_shoulder  ! width of shoulder Gaussians for neutral redistribution
++  real :: cd_t_on        ! current-drive turn-on time
++  real :: cd_t_ramp      ! current-drive smooth ramp duration
++  real :: cd_t_off       ! current-drive turn-off time
++  integer :: imag_control ! 1 = localized magnetic flux/vector-potential source
++  real :: mag_ctrl_amp    ! localized magnetic control amplitude
++  real :: mag_ctrl_r0     ! R coordinate of magnetic control center
++  real :: mag_ctrl_z0     ! Z coordinate of magnetic control center
++  real :: mag_ctrl_wr     ! R width of magnetic control source
++  real :: mag_ctrl_wz     ! Z width of magnetic control source
++  real :: mag_ctrl_t_on   ! magnetic control turn-on time
++  real :: mag_ctrl_t_ramp ! magnetic control smooth ramp duration
++  real :: mag_ctrl_t_off  ! magnetic control turn-off time
++  integer :: imag_control_staged ! 1 = scheduled bias/early/aggressive/hold magnetic command
++  real :: mag_ctrl_bias_amp      ! standing magnetic bias before early intervention
++  real :: mag_ctrl_early_amp     ! early/preconditioning magnetic command
++  real :: mag_ctrl_aggressive_amp ! strongest bounded magnetic command
++  real :: mag_ctrl_hold_amp      ! recovery/maintenance magnetic command
++  real :: mag_ctrl_t_early       ! transition bias -> early
++  real :: mag_ctrl_t_aggressive  ! transition early -> aggressive
++  real :: mag_ctrl_t_hold        ! transition aggressive -> hold
++  real :: mag_ctrl_period  ! repeated pulse period; <=0 means single gate
++  real :: mag_ctrl_pulse_width ! on-time within each repeated pulse period
+ 
+   ! xray diagnostic parameters
+   integer :: xray_detector_enabled ! 1 = enable xray diagnostic
+diff --git a/unstructured/input.f90 b/unstructured/input.f90
+index 6795686c..13a17a80 100644
+--- a/unstructured/input.f90
++++ b/unstructured/input.f90
+@@ -580,6 +580,8 @@ subroutine set_defaults
+   call add_var_int("iwave", iwave, 0, "", eq_grp)
+   call add_var_double("eps", eps, 0.01, &
+        "Magnitude of initial perturbations*", eq_grp)
++  call add_var_double("gem_sheet_scale", gem_sheet_scale, 1., &
++       "GEM current-sheet width scale; preserves integrated current analytically", eq_grp)
+   call add_var_int("maxn", maxn, 200, "", eq_grp)
+   call add_var_int("irmp", irmp, 0, &
+        "1: Apply nonaxisym. fields throughout plasma|&
+@@ -982,6 +984,52 @@ subroutine set_defaults
+        "width of cd gaussian", source_grp)
+   call add_var_double("delta_cd", delta_cd, 0., &
+        "shift of cd gaussian", source_grp)
++  call add_var_double("W_cd_shoulder", w_cd_shoulder, 0., &
++       "shoulder width for neutral center-plus-shoulder cd source", source_grp)
++  call add_var_double("cd_t_on", cd_t_on, 0., &
++       "time when current drive turns on", source_grp)
++  call add_var_double("cd_t_ramp", cd_t_ramp, 0., &
++       "smooth current-drive ramp duration", source_grp)
++  call add_var_double("cd_t_off", cd_t_off, 1.e30, &
++       "time when current drive turns off", source_grp)
++  call add_var_int("imag_control", imag_control, 0, &
++       "1: localized magnetic flux/vector-potential control source", source_grp)
++  call add_var_double("mag_ctrl_amp", mag_ctrl_amp, 0., &
++       "localized magnetic control amplitude", source_grp)
++  call add_var_double("mag_ctrl_r0", mag_ctrl_r0, 10., &
++       "R-coordinate of magnetic control center", source_grp)
++  call add_var_double("mag_ctrl_z0", mag_ctrl_z0, 1., &
++       "Z-coordinate of magnetic control center", source_grp)
++  call add_var_double("mag_ctrl_wr", mag_ctrl_wr, 0.5, &
++       "R-width of magnetic control source", source_grp)
++  call add_var_double("mag_ctrl_wz", mag_ctrl_wz, 0.5, &
++       "Z-width of magnetic control source", source_grp)
++  call add_var_double("mag_ctrl_t_on", mag_ctrl_t_on, 0., &
++       "time when magnetic control turns on", source_grp)
++  call add_var_double("mag_ctrl_t_ramp", mag_ctrl_t_ramp, 0., &
++       "smooth magnetic-control ramp duration", source_grp)
++  call add_var_double("mag_ctrl_t_off", mag_ctrl_t_off, 1.e30, &
++       "time when magnetic control turns off", source_grp)
++  call add_var_int("imag_control_staged", imag_control_staged, 0, &
++       "1: use scheduled bias/early/aggressive/hold magnetic command", source_grp)
++  call add_var_double("mag_ctrl_bias_amp", mag_ctrl_bias_amp, 0., &
++       "standing magnetic-control bias amplitude", source_grp)
++  call add_var_double("mag_ctrl_early_amp", mag_ctrl_early_amp, 0., &
++       "early magnetic-control amplitude", source_grp)
++  call add_var_double("mag_ctrl_aggressive_amp", mag_ctrl_aggressive_amp, 0., &
++       "aggressive magnetic-control amplitude", source_grp)
++  call add_var_double("mag_ctrl_hold_amp", mag_ctrl_hold_amp, 0., &
++       "hold magnetic-control amplitude", source_grp)
++  call add_var_double("mag_ctrl_t_early", mag_ctrl_t_early, 0., &
++       "time of bias-to-early transition", source_grp)
++  call add_var_double("mag_ctrl_t_aggressive", mag_ctrl_t_aggressive, 0., &
++       "time of early-to-aggressive transition", source_grp)
++  call add_var_double("mag_ctrl_t_hold", mag_ctrl_t_hold, 0., &
++       "time of aggressive-to-hold transition", source_grp)
++  call add_var_double("mag_ctrl_period", mag_ctrl_period, 0., &
++       "period of repeated magnetic-control pulses; <=0 selects single gate", source_grp)
++  call add_var_double("mag_ctrl_pulse_width", mag_ctrl_pulse_width, 0., &
++       "on-time within each repeated magnetic-control period", source_grp)
+ 
+   ! poloidal momentum source
+   call add_var_int("ipforce", ipforce, 0, &
+@@ -1873,4 +1921,3 @@ subroutine validate_input
+   end if
+ 
+ end subroutine validate_input
+-
+diff --git a/unstructured/ludef_t.f90 b/unstructured/ludef_t.f90
+index 1ff38331..46c069f7 100644
+--- a/unstructured/ludef_t.f90
++++ b/unstructured/ludef_t.f90
+@@ -600,7 +600,6 @@ subroutine vorticity_nolin(trialx, r4term)
+ 
+   vectype, intent(in), dimension(dofs_per_element, MAX_PTS, OP_NUM) :: trialx
+   vectype, intent(out), dimension(dofs_per_element) :: r4term
+-
+   r4term = 0.
+ 
+   ! JxB_ext
+@@ -1806,7 +1805,6 @@ subroutine compression_nolin(trialx, r4term)
+ 
+   vectype, intent(in), dimension(dofs_per_element, MAX_PTS, OP_NUM) :: trialx
+   vectype, intent(out), dimension(dofs_per_element) :: r4term
+-
+   r4term = 0.
+ 
+   if(numvar.lt.3) return
+@@ -2688,6 +2686,8 @@ subroutine flux_nolin(trialx, r4term)
+ 
+   vectype, intent(in), dimension(dofs_per_element, MAX_PTS, OP_NUM) :: trialx
+   vectype, intent(out), dimension(dofs_per_element) :: r4term
++  integer :: j
++  real :: mag_gate, mag_tau, mag_wr, mag_wz, mag_cmd
+ 
+   r4term = 0.
+ 
+@@ -2696,6 +2696,72 @@ subroutine flux_nolin(trialx, r4term)
+           vloop*intx1(trialx(:,:,OP_1))/toroidal_period
+   endif
+ 
++  ! TCT_CONTROL_V2_STAGED_COMMAND
++  mag_cmd = mag_ctrl_amp
++  if(imag_control_staged.eq.1) then
++     if(time.lt.mag_ctrl_t_early) then
++        mag_cmd = mag_ctrl_bias_amp
++     else if(time.lt.mag_ctrl_t_aggressive) then
++        mag_cmd = mag_ctrl_early_amp
++     else if(time.lt.mag_ctrl_t_hold) then
++        mag_cmd = mag_ctrl_aggressive_amp
++     else if(time.lt.mag_ctrl_t_off) then
++        mag_cmd = mag_ctrl_hold_amp
++     else
++        mag_cmd = 0.
++     end if
++  end if
++
++  if(imag_control.eq.1 .and. mag_cmd.ne.0.) then
++     if(time.lt.mag_ctrl_t_on .or. time.ge.mag_ctrl_t_off) then
++        mag_gate = 0.
++     else if(mag_ctrl_t_ramp.gt.0. .and. time.lt.mag_ctrl_t_on+mag_ctrl_t_ramp) then
++        mag_tau = (time-mag_ctrl_t_on)/mag_ctrl_t_ramp
++        mag_gate = mag_tau*mag_tau*(3. - 2.*mag_tau)
++     else
++        mag_gate = 1.
++     end if
++     if(mag_gate.ne.0.) then
++        mag_wr = max(mag_ctrl_wr, 1.e-30)
++        mag_wz = max(mag_ctrl_wz, 1.e-30)
++        do j=1,npoints
++           temp79a(j) = mag_gate * mag_cmd * &
++                exp( -(x_79(j)-mag_ctrl_r0)**2/mag_wr**2 &
++                - (z_79(j)-mag_ctrl_z0)**2/mag_wz**2 )
++        enddo
++        r4term = r4term + dt*intx2(trialx(:,:,OP_1),temp79a)
++     end if
++  endif
++  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then
++     if(time.lt.mag_ctrl_t_on .or. time.ge.mag_ctrl_t_off) then
++        mag_gate = 0.
++     else if(mag_ctrl_period.gt.0. .and. mag_ctrl_pulse_width.gt.0.) then
++        mag_tau = modulo(time-mag_ctrl_t_on, mag_ctrl_period)
++        if(mag_tau.ge.mag_ctrl_pulse_width) then
++           mag_gate = 0.
++        else if(mag_ctrl_t_ramp.gt.0. .and. mag_tau.lt.mag_ctrl_t_ramp) then
++           mag_tau = mag_tau/mag_ctrl_t_ramp
++           mag_gate = mag_tau*mag_tau*(3. - 2.*mag_tau)
++        else
++           mag_gate = 1.
++        end if
++     else if(mag_ctrl_t_ramp.gt.0. .and. time.lt.mag_ctrl_t_on+mag_ctrl_t_ramp) then
++        mag_tau = (time-mag_ctrl_t_on)/mag_ctrl_t_ramp
++        mag_gate = mag_tau*mag_tau*(3. - 2.*mag_tau)
++     else
++        mag_gate = 1.
++     end if
++     if(mag_gate.ne.0.) then
++        mag_wr = max(mag_ctrl_wr, 1.e-30)
++        mag_wz = max(mag_ctrl_wz, 1.e-30)
++        do j=1,npoints
++           temp79a(j) = mag_gate * mag_ctrl_amp * &
++                exp( -(x_79(j)-mag_ctrl_r0)**2/mag_wr**2 &
++                - (z_79(j)-mag_ctrl_z0)**2/mag_wz**2 )
++        enddo
++        r4term = r4term + dt*intx2(trialx(:,:,OP_1),temp79a)
++     end if
++  endif
+   if(icd_source.gt.0) then
+      if(jadv.eq.0) then
+         r4term = r4term - &
+@@ -6260,4 +6326,3 @@ subroutine ludefnre_n(itri)
+   !call vector_insert_block(nresource,itri,nre_i,oterm,VEC_ADD)
+ !!$OMP END CRITICAL
+ end subroutine ludefnre_n
+-

@@ -1,0 +1,48 @@
+{
+  "frozen_before_outcomes": true,
+  "amp": -0.01,
+  "dt": 0.01,
+  "ntimemax": 40,
+  "train_start": 0.0,
+  "train_end": 0.35,
+  "ramp": 0.0,
+  "cases": [
+    {
+      "name": "single_reference",
+      "period": 0.0,
+      "pulse_width": 0.0,
+      "t_off": 0.05
+    },
+    {
+      "name": "train_p040_w020",
+      "period": 0.04,
+      "pulse_width": 0.02,
+      "t_off": 0.35
+    },
+    {
+      "name": "train_p050_w020",
+      "period": 0.05,
+      "pulse_width": 0.02,
+      "t_off": 0.35
+    },
+    {
+      "name": "train_p060_w020",
+      "period": 0.06,
+      "pulse_width": 0.02,
+      "t_off": 0.35
+    },
+    {
+      "name": "train_p050_w030",
+      "period": 0.05,
+      "pulse_width": 0.03,
+      "t_off": 0.35
+    }
+  ],
+  "gates": {
+    "mean_width_gain_pct_gt": 0.02,
+    "positive_width_fraction_ge": 0.6,
+    "integrated_high_J_change_pct_lt": -0.01,
+    "max_Jpk_worsening_pct_le": 0.1
+  },
+  "scientific_note": "Amplitude is fixed at the previously validated short-pulse value; only period and on-time are varied."
+}

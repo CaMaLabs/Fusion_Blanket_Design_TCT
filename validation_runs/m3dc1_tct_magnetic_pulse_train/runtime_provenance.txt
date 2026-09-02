@@ -1,0 +1,6 @@
+repo=/home/ubuntu/work/openmc/sweep
+source=/home/ubuntu/M3DC1-official
+baseline=/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE
+executable=/home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d
+executable_sha256=deec306832672e76b95dc632f4442339d9a6c13ebb4af99e900e0c484f84239d
+run_root=/tmp/m3dc1_tct_magnetic_pulse_train_runs
