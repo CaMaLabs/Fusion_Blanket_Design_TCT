@@ -241,7 +241,8 @@ def main() -> int:
     previous_state = segment_rows[-1]
     for segment in range(1, MAX_SEGMENTS):
         start_time = float(previous_state["time"])
-        decision = policy(control_rows[-1], previous_state)
+        prior_state = control_rows[-2] if len(control_rows) >= 2 else None
+        decision = policy(prior_state, previous_state)
         current_dir = write_input(
             f"segment_{segment:03d}", int(decision["source"]), float(decision["amp"]),
             1, start_time, start_time + SEGMENT_DURATION,
