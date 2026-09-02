@@ -131,12 +131,24 @@ def install_operator() -> bool:
         changed = True
 
     text = ludef.read_text()
-    start = text.find("  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then")
-    end_marker = "\n\n   if(icd_source.gt.0) then"
-    end = text.find(end_marker, start)
-    if start < 0 or end < 0:
+    # Match the native magnetic-control block independent of indentation or
+    # spacing style used by the particular official checkout.
+    start_match = re.search(
+        r"^\\s*if\\s*\\(\\s*imag_control\\s*\\.eq\\.\\s*1"
+        r"\\s*\\.and\\.\\s*mag_ctrl_amp\\s*\\.ne\\.\\s*0\\.\\s*\\)"
+        r"\\s*then\\b",
+        text, re.I | re.M,
+    )
+    if not start_match:
         raise RuntimeError("imag_control source block not found in ludef_t.f90")
-
+    start = start_match.start()
+    end_match = re.search(
+        r"^\\s*if\\s*\\(\\s*icd_source\\s*\\.gt\\.\\s*0\\.\\)\\s*then\\b",
+        text[start_match.end():], re.I | re.M,
+    )
+    if not end_match:
+        raise RuntimeError("icd_source boundary not found after magnetic block in ludef_t.f90")
+    end = start_match.end() + end_match.start()
     block = text[start:end]
     if "mag_ctrl_period.gt.0." not in block:
         new_block = """  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then
