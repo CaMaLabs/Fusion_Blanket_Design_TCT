@@ -390,7 +390,7 @@ def main() -> int:
         for key in ("W_sheet", "Jpk", "Jint_high", "Reconnected_Flux", "magnetic_energy"):
             max_zero = max(max_zero, abs(z[key] - b[key]))
     report["zero_equivalence"] = {
-        "comparison": "icd_source=1,J_0cd=0 versus native icd_source=0 baseline",
+        "comparison": "icd_source=4,J_0cd=0 versus native icd_source=0 baseline",
         "max_abs_metric_delta": max_zero,
         "tolerance": 1e-12,
         "pass": max_zero <= 1e-12,
