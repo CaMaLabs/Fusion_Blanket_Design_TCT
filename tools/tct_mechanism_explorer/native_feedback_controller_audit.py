@@ -374,14 +374,22 @@ def main() -> int:
     }
 
     # Continuous uncontrolled comparison.
-    baseline_dir = write_input("baseline_continuous", 0, 0.0, 0, 0.0, 0.0)
+    horizon_steps = MAX_SEGMENTS * SEGMENT_STEPS
+    horizon_time = MAX_SEGMENTS * SEGMENT_DURATION
+    baseline_dir = write_input(
+        "baseline_continuous", 0, 0.0, 0, 0.0, horizon_time,
+        nmax_steps=horizon_steps,
+    )
     print("[native-feedback] running baseline_continuous", flush=True)
     execute(baseline_dir)
     baseline_rows = safe_extract(baseline_dir)
 
     # Zero-actuation restart seed checks whether the current-drive path is
     # equivalent to no source before any feedback claim is made.
-    zero_dir = write_input("zero_current_drive", CURRENT_SOURCE, 0.0, 0, 0.0, SEGMENT_DURATION)
+    zero_dir = write_input(
+        "zero_current_drive", CURRENT_SOURCE, 0.0, 0, 0.0, horizon_time,
+        nmax_steps=horizon_steps,
+    )
     print("[native-feedback] running zero_current_drive", flush=True)
     execute(zero_dir)
     zero_rows = safe_extract(zero_dir)
@@ -390,7 +398,7 @@ def main() -> int:
         for key in ("W_sheet", "Jpk", "Jint_high", "Reconnected_Flux", "magnetic_energy"):
             max_zero = max(max_zero, abs(z[key] - b[key]))
     report["zero_equivalence"] = {
-        "comparison": "icd_source=4,J_0cd=0 versus native icd_source=0 baseline",
+        "comparison": "icd_source=4,J_0cd=0 versus native icd_source=0 baseline over full horizon",
         "max_abs_metric_delta": max_zero,
         "tolerance": 1e-12,
         "pass": max_zero <= 1e-12,
@@ -409,7 +417,8 @@ def main() -> int:
     control_rows = list(segment_rows)
     command_log: list[dict] = [{
         "segment": 0, "directory": str(previous_dir), "state": "BIAS",
-        "source": 1, "amp": BIAS_AMP, "t_on": 0.0, "t_off": SEGMENT_DURATION,
+        "source": CURRENT_SOURCE, "amp": BIAS_AMP, "t_on": 0.0,
+        "t_off": SEGMENT_DURATION,
         "restart": 0,
     }]
 
@@ -477,20 +486,35 @@ def main() -> int:
     if not restart_ok:
         report["classification"] = "M3DC1_NATIVE_FEEDBACK_RESTART_UNRESOLVED"
     else:
+        # Compare at equal physical times. The source-mode zero trajectory is
+        # the primary actuator comparison; the native no-source baseline is
+        # retained as the overall experiment reference.
         out = deltas(control_rows, baseline_rows)
+        mode_out = deltas(control_rows, zero_rows)
         pta.write_csv(OUT / "native_feedback_deltas.csv", out)
+        pta.write_csv(OUT / "source_mode_zero_deltas.csv", mode_out)
+        mode_max_width = max((r["width_gain_pct"] for r in mode_out), default=-math.inf)
+        mode_max_jpk = max((r["Jpk_change_pct"] for r in mode_out), default=math.inf)
         report["classification"] = (
             "M3DC1_NATIVE_FEEDBACK_CONTROLLER_AUTHORITY_PASS"
-            if max((r["width_gain_pct"] for r in out), default=-math.inf) > 0.02
-            and max((r["Jpk_change_pct"] for r in out), default=math.inf) <= 0.10
+            if mode_max_width > 0.02 and mode_max_jpk <= 0.10
             else "M3DC1_NATIVE_FEEDBACK_CONTROLLER_NO_AUTHORITY_FOUND"
         )
         report["response"] = {
+            "comparison": "native icd_source=0 baseline",
             "max_width_gain_pct": max((r["width_gain_pct"] for r in out), default=math.nan),
             "mean_width_gain_pct": sum(r["width_gain_pct"] for r in out) / max(len(out), 1),
             "max_Jpk_change_pct": max((r["Jpk_change_pct"] for r in out), default=math.nan),
             "final_width_gain_pct": out[-1]["width_gain_pct"] if out else math.nan,
             "final_Jpk_change_pct": out[-1]["Jpk_change_pct"] if out else math.nan,
+        }
+        report["response_vs_source_mode_zero"] = {
+            "comparison": "icd_source=4,J_0cd=0",
+            "max_width_gain_pct": mode_max_width,
+            "mean_width_gain_pct": sum(r["width_gain_pct"] for r in mode_out) / max(len(mode_out), 1),
+            "max_Jpk_change_pct": mode_max_jpk,
+            "final_width_gain_pct": mode_out[-1]["width_gain_pct"] if mode_out else math.nan,
+            "final_Jpk_change_pct": mode_out[-1]["Jpk_change_pct"] if mode_out else math.nan,
         }
     (OUT / "command_history.json").write_text(json.dumps(command_log, indent=2) + "\\n")
     (OUT / "native_feedback_summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\\n")
@@ -498,6 +522,7 @@ def main() -> int:
         f"repo={REPO}\\nsource={SRC}\\nbaseline={BASE}\\nexecutable={EXE}\\n"
         f"executable_sha256={pta.sha256_file(EXE)}\\nrun_root={RUN_ROOT}\\n"
         f"dt={DT}\\nsegment_steps={SEGMENT_STEPS}\\nmax_segments={MAX_SEGMENTS}\\n"
+        f"horizon_steps={horizon_steps}\\nhorizon_time={horizon_time}\\n"
         f"icd_source={CURRENT_SOURCE}\\nprofile_width={PROFILE_WIDTH}\\nshoulder_width={SHOULDER_WIDTH}\\nshoulder_separation={SHOULDER_DELTA}\\n"
     )
     print(json.dumps(report, indent=2, sort_keys=True))
