@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import shutil
 import time
 from pathlib import Path
@@ -71,7 +72,6 @@ def write_input(name: str, source: int, amp: float, restart: int,
         "dt": f"{DT:.10g}",
         "ntimemax": str(SEGMENT_STEPS),
         "ntimepr": str(NTIMEPR),
-        RESTART_KEY: str(restart),
         "imag_control": "0",
         "mag_ctrl_amp": "0.0",
         "icd_source": str(source),
@@ -89,6 +89,13 @@ def write_input(name: str, source: int, amp: float, restart: int,
         if key not in NATIVE_CONTROL_KEYS:
             raise RuntimeError(f"non-allow-listed control key: {key}")
         text = pta.replace_or_add(text, key, value)
+    # Fresh runs must not add an unknown restart keyword. For restart segments,
+    # add it only when the source did not already expose the assignment; the
+    # run-time probe below will classify unsupported restart behavior explicitly.
+    if re.search(r"^\\s*restart\\s*=", text, re.I | re.M):
+        text = pta.replace_or_add(text, RESTART_KEY, str(restart))
+    elif restart:
+        text = pta.replace_or_add(text, RESTART_KEY, str(restart))
     (d / "C1input").write_text(text)
     launch = f'''#!/usr/bin/env bash
 set -euo pipefail
@@ -128,6 +135,11 @@ def execute(d: Path) -> None:
     (d / "elapsed_seconds.txt").write_text(f"{time.time()-t0:.6f}\\n")
     if p.returncode:
         raise RuntimeError(f"{d.name} failed rc={p.returncode}\\n{p.stdout[-5000:]}")
+    if not (d / "C1.h5").exists():
+        stdout_tail = (d / "C1stdout").read_text(errors="replace")[-6000:] if (d / "C1stdout").exists() else "missing C1stdout"
+        stderr_tail = (d / "launcher.stderr").read_text(errors="replace")[-6000:] if (d / "launcher.stderr").exists() else "missing launcher.stderr"
+        status = (d / "run_status.txt").read_text(errors="replace") if (d / "run_status.txt").exists() else "missing run_status.txt"
+        raise RuntimeError(f"{d.name} produced no C1.h5; status={status}\\nC1stdout tail:\\n{stdout_tail}\\nlauncher.stderr tail:\\n{stderr_tail}")
 
 
 def safe_extract(d: Path) -> list[dict[str, float]]:
