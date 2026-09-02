@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import shutil
 import time
 from pathlib import Path
@@ -45,9 +46,10 @@ JPK_GROWTH_THRESHOLD = 0.05
 BIAS_AMP = -0.002
 AGGRESSIVE_AMP = -0.02
 HOLD_AMP = -0.005
-PROFILE_WIDTH = 0.50
-SHOULDER_WIDTH = 0.25
-SHOULDER_DELTA = 0.56
+PROFILE_WIDTH = 0.2805
+SHOULDER_WIDTH = 0.2805
+SHOULDER_DELTA = 0.561
+CURRENT_SOURCE = 4
 R0 = 10.0
 Z0 = 1.0
 
@@ -58,6 +60,124 @@ NATIVE_CONTROL_KEYS = {
     "delta_cd", "cd_t_on", "cd_t_ramp", "cd_t_off",
 }
 
+
+
+def install_current_redistribution_operator() -> bool:
+    """Install the previously validated icd_source=4 TCT profile.
+
+    The official icd_source=1 branch is a single Gaussian plus a uniform
+    subtraction term.  It is not the center/shoulder redistribution used by
+    the earlier TCT authority rung.  This installer restores that separate,
+    net-current-neutral source without changing solver physics.
+    """
+    modules = SRC / "unstructured/M3Dmodules.f90"
+    inputf = SRC / "unstructured/input.f90"
+    transport = SRC / "unstructured/transport.f90"
+    for path in (modules, inputf, transport):
+        if not path.exists():
+            raise FileNotFoundError(path)
+    changed = False
+
+    text = modules.read_text()
+    missing = []
+    declarations = {
+        "w_cd_shoulder": "  real :: w_cd_shoulder  ! width of shoulder Gaussians for neutral redistribution",
+        "cd_t_on": "  real :: cd_t_on        ! current-drive turn-on time",
+        "cd_t_ramp": "  real :: cd_t_ramp      ! current-drive smooth ramp duration",
+        "cd_t_off": "  real :: cd_t_off       ! current-drive turn-off time",
+    }
+    for name, declaration in declarations.items():
+        if not re.search(rf"\\b{re.escape(name)}\\b", text, re.I):
+            missing.append(declaration)
+    if missing:
+        anchor = re.search(r"^\\s*real\\s*::\\s*delta_cd\\b[^\\n]*$", text, re.I | re.M)
+        if not anchor:
+            raise RuntimeError("current-drive module declaration anchor not found")
+        addition = anchor.group(0) + "\\n" + "\\n".join(missing)
+        text = text[:anchor.start()] + addition + text[anchor.end():]
+        modules.write_text(text)
+        changed = True
+
+    text = inputf.read_text()
+    if '"W_cd_shoulder"' not in text:
+        anchor = re.search(
+            r'^\\s*call\\s+add_var_double\\("delta_cd"[^\\n]*\\n(?:[^\\n]*\\n){0,2}',
+            text, re.I | re.M,
+        )
+        if not anchor:
+            raise RuntimeError("delta_cd input registration anchor not found")
+        regs = anchor.group(0) + (
+            '  call add_var_double("W_cd_shoulder", w_cd_shoulder, 0., &\\n'
+            '       "shoulder width for neutral center-plus-shoulder cd source", source_grp)\\n'
+            '  call add_var_double("cd_t_on", cd_t_on, 0., &\\n'
+            '       "time when current drive turns on", source_grp)\\n'
+            '  call add_var_double("cd_t_ramp", cd_t_ramp, 0., &\\n'
+            '       "smooth current-drive ramp duration", source_grp)\\n'
+            '  call add_var_double("cd_t_off", cd_t_off, 1.e30, &\\n'
+            '       "time when current drive turns off", source_grp)\\n'
+        )
+        text = text[:anchor.start()] + regs + text[anchor.end():]
+        inputf.write_text(text)
+        changed = True
+
+    text = transport.read_text()
+    if "icd_source.eq.4" not in text:
+        start = text.find("function cd_func")
+        end = text.find("cd_func = temp", start)
+        if start < 0 or end < 0:
+            raise RuntimeError("cd_func source block not found")
+        insert_at = text.rfind("  endif", start, end)
+        if insert_at < 0:
+            raise RuntimeError("cd_func closing endif not found")
+        block = """  else if(icd_source.eq.4) then
+     cd_w_center = max(w_cd, 1.e-30)
+     if(w_cd_shoulder.gt.0.) then
+        cd_w_sh = w_cd_shoulder
+     else
+        cd_w_sh = cd_w_center
+     end if
+     cd_sep = abs(delta_cd)
+     temp79a = 0.
+     temp79b = 0.
+     do j=1,npoints
+        call magnetic_region(pst79(j,OP_1),pst79(j,OP_DR),pst79(j,OP_DZ), &
+             x_79(j),z_79(j),iregion)
+        if(iregion.eq.REGION_PLASMA) then
+           temp79a(j) = -exp( -(x_79(j)-R_0cd)**2/cd_w_center**2 &
+                - (z_79(j)-Z_0cd)**2/cd_w_center**2 ) &
+                + 0.5*exp( -(x_79(j)-R_0cd)**2/cd_w_sh**2 &
+                - (z_79(j)-(Z_0cd-cd_sep))**2/cd_w_sh**2 ) &
+                + 0.5*exp( -(x_79(j)-R_0cd)**2/cd_w_sh**2 &
+                - (z_79(j)-(Z_0cd+cd_sep))**2/cd_w_sh**2 )
+           temp79b(j) = 1.
+        end if
+     enddo
+     cd_area = real(int1(temp79b))
+     if(cd_area.gt.0.) then
+        cd_net = real(int1(temp79a))/cd_area
+        do j=1,npoints
+           if(real(temp79b(j)).gt.0.) temp79a(j) = temp79a(j) - cd_net
+        enddo
+     end if
+     temp79a = cd_gate * J_0cd * temp79a
+     temp = temp + intx2(mu79(:,:,OP_1),temp79a)
+"""
+        # The validated source patch declares these locals in cd_func.
+        decl = re.search(
+            r"^\\s*real\\s*::\\s*cd_gate\\s*,\\s*cd_tau[^\\n]*$",
+            text[start:end], re.I | re.M,
+        )
+        if not decl:
+            local_start = start + decl.start() if decl else -1
+            raise RuntimeError("cd_func local declaration anchor not found")
+        decl_end = start + decl.end()
+        local_add = "\\n  real :: cd_w_center, cd_w_sh, cd_sep\\n  real :: cd_area, cd_net"
+        text = text[:decl_end] + local_add + text[decl_end:]
+        insert_at += len(local_add)
+        text = text[:insert_at] + block + text[insert_at:]
+        transport.write_text(text)
+        changed = True
+    return changed
 
 def write_input(name: str, source: int, amp: float, restart: int,
                 t_on: float, t_off: float, nmax_steps: int | None = None) -> Path:
@@ -164,17 +284,17 @@ def safe_extract(d: Path) -> list[dict[str, float]]:
 
 def policy(previous: dict[str, float] | None, current: dict[str, float]) -> dict[str, float | int | str]:
     if previous is None:
-        return {"state": "BIAS", "source": 1, "amp": BIAS_AMP}
+        return {"state": "BIAS", "source": CURRENT_SOURCE, "amp": BIAS_AMP}
     dt = max(current["time"] - previous["time"], DT)
     dw = (current["W_sheet"] - previous["W_sheet"]) / dt
     dj = (current["Jpk"] - previous["Jpk"]) / max(abs(previous["Jpk"]), 1e-300) / dt
     if dw <= THINNING_RATE_THRESHOLD or dj >= JPK_GROWTH_THRESHOLD:
-        return {"state": "AGGRESSIVE", "source": 1, "amp": AGGRESSIVE_AMP,
+        return {"state": "AGGRESSIVE", "source": CURRENT_SOURCE, "amp": AGGRESSIVE_AMP,
                 "dW_dt": dw, "dJpk_dt_fraction": dj}
     if dw >= 0.0:
-        return {"state": "HOLD", "source": 1, "amp": HOLD_AMP,
+        return {"state": "HOLD", "source": CURRENT_SOURCE, "amp": HOLD_AMP,
                 "dW_dt": dw, "dJpk_dt_fraction": dj}
-    return {"state": "BIAS", "source": 1, "amp": BIAS_AMP,
+    return {"state": "BIAS", "source": CURRENT_SOURCE, "amp": BIAS_AMP,
             "dW_dt": dw, "dJpk_dt_fraction": dj}
 
 
@@ -206,6 +326,8 @@ def main() -> int:
         raise FileNotFoundError(EXE)
     RUN_ROOT.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
+    pta.install_operator()
+    install_current_redistribution_operator()
     pta.build()
 
     report: dict = {
@@ -214,6 +336,8 @@ def main() -> int:
             "observable": ["W_sheet", "Jpk", "dW_dt", "dJpk_dt"],
             "states": ["BIAS", "AGGRESSIVE", "HOLD"],
             "restart_key": RESTART_KEY,
+            "actuator": "icd_source=4 net-current-neutral center-plus-shoulder redistribution",
+            "profile": {"R_0cd": R0, "Z_0cd": Z0, "W_cd": PROFILE_WIDTH, "W_cd_shoulder": SHOULDER_WIDTH, "delta_cd": SHOULDER_DELTA},
             "segment_duration": SEGMENT_DURATION,
             "max_segments": MAX_SEGMENTS,
             "policy": {
@@ -239,7 +363,7 @@ def main() -> int:
 
     # Zero-actuation restart seed checks whether the current-drive path is
     # equivalent to no source before any feedback claim is made.
-    zero_dir = write_input("zero_current_drive", 1, 0.0, 0, 0.0, SEGMENT_DURATION)
+    zero_dir = write_input("zero_current_drive", CURRENT_SOURCE, 0.0, 0, 0.0, SEGMENT_DURATION)
     print("[native-feedback] running zero_current_drive", flush=True)
     execute(zero_dir)
     zero_rows = safe_extract(zero_dir)
@@ -260,7 +384,7 @@ def main() -> int:
     }
 
     # First controlled segment starts from the same frozen initial condition.
-    previous_dir = write_input("segment_000", 1, BIAS_AMP, 0, 0.0, SEGMENT_DURATION)
+    previous_dir = write_input("segment_000", CURRENT_SOURCE, BIAS_AMP, 0, 0.0, SEGMENT_DURATION)
     print("[native-feedback] running segment_000", flush=True)
     execute(previous_dir)
     segment_rows = safe_extract(previous_dir)
@@ -356,6 +480,7 @@ def main() -> int:
         f"repo={REPO}\\nsource={SRC}\\nbaseline={BASE}\\nexecutable={EXE}\\n"
         f"executable_sha256={pta.sha256_file(EXE)}\\nrun_root={RUN_ROOT}\\n"
         f"dt={DT}\\nsegment_steps={SEGMENT_STEPS}\\nmax_segments={MAX_SEGMENTS}\\n"
+        f"icd_source={CURRENT_SOURCE}\\nprofile_width={PROFILE_WIDTH}\\nshoulder_width={SHOULDER_WIDTH}\\nshoulder_separation={SHOULDER_DELTA}\\n"
     )
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0
