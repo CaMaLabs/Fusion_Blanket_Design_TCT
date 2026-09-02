@@ -60,7 +60,7 @@ NATIVE_CONTROL_KEYS = {
 
 
 def write_input(name: str, source: int, amp: float, restart: int,
-                t_on: float, t_off: float) -> Path:
+                t_on: float, t_off: float, nmax_steps: int | None = None) -> Path:
     d = RUN_ROOT / name
     if d.exists():
         shutil.rmtree(d)
@@ -74,7 +74,9 @@ def write_input(name: str, source: int, amp: float, restart: int,
     text = (BASE / "C1input").read_text()
     updates = {
         "dt": f"{DT:.10g}",
-        "ntimemax": str(SEGMENT_STEPS),
+        # ntimemax is an absolute timestep ceiling; restarted segments must
+        # extend it beyond the timestep already stored in the restart state.
+        "ntimemax": str(nmax_steps if nmax_steps is not None else SEGMENT_STEPS),
         "ntimepr": str(NTIMEPR),
         RESTART_KEY: str(restart),
         IRESTART_SLICE_KEY: "-1",
@@ -279,6 +281,7 @@ def main() -> int:
         current_dir = write_input(
             f"segment_{segment:03d}", int(decision["source"]), float(decision["amp"]),
             1, start_time, start_time + SEGMENT_DURATION,
+            nmax_steps=int(round((start_time + SEGMENT_DURATION) / DT)),
         )
         copy_restart_state(previous_dir, current_dir)
         print(f"[native-feedback] running segment_{segment:03d} state={decision['state']}", flush=True)
@@ -308,7 +311,9 @@ def main() -> int:
                 "segment": segment, "directory": str(current_dir),
                 "state": decision["state"], "source": decision["source"],
                 "amp": decision["amp"], "t_on": start_time,
-                "t_off": start_time + SEGMENT_DURATION, "restart": 1,
+                "t_off": start_time + SEGMENT_DURATION,
+            "ntimemax": int(round((start_time + SEGMENT_DURATION) / DT)),
+            "restart": 1,
                 "error": str(exc),
             })
             break
