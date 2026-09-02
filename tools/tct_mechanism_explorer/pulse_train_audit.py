@@ -132,10 +132,15 @@ def install_operator() -> bool:
 
     text = ludef.read_text()
     if "mag_phase" not in text:
-        old_decl = "  real :: mag_gate, mag_tau, mag_wr, mag_wz\n"
-        if old_decl not in text:
+        # The upstream declaration has changed formatting/order across M3D-C1
+        # checkouts. Match the declaration semantically so installation remains
+        # idempotent after the native V2 operator patch has already run.
+        decl_re = re.compile(r"^(\\s*real\\s*::[^\\n]*\\bmag_wz\\b[^\\n]*)$", re.M)
+        match = decl_re.search(text)
+        if not match:
             raise RuntimeError("imag_control local declaration not found in ludef_t.f90")
-        text = text.replace(old_decl, "  real :: mag_gate, mag_tau, mag_wr, mag_wz, mag_phase\n", 1)
+        declaration = match.group(1)
+        text = text[:match.start(1)] + declaration.replace("mag_wz", "mag_wz, mag_phase", 1) + text[match.end(1):]
         changed = True
 
     start = text.find("  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then")
