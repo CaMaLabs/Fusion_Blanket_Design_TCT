@@ -168,14 +168,35 @@ def install_operator() -> bool:
         changed = True
 
     text = ludef.read_text()
+    # Normalize declarations in flux_nolin so reruns remain idempotent even
+    # when an earlier operator variant already added overlapping locals.
+    proc = re.search(r"^\s*subroutine\s+flux_nolin\b[^\n]*$", text, re.I | re.M)
+    if proc:
+        end_proc = re.search(r"^\s*end\s+subroutine\s+flux_nolin\b[^\n]*$", text[proc.end():], re.I | re.M)
+        body_end = proc.end() + end_proc.start() if end_proc else len(text)
+        body = text[proc.end():body_end]
+        body = re.sub(r"^\s*integer\s*::\s*j\s*$\n?", "", body, flags=re.I | re.M)
+        body = re.sub(r"^\s*real\s*::\s*mag_gate\b[^\n]*$\n?", "", body, flags=re.I | re.M)
+        decl = re.search(
+            r"^\s*vectype\b[^\n]*intent\s*\(\s*out\s*\)[^\n]*::\s*r4term\b[^\n]*$",
+            body, re.I | re.M,
+        )
+        if decl:
+            decl_end = decl.end()
+            existing_integer_j = re.search(r"^\s*integer\s*::[^\n]*\bj\b", body, re.I | re.M)
+            if not existing_integer_j:
+                body = body[:decl_end] + "\n  integer :: j" + body[decl_end:]
+                decl_end += len("\n  integer :: j")
+            body = body[:decl_end] + "\n  real :: mag_gate, mag_tau, mag_wr, mag_wz, mag_cmd" + body[decl_end:]
+        text = text[:proc.end()] + body + text[body_end:]
+        changed = True
     # Match the native magnetic-control block independent of indentation or
     # spacing style used by the particular official checkout.
     start_match = re.search(
         # Official source revisions differ in spacing, decimal spelling, and
         # whether the condition is split across continuation lines.  Anchor
         # on the two semantic control symbols and the executable IF/THEN.
-        r"^\s*if\b(?=[^\n]*\bimag_control\b)"
-        r"(?=[^\n]*\bmag_ctrl_amp\b)[^\n]*\bthen\b",
+        r"^\s*if\b[^\n]*\bimag_control\b[^\n]*\bthen\b",
         text, re.I | re.M,
     )
     if not start_match:
