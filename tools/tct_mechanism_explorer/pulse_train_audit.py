@@ -137,8 +137,8 @@ def install_operator() -> bool:
         # Official source revisions differ in spacing, decimal spelling, and
         # whether the condition is split across continuation lines.  Anchor
         # on the two semantic control symbols and the executable IF/THEN.
-        r"^\\s*if\\b(?=[^\\n]*\\bimag_control\\b)"
-        r"(?=[^\\n]*\\bmag_ctrl_amp\\b)[^\\n]*\\bthen\\b",
+        r"^\s*if\b(?=[^\n]*\bimag_control\b)"
+        r"(?=[^\n]*\bmag_ctrl_amp\b)[^\n]*\bthen\b",
         text, re.I | re.M,
     )
     if not start_match:
