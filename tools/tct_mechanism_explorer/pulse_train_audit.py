@@ -142,7 +142,27 @@ def install_operator() -> bool:
         text, re.I | re.M,
     )
     if not start_match:
-        raise RuntimeError("imag_control source block not found in ludef_t.f90")
+        # Some official trees keep this included fragment under a different
+        # filename. Search the actual unstructured source set before failing.
+        root = SRC / "unstructured"
+        for candidate in sorted(root.rglob("*")):
+            if (candidate == ludef or not candidate.is_file()
+                    or candidate.suffix.lower() not in {".f90", ".f", ".inc"}):
+                continue
+            try:
+                candidate_text = candidate.read_text()
+            except (OSError, UnicodeDecodeError):
+                continue
+            candidate_match = re.search(
+                r"^\s*if\b(?=[^\n]*\bimag_control\b)"
+                r"(?=[^\n]*\bmag_ctrl_amp\b)[^\n]*\bthen\b",
+                candidate_text, re.I | re.M,
+            )
+            if candidate_match:
+                ludef, text, start_match = candidate, candidate_text, candidate_match
+                break
+    if not start_match:
+        raise RuntimeError("native imag_control/mag_ctrl_amp source block not found under unstructured/")
     start = start_match.start()
     end_match = re.search(
         r"^\s*if\b(?=[^\n]*\bicd_source\b)[^\n]*\bthen\b",
