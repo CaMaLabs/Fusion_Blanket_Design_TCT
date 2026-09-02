@@ -285,11 +285,22 @@ def main() -> int:
         try:
             execute(current_dir)
             rows = safe_extract(current_dir)
-            if not rows or rows[0]["time"] <= start_time + 1e-8:
+            if not rows:
+                raise RuntimeError(
+                    f"restart produced no extracted rows: start={start_time}"
+                )
+            # A valid restart output includes the loaded state itself as the
+            # first row at exactly start_time. Require a later emitted row,
+            # then remove that duplicated seed before appending the segment.
+            advanced_rows = [
+                row for row in rows if row["time"] > start_time + 1e-8
+            ]
+            if not advanced_rows:
                 raise RuntimeError(
                     f"restart did not advance physical time: start={start_time}, "
-                    f"first={rows[0]['time'] if rows else 'missing'}"
+                    f"first={rows[0]['time']}, last={rows[-1]['time']}"
                 )
+            rows = advanced_rows
         except Exception as exc:
             restart_ok = False
             restart_error = str(exc)
