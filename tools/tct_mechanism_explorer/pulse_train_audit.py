@@ -143,7 +143,7 @@ def install_operator() -> bool:
         raise RuntimeError("imag_control source block not found in ludef_t.f90")
     start = start_match.start()
     end_match = re.search(
-        r"^\\s*if\\s*\\(\\s*icd_source\\s*\\.gt\\.\\s*0\\.\\)\\s*then\\b",
+        r"^\s*if\s*\(\s*icd_source\s*\.gt\.\s*0\.\)\s*then\b",
         text[start_match.end():], re.I | re.M,
     )
     if not end_match:
