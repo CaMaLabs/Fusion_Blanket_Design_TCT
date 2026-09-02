@@ -179,36 +179,43 @@ def install_operator() -> bool:
         text, re.I | re.M,
     )
     if not start_match:
-        # Some official trees keep this included fragment under a different
-        # filename. Search the actual unstructured source set before failing.
-        root = SRC / "unstructured"
-        for candidate in sorted(root.rglob("*")):
-            if (candidate == ludef or not candidate.is_file()
-                    or candidate.suffix.lower() not in {".f90", ".f", ".inc"}):
-                continue
-            try:
-                candidate_text = candidate.read_text()
-            except (OSError, UnicodeDecodeError):
-                continue
-            candidate_match = re.search(
-                r"^\s*if\b(?=[^\n]*\bimag_control\b)"
-                r"(?=[^\n]*\bmag_ctrl_amp\b)[^\n]*\bthen\b",
-                candidate_text, re.I | re.M,
-            )
-            if candidate_match:
-                ludef, text, start_match = candidate, candidate_text, candidate_match
-                break
-    if not start_match:
-        raise RuntimeError("native imag_control/mag_ctrl_amp source block not found under unstructured/")
-    start = start_match.start()
-    end_match = re.search(
-        r"^\s*if\b(?=[^\n]*\bicd_source\b)[^\n]*\bthen\b",
-        text[start_match.end():], re.I | re.M,
-    )
-    if not end_match:
-        raise RuntimeError("icd_source boundary not found after magnetic block in ludef_t.f90")
-    end = start_match.end() + end_match.start()
-    block = text[start:end]
+        # The official source may be pristine: install the base operator in
+        # flux_nolin before adding the periodic gate.
+        proc = re.search(r"^\s*subroutine\s+flux_nolin\b[^\n]*$", text, re.I | re.M)
+        if not proc:
+            raise RuntimeError("cannot locate flux_nolin in ludef_t.f90")
+        decl = re.search(
+            r"^\s*vectype\b[^\n]*intent\s*\(\s*out\s*\)[^\n]*::\s*r4term\b[^\n]*$",
+            text[proc.end():], re.I | re.M,
+        )
+        if not decl:
+            raise RuntimeError("cannot locate flux_nolin r4term declaration")
+        decl_end = proc.end() + decl.end()
+        if not re.search(r"^\s*integer\s*::\s*j\b", text[proc.end():decl_end + 1], re.I | re.M):
+            text = text[:decl_end] + (
+                "\n  integer :: j\n"
+                "  real :: mag_gate, mag_tau, mag_wr, mag_wz"
+            ) + text[decl_end:]
+            changed = True
+        icd_match = re.search(
+            r"^\s*if\b(?=[^\n]*\bicd_source\b)[^\n]*\bthen\b",
+            text, re.I | re.M,
+        )
+        if not icd_match:
+            raise RuntimeError("cannot locate icd_source block in flux_nolin")
+        start = icd_match.start()
+        end = start
+        block = ""
+    else:
+        start = start_match.start()
+        end_match = re.search(
+            r"^\s*if\b(?=[^\n]*\bicd_source\b)[^\n]*\bthen\b",
+            text[start_match.end():], re.I | re.M,
+        )
+        if not end_match:
+            raise RuntimeError("icd_source boundary not found after magnetic block in ludef_t.f90")
+        end = start_match.end() + end_match.start()
+        block = text[start:end]
     if "mag_ctrl_period.gt.0." not in block:
         new_block = """  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then
      if(time.lt.mag_ctrl_t_on .or. time.ge.mag_ctrl_t_off) then
