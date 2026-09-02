@@ -134,16 +134,18 @@ def install_operator() -> bool:
     # Match the native magnetic-control block independent of indentation or
     # spacing style used by the particular official checkout.
     start_match = re.search(
-        r"^\s*if\s*\(\s*imag_control\s*\.eq\.\s*1"
-        r"\s*\.and\.\s*mag_ctrl_amp\s*\.ne\.\s*0\.\s*\)"
-        r"\s*then\b",
+        # Official source revisions differ in spacing, decimal spelling, and
+        # whether the condition is split across continuation lines.  Anchor
+        # on the two semantic control symbols and the executable IF/THEN.
+        r"^\\s*if\\b(?=[^\\n]*\\bimag_control\\b)"
+        r"(?=[^\\n]*\\bmag_ctrl_amp\\b)[^\\n]*\\bthen\\b",
         text, re.I | re.M,
     )
     if not start_match:
         raise RuntimeError("imag_control source block not found in ludef_t.f90")
     start = start_match.start()
     end_match = re.search(
-        r"^\s*if\s*\(\s*icd_source\s*\.gt\.\s*0\.\)\s*then\b",
+        r"^\\s*if\\b(?=[^\\n]*\\bicd_source\\b)[^\\n]*\\bthen\\b",
         text[start_match.end():], re.I | re.M,
     )
     if not end_match:
