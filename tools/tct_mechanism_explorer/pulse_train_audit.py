@@ -141,9 +141,15 @@ def install_operator() -> bool:
                 text = text[:anchor.start()] + insertion + text[anchor.end():]
             else:
                 scope = re.search(r"^\\s*implicit\\s+none\\s*$", text, re.I | re.M)
-                if not scope:
-                    raise RuntimeError("cannot locate ludef_t local declaration scope")
-                text = text[:scope.end()] + "\\n  real :: mag_phase" + text[scope.end():]
+                if scope:
+                    text = text[:scope.end()] + "\\n  real :: mag_phase" + text[scope.end():]
+                else:
+                    # Some official files omit IMPLICIT NONE. The first
+                    # declaration after the enclosing procedure is still valid.
+                    proc = re.search(r"^\\s*(?:subroutine|function)\\b[^\\n]*$", text, re.I | re.M)
+                    if not proc:
+                        raise RuntimeError("cannot locate ludef_t declaration scope")
+                    text = text[:proc.end()] + "\\n  real :: mag_phase" + text[proc.end():]
             changed = True
 
     start = text.find("  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then")
