@@ -97,27 +97,27 @@ def install_operator() -> bool:
 
     text = modules.read_text()
     if "mag_ctrl_amp" not in text:
-        anchor = re.search(r"^\\s*real\\s*::\\s*delta_cd\\b[^\\n]*$", text, re.I | re.M)
+        anchor = re.search(r"^\s*real\s*::\s*delta_cd\b[^\n]*$", text, re.I | re.M)
         if not anchor:
             raise RuntimeError("cannot locate module declaration anchor delta_cd")
         decl = (
             anchor.group(0)
-            + "\\n  integer :: imag_control ! 1 = localized magnetic flux/vector-potential source"
-            + "\\n  real :: mag_ctrl_amp, mag_ctrl_r0, mag_ctrl_z0"
-            + "\\n  real :: mag_ctrl_wr, mag_ctrl_wz"
-            + "\\n  real :: mag_ctrl_t_on, mag_ctrl_t_ramp, mag_ctrl_t_off"
+            + "\n  integer :: imag_control ! 1 = localized magnetic flux/vector-potential source"
+            + "\n  real :: mag_ctrl_amp, mag_ctrl_r0, mag_ctrl_z0"
+            + "\n  real :: mag_ctrl_wr, mag_ctrl_wz"
+            + "\n  real :: mag_ctrl_t_on, mag_ctrl_t_ramp, mag_ctrl_t_off"
         )
         text = text[:anchor.start()] + decl + text[anchor.end():]
         modules.write_text(text)
         changed = True
     if "mag_ctrl_period" not in text:
-        anchor = re.search(r"^\\s*real\\s*::\\s*mag_ctrl_t_off\\b[^\\n]*$", text, re.I | re.M)
+        anchor = re.search(r"^\s*real\s*::\s*mag_ctrl_t_off\b[^\n]*$", text, re.I | re.M)
         if not anchor:
             raise RuntimeError("cannot locate magnetic module declarations")
         decl = (
             anchor.group(0)
-            + "\\n  real :: mag_ctrl_period"
-            + "\\n  real :: mag_ctrl_pulse_width"
+            + "\n  real :: mag_ctrl_period"
+            + "\n  real :: mag_ctrl_pulse_width"
         )
         text = text[:anchor.start()] + decl + text[anchor.end():]
         modules.write_text(text)
@@ -125,43 +125,43 @@ def install_operator() -> bool:
 
     text = inputf.read_text()
     if '"mag_ctrl_amp"' not in text:
-        anchor = re.search(r'^\\s*call add_var_double\\("delta_cd"[^\\n]*\\n(?:[^\\n]*\\n){0,2}', text, re.I | re.M)
+        anchor = re.search(r'^\s*call add_var_double\("delta_cd"[^\n]*\n(?:[^\n]*\n){0,2}', text, re.I | re.M)
         if not anchor:
             raise RuntimeError("cannot locate delta_cd registration anchor")
         regs = (
             anchor.group(0)
-            + '  call add_var_int("imag_control", imag_control, 0, &\\n'
-            + '       "1: localized magnetic flux/vector-potential control source", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_amp", mag_ctrl_amp, 0., &\\n'
-            + '       "localized magnetic control amplitude", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_r0", mag_ctrl_r0, 10., &\\n'
-            + '       "R-coordinate of magnetic control center", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_z0", mag_ctrl_z0, 1., &\\n'
-            + '       "Z-coordinate of magnetic control center", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_wr", mag_ctrl_wr, 0.5, &\\n'
-            + '       "R-width of magnetic control source", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_wz", mag_ctrl_wz, 0.5, &\\n'
-            + '       "Z-width of magnetic control source", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_t_on", mag_ctrl_t_on, 0., &\\n'
-            + '       "time when magnetic control turns on", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_t_ramp", mag_ctrl_t_ramp, 0., &\\n'
-            + '       "smooth magnetic-control ramp duration", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_t_off", mag_ctrl_t_off, 1.e30, &\\n'
-            + '       "time when magnetic control turns off", source_grp)\\n'
+            + '  call add_var_int("imag_control", imag_control, 0, &\n'
+            + '       "1: localized magnetic flux/vector-potential control source", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_amp", mag_ctrl_amp, 0., &\n'
+            + '       "localized magnetic control amplitude", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_r0", mag_ctrl_r0, 10., &\n'
+            + '       "R-coordinate of magnetic control center", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_z0", mag_ctrl_z0, 1., &\n'
+            + '       "Z-coordinate of magnetic control center", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_wr", mag_ctrl_wr, 0.5, &\n'
+            + '       "R-width of magnetic control source", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_wz", mag_ctrl_wz, 0.5, &\n'
+            + '       "Z-width of magnetic control source", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_t_on", mag_ctrl_t_on, 0., &\n'
+            + '       "time when magnetic control turns on", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_t_ramp", mag_ctrl_t_ramp, 0., &\n'
+            + '       "smooth magnetic-control ramp duration", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_t_off", mag_ctrl_t_off, 1.e30, &\n'
+            + '       "time when magnetic control turns off", source_grp)\n'
         )
         text = text[:anchor.start()] + regs + text[anchor.end():]
         inputf.write_text(text)
         changed = True
     if '"mag_ctrl_period"' not in text:
-        anchor = re.search(r'^\\s*call add_var_double\\("mag_ctrl_t_off"[^\\n]*\\n(?:[^\\n]*\\n){0,1}', text, re.I | re.M)
+        anchor = re.search(r'^\s*call add_var_double\("mag_ctrl_t_off"[^\n]*\n(?:[^\n]*\n){0,1}', text, re.I | re.M)
         if not anchor:
             raise RuntimeError("cannot locate magnetic input registrations")
         regs = (
             anchor.group(0)
-            + '  call add_var_double("mag_ctrl_period", mag_ctrl_period, 0., &\\n'
-            + '       "period of repeated magnetic-control pulses; <=0 selects single gate", source_grp)\\n'
-            + '  call add_var_double("mag_ctrl_pulse_width", mag_ctrl_pulse_width, 0., &\\n'
-            + '       "on-time within each repeated magnetic-control period", source_grp)\\n'
+            + '  call add_var_double("mag_ctrl_period", mag_ctrl_period, 0., &\n'
+            + '       "period of repeated magnetic-control pulses; <=0 selects single gate", source_grp)\n'
+            + '  call add_var_double("mag_ctrl_pulse_width", mag_ctrl_pulse_width, 0., &\n'
+            + '       "on-time within each repeated magnetic-control period", source_grp)\n'
         )
         text = text[:anchor.start()] + regs + text[anchor.end():]
         inputf.write_text(text)
