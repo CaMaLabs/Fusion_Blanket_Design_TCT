@@ -205,19 +205,10 @@ def install_operator() -> bool:
         proc = re.search(r"^\s*subroutine\s+flux_nolin\b[^\n]*$", text, re.I | re.M)
         if not proc:
             raise RuntimeError("cannot locate flux_nolin in ludef_t.f90")
-        decl = re.search(
-            r"^\s*vectype\b[^\n]*intent\s*\(\s*out\s*\)[^\n]*::\s*r4term\b[^\n]*$",
-            text[proc.end():], re.I | re.M,
-        )
-        if not decl:
+        if not re.search(
+                r"^\s*vectype\b[^\n]*intent\s*\(\s*out\s*\)[^\n]*::\s*r4term\b[^\n]*$",
+                text[proc.end():], re.I | re.M):
             raise RuntimeError("cannot locate flux_nolin r4term declaration")
-        decl_end = proc.end() + decl.end()
-        if not re.search(r"^\s*integer\s*::\s*j\b", text[proc.end():decl_end + 1], re.I | re.M):
-            text = text[:decl_end] + (
-                "\n  integer :: j\n"
-                "  real :: mag_gate, mag_tau, mag_wr, mag_wz"
-            ) + text[decl_end:]
-            changed = True
         icd_match = re.search(
             r"^\s*if\b(?=[^\n]*\bicd_source\b)[^\n]*\bthen\b",
             text, re.I | re.M,
