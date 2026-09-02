@@ -131,27 +131,6 @@ def install_operator() -> bool:
         changed = True
 
     text = ludef.read_text()
-    if False:
-        # Different official M3D-C1 checkouts spell/order these locals differently.
-        # Add the new phase variable independently so the patch is portable.
-        if not re.search(r"^\\s*(?:real(?:\\*\\d+)?|double\\s+precision)\\s*::[^\\n]*\\bmag_phase\\b", text, re.M):
-            anchor = re.search(r"^\\s*(?:real(?:\\*\\d+)?|double\\s+precision)\\s*::[^\\n]*\\bmag_gate\\b[^\\n]*$", text, re.M)
-            if anchor:
-                insertion = anchor.group(0) + "\\n  real :: mag_phase"
-                text = text[:anchor.start()] + insertion + text[anchor.end():]
-            else:
-                scope = re.search(r"^\\s*implicit\\s+none\\s*$", text, re.I | re.M)
-                if scope:
-                    text = text[:scope.end()] + "\\n  real :: mag_phase" + text[scope.end():]
-                else:
-                    # Some official files omit IMPLICIT NONE. The first
-                    # declaration after the enclosing procedure is still valid.
-                    proc = re.search(r"^\\s*(?:subroutine|function)\\b[^\\n]*$", text, re.I | re.M)
-                    if not proc:
-                        raise RuntimeError("cannot locate ludef_t declaration scope")
-                    text = text[:proc.end()] + "\\n  real :: mag_phase" + text[proc.end():]
-            changed = True
-
     start = text.find("  if(imag_control.eq.1 .and. mag_ctrl_amp.ne.0.) then")
     end_marker = "\n\n   if(icd_source.gt.0) then"
     end = text.find(end_marker, start)
