@@ -134,9 +134,9 @@ def install_operator() -> bool:
     # Match the native magnetic-control block independent of indentation or
     # spacing style used by the particular official checkout.
     start_match = re.search(
-        r"^\\s*if\\s*\\(\\s*imag_control\\s*\\.eq\\.\\s*1"
-        r"\\s*\\.and\\.\\s*mag_ctrl_amp\\s*\\.ne\\.\\s*0\\.\\s*\\)"
-        r"\\s*then\\b",
+        r"^\s*if\s*\(\s*imag_control\s*\.eq\.\s*1"
+        r"\s*\.and\.\s*mag_ctrl_amp\s*\.ne\.\s*0\.\s*\)"
+        r"\s*then\b",
         text, re.I | re.M,
     )
     if not start_match:
