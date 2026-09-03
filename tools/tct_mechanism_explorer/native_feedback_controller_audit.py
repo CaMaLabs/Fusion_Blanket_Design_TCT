@@ -46,6 +46,12 @@ JPK_GROWTH_THRESHOLD = 0.05
 BIAS_AMP = -0.002
 AGGRESSIVE_AMP = -0.02
 HOLD_AMP = -0.005
+# Absolute-current safety is a control-layer constraint. It does not change
+# M3D-C1 physics; it prevents an aggressive command from remaining active
+# after the controlled trajectory exceeds the native no-actuator current.
+JPK_ABSOLUTE_GUARD_FRACTION = 0.10
+JPK_REARM_FRACTION = 0.03
+SAFE_RELEASE_AMP = 0.0
 PROFILE_WIDTH = 0.2805
 SHOULDER_WIDTH = 0.2805
 SHOULDER_DELTA = 0.561
@@ -300,20 +306,68 @@ def safe_extract(d: Path) -> list[dict[str, float]]:
         raise RuntimeError(f"cannot extract {d}: {exc}") from exc
 
 
-def policy(previous: dict[str, float] | None, current: dict[str, float]) -> dict[str, float | int | str]:
+def policy(
+    previous: dict[str, float] | None,
+    current: dict[str, float],
+    baseline_ref: dict[str, float],
+    prior_state: str,
+) -> dict[str, float | int | str | bool]:
+    """Select a command using derivatives plus an absolute-current guard.
+
+    The earlier policy watched only dJpk/dt.  That allowed AGGRESSIVE to remain
+    active while Jpk was falling from a very large overshoot.  The guard is
+    evaluated against the equal-time native no-actuator trajectory and latches
+    SAFE_RELEASE until the excess current is nearly gone.
+    """
+    baseline_jpk = max(abs(baseline_ref["Jpk"]), 1e-300)
+    jpk_vs_baseline = current["Jpk"] / baseline_jpk - 1.0
+    guard_triggered = jpk_vs_baseline > JPK_ABSOLUTE_GUARD_FRACTION
+    if prior_state == "SAFE_RELEASE" and jpk_vs_baseline > JPK_REARM_FRACTION:
+        return {
+            "state": "SAFE_RELEASE", "source": CURRENT_SOURCE,
+            "amp": SAFE_RELEASE_AMP, "guard_triggered": True,
+            "reason": "jpk_guard_latched",
+            "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
+        }
+    if guard_triggered:
+        return {
+            "state": "SAFE_RELEASE", "source": CURRENT_SOURCE,
+            "amp": SAFE_RELEASE_AMP, "guard_triggered": True,
+            "reason": "jpk_absolute_guard",
+            "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
+        }
     if previous is None:
-        return {"state": "BIAS", "source": CURRENT_SOURCE, "amp": BIAS_AMP}
+        return {
+            "state": "BIAS", "source": CURRENT_SOURCE, "amp": BIAS_AMP,
+            "guard_triggered": False, "reason": "initial_bias",
+            "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
+        }
     dt = max(current["time"] - previous["time"], DT)
     dw = (current["W_sheet"] - previous["W_sheet"]) / dt
     dj = (current["Jpk"] - previous["Jpk"]) / max(abs(previous["Jpk"]), 1e-300) / dt
+    common = {
+        "dW_dt": dw,
+        "dJpk_dt_fraction": dj,
+        "guard_triggered": False,
+        "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
+    }
     if dw <= THINNING_RATE_THRESHOLD or dj >= JPK_GROWTH_THRESHOLD:
-        return {"state": "AGGRESSIVE", "source": CURRENT_SOURCE, "amp": AGGRESSIVE_AMP,
-                "dW_dt": dw, "dJpk_dt_fraction": dj}
+        return {
+            "state": "AGGRESSIVE", "source": CURRENT_SOURCE,
+            "amp": AGGRESSIVE_AMP, "reason": "precursor_thinning_or_current_growth",
+            **common,
+        }
     if dw >= 0.0:
-        return {"state": "HOLD", "source": CURRENT_SOURCE, "amp": HOLD_AMP,
-                "dW_dt": dw, "dJpk_dt_fraction": dj}
-    return {"state": "BIAS", "source": CURRENT_SOURCE, "amp": BIAS_AMP,
-            "dW_dt": dw, "dJpk_dt_fraction": dj}
+        return {
+            "state": "HOLD", "source": CURRENT_SOURCE,
+            "amp": HOLD_AMP, "reason": "width_recovering",
+            **common,
+        }
+    return {
+        "state": "BIAS", "source": CURRENT_SOURCE,
+        "amp": BIAS_AMP, "reason": "no_precursor_trigger",
+        **common,
+    }
 
 
 def nearest(rows: list[dict[str, float]], t: float) -> dict[str, float]:
@@ -352,7 +406,7 @@ def main() -> int:
         "controller": {
             "type": "native_segmented_state_feedback",
             "observable": ["W_sheet", "Jpk", "dW_dt", "dJpk_dt"],
-            "states": ["BIAS", "AGGRESSIVE", "HOLD"],
+            "states": ["BIAS", "AGGRESSIVE", "HOLD", "SAFE_RELEASE"],
             "restart_key": RESTART_KEY,
             "actuator": "icd_source=4 net-current-neutral center-plus-shoulder redistribution",
             "profile": {"R_0cd": R0, "Z_0cd": Z0, "W_cd": PROFILE_WIDTH, "W_cd_shoulder": SHOULDER_WIDTH, "delta_cd": SHOULDER_DELTA},
@@ -364,6 +418,9 @@ def main() -> int:
                 "bias_amp": BIAS_AMP,
                 "aggressive_amp": AGGRESSIVE_AMP,
                 "hold_amp": HOLD_AMP,
+                "jpk_absolute_guard_fraction": JPK_ABSOLUTE_GUARD_FRACTION,
+                "jpk_rearm_fraction": JPK_REARM_FRACTION,
+                "safe_release_amp": SAFE_RELEASE_AMP,
             },
         },
         "claim_boundary": (
@@ -420,15 +477,19 @@ def main() -> int:
         "source": CURRENT_SOURCE, "amp": BIAS_AMP, "t_on": 0.0,
         "t_off": SEGMENT_DURATION,
         "restart": 0,
+        "guard_triggered": False,
+        "reason": "initial_bias",
     }]
 
     restart_ok = True
     restart_error = None
     previous_state = segment_rows[-1]
+    last_state = "BIAS"
     for segment in range(1, MAX_SEGMENTS):
         start_time = float(previous_state["time"])
-        prior_state = control_rows[-2] if len(control_rows) >= 2 else None
-        decision = policy(prior_state, previous_state)
+        prior_row = control_rows[-2] if len(control_rows) >= 2 else None
+        baseline_ref = nearest(baseline_rows, start_time)
+        decision = policy(prior_row, previous_state, baseline_ref, last_state)
         current_dir = write_input(
             f"segment_{segment:03d}", int(decision["source"]), float(decision["amp"]),
             1, start_time, start_time + SEGMENT_DURATION,
@@ -478,7 +539,11 @@ def main() -> int:
             "t_off": start_time + SEGMENT_DURATION, "restart": 1,
             "dW_dt": decision.get("dW_dt"),
             "dJpk_dt_fraction": decision.get("dJpk_dt_fraction"),
+            "jpk_vs_baseline_pct": decision.get("jpk_vs_baseline_pct"),
+            "guard_triggered": decision.get("guard_triggered", False),
+            "reason": decision.get("reason"),
         })
+        last_state = str(decision["state"])
 
     report["restart"] = {"pass": restart_ok, "error": restart_error, "segments_completed": len(command_log)}
     report["command_history"] = command_log
