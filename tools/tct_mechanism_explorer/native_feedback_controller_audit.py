@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import shutil
 import time
@@ -29,10 +30,12 @@ EXE = BUILD / "unstructured/m3dc1_2d"
 OUT = REPO / "validation_runs/m3dc1_tct_native_feedback"
 RUN_ROOT = Path("/tmp/m3dc1_tct_native_feedback_runs")
 
-DT = 0.01
-SEGMENT_STEPS = 5
+DT = float(os.environ.get("TCT_FEEDBACK_DT", "0.01"))
+# One restart per native output step lets the controller see a developing
+# current excursion before a coarse 0.05-time-unit segment commits it.
+SEGMENT_STEPS = int(os.environ.get("TCT_FEEDBACK_SEGMENT_STEPS", "1"))
 SEGMENT_DURATION = DT * SEGMENT_STEPS
-MAX_SEGMENTS = 8
+MAX_SEGMENTS = int(os.environ.get("TCT_FEEDBACK_MAX_SEGMENTS", "40"))
 NTIMEPR = 1
 # Native M3D-C1 restart controls.  irestart selects restart mode;
 # iwrite_restart causes the preceding segment to emit restart state.
@@ -50,8 +53,12 @@ HOLD_AMP = -0.005
 # M3D-C1 physics; it prevents an aggressive command from remaining active
 # after the controlled trajectory exceeds the native no-actuator current.
 JPK_ABSOLUTE_GUARD_FRACTION = 0.10
+JPK_PREDICTIVE_TRIGGER_FRACTION = 0.05
 JPK_REARM_FRACTION = 0.03
 SAFE_RELEASE_AMP = 0.0
+# Opposite sign to the previously tested aggressive command.  This is an
+# allow-listed actuator command under audit, not a solver-equation change.
+ACTIVE_BRAKE_AMP = 0.005
 PROFILE_WIDTH = 0.2805
 SHOULDER_WIDTH = 0.2805
 SHOULDER_DELTA = 0.561
@@ -262,7 +269,7 @@ set +e
 timeout 1200s mpirun --oversubscribe -n 1 "{EXE}" -pc_factor_mat_solver_type mumps > C1stdout 2> launcher.stderr
 rc=$?
 set -e
-printf 'return_code=%s\\\\n' "$rc" > run_status.txt
+printf 'return_code=%s\\n' "$rc" > run_status.txt
 exit "$rc"
 '''
     (d / "launch_command.sh").write_text(launch)
@@ -289,14 +296,14 @@ def execute(d: Path) -> None:
     t0 = time.time()
     p = pta.sh(["bash", "launch_command.sh"], cwd=d)
     (d / "wrapper_stdout.log").write_text(p.stdout)
-    (d / "elapsed_seconds.txt").write_text(f"{time.time()-t0:.6f}\\n")
+    (d / "elapsed_seconds.txt").write_text(f"{time.time()-t0:.6f}\n")
     if p.returncode:
-        raise RuntimeError(f"{d.name} failed rc={p.returncode}\\n{p.stdout[-5000:]}")
+        raise RuntimeError(f"{d.name} failed rc={p.returncode}\n{p.stdout[-5000:]}")
     if not (d / "C1.h5").exists():
         stdout_tail = (d / "C1stdout").read_text(errors="replace")[-6000:] if (d / "C1stdout").exists() else "missing C1stdout"
         stderr_tail = (d / "launcher.stderr").read_text(errors="replace")[-6000:] if (d / "launcher.stderr").exists() else "missing launcher.stderr"
         status = (d / "run_status.txt").read_text(errors="replace") if (d / "run_status.txt").exists() else "missing run_status.txt"
-        raise RuntimeError(f"{d.name} produced no C1.h5; status={status}\\nC1stdout tail:\\n{stdout_tail}\\nlauncher.stderr tail:\\n{stderr_tail}")
+        raise RuntimeError(f"{d.name} produced no C1.h5; status={status}\nC1stdout tail:\n{stdout_tail}\nlauncher.stderr tail:\n{stderr_tail}")
 
 
 def safe_extract(d: Path) -> list[dict[str, float]]:
@@ -312,45 +319,63 @@ def policy(
     baseline_ref: dict[str, float],
     prior_state: str,
 ) -> dict[str, float | int | str | bool]:
-    """Select a command using derivatives plus an absolute-current guard.
+    """Select a bounded command with predictive current protection.
 
-    The earlier policy watched only dJpk/dt.  That allowed AGGRESSIVE to remain
-    active while Jpk was falling from a very large overshoot.  The guard is
-    evaluated against the equal-time native no-actuator trajectory and latches
-    SAFE_RELEASE until the excess current is nearly gone.
+    The previous controller used a coarse segment and a release-only response.
+    Here the restart cadence is one native output step by default.  The policy
+    predicts the next Jpk from the measured local slope and applies an
+    opposite-sign ACTIVE_BRAKE before or immediately after the absolute guard.
+    ACTIVE_BRAKE latches until the measured and predicted current are within the
+    rearm band.  All comparisons remain against the equal-time native baseline.
     """
     baseline_jpk = max(abs(baseline_ref["Jpk"]), 1e-300)
     jpk_vs_baseline = current["Jpk"] / baseline_jpk - 1.0
-    guard_triggered = jpk_vs_baseline > JPK_ABSOLUTE_GUARD_FRACTION
-    if prior_state == "SAFE_RELEASE" and jpk_vs_baseline > JPK_REARM_FRACTION:
-        return {
-            "state": "SAFE_RELEASE", "source": CURRENT_SOURCE,
-            "amp": SAFE_RELEASE_AMP, "guard_triggered": True,
-            "reason": "jpk_guard_latched",
-            "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
-        }
-    if guard_triggered:
-        return {
-            "state": "SAFE_RELEASE", "source": CURRENT_SOURCE,
-            "amp": SAFE_RELEASE_AMP, "guard_triggered": True,
-            "reason": "jpk_absolute_guard",
-            "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
-        }
     if previous is None:
         return {
             "state": "BIAS", "source": CURRENT_SOURCE, "amp": BIAS_AMP,
-            "guard_triggered": False, "reason": "initial_bias",
+            "guard_triggered": False, "predictive_triggered": False,
+            "reason": "initial_bias",
             "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
+            "predicted_jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
         }
+
     dt = max(current["time"] - previous["time"], DT)
     dw = (current["W_sheet"] - previous["W_sheet"]) / dt
     dj = (current["Jpk"] - previous["Jpk"]) / max(abs(previous["Jpk"]), 1e-300) / dt
+    predicted_jpk = current["Jpk"] + (current["Jpk"] - previous["Jpk"])
+    predicted_vs_baseline = predicted_jpk / baseline_jpk - 1.0
+    guard_triggered = jpk_vs_baseline > JPK_ABSOLUTE_GUARD_FRACTION
+    predictive_triggered = (
+        jpk_vs_baseline > JPK_PREDICTIVE_TRIGGER_FRACTION
+        or predicted_vs_baseline > JPK_ABSOLUTE_GUARD_FRACTION
+    )
     common = {
         "dW_dt": dw,
         "dJpk_dt_fraction": dj,
-        "guard_triggered": False,
+        "guard_triggered": guard_triggered,
+        "predictive_triggered": predictive_triggered,
         "jpk_vs_baseline_pct": 100.0 * jpk_vs_baseline,
+        "predicted_jpk_vs_baseline_pct": 100.0 * predicted_vs_baseline,
     }
+
+    if prior_state == "ACTIVE_BRAKE" and max(
+        jpk_vs_baseline, predicted_vs_baseline
+    ) > JPK_REARM_FRACTION:
+        return {
+            "state": "ACTIVE_BRAKE", "source": CURRENT_SOURCE,
+            "amp": ACTIVE_BRAKE_AMP, "reason": "jpk_brake_latched",
+            **common,
+        }
+    if predictive_triggered:
+        reason = (
+            "jpk_absolute_guard"
+            if guard_triggered else "predictive_jpk_guard"
+        )
+        return {
+            "state": "ACTIVE_BRAKE", "source": CURRENT_SOURCE,
+            "amp": ACTIVE_BRAKE_AMP, "reason": reason,
+            **common,
+        }
     if dw <= THINNING_RATE_THRESHOLD or dj >= JPK_GROWTH_THRESHOLD:
         return {
             "state": "AGGRESSIVE", "source": CURRENT_SOURCE,
@@ -391,6 +416,17 @@ def deltas(control: list[dict[str, float]], baseline: list[dict[str, float]]) ->
     return out
 
 
+def write_json_artifact(path: Path, payload: object) -> None:
+    """Write one complete JSON document atomically.
+
+    Atomic replacement prevents a stale/partial command history from being
+    concatenated with a later run if the wrapper is interrupted.
+    """
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    tmp.replace(path)
+
+
 def main() -> int:
     if not BASE.exists():
         raise FileNotFoundError(BASE)
@@ -406,7 +442,7 @@ def main() -> int:
         "controller": {
             "type": "native_segmented_state_feedback",
             "observable": ["W_sheet", "Jpk", "dW_dt", "dJpk_dt"],
-            "states": ["BIAS", "AGGRESSIVE", "HOLD", "SAFE_RELEASE"],
+            "states": ["BIAS", "AGGRESSIVE", "HOLD", "ACTIVE_BRAKE"],
             "restart_key": RESTART_KEY,
             "actuator": "icd_source=4 net-current-neutral center-plus-shoulder redistribution",
             "profile": {"R_0cd": R0, "Z_0cd": Z0, "W_cd": PROFILE_WIDTH, "W_cd_shoulder": SHOULDER_WIDTH, "delta_cd": SHOULDER_DELTA},
@@ -419,8 +455,10 @@ def main() -> int:
                 "aggressive_amp": AGGRESSIVE_AMP,
                 "hold_amp": HOLD_AMP,
                 "jpk_absolute_guard_fraction": JPK_ABSOLUTE_GUARD_FRACTION,
+                "jpk_predictive_trigger_fraction": JPK_PREDICTIVE_TRIGGER_FRACTION,
                 "jpk_rearm_fraction": JPK_REARM_FRACTION,
                 "safe_release_amp": SAFE_RELEASE_AMP,
+                "active_brake_amp": ACTIVE_BRAKE_AMP,
             },
         },
         "claim_boundary": (
@@ -478,6 +516,7 @@ def main() -> int:
         "t_off": SEGMENT_DURATION,
         "restart": 0,
         "guard_triggered": False,
+        "predictive_triggered": False,
         "reason": "initial_bias",
     }]
 
@@ -540,7 +579,11 @@ def main() -> int:
             "dW_dt": decision.get("dW_dt"),
             "dJpk_dt_fraction": decision.get("dJpk_dt_fraction"),
             "jpk_vs_baseline_pct": decision.get("jpk_vs_baseline_pct"),
+            "predicted_jpk_vs_baseline_pct": decision.get(
+                "predicted_jpk_vs_baseline_pct"
+            ),
             "guard_triggered": decision.get("guard_triggered", False),
+            "predictive_triggered": decision.get("predictive_triggered", False),
             "reason": decision.get("reason"),
         })
         last_state = str(decision["state"])
@@ -581,14 +624,14 @@ def main() -> int:
             "final_width_gain_pct": mode_out[-1]["width_gain_pct"] if mode_out else math.nan,
             "final_Jpk_change_pct": mode_out[-1]["Jpk_change_pct"] if mode_out else math.nan,
         }
-    (OUT / "command_history.json").write_text(json.dumps(command_log, indent=2) + "\\n")
-    (OUT / "native_feedback_summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\\n")
+    write_json_artifact(OUT / "command_history.json", command_log)
+    write_json_artifact(OUT / "native_feedback_summary.json", report)
     (OUT / "runtime_provenance.txt").write_text(
-        f"repo={REPO}\\nsource={SRC}\\nbaseline={BASE}\\nexecutable={EXE}\\n"
-        f"executable_sha256={pta.sha256_file(EXE)}\\nrun_root={RUN_ROOT}\\n"
-        f"dt={DT}\\nsegment_steps={SEGMENT_STEPS}\\nmax_segments={MAX_SEGMENTS}\\n"
-        f"horizon_steps={horizon_steps}\\nhorizon_time={horizon_time}\\n"
-        f"icd_source={CURRENT_SOURCE}\\nprofile_width={PROFILE_WIDTH}\\nshoulder_width={SHOULDER_WIDTH}\\nshoulder_separation={SHOULDER_DELTA}\\n"
+        f"repo={REPO}\nsource={SRC}\nbaseline={BASE}\nexecutable={EXE}\n"
+        f"executable_sha256={pta.sha256_file(EXE)}\nrun_root={RUN_ROOT}\n"
+        f"dt={DT}\nsegment_steps={SEGMENT_STEPS}\nmax_segments={MAX_SEGMENTS}\n"
+        f"horizon_steps={horizon_steps}\nhorizon_time={horizon_time}\n"
+        f"icd_source={CURRENT_SOURCE}\nprofile_width={PROFILE_WIDTH}\nshoulder_width={SHOULDER_WIDTH}\nshoulder_separation={SHOULDER_DELTA}\n"
     )
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0
