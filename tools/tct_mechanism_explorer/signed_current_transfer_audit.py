@@ -127,8 +127,8 @@ def main() -> int:
     nfc.SEGMENT_STEPS = 1
     nfc.SEGMENT_DURATION = DT
 
-    nfc.install_current_redistribution_operator()
     pta.install_operator()
+    nfc.install_current_redistribution_operator()
     pta.build()
 
     baseline_dir = nfc.write_input(
