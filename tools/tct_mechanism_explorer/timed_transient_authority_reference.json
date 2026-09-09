@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "source": "2026-09-09 native timed-window M3D-C1 audit before feedback-chain repair",
+  "claim_boundary": "These are observed native single-window reference points only. They preserve the transient authority finding and are not feedback, reactor-scale, RF-wave, lithium dimensional-transfer, or experimental evidence.",
+  "frozen_gates": {
+    "width_gain_threshold_pct": 0.02,
+    "Jpk_change_max_pct": 0.10
+  },
+  "points": [
+    {
+      "case": "single_0p05_0p15",
+      "time": 0.10,
+      "width_gain_pct": 0.033925353671082625,
+      "Jpk_change_pct": -0.15271177884038645,
+      "safe_gate_pass": true
+    },
+    {
+      "case": "single_0p00_0p20",
+      "time": 0.20,
+      "width_gain_pct": 0.06091547746094328,
+      "Jpk_change_pct": -0.09910166312732116,
+      "safe_gate_pass": true
+    }
+  ]
+}
