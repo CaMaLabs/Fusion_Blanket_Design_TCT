@@ -71,7 +71,7 @@ if [[ -f "$SUMMARY" ]]; then
   jq -r '
     .segments[]
     | select(.pass == false)
-    | "segment=\(.index) \(.start)->\(.stop) rc=\(.execution.return_code)\nerror=\(.error // \"\")\nC1stdout:\n\(.execution.C1stdout_tail // \"\")\nlauncher.stderr:\n\(.execution.launcher_stderr_tail // \"\")"
+    | "segment=\(.index) \(.start)->\(.stop) rc=\(.execution.return_code)\nerror=\(.error // "")\nC1stdout:\n\(.execution.C1stdout_tail // "")\nlauncher.stderr:\n\(.execution.launcher_stderr_tail // "")"
   ' "$SUMMARY"
 else
   echo "restart audit did not produce $SUMMARY"
