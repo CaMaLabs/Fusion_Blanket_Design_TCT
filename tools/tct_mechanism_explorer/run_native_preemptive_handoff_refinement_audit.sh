@@ -12,7 +12,7 @@ export OMPI_MCA_orte_tmpdir_base="$SWEEP_TMP"
 source "$HOME/spack/share/spack/setup-env.sh"
 spack env activate m3dc1-deps
 
-python3 tools/tct_mechanism_explorer/native_preemptive_handoff_refinement_audit.py
+python3 -u tools/tct_mechanism_explorer/native_preemptive_handoff_refinement_audit.py
 RC=$?
 
 OUT="validation_runs/m3dc1_tct_native_preemptive_handoff_refinement"
