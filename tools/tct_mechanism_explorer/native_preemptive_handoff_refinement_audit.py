@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import contextlib
-import io
 import json
 from pathlib import Path
 
@@ -68,13 +66,13 @@ def main():
     base.HORIZON = HORIZON
     base.summarize_handoff = summarize_preemptive
 
-    captured = io.StringIO()
-    with contextlib.redirect_stdout(captured):
-        rc = base.main()
+    # Do not redirect stdout here. base.main() emits one progress line per native
+    # M3D-C1 case; streaming those lines is important because a full sweep can
+    # otherwise look hung for many minutes even while the solver is healthy.
+    rc = base.main()
 
     summary_path = OUT / "native_handoff_refinement_summary.json"
     if not summary_path.exists():
-        print(captured.getvalue(), end="")
         raise RuntimeError(f"base audit did not produce {summary_path}")
 
     report = json.loads(summary_path.read_text())
@@ -109,7 +107,8 @@ def main():
         f.write(f"preemptive_continuation_amps={list(CONTINUATION_AMPS)}\n")
         f.write("metadata_first_stop=actual handoff time per case\n")
 
-    print(json.dumps(report, indent=2, sort_keys=True))
+    print("\n===== PREEMPTIVE HANDOFF CLASSIFICATION =====", flush=True)
+    print(report["classification"], flush=True)
     return rc
 
 
