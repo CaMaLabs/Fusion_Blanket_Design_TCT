@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-002-preemptive-two-profile-handoff",
+  "processed_result_commit": "b2e250aa87440117d49a992105263832d120d98d",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-002-preemptive-two-profile-handoff.json",
+  "classification": "M3DC1_TCT_NATIVE_TWO_PROFILE_NO_SAFE_AUTHORITY_FOUND",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The focused preemptive timing sweep is a valid scientific negative under the unchanged frozen +0.020% width and +0.10% Jpk gates. None of the t=0.09, 0.10, or 0.11 handoffs was current-safe or sustained-safe. The t=0.09 case produced the best Jpk margin of the three, with worst Jpk +0.108530% at t=0.14 (only +0.008530 percentage points above the gate), minimum width -0.018911% at t=0.16, and peak width +0.018778%, just below the width gate. Relative to later handoffs, earlier switching moved both the Jpk overshoot and width trough in the favorable direction but reduced peak width authority. This supports a narrow post-handoff amplitude refinement at t=0.09 rather than another timing or geometry sweep.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-003-preemptive-second-amplitude-refinement",
+  "new_job_rationale": "Hold the first stage, t=0.09 handoff, and second-profile geometry fixed while sweeping only second-stage amplitude from -0.0145 to -0.0160 around the parent -0.015 value, testing whether modest strength retuning can simultaneously recover +0.020% width authority and reduce worst Jpk below +0.10% without loosening either gate.",
+  "processed_utc": "2026-09-14T18:36:48Z"
+}
