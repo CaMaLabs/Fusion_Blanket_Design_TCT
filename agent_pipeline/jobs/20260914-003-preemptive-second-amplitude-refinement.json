@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-003-preemptive-second-amplitude-refinement",
+  "parent_result_job_id": "20260914-002-preemptive-two-profile-handoff",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_preemptive_second_amplitude_refinement_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_preemptive_second_amplitude_refinement"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_preemptive_second_amplitude_refinement/preemptive_second_amplitude_refinement_summary.json",
+  "purpose": "At the parent run's best preemptive timing t=0.09, hold the first stage at -0.015 and the second spatial profile fixed at center width 0.145, shoulder width 0.40, shoulder delta 0.30, then sweep only post-handoff amplitude (-0.0145, -0.0150, -0.0155, -0.0160) to test whether modest strength retuning can recover the frozen +0.020% width gate while bringing the worst Jpk excursion under +0.10%.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "primary_discriminator": "joint Jpk/width authority through t=0.14-0.16 and every native step through t=0.30",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
