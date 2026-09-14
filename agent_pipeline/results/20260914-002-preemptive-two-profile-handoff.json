@@ -1,0 +1,3058 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 365.63752937316895,
+  "error": null,
+  "finished_utc": "2026-09-14T17:28:57.566630Z",
+  "head_before": "9f2a088213f4c4530ef4b9e68d07c6f9918f78d2",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260914-002-preemptive-two-profile-handoff.json",
+  "job_id": "20260914-002-preemptive-two-profile-handoff",
+  "log_path": "agent_pipeline/logs/20260914-002-preemptive-two-profile-handoff.log",
+  "log_sha256": "bd09f70281832d364f24f8914b13ef32f0dc8d271ba94c1e178acf4e5dc2bd03",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_preemptive_two_profile_handoff"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_preemptive_two_profile_handoff_audit.sh",
+  "runner_sha256": "f9e7999a89eeccb9701087039e19087d4713371af38d1d8469d19b3ad815e287",
+  "schema_version": 1,
+  "started_utc": "2026-09-14T17:22:51.928164Z",
+  "success": true,
+  "summary": {
+    "audit": {
+      "amplitude": -0.015,
+      "dt": 0.01,
+      "first_profile": {
+        "center_width": 0.145,
+        "shoulder_delta": 0.45,
+        "shoulder_width": 0.34
+      },
+      "frozen_gates": {
+        "Jpk_change_pct_le": 0.1,
+        "width_gain_pct_gt": 0.02
+      },
+      "handoff_times": [
+        0.09,
+        0.1,
+        0.11
+      ],
+      "horizon": 0.3,
+      "reason": "static shoulder geometry improved the joint Jpk/width frontier but could not keep width positive through t=0.14-0.16; this audit changes the spatial redistribution profile before that excursion",
+      "restart_used_for_switching": false,
+      "second_profile_center_width": 0.145,
+      "second_shoulder_deltas": [
+        0.3
+      ],
+      "second_shoulder_widths": [
+        0.4
+      ],
+      "start": 0.05,
+      "type": "uninterrupted_native_two_profile_handoff"
+    },
+    "baseline": {
+      "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/baseline_source0",
+      "execution": {
+        "C1stdout_tail": "solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.520E-03 secs\n  Done calculating temperatures\n[M3D-C1 INFO] m3dc1_field_create_: field 399, #values 1, #dofs 6, name 399\n[M3D-C1 INFO] m3dc1_field_create_: field 400, #values 1, #dofs 6, name 400\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.544E-03 secs\n Dropping double cusp\n Total energy =    207.69074706144761        95.493532379681582        97.639001369261507        14.512447937182545     \n Total energy lost =    8.6879085454447558E-004\n Scalars:\n   Area =    3.1220108020715696     \n   Toroidal current =  -0.20321020982836288     \n   Toroidal flux =    3.1146068881876698     \n   Volume =    196.16172400432043     \n   Total particles =    38.844633249559834     \n   Total radiation =    0.0000000000000000     \n   Line radiation =    0.0000000000000000     \n   Bremsstrahlung radiation =    0.0000000000000000     \n   Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME   30   Tot  1.5170E+00   compute  9.3268E-01   solve  5.8434E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars      30  3.84600000E-03  4.16000000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.612E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.374E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.329E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.355E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.358E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.289E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.349E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.267E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.265E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.179E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.114E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.111E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_030.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_030.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice   30  2.99030000E-02  3.40630000E-02\nOUTPUT: hdf5_write_timings      30  5.14000000E-04  3.45770000E-02    0\nOUTPUT: hdf5_flush              30  3.17000000E-04  3.17000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 48.4819 (sec)\n ==============================================================\n END DATE: 2026 09 14   TIME: 10:23:50.7\n\n Stopped at           0\n",
+        "elapsed_seconds": 49.2677321434021,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_tail": ""
+      }
+    },
+    "best_case": {
+      "Jpk_guard_margin_pct": -0.01686911238546482,
+      "all_step_samples": [
+        {
+          "Jpk_change_pct": -0.0781875149535094,
+          "baseline_Jint_high": 0.365471609098,
+          "center_change_pct": -0.04246298771413137,
+          "controlled_Jint_high": 0.36514890952400003,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.00032269957399999605,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0009999999999763531,
+          "high_J_change_pct": -0.08829675574428819,
+          "shoulder_change_pct": 0.04947731176343506,
+          "time": 0.1,
+          "width_gain_pct": 0.01771939568289138,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.0989620114702272,
+          "baseline_Jint_high": 0.368346557854,
+          "center_change_pct": -0.03476859073333616,
+          "controlled_Jint_high": 0.368042379684,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.00030417817000000236,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.08257934369528819,
+          "shoulder_change_pct": 0.057840743081283286,
+          "time": 0.11,
+          "width_gain_pct": 0.019073795980073527,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.014808593148951665,
+          "baseline_Jint_high": 0.36752425514,
+          "center_change_pct": -0.0359870682807073,
+          "controlled_Jint_high": 0.367231896122,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.0002923590179999547,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.07954822407261197,
+          "shoulder_change_pct": 0.0687592729208042,
+          "time": 0.12,
+          "width_gain_pct": 0.018652644926264728,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.028072985159277586,
+          "baseline_Jint_high": 0.359870920918,
+          "center_change_pct": -0.015629608226153113,
+          "controlled_Jint_high": 0.35964864179800005,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.00022227911999994632,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.06176634650917334,
+          "shoulder_change_pct": 0.04928768423579921,
+          "time": 0.13,
+          "width_gain_pct": 0.01821769627177172,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.11686911238546482,
+          "baseline_Jint_high": 0.347815294018,
+          "center_change_pct": 0.029730345478551357,
+          "controlled_Jint_high": 0.34781153025800005,
+          "current_gate_pass": false,
+          "delta_Jint_high_abs": -3.763759999941829e-06,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.0010821145776773733,
+          "shoulder_change_pct": 0.038720938909664326,
+          "time": 0.14,
+          "width_gain_pct": -0.0031135468492426988,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.0840820413986032,
+          "baseline_Jint_high": 0.23117884183600002,
+          "center_change_pct": 0.03215966994714048,
+          "controlled_Jint_high": 0.23116660703800002,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -1.223479799999927e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.005292351974273135,
+          "shoulder_change_pct": 0.05218214680406952,
+          "time": 0.15,
+          "width_gain_pct": -0.007973872794186931,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.06725186308298436,
+          "baseline_Jint_high": 0.311252127539,
+          "center_change_pct": 0.02180589559594992,
+          "controlled_Jint_high": 0.31111034874,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.0001417787990000141,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.04555111000237311,
+          "shoulder_change_pct": 0.07320758061268862,
+          "time": 0.16,
+          "width_gain_pct": -0.018530095960256343,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.05246675532750711,
+          "baseline_Jint_high": 0.218746167156,
+          "center_change_pct": 0.006399571392723402,
+          "controlled_Jint_high": 0.21865289952,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -9.326763600001065e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.042637380673959946,
+          "shoulder_change_pct": -0.006211867098837587,
+          "time": 0.17,
+          "width_gain_pct": 0.0018221182682021109,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.022967717888167094,
+          "baseline_Jint_high": 0.21551173842000002,
+          "center_change_pct": 0.03896405147481019,
+          "controlled_Jint_high": 0.215484115836,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -2.7622584000019934e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.012817206247106583,
+          "shoulder_change_pct": -0.01878423000849505,
+          "time": 0.18,
+          "width_gain_pct": 0.00388760879468375,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.009929007595688155,
+          "baseline_Jint_high": 0.29861225616,
+          "center_change_pct": 0.0009044805752811413,
+          "controlled_Jint_high": 0.29851643856800003,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -9.58175919999471e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.0320876286968641,
+          "shoulder_change_pct": -0.027196710660815082,
+          "time": 0.19,
+          "width_gain_pct": 0.007461122696095224,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.012259999562136414,
+          "baseline_Jint_high": 0.28987894872200004,
+          "center_change_pct": 0.008434291419923134,
+          "controlled_Jint_high": 0.289834742103,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -4.4206619000064507e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.015250027363133967,
+          "shoulder_change_pct": -0.029687505920783508,
+          "time": 0.2,
+          "width_gain_pct": 0.00689465199155137,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.0293981963075729,
+          "baseline_Jint_high": 0.279676018214,
+          "center_change_pct": 0.038758088112089695,
+          "controlled_Jint_high": 0.279714302849,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": 3.828463499999657e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": 0.013688923077670445,
+          "shoulder_change_pct": -0.020573765588838278,
+          "time": 0.21,
+          "width_gain_pct": 0.006192830470319599,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.013267514262582658,
+          "baseline_Jint_high": 0.268105134943,
+          "center_change_pct": 0.028878808380849996,
+          "controlled_Jint_high": 0.26812370163,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": 1.8566687000010074e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": 0.006925151584269429,
+          "shoulder_change_pct": 0.02175697153923295,
+          "time": 0.22,
+          "width_gain_pct": -0.0032704548459161487,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.09250521216342955,
+          "baseline_Jint_high": 0.179049705153,
+          "center_change_pct": -0.003995715738580596,
+          "controlled_Jint_high": 0.178923608028,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.00012609712500000203,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.07042576523220712,
+          "shoulder_change_pct": 0.003404434581733007,
+          "time": 0.23,
+          "width_gain_pct": -0.001281742957615073,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.11210295535419856,
+          "baseline_Jint_high": 0.226460380879,
+          "center_change_pct": 0.0015345092469587485,
+          "controlled_Jint_high": 0.22630889023900003,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.0001514906399999738,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.06689498596265109,
+          "shoulder_change_pct": -0.0007203287052948149,
+          "time": 0.24,
+          "width_gain_pct": 0.0031207854326087414,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.12432808596494205,
+          "baseline_Jint_high": 0.295689581229,
+          "center_change_pct": -0.011681636531590822,
+          "controlled_Jint_high": 0.295564818708,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.0001247625210000214,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.0421937494319069,
+          "shoulder_change_pct": -0.00147171903950305,
+          "time": 0.25,
+          "width_gain_pct": 0.0035025741866867577,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.012416429559514164,
+          "baseline_Jint_high": 0.293677362118,
+          "center_change_pct": 0.022756826209624492,
+          "controlled_Jint_high": 0.293712391262,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": 3.502914399999835e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": 0.01192776445122501,
+          "shoulder_change_pct": -0.009660874482464443,
+          "time": 0.26,
+          "width_gain_pct": 0.008478484311602585,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": 0.004627877341412123,
+          "baseline_Jint_high": 0.22975464549199998,
+          "center_change_pct": -0.004539682373605469,
+          "controlled_Jint_high": 0.229732943463,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -2.1702028999981415e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": -0.0010000000000047748,
+          "high_J_change_pct": -0.009445741109392891,
+          "shoulder_change_pct": -0.0004462607247290862,
+          "time": 0.27,
+          "width_gain_pct": 0.004400727815734307,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.012007088985344083,
+          "baseline_Jint_high": 0.22748471182899999,
+          "center_change_pct": -0.03634288406536568,
+          "controlled_Jint_high": 0.22734639938400003,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -0.0001383124449999551,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.06080076497796405,
+          "shoulder_change_pct": 0.008876846828664853,
+          "time": 0.28,
+          "width_gain_pct": 0.015169189964225893,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.006025901863426775,
+          "baseline_Jint_high": 0.156122225652,
+          "center_change_pct": -0.060944916049709974,
+          "controlled_Jint_high": 0.156141402998,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": 1.917734599998777e-05,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": 0.01228354638163065,
+          "shoulder_change_pct": 0.010124349311224634,
+          "time": 0.29,
+          "width_gain_pct": 0.015430246533276737,
+          "width_gate_pass": false
+        },
+        {
+          "Jpk_change_pct": -0.007690126358383953,
+          "baseline_Jint_high": 0.155272932778,
+          "center_change_pct": -0.004037925286182187,
+          "controlled_Jint_high": 0.15526989395200003,
+          "current_gate_pass": true,
+          "delta_Jint_high_abs": -3.0388259999736267e-06,
+          "delta_Reconnected_Flux": 0.0,
+          "delta_magnetic_energy": 0.0,
+          "high_J_change_pct": -0.001957086754023063,
+          "shoulder_change_pct": 0.0028897764329904874,
+          "time": 0.3,
+          "width_gain_pct": 0.008138842820137882,
+          "width_gate_pass": false
+        }
+      ],
+      "case": "two_profile_h0p11_sw0p4000_d0p3000",
+      "continuous_positive_width_t0p10_to_t0p30": false,
+      "current_gate_pass_every_step_t0p10_to_t0p30": false,
+      "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p11_sw0p4000_d0p3000",
+      "final_Jpk_change_pct": -0.007690126358383953,
+      "final_width_gain_pct": 0.008138842820137882,
+      "final_width_gate_pass": false,
+      "first_amp": -0.015,
+      "first_profile_width": 0.145,
+      "first_shoulder_delta": 0.45,
+      "first_shoulder_width": 0.34,
+      "first_start": 0.05,
+      "first_stop": 0.11,
+      "kind": "uninterrupted_native_two_profile_handoff",
+      "max_high_J_change_pct": 0.013688923077670445,
+      "max_high_J_time": 0.21,
+      "min_high_J_change_pct": -0.08829675574428819,
+      "minimum_width_gain_pct": -0.018530095960256343,
+      "minimum_width_time": 0.16,
+      "peak_width_gain_pct": 0.019073795980073527,
+      "peak_width_time": 0.11,
+      "positive_width_margin_pct": -0.018530095960256343,
+      "second_amp": -0.015,
+      "second_profile_width": 0.145,
+      "second_shoulder_delta": 0.3,
+      "second_shoulder_width": 0.4,
+      "second_start": 0.11,
+      "second_stop": 0.3,
+      "sustained_safe_authority": false,
+      "t0p10_Jpk_change_pct": -0.0781875149535094,
+      "t0p10_high_J_change_pct": -0.08829675574428819,
+      "t0p10_width_gain_pct": 0.01771939568289138,
+      "t0p11_Jpk_change_pct": -0.0989620114702272,
+      "t0p11_high_J_change_pct": -0.08257934369528819,
+      "t0p11_width_gain_pct": 0.019073795980073527,
+      "t0p12_Jpk_change_pct": 0.014808593148951665,
+      "t0p12_high_J_change_pct": -0.07954822407261197,
+      "t0p12_width_gain_pct": 0.018652644926264728,
+      "t0p13_Jpk_change_pct": 0.028072985159277586,
+      "t0p13_high_J_change_pct": -0.06176634650917334,
+      "t0p13_width_gain_pct": 0.01821769627177172,
+      "t0p14_Jpk_change_pct": 0.11686911238546482,
+      "t0p14_high_J_change_pct": -0.0010821145776773733,
+      "t0p14_width_gain_pct": -0.0031135468492426988,
+      "t0p15_Jpk_change_pct": 0.0840820413986032,
+      "t0p15_high_J_change_pct": -0.005292351974273135,
+      "t0p15_width_gain_pct": -0.007973872794186931,
+      "t0p16_Jpk_change_pct": 0.06725186308298436,
+      "t0p16_high_J_change_pct": -0.04555111000237311,
+      "t0p16_width_gain_pct": -0.018530095960256343,
+      "t0p20_Jpk_change_pct": -0.012259999562136414,
+      "t0p20_high_J_change_pct": -0.015250027363133967,
+      "t0p20_width_gain_pct": 0.00689465199155137,
+      "t0p25_Jpk_change_pct": -0.12432808596494205,
+      "t0p25_high_J_change_pct": -0.0421937494319069,
+      "t0p25_width_gain_pct": 0.0035025741866867577,
+      "t0p30_Jpk_change_pct": -0.007690126358383953,
+      "t0p30_high_J_change_pct": -0.001957086754023063,
+      "t0p30_width_gain_pct": 0.008138842820137882,
+      "width_gate_pass_any": false,
+      "worst_Jpk_change_pct": 0.11686911238546482,
+      "worst_Jpk_time": 0.14
+    },
+    "case_summaries": [
+      {
+        "Jpk_guard_margin_pct": -0.01686911238546482,
+        "all_step_samples": [
+          {
+            "Jpk_change_pct": -0.0781875149535094,
+            "baseline_Jint_high": 0.365471609098,
+            "center_change_pct": -0.04246298771413137,
+            "controlled_Jint_high": 0.36514890952400003,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00032269957399999605,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0009999999999763531,
+            "high_J_change_pct": -0.08829675574428819,
+            "shoulder_change_pct": 0.04947731176343506,
+            "time": 0.1,
+            "width_gain_pct": 0.01771939568289138,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.0989620114702272,
+            "baseline_Jint_high": 0.368346557854,
+            "center_change_pct": -0.03476859073333616,
+            "controlled_Jint_high": 0.368042379684,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00030417817000000236,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.08257934369528819,
+            "shoulder_change_pct": 0.057840743081283286,
+            "time": 0.11,
+            "width_gain_pct": 0.019073795980073527,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.014808593148951665,
+            "baseline_Jint_high": 0.36752425514,
+            "center_change_pct": -0.0359870682807073,
+            "controlled_Jint_high": 0.367231896122,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0002923590179999547,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.07954822407261197,
+            "shoulder_change_pct": 0.0687592729208042,
+            "time": 0.12,
+            "width_gain_pct": 0.018652644926264728,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.028072985159277586,
+            "baseline_Jint_high": 0.359870920918,
+            "center_change_pct": -0.015629608226153113,
+            "controlled_Jint_high": 0.35964864179800005,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00022227911999994632,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06176634650917334,
+            "shoulder_change_pct": 0.04928768423579921,
+            "time": 0.13,
+            "width_gain_pct": 0.01821769627177172,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.11686911238546482,
+            "baseline_Jint_high": 0.347815294018,
+            "center_change_pct": 0.029730345478551357,
+            "controlled_Jint_high": 0.34781153025800005,
+            "current_gate_pass": false,
+            "delta_Jint_high_abs": -3.763759999941829e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0010821145776773733,
+            "shoulder_change_pct": 0.038720938909664326,
+            "time": 0.14,
+            "width_gain_pct": -0.0031135468492426988,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.0840820413986032,
+            "baseline_Jint_high": 0.23117884183600002,
+            "center_change_pct": 0.03215966994714048,
+            "controlled_Jint_high": 0.23116660703800002,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -1.223479799999927e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.005292351974273135,
+            "shoulder_change_pct": 0.05218214680406952,
+            "time": 0.15,
+            "width_gain_pct": -0.007973872794186931,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.06725186308298436,
+            "baseline_Jint_high": 0.311252127539,
+            "center_change_pct": 0.02180589559594992,
+            "controlled_Jint_high": 0.31111034874,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001417787990000141,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.04555111000237311,
+            "shoulder_change_pct": 0.07320758061268862,
+            "time": 0.16,
+            "width_gain_pct": -0.018530095960256343,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.05246675532750711,
+            "baseline_Jint_high": 0.218746167156,
+            "center_change_pct": 0.006399571392723402,
+            "controlled_Jint_high": 0.21865289952,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -9.326763600001065e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.042637380673959946,
+            "shoulder_change_pct": -0.006211867098837587,
+            "time": 0.17,
+            "width_gain_pct": 0.0018221182682021109,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.022967717888167094,
+            "baseline_Jint_high": 0.21551173842000002,
+            "center_change_pct": 0.03896405147481019,
+            "controlled_Jint_high": 0.215484115836,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -2.7622584000019934e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.012817206247106583,
+            "shoulder_change_pct": -0.01878423000849505,
+            "time": 0.18,
+            "width_gain_pct": 0.00388760879468375,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.009929007595688155,
+            "baseline_Jint_high": 0.29861225616,
+            "center_change_pct": 0.0009044805752811413,
+            "controlled_Jint_high": 0.29851643856800003,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -9.58175919999471e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0320876286968641,
+            "shoulder_change_pct": -0.027196710660815082,
+            "time": 0.19,
+            "width_gain_pct": 0.007461122696095224,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.012259999562136414,
+            "baseline_Jint_high": 0.28987894872200004,
+            "center_change_pct": 0.008434291419923134,
+            "controlled_Jint_high": 0.289834742103,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -4.4206619000064507e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.015250027363133967,
+            "shoulder_change_pct": -0.029687505920783508,
+            "time": 0.2,
+            "width_gain_pct": 0.00689465199155137,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.0293981963075729,
+            "baseline_Jint_high": 0.279676018214,
+            "center_change_pct": 0.038758088112089695,
+            "controlled_Jint_high": 0.279714302849,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 3.828463499999657e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.013688923077670445,
+            "shoulder_change_pct": -0.020573765588838278,
+            "time": 0.21,
+            "width_gain_pct": 0.006192830470319599,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.013267514262582658,
+            "baseline_Jint_high": 0.268105134943,
+            "center_change_pct": 0.028878808380849996,
+            "controlled_Jint_high": 0.26812370163,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 1.8566687000010074e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.006925151584269429,
+            "shoulder_change_pct": 0.02175697153923295,
+            "time": 0.22,
+            "width_gain_pct": -0.0032704548459161487,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.09250521216342955,
+            "baseline_Jint_high": 0.179049705153,
+            "center_change_pct": -0.003995715738580596,
+            "controlled_Jint_high": 0.178923608028,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00012609712500000203,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.07042576523220712,
+            "shoulder_change_pct": 0.003404434581733007,
+            "time": 0.23,
+            "width_gain_pct": -0.001281742957615073,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.11210295535419856,
+            "baseline_Jint_high": 0.226460380879,
+            "center_change_pct": 0.0015345092469587485,
+            "controlled_Jint_high": 0.22630889023900003,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001514906399999738,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06689498596265109,
+            "shoulder_change_pct": -0.0007203287052948149,
+            "time": 0.24,
+            "width_gain_pct": 0.0031207854326087414,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.12432808596494205,
+            "baseline_Jint_high": 0.295689581229,
+            "center_change_pct": -0.011681636531590822,
+            "controlled_Jint_high": 0.295564818708,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001247625210000214,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0421937494319069,
+            "shoulder_change_pct": -0.00147171903950305,
+            "time": 0.25,
+            "width_gain_pct": 0.0035025741866867577,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.012416429559514164,
+            "baseline_Jint_high": 0.293677362118,
+            "center_change_pct": 0.022756826209624492,
+            "controlled_Jint_high": 0.293712391262,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 3.502914399999835e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.01192776445122501,
+            "shoulder_change_pct": -0.009660874482464443,
+            "time": 0.26,
+            "width_gain_pct": 0.008478484311602585,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.004627877341412123,
+            "baseline_Jint_high": 0.22975464549199998,
+            "center_change_pct": -0.004539682373605469,
+            "controlled_Jint_high": 0.229732943463,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -2.1702028999981415e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": -0.0010000000000047748,
+            "high_J_change_pct": -0.009445741109392891,
+            "shoulder_change_pct": -0.0004462607247290862,
+            "time": 0.27,
+            "width_gain_pct": 0.004400727815734307,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.012007088985344083,
+            "baseline_Jint_high": 0.22748471182899999,
+            "center_change_pct": -0.03634288406536568,
+            "controlled_Jint_high": 0.22734639938400003,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001383124449999551,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06080076497796405,
+            "shoulder_change_pct": 0.008876846828664853,
+            "time": 0.28,
+            "width_gain_pct": 0.015169189964225893,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.006025901863426775,
+            "baseline_Jint_high": 0.156122225652,
+            "center_change_pct": -0.060944916049709974,
+            "controlled_Jint_high": 0.156141402998,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 1.917734599998777e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.01228354638163065,
+            "shoulder_change_pct": 0.010124349311224634,
+            "time": 0.29,
+            "width_gain_pct": 0.015430246533276737,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.007690126358383953,
+            "baseline_Jint_high": 0.155272932778,
+            "center_change_pct": -0.004037925286182187,
+            "controlled_Jint_high": 0.15526989395200003,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -3.0388259999736267e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.001957086754023063,
+            "shoulder_change_pct": 0.0028897764329904874,
+            "time": 0.3,
+            "width_gain_pct": 0.008138842820137882,
+            "width_gate_pass": false
+          }
+        ],
+        "case": "two_profile_h0p11_sw0p4000_d0p3000",
+        "continuous_positive_width_t0p10_to_t0p30": false,
+        "current_gate_pass_every_step_t0p10_to_t0p30": false,
+        "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p11_sw0p4000_d0p3000",
+        "final_Jpk_change_pct": -0.007690126358383953,
+        "final_width_gain_pct": 0.008138842820137882,
+        "final_width_gate_pass": false,
+        "first_amp": -0.015,
+        "first_profile_width": 0.145,
+        "first_shoulder_delta": 0.45,
+        "first_shoulder_width": 0.34,
+        "first_start": 0.05,
+        "first_stop": 0.11,
+        "kind": "uninterrupted_native_two_profile_handoff",
+        "max_high_J_change_pct": 0.013688923077670445,
+        "max_high_J_time": 0.21,
+        "min_high_J_change_pct": -0.08829675574428819,
+        "minimum_width_gain_pct": -0.018530095960256343,
+        "minimum_width_time": 0.16,
+        "peak_width_gain_pct": 0.019073795980073527,
+        "peak_width_time": 0.11,
+        "positive_width_margin_pct": -0.018530095960256343,
+        "second_amp": -0.015,
+        "second_profile_width": 0.145,
+        "second_shoulder_delta": 0.3,
+        "second_shoulder_width": 0.4,
+        "second_start": 0.11,
+        "second_stop": 0.3,
+        "sustained_safe_authority": false,
+        "t0p10_Jpk_change_pct": -0.0781875149535094,
+        "t0p10_high_J_change_pct": -0.08829675574428819,
+        "t0p10_width_gain_pct": 0.01771939568289138,
+        "t0p11_Jpk_change_pct": -0.0989620114702272,
+        "t0p11_high_J_change_pct": -0.08257934369528819,
+        "t0p11_width_gain_pct": 0.019073795980073527,
+        "t0p12_Jpk_change_pct": 0.014808593148951665,
+        "t0p12_high_J_change_pct": -0.07954822407261197,
+        "t0p12_width_gain_pct": 0.018652644926264728,
+        "t0p13_Jpk_change_pct": 0.028072985159277586,
+        "t0p13_high_J_change_pct": -0.06176634650917334,
+        "t0p13_width_gain_pct": 0.01821769627177172,
+        "t0p14_Jpk_change_pct": 0.11686911238546482,
+        "t0p14_high_J_change_pct": -0.0010821145776773733,
+        "t0p14_width_gain_pct": -0.0031135468492426988,
+        "t0p15_Jpk_change_pct": 0.0840820413986032,
+        "t0p15_high_J_change_pct": -0.005292351974273135,
+        "t0p15_width_gain_pct": -0.007973872794186931,
+        "t0p16_Jpk_change_pct": 0.06725186308298436,
+        "t0p16_high_J_change_pct": -0.04555111000237311,
+        "t0p16_width_gain_pct": -0.018530095960256343,
+        "t0p20_Jpk_change_pct": -0.012259999562136414,
+        "t0p20_high_J_change_pct": -0.015250027363133967,
+        "t0p20_width_gain_pct": 0.00689465199155137,
+        "t0p25_Jpk_change_pct": -0.12432808596494205,
+        "t0p25_high_J_change_pct": -0.0421937494319069,
+        "t0p25_width_gain_pct": 0.0035025741866867577,
+        "t0p30_Jpk_change_pct": -0.007690126358383953,
+        "t0p30_high_J_change_pct": -0.001957086754023063,
+        "t0p30_width_gain_pct": 0.008138842820137882,
+        "width_gate_pass_any": false,
+        "worst_Jpk_change_pct": 0.11686911238546482,
+        "worst_Jpk_time": 0.14
+      },
+      {
+        "Jpk_guard_margin_pct": -0.008529591977379875,
+        "all_step_samples": [
+          {
+            "Jpk_change_pct": -0.04544720854544604,
+            "baseline_Jint_high": 0.365471609098,
+            "center_change_pct": -0.027805043604900437,
+            "controlled_Jint_high": 0.365208336192,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00026327290600003384,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0009999999999763531,
+            "high_J_change_pct": -0.0720364864044587,
+            "shoulder_change_pct": 0.04097118410848477,
+            "time": 0.1,
+            "width_gain_pct": 0.013679455098802862,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.06335911030224128,
+            "baseline_Jint_high": 0.368346557854,
+            "center_change_pct": -0.016706224081530774,
+            "controlled_Jint_high": 0.36811239035599996,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00023416749800003744,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06357260384467489,
+            "shoulder_change_pct": 0.048094752902017035,
+            "time": 0.11,
+            "width_gain_pct": 0.0136953468219847,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.025336577340762112,
+            "baseline_Jint_high": 0.36752425514,
+            "center_change_pct": -0.01965970067823175,
+            "controlled_Jint_high": 0.367296828394,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00022742674599995905,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06188074469080096,
+            "shoulder_change_pct": 0.05839802295302121,
+            "time": 0.12,
+            "width_gain_pct": 0.014386600382954029,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.024391282187585794,
+            "baseline_Jint_high": 0.359870920918,
+            "center_change_pct": -0.018387326359659006,
+            "controlled_Jint_high": 0.359643217118,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0002277037999999787,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06327374254611051,
+            "shoulder_change_pct": 0.04114648780320085,
+            "time": 0.13,
+            "width_gain_pct": 0.018778336503655346,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.10852959197737988,
+            "baseline_Jint_high": 0.347815294018,
+            "center_change_pct": 0.018872870280861598,
+            "controlled_Jint_high": 0.347787035828,
+            "current_gate_pass": false,
+            "delta_Jint_high_abs": -2.8258189999963435e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.008124481725202415,
+            "shoulder_change_pct": 0.03230565036826949,
+            "time": 0.14,
+            "width_gain_pct": -0.00034181553901779793,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.07463462101673368,
+            "baseline_Jint_high": 0.23117884183600002,
+            "center_change_pct": 0.023282440332628163,
+            "controlled_Jint_high": 0.23114688551600002,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -3.195631999999837e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.013823202740448348,
+            "shoulder_change_pct": 0.04698866388350709,
+            "time": 0.15,
+            "width_gain_pct": -0.005603485467453595,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.06603793053634455,
+            "baseline_Jint_high": 0.311252127539,
+            "center_change_pct": 0.006248732168367965,
+            "controlled_Jint_high": 0.311119742503,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001323850359999934,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.04253305416632713,
+            "shoulder_change_pct": 0.0682459953210035,
+            "time": 0.16,
+            "width_gain_pct": -0.01891124140317446,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.046301597027653685,
+            "baseline_Jint_high": 0.218746167156,
+            "center_change_pct": 0.016432880252148507,
+            "controlled_Jint_high": 0.21869051457000002,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -5.56525859999879e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.025441627948752377,
+            "shoulder_change_pct": -0.008701662832677481,
+            "time": 0.17,
+            "width_gain_pct": -0.0009684673892285112,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.020999056354886747,
+            "baseline_Jint_high": 0.21551173842000002,
+            "center_change_pct": -0.0030550078725322116,
+            "controlled_Jint_high": 0.215367055662,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001446827580000032,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06713451390663039,
+            "shoulder_change_pct": -0.02919164067235469,
+            "time": 0.18,
+            "width_gain_pct": 0.006920782978858675,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.012687065261163255,
+            "baseline_Jint_high": 0.29861225616,
+            "center_change_pct": 0.010022892452976606,
+            "controlled_Jint_high": 0.298561969691,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -5.0286468999960476e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.016840055276567956,
+            "shoulder_change_pct": -0.03014021430611802,
+            "time": 0.19,
+            "width_gain_pct": 0.009525307440094721,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.019557618349130834,
+            "baseline_Jint_high": 0.28987894872200004,
+            "center_change_pct": 0.0029542690874961863,
+            "controlled_Jint_high": 0.289825045487,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -5.390323500004124e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.018595084340444767,
+            "shoulder_change_pct": -0.02077572266769856,
+            "time": 0.2,
+            "width_gain_pct": 0.005088612104198198,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.026533756667357355,
+            "baseline_Jint_high": 0.279676018214,
+            "center_change_pct": 0.035576487776989296,
+            "controlled_Jint_high": 0.27969066183,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 1.464361600000963e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.005235921225388296,
+            "shoulder_change_pct": -0.014069860478149732,
+            "time": 0.21,
+            "width_gain_pct": 0.007178227027448969,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.09485510196923785,
+            "baseline_Jint_high": 0.268105134943,
+            "center_change_pct": -0.00570391108299928,
+            "controlled_Jint_high": 0.268020021005,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -8.511393799998102e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.031746478118765964,
+            "shoulder_change_pct": 0.020473379748486842,
+            "time": 0.22,
+            "width_gain_pct": -0.005176645898841148,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.10012328845923069,
+            "baseline_Jint_high": 0.179049705153,
+            "center_change_pct": 0.00206879199162735,
+            "controlled_Jint_high": 0.178909291077,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001404140760000172,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0784218415104565,
+            "shoulder_change_pct": 0.0003085447401574015,
+            "time": 0.23,
+            "width_gain_pct": 0.0029602910106341085,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.11674722064746179,
+            "baseline_Jint_high": 0.226460380879,
+            "center_change_pct": -0.005938881573575028,
+            "controlled_Jint_high": 0.226315799038,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0001445818409999966,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06384420994030027,
+            "shoulder_change_pct": -0.010152351838843554,
+            "time": 0.24,
+            "width_gain_pct": 0.005289471369618326,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.11865405251151318,
+            "baseline_Jint_high": 0.295689581229,
+            "center_change_pct": -0.014024876390350549,
+            "controlled_Jint_high": 0.295580701911,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00010887931800002137,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0368221692314874,
+            "shoulder_change_pct": -0.012477373824304472,
+            "time": 0.25,
+            "width_gain_pct": 0.007352862837239904,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.023258945512871776,
+            "baseline_Jint_high": 0.293677362118,
+            "center_change_pct": 0.009629268805166902,
+            "controlled_Jint_high": 0.29372678726199997,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 4.9425143999970444e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.01682974255949876,
+            "shoulder_change_pct": -0.017723050419238273,
+            "time": 0.26,
+            "width_gain_pct": 0.010352998486840015,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.010578005351802311,
+            "baseline_Jint_high": 0.22975464549199998,
+            "center_change_pct": -0.00681678513217987,
+            "controlled_Jint_high": 0.22975341654800002,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -1.2289439999535468e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": -0.0010000000000047748,
+            "high_J_change_pct": -0.0005348940811722436,
+            "shoulder_change_pct": -0.008223944456764443,
+            "time": 0.27,
+            "width_gain_pct": 0.006628775256767305,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.010085954747685033,
+            "baseline_Jint_high": 0.22748471182899999,
+            "center_change_pct": -0.002426123021881388,
+            "controlled_Jint_high": 0.227480979335,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -3.7324939999860973e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0016407669640616795,
+            "shoulder_change_pct": -0.015185500660175322,
+            "time": 0.28,
+            "width_gain_pct": 0.00800244142229456,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.02156638561648938,
+            "baseline_Jint_high": 0.156122225652,
+            "center_change_pct": -0.00578609434227495,
+            "controlled_Jint_high": 0.156116122573,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -6.103079000008282e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.003909167304350092,
+            "shoulder_change_pct": -0.018483622655052212,
+            "time": 0.29,
+            "width_gain_pct": 0.0074910601258082465,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.024031644869959568,
+            "baseline_Jint_high": 0.155272932778,
+            "center_change_pct": 0.009291445048953406,
+            "controlled_Jint_high": 0.155262927227,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -1.0005551000002999e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.006443847501935718,
+            "shoulder_change_pct": -0.001498976591540746,
+            "time": 0.3,
+            "width_gain_pct": 0.004788648656073313,
+            "width_gate_pass": false
+          }
+        ],
+        "case": "two_profile_h0p09_sw0p4000_d0p3000",
+        "continuous_positive_width_t0p10_to_t0p30": false,
+        "current_gate_pass_every_step_t0p10_to_t0p30": false,
+        "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p09_sw0p4000_d0p3000",
+        "final_Jpk_change_pct": -0.024031644869959568,
+        "final_width_gain_pct": 0.004788648656073313,
+        "final_width_gate_pass": false,
+        "first_amp": -0.015,
+        "first_profile_width": 0.145,
+        "first_shoulder_delta": 0.45,
+        "first_shoulder_width": 0.34,
+        "first_start": 0.05,
+        "first_stop": 0.09,
+        "kind": "uninterrupted_native_two_profile_handoff",
+        "max_high_J_change_pct": 0.01682974255949876,
+        "max_high_J_time": 0.26,
+        "min_high_J_change_pct": -0.0784218415104565,
+        "minimum_width_gain_pct": -0.01891124140317446,
+        "minimum_width_time": 0.16,
+        "peak_width_gain_pct": 0.018778336503655346,
+        "peak_width_time": 0.13,
+        "positive_width_margin_pct": -0.01891124140317446,
+        "second_amp": -0.015,
+        "second_profile_width": 0.145,
+        "second_shoulder_delta": 0.3,
+        "second_shoulder_width": 0.4,
+        "second_start": 0.09,
+        "second_stop": 0.3,
+        "sustained_safe_authority": false,
+        "t0p10_Jpk_change_pct": -0.04544720854544604,
+        "t0p10_high_J_change_pct": -0.0720364864044587,
+        "t0p10_width_gain_pct": 0.013679455098802862,
+        "t0p11_Jpk_change_pct": -0.06335911030224128,
+        "t0p11_high_J_change_pct": -0.06357260384467489,
+        "t0p11_width_gain_pct": 0.0136953468219847,
+        "t0p12_Jpk_change_pct": 0.025336577340762112,
+        "t0p12_high_J_change_pct": -0.06188074469080096,
+        "t0p12_width_gain_pct": 0.014386600382954029,
+        "t0p13_Jpk_change_pct": 0.024391282187585794,
+        "t0p13_high_J_change_pct": -0.06327374254611051,
+        "t0p13_width_gain_pct": 0.018778336503655346,
+        "t0p14_Jpk_change_pct": 0.10852959197737988,
+        "t0p14_high_J_change_pct": -0.008124481725202415,
+        "t0p14_width_gain_pct": -0.00034181553901779793,
+        "t0p15_Jpk_change_pct": 0.07463462101673368,
+        "t0p15_high_J_change_pct": -0.013823202740448348,
+        "t0p15_width_gain_pct": -0.005603485467453595,
+        "t0p16_Jpk_change_pct": 0.06603793053634455,
+        "t0p16_high_J_change_pct": -0.04253305416632713,
+        "t0p16_width_gain_pct": -0.01891124140317446,
+        "t0p20_Jpk_change_pct": -0.019557618349130834,
+        "t0p20_high_J_change_pct": -0.018595084340444767,
+        "t0p20_width_gain_pct": 0.005088612104198198,
+        "t0p25_Jpk_change_pct": -0.11865405251151318,
+        "t0p25_high_J_change_pct": -0.0368221692314874,
+        "t0p25_width_gain_pct": 0.007352862837239904,
+        "t0p30_Jpk_change_pct": -0.024031644869959568,
+        "t0p30_high_J_change_pct": -0.006443847501935718,
+        "t0p30_width_gain_pct": 0.004788648656073313,
+        "width_gate_pass_any": false,
+        "worst_Jpk_change_pct": 0.10852959197737988,
+        "worst_Jpk_time": 0.14
+      },
+      {
+        "Jpk_guard_margin_pct": -0.015363365645104737,
+        "all_step_samples": [
+          {
+            "Jpk_change_pct": -0.0781875149535094,
+            "baseline_Jint_high": 0.365471609098,
+            "center_change_pct": -0.04246298771413137,
+            "controlled_Jint_high": 0.36514890952400003,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00032269957399999605,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0009999999999763531,
+            "high_J_change_pct": -0.08829675574428819,
+            "shoulder_change_pct": 0.04947731176343506,
+            "time": 0.1,
+            "width_gain_pct": 0.01771939568289138,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.0989620114702272,
+            "baseline_Jint_high": 0.368346557854,
+            "center_change_pct": -0.03476859073333616,
+            "controlled_Jint_high": 0.368042379684,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00030417817000000236,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.08257934369528819,
+            "shoulder_change_pct": 0.057840743081283286,
+            "time": 0.11,
+            "width_gain_pct": 0.019073795980073527,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.025220885206800325,
+            "baseline_Jint_high": 0.36752425514,
+            "center_change_pct": -0.02035704798180049,
+            "controlled_Jint_high": 0.367291334052,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00023292108799999323,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06337570507047863,
+            "shoulder_change_pct": 0.061902721796713855,
+            "time": 0.12,
+            "width_gain_pct": 0.014913180802911263,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.02968373020939552,
+            "baseline_Jint_high": 0.359870920918,
+            "center_change_pct": -0.01092108930751401,
+            "controlled_Jint_high": 0.35965905878000004,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.0002118621379999519,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.058871702514751156,
+            "shoulder_change_pct": 0.046084818510139236,
+            "time": 0.13,
+            "width_gain_pct": 0.0168894324880986,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.11536336564510474,
+            "baseline_Jint_high": 0.347815294018,
+            "center_change_pct": 0.02603216108867379,
+            "controlled_Jint_high": 0.347806755796,
+            "current_gate_pass": false,
+            "delta_Jint_high_abs": -8.538221999976336e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.0024548149971659328,
+            "shoulder_change_pct": 0.03638893999013959,
+            "time": 0.14,
+            "width_gain_pct": -0.0023065027179969277,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.08018498049107148,
+            "baseline_Jint_high": 0.23117884183600002,
+            "center_change_pct": 0.028687691448059383,
+            "controlled_Jint_high": 0.23115583619400001,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -2.3005642000001325e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.00995144789951441,
+            "shoulder_change_pct": 0.05096978369438787,
+            "time": 0.15,
+            "width_gain_pct": -0.007319185017506946,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.07004390794020932,
+            "baseline_Jint_high": 0.311252127539,
+            "center_change_pct": 0.00995060872999165,
+            "controlled_Jint_high": 0.311121627105,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00013050043399998046,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.04192756368665007,
+            "shoulder_change_pct": 0.07212434236643084,
+            "time": 0.16,
+            "width_gain_pct": -0.020443309732143256,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.04869216861331793,
+            "baseline_Jint_high": 0.218746167156,
+            "center_change_pct": 0.01960354400423192,
+            "controlled_Jint_high": 0.21869259825600001,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -5.3568899999995034e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.024489069086996995,
+            "shoulder_change_pct": -0.006485990397597785,
+            "time": 0.17,
+            "width_gain_pct": -0.002071506190015615,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.02126154455934781,
+            "baseline_Jint_high": 0.21551173842000002,
+            "center_change_pct": 0.038171318413637856,
+            "controlled_Jint_high": 0.2154844263,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -2.7312120000011486e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.012673147272745933,
+            "shoulder_change_pct": -0.018406923438218925,
+            "time": 0.18,
+            "width_gain_pct": 0.0025184956002011205,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.025236227639058306,
+            "baseline_Jint_high": 0.29861225616,
+            "center_change_pct": 0.0044395146100661975,
+            "controlled_Jint_high": 0.29846957061199997,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00014268554800001,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.047782884009806015,
+            "shoulder_change_pct": -0.023590187779298777,
+            "time": 0.19,
+            "width_gain_pct": 0.01111685413410779,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.008027380665676098,
+            "baseline_Jint_high": 0.28987894872200004,
+            "center_change_pct": -0.003537881325443859,
+            "controlled_Jint_high": 0.28979945824200004,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -7.949047999999959e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.02742195676865844,
+            "shoulder_change_pct": -0.02761772287932507,
+            "time": 0.2,
+            "width_gain_pct": 0.007004834895596446,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.030151996212901544,
+            "baseline_Jint_high": 0.279676018214,
+            "center_change_pct": 0.0375945831026403,
+            "controlled_Jint_high": 0.279695536734,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 1.9518519999983663e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.00697897521733104,
+            "shoulder_change_pct": -0.020144407957012334,
+            "time": 0.21,
+            "width_gain_pct": 0.00744117512549991,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.09622760344467629,
+            "baseline_Jint_high": 0.268105134943,
+            "center_change_pct": -0.004972284574733532,
+            "controlled_Jint_high": 0.268036166014,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -6.896892899999063e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.02572458338578887,
+            "shoulder_change_pct": 0.017797479790115922,
+            "time": 0.22,
+            "width_gain_pct": -0.005163196199142739,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.09950140467998025,
+            "baseline_Jint_high": 0.179049705153,
+            "center_change_pct": 0.003974277744522858,
+            "controlled_Jint_high": 0.17891345739300002,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00013624775999998562,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.07609493681297597,
+            "shoulder_change_pct": 0.00019208221617716958,
+            "time": 0.23,
+            "width_gain_pct": 0.002351470322037308,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.11578633817298511,
+            "baseline_Jint_high": 0.226460380879,
+            "center_change_pct": -0.004606384904826122,
+            "controlled_Jint_high": 0.226310112527,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00015026835199999367,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.06635525005156406,
+            "shoulder_change_pct": -0.005401133313220896,
+            "time": 0.24,
+            "width_gain_pct": 0.004168488894440436,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.11731898581658351,
+            "baseline_Jint_high": 0.295689581229,
+            "center_change_pct": -0.01215205346593029,
+            "controlled_Jint_high": 0.295563235799,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00012634543000000775,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.04272907739084619,
+            "shoulder_change_pct": -0.0056902859860819,
+            "time": 0.25,
+            "width_gain_pct": 0.0057181590578325725,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.01643865321963034,
+            "baseline_Jint_high": 0.293677362118,
+            "center_change_pct": 0.02072050860020269,
+            "controlled_Jint_high": 0.293725834652,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 4.8472533999976974e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.016505369583263985,
+            "shoulder_change_pct": -0.01252915579900149,
+            "time": 0.26,
+            "width_gain_pct": 0.009333362188068683,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": 0.007933504013846182,
+            "baseline_Jint_high": 0.22975464549199998,
+            "center_change_pct": -0.004784206948493797,
+            "controlled_Jint_high": 0.229742605275,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -1.2040216999964493e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": -0.0010000000000047748,
+            "high_J_change_pct": -0.005240467270717364,
+            "shoulder_change_pct": -0.006046235748446982,
+            "time": 0.27,
+            "width_gain_pct": 0.005862014291380113,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.0068840643515977185,
+            "baseline_Jint_high": 0.22748471182899999,
+            "center_change_pct": -0.036898431668186404,
+            "controlled_Jint_high": 0.22735631958500002,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": -0.00012839224399996407,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": -0.05643994401544061,
+            "shoulder_change_pct": 0.0031115898689426658,
+            "time": 0.28,
+            "width_gain_pct": 0.016279514878614343,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.0022200691075946466,
+            "baseline_Jint_high": 0.156122225652,
+            "center_change_pct": -0.05303038815165362,
+            "controlled_Jint_high": 0.156149503097,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 2.7277444999973532e-05,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.0174718525091766,
+            "shoulder_change_pct": 0.005086244817031904,
+            "time": 0.29,
+            "width_gain_pct": 0.015799521005632755,
+            "width_gate_pass": false
+          },
+          {
+            "Jpk_change_pct": -0.0017623206237993294,
+            "baseline_Jint_high": 0.155272932778,
+            "center_change_pct": -0.003686308463901611,
+            "controlled_Jint_high": 0.155278484115,
+            "current_gate_pass": true,
+            "delta_Jint_high_abs": 5.551337000003764e-06,
+            "delta_Reconnected_Flux": 0.0,
+            "delta_magnetic_energy": 0.0,
+            "high_J_change_pct": 0.003575212305628739,
+            "shoulder_change_pct": 0.0025914921626402077,
+            "time": 0.3,
+            "width_gain_pct": 0.007893403420622391,
+            "width_gate_pass": false
+          }
+        ],
+        "case": "two_profile_h0p10_sw0p4000_d0p3000",
+        "continuous_positive_width_t0p10_to_t0p30": false,
+        "current_gate_pass_every_step_t0p10_to_t0p30": false,
+        "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p10_sw0p4000_d0p3000",
+        "final_Jpk_change_pct": -0.0017623206237993294,
+        "final_width_gain_pct": 0.007893403420622391,
+        "final_width_gate_pass": false,
+        "first_amp": -0.015,
+        "first_profile_width": 0.145,
+        "first_shoulder_delta": 0.45,
+        "first_shoulder_width": 0.34,
+        "first_start": 0.05,
+        "first_stop": 0.1,
+        "kind": "uninterrupted_native_two_profile_handoff",
+        "max_high_J_change_pct": 0.0174718525091766,
+        "max_high_J_time": 0.29,
+        "min_high_J_change_pct": -0.08829675574428819,
+        "minimum_width_gain_pct": -0.020443309732143256,
+        "minimum_width_time": 0.16,
+        "peak_width_gain_pct": 0.019073795980073527,
+        "peak_width_time": 0.11,
+        "positive_width_margin_pct": -0.020443309732143256,
+        "second_amp": -0.015,
+        "second_profile_width": 0.145,
+        "second_shoulder_delta": 0.3,
+        "second_shoulder_width": 0.4,
+        "second_start": 0.1,
+        "second_stop": 0.3,
+        "sustained_safe_authority": false,
+        "t0p10_Jpk_change_pct": -0.0781875149535094,
+        "t0p10_high_J_change_pct": -0.08829675574428819,
+        "t0p10_width_gain_pct": 0.01771939568289138,
+        "t0p11_Jpk_change_pct": -0.0989620114702272,
+        "t0p11_high_J_change_pct": -0.08257934369528819,
+        "t0p11_width_gain_pct": 0.019073795980073527,
+        "t0p12_Jpk_change_pct": 0.025220885206800325,
+        "t0p12_high_J_change_pct": -0.06337570507047863,
+        "t0p12_width_gain_pct": 0.014913180802911263,
+        "t0p13_Jpk_change_pct": 0.02968373020939552,
+        "t0p13_high_J_change_pct": -0.058871702514751156,
+        "t0p13_width_gain_pct": 0.0168894324880986,
+        "t0p14_Jpk_change_pct": 0.11536336564510474,
+        "t0p14_high_J_change_pct": -0.0024548149971659328,
+        "t0p14_width_gain_pct": -0.0023065027179969277,
+        "t0p15_Jpk_change_pct": 0.08018498049107148,
+        "t0p15_high_J_change_pct": -0.00995144789951441,
+        "t0p15_width_gain_pct": -0.007319185017506946,
+        "t0p16_Jpk_change_pct": 0.07004390794020932,
+        "t0p16_high_J_change_pct": -0.04192756368665007,
+        "t0p16_width_gain_pct": -0.020443309732143256,
+        "t0p20_Jpk_change_pct": -0.008027380665676098,
+        "t0p20_high_J_change_pct": -0.02742195676865844,
+        "t0p20_width_gain_pct": 0.007004834895596446,
+        "t0p25_Jpk_change_pct": -0.11731898581658351,
+        "t0p25_high_J_change_pct": -0.04272907739084619,
+        "t0p25_width_gain_pct": 0.0057181590578325725,
+        "t0p30_Jpk_change_pct": -0.0017623206237993294,
+        "t0p30_high_J_change_pct": 0.003575212305628739,
+        "t0p30_width_gain_pct": 0.007893403420622391,
+        "width_gate_pass_any": false,
+        "worst_Jpk_change_pct": 0.11536336564510474,
+        "worst_Jpk_time": 0.14
+      }
+    ],
+    "claim_boundary": "Normalized native M3D-C1 uninterrupted two-profile handoff audit only. Frozen +0.020% width and +0.10% Jpk gates are unchanged and evaluated at every dt=0.01 sample from t=0.10 through t=0.30. No restart is used. No reactor-scale or experimental stabilization claim is implied.",
+    "classification": "M3DC1_TCT_NATIVE_TWO_PROFILE_NO_SAFE_AUTHORITY_FOUND",
+    "constant_profile_reference": {
+      "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/constant_profile_reference",
+      "execution": {
+        "C1stdout_tail": "1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.339E-03 secs\n  Done calculating temperatures\n[M3D-C1 INFO] m3dc1_field_create_: field 400, #values 1, #dofs 6, name 400\n[M3D-C1 INFO] m3dc1_field_create_: field 401, #values 1, #dofs 6, name 401\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.358E-03 secs\n Dropping double cusp\n Total energy =    207.69076932160141        95.493599693164143        97.639000841274040        14.512403340248417     \n Total energy lost =    8.6894349756625052E-004\n Scalars:\n   Area =    3.1220108020715696     \n   Toroidal current =  -0.20320651164463394     \n   Toroidal flux =    3.1146069053778787     \n   Volume =    196.16172400432043     \n   Total particles =    38.844574626446544     \n   Total radiation =    0.0000000000000000     \n   Line radiation =    0.0000000000000000     \n   Bremsstrahlung radiation =    0.0000000000000000     \n   Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME   30   Tot  1.5114E+00   compute  9.2698E-01   solve  5.8439E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars      30  3.71400000E-03  4.01600000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.628E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.349E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.170E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.136E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.154E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.136E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.137E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.114E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.143E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.098E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.175E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.226E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_030.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_030.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice   30  3.06050000E-02  3.46210000E-02\nOUTPUT: hdf5_write_timings      30  5.11000000E-04  3.51320000E-02    0\nOUTPUT: hdf5_flush              30  3.15000000E-04  3.15000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 29\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n destroy field 71\n\n* [M3D-C1 INFO] run time: 49.1803 (sec)\n ==============================================================\n END DATE: 2026 09 14   TIME: 10:25:32.8\n\n Stopped at           0\n",
+        "elapsed_seconds": 49.89948129653931,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_tail": ""
+      }
+    },
+    "current_safe_cases": [],
+    "current_safe_count": 0,
+    "executions": [
+      {
+        "case": "two_profile_h0p09_sw0p4000_d0p3000",
+        "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p09_sw0p4000_d0p3000",
+        "handoff_time": 0.09,
+        "return_code": 0,
+        "second_shoulder_delta": 0.3,
+        "second_shoulder_width": 0.4
+      },
+      {
+        "case": "two_profile_h0p10_sw0p4000_d0p3000",
+        "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p10_sw0p4000_d0p3000",
+        "handoff_time": 0.1,
+        "return_code": 0,
+        "second_shoulder_delta": 0.3,
+        "second_shoulder_width": 0.4
+      },
+      {
+        "case": "two_profile_h0p11_sw0p4000_d0p3000",
+        "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/two_profile_h0p11_sw0p4000_d0p3000",
+        "handoff_time": 0.11,
+        "return_code": 0,
+        "second_shoulder_delta": 0.3,
+        "second_shoulder_width": 0.4
+      }
+    ],
+    "handoff_equivalence": {
+      "checks": [
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.1
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.11
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.12
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.13
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.14
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.15
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.16
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.17
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.18
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.19
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.2
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.21
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.22
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.23
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.24
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.25
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.26
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.27
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.28
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.29
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.3
+        }
+      ],
+      "pass": true,
+      "tolerance": 1e-12
+    },
+    "same_profile_handoff": {
+      "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/same_profile_handoff_equivalence",
+      "execution": {
+        "C1stdout_tail": "1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.538E-03 secs\n  Done calculating temperatures\n[M3D-C1 INFO] m3dc1_field_create_: field 400, #values 1, #dofs 6, name 400\n[M3D-C1 INFO] m3dc1_field_create_: field 401, #values 1, #dofs 6, name 401\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.472E-03 secs\n Dropping double cusp\n Total energy =    207.69076932160141        95.493599693164143        97.639000841274040        14.512403340248417     \n Total energy lost =    8.6894349756625052E-004\n Scalars:\n   Area =    3.1220108020715696     \n   Toroidal current =  -0.20320651164463394     \n   Toroidal flux =    3.1146069053778787     \n   Volume =    196.16172400432043     \n   Total particles =    38.844574626446544     \n   Total radiation =    0.0000000000000000     \n   Line radiation =    0.0000000000000000     \n   Bremsstrahlung radiation =    0.0000000000000000     \n   Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME   30   Tot  1.4929E+00   compute  9.2354E-01   solve  5.6938E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars      30  3.70800000E-03  4.01500000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.733E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.468E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.372E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.338E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.330E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.453E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.383E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.362E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.353E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.337E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.348E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.409E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_030.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_030.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice   30  3.14770000E-02  3.54920000E-02\nOUTPUT: hdf5_write_timings      30  5.10000000E-04  3.60020000E-02    0\nOUTPUT: hdf5_flush              30  3.20000000E-04  3.20000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 29\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n destroy field 71\n\n* [M3D-C1 INFO] run time: 48.6779 (sec)\n ==============================================================\n END DATE: 2026 09 14   TIME: 10:26:23.5\n\n Stopped at           0\n",
+        "elapsed_seconds": 49.39476013183594,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_tail": ""
+      }
+    },
+    "source4_zero": {
+      "directory": "/tmp/m3dc1_tct_native_preemptive_two_profile_handoff_runs/source4_zero",
+      "execution": {
+        "C1stdout_tail": "1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.506E-03 secs\n  Done calculating temperatures\n[M3D-C1 INFO] m3dc1_field_create_: field 400, #values 1, #dofs 6, name 400\n[M3D-C1 INFO] m3dc1_field_create_: field 401, #values 1, #dofs 6, name 401\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.534E-03 secs\n Dropping double cusp\n Total energy =    207.69074706144761        95.493532379681582        97.639001369261507        14.512447937182545     \n Total energy lost =    8.6879085454447558E-004\n Scalars:\n   Area =    3.1220108020715696     \n   Toroidal current =  -0.20321020982836288     \n   Toroidal flux =    3.1146068881876698     \n   Volume =    196.16172400432043     \n   Total particles =    38.844633249559834     \n   Total radiation =    0.0000000000000000     \n   Line radiation =    0.0000000000000000     \n   Bremsstrahlung radiation =    0.0000000000000000     \n   Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME   30   Tot  1.5301E+00   compute  9.4058E-01   solve  5.8955E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars      30  3.74000000E-03  4.05700000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.748E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.670E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.522E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.410E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.427E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.369E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.392E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.375E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.358E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.329E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.398E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.424E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_030.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_030.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice   30  3.17930000E-02  3.58500000E-02\nOUTPUT: hdf5_write_timings      30  5.11000000E-04  3.63610000E-02    0\nOUTPUT: hdf5_flush              30  3.31000000E-04  3.31000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 29\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n destroy field 71\n\n* [M3D-C1 INFO] run time: 48.9518 (sec)\n ==============================================================\n END DATE: 2026 09 14   TIME: 10:24:41.6\n\n Stopped at           0\n",
+        "elapsed_seconds": 49.720261335372925,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_tail": ""
+      }
+    },
+    "sustained_pass_cases": [],
+    "sustained_pass_count": 0,
+    "zero_equivalence": {
+      "checks": [
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.1
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.11
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.12
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.13
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.14
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.15
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.16
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.17
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.18
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.19
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.2
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.21
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.22
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.23
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.24
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.25
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.26
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.27
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.28
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.29
+        },
+        {
+          "by_metric": {
+            "Jint_high": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Jpk": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "Reconnected_Flux": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "W_sheet": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "center_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "magnetic_energy": {
+              "delta": 0.0,
+              "pass": true
+            },
+            "shoulder_abs_current": {
+              "delta": 0.0,
+              "pass": true
+            }
+          },
+          "time": 0.3
+        }
+      ],
+      "pass": true,
+      "tolerance": 1e-12
+    }
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_preemptive_two_profile_handoff/native_two_profile_handoff_summary.json",
+  "summary_sha256": "f66b1042d9f166a2e7aae3a21cd626f0d701196875f39964ecc68fa4e62b7563",
+  "timed_out": false
+}
