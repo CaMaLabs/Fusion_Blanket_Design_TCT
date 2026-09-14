@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-007-h006-amplitude-ultrarefinement",
+  "parent_result_job_id": "20260914-006-h006-amplitude-microrefinement",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_h006_amplitude_ultrarefinement_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_h006_amplitude_ultrarefinement"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_h006_amplitude_ultrarefinement/preemptive_timing_amplitude_refinement_summary.json",
+  "purpose": "Resolve the sharp local Jpk minimum discovered by job 006 at fixed native handoff t=0.06 and second_amp=-0.01520. Sweep only -0.01518, -0.01519, -0.01520, -0.01521, and -0.01522 while keeping both spatial profiles, first-stage amplitude -0.015, horizon, dt, and solver physics unchanged. The parent -0.01520 case retained peak width +0.0210247% but missed the frozen +0.10% Jpk gate by only +0.00181164 percentage points, while adjacent +/-0.00005 cases had worse Jpk, indicating a narrow local response pocket worth resolving before changing another control dimension.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "primary_discriminator": "whether the narrow local amplitude pocket around -0.01520 contains a case that simultaneously preserves the frozen width gate and satisfies the frozen Jpk gate at every sampled native step through t=0.30",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
