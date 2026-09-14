@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-001-native-two-profile-handoff",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_two_profile_handoff_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_two_profile_handoff"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_two_profile_handoff/native_two_profile_handoff_summary.json",
+  "purpose": "Test whether an uninterrupted spatial-profile handoff can remove the t=0.14-0.16 Jpk/width failure mode while preserving the frozen +0.020% width and +0.10% Jpk gates.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
