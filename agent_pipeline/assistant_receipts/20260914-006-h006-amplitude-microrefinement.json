@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-006-h006-amplitude-microrefinement",
+  "processed_result_commit": "45f966a35372bfe1c6867eac5b17d7fc90c4cd4b",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-006-h006-amplitude-microrefinement.json",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_TIMING_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The t=0.06 amplitude micro-refinement is a valid normalized native M3D-C1 scientific near-miss, not a pipeline failure. No candidate was current-safe at every sampled step or sustained-safe under the frozen +0.020% width and +0.10% Jpk gates. All five amplitudes crossed the width gate, but the strongest joint-gate point was second_amp=-0.01520 with peak width +0.0210246832% at t=0.13 and worst Jpk +0.1018116450% at t=0.14, only +0.001811645 percentage points above the frozen current limit. The response is non-monotone: neighboring -0.01515 and -0.01525 cases worsened worst Jpk to +0.105054792% and +0.105749752%, respectively, while still passing the width gate. This sharp local Jpk pocket justifies resolving a much narrower amplitude interval around -0.01520 before changing timing or geometry again. Width still becomes negative near t=0.16, so no sustained-control claim is supported.",
+  "claim_boundary": "Normalized native M3D-C1 uninterrupted two-profile timing/amplitude refinement only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-007-h006-amplitude-ultrarefinement",
+  "new_job_rationale": "At fixed handoff t=0.06, scan only -0.01518 through -0.01522 in 1e-5 increments to resolve the narrow non-monotone Jpk minimum around -0.01520 while preserving the validated geometry, first-stage amplitude, solver physics, horizon, sampling, and frozen acceptance gates.",
+  "processed_utc": "2026-09-14T23:39:07Z"
+}
