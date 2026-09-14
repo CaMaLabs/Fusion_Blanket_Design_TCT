@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-006-h006-amplitude-microrefinement",
+  "parent_result_job_id": "20260914-005-earliest-timing-weak-amplitude-refinement",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_h006_amplitude_microrefinement_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_h006_amplitude_microrefinement"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_h006_amplitude_microrefinement/preemptive_timing_amplitude_refinement_summary.json",
+  "purpose": "Micro-refine the strongest near-gate point from job 005: native handoff t=0.06 with post-handoff amplitude near -0.0152. Sweep only -0.01510, -0.01515, -0.01520, -0.01525, and -0.01530 while holding both spatial profiles, first-stage amplitude, horizon, and solver physics fixed. The parent t=0.06/-0.0152 case passed the frozen +0.020% width gate with peak width +0.0210247% and missed the frozen +0.10% Jpk gate by only +0.00181164 percentage points.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "primary_discriminator": "whether a narrow amplitude adjustment at fixed t=0.06 achieves the joint frozen width/Jpk gates without sacrificing native-step validity through t=0.30",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
