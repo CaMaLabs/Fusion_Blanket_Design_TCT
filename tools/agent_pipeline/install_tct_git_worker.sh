@@ -86,10 +86,12 @@ else
 fi
 
 echo
-echo "Run one poll immediately with:"
-echo "  systemctl --user start tct-git-worker.service"
+echo "Run one poll immediately without waiting for the research job to finish:"
+echo "  systemctl --user start --no-block tct-git-worker.service"
 echo "Follow worker logs with:"
 echo "  journalctl --user -u tct-git-worker.service -f"
+echo "Check the active worker with:"
+echo "  systemctl --user status tct-git-worker.service"
 echo "List timer state with:"
 echo "  systemctl --user list-timers tct-git-worker.timer"
 echo
