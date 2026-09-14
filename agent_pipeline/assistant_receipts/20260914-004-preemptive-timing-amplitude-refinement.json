@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-004-preemptive-timing-amplitude-refinement",
+  "processed_result_commit": "a3438f6cd96cde956a8416df65efd381d3d38c9b",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-004-preemptive-timing-amplitude-refinement.json",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_TIMING_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The timing/amplitude refinement is a valid scientific negative under the unchanged frozen gates. No case was current-safe at every native step or sustained-safe. Earlier handoff improved the joint frontier: at second_amp=-0.0155, moving from t=0.09 to t=0.07 increased peak width from 0.0196893% to 0.0211029% (crossing the +0.020% width gate) while reducing worst Jpk from +0.111309% to +0.108182%. The t=0.07/-0.0155 case is therefore the strongest joint frontier point, but it still misses the +0.10% Jpk gate by 0.008182 percentage points and width still falls negative around t=0.16. The monotone improvement toward earlier timing justifies one narrow continuation at t=0.05-0.07 with slightly weaker post-handoff drive rather than a broader geometry or physics change.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-005-earliest-timing-weak-amplitude-refinement",
+  "new_job_rationale": "Test t=0.05, 0.06, and 0.07 with second amplitudes -0.0148, -0.0150, and -0.0152 to determine whether the earlier-timing margin can preserve >+0.020% peak width while lowering worst Jpk to <=+0.10% without altering the frozen gates.",
+  "processed_utc": "2026-09-14T21:20:00Z"
+}
