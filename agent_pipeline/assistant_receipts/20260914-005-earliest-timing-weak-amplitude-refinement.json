@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-005-earliest-timing-weak-amplitude-refinement",
+  "processed_result_commit": "e3ca4494e1c354b387c94849bd99c6be2e028c15",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-005-earliest-timing-weak-amplitude-refinement.json",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_TIMING_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The earliest-timing/weak-amplitude refinement is valid but still finds no sustained-safe or every-step current-safe authority under the frozen +0.020% width and +0.10% Jpk gates. Multiple cases clear the width gate. The strongest near-gate point is handoff t=0.06 with second_amp=-0.0152: peak width +0.0210247% at t=0.13 passes the width gate, while worst Jpk +0.1018116% at t=0.14 misses the current gate by only +0.00181164 percentage points. Its minimum width remains negative (-0.0154038% at t=0.16), so this is transient authority rather than sustained control. The narrow Jpk miss with preserved width justifies a fixed-timing amplitude micro-refinement rather than a broader sweep.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-006-h006-amplitude-microrefinement",
+  "new_job_rationale": "Fix the best near-gate handoff at t=0.06 and vary only the post-handoff amplitude over -0.01510 to -0.01530 in 0.00005 increments to test whether the remaining +0.00181164 percentage-point Jpk miss can be removed while retaining the frozen +0.020% width gate.",
+  "processed_utc": "2026-09-14T22:19:05Z"
+}
