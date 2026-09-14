@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-001-native-two-profile-handoff",
+  "processed_result_commit": "4794d726258c02dc744f6c7700eddedcd38e3452",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-001-native-two-profile-handoff.json",
+  "classification": "M3DC1_TCT_NATIVE_TWO_PROFILE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The uninterrupted two-profile spatial handoff was valid but did not remove the critical transient. No candidate was current-safe, safe through t=0.16, or sustained-safe under the frozen gates. The best ranked case, handoff t=0.12 with second shoulder width 0.40 and delta 0.30, crossed the +0.020% width gate at t=0.13 (+0.0220186%) but failed at t=0.14 with Jpk +0.115248% and width -0.0019803%, then reached minimum width -0.0212952% at t=0.16. Across t=0.12/0.13 spatial handoffs, the critical excursion moved only slightly, supporting a focused response-latency test rather than a broader geometry sweep.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-002-preemptive-two-profile-handoff",
+  "new_job_rationale": "Move the validated spatial-profile handoff earlier to t=0.09, 0.10, and 0.11 while holding the strongest tested second profile fixed, to test whether preemption/response latency can suppress the t=0.14-0.16 failure interval without changing the frozen acceptance gates.",
+  "processed_utc": "2026-09-14T17:20:18Z"
+}
