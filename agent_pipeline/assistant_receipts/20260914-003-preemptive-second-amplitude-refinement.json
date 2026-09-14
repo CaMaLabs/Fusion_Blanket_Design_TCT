@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-003-preemptive-second-amplitude-refinement",
+  "processed_result_commit": "8f74707f4d9e6b70c7f34a0feda8a4fa97ded81d",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-003-preemptive-second-amplitude-refinement.json",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_SECOND_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The post-handoff amplitude sweep exposed a monotone Jpk/width tradeoff rather than a joint-safe solution. At second_amp=-0.0145, worst Jpk improved to +0.105750% but peak width fell to +0.017869%; at -0.0160, peak width crossed the frozen +0.020% gate at +0.020580% but worst Jpk worsened to +0.114205%. No case was current-safe or sustained-safe, and the critical excursion remained at t=0.14 with minimum width near t=0.16. This supports a focused coupled timing/amplitude test: move the handoff earlier to create Jpk margin while retaining stronger post-handoff drive, rather than extending the one-dimensional amplitude sweep.",
+  "claim_boundary": "Normalized native M3D-C1 uninterrupted two-profile amplitude refinement only; frozen +0.020% width and +0.10% Jpk gates unchanged; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-004-preemptive-timing-amplitude-refinement",
+  "new_job_rationale": "Sweep handoff t=0.07, 0.08, 0.09 against second-stage amplitudes -0.0155, -0.0160, -0.0165 while holding geometry and first-stage drive fixed, testing whether additional preemption buys enough Jpk margin to recover joint authority without relaxing either frozen gate.",
+  "processed_utc": "2026-09-14T20:01:50Z"
+}
