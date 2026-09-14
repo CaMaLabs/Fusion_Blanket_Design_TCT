@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-004-preemptive-timing-amplitude-refinement",
+  "parent_result_job_id": "20260914-003-preemptive-second-amplitude-refinement",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_preemptive_timing_amplitude_refinement_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_preemptive_timing_amplitude_refinement"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_preemptive_timing_amplitude_refinement/preemptive_timing_amplitude_refinement_summary.json",
+  "purpose": "Test whether moving the profile handoff earlier to t=0.07 or 0.08 creates enough Jpk margin to permit stronger post-handoff drive (-0.0155, -0.0160, -0.0165) to recover the frozen +0.020% width gate without exceeding the frozen +0.10% Jpk gate; t=0.09 is retained as the parent frontier reference.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "primary_discriminator": "joint Jpk/width authority through t=0.14-0.16 and every native step through t=0.30",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
