@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-005-earliest-timing-weak-amplitude-refinement",
+  "parent_result_job_id": "20260914-004-preemptive-timing-amplitude-refinement",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_earliest_timing_weak_amplitude_refinement_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_earliest_timing_weak_amplitude_refinement"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_earliest_timing_weak_amplitude_refinement/preemptive_timing_amplitude_refinement_summary.json",
+  "purpose": "Refine the joint frontier at the earliest feasible native handoffs t=0.05, 0.06, and 0.07 using slightly weaker post-handoff amplitudes -0.0148, -0.0150, and -0.0152. Job 004 showed that earlier timing improved both peak width and the t=0.14 Jpk excursion; this audit tests whether that timing margin permits a weaker drive to retain the frozen +0.020% width gate while bringing Jpk to or below the frozen +0.10% gate.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "primary_discriminator": "joint Jpk/width authority through t=0.14-0.16 and every native step through t=0.30",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
