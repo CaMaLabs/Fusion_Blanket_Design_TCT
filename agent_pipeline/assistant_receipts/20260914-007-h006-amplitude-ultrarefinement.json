@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-007-h006-amplitude-ultrarefinement",
+  "processed_result_commit": "fbf479745cefe2ab8171a6f9a98609623b386e32",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-007-h006-amplitude-ultrarefinement.json",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_TIMING_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "The ultra-refinement confirms that the exact second_amp=-0.01520 point is a narrow local Jpk minimum, but it still does not satisfy the frozen current gate at every sampled step. At h=0.06 it preserves peak width +0.021024683% at t=0.13, while worst Jpk is +0.101811645% at t=0.14, missing the +0.10% gate by +0.001811645 percentage points. The immediate +/-1e-5 neighbors are materially worse in Jpk (+0.105286445% and +0.105402272%), so further amplitude interpolation is not justified. No case is current-safe or sustained-safe; the remaining failure remains the t=0.14 Jpk excursion and later negative width around t=0.16.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260914-008-h006-delta0295-confirmation",
+  "new_job_rationale": "Hold the validated h=0.06 timing and exact -0.01520 amplitude fixed and weaken only the second-profile shoulder redistribution from delta 0.300 to 0.295. This is a minimal one-dimensional geometry perturbation intended to recover the remaining 0.001811645 percentage-point Jpk margin while using the existing +0.001024683 percentage-point peak-width margin, without changing solver physics or frozen gates.",
+  "processed_utc": "2026-09-15T01:13:45Z"
+}
