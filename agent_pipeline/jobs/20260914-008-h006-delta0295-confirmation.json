@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-008-h006-delta0295-confirmation",
+  "parent_result_job_id": "20260914-007-h006-amplitude-ultrarefinement",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_h006_delta0295_confirmation_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_h006_delta0295_confirmation"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_h006_delta0295_confirmation/preemptive_timing_amplitude_refinement_summary.json",
+  "purpose": "Test one minimally weaker second-profile shoulder redistribution at the validated h=0.06, second_amp=-0.01520 frontier. Job 007 confirmed the exact amplitude point preserves peak width +0.0210247% but misses the frozen +0.10% Jpk gate by +0.00181164 percentage points, while +/-1e-5 amplitude neighbors are worse. Change only second shoulder_delta from 0.300 to 0.295 to test whether the remaining Jpk margin can be recovered without losing the frozen +0.020% width gate.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "primary_discriminator": "whether the minimally weaker shoulder redistribution simultaneously preserves the frozen width gate and satisfies the frozen Jpk gate at every sampled native step through t=0.30",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim."
+  }
+}
