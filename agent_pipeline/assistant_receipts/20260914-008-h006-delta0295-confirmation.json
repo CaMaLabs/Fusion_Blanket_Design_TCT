@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260914-008-h006-delta0295-confirmation",
+  "processed_result_receipt_path": "agent_pipeline/results/20260914-008-h006-delta0295-confirmation.json",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_TIMING_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_status": "success",
+  "zero_equivalence_pass": true,
+  "handoff_equivalence_pass": true,
+  "interpretation": "At h=0.06 and second_amp=-0.01520, weakening second shoulder_delta from 0.300 to 0.295 preserved the frozen width gate with peak width +0.0209508678% at t=0.13 but worsened worst Jpk to +0.1050547918% at t=0.14, above the unchanged +0.10% gate. Minimum width remained negative later, so this is transient authority only. The local response indicates the opposite delta direction is the scientifically focused next test.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": null,
+  "new_job_rationale": "A single delta=0.305 confirmation is justified, but repository creation of the follow-up audit was blocked by the write safety layer during this run; human intervention is required before publishing a replacement job.",
+  "processed_utc": "2026-09-15T01:52:24Z"
+}
