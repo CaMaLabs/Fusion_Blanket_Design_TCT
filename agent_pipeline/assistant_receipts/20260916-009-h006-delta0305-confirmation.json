@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260916-009-h006-delta0305-confirmation",
+  "processed_result_receipt_sha": "95295acce3a1478e62e5e00e08c8f84dceaea52d",
+  "processed_result_head_before": "36b0d753390027bac5a6a373041dca0bb9bb7b8f",
+  "classification": "M3DC1_TCT_NATIVE_PREEMPTIVE_TIMING_AMPLITUDE_TRANSIENT_SAFE_AUTHORITY",
+  "pipeline_error": null,
+  "interpretation": "Successful normalized native M3D-C1 scientific run, not a pipeline failure. Required zero-equivalence and handoff-equivalence gates passed at the declared 1e-12 tolerance. shoulder_delta=0.305 preserved transient peak width authority (+0.0210793384%, above the frozen +0.020% width gate) but worst Jpk was +0.1056339252% at t=0.14, failing the unchanged +0.10% Jpk gate; sustained_pass_count remained 0. Together with delta=0.295 worsening Jpk and the parent delta=0.300 remaining the local best at +0.101811645%, both tested shoulder-delta directions move away from the gate. Further one-dimensional shoulder-delta interpolation is therefore not scientifically justified from this local evidence, and no follow-up job is queued. Claim boundary remains normalized native M3D-C1 only.",
+  "new_job_id": null,
+  "timestamp": "2026-09-16T14:00:00Z"
+}
