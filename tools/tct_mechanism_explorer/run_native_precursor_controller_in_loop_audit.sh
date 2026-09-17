@@ -9,37 +9,32 @@ export OMPI_MCA_orte_tmpdir_base="$SWEEP_TMP"
 source "$HOME/spack/share/spack/setup-env.sh"
 spack env activate m3dc1-deps
 
+# Reuse the existing fusion/BOUT++ analysis environment created for this repo.
+# It already carries the Python-side analysis stack (numpy/netCDF4) and avoids
+# Ubuntu's PEP-668-managed system Python. Do not create another venv here.
+AUDIT_VENV="${TCT_AUDIT_VENV:-$REPO/.venv-dudson}"
+AUDIT_PYTHON="$AUDIT_VENV/bin/python"
+
+if [[ ! -x "$AUDIT_PYTHON" ]]; then
+  echo "ERROR: existing audit venv Python not found: $AUDIT_PYTHON"
+  exit 96
+fi
+
+echo "Using existing audit venv: $AUDIT_VENV"
+
 # The live-baseline calibration audit reads normalization directly from C1.h5.
-# Prefer the active M3D-C1 Python when it already has h5py. If not, provision an
-# isolated venv under the worker temp directory. This avoids PEP 668 writes to
-# Ubuntu's externally-managed Python while keeping the physics environment clean.
-AUDIT_PYTHON="python3"
-if ! python3 -c 'import h5py' >/dev/null 2>&1; then
-  H5PY_VENV="${TCT_H5PY_VENV:-$SWEEP_TMP/h5py-venv}"
-  echo "h5py missing from active m3dc1-deps Python; provisioning isolated venv at $H5PY_VENV ..."
-
-  if [[ ! -x "$H5PY_VENV/bin/python" ]]; then
-    rm -rf "$H5PY_VENV"
-    if ! python3 -m venv --system-site-packages "$H5PY_VENV"; then
-      echo "ERROR: unable to create isolated h5py venv."
-      exit 96
-    fi
+# Install h5py into the existing project venv only when it is absent.
+if ! "$AUDIT_PYTHON" -c 'import h5py' >/dev/null 2>&1; then
+  echo "h5py missing from existing audit venv; installing into $AUDIT_VENV ..."
+  if ! "$AUDIT_PYTHON" -m pip install h5py; then
+    echo "ERROR: h5py installation failed inside existing audit venv."
+    exit 96
   fi
-
-  if ! "$H5PY_VENV/bin/python" -c 'import h5py' >/dev/null 2>&1; then
-    "$H5PY_VENV/bin/python" -m pip install --upgrade pip setuptools wheel || true
-    if ! "$H5PY_VENV/bin/python" -m pip install h5py; then
-      echo "ERROR: h5py installation failed inside isolated venv."
-      exit 96
-    fi
-  fi
-
-  AUDIT_PYTHON="$H5PY_VENV/bin/python"
 fi
 
 # Dependency failure is infrastructure failure, never a calibration/physics
 # classification. Verify the exact interpreter that will execute the audit.
-if ! "$AUDIT_PYTHON" -c 'import h5py; print("audit_python", __import__("sys").executable); print("h5py", h5py.__version__)'; then
+if ! "$AUDIT_PYTHON" -c 'import h5py, sys; print("audit_python", sys.executable); print("h5py", h5py.__version__)'; then
   echo "ERROR: h5py remains unavailable to the audit interpreter."
   exit 96
 fi
