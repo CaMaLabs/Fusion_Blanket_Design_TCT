@@ -1,0 +1,13 @@
+{
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION",
+  "pipeline_failure": false,
+  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+  "reason": "Fail-closed prerequisite: no reviewed physical-ms to native-solver-time calibration exists for this deck. No arbitrary conversion was performed.",
+  "scientific_interpretation_allowed": false
+}
