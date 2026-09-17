@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-013-native-h5py-bootstrap-precursor-controller",
+  "processed_result_receipt_sha": "dfb84ec105fda49fd9492b00e68873e3600d4179",
+  "processed_result_head_before": "e14995977c6b9f1adaeeb312a5de45f778759844",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_error": "h5py dependency bootstrap failed under PEP 668 externally-managed Python; runner returned 96 before controller physics. The committed validation summary additionally records fail-closed live-HDF5 ion_mass_mp normalization mismatch expected=2.0 actual=1.0; neither condition permits physics interpretation.",
+  "interpretation": "Infrastructure/dependency failure occurred before controller physics, despite the stale/fail-closed scientific classification carried in the summary. Do not interpret this run as a TCT physics negative. Zero-equivalence was required but not reached because controller physics did not execute. Frozen width > +0.020% and Jpk <= +0.10% gates remain unchanged; Mirnov/toroidal precursor authority and normalized-native-M3D-C1 claim boundary are preserved. A narrowly scoped, correctly parented enabled replacement job already exists and uses the existing .venv-dudson environment for h5py rather than modifying the externally managed system Python.",
+  "new_job_id": "20260917-014-native-isolated-h5py-precursor-controller",
+  "timestamp_utc": "2026-09-18T00:00:00Z"
+}
