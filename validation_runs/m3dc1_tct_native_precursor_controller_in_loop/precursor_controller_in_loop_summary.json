@@ -9,6 +9,6 @@
   "physical_time_calibration": null,
   "pipeline_failure": false,
   "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
-  "reason": "Fail-closed prerequisite: cannot derive calibration from native baseline deck: missing b0_norm in native baseline C1input",
+  "reason": "Fail-closed prerequisite: cannot derive calibration from live native baseline: h5py unavailable for runtime normalization verification: No module named 'h5py'",
   "scientific_interpretation_allowed": false
 }

@@ -1,0 +1,25 @@
+job_id=20260917-012-native-h5-calibrated-precursor-controller
+started_utc=2026-09-17T19:34:33.152352Z
+head_before=127a03aa931e5fb587f741705e06bb2ec5e4cf87
+===== NATIVE TCT PRECURSOR CONTROLLER-IN-LOOP =====
+{
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_failure": false,
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+  "reason": "Fail-closed prerequisite: cannot derive calibration from live native baseline: h5py unavailable for runtime normalization verification: No module named 'h5py'",
+  "physical_time_calibration": null,
+  "precursor_lead_ms": null,
+  "supervisor_decision": null,
+  "derived_native_times": null,
+  "zero_equivalence": null,
+  "arms": null,
+  "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION"
+}
+
+finished_utc=2026-09-17T19:34:33.718212Z
+return_code=0
