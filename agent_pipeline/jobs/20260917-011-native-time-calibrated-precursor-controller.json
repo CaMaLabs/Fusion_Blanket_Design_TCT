@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-011-native-time-calibrated-precursor-controller",
+  "parent_result_job_id": "20260917-010-native-precursor-controller-in-loop",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": ["validation_runs/m3dc1_tct_native_precursor_controller_in_loop"],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "purpose": "Re-run the native TCT precursor controller with a source-verified M3D-C1 Alfven-time calibration. Verify the actual baseline deck normalization at runtime, preserve Mirnov/toroidal precursor authority and frozen gates, and fail closed if the measured millisecond precursor/actuator timing lies outside the native characterization window rather than clipping to an arbitrary solver time.",
+  "interpretation_contract": {
+    "require_runtime_deck_normalization_verification": true,
+    "require_zero_equivalence_if_controller_matrix_executes": true,
+    "do_not_clip_out_of_window_trigger_times": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "fail_closed_policy": "If calibration verification, timing-window causality, confidence, latency feasibility, actuator health, or safety fails, retain standing bias conceptually and issue NO ACTION for the bounded boost.",
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim unless stronger evidence is independently established."
+  }
+}
