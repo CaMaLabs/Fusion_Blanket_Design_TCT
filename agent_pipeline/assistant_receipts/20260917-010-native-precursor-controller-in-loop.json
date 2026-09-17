@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-010-native-precursor-controller-in-loop",
+  "processed_result_receipt": "agent_pipeline/results/20260917-010-native-precursor-controller-in-loop.json",
+  "processed_result_blob_sha": "1a5ba6f61cebe6de241aecaf710a12a51dc7d5f5",
+  "processed_result_head_before": "2f420fdd6847cf2ca3ffcecfa0b9fb0ca9f8a603",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_failure": false,
+  "equivalence": {
+    "zero_equivalence_required": true,
+    "zero_equivalence_executed": false,
+    "zero_equivalence_reason": "Controller physics matrix did not execute because the fail-closed physical-time calibration prerequisite was not satisfied.",
+    "handoff_equivalence_required": false
+  },
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.020,
+    "Jpk_change_pct_le": 0.10,
+    "changed": false
+  },
+  "interpretation": "Scientific prerequisite stop, not a pipeline failure and not a negative actuator/control result. The audit correctly refused to map measured Mirnov/toroidal precursor lead times into normalized native M3D-C1 time without verified deck normalization. The validation summary additionally reports that live normalization verification could not proceed because h5py was unavailable. No controller arm was interpreted.",
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": "20260917-011-native-time-calibrated-precursor-controller",
+  "new_job_note": "A focused enabled child job already exists with parent_result_job_id set to this job, requiring source-verified runtime deck normalization and fail-closed timing-window causality. No duplicate follow-up was created during acknowledgement.",
+  "processed_at_utc": "2026-09-18T00:00:00Z"
+}
