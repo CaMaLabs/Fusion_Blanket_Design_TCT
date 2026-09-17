@@ -5,8 +5,12 @@ This runner keeps the established TCT control architecture intact:
 standing preventative bias -> Mirnov/toroidal precursor -> response-time/safety
 arbiter -> bounded boost or NO ACTION.
 
-Physical milliseconds are converted to native M3D-C1 time only after the
-baseline deck normalization is verified against a reviewed calibration artifact.
+Physical milliseconds are converted to native M3D-C1 time only after the live
+baseline normalization is verified against a reviewed calibration artifact.
+C1.h5 root attributes are authoritative for runtime normalization; C1input is
+used only as an optional consistency cross-check because restart/baseline decks
+may omit normalization values already persisted in HDF5.
+
 If the experimental precursor/actuator timing does not fit inside the native
 simulation window, the audit fails closed instead of clipping the trigger to an
 arbitrary native time.
@@ -38,6 +42,12 @@ BOOST_PROFILE = dict(second_width=0.145, second_shoulder_width=0.40, second_delt
 PROTON_MASS_CGS_G = 1.6726219e-24
 CAL_REL_TOL = 1e-10
 NORMALIZATION_KEYS = ("b0_norm", "n0_norm", "l0_norm", "ion_mass")
+ARTIFACT_KEYS = {
+    "b0_norm": "b0_norm_G",
+    "n0_norm": "n0_norm_cm3",
+    "l0_norm": "l0_norm_cm",
+    "ion_mass": "ion_mass_mp",
+}
 
 
 def dump(payload: dict) -> None:
@@ -47,29 +57,60 @@ def dump(payload: dict) -> None:
     )
 
 
-def _input_scalar(text: str, key: str) -> float:
+def _input_scalar_optional(text: str, key: str) -> float | None:
     match = re.search(
         rf"(?im)^\s*{re.escape(key)}\s*=\s*([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eEdD][+-]?\d+)?)",
         text,
     )
     if not match:
-        raise ValueError(f"missing {key} in native baseline C1input")
+        return None
     return float(match.group(1).replace("D", "e").replace("d", "e"))
 
 
-def derive_alfven_time_calibration(deck: Path) -> dict:
-    """Derive native M3D-C1 time normalization from the actual run deck.
+def _as_float(value, key: str) -> float:
+    """Convert a scalar HDF5 attribute to float without assuming numpy shape."""
+    if hasattr(value, "item"):
+        try:
+            value = value.item()
+        except Exception:
+            pass
+    try:
+        out = float(value)
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"HDF5 attribute {key} is not scalar numeric: {value!r}") from exc
+    if not math.isfinite(out) or out <= 0.0:
+        raise ValueError(f"HDF5 attribute {key} must be finite and positive: {out!r}")
+    return out
 
-    M3D-C1 normalization:
-      v0 = b0 / sqrt(4*pi*ion_mass*mp*n0) [cm/s]
-      t0 = l0 / v0                       [s/native time unit]
-    """
-    text = deck.read_text()
-    vals = {key: _input_scalar(text, key) for key in NORMALIZATION_KEYS}
+
+def _h5_normalization(h5_path: Path) -> dict[str, float]:
+    """Read authoritative runtime normalization from the native baseline HDF5."""
+    try:
+        import h5py
+    except Exception as exc:
+        raise RuntimeError(f"h5py unavailable for runtime normalization verification: {exc}") from exc
+
+    if not h5_path.exists():
+        raise FileNotFoundError(h5_path)
+
+    with h5py.File(h5_path, "r") as h5:
+        missing = [key for key in NORMALIZATION_KEYS if key not in h5.attrs]
+        if missing:
+            available = sorted(str(k) for k in h5.attrs.keys())
+            raise ValueError(
+                f"missing HDF5 root normalization attributes {missing}; "
+                f"available root attributes={available}"
+            )
+        return {key: _as_float(h5.attrs[key], key) for key in NORMALIZATION_KEYS}
+
+
+def _derive_from_values(vals: dict[str, float], provenance: dict) -> dict:
     if any(not math.isfinite(v) or v <= 0.0 for v in vals.values()):
         raise ValueError(f"invalid M3D-C1 normalization values: {vals}")
     mi_g = vals["ion_mass"] * PROTON_MASS_CGS_G
-    v0_cm_s = vals["b0_norm"] / math.sqrt(4.0 * math.pi * mi_g * vals["n0_norm"])
+    v0_cm_s = vals["b0_norm"] / math.sqrt(
+        4.0 * math.pi * mi_g * vals["n0_norm"]
+    )
     t0_s = vals["l0_norm"] / v0_cm_s
     return {
         "normalization": {
@@ -80,8 +121,56 @@ def derive_alfven_time_calibration(deck: Path) -> dict:
         },
         "alfven_velocity_cm_s": v0_cm_s,
         "physical_ms_per_solver_time_unit": 1000.0 * t0_s,
-        "deck_path": str(deck),
+        "runtime_source": provenance,
     }
+
+
+def derive_alfven_time_calibration(baseline_dir: Path) -> dict:
+    """Derive native time normalization from live C1.h5, cross-checking C1input.
+
+    M3D-C1 normalization:
+      v0 = b0 / sqrt(4*pi*ion_mass*mp*n0) [cm/s]
+      t0 = l0 / v0                       [s/native time unit]
+
+    The live HDF5 is authoritative because a copied/restart C1input can omit
+    normalization entries after the values have been persisted in C1.h5.
+    """
+    h5_path = baseline_dir / "C1.h5"
+    vals = _h5_normalization(h5_path)
+
+    input_path = baseline_dir / "C1input"
+    input_checks: dict[str, dict] = {}
+    if input_path.exists():
+        text = input_path.read_text(errors="replace")
+        for key in NORMALIZATION_KEYS:
+            input_value = _input_scalar_optional(text, key)
+            if input_value is None:
+                input_checks[key] = {"present": False, "match_h5": None}
+                continue
+            match = math.isclose(
+                input_value, vals[key], rel_tol=CAL_REL_TOL, abs_tol=0.0
+            )
+            input_checks[key] = {
+                "present": True,
+                "value": input_value,
+                "h5_value": vals[key],
+                "match_h5": match,
+            }
+            if not match:
+                raise ValueError(
+                    f"C1input/HDF5 normalization mismatch for {key}: "
+                    f"input={input_value!r}, h5={vals[key]!r}"
+                )
+
+    return _derive_from_values(
+        vals,
+        {
+            "authoritative": "C1.h5 root attributes",
+            "h5_path": str(h5_path),
+            "c1input_path": str(input_path),
+            "c1input_cross_checks": input_checks,
+        },
+    )
 
 
 def _close(a: float, b: float, rel_tol: float = CAL_REL_TOL) -> bool:
@@ -89,7 +178,7 @@ def _close(a: float, b: float, rel_tol: float = CAL_REL_TOL) -> bool:
 
 
 def calibration() -> tuple[dict | None, str | None]:
-    """Load reviewed calibration and verify it against the actual baseline deck."""
+    """Load reviewed calibration and verify it against the live baseline HDF5."""
     if not CAL.exists():
         return None, f"calibration artifact missing: {CAL}"
     try:
@@ -109,19 +198,21 @@ def calibration() -> tuple[dict | None, str | None]:
     if c["reviewed"] is not True or c["applies_to_native_deck"] is not True:
         return None, "calibration artifact is not marked reviewed/applicable"
 
-    deck = native.BASE / "C1input"
-    if not deck.exists():
-        return None, f"native baseline deck missing: {deck}"
+    if not native.BASE.exists():
+        return None, f"native baseline directory missing: {native.BASE}"
     try:
-        derived = derive_alfven_time_calibration(deck)
+        derived = derive_alfven_time_calibration(native.BASE)
     except Exception as exc:
-        return None, f"cannot derive calibration from native baseline deck: {exc}"
+        return None, f"cannot derive calibration from live native baseline: {exc}"
 
     expected = c["normalization"]
     actual = derived["normalization"]
     for key in ("b0_norm_G", "n0_norm_cm3", "l0_norm_cm", "ion_mass_mp"):
         if key not in expected or not _close(expected[key], actual[key]):
-            return None, f"native deck normalization mismatch for {key}: expected={expected.get(key)!r}, actual={actual[key]!r}"
+            return None, (
+                f"native HDF5 normalization mismatch for {key}: "
+                f"expected={expected.get(key)!r}, actual={actual[key]!r}"
+            )
 
     stated_scale = float(c["physical_ms_per_solver_time_unit"])
     derived_scale = float(derived["physical_ms_per_solver_time_unit"])
@@ -134,7 +225,8 @@ def calibration() -> tuple[dict | None, str | None]:
     verified = dict(c)
     verified["runtime_verification"] = {
         "pass": True,
-        "deck_path": str(deck),
+        "source": derived["runtime_source"],
+        "derived_normalization": actual,
         "derived_physical_ms_per_solver_time_unit": derived_scale,
         "derived_alfven_velocity_cm_s": derived["alfven_velocity_cm_s"],
         "relative_tolerance": CAL_REL_TOL,
@@ -218,10 +310,6 @@ def main() -> int:
     frame = DiagnosticFrame(True, "mirnov_toroidal", 1.0, lead_ms, True)
     decision = decide(frame, actuator)
 
-    # The native characterization has a repeatable Jpk excursion near t=0.14.
-    # It is NOT an experimental ELM timestamp. Physical timing is used only to
-    # determine whether a causal precursor-conditioned command can exist inside
-    # this native window.
     event_time = 0.14
     lead_native = lead_ms / scale
     response_native = decision.required_lead_ms / scale
@@ -242,10 +330,6 @@ def main() -> int:
         "boost_on": boost_on,
     }
 
-    # Do not turn a many-millisecond experimental lead into an arbitrary t=0.05
-    # command by clipping it to the start of a sub-microsecond native window.
-    # Such a run would be a static prebias experiment, not controller-in-loop
-    # evidence. Report the scale mismatch and keep the boost fail-closed.
     timing_window_compatible = (
         decision.bounded_boost
         and trigger >= base.START
@@ -295,7 +379,6 @@ def main() -> int:
     base.install_two_profile_operator()
     base.pta.build()
 
-    # Common baseline and mandatory zero-equivalence.
     _, baseline, _ = base.run_case(
         "no_control",
         source=0,
