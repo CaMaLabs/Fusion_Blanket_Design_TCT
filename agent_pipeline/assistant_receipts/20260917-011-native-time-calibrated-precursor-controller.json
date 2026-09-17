@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-011-native-time-calibrated-precursor-controller",
+  "processed_result_receipt": "agent_pipeline/results/20260917-011-native-time-calibrated-precursor-controller.json",
+  "processed_result_sha": "5a16f5a8778dda6ae78a056d61a265911561e93d",
+  "result_head_before": "916a8489fd1caf179f5419e36b3442bd012dade6",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_failure": false,
+  "interpretation": "Fail-closed calibration prerequisite remains unresolved. The worker returned successfully without executing or interpreting the controller matrix. The receipt reports missing b0_norm in C1input, while the declared summary records that authoritative live-baseline normalization could not be read because h5py was unavailable. Frozen +0.020% width and +0.10% Jpk gates remain unchanged; zero-equivalence is required only if the controller matrix executes, so no physics gate was bypassed. Mirnov/toroidal remains the precursor authority and the claim boundary remains normalized native M3D-C1 only.",
+  "new_job_id": "20260917-012-native-h5-calibrated-precursor-controller",
+  "follow_up": "Existing enabled child job 012 is correctly parented to job 011 and narrows the calibration authority to live baseline C1.h5 root attributes; no duplicate follow-up was created.",
+  "timestamp_utc": "2026-09-18T00:00:00Z"
+}
