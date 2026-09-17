@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-012-native-h5-calibrated-precursor-controller",
+  "processed_result_receipt": "agent_pipeline/results/20260917-012-native-h5-calibrated-precursor-controller.json",
+  "processed_result_sha": "aa79ab29e678a2b8e44157efc3cdb692f93b3dce",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Fail-closed prerequisite result, not a negative TCT physics result. Controller physics and zero-equivalence were not executed because authoritative physical-time calibration could not be established. The machine receipt/log reports h5py unavailable; the committed validation summary additionally records a live-HDF5 ion_mass_mp normalization mismatch (expected 2.0, actual 1.0). Frozen width > +0.020% and Jpk <= +0.10% gates remain unchanged, Mirnov/toroidal remains precursor authority, and the claim boundary remains normalized native M3D-C1 only.",
+  "new_job_id": "20260917-013-native-h5py-bootstrap-precursor-controller",
+  "followup_note": "A single correctly parented enabled follow-up already existed when this result was processed; no duplicate job was created. Job 013 narrowly bootstraps h5py and retries authoritative live C1.h5 normalization without changing controller architecture, solver physics, or frozen gates.",
+  "processed_at_utc": "2026-09-18T00:00:00Z"
+}
