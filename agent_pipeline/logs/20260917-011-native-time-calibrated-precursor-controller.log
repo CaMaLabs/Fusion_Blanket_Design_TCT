@@ -1,0 +1,25 @@
+job_id=20260917-011-native-time-calibrated-precursor-controller
+started_utc=2026-09-17T18:36:18.341397Z
+head_before=916a8489fd1caf179f5419e36b3442bd012dade6
+===== NATIVE TCT PRECURSOR CONTROLLER-IN-LOOP =====
+{
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_failure": false,
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+  "reason": "Fail-closed prerequisite: cannot derive calibration from native baseline deck: missing b0_norm in native baseline C1input",
+  "physical_time_calibration": null,
+  "precursor_lead_ms": null,
+  "supervisor_decision": null,
+  "derived_native_times": null,
+  "zero_equivalence": null,
+  "arms": null,
+  "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION"
+}
+
+finished_utc=2026-09-17T18:36:18.957144Z
+return_code=0

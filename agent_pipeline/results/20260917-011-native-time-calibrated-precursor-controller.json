@@ -1,0 +1,40 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.6147329807281494,
+  "error": null,
+  "finished_utc": "2026-09-17T18:36:18.957201Z",
+  "head_before": "916a8489fd1caf179f5419e36b3442bd012dade6",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260917-011-native-time-calibrated-precursor-controller.json",
+  "job_id": "20260917-011-native-time-calibrated-precursor-controller",
+  "log_path": "agent_pipeline/logs/20260917-011-native-time-calibrated-precursor-controller.log",
+  "log_sha256": "f7ec51ced5fb5951e4fd1229dcb8d5566deb6b48d616426e7c63282364e49de3",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_precursor_controller_in_loop"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "runner_sha256": "3fb85030a57dbd97ed102e6e0d8cd4fde7e795ae6307fb88284d32190c46c7e3",
+  "schema_version": 1,
+  "started_utc": "2026-09-17T18:36:18.341397Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION",
+    "physical_time_calibration": null,
+    "pipeline_failure": false,
+    "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+    "reason": "Fail-closed prerequisite: cannot derive calibration from native baseline deck: missing b0_norm in native baseline C1input",
+    "scientific_interpretation_allowed": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "summary_sha256": "14e812944f6d97676ad6e6e5c5b3a57074823a407f8a193b66f8f5af7272222e",
+  "timed_out": false
+}

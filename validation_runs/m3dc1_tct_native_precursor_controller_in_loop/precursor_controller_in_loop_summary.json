@@ -6,8 +6,9 @@
     "width_gain_pct_gt": 0.02
   },
   "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION",
+  "physical_time_calibration": null,
   "pipeline_failure": false,
   "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
-  "reason": "Fail-closed prerequisite: no reviewed physical-ms to native-solver-time calibration exists for this deck. No arbitrary conversion was performed.",
+  "reason": "Fail-closed prerequisite: cannot derive calibration from native baseline deck: missing b0_norm in native baseline C1input",
   "scientific_interpretation_allowed": false
 }
