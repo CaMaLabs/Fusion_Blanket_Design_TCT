@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-010-native-precursor-controller-in-loop",
+  "parent_result_job_id": "20260916-009-h006-delta0305-confirmation",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": ["validation_runs/m3dc1_tct_native_precursor_controller_in_loop"],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "purpose": "Return the mainline native M3D-C1 validation to the established TCT architecture: standing preventative bias plus Mirnov/toroidal precursor-conditioned bounded boost with latency/safety arbitration. Adapt PACMAN's modular diagnostics/predictor/controller/arbitration architecture without replacing TCT precursors. Fail closed rather than inventing a normalized-time conversion.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_handoff_equivalence": false,
+    "handoff_equivalence_note": "No new spatial handoff mechanism is introduced; the existing native two-profile operator's same-profile handoff equivalence was previously validated to 1e-12. This job still performs fresh source-zero equivalence.",
+    "require_reviewed_physical_time_calibration_for_controller_physics": true,
+    "calibration_absence_is_pipeline_failure": false,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "fail_closed_policy": "If calibration, confidence, latency feasibility, actuator health, or safety fails, retain standing bias and issue NO ACTION for the bounded boost.",
+    "required_matrix": ["no_control", "standing_bias_only", "precursor_conditioned", "oracle_conditioned", "late_negative_control", "wrong_sign_negative_control"],
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim unless stronger evidence is independently established."
+  }
+}
