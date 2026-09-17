@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "physical_ms_per_solver_time_unit": 0.0006483638900045808,
+  "normalization": {
+    "b0_norm_G": 10000.0,
+    "n0_norm_cm3": 100000000000000.0,
+    "l0_norm_cm": 100.0,
+    "ion_mass_mp": 2.0
+  },
+  "formula": {
+    "id": "m3dc1_alfven_time_cgs",
+    "velocity": "v0 = b0 / sqrt(4*pi*ion_mass*mp*n0)",
+    "time": "t0 = l0 / v0",
+    "proton_mass_g": 1.6726219e-24
+  },
+  "provenance": {
+    "method": "M3D-C1 Alfven normalization derived from the native deck normalization constants",
+    "native_template": "validation_inputs/machine_equilibria/diii_d/C1input_base",
+    "reference_repository": "ProjectTorreyPines/M3DC1Reader.jl",
+    "reference_path": "src/units.jl",
+    "reference_blob_sha": "1c8018e2f9abd1ad695db70306e7aecb22e81b85",
+    "reference_note": "M3DNormalization defines v0=b0/sqrt(4*pi*ion_mass*mp*n0) and t0=l0/v0; time unit factor is t0 seconds per native unit."
+  },
+  "reviewed": true,
+  "review_scope": "Formula and committed DIII-D normalization values cross-checked against M3D-C1Reader unit-normalization implementation; runtime code must independently verify the actual /home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1input values before use.",
+  "applies_to_native_deck": true,
+  "runtime_verification_required": true,
+  "relative_tolerance": 1e-10
+}
