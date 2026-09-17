@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-012-native-h5-calibrated-precursor-controller",
+  "parent_result_job_id": "20260917-011-native-time-calibrated-precursor-controller",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": ["validation_runs/m3dc1_tct_native_precursor_controller_in_loop"],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "purpose": "Retry the native TCT precursor controller-in-loop audit with physical-time normalization read authoritatively from the live baseline C1.h5 root attributes. Preserve the established standing-bias plus Mirnov/toroidal precursor architecture and fail closed on HDF5/calibration mismatch or native timescale incompatibility.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_reviewed_physical_time_calibration_for_controller_physics": true,
+    "runtime_normalization_authority": "live baseline C1.h5 root attributes",
+    "c1input_normalization_role": "optional consistency cross-check only",
+    "calibration_absence_is_pipeline_failure": false,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "fail_closed_policy": "If live HDF5 normalization, calibration, confidence, latency feasibility, actuator health, or safety fails, retain standing bias and issue NO ACTION for the bounded boost.",
+    "required_matrix_if_timing_compatible": ["no_control", "standing_bias_only", "precursor_conditioned", "oracle_conditioned", "late_negative_control", "wrong_sign_negative_control"],
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim unless stronger evidence is independently established."
+  }
+}
