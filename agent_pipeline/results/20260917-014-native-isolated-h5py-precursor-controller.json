@@ -1,0 +1,40 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 2.0215559005737305,
+  "error": null,
+  "finished_utc": "2026-09-17T21:08:55.377659Z",
+  "head_before": "6f1069f37984d1d7e4819d5bffb1b1296dd720d3",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260917-014-native-isolated-h5py-precursor-controller.json",
+  "job_id": "20260917-014-native-isolated-h5py-precursor-controller",
+  "log_path": "agent_pipeline/logs/20260917-014-native-isolated-h5py-precursor-controller.log",
+  "log_sha256": "3911fb496d9e04889a9a8be1fff585c648898a9336640497e47e5d626ee16ca6",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_precursor_controller_in_loop"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "runner_sha256": "1d6a6e4d8f6a8f9d60705cba491bf1cbefaaa0ae914b8f092da4a313b165e567",
+  "schema_version": 1,
+  "started_utc": "2026-09-17T21:08:53.354376Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION",
+    "physical_time_calibration": null,
+    "pipeline_failure": false,
+    "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+    "reason": "Fail-closed prerequisite: native HDF5 normalization mismatch for ion_mass_mp: expected=2.0, actual=1.0",
+    "scientific_interpretation_allowed": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "summary_sha256": "459ef3743ceeed8343c63d2465431cc87403c1679b608fd6a2b6d5bf5ce65cc3",
+  "timed_out": false
+}

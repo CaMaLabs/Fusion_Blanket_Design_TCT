@@ -9,6 +9,6 @@
   "physical_time_calibration": null,
   "pipeline_failure": false,
   "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
-  "reason": "Fail-closed prerequisite: cannot derive calibration from live native baseline: h5py unavailable for runtime normalization verification: No module named 'h5py'",
+  "reason": "Fail-closed prerequisite: native HDF5 normalization mismatch for ion_mass_mp: expected=2.0, actual=1.0",
   "scientific_interpretation_allowed": false
 }

@@ -1,0 +1,36 @@
+job_id=20260917-014-native-isolated-h5py-precursor-controller
+started_utc=2026-09-17T21:08:53.354376Z
+head_before=6f1069f37984d1d7e4819d5bffb1b1296dd720d3
+Using existing audit venv: /home/ubuntu/work/openmc/sweep/.venv-dudson
+h5py missing from existing audit venv; installing into /home/ubuntu/work/openmc/sweep/.venv-dudson ...
+Collecting h5py
+  Downloading h5py-3.16.0-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Requirement already satisfied: numpy>=1.21.2 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from h5py) (2.5.2)
+Downloading h5py-3.16.0-cp314-cp314-manylinux_2_28_x86_64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 39.5 MB/s  0:00:00
+Installing collected packages: h5py
+Successfully installed h5py-3.16.0
+audit_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+h5py 3.16.0
+===== NATIVE TCT PRECURSOR CONTROLLER-IN-LOOP =====
+{
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_failure": false,
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+  "reason": "Fail-closed prerequisite: native HDF5 normalization mismatch for ion_mass_mp: expected=2.0, actual=1.0",
+  "physical_time_calibration": null,
+  "precursor_lead_ms": null,
+  "supervisor_decision": null,
+  "derived_native_times": null,
+  "zero_equivalence": null,
+  "arms": null,
+  "pacman_adaptation": "diagnostic validation -> precursor proposal -> latency/safety arbiter -> bounded boost or NO ACTION"
+}
+
+finished_utc=2026-09-17T21:08:55.377627Z
+return_code=0
