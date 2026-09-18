@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-018-native-restart-interface-specificity-audit",
+  "processed_result_sha": "0329d3b632f141ced909889078fb1677da7d2b01",
+  "processed_result_head_before": "13b124af5684604bdacb00b3ecda4bd518dce7aa",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_INTERFACE_HIGH_SIGNAL_CANDIDATES_FOUND_REQUIRES_SPLIT_RUN_VALIDATION",
+  "pipeline_failure": false,
+  "interpretation": "The high-specificity audit found direct native restart machinery (irestart, irestart_slice, ntimers, restart_hdf5 and restart-aware HDF5 initialization). This establishes a credible runtime interface but not restart state equivalence. Zero equivalence remains NOT_EVALUATED_CAPABILITY_AUDIT_ONLY and handoff equivalence remains NOT_EVALUATED_NO_RESTART_EXECUTED. No controller-efficacy inference is permitted. The frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260917-019-native-restart-split-equivalence",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "processed_utc": "2026-09-18T05:51:35Z"
+}
