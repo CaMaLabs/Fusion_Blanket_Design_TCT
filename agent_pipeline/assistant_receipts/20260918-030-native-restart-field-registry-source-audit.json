@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-030-native-restart-field-registry-source-audit",
+  "processed_result_path": "agent_pipeline/results/20260918-030-native-restart-field-registry-source-audit.json",
+  "processed_result_sha": "219b010f5c32972f7b4ee4335c58aac3597b0f61",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_REGISTRY_SOURCE_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "The static source audit completed successfully and captured native M3D-C1 create/destroy-field lifecycle context around the registry discrepancy observed in job 029. It does not map numeric field IDs to semantic field identity and does not demonstrate that the registry shift causes the first-postrestart discontinuity. Handoff equivalence remains inherited failed at 1e-12 from job 028. This is a normalized native M3D-C1 restart provenance result only, not controller-efficacy evidence. The frozen +0.020% width and +0.10% Jpk gates remain unchanged. One narrower static follow-up was queued to identify restart-gated create/destroy lifecycle branches before any further dynamic solver run.",
+  "new_job_id": "20260918-031-native-restart-field-registry-branch-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T17:13:52Z"
+}
