@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-027-native-restart-checkpoint-link-consistency",
+  "processed_result_path": "agent_pipeline/results/20260918-027-native-restart-checkpoint-link-consistency.json",
+  "processed_result_sha": "8fed2dbd122a302dac1699b6192d74a649045878",
+  "processed_result_head_before": "b682ba352f7c0dba3c5b07571b1abb1fd7f58b10",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_LINK_GRAPH_CONSISTENT",
+  "pipeline_error": null,
+  "interpretation": "The persisted native restart checkpoint link graph is internally consistent: all expected external-link targets exist, time_000 through time_005 are present in sequence, the latest link resolves correctly, h5dump succeeded, and the captured artifact hashes match job 025. This rules out a malformed persisted external-link graph as the obvious source of the first-postrestart discontinuity. Zero-equivalence and handoff-equivalence remain NOT_EVALUATED_LINK_AUDIT_ONLY. The frozen +0.020% width and +0.10% Jpk gates are unchanged. Exactly one bounded source=0 follow-up was queued to compare irestart_slice=-1 against explicit latest-slice selection irestart_slice=5 at a required handoff-equivalence tolerance of 1e-12.",
+  "new_job_id": "20260918-028-native-restart-slice-selection",
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/link provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T14:03:00Z"
+}
