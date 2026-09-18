@@ -1,0 +1,375 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.2642202377319336,
+  "error": null,
+  "finished_utc": "2026-09-18T09:21:23.628933Z",
+  "head_before": "328f055540c85ad709d0d6621be81a40040599d1",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-022-native-restart-state-path-audit.json",
+  "job_id": "20260918-022-native-restart-state-path-audit",
+  "log_path": "agent_pipeline/logs/20260918-022-native-restart-state-path-audit.log",
+  "log_sha256": "7e91fc47cff24217d311805aff65fc66dc753add2d01269bfed50cea4682ea6f",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_state_path"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_state_path_audit.sh",
+  "runner_sha256": "20105fc68ef319e14801818137cc3f431767929f00973f0ec1af6c5f934d3c6d",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T09:21:23.363712Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Source-level audit of native M3D-C1 restart serialization/restoration path after precheckpoint equivalence and first-poststep divergence; no solver physics changes and no controller efficacy run.",
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_STATE_PATH_SOURCE_AUDITED",
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "handoff_equivalence_status": "FAILED_AT_FIRST_POSTRESTART_STEP_IN_PARENT_JOB",
+    "high_signal_count": 55,
+    "high_signal_hits": [
+      {
+        "context": "173:   integer :: prad_z   ! Z of impurity species in prad module\n174:   real    :: prad_fz  ! density of impurity species as fraction of electron density \n175: \n176:   ! general equilibrium parameters\n177:   integer :: irestart ! 1 = reads restart file as initial condition\n178:                       ! 2 = reads restart file to initialize GS solve\n179:                       ! 3 = reads 2D RL=1 restart file o initialize 2D COM=1 run\n180:   integer :: irestart_slice   ! field output timeslice from which to restart\n181:   integer :: version_in  ! Version of restart file",
+        "line": 177,
+        "match": "integer :: irestart ! 1 = reads restart file as initial condition",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "176:   ! general equilibrium parameters\n177:   integer :: irestart ! 1 = reads restart file as initial condition\n178:                       ! 2 = reads restart file to initialize GS solve\n179:                       ! 3 = reads 2D RL=1 restart file o initialize 2D COM=1 run\n180:   integer :: irestart_slice   ! field output timeslice from which to restart\n181:   integer :: version_in  ! Version of restart file\n182:   integer :: itaylor  ! equilibrium\n183:   integer :: idevice  ! for itor=1, itaylor=1, selects tokamak configuration\n184:                       !  0 = generic",
+        "line": 180,
+        "match": "integer :: irestart_slice   ! field output timeslice from which to restart",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "471:   integer :: ike_only      ! 1 = only calculate kinetic energy\n472:   integer :: ike_harmonics  ! number of Fourier harmonics of ke to be calculated and output\n473:   integer :: ibh_harmonics  ! number of Fourier harmonics of magnetic field perturbation to be calculated and output\n474:   integer :: ifout         ! 1 = output f field\n475:   integer :: irestart_fp   ! -1 = default; 1 = fp present at restart; 0 = absent; \n476:   integer :: itemp_plot    ! 1 =output vdotgradt, deldotq_perp, deldotq_par,eta_jsq\n477:   integer :: ibdgp         ! option to make partial plots of b dot grad potential\n478:   integer :: iveldif         ! option to make partial plots of V x B - grad(potential)\n479:   integer :: iread_eqdsk   ! 1 = read geqdsk input",
+        "line": 475,
+        "match": "integer :: irestart_fp   ! -1 = default; 1 = fp present at restart; 0 = absent;",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "19:   use adapt\n20:   use particles\n21:   use math\n22:   use m3dc1_omp\n23:   use restart_hdf5\n24:   use wall\n25:   use geometry \n26:   use neutral_beam\n27:   use kprad_m3dc1",
+        "line": 23,
+        "match": "use restart_hdf5",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "220:   ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n221:   ! initialize output for HDF5 and C1ke\n222:   call initialize_output ()\n223:  \n224:   select case (irestart)\n225:   case(0)\n226:      ! Initialize from routine\n227: \n228:      version_in = -1",
+        "line": 224,
+        "match": "select case (irestart)",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "252:      dtsave = dt\n253:      ! Read restart file(s)\n254: \n255:      if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n256:      call rdrestart_hdf5\n257: !\n258: !....use timestep from input file if not a variable timestep run\n259:     if(dtkecrit.eq.0) dt = dtsave\n260: ",
+        "line": 256,
+        "match": "call rdrestart_hdf5",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "262: !....read 2D real RL=1 restart file to start 2D complex COM=1 run\n263: !\n264: !....save timestep from input file\n265:      dtsave = dt\n266:      call rdrestart_hdf5\n267:      dt = dtsave\n268: \n269:   end select                     !  end of the branch on restart/no restart\n270: ",
+        "line": 266,
+        "match": "call rdrestart_hdf5",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "267:      dt = dtsave\n268: \n269:   end select                     !  end of the branch on restart/no restart\n270: \n271:   if(irestart.ne.0) then\n272:      call hdf5_reconcile_version(version_in, ier)\n273:   end if\n274: \n275:   ntime0 = ntime",
+        "line": 271,
+        "match": "if(irestart.ne.0) then",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "283:   if(itimer.eq.1) call reset_timings\n284: \n285:   ! output simulation parameters\n286:   ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n287:   if(irestart.eq.0) then\n288:      if(myrank.eq.0 .and. iprint.ge.1) &\n289:           print *, \" Writing simulation parameters\"\n290:      \n291:      call hdf5_write_parameters(ier)",
+        "line": 287,
+        "match": "if(irestart.eq.0) then",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "338:   endif\n339:   if (iadapt .eq. 4) call adapt_by_error\n340: #endif\n341: \n342:   if(irestart.eq.0  .or. iadapt.gt.0) then\n343:      tflux0 = tflux\n344:   endif\n345: \n346:   ! mark the fields necessary for solution transfer",
+        "line": 342,
+        "match": "if(irestart.eq.0  .or. iadapt.gt.0) then",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "870:   if(imp_bf.eq.0 .or. ntime.eq.ntime0) then\n871:      if(i3d.eq.1 .and. ilin.eq.1 .and. numvar.ge.2) then\n872:         if(myrank.eq.0 .and. iprint.ge.2) print *, \"  fp\", ilin\n873:         ! solve fp = df/dphi when restarting absent fp \n874:         if(irestart_fp.eq.0 .and. ntime.eq.ntime0) then \n875:            call solve_newvar1(mass_mat_lhs,bfp_field(ilin),dp_mat_rhs_bfp, &\n876:                bf_field(ilin))\n877:            if(extsubtract.eq.1) then ! also, external bfp\n878:               call solve_newvar1(mass_mat_lhs,bfp_ext,dp_mat_rhs_bfp, &",
+        "line": 874,
+        "match": "if(irestart_fp.eq.0 .and. ntime.eq.ntime0) then",
+        "path": "unstructured/newpar.f90"
+      },
+      {
+        "context": "7:   integer :: ipellet_z ! Atomic number of pellet source (0 = main ion)\n8: \n9:   integer :: iread_pellet  ! 1 = read pellet info from pellet.dat\n10: \n11:   integer :: irestart_pellet ! 0 = read restart from hdf5\n12:                              ! 1 = read some restart parameters from C1input\n13: \n14:   integer :: ipellet_fixed_dep ! 0: Use cloud_pel*r_p; 1: use pellet_var\n15:   integer :: npellets",
+        "line": 11,
+        "match": "integer :: irestart_pellet ! 0 = read restart from hdf5",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "1: module restart_hdf5\n2:   implicit none\n3: \n4:   integer, private :: icomplex_in, eqsubtract_in, extsubtract_in, ifin, nplanes_in\n5:   integer, private :: ikprad_in, kprad_z_in, ipellet_in",
+        "line": 1,
+        "match": "module restart_hdf5",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "7:   real, private :: toroidal_period_in\n8: \n9: contains\n10:   \n11:   subroutine rdrestart_hdf5()\n12:     use basic\n13:     use hdf5_output\n14:     use hdf5\n15:     use pellet",
+        "line": 11,
+        "match": "subroutine rdrestart_hdf5()",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "43: \n44: \n45:     ! Read Time Slice\n46:     ! ~~~~~~~~~~~~~~~\n47:     if(irestart_slice.ge.0 .and. irestart_slice.lt.times_output) then\n48:        ! unlink output files beyond irestart_slice\n49:        do i = irestart_slice+1, times_output\n50:           write(time_group_name, '(\"time_\",I3.3)') i\n51:           call h5gunlink_f(file_id, time_group_name, error)",
+        "line": 47,
+        "match": "if(irestart_slice.ge.0 .and. irestart_slice.lt.times_output) then",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "44: \n45:     ! Read Time Slice\n46:     ! ~~~~~~~~~~~~~~~\n47:     if(irestart_slice.ge.0 .and. irestart_slice.lt.times_output) then\n48:        ! unlink output files beyond irestart_slice\n49:        do i = irestart_slice+1, times_output\n50:           write(time_group_name, '(\"time_\",I3.3)') i\n51:           call h5gunlink_f(file_id, time_group_name, error)\n52:        end do",
+        "line": 48,
+        "match": "! unlink output files beyond irestart_slice",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "45:     ! Read Time Slice\n46:     ! ~~~~~~~~~~~~~~~\n47:     if(irestart_slice.ge.0 .and. irestart_slice.lt.times_output) then\n48:        ! unlink output files beyond irestart_slice\n49:        do i = irestart_slice+1, times_output\n50:           write(time_group_name, '(\"time_\",I3.3)') i\n51:           call h5gunlink_f(file_id, time_group_name, error)\n52:        end do\n53:        times_output = irestart_slice",
+        "line": 49,
+        "match": "do i = irestart_slice+1, times_output",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "49:        do i = irestart_slice+1, times_output\n50:           write(time_group_name, '(\"time_\",I3.3)') i\n51:           call h5gunlink_f(file_id, time_group_name, error)\n52:        end do\n53:        times_output = irestart_slice\n54:     end if\n55:     if(myrank.eq.0) print *, 'Reading data from time slice', times_output\n56:     call read_int_attr(root_id, \"ntime\", times_output_in, error)\n57:     if(times_output_in .le. times_output) then",
+        "line": 53,
+        "match": "times_output = irestart_slice",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "111:        end if\n112: \n113:        ! check if fp is present\n114:        if(version_in.ge.38 .or. (version_in.ge.35 .and. numvar.gt.1)) then\n115:           irestart_fp = 1\n116:           if(myrank.eq.0 .and. iprint.ge.2) print *, \" fp is present at restart\"\n117:        else\n118:           irestart_fp = 0\n119:           if(myrank.eq.0 .and. iprint.ge.2) print *, \" fp is absent at restart\"",
+        "line": 115,
+        "match": "irestart_fp = 1",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "114:        if(version_in.ge.38 .or. (version_in.ge.35 .and. numvar.gt.1)) then\n115:           irestart_fp = 1\n116:           if(myrank.eq.0 .and. iprint.ge.2) print *, \" fp is present at restart\"\n117:        else\n118:           irestart_fp = 0\n119:           if(myrank.eq.0 .and. iprint.ge.2) print *, \" fp is absent at restart\"\n120:        endif\n121:     else\n122:        ifin = 0",
+        "line": 118,
+        "match": "irestart_fp = 0",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "197:           if(ipellet_in.ne.0) then\n198:              call read_int_attr(root_id, \"npellets\", npellets,  error)\n199:              call h5gopen_f(root_id, \"pellet\", pel_group_id, error)\n200:              \n201:              if(irestart_pellet.eq.0) then     \n202:                  ! Read all pellet parameters from restart .h5 file\n203:                  call read_1dextendarr(pel_group_id, \"pellet_r\",       pellet_r,       npellets, ntime, error)\n204:                  call read_1dextendarr(pel_group_id, \"pellet_phi\",     pellet_phi,     npellets, ntime, error)\n205:                  call read_1dextendarr(pel_group_id, \"pellet_z\",       pellet_z,       npellets, ntime, error)",
+        "line": 201,
+        "match": "if(irestart_pellet.eq.0) then",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "223:                     temp_pel = temp_pel*p0_norm/(n0_norm*1.6022e-12)\n224:                     call read_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)\n225:                  end if\n226: \n227:              else if(irestart_pellet.eq.1) then\n228:                  ! Control ablated cloud size and others parameters from C1input\n229:                  call read_1dextendarr(pel_group_id, \"pellet_r\",       pellet_r,       npellets, ntime, error)\n230:                  call read_1dextendarr(pel_group_id, \"pellet_phi\",     pellet_phi,     npellets, ntime, error)\n231:                  call read_1dextendarr(pel_group_id, \"pellet_z\",       pellet_z,       npellets, ntime, error)",
+        "line": 227,
+        "match": "else if(irestart_pellet.eq.1) then",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "240:                     call read_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)\n241:                  end if\n242:              else\n243:                  if(myrank.eq.0) then\n244:                     print *, 'Error: irestart_pellet not available for this value: ',irestart_pellet\n245:                     call safestop(30)\n246:                 end if         \n247:              end if\n248:              call h5gclose_f(pel_group_id, error)",
+        "line": 244,
+        "match": "print *, 'Error: irestart_pellet not available for this value: ',irestart_pellet",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "328:     end if\n329: \n330:     if (istartnew.eq.1) then\n331:        ntime = 0\n332:        irestart = 0\n333:        call hdf5_finalize(error)\n334:        call hdf5_initialize(.false., error)\n335: \n336:        if(eqsubtract.eq.0) then",
+        "line": 332,
+        "match": "irestart = 0",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "361: \n362:     end if\n363: \n364:     if(allocated(phi_in)) deallocate(phi_in)\n365:   end subroutine rdrestart_hdf5\n366: \n367: \n368:   subroutine read_fields(time_group_id, equilibrium, error)\n369:     use basic",
+        "line": 365,
+        "match": "end subroutine rdrestart_hdf5",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "418:        call h5r_read_field(group_id, \"I_plasma\", bz_field(ilin), nelms, error)\n419:        if(ifin.eq.1) then\n420:           call h5r_read_field(group_id, \"f_plasma\", bf_field(ilin), nelms, error)\n421:        end if\n422:        if(irestart_fp.eq.1) then\n423:           call h5r_read_field(group_id, \"fp_plasma\", bfp_field(ilin), nelms, error)\n424:        end if\n425:     else\n426:        call h5r_read_field(group_id, \"I\", bz_field(ilin), nelms, error)",
+        "line": 422,
+        "match": "if(irestart_fp.eq.1) then",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "426:        call h5r_read_field(group_id, \"I\", bz_field(ilin), nelms, error)\n427:        if(ifin.eq.1) then\n428:           call h5r_read_field(group_id, \"f\", bf_field(ilin), nelms, error)\n429:        end if\n430:        if(irestart_fp.eq.1) then\n431:           call h5r_read_field(group_id, \"fp\", bfp_field(ilin), nelms, error)\n432:        end if\n433:     end if\n434: ",
+        "line": 430,
+        "match": "if(irestart_fp.eq.1) then",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "435:     if (extsubtract_in.eq.1) then\n436:        call h5r_read_field(group_id, \"psi_ext\", psi_ext, nelms, error)\n437:        call h5r_read_field(group_id,   \"I_ext\",  bz_ext, nelms, error)\n438:        call h5r_read_field(group_id,   \"f_ext\",  bf_ext, nelms, error)       \n439:        if(irestart_fp.eq.1) then\n440:           call h5r_read_field(group_id, \"fp_ext\", bfp_ext, nelms, error)\n441:        end if\n442:     end if\n443: ",
+        "line": 439,
+        "match": "if(irestart_fp.eq.1) then",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "630:     if(iplane.lt.0) iplane=nplanes_old\n631:     shift = phi_new - phi_old(iplane)\n632:   end subroutine find_plane_and_shift\n633: \n634: end module restart_hdf5",
+        "line": 634,
+        "match": "end module restart_hdf5",
+        "path": "unstructured/restart_hdf5.f90"
+      },
+      {
+        "context": "914:   \n915:   ! density source\n916:   call add_var_int(\"ipellet\", ipellet, 0, &\n917:        \"1 = include a gaussian pellet source\", source_grp)\n918:   call add_var_int(\"irestart_pellet\", irestart_pellet, 0, &\n919:        \"1 = read some pellet restart parameters from C1input\", source_grp)\n920:   call add_var_int(\"ipellet_z\", ipellet_z, 0, &\n921:        \"Atomic number of pellet (0 = main ion species)\", source_grp)\n922:   call add_var_int(\"iread_pellet\", iread_pellet, 0, &",
+        "line": 918,
+        "match": "call add_var_int(\"irestart_pellet\", irestart_pellet, 0, &",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "1116:   call add_var_int(\"ike_harmonics\", ike_harmonics, 0, &\n1117:        \"Number of Fourier harmonics of ke to be calculated and output\", output_grp)\n1118:   call add_var_int(\"ibh_harmonics\", ibh_harmonics, 0, &\n1119:        \"Number of Fourier harmonics of magnetic perturbation to be calculated and output\", output_grp)\n1120:   call add_var_int(\"irestart\", irestart, 0, \"\", output_grp)\n1121:   call add_var_int(\"itimer\", itimer, 0, &\n1122:        \"1: Output internal timer data\", output_grp)\n1123:   call add_var_int(\"iwrite_transport_coeffs\", iwrite_transport_coeffs, 1, &\n1124:        \"1: Output transport coefficient fields\", output_grp)",
+        "line": 1120,
+        "match": "call add_var_int(\"irestart\", irestart, 0, \"\", output_grp)",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "1133:   call add_var_int(\"ibdgp\", ibdgp, 0, &\n1134:        \"ne.0: bdgp plot contains only partial results \", output_grp)\n1135:   call add_var_int(\"idouble_out\", idouble_out, 0, &\n1136:        \"1: Use double-precision floating points in output\", output_grp)\n1137:   call add_var_int(\"irestart_slice\", irestart_slice, -1, &\n1138:        \"Field output slice from which to restart\", output_grp)\n1139: \n1140:   call add_var_int(\"iveldif\", iveldif, 0, &\n1141:        \"ne.0: veldif plot contains only partial results \", output_grp)",
+        "line": 1137,
+        "match": "call add_var_int(\"irestart_slice\", irestart_slice, -1, &",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "1378: \n1379:   ! Deprecated\n1380:   call add_var_int(\"ibform\", idum, -1, \"\", deprec_grp)\n1381:   call add_var_int(\"igs_method\", idum, -1, \"\", deprec_grp)\n1382:   call add_var_int(\"iwrite_restart\", idum, 0, &\n1383:        \"1: Write restart files\", deprec_grp)\n1384:   call add_var_double(\"zeff\", dum, 0., &\n1385:        \"zeff is deprecated.  Use z_ion instead.\", deprec_grp)\n1386:   call add_var_int(\"ivform\", idum, 1, &",
+        "line": 1382,
+        "match": "call add_var_int(\"iwrite_restart\", idum, 0, &",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "1529: #endif\n1530:    endif\n1531: \n1532:   if(ifout.eq.-1) ifout = i3d\n1533:   irestart_fp = -1\n1534:   if(i3d.eq.1 .and. jadv.eq.0) then\n1535:      if(myrank.eq.0) &\n1536:           print *, 'WARNING: nonaxisymmetric cases should use jadv=1'\n1537:   endif",
+        "line": 1533,
+        "match": "irestart_fp = -1",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "273:     call tridef\n274:     call unstraighten_fields()\n275: \n276:     call create_newvar_matrices\n277:     if(irestart .ne. 0) return\n278:     field_vec = 0.\n279:     field0_vec = 0.\n280:     if (myrank .eq. 0) print *, \"re-calculate equlibrium after adapt ..\"\n281:     call initial_conditions",
+        "line": 277,
+        "match": "if(irestart .ne. 0) return",
+        "path": "unstructured/adapt.f90"
+      },
+      {
+        "context": "336:     call tridef\n337:     call unstraighten_fields()\n338: \n339:     call create_newvar_matrices\n340:     if(irestart .ne. 0 .or. linear .eq. 0) return\n341:     if (myrank .eq. 0) print *, \"reset simulation after adapt ..\"\n342:     field_vec = 0.\n343:     field0_vec = 0.\n344:     jphi_field = 0.",
+        "line": 340,
+        "match": "if(irestart .ne. 0 .or. linear .eq. 0) return",
+        "path": "unstructured/adapt.f90"
+      },
+      {
+        "context": "534:        call tridef\n535:        call unstraighten_fields()\n536: \n537:        call create_newvar_matrices\n538:        if(irestart .ne. 0 .or. linear .eq. 0) return\n539:        if (myrank .eq. 0) print *, \"reset simulation after adapt ..\"\n540:        field_vec = 0.\n541:        field0_vec = 0.\n542:        jphi_field = 0.",
+        "line": 538,
+        "match": "if(irestart .ne. 0 .or. linear .eq. 0) return",
+        "path": "unstructured/adapt.f90"
+      },
+      {
+        "context": "965:        call h5sclose_f(filespace, error)\n966:     else\n967:        call h5dopen_f(parent_id, name, dset_id, error)\n968: \n969:        if(irestart.ne.0  .and. version_in.lt.32) then\n970: \n971:           ! in older versions, N dimension can't change [maxdims(1) was NMAX]\n972:           ! reset dims to have same NMAX dimension as original\n973:           call h5dget_space_f(dset_id, filespace, error)",
+        "line": 969,
+        "match": "if(irestart.ne.0  .and. version_in.lt.32) then",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "1037:     call h5dopen_f(parent_id, name, dset_id, error)\n1038: \n1039:     call h5dget_space_f(dset_id, filespace, error)\n1040: \n1041:     if(irestart.ne.0  .and. version_in.lt.32) then\n1042:        ! Ensure NMAX isn't too long\n1043:        call h5sget_simple_extent_dims_f(filespace, dims, maxdims, error)\n1044:        if(maxdims(1).lt.NMAX) local_dims(1) = maxdims(1)\n1045:     end if",
+        "line": 1041,
+        "match": "if(irestart.ne.0  .and. version_in.lt.32) then",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "299:    call calculate_auxiliary_fields(eqsubtract)\n300: \n301:    !Initialize particle population\n302:    call second(tstart)\n303:    call init_particles(irestart .gt. 0, ierr)\n304:    if (ierr .ne. 0) return\n305:    if (myrank .eq. 0) then\n306:       call second(tend)\n307:       write (0, '(I12,A,f9.2,A)') nparticles, ' particles initialized in', &",
+        "line": 303,
+        "match": "call init_particles(irestart .gt. 0, ierr)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "308:          tend - tstart, ' seconds.'\n309:    end if\n310:    !call particle_step(dt*t0_norm)\n311: \n312:    if (irestart.eq.0) then\n313:       nrmfac(:)=1.0\n314:       call update_particle_pressure\n315:       nrmfac_temp(:)=0.\n316:       dpar%x(1) = xmag",
+        "line": 312,
+        "match": "if (irestart.eq.0) then",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "301:    call calculate_auxiliary_fields(eqsubtract)\n302: \n303:    !Initialize particle population\n304:    call second(tstart)\n305:    call init_particles(irestart .gt. 0, ierr)\n306:    if (ierr .ne. 0) return\n307:    if (myrank .eq. 0) then\n308:       call second(tend)\n309:       write (0, '(I12,A,f9.2,A)') nparticles, ' particles initialized in', &",
+        "line": 305,
+        "match": "call init_particles(irestart .gt. 0, ierr)",
+        "path": "unstructured/particle.f90"
+      },
+      {
+        "context": "310:          tend - tstart, ' seconds.'\n311:    end if\n312:    !call particle_step(dt*t0_norm)\n313: \n314:    if (irestart.eq.0) then\n315:       nrmfac(:)=1.0\n316:       call update_particle_pressure\n317:       nrmfac_temp(:)=0.\n318:       dpar%x(1) = xmag",
+        "line": 314,
+        "match": "if (irestart.eq.0) then",
+        "path": "unstructured/particle.f90"
+      },
+      {
+        "context": "20:     allocate(gamma_buffer(nt_gamma_gr))\n21:     gamma_buffer = 0.0\n22:     gamma_converged_flag = 0\n23:     \n24:    call hdf5_initialize(irestart.ne.0, ier)\n25: \n26:     if(ier.lt.0) then \n27:        print *, \"Error initializing HDF5\"\n28:        call safestop(5)",
+        "line": 24,
+        "match": "call hdf5_initialize(irestart.ne.0, ier)",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "393:        print *, \" Writing scalars\"\n394: \n395:   call h5gopen_f(file_id, \"/\", root_id, error)\n396: \n397:   if(ntime.eq.0 .and. irestart.eq.0) then\n398:      call h5gcreate_f(root_id, \"scalars\", scalar_group_id, error)\n399:      call write_int_attr(scalar_group_id, \"ntimestep\", ntime, error)\n400:      if(imag_probes.ne.0) call h5gcreate_f(root_id, \"mag_probes\", mp_group_id, error)\n401:      if(iflux_loops.ne.0) call h5gcreate_f(root_id, \"flux_loops\", fl_group_id, error)",
+        "line": 397,
+        "match": "if(ntime.eq.0 .and. irestart.eq.0) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "404:      call h5gopen_f(root_id, \"scalars\", scalar_group_id, error)\n405:      call update_int_attr(scalar_group_id, \"ntimestep\", ntime, error)\n406:      if(imag_probes.ne.0) call h5gopen_f(root_id, \"mag_probes\", mp_group_id, error)\n407:      if(iflux_loops.ne.0) call h5gopen_f(root_id, \"flux_loops\", fl_group_id, error)\n408:      if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &\n409:           call h5gopen_f(root_id, \"pellet\", pel_group_id, error)\n410:   endif\n411: \n412:   ! State Variables (needed for restart)",
+        "line": 408,
+        "match": "if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "425:   call output_scalar(scalar_group_id, \"zmag\"    ,zmag    ,ntime,error)\n426: \n427:   ! Pellet stuff\n428:   if(ipellet.ne.0) then\n429:      if((irestart.eq.0).or.(version_in.ge.31)) then\n430:         call output_1dextendarr(pel_group_id, \"pellet_r\",       pellet_r,       npellets, ntime, error)\n431:         call output_1dextendarr(pel_group_id, \"pellet_phi\",     pellet_phi,     npellets, ntime, error)\n432:         call output_1dextendarr(pel_group_id, \"pellet_z\",       pellet_z,       npellets, ntime, error)\n433:         call output_1dextendarr(pel_group_id, \"pellet_rate\",    pellet_rate,    npellets, ntime, error)",
+        "line": 429,
+        "match": "if((irestart.eq.0).or.(version_in.ge.31)) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "441:         call output_1dextendarr(pel_group_id, \"pellet_vy\",      pellet_vy,      npellets, ntime, error)\n442:         call output_1dextendarr(pel_group_id, \"r_p\",            r_p,            npellets, ntime, error)\n443:         call output_1dextendarr(pel_group_id, \"cloud_pel\",      cloud_pel,      npellets, ntime, error)\n444:         call output_1dextendarr(pel_group_id, \"pellet_mix\",     pellet_mix,     npellets, ntime, error)\n445:         if((irestart.eq.0).or.(version_in.ge.33)) then\n446:            call output_1dextendarr(pel_group_id, \"cauchy_fraction\", cauchy_fraction, npellets, ntime, error)\n447:         end if\n448:         if((irestart.eq.0).or.(version_in.ge.37)) then\n449:            ! pellet_ne is normalized, but pellet_te is in eV",
+        "line": 445,
+        "match": "if((irestart.eq.0).or.(version_in.ge.33)) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "444:         call output_1dextendarr(pel_group_id, \"pellet_mix\",     pellet_mix,     npellets, ntime, error)\n445:         if((irestart.eq.0).or.(version_in.ge.33)) then\n446:            call output_1dextendarr(pel_group_id, \"cauchy_fraction\", cauchy_fraction, npellets, ntime, error)\n447:         end if\n448:         if((irestart.eq.0).or.(version_in.ge.37)) then\n449:            ! pellet_ne is normalized, but pellet_te is in eV\n450:            call output_1dextendarr(pel_group_id, \"pellet_te\", temp_pel*(n0_norm*1.6022e-12/p0_norm), npellets, ntime, error)\n451:            call output_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)\n452:         end if",
+        "line": 448,
+        "match": "if((irestart.eq.0).or.(version_in.ge.37)) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "605: \n606:   call h5gclose_f(scalar_group_id, error)\n607:   if(imag_probes.ne.0) call h5gclose_f(mp_group_id, error)\n608:   if(iflux_loops.ne.0) call h5gclose_f(fl_group_id, error)\n609:   if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &\n610:           call h5gclose_f(pel_group_id, error)\n611:   call h5gclose_f(root_id, error)\n612: \n613:   if(myrank.eq.0 .and. iprint.ge.1) print *, 'Done writing scalars'",
+        "line": 609,
+        "match": "if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "631:   if(maxrank.gt.1) call distribute_timings\n632: \n633:   call h5gopen_f(file_id, \"/\", root_id, error)\n634: \n635:   if(ntime.eq.0 .and. irestart.eq.0) then\n636:      call h5gcreate_f(root_id, \"timings\", timing_group_id, error)\n637:   else\n638:      call h5gopen_f(root_id, \"timings\", timing_group_id, error)\n639:   endif",
+        "line": 635,
+        "match": "if(ntime.eq.0 .and. irestart.eq.0) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "1739: \n1740:   allocate(dum(NMAX+1))\n1741:   call h5gopen_f(file_id, \"/\", root_id, error)\n1742: \n1743:   if(ntime.eq.0 .and. irestart.eq.0) then\n1744:      call h5gcreate_f(root_id, \"keharmonics\", keharmonics_group_id, error)\n1745:   else\n1746:      call h5gopen_f(root_id, \"keharmonics\", keharmonics_group_id, error)\n1747:   endif",
+        "line": 1743,
+        "match": "if(ntime.eq.0 .and. irestart.eq.0) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "1780: \n1781:   allocate(dum(BNMAX+1))\n1782:   call h5gopen_f(file_id, \"/\", root_id, error)\n1783: \n1784:   if(ntime.eq.0 .and. irestart.eq.0) then\n1785:      call h5gcreate_f(root_id, \"bharmonics\", bharmonics_group_id, error)\n1786:   else\n1787:      call h5gopen_f(root_id, \"bharmonics\", bharmonics_group_id, error)\n1788:   endif",
+        "line": 1784,
+        "match": "if(ntime.eq.0 .and. irestart.eq.0) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "1826: !  kspits(i)=i\n1827: !  enddo\n1828: \n1829:   call h5gopen_f(file_id, \"/\", root_id, error)\n1830:   if(ntime.eq.0 .and. irestart.eq.0) then\n1831:      call h5gcreate_f(root_id, \"kspits\", kspits_group_id, error)\n1832:   else\n1833:      call h5gopen_f(root_id, \"kspits\", kspits_group_id, error)\n1834:   endif",
+        "line": 1830,
+        "match": "if(ntime.eq.0 .and. irestart.eq.0) then",
+        "path": "unstructured/output.f90"
+      },
+      {
+        "context": "223:    call second(tstart)\n224:    call create_field(nreoB_field(0))\n225:    call create_field(nreoB_field(1))\n226:    call set_nreoB\n227:    call init_particles(irestart .gt. 0, ierr)\n228:    if (ierr .ne. 0) return\n229:    if (myrank .eq. 0) then\n230:       call second(tend)\n231:       write (0, '(I12,A,f9.2,A)') nparticles, ' particles initialized in', &",
+        "line": 227,
+        "match": "call init_particles(irestart .gt. 0, ierr)",
+        "path": "unstructured/runaway_advection.f90"
+      }
+    ],
+    "match_count": 56,
+    "parent_classification": "M3DC1_TCT_NATIVE_RESTART_FIRST_POSTSTEP_DISCONTINUITY_CONFIRMED",
+    "parent_job_id": "20260918-021-native-restart-boundary-discontinuity",
+    "pipeline_failure": false,
+    "source_root": "/home/ubuntu/M3DC1-official",
+    "zero_equivalence_status": "NOT_APPLICABLE_RESTART_CAPABILITY_AUDIT"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_state_path/native_restart_state_path_summary.json",
+  "summary_sha256": "2e6ac188ef8c13b5b4b430a5fd5b114e4c2afaa0975de7a5b534b9a305bbc9ff",
+  "timed_out": false
+}
