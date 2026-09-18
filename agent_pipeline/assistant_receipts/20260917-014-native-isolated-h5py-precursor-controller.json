@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-014-native-isolated-h5py-precursor-controller",
+  "processed_result_receipt": "agent_pipeline/results/20260917-014-native-isolated-h5py-precursor-controller.json",
+  "processed_result_blob_sha": "488fa77c07a18cf59473cd8216c2ec193e4796aa",
+  "result_head_before": "6f1069f37984d1d7e4819d5bffb1b1296dd720d3",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_PHYSICAL_TIME_CALIBRATION_REQUIRED",
+  "pipeline_failure": false,
+  "interpretation": "The isolated .venv-dudson dependency repair succeeded and h5py 3.16.0 loaded. The audit then failed closed before controller physics because the authoritative live baseline C1.h5 reports ion_mass_mp=1.0 while the reviewed physical-time calibration artifact expects ion_mass_mp=2.0. The committed DIII-D template also states ion_mass=2.0, so the reviewed artifact cannot be silently rewritten to match the live baseline. Zero-equivalence was required but not reached because controller physics was not authorized. This is a calibration/deck provenance mismatch, not a negative TCT physics result. Frozen width > +0.020% and Jpk <= +0.10% gates remain unchanged; Mirnov/toroidal remains precursor authority; claim boundary remains normalized native M3D-C1 only.",
+  "new_job_id": null,
+  "human_intervention_required": true,
+  "human_intervention_reason": "Determine whether /home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1.h5 with ion_mass=1.0 is the intended native baseline or a stale/wrong baseline. If ion_mass=2.0 is intended, regenerate/rebuild the baseline consistently. If ion_mass=1.0 is intentional, the physical-time calibration must be independently reviewed/reissued for that deck before controller execution; do not auto-mark a changed calibration as reviewed.",
+  "timestamp_utc": "2026-09-18T00:00:00Z"
+}
