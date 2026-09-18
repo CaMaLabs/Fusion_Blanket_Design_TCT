@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-025-native-restart-checkpoint-capture",
+  "processed_result_path": "agent_pipeline/results/20260918-025-native-restart-checkpoint-capture.json",
+  "processed_result_sha": "331ca82e8b7390a7e6454e1a0aa885f1d7ab740f",
+  "processed_result_head_before": "ac6df300c6a2954b75c39b96c17b41af82f9fdf6",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_CAPTURED_BUT_HDF5_SCHEMA_UNREADABLE",
+  "pipeline_error": null,
+  "interpretation": "The bounded source=0 native run completed successfully and persisted the actual restart/checkpoint artifacts, including C1.h5 and time_000.h5 through time_005.h5, with stable SHA-256 provenance. However, the audit process could not inventory the HDF5 schema because its Python environment lacked h5py. Per the job contract, this is a schema-reader tooling limitation, not a restart-physics failure and not evidence for or against TCT controller efficacy. Zero-equivalence and handoff-equivalence remain NOT_EVALUATED_CAPTURE_AUDIT_ONLY. The frozen +0.020% width and +0.10% Jpk gates are unchanged. A single follow-up job was queued to read the persisted artifacts with h5dump -H and verify their hashes without rerunning M3D-C1.",
+  "new_job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T12:58:00Z"
+}
