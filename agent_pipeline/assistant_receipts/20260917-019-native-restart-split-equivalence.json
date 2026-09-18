@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-019-native-restart-split-equivalence",
+  "processed_result_job_id": "20260917-019-native-restart-split-equivalence",
+  "processed_result_head_before": "4c9e3354a1afe7fd34a11c13ebdc407aee3cf561",
+  "processed_result_log_sha256": "47d6c1fce6ac3ca554a2932217163ce63424ded71d89f25a1ba27a8f1cce6d32",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_SPLIT_RUN_HANDOFF_EQUIVALENCE_FAILED",
+  "pipeline_error": null,
+  "interpretation": "The formal classification is preserved exactly, but the comparison is not a valid physical restart-equivalence failure: the continuous arm ended at native time 0.10 while the restarted arm ended at 0.05. Inspection of the audit runner showed ntimemax was set to 5 on restart as though it were an additional-step count; native restart semantics require the absolute target step, so the resumed run did not advance to step 10. This is an audit-setup/pipeline defect, not evidence against native M3D-C1 restart handoff. Zero equivalence is NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST; frozen +0.020% width and +0.10% Jpk gates remain unchanged and no controller efficacy claim is made.",
+  "repair_commit": "368a5529f10264103fa4997781670c61370b8ab9",
+  "new_job_id": "20260918-020-native-restart-split-equivalence-repair",
+  "new_job_commit": "5d734ac469df2a1b00e419a238b716cdd8107379",
+  "timestamp_utc": "2026-09-18T07:32:08Z"
+}
