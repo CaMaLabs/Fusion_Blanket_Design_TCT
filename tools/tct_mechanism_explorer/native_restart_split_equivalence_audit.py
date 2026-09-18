@@ -55,8 +55,10 @@ def main():
     fst=run(first)
     second=ROOT/'split_second'; shutil.copytree(first,second,symlinks=True)
     text=(second/'C1input').read_text()
-    # Resume from the latest available field/restart slice and advance the remaining steps.
-    for k,v in {'ntimemax':str(SPLIT_STEPS),'irestart':'1','irestart_slice':'-1','iwrite_restart':'0'}.items():
+    # ntimemax is the absolute target step on restart, not a count of additional
+    # steps. Job 019 incorrectly reused SPLIT_STEPS here, so the resumed run
+    # stopped at t=0.05 and could not constitute a handoff-equivalence test.
+    for k,v in {'ntimemax':str(TOTAL_STEPS),'irestart':'1','irestart_slice':'-1','iwrite_restart':'0'}.items():
         text=pta.replace_or_add(text,k,v)
     (second/'C1input').write_text(text)
     sst=run(second)
@@ -69,7 +71,9 @@ def main():
             for m in METRICS:
                 delta=float(sf[m])-float(cf[m]); ok=abs(delta)<=TOL; eq=eq and ok
                 by[m]={'continuous':float(cf[m]),'split':float(sf[m]),'delta':delta,'pass':ok}
-            checks=[{'continuous_time':float(cf['time']),'split_time':float(sf['time']),'by_metric':by}]
+            time_ok=abs(float(sf['time'])-float(cf['time']))<=TOL
+            eq=eq and time_ok
+            checks=[{'continuous_time':float(cf['time']),'split_time':float(sf['time']),'time_pass':time_ok,'by_metric':by}]
     except Exception as e: extraction_error=repr(e)
     if not execution_ok:
         classification='M3DC1_TCT_NATIVE_RESTART_SPLIT_RUN_EXECUTION_FAILED'
@@ -78,8 +82,8 @@ def main():
     else:
         classification='M3DC1_TCT_NATIVE_RESTART_SPLIT_RUN_HANDOFF_EQUIVALENCE_FAILED'
     report={'classification':classification,'pipeline_failure':False,
-      'parent_job_id':'20260917-018-native-restart-interface-specificity-audit',
-      'parent_classification':'M3DC1_TCT_NATIVE_RESTART_INTERFACE_HIGH_SIGNAL_CANDIDATES_FOUND_REQUIRES_SPLIT_RUN_VALIDATION',
+      'parent_job_id':'20260917-019-native-restart-split-equivalence',
+      'parent_classification':'M3DC1_TCT_NATIVE_RESTART_SPLIT_RUN_HANDOFF_EQUIVALENCE_FAILED',
       'audit_scope':'Short source=0 continuous-versus-split native restart validation only; no controller efficacy run.',
       'continuous_steps':TOTAL_STEPS,'split_steps':[SPLIT_STEPS,SPLIT_STEPS],'dt_native':DT,
       'execution':{'continuous':cst,'split_first':fst,'split_second':sst},
