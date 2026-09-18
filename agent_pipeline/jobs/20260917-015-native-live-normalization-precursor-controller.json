@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-015-native-live-normalization-precursor-controller",
+  "parent_result_job_id": "20260917-014-native-isolated-h5py-precursor-controller",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_precursor_controller_in_loop"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "purpose": "Retry the native TCT precursor controller-in-loop audit with the reviewed M3D-C1 Alfven-time formula applied to authoritative live C1.h5 normalization. Treat the committed DIII-D ion_mass=2 normalization as a reference comparison rather than a hard gate; preserve fail-closed behavior for explicit C1input/HDF5 inconsistency, invalid live attributes, precursor/latency/safety failure, and timescale-window incompatibility.",
+  "interpretation_contract": {
+    "require_zero_equivalence": true,
+    "require_reviewed_physical_time_formula_for_controller_physics": true,
+    "runtime_normalization_authority": "live baseline C1.h5 root attributes",
+    "template_normalization_role": "reference comparison only",
+    "explicit_c1input_hdf5_mismatch": "fail closed",
+    "dependency_environment": "/home/ubuntu/work/openmc/sweep/.venv-dudson",
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "fail_closed_policy": "If live normalization, formula validation, confidence, latency feasibility, actuator health, safety, or timing causality fails, retain standing bias and issue NO ACTION for the bounded boost.",
+    "required_matrix_if_timing_compatible": [
+      "no_control",
+      "standing_bias_only",
+      "precursor_conditioned",
+      "oracle_conditioned",
+      "late_negative_control",
+      "wrong_sign_negative_control"
+    ],
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim unless stronger evidence is independently established."
+  }
+}
