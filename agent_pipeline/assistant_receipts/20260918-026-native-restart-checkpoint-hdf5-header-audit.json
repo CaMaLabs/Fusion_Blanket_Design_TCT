@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "processed_result_path": "agent_pipeline/results/20260918-026-native-restart-checkpoint-hdf5-header-audit.json",
+  "processed_result_sha": "ec6423728e7e09a578a2dd4a75a2a9e295bcae58",
+  "processed_result_head_before": "2c99212ddcda6ca7ef957a26a4949c77689dd135",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_HDF5_SCHEMA_READABLE",
+  "pipeline_error": null,
+  "interpretation": "The schema-reader tooling gap from job 025 is resolved without rerunning M3D-C1. h5dump -H read all eight persisted artifacts successfully and every SHA-256 matched job 025. C1.h5 contains 344 datasets, 171 attributes, 24 groups, and 7 external links; each time-slice artifact reports 33 datasets, 14 attributes, and 3 groups. This establishes readable, provenance-verified native checkpoint structure only; it does not explain the first-postrestart discontinuity and is not evidence for or against TCT controller efficacy. Zero-equivalence and handoff-equivalence remain NOT_EVALUATED_SCHEMA_AUDIT_ONLY. The frozen +0.020% width and +0.10% Jpk gates are unchanged. One focused follow-up was queued to verify the C1.h5 external-link graph and time-slice target consistency before any further dynamic restart run.",
+  "new_job_id": "20260918-027-native-restart-checkpoint-link-consistency",
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T13:35:04Z"
+}
