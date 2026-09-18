@@ -1,0 +1,84 @@
+job_id=20260918-027-native-restart-checkpoint-link-consistency
+started_utc=2026-09-18T13:36:18.945621Z
+head_before=b682ba352f7c0dba3c5b07571b1abb1fd7f58b10
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_LINK_GRAPH_CONSISTENT",
+  "pipeline_failure": false,
+  "parent_job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "audit_scope": "Verify persisted C1.h5 external-link graph, target presence, checkpoint sequence, and SHA-256 provenance; no M3D-C1 execution.",
+  "missing_artifacts": [],
+  "hashes_match_job_025": true,
+  "h5dump_return_code": 0,
+  "h5dump_stderr_tail": "",
+  "external_links": [
+    {
+      "name": "equilibrium",
+      "target_file": "equilibrium.h5",
+      "target_path": "/",
+      "target_exists": true
+    },
+    {
+      "name": "time_000",
+      "target_file": "time_000.h5",
+      "target_path": "/",
+      "target_exists": true
+    },
+    {
+      "name": "time_001",
+      "target_file": "time_001.h5",
+      "target_path": "/",
+      "target_exists": true
+    },
+    {
+      "name": "time_002",
+      "target_file": "time_002.h5",
+      "target_path": "/",
+      "target_exists": true
+    },
+    {
+      "name": "time_003",
+      "target_file": "time_003.h5",
+      "target_path": "/",
+      "target_exists": true
+    },
+    {
+      "name": "time_004",
+      "target_file": "time_004.h5",
+      "target_path": "/",
+      "target_exists": true
+    },
+    {
+      "name": "time_005",
+      "target_file": "time_005.h5",
+      "target_path": "/",
+      "target_exists": true
+    }
+  ],
+  "time_link_names": [
+    "time_000",
+    "time_001",
+    "time_002",
+    "time_003",
+    "time_004",
+    "time_005"
+  ],
+  "expected_time_link_names": [
+    "time_000",
+    "time_001",
+    "time_002",
+    "time_003",
+    "time_004",
+    "time_005"
+  ],
+  "link_set_ok": true,
+  "latest_time_link_ok": true,
+  "zero_equivalence": "NOT_EVALUATED_LINK_AUDIT_ONLY",
+  "handoff_equivalence": "NOT_EVALUATED_LINK_AUDIT_ONLY",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/link provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "finished_utc": "2026-09-18T13:36:19.505787+00:00"
+}
+
+finished_utc=2026-09-18T13:36:19.511876Z
+return_code=0

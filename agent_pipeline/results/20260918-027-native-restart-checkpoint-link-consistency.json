@@ -1,0 +1,104 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5649871826171875,
+  "error": null,
+  "finished_utc": "2026-09-18T13:36:19.511902Z",
+  "head_before": "b682ba352f7c0dba3c5b07571b1abb1fd7f58b10",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-027-native-restart-checkpoint-link-consistency.json",
+  "job_id": "20260918-027-native-restart-checkpoint-link-consistency",
+  "log_path": "agent_pipeline/logs/20260918-027-native-restart-checkpoint-link-consistency.log",
+  "log_sha256": "e257a717bf86a7219da27b9ffad91aae911c80d1e5fba541cdea010d4eb78578",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_checkpoint_link_consistency"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_checkpoint_link_consistency_audit.sh",
+  "runner_sha256": "f0ecb7c9bfe70b4248baaef5b2adccb201e4716a50cca2366b1ab57cc8d6b4df",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T13:36:18.945621Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Verify persisted C1.h5 external-link graph, target presence, checkpoint sequence, and SHA-256 provenance; no M3D-C1 execution.",
+    "claim_boundary": "Normalized native M3D-C1 restart artifact/link provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_LINK_GRAPH_CONSISTENT",
+    "expected_time_link_names": [
+      "time_000",
+      "time_001",
+      "time_002",
+      "time_003",
+      "time_004",
+      "time_005"
+    ],
+    "external_links": [
+      {
+        "name": "equilibrium",
+        "target_exists": true,
+        "target_file": "equilibrium.h5",
+        "target_path": "/"
+      },
+      {
+        "name": "time_000",
+        "target_exists": true,
+        "target_file": "time_000.h5",
+        "target_path": "/"
+      },
+      {
+        "name": "time_001",
+        "target_exists": true,
+        "target_file": "time_001.h5",
+        "target_path": "/"
+      },
+      {
+        "name": "time_002",
+        "target_exists": true,
+        "target_file": "time_002.h5",
+        "target_path": "/"
+      },
+      {
+        "name": "time_003",
+        "target_exists": true,
+        "target_file": "time_003.h5",
+        "target_path": "/"
+      },
+      {
+        "name": "time_004",
+        "target_exists": true,
+        "target_file": "time_004.h5",
+        "target_path": "/"
+      },
+      {
+        "name": "time_005",
+        "target_exists": true,
+        "target_file": "time_005.h5",
+        "target_path": "/"
+      }
+    ],
+    "finished_utc": "2026-09-18T13:36:19.505787+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "h5dump_return_code": 0,
+    "h5dump_stderr_tail": "",
+    "handoff_equivalence": "NOT_EVALUATED_LINK_AUDIT_ONLY",
+    "hashes_match_job_025": true,
+    "latest_time_link_ok": true,
+    "link_set_ok": true,
+    "missing_artifacts": [],
+    "parent_job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+    "pipeline_failure": false,
+    "time_link_names": [
+      "time_000",
+      "time_001",
+      "time_002",
+      "time_003",
+      "time_004",
+      "time_005"
+    ],
+    "zero_equivalence": "NOT_EVALUATED_LINK_AUDIT_ONLY"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_link_consistency/native_restart_checkpoint_link_consistency_summary.json",
+  "summary_sha256": "f7df027ce847b7c66b6512f582805469ea5745bad648e8ee2da5db6ad1aa4bed",
+  "timed_out": false
+}

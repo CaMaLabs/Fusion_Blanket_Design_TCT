@@ -1,0 +1,78 @@
+{
+  "audit_scope": "Verify persisted C1.h5 external-link graph, target presence, checkpoint sequence, and SHA-256 provenance; no M3D-C1 execution.",
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/link provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_LINK_GRAPH_CONSISTENT",
+  "expected_time_link_names": [
+    "time_000",
+    "time_001",
+    "time_002",
+    "time_003",
+    "time_004",
+    "time_005"
+  ],
+  "external_links": [
+    {
+      "name": "equilibrium",
+      "target_exists": true,
+      "target_file": "equilibrium.h5",
+      "target_path": "/"
+    },
+    {
+      "name": "time_000",
+      "target_exists": true,
+      "target_file": "time_000.h5",
+      "target_path": "/"
+    },
+    {
+      "name": "time_001",
+      "target_exists": true,
+      "target_file": "time_001.h5",
+      "target_path": "/"
+    },
+    {
+      "name": "time_002",
+      "target_exists": true,
+      "target_file": "time_002.h5",
+      "target_path": "/"
+    },
+    {
+      "name": "time_003",
+      "target_exists": true,
+      "target_file": "time_003.h5",
+      "target_path": "/"
+    },
+    {
+      "name": "time_004",
+      "target_exists": true,
+      "target_file": "time_004.h5",
+      "target_path": "/"
+    },
+    {
+      "name": "time_005",
+      "target_exists": true,
+      "target_file": "time_005.h5",
+      "target_path": "/"
+    }
+  ],
+  "finished_utc": "2026-09-18T13:36:19.505787+00:00",
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "frozen_width_gate_pct_gt": 0.02,
+  "h5dump_return_code": 0,
+  "h5dump_stderr_tail": "",
+  "handoff_equivalence": "NOT_EVALUATED_LINK_AUDIT_ONLY",
+  "hashes_match_job_025": true,
+  "latest_time_link_ok": true,
+  "link_set_ok": true,
+  "missing_artifacts": [],
+  "parent_job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "pipeline_failure": false,
+  "time_link_names": [
+    "time_000",
+    "time_001",
+    "time_002",
+    "time_003",
+    "time_004",
+    "time_005"
+  ],
+  "zero_equivalence": "NOT_EVALUATED_LINK_AUDIT_ONLY"
+}
