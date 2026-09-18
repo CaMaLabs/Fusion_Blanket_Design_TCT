@@ -1,0 +1,20 @@
+job_id=20260917-018-native-restart-interface-specificity-audit
+started_utc=2026-09-18T05:24:33.920628Z
+head_before=13b124af5684604bdacb00b3ecda4bd518dce7aa
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_INTERFACE_HIGH_SIGNAL_CANDIDATES_FOUND_REQUIRES_SPLIT_RUN_VALIDATION",
+  "pipeline_failure": false,
+  "runtime_source_match_count": 49,
+  "runtime_config_match_count": 0,
+  "zero_equivalence_status": "NOT_EVALUATED_CAPABILITY_AUDIT_ONLY",
+  "handoff_equivalence_status": "NOT_EVALUATED_NO_RESTART_EXECUTED",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "claim_boundary": "Normalized native M3D-C1 capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "decision": "High-signal runtime restart/checkpoint candidates remain after excluding generic HDF5/build hits. Inspect the recorded source/config interfaces and validate one with a short continuous-versus-split native state-equivalence run before using restart for precursor-horizon work."
+}
+
+finished_utc=2026-09-18T05:24:34.035533Z
+return_code=0
