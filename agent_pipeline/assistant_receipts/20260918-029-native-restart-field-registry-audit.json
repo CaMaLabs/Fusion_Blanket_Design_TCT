@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-029-native-restart-field-registry-audit",
+  "processed_result_path": "agent_pipeline/results/20260918-029-native-restart-field-registry-audit.json",
+  "processed_result_sha": "d1c2f85f2e4c791a029dc81028812e61096cf0ae",
+  "processed_result_head_before": "9d60ef4ce4b2ff3a127b7e464d5165217df0ef9e",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_REGISTRY_DIFFERENCE_OBSERVED",
+  "pipeline_error": null,
+  "interpretation": "The audit completed successfully without executing M3D-C1. Both restart arms have the same shifted terminal field registry relative to the continuous arm: restart-only fields 50-53 and continuous-only fields 67-70, while solver matrix ID 22 is common. This is observational only and does not establish dynamic causation. The required handoff-equivalence status remains inherited FAILED_AT_1E-12 from job 028; zero-equivalence is not applicable to this source=0 restart-capability audit. The frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260918-030-native-restart-field-registry-source-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T16:20:37Z"
+}
