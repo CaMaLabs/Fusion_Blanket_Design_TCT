@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-025-native-restart-checkpoint-capture",
+  "parent_result_job_id": "20260918-024-native-restart-checkpoint-schema-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_checkpoint_capture_audit.sh",
+  "timeout_seconds": 1800,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_checkpoint_capture"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_capture/native_restart_checkpoint_capture_summary.json",
+  "purpose": "Repair the provenance gap exposed by job 024 by regenerating one bounded source=0 five-step native restart checkpoint, persisting the actual HDF5 artifacts before temporary-run cleanup, and inventorying their schema in the activated M3D-C1 environment.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_ARTIFACT_NOT_FOUND",
+    "do_not_treat_job_024_missing_artifact_as_restart_physics_failure": true,
+    "do_not_treat_schema_presence_or_absence_alone_as_dynamic_causation": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
