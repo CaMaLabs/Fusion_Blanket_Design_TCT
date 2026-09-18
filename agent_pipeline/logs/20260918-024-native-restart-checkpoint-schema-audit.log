@@ -1,0 +1,37 @@
+job_id=20260918-024-native-restart-checkpoint-schema-audit
+started_utc=2026-09-18T11:29:51.866708Z
+head_before=d4c31311776bc90d124ba91ab705863bb6d9617f
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_ARTIFACT_NOT_FOUND",
+  "pipeline_failure": false,
+  "parent_job_id": "20260918-023-native-restart-serialization-symmetry",
+  "audit_scope": "Inventory actual native restart/checkpoint artifacts and HDF5 schema from the bounded restart validation; no solver/controller efficacy run.",
+  "artifact_count": 2,
+  "artifacts": [
+    {
+      "path": "/home/ubuntu/work/openmc/sweep/validation_runs/m3dc1_tct_native_restart_boundary_discontinuity/native_restart_boundary_discontinuity_summary.json",
+      "size_bytes": 11534,
+      "hdf5": false,
+      "datasets": [],
+      "attrs": {}
+    },
+    {
+      "path": "validation_runs/m3dc1_tct_native_restart_boundary_discontinuity/native_restart_boundary_discontinuity_summary.json",
+      "size_bytes": 11534,
+      "hdf5": false,
+      "datasets": [],
+      "attrs": {}
+    }
+  ],
+  "h5py_available": false,
+  "h5py_error": "No module named 'h5py'",
+  "zero_equivalence": "NOT_EVALUATED_SCHEMA_AUDIT_ONLY",
+  "handoff_equivalence": "NOT_EVALUATED_SCHEMA_AUDIT_ONLY",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "finished_utc": "2026-09-18T11:29:51.887569+00:00"
+}
+
+finished_utc=2026-09-18T11:29:51.899323Z
+return_code=0

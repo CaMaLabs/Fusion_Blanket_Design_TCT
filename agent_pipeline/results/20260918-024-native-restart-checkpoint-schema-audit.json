@@ -1,0 +1,57 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.03167557716369629,
+  "error": null,
+  "finished_utc": "2026-09-18T11:29:51.899349Z",
+  "head_before": "d4c31311776bc90d124ba91ab705863bb6d9617f",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-024-native-restart-checkpoint-schema-audit.json",
+  "job_id": "20260918-024-native-restart-checkpoint-schema-audit",
+  "log_path": "agent_pipeline/logs/20260918-024-native-restart-checkpoint-schema-audit.log",
+  "log_sha256": "a1f33ac26bb47328aae538f81b3f2e5a5e3b1115bcfd15e76f6cc03818fd0906",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_checkpoint_schema"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_checkpoint_schema_audit.sh",
+  "runner_sha256": "6b54eb96e339b7d2cfa9b5c567e28277c3a39c1f2183933d007a2962a69a69f6",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T11:29:51.866708Z",
+  "success": true,
+  "summary": {
+    "artifact_count": 2,
+    "artifacts": [
+      {
+        "attrs": {},
+        "datasets": [],
+        "hdf5": false,
+        "path": "/home/ubuntu/work/openmc/sweep/validation_runs/m3dc1_tct_native_restart_boundary_discontinuity/native_restart_boundary_discontinuity_summary.json",
+        "size_bytes": 11534
+      },
+      {
+        "attrs": {},
+        "datasets": [],
+        "hdf5": false,
+        "path": "validation_runs/m3dc1_tct_native_restart_boundary_discontinuity/native_restart_boundary_discontinuity_summary.json",
+        "size_bytes": 11534
+      }
+    ],
+    "audit_scope": "Inventory actual native restart/checkpoint artifacts and HDF5 schema from the bounded restart validation; no solver/controller efficacy run.",
+    "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_ARTIFACT_NOT_FOUND",
+    "finished_utc": "2026-09-18T11:29:51.887569+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "h5py_available": false,
+    "h5py_error": "No module named 'h5py'",
+    "handoff_equivalence": "NOT_EVALUATED_SCHEMA_AUDIT_ONLY",
+    "parent_job_id": "20260918-023-native-restart-serialization-symmetry",
+    "pipeline_failure": false,
+    "zero_equivalence": "NOT_EVALUATED_SCHEMA_AUDIT_ONLY"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_schema/native_restart_checkpoint_schema_summary.json",
+  "summary_sha256": "740329461efa696d81efe7894a82d3fa51e1ef66aff27c9ac52dd5876bc27b35",
+  "timed_out": false
+}
