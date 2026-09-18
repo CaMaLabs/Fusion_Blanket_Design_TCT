@@ -1,0 +1,186 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.6148655414581299,
+  "error": null,
+  "finished_utc": "2026-09-18T13:02:11.404370Z",
+  "head_before": "2c99212ddcda6ca7ef957a26a4949c77689dd135",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-026-native-restart-checkpoint-hdf5-header-audit.json",
+  "job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "log_path": "agent_pipeline/logs/20260918-026-native-restart-checkpoint-hdf5-header-audit.log",
+  "log_sha256": "4bc987fe0743c388b3669053f9da9cbf70c41a3551698a42f55f5d8fc4b1b755",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_checkpoint_hdf5_header_audit.sh",
+  "runner_sha256": "4e84c162ac53be3c987076ac9e045427c2b69b725acdd872e0d5dd541311de86",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T13:02:10.788434Z",
+  "success": true,
+  "summary": {
+    "artifact_count": 8,
+    "artifacts": [
+      {
+        "expected_sha256_from_job_025": "842285cfec17235d76dc4f91c2230f74f31b5f9a25c224458f598dcdd5f1c5c4",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 171,
+          "datasets": 344,
+          "external_links": 7,
+          "groups": 24,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/C1.h5.header.txt",
+        "header_readable": true,
+        "name": "C1.h5",
+        "sha256": "842285cfec17235d76dc4f91c2230f74f31b5f9a25c224458f598dcdd5f1c5c4",
+        "sha256_matches_job_025": true,
+        "size_bytes": 331834,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "bbafea066f96bea14ed31ef4064bab5354de4df5a6ceea782867b1359a7c63a4",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/equilibrium.h5.header.txt",
+        "header_readable": true,
+        "name": "equilibrium.h5",
+        "sha256": "bbafea066f96bea14ed31ef4064bab5354de4df5a6ceea782867b1359a7c63a4",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "f0a91cc1d9c8e71751caefa15eab996544ee5f8bf507a7bb5060f1c968bc0bad",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/time_000.h5.header.txt",
+        "header_readable": true,
+        "name": "time_000.h5",
+        "sha256": "f0a91cc1d9c8e71751caefa15eab996544ee5f8bf507a7bb5060f1c968bc0bad",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "32d4b5bd85648f93593533c79e6053b0678fb3831d0583221bffd7fa69a1dd80",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/time_001.h5.header.txt",
+        "header_readable": true,
+        "name": "time_001.h5",
+        "sha256": "32d4b5bd85648f93593533c79e6053b0678fb3831d0583221bffd7fa69a1dd80",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "620c8dd7a8f28d0901d6f7f8551bdf1803a1f04fd0bc7c7d2e76c5cbecfc5c47",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/time_002.h5.header.txt",
+        "header_readable": true,
+        "name": "time_002.h5",
+        "sha256": "620c8dd7a8f28d0901d6f7f8551bdf1803a1f04fd0bc7c7d2e76c5cbecfc5c47",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "cd0c5ce22e098d384455787d68c3550c143a32072e4778c21c2146c4952b3ae7",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/time_003.h5.header.txt",
+        "header_readable": true,
+        "name": "time_003.h5",
+        "sha256": "cd0c5ce22e098d384455787d68c3550c143a32072e4778c21c2146c4952b3ae7",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "4024dfe22bc1e61bc164878dbdf56480cb36a945a659bd3d87b4463fad12e4a4",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/time_004.h5.header.txt",
+        "header_readable": true,
+        "name": "time_004.h5",
+        "sha256": "4024dfe22bc1e61bc164878dbdf56480cb36a945a659bd3d87b4463fad12e4a4",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      },
+      {
+        "expected_sha256_from_job_025": "776b49b874dde55b5f0d901d8ef667d3a522e8dcc82ddd7a05b6749153f743bb",
+        "h5dump_return_code": 0,
+        "header_counts": {
+          "attributes": 14,
+          "datasets": 33,
+          "external_links": 0,
+          "groups": 3,
+          "soft_links": 0
+        },
+        "header_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/time_005.h5.header.txt",
+        "header_readable": true,
+        "name": "time_005.h5",
+        "sha256": "776b49b874dde55b5f0d901d8ef667d3a522e8dcc82ddd7a05b6749153f743bb",
+        "sha256_matches_job_025": true,
+        "size_bytes": 2551368,
+        "stderr_tail": ""
+      }
+    ],
+    "audit_scope": "Read the persisted job-025 native checkpoint artifacts with h5dump -H and verify artifact SHA-256 provenance; no M3D-C1 execution and no controller efficacy run.",
+    "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_HDF5_SCHEMA_READABLE",
+    "finished_utc": "2026-09-18T13:02:11.398627+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "h5dump_path": "/mnt/compute-swarm-data/home-ubuntu/spack/var/spack/environments/m3dc1-deps/.spack-env/view/bin/h5dump",
+    "handoff_equivalence": "NOT_EVALUATED_SCHEMA_AUDIT_ONLY",
+    "parent_job_id": "20260918-025-native-restart-checkpoint-capture",
+    "pipeline_failure": false,
+    "zero_equivalence": "NOT_EVALUATED_SCHEMA_AUDIT_ONLY"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/native_restart_checkpoint_hdf5_header_summary.json",
+  "summary_sha256": "01ddab788fb4e7605d20493f2e60bdf72a9e97972d8ddcceb976574961bac0e3",
+  "timed_out": false
+}

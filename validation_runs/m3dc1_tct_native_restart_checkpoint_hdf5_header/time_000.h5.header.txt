@@ -1,0 +1,196 @@
+HDF5 "/home/ubuntu/work/openmc/sweep/validation_runs/m3dc1_tct_native_restart_checkpoint_capture/captured/time_000.h5" {
+GROUP "/" {
+   ATTRIBUTE "iwall_regions" {
+      DATATYPE  H5T_STD_I32LE
+      DATASPACE  SCALAR
+   }
+   ATTRIBUTE "nspace" {
+      DATATYPE  H5T_STD_I32LE
+      DATASPACE  SCALAR
+   }
+   ATTRIBUTE "ntimestep" {
+      DATATYPE  H5T_STD_I32LE
+      DATASPACE  SCALAR
+   }
+   ATTRIBUTE "time" {
+      DATATYPE  H5T_IEEE_F64LE
+      DATASPACE  SCALAR
+   }
+   ATTRIBUTE "version" {
+      DATATYPE  H5T_STD_I32LE
+      DATASPACE  SCALAR
+   }
+   GROUP "fields" {
+      DATASET "E_PHI" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "E_R" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "E_Z" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "E_par" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "I" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "P" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "Pe" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "V" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "bdotgradp" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "bdotgradt" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "chi" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "den" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "denm" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "eta" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "eta_J" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "jphi" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "kappa" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "kappar" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "magnetic_region" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "mesh_zone" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "ne" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "phi" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "psi" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "te" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "ti" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "torque_em" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "torque_ntv" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "visc" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "visc_c" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "wall_dist" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+      DATASET "zeff" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }
+      }
+   }
+   GROUP "mesh" {
+      ATTRIBUTE "3D" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "height" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "ifull_torus" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "nelms" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "nperiods" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "nplanes" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "period" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "version" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SCALAR
+      }
+      ATTRIBUTE "width" {
+         DATATYPE  H5T_IEEE_F64LE
+         DATASPACE  SCALAR
+      }
+      DATASET "adjacency" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SIMPLE { ( 1004, 3 ) / ( 1004, 3 ) }
+      }
+      DATASET "elements" {
+         DATATYPE  H5T_IEEE_F32LE
+         DATASPACE  SIMPLE { ( 1004, 8 ) / ( 1004, 8 ) }
+      }
+   }
+}
+}
