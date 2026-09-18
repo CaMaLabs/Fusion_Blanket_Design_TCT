@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-021-native-restart-boundary-discontinuity",
+  "processed_result_receipt": "agent_pipeline/results/20260918-021-native-restart-boundary-discontinuity.json",
+  "result_head_before": "cef4a511b662b5f55de36b50d804425c878788f4",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIRST_POSTSTEP_DISCONTINUITY_CONFIRMED",
+  "pipeline_failure": false,
+  "interpretation": "The source=0 continuous and split trajectories are exactly equivalent through the step-5 checkpoint at the required 1e-12 tolerance, while the first post-restart state at equal native time 0.06 diverges in Jpk, Jint_high, sheet width/current diagnostics and reconnected flux; magnetic energy alone remains equal. This localizes the tested restart handoff failure to serialization/restoration or first-step reconstruction rather than precheckpoint nondeterminism. It is a restart-capability result only and does not test TCT controller efficacy.",
+  "handoff_equivalence": "FAILED_FIRST_POSTRESTART_STEP_AFTER_PRECHECKPOINT_PASS",
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST",
+  "frozen_gates": {"width_gain_pct_gt": 0.02, "Jpk_change_pct_le": 0.1},
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "new_job_id": "20260918-022-native-restart-state-path-audit",
+  "processed_utc": "2026-09-18T09:19:43Z"
+}
