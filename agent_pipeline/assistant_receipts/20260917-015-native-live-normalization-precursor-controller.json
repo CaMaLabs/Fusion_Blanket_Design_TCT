@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-015-native-live-normalization-precursor-controller",
+  "processed_utc": "2026-09-18T03:22:29Z",
+  "result_receipt_path": "agent_pipeline/results/20260917-015-native-live-normalization-precursor-controller.json",
+  "result_receipt_blob_sha": "2f79304676069930d18a4465f942fa8dfc6e4332",
+  "result_head_before": "28311c9947109ccd161cd11a71fa9acdda77413c",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_TIMESCALE_WINDOW_MISMATCH",
+  "pipeline_failure": false,
+  "interpretation": "The reviewed live-C1.h5 Alfven-time calibration passed and establishes a real prerequisite mismatch: the 8.376 ms Mirnov/toroidal lead maps to about 18269.76 native units, while the current characterized event is at native t=0.14. The bounded boost correctly remained NO ACTION rather than clipping or inventing a trigger. This is not controller-efficacy evidence: the parent interpretation contract required zero-equivalence, but the audit exited at the timing prerequisite with zero_equivalence=null and no arm matrix. Therefore no frozen-gate pass/fail is inferred from this result.",
+  "zero_equivalence": {
+    "required_by_parent_job": true,
+    "evaluated": false,
+    "status": "NOT_EVALUATED_DUE_TO_TIMESCALE_PREREQUISITE_EXIT",
+    "treated_as_pass": false
+  },
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "next_job_id": "20260917-016-native-precursor-horizon-reachability",
+  "next_step_reason": "Before attempting an approximately 1e5-times longer native event horizon, quantify causal horizon reachability and projected compute cost from the demonstrated native cadence. The follow-up is planning-only, preserves Mirnov/toroidal precursor authority, does not alter solver physics, and cannot claim efficacy without zero-equivalence and the frozen gates."
+}
