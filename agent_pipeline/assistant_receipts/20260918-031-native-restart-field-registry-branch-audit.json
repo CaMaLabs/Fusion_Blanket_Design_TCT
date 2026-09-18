@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-031-native-restart-field-registry-branch-audit",
+  "processed_result_path": "agent_pipeline/results/20260918-031-native-restart-field-registry-branch-audit.json",
+  "processed_result_sha": "3ee4aebc4274e91103afaa39b75432c2f84c6f05",
+  "processed_result_head_before": "63436838863680cb986a0a35c3b18a4428168c6c",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_REGISTRY_NO_RESTART_GATED_LIFECYCLE_CONTEXT_FOUND",
+  "pipeline_error": null,
+  "interpretation": "The focused static audit completed successfully and found no restart-adjacent create_field/destroy_field lifecycle branch in native M3D-C1 source. This weakens the field-registry branch hypothesis but does not establish why the first-postrestart trajectory diverges. The job-028 handoff-equivalence failure at 1e-12 remains inherited; the frozen +0.020% width and +0.10% Jpk gates are unchanged. One focused follow-up was queued to inspect restart handling of time-integrator/history/timestep state, a distinct mechanism capable of producing a first-postrestart-only discontinuity. Static source context will not be treated as dynamic causation.",
+  "new_job_id": "20260918-032-native-restart-integrator-history-source-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T17:52:27Z"
+}
