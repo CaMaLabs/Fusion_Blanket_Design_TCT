@@ -1,0 +1,71 @@
+job_id=20260917-019-native-restart-split-equivalence
+started_utc=2026-09-18T05:56:41.314463Z
+head_before=4c9e3354a1afe7fd34a11c13ebdc407aee3cf561
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_SPLIT_RUN_HANDOFF_EQUIVALENCE_FAILED",
+  "pipeline_failure": false,
+  "handoff_equivalence": {
+    "tolerance": 1e-12,
+    "pass": false,
+    "checks": [
+      {
+        "continuous_time": 0.1,
+        "split_time": 0.05,
+        "by_metric": {
+          "W_sheet": {
+            "continuous": 1.0053394684472166,
+            "split": 1.349033795236279,
+            "delta": 0.3436943267890624,
+            "pass": false
+          },
+          "Jpk": {
+            "continuous": 0.873541,
+            "split": 1.56128,
+            "delta": 0.687739,
+            "pass": false
+          },
+          "Jint_high": {
+            "continuous": 0.365471609098,
+            "split": 0.72487732352,
+            "delta": 0.359405714422,
+            "pass": false
+          },
+          "center_abs_current": {
+            "continuous": 0.597792592890341,
+            "split": 0.01406156640089,
+            "delta": -0.5837310264894511,
+            "pass": false
+          },
+          "shoulder_abs_current": {
+            "continuous": 0.2504778457580919,
+            "split": 0.115759743653186,
+            "delta": -0.1347181021049059,
+            "pass": false
+          },
+          "Reconnected_Flux": {
+            "continuous": 0.00036909,
+            "split": 0.0005,
+            "delta": 0.00013091000000000003,
+            "pass": false
+          },
+          "magnetic_energy": {
+            "continuous": 209.01600000000002,
+            "split": 209.81600000000003,
+            "delta": 0.8000000000000114,
+            "pass": false
+          }
+        }
+      }
+    ],
+    "extraction_error": null
+  },
+  "zero_equivalence_status": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+}
+
+finished_utc=2026-09-18T05:57:12.441225Z
+return_code=0
