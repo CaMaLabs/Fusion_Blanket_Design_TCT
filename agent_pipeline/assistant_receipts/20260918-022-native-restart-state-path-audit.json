@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-022-native-restart-state-path-audit",
+  "processed_result_sha": "d6e140fd46569453aaa8ce8c6cc8fc02a39ad491",
+  "processed_utc": "2026-09-18T10:12:30Z",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_STATE_PATH_SOURCE_AUDITED",
+  "pipeline_error": null,
+  "interpretation": "Source-level provenance confirms the native restart path through irestart/irestart_slice, rdrestart_hdf5, version reconciliation, and restart-specific state handling. The parent job's first-postrestart handoff failure remains unresolved; this audit is capability/provenance evidence only and does not establish controller efficacy or a missing-state cause.",
+  "handoff_equivalence_status": "FAILED_AT_FIRST_POSTRESTART_STEP_IN_PARENT_JOB",
+  "zero_equivalence_status": "NOT_APPLICABLE_SOURCE_RESTART_CAPABILITY_AUDIT",
+  "frozen_gates": {"width_gain_pct_gt": 0.02, "Jpk_change_pct_le": 0.1},
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "new_job_id": "20260918-023-native-restart-serialization-symmetry"
+}
