@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-024-native-restart-checkpoint-schema-audit",
+  "processed_result_path": "agent_pipeline/results/20260918-024-native-restart-checkpoint-schema-audit.json",
+  "processed_result_sha": "3e3f7c9eaddeeba3a51dbbfac603bec5eb9f5d79",
+  "processed_result_head_before": "d4c31311776bc90d124ba91ab705863bb6d9617f",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_ARTIFACT_NOT_FOUND",
+  "pipeline_error": null,
+  "interpretation": "The audit completed with return_code 0, but it did not capture an actual native checkpoint. Job 021 had recorded a C1.h5 restart artifact in its temporary split_first run directory, while job 024 searched only the persisted validation directory after that temporary artifact was no longer available; its plain runner also lacked h5py. Per the job contract this is a provenance/audit limitation, not a restart-physics failure and not a scientific controller result. Zero-equivalence and handoff-equivalence remain NOT_EVALUATED_SCHEMA_AUDIT_ONLY. The frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260918-025-native-restart-checkpoint-capture",
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T12:20:25Z"
+}
