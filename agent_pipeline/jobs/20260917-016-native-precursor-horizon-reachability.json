@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-016-native-precursor-horizon-reachability",
+  "parent_result_job_id": "20260917-015-native-live-normalization-precursor-controller",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_horizon_reachability_audit.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_precursor_horizon_reachability"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_horizon_reachability/native_precursor_horizon_reachability_summary.json",
+  "purpose": "Quantify the native solver horizon and planning runtime required to place the measured Mirnov/toroidal precursor and bounded-boost latency causally inside the physically calibrated M3D-C1 window before authorizing any brute-force long-horizon controller matrix.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_TIMESCALE_WINDOW_MISMATCH",
+    "require_zero_equivalence_for_controller_efficacy": true,
+    "parent_zero_equivalence_not_evaluated_is_not_a_pass": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "runtime_normalization_authority": "parent live baseline C1.h5 root attributes",
+    "projection_is_planning_only": true,
+    "claim_boundary": "Normalized native M3D-C1 planning/reachability only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
