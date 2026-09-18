@@ -1,11 +1,12 @@
 {
-  "schema_version": 1,
-  "physical_ms_per_solver_time_unit": 0.0006483638900045808,
-  "normalization": {
-    "b0_norm_G": 10000.0,
-    "n0_norm_cm3": 100000000000000.0,
-    "l0_norm_cm": 100.0,
-    "ion_mass_mp": 2.0
+  "schema_version": 2,
+  "calibration_policy": "reviewed_formula_live_hdf5_normalization",
+  "reference_physical_ms_per_solver_time_unit": 0.0006483638900045808,
+  "reference_normalization": {
+    "b0_norm_G": 10000,
+    "n0_norm_cm3": 100000000000000,
+    "l0_norm_cm": 100,
+    "ion_mass_mp": 2
   },
   "formula": {
     "id": "m3dc1_alfven_time_cgs",
@@ -14,16 +15,18 @@
     "proton_mass_g": 1.6726219e-24
   },
   "provenance": {
-    "method": "M3D-C1 Alfven normalization derived from the native deck normalization constants",
+    "method": "Reviewed M3D-C1 Alfven normalization formula applied to live-run C1.h5 root attributes",
     "native_template": "validation_inputs/machine_equilibria/diii_d/C1input_base",
     "reference_repository": "ProjectTorreyPines/M3DC1Reader.jl",
     "reference_path": "src/units.jl",
-    "reference_blob_sha": "1c8018e2f9abd1ad695db70306e7aecb22e81b85",
-    "reference_note": "M3DNormalization defines v0=b0/sqrt(4*pi*ion_mass*mp*n0) and t0=l0/v0; time unit factor is t0 seconds per native unit."
+    "reference_note": "M3DNormalization documents C1.h5 root attributes b0_norm, n0_norm, l0_norm, ion_mass as the run normalization and defines v0=b0/sqrt(4*pi*ion_mass*mp*n0), t0=l0/v0.",
+    "live_baseline": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1.h5"
   },
   "reviewed": true,
-  "review_scope": "Formula and committed DIII-D normalization values cross-checked against M3D-C1Reader unit-normalization implementation; runtime code must independently verify the actual /home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1input values before use.",
+  "review_scope": "The conversion formula and committed DIII-D template values are reviewed. Template normalization is reference-only; the actual run normalization is read from live C1.h5 root attributes and used to derive the effective physical time scale. Explicit C1input/HDF5 disagreements remain fail-closed.",
   "applies_to_native_deck": true,
+  "runtime_normalization_authority": "live baseline C1.h5 root attributes",
   "runtime_verification_required": true,
+  "template_reference_is_hard_gate": false,
   "relative_tolerance": 1e-10
 }
