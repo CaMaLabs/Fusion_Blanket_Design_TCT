@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-018-native-restart-interface-specificity-audit",
+  "parent_result_job_id": "20260917-017-native-restart-capability-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_interface_specificity_audit.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_interface_specificity"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_interface_specificity/native_restart_interface_specificity_summary.json",
+  "purpose": "Resolve whether the broad restart-capability audit found an actual runtime restart/checkpoint interface or merely generic HDF5/build-system evidence before attempting a split-run equivalence test.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_CAPABILITY_CANDIDATES_FOUND_REQUIRES_VALIDATION",
+    "capability_audit_only": true,
+    "require_zero_equivalence_for_controller_efficacy": true,
+    "require_handoff_equivalence_before_restart_horizon_use": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "claim_boundary": "Normalized native M3D-C1 capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
