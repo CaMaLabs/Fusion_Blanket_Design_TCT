@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-023-native-restart-serialization-symmetry",
+  "processed_result_receipt": "agent_pipeline/results/20260918-023-native-restart-serialization-symmetry.json",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_SERIALIZATION_ASYMMETRY_CANDIDATES_FOUND",
+  "pipeline_failure": false,
+  "interpretation": "Static source audit found apparent read/write literal asymmetry in the native restart path, but the job contract explicitly forbids treating literal asymmetry as dynamic causation. The result is therefore a provenance lead only. Job 021's first-postrestart discontinuity remains unresolved; no controller-efficacy inference is authorized.",
+  "zero_equivalence": "NOT_EVALUATED_STATIC_SOURCE_AUDIT_ONLY",
+  "handoff_equivalence": "NOT_EVALUATED_STATIC_SOURCE_AUDIT_ONLY",
+  "frozen_gates": {"width_gate_pct_gt": 0.02, "Jpk_gate_pct_le": 0.1, "unchanged": true},
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "new_job_id": "20260918-024-native-restart-checkpoint-schema-audit",
+  "processed_utc": "2026-09-18T11:27:50Z"
+}
