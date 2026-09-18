@@ -1,0 +1,1466 @@
+{
+  "audit_scope": "Map observed restart-vs-continuous field-registry differences to native M3D-C1 field lifecycle/restart source context; no solver execution.",
+  "causation_status": "OBSERVATIONAL_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_REGISTRY_SOURCE_CONTEXT_CAPTURED",
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "frozen_width_gate_pct_gt": 0.02,
+  "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+  "observed_continuous_only_fields": [
+    67,
+    68,
+    69,
+    70
+  ],
+  "observed_restart_only_fields": [
+    50,
+    51,
+    52,
+    53
+  ],
+  "parent_job_id": "20260918-029-native-restart-field-registry-audit",
+  "pipeline_failure": false,
+  "source_context_hits": [
+    {
+      "context": "    implicit none\n    if(irunaway.eq.0) return\n\n    call destroy_field(dnre_field1)\n    call destroy_field(dnre_field2)\n    call destroy_field(depar_field)\n    call destroy_field(ere_field)",
+      "line": 31,
+      "match": "call destroy_field(dnre_field1)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    if(irunaway.eq.0) return\n\n    call destroy_field(dnre_field1)\n    call destroy_field(dnre_field2)\n    call destroy_field(depar_field)\n    call destroy_field(ere_field)\n    call destroy_field(ecrit_field)",
+      "line": 32,
+      "match": "call destroy_field(dnre_field2)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "\n    call destroy_field(dnre_field1)\n    call destroy_field(dnre_field2)\n    call destroy_field(depar_field)\n    call destroy_field(ere_field)\n    call destroy_field(ecrit_field)\n    call destroy_field(dndt_field)",
+      "line": 33,
+      "match": "call destroy_field(depar_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call destroy_field(dnre_field1)\n    call destroy_field(dnre_field2)\n    call destroy_field(depar_field)\n    call destroy_field(ere_field)\n    call destroy_field(ecrit_field)\n    call destroy_field(dndt_field)\n    call destroy_field(jre_field)",
+      "line": 34,
+      "match": "call destroy_field(ere_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call destroy_field(dnre_field2)\n    call destroy_field(depar_field)\n    call destroy_field(ere_field)\n    call destroy_field(ecrit_field)\n    call destroy_field(dndt_field)\n    call destroy_field(jre_field)\n    call destroy_field(f_field)",
+      "line": 35,
+      "match": "call destroy_field(ecrit_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call destroy_field(depar_field)\n    call destroy_field(ere_field)\n    call destroy_field(ecrit_field)\n    call destroy_field(dndt_field)\n    call destroy_field(jre_field)\n    call destroy_field(f_field)\n  end subroutine runaway_deallocate",
+      "line": 36,
+      "match": "call destroy_field(dndt_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call destroy_field(ere_field)\n    call destroy_field(ecrit_field)\n    call destroy_field(dndt_field)\n    call destroy_field(jre_field)\n    call destroy_field(f_field)\n  end subroutine runaway_deallocate\n    ",
+      "line": 37,
+      "match": "call destroy_field(jre_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call destroy_field(ecrit_field)\n    call destroy_field(dndt_field)\n    call destroy_field(jre_field)\n    call destroy_field(f_field)\n  end subroutine runaway_deallocate\n    \n  subroutine runaway_init()",
+      "line": 38,
+      "match": "call destroy_field(f_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    print *, 'Estimated Ecrit for runaways = ', &\n         ec**3*(n0_norm*1e6)*17./(4.*pi*eps0**2*me*c**2), ' V/m'\n\n    call create_field(dnre_field1)\n    call create_field(dnre_field2)\n    call create_field(depar_field)\n    call create_field(ere_field)",
+      "line": 51,
+      "match": "call create_field(dnre_field1)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "         ec**3*(n0_norm*1e6)*17./(4.*pi*eps0**2*me*c**2), ' V/m'\n\n    call create_field(dnre_field1)\n    call create_field(dnre_field2)\n    call create_field(depar_field)\n    call create_field(ere_field)\n    call create_field(ecrit_field)",
+      "line": 52,
+      "match": "call create_field(dnre_field2)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "\n    call create_field(dnre_field1)\n    call create_field(dnre_field2)\n    call create_field(depar_field)\n    call create_field(ere_field)\n    call create_field(ecrit_field)\n    call create_field(dndt_field)",
+      "line": 53,
+      "match": "call create_field(depar_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call create_field(dnre_field1)\n    call create_field(dnre_field2)\n    call create_field(depar_field)\n    call create_field(ere_field)\n    call create_field(ecrit_field)\n    call create_field(dndt_field)\n    call create_field(jre_field)",
+      "line": 54,
+      "match": "call create_field(ere_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call create_field(dnre_field2)\n    call create_field(depar_field)\n    call create_field(ere_field)\n    call create_field(ecrit_field)\n    call create_field(dndt_field)\n    call create_field(jre_field)\n    call create_field(f_field)",
+      "line": 55,
+      "match": "call create_field(ecrit_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call create_field(depar_field)\n    call create_field(ere_field)\n    call create_field(ecrit_field)\n    call create_field(dndt_field)\n    call create_field(jre_field)\n    call create_field(f_field)\n",
+      "line": 56,
+      "match": "call create_field(dndt_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call create_field(ere_field)\n    call create_field(ecrit_field)\n    call create_field(dndt_field)\n    call create_field(jre_field)\n    call create_field(f_field)\n\n    dnre_field1 = 0.",
+      "line": 57,
+      "match": "call create_field(jre_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "    call create_field(ecrit_field)\n    call create_field(dndt_field)\n    call create_field(jre_field)\n    call create_field(f_field)\n\n    dnre_field1 = 0.\n    dnre_field2 = 0.",
+      "line": 58,
+      "match": "call create_field(f_field)",
+      "path": "unstructured/runaway.f90"
+    },
+    {
+      "context": "       end select\n    end if\n\n    call create_field(jphi_vec)\n    jphi_vec = 0.\n\n    if(ibasicj_solvep.eq.0) then",
+      "line": 135,
+      "match": "call create_field(jphi_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "    jphi_vec = 0.\n\n    if(ibasicj_solvep.eq.0) then\n       call create_field(p_vec)\n       p_vec = 0.\n    end if\n",
+      "line": 139,
+      "match": "call create_field(p_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "       ! Evaluate pressure\n       call newvar_solve(p_vec%vec, mass_mat_lhs)\n       p_field(0) = p_vec\n       call destroy_field(p_vec)\n    end if\n\n    ! Create a matrix for solving (dA/dpsi)/(R) = Jphi - R p' (ibasicj_solvep == 0)",
+      "line": 200,
+      "match": "call destroy_field(p_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Calculating BZ, VZ'\n    ! Calculate BZ from G = (F^2 - F0^2)/2\n    if(ibasicj_solvep.eq.0) then\n       call create_field(f_vec)\n       f_vec = 0.\n    end if\n",
+      "line": 280,
+      "match": "call create_field(f_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "       f_vec = 0.\n    end if\n\n    call create_field(vz_vec)\n    vz_vec = 0.\n\n!!$OMP PARALLEL DO &",
+      "line": 284,
+      "match": "call create_field(vz_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving BZ'\n       call newvar_solve(f_vec%vec, mass_mat_lhs)\n       bz_field(0) = f_vec\n       call destroy_field(f_vec)\n    else\n       if(itor.eq.1) then\n          bz_field(0) = bzero*rzero",
+      "line": 323,
+      "match": "call destroy_field(f_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "    call newvar_solve(vz_vec%vec, mass_mat_lhs)\n    vz_field(0) = vz_vec\n\n    call destroy_field(jphi_vec)\n    call destroy_field(vz_vec)\n\n    if(bzero.lt.0.) call mult(bz_field(0),-1.)",
+      "line": 336,
+      "match": "call destroy_field(jphi_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "    vz_field(0) = vz_vec\n\n    call destroy_field(jphi_vec)\n    call destroy_field(vz_vec)\n\n    if(bzero.lt.0.) call mult(bz_field(0),-1.)\n",
+      "line": 337,
+      "match": "call destroy_field(vz_vec)",
+      "path": "unstructured/init_basicj.f90"
+    },
+    {
+      "context": "!!$    zlim = zmag\n!!$    if(myrank.eq.0 .and. iprint.ge.1) print *, 'Limiter = ', xlim\n!!$    \n!!$    call create_field(psi_vec)\n!!$    call create_field(bz_vec)\n!!$    call create_field(p_vec)\n!!$    call create_field(den_vec)",
+      "line": 29,
+      "match": "!!$    call create_field(psi_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$    if(myrank.eq.0 .and. iprint.ge.1) print *, 'Limiter = ', xlim\n!!$    \n!!$    call create_field(psi_vec)\n!!$    call create_field(bz_vec)\n!!$    call create_field(p_vec)\n!!$    call create_field(den_vec)\n!!$",
+      "line": 30,
+      "match": "!!$    call create_field(bz_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$    \n!!$    call create_field(psi_vec)\n!!$    call create_field(bz_vec)\n!!$    call create_field(p_vec)\n!!$    call create_field(den_vec)\n!!$\n!!$    numelms = local_elements()",
+      "line": 31,
+      "match": "!!$    call create_field(p_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$    call create_field(psi_vec)\n!!$    call create_field(bz_vec)\n!!$    call create_field(p_vec)\n!!$    call create_field(den_vec)\n!!$\n!!$    numelms = local_elements()\n!!$",
+      "line": 32,
+      "match": "!!$    call create_field(den_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$       \n!!$    end do\n!!$      \n!!$    call destroy_field(psi_vec)\n!!$    call destroy_field(bz_vec)\n!!$    call destroy_field(den_vec)\n!!$    call destroy_field(p_vec)",
+      "line": 98,
+      "match": "!!$    call destroy_field(psi_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$    end do\n!!$      \n!!$    call destroy_field(psi_vec)\n!!$    call destroy_field(bz_vec)\n!!$    call destroy_field(den_vec)\n!!$    call destroy_field(p_vec)\n!!$",
+      "line": 99,
+      "match": "!!$    call destroy_field(bz_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$      \n!!$    call destroy_field(psi_vec)\n!!$    call destroy_field(bz_vec)\n!!$    call destroy_field(den_vec)\n!!$    call destroy_field(p_vec)\n!!$\n!!$    call lcfs(psi_field(0))",
+      "line": 100,
+      "match": "!!$    call destroy_field(den_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "!!$    call destroy_field(psi_vec)\n!!$    call destroy_field(bz_vec)\n!!$    call destroy_field(den_vec)\n!!$    call destroy_field(p_vec)\n!!$\n!!$    call lcfs(psi_field(0))\n!!$  end subroutine kstar_init",
+      "line": 101,
+      "match": "!!$    call destroy_field(p_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "  type (field_type) :: psi_vec\n  type(matrix_type) :: psi_mat\n  \n  !call create_field(dpsi_dr)\n  call create_field(psi_vec)\n  \n  call set_matrix_index(psi_mat, psi_mat_index)",
+      "line": 187,
+      "match": "!call create_field(dpsi_dr)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "  type(matrix_type) :: psi_mat\n  \n  !call create_field(dpsi_dr)\n  call create_field(psi_vec)\n  \n  call set_matrix_index(psi_mat, psi_mat_index)\n  call create_mat(psi_mat,1,1,icomplex, 1)",
+      "line": 188,
+      "match": "call create_field(psi_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "  endif\n  \n  call destroy_mat(psi_mat)\n  call destroy_field(psi_vec)\n  !call destroy_field(dpsi_dr)\n  \nend subroutine kstar_profiles",
+      "line": 283,
+      "match": "call destroy_field(psi_vec)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "  \n  call destroy_mat(psi_mat)\n  call destroy_field(psi_vec)\n  !call destroy_field(dpsi_dr)\n  \nend subroutine kstar_profiles\n",
+      "line": 284,
+      "match": "!call destroy_field(dpsi_dr)",
+      "path": "unstructured/init_kstar.f90"
+    },
+    {
+      "context": "  real    :: prad_fz  ! density of impurity species as fraction of electron density \n\n  ! general equilibrium parameters\n  integer :: irestart ! 1 = reads restart file as initial condition\n                      ! 2 = reads restart file to initialize GS solve\n                      ! 3 = reads 2D RL=1 restart file o initialize 2D COM=1 run\n  integer :: irestart_slice   ! field output timeslice from which to restart",
+      "line": 177,
+      "match": "integer :: irestart ! 1 = reads restart file as initial condition",
+      "path": "unstructured/M3Dmodules.f90"
+    },
+    {
+      "context": "  integer :: irestart ! 1 = reads restart file as initial condition\n                      ! 2 = reads restart file to initialize GS solve\n                      ! 3 = reads 2D RL=1 restart file o initialize 2D COM=1 run\n  integer :: irestart_slice   ! field output timeslice from which to restart\n  integer :: version_in  ! Version of restart file\n  integer :: itaylor  ! equilibrium\n  integer :: idevice  ! for itor=1, itaylor=1, selects tokamak configuration",
+      "line": 180,
+      "match": "integer :: irestart_slice   ! field output timeslice from which to restart",
+      "path": "unstructured/M3Dmodules.f90"
+    },
+    {
+      "context": "  integer :: ike_harmonics  ! number of Fourier harmonics of ke to be calculated and output\n  integer :: ibh_harmonics  ! number of Fourier harmonics of magnetic field perturbation to be calculated and output\n  integer :: ifout         ! 1 = output f field\n  integer :: irestart_fp   ! -1 = default; 1 = fp present at restart; 0 = absent; \n  integer :: itemp_plot    ! 1 =output vdotgradt, deldotq_perp, deldotq_par,eta_jsq\n  integer :: ibdgp         ! option to make partial plots of b dot grad potential\n  integer :: iveldif         ! option to make partial plots of V x B - grad(potential)",
+      "line": 475,
+      "match": "integer :: irestart_fp   ! -1 = default; 1 = fp present at restart; 0 = absent;",
+      "path": "unstructured/M3Dmodules.f90"
+    },
+    {
+      "context": "    end if\n\n    ! Create fields \n    call create_field(p_f)\n    call create_field(bz_f)\n    call create_field(bf_f)\n    p_f = 0.",
+      "line": 57,
+      "match": "call create_field(p_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "\n    ! Create fields \n    call create_field(p_f)\n    call create_field(bz_f)\n    call create_field(bf_f)\n    p_f = 0.\n    bz_f = 0.",
+      "line": 58,
+      "match": "call create_field(bz_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    ! Create fields \n    call create_field(p_f)\n    call create_field(bz_f)\n    call create_field(bf_f)\n    p_f = 0.\n    bz_f = 0.\n    bf_f = 0.",
+      "line": 59,
+      "match": "call create_field(bf_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    bz_f = 0.\n    bf_f = 0.\n    if(iread_ne.eq.21) then \n      call create_field(den_f)\n      den_f = 0.\n      nvals = 0\n      call read_ascii_column('n_profile', xvals, nvals, icol=1)",
+      "line": 64,
+      "match": "call create_field(den_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    endif\n\n    if(iread_te.eq.21) then \n      call create_field(te_f)\n      te_f = 0.\n      nvals = 0\n      call read_ascii_column('te_profile', xvals, nvals, icol=1)",
+      "line": 76,
+      "match": "call create_field(te_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    endif\n\n    if(iread_p.eq.21) then \n      call create_field(pexternal_f)\n      pexternal_f = 0.\n      nvals = 0\n      call read_ascii_column('p_profile', xvals, nvals, icol=1)",
+      "line": 88,
+      "match": "call create_field(pexternal_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    bz_field(0) = bz_f\n    bf_field(0) = bf_f\n\n    call destroy_field(p_f)\n    call destroy_field(bf_f)\n    call destroy_field(bz_f)\n    if(iread_ne.eq.21) then",
+      "line": 239,
+      "match": "call destroy_field(p_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    bf_field(0) = bf_f\n\n    call destroy_field(p_f)\n    call destroy_field(bf_f)\n    call destroy_field(bz_f)\n    if(iread_ne.eq.21) then\n      call destroy_field(den_f)",
+      "line": 240,
+      "match": "call destroy_field(bf_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "\n    call destroy_field(p_f)\n    call destroy_field(bf_f)\n    call destroy_field(bz_f)\n    if(iread_ne.eq.21) then\n      call destroy_field(den_f)\n      call destroy_spline(den_spline)",
+      "line": 241,
+      "match": "call destroy_field(bz_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    call destroy_field(bf_f)\n    call destroy_field(bz_f)\n    if(iread_ne.eq.21) then\n      call destroy_field(den_f)\n      call destroy_spline(den_spline)\n    end if\n    if(iread_te.eq.21) then",
+      "line": 243,
+      "match": "call destroy_field(den_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "      call destroy_spline(den_spline)\n    end if\n    if(iread_te.eq.21) then\n      call destroy_field(te_f)\n      call destroy_spline(temper_spline)\n    end if\n    if(iread_p.eq.21) then",
+      "line": 247,
+      "match": "call destroy_field(te_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "      call destroy_spline(temper_spline)\n    end if\n    if(iread_p.eq.21) then\n      call destroy_field(pexternal_f)\n      call destroy_spline(press_ext_spline)\n    end if\n    call destroy_vector(fppsi_vec)",
+      "line": 251,
+      "match": "call destroy_field(pexternal_f)",
+      "path": "unstructured/init_vmec.f90"
+    },
+    {
+      "context": "    end do\n\n    print *, 'allocating arrays'\n    call create_field(rhs)\n    call create_field(bcs)\n\n    print *, 'defining bcs'",
+      "line": 155,
+      "match": "call create_field(rhs)",
+      "path": "unstructured/biharmonic.f90"
+    },
+    {
+      "context": "\n    print *, 'allocating arrays'\n    call create_field(rhs)\n    call create_field(bcs)\n\n    print *, 'defining bcs'\n    numnodes = owned_nodes()",
+      "line": 156,
+      "match": "call create_field(bcs)",
+      "path": "unstructured/biharmonic.f90"
+    },
+    {
+      "context": "\n    ! free temporary arrays\n    print *, 'deallocating arrays'\n    call destroy_field(rhs)\n    call destroy_field(bcs)\n    call destroy_mat(biharmonic_mat)\n   ",
+      "line": 226,
+      "match": "call destroy_field(rhs)",
+      "path": "unstructured/biharmonic.f90"
+    },
+    {
+      "context": "    ! free temporary arrays\n    print *, 'deallocating arrays'\n    call destroy_field(rhs)\n    call destroy_field(bcs)\n    call destroy_mat(biharmonic_mat)\n   \n  end subroutine biharmonic_init",
+      "line": 227,
+      "match": "call destroy_field(bcs)",
+      "path": "unstructured/biharmonic.f90"
+    },
+    {
+      "context": "    if(myrank.eq.0 .and. iprint.ge.1) &\n         print *, \"Interpolating geqdsk Equilibrium\"\n\n    call create_field(psi_vec)\n    call create_field(bz_vec)\n    call create_field(p_vec)\n    call create_field(den_vec)",
+      "line": 103,
+      "match": "call create_field(psi_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "         print *, \"Interpolating geqdsk Equilibrium\"\n\n    call create_field(psi_vec)\n    call create_field(bz_vec)\n    call create_field(p_vec)\n    call create_field(den_vec)\n",
+      "line": 104,
+      "match": "call create_field(bz_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "\n    call create_field(psi_vec)\n    call create_field(bz_vec)\n    call create_field(p_vec)\n    call create_field(den_vec)\n\n    numelms = local_elements()",
+      "line": 105,
+      "match": "call create_field(p_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "    call create_field(psi_vec)\n    call create_field(bz_vec)\n    call create_field(p_vec)\n    call create_field(den_vec)\n\n    numelms = local_elements()\n",
+      "line": 106,
+      "match": "call create_field(den_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "       den_field(k) = den_vec\n    end do\n\n    call destroy_field(psi_vec)\n    call destroy_field(bz_vec)\n    call destroy_field(den_vec)\n    call destroy_field(p_vec)",
+      "line": 163,
+      "match": "call destroy_field(psi_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "    end do\n\n    call destroy_field(psi_vec)\n    call destroy_field(bz_vec)\n    call destroy_field(den_vec)\n    call destroy_field(p_vec)\n",
+      "line": 164,
+      "match": "call destroy_field(bz_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "\n    call destroy_field(psi_vec)\n    call destroy_field(bz_vec)\n    call destroy_field(den_vec)\n    call destroy_field(p_vec)\n\n  end if",
+      "line": 165,
+      "match": "call destroy_field(den_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "    call destroy_field(psi_vec)\n    call destroy_field(bz_vec)\n    call destroy_field(den_vec)\n    call destroy_field(p_vec)\n\n  end if\n!",
+      "line": 166,
+      "match": "call destroy_field(p_vec)",
+      "path": "unstructured/init_eqdsk.f90"
+    },
+    {
+      "context": "  implicit none\n\nif (ispradapt .eq. 1) then\n  call create_field(bdotgradp, \"bdotgradp\")\n  call create_field(bdotgradt, \"bdotgradt\")\n  call create_field(torque_density_em, \"torque_density_em\")\n  call create_field(torque_density_ntv, \"torque_density_ntv\")",
+      "line": 41,
+      "match": "call create_field(bdotgradp, \"bdotgradp\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\nif (ispradapt .eq. 1) then\n  call create_field(bdotgradp, \"bdotgradp\")\n  call create_field(bdotgradt, \"bdotgradt\")\n  call create_field(torque_density_em, \"torque_density_em\")\n  call create_field(torque_density_ntv, \"torque_density_ntv\")\n  call create_field(chord_mask, \"chord_mask\")",
+      "line": 42,
+      "match": "call create_field(bdotgradt, \"bdotgradt\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "if (ispradapt .eq. 1) then\n  call create_field(bdotgradp, \"bdotgradp\")\n  call create_field(bdotgradt, \"bdotgradt\")\n  call create_field(torque_density_em, \"torque_density_em\")\n  call create_field(torque_density_ntv, \"torque_density_ntv\")\n  call create_field(chord_mask, \"chord_mask\")\n  call create_field(mag_reg, \"mag_reg\")",
+      "line": 43,
+      "match": "call create_field(torque_density_em, \"torque_density_em\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(bdotgradp, \"bdotgradp\")\n  call create_field(bdotgradt, \"bdotgradt\")\n  call create_field(torque_density_em, \"torque_density_em\")\n  call create_field(torque_density_ntv, \"torque_density_ntv\")\n  call create_field(chord_mask, \"chord_mask\")\n  call create_field(mag_reg, \"mag_reg\")\n  call create_field(ef_r, \"ef_r\")",
+      "line": 44,
+      "match": "call create_field(torque_density_ntv, \"torque_density_ntv\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(bdotgradt, \"bdotgradt\")\n  call create_field(torque_density_em, \"torque_density_em\")\n  call create_field(torque_density_ntv, \"torque_density_ntv\")\n  call create_field(chord_mask, \"chord_mask\")\n  call create_field(mag_reg, \"mag_reg\")\n  call create_field(ef_r, \"ef_r\")\n  call create_field(ef_phi, \"ef_phi\")",
+      "line": 45,
+      "match": "call create_field(chord_mask, \"chord_mask\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(torque_density_em, \"torque_density_em\")\n  call create_field(torque_density_ntv, \"torque_density_ntv\")\n  call create_field(chord_mask, \"chord_mask\")\n  call create_field(mag_reg, \"mag_reg\")\n  call create_field(ef_r, \"ef_r\")\n  call create_field(ef_phi, \"ef_phi\")\n  call create_field(ef_z, \"ef_z\")",
+      "line": 46,
+      "match": "call create_field(mag_reg, \"mag_reg\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(torque_density_ntv, \"torque_density_ntv\")\n  call create_field(chord_mask, \"chord_mask\")\n  call create_field(mag_reg, \"mag_reg\")\n  call create_field(ef_r, \"ef_r\")\n  call create_field(ef_phi, \"ef_phi\")\n  call create_field(ef_z, \"ef_z\")\n  call create_field(ef_par, \"ef_par\")",
+      "line": 47,
+      "match": "call create_field(ef_r, \"ef_r\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(chord_mask, \"chord_mask\")\n  call create_field(mag_reg, \"mag_reg\")\n  call create_field(ef_r, \"ef_r\")\n  call create_field(ef_phi, \"ef_phi\")\n  call create_field(ef_z, \"ef_z\")\n  call create_field(ef_par, \"ef_par\")\n  call create_field(eta_j, \"eta_j\")",
+      "line": 48,
+      "match": "call create_field(ef_phi, \"ef_phi\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(mag_reg, \"mag_reg\")\n  call create_field(ef_r, \"ef_r\")\n  call create_field(ef_phi, \"ef_phi\")\n  call create_field(ef_z, \"ef_z\")\n  call create_field(ef_par, \"ef_par\")\n  call create_field(eta_j, \"eta_j\")\n  call create_field(mesh_zone, \"mesh_zone\")",
+      "line": 49,
+      "match": "call create_field(ef_z, \"ef_z\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_r, \"ef_r\")\n  call create_field(ef_phi, \"ef_phi\")\n  call create_field(ef_z, \"ef_z\")\n  call create_field(ef_par, \"ef_par\")\n  call create_field(eta_j, \"eta_j\")\n  call create_field(mesh_zone, \"mesh_zone\")\n  call create_field(z_effective, \"z_effective\")",
+      "line": 50,
+      "match": "call create_field(ef_par, \"ef_par\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_phi, \"ef_phi\")\n  call create_field(ef_z, \"ef_z\")\n  call create_field(ef_par, \"ef_par\")\n  call create_field(eta_j, \"eta_j\")\n  call create_field(mesh_zone, \"mesh_zone\")\n  call create_field(z_effective, \"z_effective\")\n",
+      "line": 51,
+      "match": "call create_field(eta_j, \"eta_j\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_z, \"ef_z\")\n  call create_field(ef_par, \"ef_par\")\n  call create_field(eta_j, \"eta_j\")\n  call create_field(mesh_zone, \"mesh_zone\")\n  call create_field(z_effective, \"z_effective\")\n\n  if(ikprad.ne.0) call create_field(kprad_totden, \"kprad_totden\")",
+      "line": 52,
+      "match": "call create_field(mesh_zone, \"mesh_zone\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_par, \"ef_par\")\n  call create_field(eta_j, \"eta_j\")\n  call create_field(mesh_zone, \"mesh_zone\")\n  call create_field(z_effective, \"z_effective\")\n\n  if(ikprad.ne.0) call create_field(kprad_totden, \"kprad_totden\")\n  if(jadv.eq.0) then",
+      "line": 53,
+      "match": "call create_field(z_effective, \"z_effective\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(mesh_zone, \"mesh_zone\")\n  call create_field(z_effective, \"z_effective\")\n\n  if(ikprad.ne.0) call create_field(kprad_totden, \"kprad_totden\")\n  if(jadv.eq.0) then\n     call create_field(psidot, \"psidot\")\n     call create_field(veldif, \"veldif\")",
+      "line": 55,
+      "match": "if(ikprad.ne.0) call create_field(kprad_totden, \"kprad_totden\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\n  if(ikprad.ne.0) call create_field(kprad_totden, \"kprad_totden\")\n  if(jadv.eq.0) then\n     call create_field(psidot, \"psidot\")\n     call create_field(veldif, \"veldif\")\n     call create_field(eta_jdb, \"eta_jdb\")\n     call create_field(bdgp, \"bdgp\")",
+      "line": 57,
+      "match": "call create_field(psidot, \"psidot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(ikprad.ne.0) call create_field(kprad_totden, \"kprad_totden\")\n  if(jadv.eq.0) then\n     call create_field(psidot, \"psidot\")\n     call create_field(veldif, \"veldif\")\n     call create_field(eta_jdb, \"eta_jdb\")\n     call create_field(bdgp, \"bdgp\")\n     call create_field(vlbdgp, \"vlbdgp\")",
+      "line": 58,
+      "match": "call create_field(veldif, \"veldif\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(jadv.eq.0) then\n     call create_field(psidot, \"psidot\")\n     call create_field(veldif, \"veldif\")\n     call create_field(eta_jdb, \"eta_jdb\")\n     call create_field(bdgp, \"bdgp\")\n     call create_field(vlbdgp, \"vlbdgp\")\n  endif",
+      "line": 59,
+      "match": "call create_field(eta_jdb, \"eta_jdb\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(psidot, \"psidot\")\n     call create_field(veldif, \"veldif\")\n     call create_field(eta_jdb, \"eta_jdb\")\n     call create_field(bdgp, \"bdgp\")\n     call create_field(vlbdgp, \"vlbdgp\")\n  endif\n  if(itemp_plot.eq.1) then",
+      "line": 60,
+      "match": "call create_field(bdgp, \"bdgp\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(veldif, \"veldif\")\n     call create_field(eta_jdb, \"eta_jdb\")\n     call create_field(bdgp, \"bdgp\")\n     call create_field(vlbdgp, \"vlbdgp\")\n  endif\n  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt, \"vdotgradt\")",
+      "line": 61,
+      "match": "call create_field(vlbdgp, \"vlbdgp\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(vlbdgp, \"vlbdgp\")\n  endif\n  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt, \"vdotgradt\")\n     call create_field(adv1, \"adv1\")\n     call create_field(adv2, \"adv2\")\n     call create_field(adv3, \"adv3\")",
+      "line": 64,
+      "match": "call create_field(vdotgradt, \"vdotgradt\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  endif\n  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt, \"vdotgradt\")\n     call create_field(adv1, \"adv1\")\n     call create_field(adv2, \"adv2\")\n     call create_field(adv3, \"adv3\")\n     call create_field(deldotq_perp, \"deldotq_perp\")",
+      "line": 65,
+      "match": "call create_field(adv1, \"adv1\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt, \"vdotgradt\")\n     call create_field(adv1, \"adv1\")\n     call create_field(adv2, \"adv2\")\n     call create_field(adv3, \"adv3\")\n     call create_field(deldotq_perp, \"deldotq_perp\")\n     call create_field(deldotq_par, \"deldotq_par\")",
+      "line": 66,
+      "match": "call create_field(adv2, \"adv2\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(vdotgradt, \"vdotgradt\")\n     call create_field(adv1, \"adv1\")\n     call create_field(adv2, \"adv2\")\n     call create_field(adv3, \"adv3\")\n     call create_field(deldotq_perp, \"deldotq_perp\")\n     call create_field(deldotq_par, \"deldotq_par\")\n     call create_field(eta_jsq, \"eta_jsq\")",
+      "line": 67,
+      "match": "call create_field(adv3, \"adv3\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(adv1, \"adv1\")\n     call create_field(adv2, \"adv2\")\n     call create_field(adv3, \"adv3\")\n     call create_field(deldotq_perp, \"deldotq_perp\")\n     call create_field(deldotq_par, \"deldotq_par\")\n     call create_field(eta_jsq, \"eta_jsq\")\n     call create_field(pot2_field, \"pot2_field\")",
+      "line": 68,
+      "match": "call create_field(deldotq_perp, \"deldotq_perp\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(adv2, \"adv2\")\n     call create_field(adv3, \"adv3\")\n     call create_field(deldotq_perp, \"deldotq_perp\")\n     call create_field(deldotq_par, \"deldotq_par\")\n     call create_field(eta_jsq, \"eta_jsq\")\n     call create_field(pot2_field, \"pot2_field\")\n     call create_field(vpar_field, \"vpar_field\")",
+      "line": 69,
+      "match": "call create_field(deldotq_par, \"deldotq_par\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(adv3, \"adv3\")\n     call create_field(deldotq_perp, \"deldotq_perp\")\n     call create_field(deldotq_par, \"deldotq_par\")\n     call create_field(eta_jsq, \"eta_jsq\")\n     call create_field(pot2_field, \"pot2_field\")\n     call create_field(vpar_field, \"vpar_field\")\n     call create_field(f1vplot, \"f1vplot\")",
+      "line": 70,
+      "match": "call create_field(eta_jsq, \"eta_jsq\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(deldotq_perp, \"deldotq_perp\")\n     call create_field(deldotq_par, \"deldotq_par\")\n     call create_field(eta_jsq, \"eta_jsq\")\n     call create_field(pot2_field, \"pot2_field\")\n     call create_field(vpar_field, \"vpar_field\")\n     call create_field(f1vplot, \"f1vplot\")\n     call create_field(f1eplot, \"f1eplot\")",
+      "line": 71,
+      "match": "call create_field(pot2_field, \"pot2_field\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(deldotq_par, \"deldotq_par\")\n     call create_field(eta_jsq, \"eta_jsq\")\n     call create_field(pot2_field, \"pot2_field\")\n     call create_field(vpar_field, \"vpar_field\")\n     call create_field(f1vplot, \"f1vplot\")\n     call create_field(f1eplot, \"f1eplot\")\n     call create_field(f2vplot, \"f2vplot\")",
+      "line": 72,
+      "match": "call create_field(vpar_field, \"vpar_field\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(eta_jsq, \"eta_jsq\")\n     call create_field(pot2_field, \"pot2_field\")\n     call create_field(vpar_field, \"vpar_field\")\n     call create_field(f1vplot, \"f1vplot\")\n     call create_field(f1eplot, \"f1eplot\")\n     call create_field(f2vplot, \"f2vplot\")\n     call create_field(f2eplot, \"f2eplot\")",
+      "line": 73,
+      "match": "call create_field(f1vplot, \"f1vplot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(pot2_field, \"pot2_field\")\n     call create_field(vpar_field, \"vpar_field\")\n     call create_field(f1vplot, \"f1vplot\")\n     call create_field(f1eplot, \"f1eplot\")\n     call create_field(f2vplot, \"f2vplot\")\n     call create_field(f2eplot, \"f2eplot\")\n     call create_field(f3vplot, \"f3vplot\")",
+      "line": 74,
+      "match": "call create_field(f1eplot, \"f1eplot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(vpar_field, \"vpar_field\")\n     call create_field(f1vplot, \"f1vplot\")\n     call create_field(f1eplot, \"f1eplot\")\n     call create_field(f2vplot, \"f2vplot\")\n     call create_field(f2eplot, \"f2eplot\")\n     call create_field(f3vplot, \"f3vplot\")\n     call create_field(f3eplot, \"f3eplot\")",
+      "line": 75,
+      "match": "call create_field(f2vplot, \"f2vplot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f1vplot, \"f1vplot\")\n     call create_field(f1eplot, \"f1eplot\")\n     call create_field(f2vplot, \"f2vplot\")\n     call create_field(f2eplot, \"f2eplot\")\n     call create_field(f3vplot, \"f3vplot\")\n     call create_field(f3eplot, \"f3eplot\")\n     call create_field(jdbobs, \"jdbobs\")",
+      "line": 76,
+      "match": "call create_field(f2eplot, \"f2eplot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f1eplot, \"f1eplot\")\n     call create_field(f2vplot, \"f2vplot\")\n     call create_field(f2eplot, \"f2eplot\")\n     call create_field(f3vplot, \"f3vplot\")\n     call create_field(f3eplot, \"f3eplot\")\n     call create_field(jdbobs, \"jdbobs\")\n   endif",
+      "line": 77,
+      "match": "call create_field(f3vplot, \"f3vplot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f2vplot, \"f2vplot\")\n     call create_field(f2eplot, \"f2eplot\")\n     call create_field(f3vplot, \"f3vplot\")\n     call create_field(f3eplot, \"f3eplot\")\n     call create_field(jdbobs, \"jdbobs\")\n   endif\n   if(ibootstrap.ne.0) then",
+      "line": 78,
+      "match": "call create_field(f3eplot, \"f3eplot\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f2eplot, \"f2eplot\")\n     call create_field(f3vplot, \"f3vplot\")\n     call create_field(f3eplot, \"f3eplot\")\n     call create_field(jdbobs, \"jdbobs\")\n   endif\n   if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r, \"Jp_BS_r\")",
+      "line": 79,
+      "match": "call create_field(jdbobs, \"jdbobs\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(jdbobs, \"jdbobs\")\n   endif\n   if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r, \"Jp_BS_r\")\n    call create_field(Jp_BS_z, \"Jp_BS_z\")\n    call create_field(Jp_BS_phi, \"Jp_BS_phi\")\n    call create_field(JpdotB, \"JpdotB\")",
+      "line": 82,
+      "match": "call create_field(Jp_BS_r, \"Jp_BS_r\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "   endif\n   if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r, \"Jp_BS_r\")\n    call create_field(Jp_BS_z, \"Jp_BS_z\")\n    call create_field(Jp_BS_phi, \"Jp_BS_phi\")\n    call create_field(JpdotB, \"JpdotB\")\n    call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")",
+      "line": 83,
+      "match": "call create_field(Jp_BS_z, \"Jp_BS_z\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "   if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r, \"Jp_BS_r\")\n    call create_field(Jp_BS_z, \"Jp_BS_z\")\n    call create_field(Jp_BS_phi, \"Jp_BS_phi\")\n    call create_field(JpdotB, \"JpdotB\")\n    call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")\n    call create_field(JpdotB_dtedpsi, \"JpdotB_dtedpsi\")",
+      "line": 84,
+      "match": "call create_field(Jp_BS_phi, \"Jp_BS_phi\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(Jp_BS_r, \"Jp_BS_r\")\n    call create_field(Jp_BS_z, \"Jp_BS_z\")\n    call create_field(Jp_BS_phi, \"Jp_BS_phi\")\n    call create_field(JpdotB, \"JpdotB\")\n    call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")\n    call create_field(JpdotB_dtedpsi, \"JpdotB_dtedpsi\")\n    call create_field(JpdotB_dtidpsi, \"JpdotB_dtidpsi\")",
+      "line": 85,
+      "match": "call create_field(JpdotB, \"JpdotB\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(Jp_BS_z, \"Jp_BS_z\")\n    call create_field(Jp_BS_phi, \"Jp_BS_phi\")\n    call create_field(JpdotB, \"JpdotB\")\n    call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")\n    call create_field(JpdotB_dtedpsi, \"JpdotB_dtedpsi\")\n    call create_field(JpdotB_dtidpsi, \"JpdotB_dtidpsi\")\n   endif",
+      "line": 86,
+      "match": "call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(Jp_BS_phi, \"Jp_BS_phi\")\n    call create_field(JpdotB, \"JpdotB\")\n    call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")\n    call create_field(JpdotB_dtedpsi, \"JpdotB_dtedpsi\")\n    call create_field(JpdotB_dtidpsi, \"JpdotB_dtidpsi\")\n   endif\nelse",
+      "line": 87,
+      "match": "call create_field(JpdotB_dtedpsi, \"JpdotB_dtedpsi\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(JpdotB, \"JpdotB\")\n    call create_field(JpdotB_dndpsi, \"JpdotB_dndpsi\")\n    call create_field(JpdotB_dtedpsi, \"JpdotB_dtedpsi\")\n    call create_field(JpdotB_dtidpsi, \"JpdotB_dtidpsi\")\n   endif\nelse\n  call create_field(bdotgradp)",
+      "line": 88,
+      "match": "call create_field(JpdotB_dtidpsi, \"JpdotB_dtidpsi\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(JpdotB_dtidpsi, \"JpdotB_dtidpsi\")\n   endif\nelse\n  call create_field(bdotgradp)\n  call create_field(bdotgradt)\n  call create_field(torque_density_em)\n  call create_field(torque_density_ntv)",
+      "line": 91,
+      "match": "call create_field(bdotgradp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "   endif\nelse\n  call create_field(bdotgradp)\n  call create_field(bdotgradt)\n  call create_field(torque_density_em)\n  call create_field(torque_density_ntv)\n  call create_field(chord_mask)",
+      "line": 92,
+      "match": "call create_field(bdotgradt)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "else\n  call create_field(bdotgradp)\n  call create_field(bdotgradt)\n  call create_field(torque_density_em)\n  call create_field(torque_density_ntv)\n  call create_field(chord_mask)\n  call create_field(mag_reg)",
+      "line": 93,
+      "match": "call create_field(torque_density_em)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(bdotgradp)\n  call create_field(bdotgradt)\n  call create_field(torque_density_em)\n  call create_field(torque_density_ntv)\n  call create_field(chord_mask)\n  call create_field(mag_reg)\n  call create_field(ef_r)",
+      "line": 94,
+      "match": "call create_field(torque_density_ntv)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(bdotgradt)\n  call create_field(torque_density_em)\n  call create_field(torque_density_ntv)\n  call create_field(chord_mask)\n  call create_field(mag_reg)\n  call create_field(ef_r)\n  call create_field(ef_phi)",
+      "line": 95,
+      "match": "call create_field(chord_mask)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(torque_density_em)\n  call create_field(torque_density_ntv)\n  call create_field(chord_mask)\n  call create_field(mag_reg)\n  call create_field(ef_r)\n  call create_field(ef_phi)\n  call create_field(ef_z)",
+      "line": 96,
+      "match": "call create_field(mag_reg)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(torque_density_ntv)\n  call create_field(chord_mask)\n  call create_field(mag_reg)\n  call create_field(ef_r)\n  call create_field(ef_phi)\n  call create_field(ef_z)\n  call create_field(ef_par)",
+      "line": 97,
+      "match": "call create_field(ef_r)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(chord_mask)\n  call create_field(mag_reg)\n  call create_field(ef_r)\n  call create_field(ef_phi)\n  call create_field(ef_z)\n  call create_field(ef_par)\n  call create_field(eta_j)",
+      "line": 98,
+      "match": "call create_field(ef_phi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(mag_reg)\n  call create_field(ef_r)\n  call create_field(ef_phi)\n  call create_field(ef_z)\n  call create_field(ef_par)\n  call create_field(eta_j)\n  call create_field(mesh_zone)",
+      "line": 99,
+      "match": "call create_field(ef_z)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_r)\n  call create_field(ef_phi)\n  call create_field(ef_z)\n  call create_field(ef_par)\n  call create_field(eta_j)\n  call create_field(mesh_zone)\n  call create_field(z_effective)",
+      "line": 100,
+      "match": "call create_field(ef_par)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_phi)\n  call create_field(ef_z)\n  call create_field(ef_par)\n  call create_field(eta_j)\n  call create_field(mesh_zone)\n  call create_field(z_effective)\n  if(ikprad.ne.0) call create_field(kprad_totden)",
+      "line": 101,
+      "match": "call create_field(eta_j)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_z)\n  call create_field(ef_par)\n  call create_field(eta_j)\n  call create_field(mesh_zone)\n  call create_field(z_effective)\n  if(ikprad.ne.0) call create_field(kprad_totden)\n  if(jadv.eq.0) then",
+      "line": 102,
+      "match": "call create_field(mesh_zone)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ef_par)\n  call create_field(eta_j)\n  call create_field(mesh_zone)\n  call create_field(z_effective)\n  if(ikprad.ne.0) call create_field(kprad_totden)\n  if(jadv.eq.0) then\n     call create_field(psidot)",
+      "line": 103,
+      "match": "call create_field(z_effective)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(eta_j)\n  call create_field(mesh_zone)\n  call create_field(z_effective)\n  if(ikprad.ne.0) call create_field(kprad_totden)\n  if(jadv.eq.0) then\n     call create_field(psidot)\n     call create_field(veldif)",
+      "line": 104,
+      "match": "if(ikprad.ne.0) call create_field(kprad_totden)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(z_effective)\n  if(ikprad.ne.0) call create_field(kprad_totden)\n  if(jadv.eq.0) then\n     call create_field(psidot)\n     call create_field(veldif)\n     call create_field(eta_jdb)\n     call create_field(bdgp)",
+      "line": 106,
+      "match": "call create_field(psidot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(ikprad.ne.0) call create_field(kprad_totden)\n  if(jadv.eq.0) then\n     call create_field(psidot)\n     call create_field(veldif)\n     call create_field(eta_jdb)\n     call create_field(bdgp)\n     call create_field(vlbdgp)",
+      "line": 107,
+      "match": "call create_field(veldif)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(jadv.eq.0) then\n     call create_field(psidot)\n     call create_field(veldif)\n     call create_field(eta_jdb)\n     call create_field(bdgp)\n     call create_field(vlbdgp)\n  endif",
+      "line": 108,
+      "match": "call create_field(eta_jdb)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(psidot)\n     call create_field(veldif)\n     call create_field(eta_jdb)\n     call create_field(bdgp)\n     call create_field(vlbdgp)\n  endif\n  if(itemp_plot.eq.1) then",
+      "line": 109,
+      "match": "call create_field(bdgp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(veldif)\n     call create_field(eta_jdb)\n     call create_field(bdgp)\n     call create_field(vlbdgp)\n  endif\n  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt)",
+      "line": 110,
+      "match": "call create_field(vlbdgp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(vlbdgp)\n  endif\n  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt)\n     call create_field(adv1)\n     call create_field(adv2)\n     call create_field(adv3)",
+      "line": 113,
+      "match": "call create_field(vdotgradt)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  endif\n  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt)\n     call create_field(adv1)\n     call create_field(adv2)\n     call create_field(adv3)\n     call create_field(deldotq_perp)",
+      "line": 114,
+      "match": "call create_field(adv1)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(itemp_plot.eq.1) then\n     call create_field(vdotgradt)\n     call create_field(adv1)\n     call create_field(adv2)\n     call create_field(adv3)\n     call create_field(deldotq_perp)\n     call create_field(deldotq_par)",
+      "line": 115,
+      "match": "call create_field(adv2)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(vdotgradt)\n     call create_field(adv1)\n     call create_field(adv2)\n     call create_field(adv3)\n     call create_field(deldotq_perp)\n     call create_field(deldotq_par)\n     call create_field(eta_jsq)",
+      "line": 116,
+      "match": "call create_field(adv3)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(adv1)\n     call create_field(adv2)\n     call create_field(adv3)\n     call create_field(deldotq_perp)\n     call create_field(deldotq_par)\n     call create_field(eta_jsq)\n  call create_field(pot2_field)",
+      "line": 117,
+      "match": "call create_field(deldotq_perp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(adv2)\n     call create_field(adv3)\n     call create_field(deldotq_perp)\n     call create_field(deldotq_par)\n     call create_field(eta_jsq)\n  call create_field(pot2_field)\n     call create_field(vpar_field)",
+      "line": 118,
+      "match": "call create_field(deldotq_par)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(adv3)\n     call create_field(deldotq_perp)\n     call create_field(deldotq_par)\n     call create_field(eta_jsq)\n  call create_field(pot2_field)\n     call create_field(vpar_field)\n     call create_field(f1vplot)",
+      "line": 119,
+      "match": "call create_field(eta_jsq)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(deldotq_perp)\n     call create_field(deldotq_par)\n     call create_field(eta_jsq)\n  call create_field(pot2_field)\n     call create_field(vpar_field)\n     call create_field(f1vplot)\n     call create_field(f1eplot)",
+      "line": 120,
+      "match": "call create_field(pot2_field)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(deldotq_par)\n     call create_field(eta_jsq)\n  call create_field(pot2_field)\n     call create_field(vpar_field)\n     call create_field(f1vplot)\n     call create_field(f1eplot)\n     call create_field(f2vplot)",
+      "line": 121,
+      "match": "call create_field(vpar_field)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(eta_jsq)\n  call create_field(pot2_field)\n     call create_field(vpar_field)\n     call create_field(f1vplot)\n     call create_field(f1eplot)\n     call create_field(f2vplot)\n     call create_field(f2eplot)",
+      "line": 122,
+      "match": "call create_field(f1vplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(pot2_field)\n     call create_field(vpar_field)\n     call create_field(f1vplot)\n     call create_field(f1eplot)\n     call create_field(f2vplot)\n     call create_field(f2eplot)\n     call create_field(f3vplot)",
+      "line": 123,
+      "match": "call create_field(f1eplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(vpar_field)\n     call create_field(f1vplot)\n     call create_field(f1eplot)\n     call create_field(f2vplot)\n     call create_field(f2eplot)\n     call create_field(f3vplot)\n     call create_field(f3eplot)",
+      "line": 124,
+      "match": "call create_field(f2vplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f1vplot)\n     call create_field(f1eplot)\n     call create_field(f2vplot)\n     call create_field(f2eplot)\n     call create_field(f3vplot)\n     call create_field(f3eplot)\n     call create_field(jdbobs)",
+      "line": 125,
+      "match": "call create_field(f2eplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f1eplot)\n     call create_field(f2vplot)\n     call create_field(f2eplot)\n     call create_field(f3vplot)\n     call create_field(f3eplot)\n     call create_field(jdbobs)\n  endif",
+      "line": 126,
+      "match": "call create_field(f3vplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f2vplot)\n     call create_field(f2eplot)\n     call create_field(f3vplot)\n     call create_field(f3eplot)\n     call create_field(jdbobs)\n  endif\n  if(ibootstrap.ne.0) then",
+      "line": 127,
+      "match": "call create_field(f3eplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(f2eplot)\n     call create_field(f3vplot)\n     call create_field(f3eplot)\n     call create_field(jdbobs)\n  endif\n  if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r)",
+      "line": 128,
+      "match": "call create_field(jdbobs)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call create_field(jdbobs)\n  endif\n  if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r)\n    call create_field(Jp_BS_z)\n    call create_field(Jp_BS_phi)\n    call create_field(JpdotB)",
+      "line": 131,
+      "match": "call create_field(Jp_BS_r)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  endif\n  if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r)\n    call create_field(Jp_BS_z)\n    call create_field(Jp_BS_phi)\n    call create_field(JpdotB)\n    call create_field(JpdotB_dndpsi)",
+      "line": 132,
+      "match": "call create_field(Jp_BS_z)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(ibootstrap.ne.0) then\n    call create_field(Jp_BS_r)\n    call create_field(Jp_BS_z)\n    call create_field(Jp_BS_phi)\n    call create_field(JpdotB)\n    call create_field(JpdotB_dndpsi)\n    call create_field(JpdotB_dtedpsi)",
+      "line": 133,
+      "match": "call create_field(Jp_BS_phi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(Jp_BS_r)\n    call create_field(Jp_BS_z)\n    call create_field(Jp_BS_phi)\n    call create_field(JpdotB)\n    call create_field(JpdotB_dndpsi)\n    call create_field(JpdotB_dtedpsi)\n    call create_field(JpdotB_dtidpsi)",
+      "line": 134,
+      "match": "call create_field(JpdotB)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(Jp_BS_z)\n    call create_field(Jp_BS_phi)\n    call create_field(JpdotB)\n    call create_field(JpdotB_dndpsi)\n    call create_field(JpdotB_dtedpsi)\n    call create_field(JpdotB_dtidpsi)\n  endif",
+      "line": 135,
+      "match": "call create_field(JpdotB_dndpsi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(Jp_BS_phi)\n    call create_field(JpdotB)\n    call create_field(JpdotB_dndpsi)\n    call create_field(JpdotB_dtedpsi)\n    call create_field(JpdotB_dtidpsi)\n  endif\nendif",
+      "line": 136,
+      "match": "call create_field(JpdotB_dtedpsi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call create_field(JpdotB)\n    call create_field(JpdotB_dndpsi)\n    call create_field(JpdotB_dtedpsi)\n    call create_field(JpdotB_dtidpsi)\n  endif\nendif\n  initialized = .true.",
+      "line": 137,
+      "match": "call create_field(JpdotB_dtidpsi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  implicit none\n\n  if(.not.initialized) return\n  call destroy_field(bdotgradp)\n  call destroy_field(bdotgradt)\n  call destroy_field(torque_density_em)\n  call destroy_field(torque_density_ntv)",
+      "line": 149,
+      "match": "call destroy_field(bdotgradp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\n  if(.not.initialized) return\n  call destroy_field(bdotgradp)\n  call destroy_field(bdotgradt)\n  call destroy_field(torque_density_em)\n  call destroy_field(torque_density_ntv)\n  call destroy_field(chord_mask)",
+      "line": 150,
+      "match": "call destroy_field(bdotgradt)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(.not.initialized) return\n  call destroy_field(bdotgradp)\n  call destroy_field(bdotgradt)\n  call destroy_field(torque_density_em)\n  call destroy_field(torque_density_ntv)\n  call destroy_field(chord_mask)\n  call destroy_field(mag_reg)",
+      "line": 151,
+      "match": "call destroy_field(torque_density_em)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(bdotgradp)\n  call destroy_field(bdotgradt)\n  call destroy_field(torque_density_em)\n  call destroy_field(torque_density_ntv)\n  call destroy_field(chord_mask)\n  call destroy_field(mag_reg)\n  call destroy_field(ef_r)",
+      "line": 152,
+      "match": "call destroy_field(torque_density_ntv)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(bdotgradt)\n  call destroy_field(torque_density_em)\n  call destroy_field(torque_density_ntv)\n  call destroy_field(chord_mask)\n  call destroy_field(mag_reg)\n  call destroy_field(ef_r)\n  call destroy_field(ef_phi)",
+      "line": 153,
+      "match": "call destroy_field(chord_mask)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(torque_density_em)\n  call destroy_field(torque_density_ntv)\n  call destroy_field(chord_mask)\n  call destroy_field(mag_reg)\n  call destroy_field(ef_r)\n  call destroy_field(ef_phi)\n  call destroy_field(ef_z)",
+      "line": 154,
+      "match": "call destroy_field(mag_reg)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(torque_density_ntv)\n  call destroy_field(chord_mask)\n  call destroy_field(mag_reg)\n  call destroy_field(ef_r)\n  call destroy_field(ef_phi)\n  call destroy_field(ef_z)\n  call destroy_field(ef_par)",
+      "line": 155,
+      "match": "call destroy_field(ef_r)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(chord_mask)\n  call destroy_field(mag_reg)\n  call destroy_field(ef_r)\n  call destroy_field(ef_phi)\n  call destroy_field(ef_z)\n  call destroy_field(ef_par)\n  call destroy_field(eta_j)",
+      "line": 156,
+      "match": "call destroy_field(ef_phi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(mag_reg)\n  call destroy_field(ef_r)\n  call destroy_field(ef_phi)\n  call destroy_field(ef_z)\n  call destroy_field(ef_par)\n  call destroy_field(eta_j)\n  call destroy_field(mesh_zone)",
+      "line": 157,
+      "match": "call destroy_field(ef_z)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(ef_r)\n  call destroy_field(ef_phi)\n  call destroy_field(ef_z)\n  call destroy_field(ef_par)\n  call destroy_field(eta_j)\n  call destroy_field(mesh_zone)\n  call destroy_field(z_effective)",
+      "line": 158,
+      "match": "call destroy_field(ef_par)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(ef_phi)\n  call destroy_field(ef_z)\n  call destroy_field(ef_par)\n  call destroy_field(eta_j)\n  call destroy_field(mesh_zone)\n  call destroy_field(z_effective)\n  if(ikprad.ne.0) call destroy_field(kprad_totden)",
+      "line": 159,
+      "match": "call destroy_field(eta_j)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(ef_z)\n  call destroy_field(ef_par)\n  call destroy_field(eta_j)\n  call destroy_field(mesh_zone)\n  call destroy_field(z_effective)\n  if(ikprad.ne.0) call destroy_field(kprad_totden)\n  if(jadv.eq.0) then",
+      "line": 160,
+      "match": "call destroy_field(mesh_zone)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(ef_par)\n  call destroy_field(eta_j)\n  call destroy_field(mesh_zone)\n  call destroy_field(z_effective)\n  if(ikprad.ne.0) call destroy_field(kprad_totden)\n  if(jadv.eq.0) then\n     call destroy_field(psidot)",
+      "line": 161,
+      "match": "call destroy_field(z_effective)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(eta_j)\n  call destroy_field(mesh_zone)\n  call destroy_field(z_effective)\n  if(ikprad.ne.0) call destroy_field(kprad_totden)\n  if(jadv.eq.0) then\n     call destroy_field(psidot)\n     call destroy_field(veldif)",
+      "line": 162,
+      "match": "if(ikprad.ne.0) call destroy_field(kprad_totden)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call destroy_field(z_effective)\n  if(ikprad.ne.0) call destroy_field(kprad_totden)\n  if(jadv.eq.0) then\n     call destroy_field(psidot)\n     call destroy_field(veldif)\n     call destroy_field(eta_jdb)\n     call destroy_field(bdgp)",
+      "line": 164,
+      "match": "call destroy_field(psidot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(ikprad.ne.0) call destroy_field(kprad_totden)\n  if(jadv.eq.0) then\n     call destroy_field(psidot)\n     call destroy_field(veldif)\n     call destroy_field(eta_jdb)\n     call destroy_field(bdgp)\n     call destroy_field(vlbdgp)",
+      "line": 165,
+      "match": "call destroy_field(veldif)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(jadv.eq.0) then\n     call destroy_field(psidot)\n     call destroy_field(veldif)\n     call destroy_field(eta_jdb)\n     call destroy_field(bdgp)\n     call destroy_field(vlbdgp)\n  endif",
+      "line": 166,
+      "match": "call destroy_field(eta_jdb)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(psidot)\n     call destroy_field(veldif)\n     call destroy_field(eta_jdb)\n     call destroy_field(bdgp)\n     call destroy_field(vlbdgp)\n  endif\n  if(itemp_plot.eq.1) then",
+      "line": 167,
+      "match": "call destroy_field(bdgp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(veldif)\n     call destroy_field(eta_jdb)\n     call destroy_field(bdgp)\n     call destroy_field(vlbdgp)\n  endif\n  if(itemp_plot.eq.1) then\n     call destroy_field(vdotgradt)",
+      "line": 168,
+      "match": "call destroy_field(vlbdgp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(vlbdgp)\n  endif\n  if(itemp_plot.eq.1) then\n     call destroy_field(vdotgradt)\n     call destroy_field(adv1)\n     call destroy_field(adv2)\n     call destroy_field(adv3)",
+      "line": 171,
+      "match": "call destroy_field(vdotgradt)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  endif\n  if(itemp_plot.eq.1) then\n     call destroy_field(vdotgradt)\n     call destroy_field(adv1)\n     call destroy_field(adv2)\n     call destroy_field(adv3)\n     call destroy_field(deldotq_perp)",
+      "line": 172,
+      "match": "call destroy_field(adv1)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(itemp_plot.eq.1) then\n     call destroy_field(vdotgradt)\n     call destroy_field(adv1)\n     call destroy_field(adv2)\n     call destroy_field(adv3)\n     call destroy_field(deldotq_perp)\n     call destroy_field(deldotq_par)",
+      "line": 173,
+      "match": "call destroy_field(adv2)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(vdotgradt)\n     call destroy_field(adv1)\n     call destroy_field(adv2)\n     call destroy_field(adv3)\n     call destroy_field(deldotq_perp)\n     call destroy_field(deldotq_par)\n     call destroy_field(eta_jsq)",
+      "line": 174,
+      "match": "call destroy_field(adv3)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(adv1)\n     call destroy_field(adv2)\n     call destroy_field(adv3)\n     call destroy_field(deldotq_perp)\n     call destroy_field(deldotq_par)\n     call destroy_field(eta_jsq)\n     call destroy_field(pot2_field)",
+      "line": 175,
+      "match": "call destroy_field(deldotq_perp)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(adv2)\n     call destroy_field(adv3)\n     call destroy_field(deldotq_perp)\n     call destroy_field(deldotq_par)\n     call destroy_field(eta_jsq)\n     call destroy_field(pot2_field)\n     call destroy_field(vpar_field)",
+      "line": 176,
+      "match": "call destroy_field(deldotq_par)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(adv3)\n     call destroy_field(deldotq_perp)\n     call destroy_field(deldotq_par)\n     call destroy_field(eta_jsq)\n     call destroy_field(pot2_field)\n     call destroy_field(vpar_field)\n     call destroy_field(f1vplot)",
+      "line": 177,
+      "match": "call destroy_field(eta_jsq)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(deldotq_perp)\n     call destroy_field(deldotq_par)\n     call destroy_field(eta_jsq)\n     call destroy_field(pot2_field)\n     call destroy_field(vpar_field)\n     call destroy_field(f1vplot)\n     call destroy_field(f1eplot)",
+      "line": 178,
+      "match": "call destroy_field(pot2_field)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(deldotq_par)\n     call destroy_field(eta_jsq)\n     call destroy_field(pot2_field)\n     call destroy_field(vpar_field)\n     call destroy_field(f1vplot)\n     call destroy_field(f1eplot)\n     call destroy_field(f2vplot)",
+      "line": 179,
+      "match": "call destroy_field(vpar_field)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(eta_jsq)\n     call destroy_field(pot2_field)\n     call destroy_field(vpar_field)\n     call destroy_field(f1vplot)\n     call destroy_field(f1eplot)\n     call destroy_field(f2vplot)\n     call destroy_field(f2eplot)",
+      "line": 180,
+      "match": "call destroy_field(f1vplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(pot2_field)\n     call destroy_field(vpar_field)\n     call destroy_field(f1vplot)\n     call destroy_field(f1eplot)\n     call destroy_field(f2vplot)\n     call destroy_field(f2eplot)\n     call destroy_field(f3vplot)",
+      "line": 181,
+      "match": "call destroy_field(f1eplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(vpar_field)\n     call destroy_field(f1vplot)\n     call destroy_field(f1eplot)\n     call destroy_field(f2vplot)\n     call destroy_field(f2eplot)\n     call destroy_field(f3vplot)\n     call destroy_field(f3eplot)",
+      "line": 182,
+      "match": "call destroy_field(f2vplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(f1vplot)\n     call destroy_field(f1eplot)\n     call destroy_field(f2vplot)\n     call destroy_field(f2eplot)\n     call destroy_field(f3vplot)\n     call destroy_field(f3eplot)\n     call destroy_field(jdbobs)",
+      "line": 183,
+      "match": "call destroy_field(f2eplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(f1eplot)\n     call destroy_field(f2vplot)\n     call destroy_field(f2eplot)\n     call destroy_field(f3vplot)\n     call destroy_field(f3eplot)\n     call destroy_field(jdbobs)\n  endif",
+      "line": 184,
+      "match": "call destroy_field(f3vplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(f2vplot)\n     call destroy_field(f2eplot)\n     call destroy_field(f3vplot)\n     call destroy_field(f3eplot)\n     call destroy_field(jdbobs)\n  endif\n  if(ibootstrap.ne.0) then",
+      "line": 185,
+      "match": "call destroy_field(f3eplot)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(f2eplot)\n     call destroy_field(f3vplot)\n     call destroy_field(f3eplot)\n     call destroy_field(jdbobs)\n  endif\n  if(ibootstrap.ne.0) then\n    call destroy_field(Jp_BS_r)",
+      "line": 186,
+      "match": "call destroy_field(jdbobs)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "     call destroy_field(jdbobs)\n  endif\n  if(ibootstrap.ne.0) then\n    call destroy_field(Jp_BS_r)\n    call destroy_field(Jp_BS_z)\n    call destroy_field(Jp_BS_phi)\n    call destroy_field(JpdotB)",
+      "line": 189,
+      "match": "call destroy_field(Jp_BS_r)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  endif\n  if(ibootstrap.ne.0) then\n    call destroy_field(Jp_BS_r)\n    call destroy_field(Jp_BS_z)\n    call destroy_field(Jp_BS_phi)\n    call destroy_field(JpdotB)\n    call destroy_field(JpdotB_dndpsi)",
+      "line": 190,
+      "match": "call destroy_field(Jp_BS_z)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(ibootstrap.ne.0) then\n    call destroy_field(Jp_BS_r)\n    call destroy_field(Jp_BS_z)\n    call destroy_field(Jp_BS_phi)\n    call destroy_field(JpdotB)\n    call destroy_field(JpdotB_dndpsi)\n    call destroy_field(JpdotB_dtidpsi)",
+      "line": 191,
+      "match": "call destroy_field(Jp_BS_phi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call destroy_field(Jp_BS_r)\n    call destroy_field(Jp_BS_z)\n    call destroy_field(Jp_BS_phi)\n    call destroy_field(JpdotB)\n    call destroy_field(JpdotB_dndpsi)\n    call destroy_field(JpdotB_dtidpsi)\n    call destroy_field(JpdotB_dtedpsi)",
+      "line": 192,
+      "match": "call destroy_field(JpdotB)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call destroy_field(Jp_BS_z)\n    call destroy_field(Jp_BS_phi)\n    call destroy_field(JpdotB)\n    call destroy_field(JpdotB_dndpsi)\n    call destroy_field(JpdotB_dtidpsi)\n    call destroy_field(JpdotB_dtedpsi)\n  endif",
+      "line": 193,
+      "match": "call destroy_field(JpdotB_dndpsi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call destroy_field(Jp_BS_phi)\n    call destroy_field(JpdotB)\n    call destroy_field(JpdotB_dndpsi)\n    call destroy_field(JpdotB_dtidpsi)\n    call destroy_field(JpdotB_dtedpsi)\n  endif\nend subroutine destroy_auxiliary_fields",
+      "line": 194,
+      "match": "call destroy_field(JpdotB_dtidpsi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "    call destroy_field(JpdotB)\n    call destroy_field(JpdotB_dndpsi)\n    call destroy_field(JpdotB_dtidpsi)\n    call destroy_field(JpdotB_dtedpsi)\n  endif\nend subroutine destroy_auxiliary_fields\n  ",
+      "line": 195,
+      "match": "call destroy_field(JpdotB_dtedpsi)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Calculating pressures'\n\nif (ispradapt .eq. 1) then \n  call create_field(pe_f, \" pe_f\")\n  call create_field(p_f, \"p_f\")\nelse\n  call create_field(pe_f)",
+      "line": 225,
+      "match": "call create_field(pe_f, \" pe_f\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\nif (ispradapt .eq. 1) then \n  call create_field(pe_f, \" pe_f\")\n  call create_field(p_f, \"p_f\")\nelse\n  call create_field(pe_f)\n  call create_field(p_f)",
+      "line": 226,
+      "match": "call create_field(p_f, \"p_f\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(pe_f, \" pe_f\")\n  call create_field(p_f, \"p_f\")\nelse\n  call create_field(pe_f)\n  call create_field(p_f)\nendif\n",
+      "line": 228,
+      "match": "call create_field(pe_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(p_f, \"p_f\")\nelse\n  call create_field(pe_f)\n  call create_field(p_f)\nendif\n\n  pe_f = 0.",
+      "line": 229,
+      "match": "call create_field(p_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  pe = pe_f\n  p = p_f\n\n  call destroy_field(pe_f)\n  call destroy_field(p_f)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &",
+      "line": 313,
+      "match": "call destroy_field(pe_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  p = p_f\n\n  call destroy_field(pe_f)\n  call destroy_field(p_f)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, ' Done calculating pressures'",
+      "line": 314,
+      "match": "call destroy_field(p_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Calculating Temperatures'\n\nif (ispradapt .eq. 1) then\n  call create_field(te_f, \"te_f\")\n  call create_field(ti_f, \"ti_f\")\nelse\n  call create_field(te_f)",
+      "line": 348,
+      "match": "call create_field(te_f, \"te_f\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\nif (ispradapt .eq. 1) then\n  call create_field(te_f, \"te_f\")\n  call create_field(ti_f, \"ti_f\")\nelse\n  call create_field(te_f)\n  call create_field(ti_f)",
+      "line": 349,
+      "match": "call create_field(ti_f, \"ti_f\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(te_f, \"te_f\")\n  call create_field(ti_f, \"ti_f\")\nelse\n  call create_field(te_f)\n  call create_field(ti_f)\nendif\n  te_f = 0.",
+      "line": 351,
+      "match": "call create_field(te_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  call create_field(ti_f, \"ti_f\")\nelse\n  call create_field(te_f)\n  call create_field(ti_f)\nendif\n  te_f = 0.\n  ti_f = 0.",
+      "line": 352,
+      "match": "call create_field(ti_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\n  call newvar_solve(te_f%vec, mass_mat_lhs)\n  te = te_f\n  call destroy_field(te_f)\n\n  call newvar_solve(ti_f%vec, mass_mat_lhs)\n  ti = ti_f",
+      "line": 450,
+      "match": "call destroy_field(te_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\n  call newvar_solve(ti_f%vec, mass_mat_lhs)\n  ti = ti_f\n  call destroy_field(ti_f)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, ' Done calculating temperatures'",
+      "line": 454,
+      "match": "call destroy_field(ti_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  end if\n \nif (ispradapt .eq. 1) then\n  call create_field(ne_f, \"ne_f\")\nelse\n  call create_field(ne_f)\nendif",
+      "line": 495,
+      "match": "call create_field(ne_f, \"ne_f\")",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "if (ispradapt .eq. 1) then\n  call create_field(ne_f, \"ne_f\")\nelse\n  call create_field(ne_f)\nendif\n  ne_f = 0.\n",
+      "line": 497,
+      "match": "call create_field(ne_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "\n  ne = ne_f\n\n  call destroy_field(ne_f)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, ' Done calculating electron density'",
+      "line": 540,
+      "match": "call destroy_field(ne_f)",
+      "path": "unstructured/auxiliary_fields.f90"
+    },
+    {
+      "context": "  integer, dimension(MAX_PTS) :: imr\n  vectype, dimension(dofs_per_element) :: dofs\n\n  call create_field(psi_vec)\n  call create_field(phi_vec)\n\n  psi_vec = 0.",
+      "line": 149,
+      "match": "call create_field(psi_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  vectype, dimension(dofs_per_element) :: dofs\n\n  call create_field(psi_vec)\n  call create_field(phi_vec)\n\n  psi_vec = 0.\n  phi_vec = 0.",
+      "line": 150,
+      "match": "call create_field(phi_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  call newvar_solve(phi_vec%vec,mass_mat_lhs)\n  u_field(1) = phi_vec\n\n  call destroy_field(psi_vec)\n  call destroy_field(phi_vec)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &",
+      "line": 222,
+      "match": "call destroy_field(psi_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  u_field(1) = phi_vec\n\n  call destroy_field(psi_vec)\n  call destroy_field(phi_vec)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, 'Done defining initial perturbations'",
+      "line": 223,
+      "match": "call destroy_field(phi_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  end if\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Defining density equilibrium'\n  call create_field(den_vec)\n  \n  def_fields = FIELD_PSI + FIELD_N + FIELD_P + FIELD_TE\n",
+      "line": 266,
+      "match": "call create_field(den_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  call newvar_solve(den_vec%vec,mass_mat_lhs)\n  den_field(0) = den_vec\n\n  call destroy_field(den_vec)\n\nend subroutine den_eq\n",
+      "line": 390,
+      "match": "call destroy_field(den_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  if(ipellet.ge.0) return\n  if(ipellet_z.ne.0 .and. all(pellet_mix.eq.0.)) return\n\n  call create_field(den_vec)\n  den_vec = 0.\n\n  numelms = local_elements()",
+      "line": 414,
+      "match": "call create_field(den_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  call newvar_solve(den_vec%vec,mass_mat_lhs)\n  den_field(1) = den_vec\n\n  call destroy_field(den_vec)\n\nend subroutine den_per\n",
+      "line": 446,
+      "match": "call destroy_field(den_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  logical :: file_exists\n  \n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Defining density equilibrium'\n  call create_field(den_vec)\n\n  def_fields = FIELD_PSI + FIELD_N + FIELD_P + FIELD_TE\n",
+      "line": 481,
+      "match": "call create_field(den_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  endif\n  pe_field(0) = p_field(0)\n  call mult(pe_field(0), pefac)\n  call destroy_field(den_vec)\n\nend subroutine kinetic_eq\n#endif     ",
+      "line": 704,
+      "match": "call destroy_field(den_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  integer :: ierr\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Defining RE equilibrium'\n  call create_field(nre_vec)\n\n  def_fields = FIELD_PSI + FIELD_I + FIELD_B2I + FIELD_RE\n",
+      "line": 731,
+      "match": "call create_field(nre_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  call newvar_solve(nre_vec%vec,mass_mat_lhs)\n  nre_field(0) = nre_vec\n\n  call destroy_field(nre_vec)\n\nend subroutine nre_eq\n",
+      "line": 764,
+      "match": "call destroy_field(nre_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  real, dimension(MAX_PTS) :: n, p\n  real,dimension(MAX_PTS) :: rr,mask,nr_f1,nr_f2\n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Defining RE perturbation'\n  call create_field(nre_vec)\n  nre_vec = 0.\n\n  def_fields = FIELD_PSI + FIELD_RE",
+      "line": 786,
+      "match": "call create_field(nre_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "  call newvar_solve(nre_vec%vec,mass_mat_lhs)\n  nre_field(1) = nre_vec\n\n  call destroy_field(nre_vec)\n\nend subroutine nre_per\n",
+      "line": 809,
+      "match": "call destroy_field(nre_vec)",
+      "path": "unstructured/init_common.f90"
+    },
+    {
+      "context": "\n   ierr = 0\n\n   call create_field(psi_vec)\n   psi_vec = 0.\n   \n   numelms = local_elements()",
+      "line": 189,
+      "match": "call create_field(psi_vec)",
+      "path": "unstructured/coils.f90"
+    },
+    {
+      "context": "    call newsolve(mass_mat_lhs%mat,psi_vec%vec,ierr)\n    call add(f, psi_vec)\n\n    call destroy_field(psi_vec)\n end subroutine field_from_coils\n\n!============================================================",
+      "line": 216,
+      "match": "call destroy_field(psi_vec)",
+      "path": "unstructured/coils.f90"
+    },
+    {
+      "context": "  use particles\n  use math\n  use m3dc1_omp\n  use restart_hdf5\n  use wall\n  use geometry \n  use neutral_beam",
+      "line": 23,
+      "match": "use restart_hdf5",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "  ! initialize output for HDF5 and C1ke\n  call initialize_output ()\n \n  select case (irestart)\n  case(0)\n     ! Initialize from routine\n",
+      "line": 224,
+      "match": "select case (irestart)",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave",
+      "line": 256,
+      "match": "call rdrestart_hdf5",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart",
+      "line": 266,
+      "match": "call rdrestart_hdf5",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n",
+      "line": 271,
+      "match": "if(irestart.ne.0) then",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "\n  ! output simulation parameters\n  ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  if(irestart.eq.0) then\n     if(myrank.eq.0 .and. iprint.ge.1) &\n          print *, \" Writing simulation parameters\"\n     ",
+      "line": 287,
+      "match": "if(irestart.eq.0) then",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "  if (iadapt .eq. 4) call adapt_by_error\n#endif\n\n  if(irestart.eq.0  .or. iadapt.gt.0) then\n     tflux0 = tflux\n  endif\n",
+      "line": 342,
+      "match": "if(irestart.eq.0  .or. iadapt.gt.0) then",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "        if(ntime.eq.ntime0) call lcfs(psi_field(0))\n     else\nif (ispradapt .eq. 1) then\n        call create_field(psi_temp, \"psi_temp\")\nelse\n        call create_field(psi_temp)\nendif",
+      "line": 723,
+      "match": "call create_field(psi_temp, \"psi_temp\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "if (ispradapt .eq. 1) then\n        call create_field(psi_temp, \"psi_temp\")\nelse\n        call create_field(psi_temp)\nendif\n        psi_temp = psi_field(0)\n        call add_field_to_field(psi_temp, psi_field(1))",
+      "line": 725,
+      "match": "call create_field(psi_temp)",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "        psi_temp = psi_field(0)\n        call add_field_to_field(psi_temp, psi_field(1))\n        call lcfs(psi_temp)\n        call destroy_field(psi_temp)\n     endif\n  else\n     call lcfs(psi_field(1))",
+      "line": 730,
+      "match": "call destroy_field(psi_temp)",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "        endif\n     else\nif (ispradapt .eq. 1) then\n        call create_field(te_temp, \"te_temp\")\nelse\n        call create_field(te_temp)\nendif",
+      "line": 783,
+      "match": "call create_field(te_temp, \"te_temp\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "if (ispradapt .eq. 1) then\n        call create_field(te_temp, \"te_temp\")\nelse\n        call create_field(te_temp)\nendif\n        te_temp = te_field(0)\n        call add_field_to_field(te_temp, te_field(1))",
+      "line": 785,
+      "match": "call create_field(te_temp)",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "        else\n           call te_max2(xmag0,zmag0,te_temp,temax,0,ier)\n        endif\n        call destroy_field(te_temp)\n     endif\n  else\n     if(ifixed_temax .eq. 0) then",
+      "line": 799,
+      "match": "call destroy_field(te_temp)",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     if(i3d.eq.1 .and. ilin.eq.1 .and. numvar.ge.2) then\n        if(myrank.eq.0 .and. iprint.ge.2) print *, \"  fp\", ilin\n        ! solve fp = df/dphi when restarting absent fp \n        if(irestart_fp.eq.0 .and. ntime.eq.ntime0) then \n           call solve_newvar1(mass_mat_lhs,bfp_field(ilin),dp_mat_rhs_bfp, &\n               bf_field(ilin))\n           if(extsubtract.eq.1) then ! also, external bfp",
+      "line": 874,
+      "match": "if(irestart_fp.eq.0 .and. ntime.eq.ntime0) then",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     call mark_vector_for_solutiontransfer(field_vec_pre)\n\n  ! Auxiliary Variables\n     call create_field(jphi_field, \"jphi\")\n     call create_field(resistivity_field, \"resistivity\")\n     call create_field(kappa_field, \"kappa\")\n     call create_field(kappar_field, \"kappar\")",
+      "line": 1353,
+      "match": "call create_field(jphi_field, \"jphi\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "\n  ! Auxiliary Variables\n     call create_field(jphi_field, \"jphi\")\n     call create_field(resistivity_field, \"resistivity\")\n     call create_field(kappa_field, \"kappa\")\n     call create_field(kappar_field, \"kappar\")\n     call create_field(denm_field, \"denm\")",
+      "line": 1354,
+      "match": "call create_field(resistivity_field, \"resistivity\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "  ! Auxiliary Variables\n     call create_field(jphi_field, \"jphi\")\n     call create_field(resistivity_field, \"resistivity\")\n     call create_field(kappa_field, \"kappa\")\n     call create_field(kappar_field, \"kappar\")\n     call create_field(denm_field, \"denm\")\n     call create_field(visc_field, \"visc\")",
+      "line": 1355,
+      "match": "call create_field(kappa_field, \"kappa\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     call create_field(jphi_field, \"jphi\")\n     call create_field(resistivity_field, \"resistivity\")\n     call create_field(kappa_field, \"kappa\")\n     call create_field(kappar_field, \"kappar\")\n     call create_field(denm_field, \"denm\")\n     call create_field(visc_field, \"visc\")\n     call create_field(visc_c_field, \"visc_c\")",
+      "line": 1356,
+      "match": "call create_field(kappar_field, \"kappar\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     call create_field(resistivity_field, \"resistivity\")\n     call create_field(kappa_field, \"kappa\")\n     call create_field(kappar_field, \"kappar\")\n     call create_field(denm_field, \"denm\")\n     call create_field(visc_field, \"visc\")\n     call create_field(visc_c_field, \"visc_c\")\n     if(ipforce.gt.0) call create_field(pforce_field, \"pforce\")",
+      "line": 1357,
+      "match": "call create_field(denm_field, \"denm\")",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     call create_field(kappa_field, \"kappa\")\n     call create_field(kappar_field, \"kappar\")\n     call create_field(denm_field, \"denm\")\n     call create_field(visc_field, \"visc\")\n     call create_field(visc_c_field, \"visc_c\")\n     if(ipforce.gt.0) call create_field(pforce_field, \"pforce\")\n     if(ipforce.gt.0) call create_field(pmach_field, \"pmach\")",
+      "line": 1358,
+      "match": "call create_field(visc_field, \"visc\")",
+      "path": "unstructured/newpar.f90"
+    }
+  ],
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST"
+}
