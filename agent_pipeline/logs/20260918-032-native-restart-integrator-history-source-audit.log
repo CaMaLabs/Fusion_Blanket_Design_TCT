@@ -1,0 +1,11 @@
+job_id=20260918-032-native-restart-integrator-history-source-audit
+started_utc=2026-09-18T17:55:14.301751Z
+head_before=05bc8605fb4ee83c2c37043f741f57a2816a4054
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_INTEGRATOR_HISTORY_SOURCE_AUDIT_SOURCE_NOT_FOUND",
+  "pipeline_failure": true,
+  "error": "/home/ubuntu/m3dc1 not found"
+}
+
+finished_utc=2026-09-18T17:55:14.334394Z
+return_code=1

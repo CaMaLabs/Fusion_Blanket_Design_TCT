@@ -1,0 +1,31 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.03169536590576172,
+  "error": null,
+  "finished_utc": "2026-09-18T17:55:14.334420Z",
+  "head_before": "05bc8605fb4ee83c2c37043f741f57a2816a4054",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-032-native-restart-integrator-history-source-audit.json",
+  "job_id": "20260918-032-native-restart-integrator-history-source-audit",
+  "log_path": "agent_pipeline/logs/20260918-032-native-restart-integrator-history-source-audit.log",
+  "log_sha256": "e668b0769f2ed97b16d79f70fe263453475f95ac6e3012587f873e01941a641a",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_integrator_history_source"
+  ],
+  "return_code": 1,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_integrator_history_source_audit.sh",
+  "runner_sha256": "c90932c62427ba238594bc62964fe0b2e1d536bd2cf071a94ca1e44cde8a3e34",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T17:55:14.301751Z",
+  "success": false,
+  "summary": {
+    "classification": "M3DC1_TCT_NATIVE_RESTART_INTEGRATOR_HISTORY_SOURCE_AUDIT_SOURCE_NOT_FOUND",
+    "error": "/home/ubuntu/m3dc1 not found",
+    "pipeline_failure": true
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_integrator_history_source/native_restart_integrator_history_source_summary.json",
+  "summary_sha256": "5cd77f69a34e8c8f389060e4982a949eeabe8f3e85bc79e1521fcfd0cff77d3c",
+  "timed_out": false
+}
