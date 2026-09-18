@@ -1,0 +1,133 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.26470470428466797,
+  "error": null,
+  "finished_utc": "2026-09-18T19:17:32.736191Z",
+  "head_before": "d1bd7de549386fbf8071e26990d0b00775b73431",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-033-native-restart-integrator-history-source-audit-repair.json",
+  "job_id": "20260918-033-native-restart-integrator-history-source-audit-repair",
+  "log_path": "agent_pipeline/logs/20260918-033-native-restart-integrator-history-source-audit-repair.log",
+  "log_sha256": "2981b82a693e18cf470e5e1f5930a51b25aedc82f5722315e8731118cce83d22",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_integrator_history_source_repair"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_integrator_history_source_audit_repair.sh",
+  "runner_sha256": "61edcf25b031023d40e7d5befcab889dc83b83b41364e39b1b1761e11fa26f46",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T19:17:32.468969Z",
+  "success": true,
+  "summary": {
+    "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_INTEGRATOR_HISTORY_CONTEXT_FOUND",
+    "files_scanned": 198,
+    "finished_utc": "2026-09-18T19:17:32.689648+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+    "parent_job_id": "20260918-032-native-restart-integrator-history-source-audit",
+    "pipeline_failure": false,
+    "repair_scope": "Correct stale native-source root from job 032 and repeat the same static source audit only.",
+    "restart_history_hits": [
+      {
+        "context": "       gbound\n\n  logical :: use_external_fields = .false.\n\n  ! magnetic diagnostics\n  real :: psimin            ! flux value at magnetic axis\n  real :: psilim,psilim2    ! flux at the limiter\n  real :: psibound          ! flux at the lcfs\n  logical :: is_diverted    ! whether plasma is diverted or not\n  real :: xnull, znull      ! coordinates of the limiting x-point\n  real :: xnull2, znull2    ! coordinates of the limiting x-point\n  real :: psinull, psinull2\n  integer :: mod_null_rs, mod_null_rs2  ! if 1, modify xnull,znull or xnull2,znull2 at restart\n  real :: temax, temax_readin      ! maximum temperature, reading in for ibootstrap=3\n\n  integer :: isolve_with_guess=0 ! (=0; use zero initial guess); (=1; use previous step value as non-zero initial guess)\n\n  ! PID controllers\n  type(pid_control), save :: i_control, n_control\n\n  integer :: ntime, ntime0\n\n  integer :: gamma_converged_flag, gamma_idx\n  real, allocatable :: gamma_buffer(:) \n",
+        "history_terms": [
+          "previous"
+        ],
+        "line": 539,
+        "path": "unstructured/M3Dmodules.f90",
+        "restart_line": "integer :: mod_null_rs, mod_null_rs2  ! if 1, modify xnull,znull or xnull2,znull2 at restart"
+      },
+      {
+        "context": "  ! ~~~~~~~~~~~~~~~~~~~~~~~~~~\n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Generating newvar matrices'\n  call create_newvar_matrices\n\n  call calc_wall_dist\n\n  ! Set initial conditions either from restart file\n  ! or from initialization routine\n  ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  ! initialize output for HDF5 and C1ke\n  call initialize_output ()\n \n  select case (irestart)\n  case(0)\n     ! Initialize from routine\n\n     version_in = -1\n     ptot = 0.\n     ntime = 0\n     time = 0.\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Defining initial conditions'\n     call initial_conditions\n\n     ! correct for left-handed coordinates",
+        "history_terms": [
+          "correct"
+        ],
+        "line": 224,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "select case (irestart)"
+      },
+      {
+        "context": "     endif\n\n     ! initialize feedback systems\n     i_control%err_i = 0.\n     i_control%err_p_old = 0.\n     n_control%err_i = 0.\n     n_control%err_p_old = 0.\n\n  case(1)\n!\n!....save timestep from input file (needed if not a variable timestep run)\n     dtsave = dt\n     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt",
+        "history_terms": [
+          "timestep"
+        ],
+        "line": 253,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "! Read restart file(s)"
+      },
+      {
+        "context": "     ! initialize feedback systems\n     i_control%err_i = 0.\n     i_control%err_p_old = 0.\n     n_control%err_i = 0.\n     n_control%err_p_old = 0.\n\n  case(1)\n!\n!....save timestep from input file (needed if not a variable timestep run)\n     dtsave = dt\n     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave",
+        "history_terms": [
+          "timestep"
+        ],
+        "line": 255,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'"
+      },
+      {
+        "context": "!\n!....save timestep from input file (needed if not a variable timestep run)\n     dtsave = dt\n     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n",
+        "history_terms": [
+          "timestep"
+        ],
+        "line": 262,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "!....read 2D real RL=1 restart file to start 2D complex COM=1 run"
+      },
+      {
+        "context": "!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n\n  ntime0 = ntime\n  vloop0 = vloop\n\n  ! zero-out scalar data\n  call reset_scalars\n\n  mag_probe_itri = 0",
+        "history_terms": [
+          "timestep"
+        ],
+        "line": 269,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "end select                     !  end of the branch on restart/no restart"
+      },
+      {
+        "context": "    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n\n  ntime0 = ntime\n  vloop0 = vloop\n\n  ! zero-out scalar data\n  call reset_scalars\n\n  mag_probe_itri = 0\n  flux_loop_itri = 0\n  if(itimer.eq.1) call reset_timings",
+        "history_terms": [
+          "timestep"
+        ],
+        "line": 271,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "if(irestart.ne.0) then"
+      },
+      {
+        "context": "    write(mesh_file_name,\"(A7,A)\") 'initial', 0\n    call m3dc1_mesh_write (mesh_file_name,0,0)\n  endif\n\n  !if (iadapt .eq. 1) then\n  if (mod (iadapt, 2) .eq. 1) then\n    if (iprint.ge.1 .and. myrank.eq.0) write(*,*) \"before adapt_by_psi:  psibound, psimin\", psibound, psimin\n    call adapt_by_psi\n  endif\n  if (iadapt .eq. 4) call adapt_by_error\n#endif\n\n  if(irestart.eq.0  .or. iadapt.gt.0) then\n     tflux0 = tflux\n  endif\n\n  ! mark the fields necessary for solution transfer\n  if (ispradapt .eq. 1) call marker\n  \n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Initializing timestep'\n  call initialize_timestep\n\n#ifdef USEPARTICLES\n  if (kinetic.eq.1) then\n     call particle_test",
+        "history_terms": [
+          "timestep"
+        ],
+        "line": 342,
+        "path": "unstructured/newpar.f90",
+        "restart_line": "if(irestart.eq.0  .or. iadapt.gt.0) then"
+      },
+      {
+        "context": "    end if\n    if(toroidal_period_in.ne.toroidal_period) then\n       if(myrank.eq.0) then\n          print *, 'Starting full torus calculation from one field period.'\n          print *, 'Previous data will be overwritten.'\n       end if\n       istartnew = 1\n       time = 0\n    end if\n\n    if (istartnew.eq.1) then\n       ntime = 0\n       irestart = 0\n       call hdf5_finalize(error)\n       call hdf5_initialize(.false., error)\n\n       if(eqsubtract.eq.0) then\n         ! move data to field0 so that equilibrium data is written correctly\n         field0_vec = field_vec\n         field_vec = 0.\n         nre_field(0) = nre_field(1)\n         nre_field(1) = 0.\n       endif\n       call init_perturbations\n       if(eqsubtract.eq.0) then",
+        "history_terms": [
+          "previous"
+        ],
+        "line": 332,
+        "path": "unstructured/restart_hdf5.f90",
+        "restart_line": "irestart = 0"
+      },
+      {
+        "context": "          type_id = H5T_NATIVE_DOUBLE\n       else\n          type_id = H5T_NATIVE_REAL\n       end if\n       call h5dcreate_f(parent_id, name, type_id, &\n            filespace, dset_id, error, p_id)\n       call h5pset_fill_value_f(p_id, type_id, 0., error)\n       call h5pclose_f(p_id, error)\n       call h5sclose_f(filespace, error)\n    else\n       call h5dopen_f(parent_id, name, dset_id, error)\n\n       if(irestart.ne.0  .and. version_in.lt.32) then\n\n          ! in older versions, N dimension can't change [maxdims(1) was NMAX]\n          ! reset dims to have same NMAX dimension as original\n          call h5dget_space_f(dset_id, filespace, error)\n          call h5sget_simple_extent_dims_f(filespace, dims, maxdims, error)\n          call h5sclose_f(filespace, error)\n\n          ! Extend t dimension but only output original NMAX\n          dims(2) = t+1\n          NOUT = dims(1)\n       end if\n       call h5dset_extent_f(dset_id, dims, error)",
+        "history_terms": [
+          "older"
+        ],
+        "line": 969,
+        "path": "unstructured/hdf5_output.f90",
+        "restart_line": "if(irestart.ne.0  .and. version_in.lt.32) then"
+      }
+    ],
+    "source_root": "/home/ubuntu/M3DC1-official",
+    "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_integrator_history_source_repair/native_restart_integrator_history_source_repair_summary.json",
+  "summary_sha256": "e6577f6f340904b9124074e8c9f1f22ac9242e62d723dc7d821beffb8815e294",
+  "timed_out": false
+}
