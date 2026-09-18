@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-020-native-restart-split-equivalence-repair",
+  "processed_result_commit": "b5b01953fbbe89cda17b8cb4f70b71dc702c8e36",
+  "result_receipt_sha256": "2d1dcc786f084ada510510208c4b387c572bc38d",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_SPLIT_RUN_HANDOFF_EQUIVALENCE_FAILED",
+  "pipeline_failure": false,
+  "interpretation": "The repaired audit is now a valid same-final-time comparison: both continuous and restarted arms reached native time 0.10, but the source=0 state metrics diverged far beyond the required 1e-12 handoff tolerance (including Jpk 0.873541 continuous versus 1.08336 split). This is a genuine restart-handoff equivalence failure for the tested native path, not controller-efficacy evidence. Zero equivalence is not applicable to this source=0 restart capability test. Frozen +0.020% width and +0.10% Jpk controller gates remain unchanged.",
+  "new_job_id": "20260918-021-native-restart-boundary-discontinuity",
+  "timestamp_utc": "2026-09-18T07:55:40Z"
+}
