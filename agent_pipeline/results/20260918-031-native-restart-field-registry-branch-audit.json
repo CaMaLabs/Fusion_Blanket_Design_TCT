@@ -1,0 +1,39 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.031810760498046875,
+  "error": null,
+  "finished_utc": "2026-09-18T17:15:05.961576Z",
+  "head_before": "63436838863680cb986a0a35c3b18a4428168c6c",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260918-031-native-restart-field-registry-branch-audit.json",
+  "job_id": "20260918-031-native-restart-field-registry-branch-audit",
+  "log_path": "agent_pipeline/logs/20260918-031-native-restart-field-registry-branch-audit.log",
+  "log_sha256": "e155b4c90438f641859fe75e4aafbefa1bfbc38ac21a0f0021491f0e79513f64",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_field_registry_branch"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_field_registry_branch_audit.sh",
+  "runner_sha256": "e9c9fd758b0a78c09567b8d0ccdf2901362719790a45965c1bfec2b704b49ef1",
+  "schema_version": 1,
+  "started_utc": "2026-09-18T17:15:05.928662Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Search native M3D-C1 source for restart-gated create/destroy field lifecycle context relevant to the observed registry shift; no solver execution or modification.",
+    "causation_status": "STATIC_BRANCH_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_REGISTRY_NO_RESTART_GATED_LIFECYCLE_CONTEXT_FOUND",
+    "finished_utc": "2026-09-18T17:15:05.956567+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+    "parent_job_id": "20260918-030-native-restart-field-registry-source-audit",
+    "pipeline_failure": false,
+    "restart_gated_lifecycle_hits": []
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_field_registry_branch/native_restart_field_registry_branch_summary.json",
+  "summary_sha256": "cba21fd7f16fe4b39734ef256549ae6f1f67b562634e0d6639d13086867bf31f",
+  "timed_out": false
+}

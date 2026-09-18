@@ -1,0 +1,19 @@
+job_id=20260918-031-native-restart-field-registry-branch-audit
+started_utc=2026-09-18T17:15:05.928662Z
+head_before=63436838863680cb986a0a35c3b18a4428168c6c
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_REGISTRY_NO_RESTART_GATED_LIFECYCLE_CONTEXT_FOUND",
+  "pipeline_failure": false,
+  "parent_job_id": "20260918-030-native-restart-field-registry-source-audit",
+  "audit_scope": "Search native M3D-C1 source for restart-gated create/destroy field lifecycle context relevant to the observed registry shift; no solver execution or modification.",
+  "restart_gated_lifecycle_hits": [],
+  "causation_status": "STATIC_BRANCH_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+  "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "finished_utc": "2026-09-18T17:15:05.956567+00:00"
+}
+
+finished_utc=2026-09-18T17:15:05.961542Z
+return_code=0
