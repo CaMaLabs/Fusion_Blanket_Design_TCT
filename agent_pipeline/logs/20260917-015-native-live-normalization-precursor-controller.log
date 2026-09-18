@@ -1,29 +1,26 @@
+job_id=20260917-015-native-live-normalization-precursor-controller
+started_utc=2026-09-18T01:35:47.110962Z
+head_before=28311c9947109ccd161cd11a71fa9acdda77413c
+Using existing audit venv: /home/ubuntu/work/openmc/sweep/.venv-dudson
+audit_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+h5py 3.16.0
+===== NATIVE TCT PRECURSOR CONTROLLER-IN-LOOP =====
 {
-  "arms": null,
-  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
   "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_TIMESCALE_WINDOW_MISMATCH",
-  "derived_native_times": {
-    "available_pre_event_native_window_ms": 4.1261625296885515e-05,
-    "boost_on": -11726.00981883713,
-    "event_characterization_physical_ms_from_native_origin": 6.418475046182191e-05,
-    "event_characterization_time": 0.14,
-    "native_control_window_start": 0.05,
-    "native_control_window_start_physical_ms_from_native_origin": 2.2923125164936396e-05,
-    "precursor_lead_native_units": 18269.76020881321,
-    "required_response_native_units": 6543.610389976083,
-    "trigger_time": -18269.620208813212
-  },
+  "pipeline_failure": false,
+  "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
   "frozen_gates": {
     "Jpk_change_pct_le": 0.1,
     "width_gain_pct_gt": 0.02
   },
-  "pacman_adaptation": "modular predictor/controller proposals with fail-closed latency/safety arbitration; Mirnov/toroidal retained as TCT precursor",
+  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+  "reason": "Reviewed M3D-C1 Alfvén-time calibration is valid, but the measured Mirnov/toroidal precursor lead and bounded-boost response budget occur far outside the current native characterization window. No trigger time was clipped or invented; bounded boost remains NO ACTION.",
   "physical_time_calibration": {
     "applies_to_native_deck": true,
     "calibration_policy": "reviewed_formula_live_hdf5_normalization",
     "formula": {
       "id": "m3dc1_alfven_time_cgs",
-      "proton_mass_g": 1.6726219e-24,
+      "proton_mass_g": 1.6726219E-24,
       "time": "t0 = l0 / v0",
       "velocity": "v0 = b0 / sqrt(4*pi*ion_mass*mp*n0)"
     },
@@ -49,7 +46,7 @@
       "n0_norm_cm3": 100000000000000
     },
     "reference_physical_ms_per_solver_time_unit": 0.0006483638900045808,
-    "relative_tolerance": 1e-10,
+    "relative_tolerance": 1E-10,
     "review_scope": "The conversion formula and committed DIII-D template values are reviewed. Template normalization is reference-only; the actual run normalization is read from live C1.h5 root attributes and used to derive the effective physical time scale. Explicit C1input/HDF5 disagreements remain fail-closed.",
     "reviewed": true,
     "runtime_normalization_authority": "live baseline C1.h5 root attributes",
@@ -92,7 +89,7 @@
       "reference_physical_ms_per_solver_time_unit": 0.0006483638900045808,
       "reference_scale_match": false,
       "reference_template_is_hard_gate": false,
-      "relative_tolerance": 1e-10,
+      "relative_tolerance": 1E-10,
       "source": {
         "authoritative": "C1.h5 root attributes",
         "c1input_cross_checks": {
@@ -123,11 +120,7 @@
     "schema_version": 2,
     "template_reference_is_hard_gate": false
   },
-  "pipeline_failure": false,
-  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
   "precursor_lead_ms": 8.375999999999994,
-  "reason": "Reviewed M3D-C1 Alfv\u00e9n-time calibration is valid, but the measured Mirnov/toroidal precursor lead and bounded-boost response budget occur far outside the current native characterization window. No trigger time was clipped or invented; bounded boost remains NO ACTION.",
-  "scientific_interpretation_allowed": true,
   "supervisor_decision": {
     "action": "STANDING_BIAS_PLUS_BOUNDED_BOOST",
     "available_lead_ms": 8.375999999999994,
@@ -137,11 +130,21 @@
     "standing_bias": true,
     "winning_controller": "precursor"
   },
-  "timescale_compatibility": {
-    "controller_boost_executed": false,
-    "pass": false,
-    "requires_boost_before_native_event_time": 0.14,
-    "requires_trigger_at_or_after_native_time": 0.05
+  "derived_native_times": {
+    "available_pre_event_native_window_ms": 0.000041261625296885515,
+    "boost_on": -11726.00981883713,
+    "event_characterization_physical_ms_from_native_origin": 0.00006418475046182191,
+    "event_characterization_time": 0.14,
+    "native_control_window_start": 0.05,
+    "native_control_window_start_physical_ms_from_native_origin": 0.000022923125164936396,
+    "precursor_lead_native_units": 18269.76020881321,
+    "required_response_native_units": 6543.610389976083,
+    "trigger_time": -18269.620208813212
   },
-  "zero_equivalence": null
+  "zero_equivalence": null,
+  "arms": null,
+  "pacman_adaptation": "modular predictor/controller proposals with fail-closed latency/safety arbitration; Mirnov/toroidal retained as TCT precursor"
 }
+
+finished_utc=2026-09-18T01:35:48.031811Z
+return_code=0
