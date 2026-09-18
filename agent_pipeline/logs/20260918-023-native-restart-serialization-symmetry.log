@@ -1,0 +1,1071 @@
+job_id=20260918-023-native-restart-serialization-symmetry
+started_utc=2026-09-18T10:15:35.752509Z
+head_before=a4edb13380e0e095538c2c706b734433682a5a26
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_SERIALIZATION_ASYMMETRY_CANDIDATES_FOUND",
+  "pipeline_failure": false,
+  "parent_job_id": "20260918-022-native-restart-state-path-audit",
+  "parent_classification": "M3DC1_TCT_NATIVE_RESTART_STATE_PATH_SOURCE_AUDITED",
+  "audit_scope": "Static native M3D-C1 restart read/write serialization symmetry audit; no solver execution and no controller efficacy run.",
+  "files_scanned": [
+    "/home/ubuntu/M3DC1-official/unstructured/restart_hdf5.f90",
+    "/home/ubuntu/M3DC1-official/unstructured/newpar.f90",
+    "/home/ubuntu/M3DC1-official/unstructured/hdf5_output.f90"
+  ],
+  "call_count": 110,
+  "read_dataset_literals": [
+    "3d",
+    "_i",
+    "bzsign",
+    "cauchy_fraction",
+    "cloud_pel",
+    "eqsubtract",
+    "extsubtract",
+    "i_control%err_i",
+    "i_control%err_p_old",
+    "icomplex",
+    "ikprad",
+    "ipellet",
+    "kprad_z",
+    "loop_voltage",
+    "n_control%err_i",
+    "n_control%err_p_old",
+    "npellets",
+    "nplanes",
+    "ntime",
+    "ntimestep",
+    "pellet_mix",
+    "pellet_ne",
+    "pellet_phi",
+    "pellet_r",
+    "pellet_rate",
+    "pellet_rate_D2",
+    "pellet_te",
+    "pellet_var",
+    "pellet_var_tor",
+    "pellet_velphi",
+    "pellet_velr",
+    "pellet_velx",
+    "pellet_velz",
+    "pellet_vx",
+    "pellet_vy",
+    "pellet_x",
+    "pellet_z",
+    "period",
+    "phi",
+    "psi_lcfs",
+    "psimin",
+    "r_p",
+    "time",
+    "version",
+    "xlim",
+    "xlim2",
+    "xmag",
+    "xnull",
+    "xnull2",
+    "zlim",
+    "zlim2",
+    "zmag",
+    "znull",
+    "znull2"
+  ],
+  "write_dataset_literals": [
+    "ntime"
+  ],
+  "read_only_literals": [
+    "3d",
+    "_i",
+    "bzsign",
+    "cauchy_fraction",
+    "cloud_pel",
+    "eqsubtract",
+    "extsubtract",
+    "i_control%err_i",
+    "i_control%err_p_old",
+    "icomplex",
+    "ikprad",
+    "ipellet",
+    "kprad_z",
+    "loop_voltage",
+    "n_control%err_i",
+    "n_control%err_p_old",
+    "npellets",
+    "nplanes",
+    "ntimestep",
+    "pellet_mix",
+    "pellet_ne",
+    "pellet_phi",
+    "pellet_r",
+    "pellet_rate",
+    "pellet_rate_D2",
+    "pellet_te",
+    "pellet_var",
+    "pellet_var_tor",
+    "pellet_velphi",
+    "pellet_velr",
+    "pellet_velx",
+    "pellet_velz",
+    "pellet_vx",
+    "pellet_vy",
+    "pellet_x",
+    "pellet_z",
+    "period",
+    "phi",
+    "psi_lcfs",
+    "psimin",
+    "r_p",
+    "time",
+    "version",
+    "xlim",
+    "xlim2",
+    "xmag",
+    "xnull",
+    "xnull2",
+    "zlim",
+    "zlim2",
+    "zmag",
+    "znull",
+    "znull2"
+  ],
+  "write_only_literals": [],
+  "calls": [
+    {
+      "path": "restart_hdf5.f90",
+      "line": 34,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"version\", version_in, error)",
+      "dataset_literals": [
+        "version"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 56,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"ntime\", times_output_in, error)",
+      "dataset_literals": [
+        "ntime"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 64,
+      "kind": "read",
+      "text": "call read_int_attr(time_id, \"ntimestep\", ntime, error)",
+      "dataset_literals": [
+        "ntimestep"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 72,
+      "kind": "read",
+      "text": "call read_int_attr(time_id, \"version\", version_in, error)",
+      "dataset_literals": [
+        "version"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 75,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"eqsubtract\", eqsubtract_in, error)",
+      "dataset_literals": [
+        "eqsubtract"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 76,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"extsubtract\", extsubtract_in, error)",
+      "dataset_literals": [
+        "extsubtract"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 77,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"icomplex\", icomplex_in, error)",
+      "dataset_literals": [
+        "icomplex"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 78,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"3d\", i3d_in, error)",
+      "dataset_literals": [
+        "3d"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 81,
+      "kind": "read",
+      "text": "call read_int_attr(mesh_id, \"nplanes\", nplanes_in, error)",
+      "dataset_literals": [
+        "nplanes"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 82,
+      "kind": "read",
+      "text": "call read_real_attr(mesh_id, \"period\", toroidal_period_in, error)",
+      "dataset_literals": [
+        "period"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 86,
+      "kind": "read",
+      "text": "call read_vec_attr(mesh_id, \"phi\", phi_in, nplanes_in, error)",
+      "dataset_literals": [
+        "phi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 126,
+      "kind": "read",
+      "text": "call read_real_attr(root_id, \"xlim\" , xlim,  error)",
+      "dataset_literals": [
+        "xlim"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 127,
+      "kind": "read",
+      "text": "call read_real_attr(root_id, \"zlim\" , zlim,  error)",
+      "dataset_literals": [
+        "zlim"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 128,
+      "kind": "read",
+      "text": "call read_real_attr(root_id, \"xlim2\", xlim2, error)",
+      "dataset_literals": [
+        "xlim2"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 129,
+      "kind": "read",
+      "text": "call read_real_attr(root_id, \"zlim2\", zlim2, error)",
+      "dataset_literals": [
+        "zlim2"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 133,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"ikprad\", ikprad_in,  error)",
+      "dataset_literals": [
+        "ikprad"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 134,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"kprad_z\", kprad_z_in,  error)",
+      "dataset_literals": [
+        "kprad_z"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 139,
+      "kind": "read",
+      "text": "if ((irunaway.gt.0).or.(kinetic.eq.1)) call read_real_attr(root_id, \"bzsign\", bzsign, error)",
+      "dataset_literals": [
+        "bzsign"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 147,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"time\"        , time    , ntime, error)",
+      "dataset_literals": [
+        "time"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 150,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"xnull\"       , xnullt   , ntime, error)",
+      "dataset_literals": [
+        "xnull"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 151,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"znull\"       , znullt   , ntime, error)",
+      "dataset_literals": [
+        "znull"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 152,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"xnull2\"      , xnull2t  , ntime, error)",
+      "dataset_literals": [
+        "xnull2"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 153,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"znull2\"      , znull2t  , ntime, error)",
+      "dataset_literals": [
+        "znull2"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 154,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"xmag\"        , xmag     , ntime, error)",
+      "dataset_literals": [
+        "xmag"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 155,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"zmag\"        , zmag     , ntime, error)",
+      "dataset_literals": [
+        "zmag"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 156,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"psi_lcfs\"    , psibound , ntime, error)",
+      "dataset_literals": [
+        "psi_lcfs"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 157,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"psimin\"      , psimin   , ntime, error)",
+      "dataset_literals": [
+        "psimin"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 174,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_x\",       pellet_r(1),      ntime, error)",
+      "dataset_literals": [
+        "pellet_x"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 176,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_r\",       pellet_r(1),      ntime, error)",
+      "dataset_literals": [
+        "pellet_r"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 178,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_phi\",     pellet_phi(1),    ntime, error)",
+      "dataset_literals": [
+        "pellet_phi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 179,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_z\",       pellet_z(1),      ntime, error)",
+      "dataset_literals": [
+        "pellet_z"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 181,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_velx\",    pellet_velr(1),   ntime, error)",
+      "dataset_literals": [
+        "pellet_velx"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 183,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_velr\",    pellet_velr(1),   ntime, error)",
+      "dataset_literals": [
+        "pellet_velr"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 185,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_velphi\",  pellet_velphi(1), ntime, error)",
+      "dataset_literals": [
+        "pellet_velphi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 186,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_velz\",    pellet_velz(1),   ntime, error)",
+      "dataset_literals": [
+        "pellet_velz"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 188,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_vx\",    pellet_vx(1),   ntime, error)",
+      "dataset_literals": [
+        "pellet_vx"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 189,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_vy\",    pellet_vy(1),   ntime, error)",
+      "dataset_literals": [
+        "pellet_vy"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 191,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_var\",     pellet_var(1),    ntime, error)",
+      "dataset_literals": [
+        "pellet_var"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 192,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"r_p\",            r_p(1),           ntime, error)",
+      "dataset_literals": [
+        "r_p"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 193,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"pellet_rate\",    pellet_rate(1),   ntime, error)",
+      "dataset_literals": [
+        "pellet_rate"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 196,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"ipellet\", ipellet_in,  error)",
+      "dataset_literals": [
+        "ipellet"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 198,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"npellets\", npellets,  error)",
+      "dataset_literals": [
+        "npellets"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 203,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_r\",       pellet_r,       npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_r"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 204,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_phi\",     pellet_phi,     npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_phi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 205,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_z\",       pellet_z,       npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_z"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 206,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_rate\",    pellet_rate,    npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_rate"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 207,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_rate_D2\", pellet_rate_D2, npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_rate_D2"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 208,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_velr\",    pellet_velr,    npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_velr"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 209,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_velphi\",  pellet_velphi,  npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_velphi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 210,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_velz\",    pellet_velz,    npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_velz"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 211,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_vx\",      pellet_vx,      npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_vx"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 212,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_vy\",      pellet_vy,      npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_vy"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 213,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"r_p\",            r_p,            npellets, ntime, error)",
+      "dataset_literals": [
+        "r_p"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 214,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_mix\",     pellet_mix,     npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_mix"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 215,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_var_tor\", pellet_var_tor, npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_var_tor"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 216,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"cloud_pel\",      cloud_pel,      npellets, ntime, error)",
+      "dataset_literals": [
+        "cloud_pel"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 217,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_var\",     pellet_var,     npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_var"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 219,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"cauchy_fraction\",cauchy_fraction, npellets, ntime, error)",
+      "dataset_literals": [
+        "cauchy_fraction"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 222,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_te\", temp_pel, npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_te"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 224,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_ne"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 229,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_r\",       pellet_r,       npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_r"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 230,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_phi\",     pellet_phi,     npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_phi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 231,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_z\",       pellet_z,       npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_z"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 232,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_velr\",    pellet_velr,    npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_velr"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 233,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_velphi\",  pellet_velphi,  npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_velphi"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 234,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_velz\",    pellet_velz,    npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_velz"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 235,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_vx\",      pellet_vx,      npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_vx"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 236,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_vy\",      pellet_vy,      npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_vy"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 237,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"r_p\",            r_p,            npellets, ntime, error)",
+      "dataset_literals": [
+        "r_p"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 239,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_te\", temp_pel, npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_te"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 240,
+      "kind": "read",
+      "text": "call read_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)",
+      "dataset_literals": [
+        "pellet_ne"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 255,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"loop_voltage\", vloop, ntime, error)",
+      "dataset_literals": [
+        "loop_voltage"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 263,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"i_control%err_i\",     i_control%err_i,     ntime, error)",
+      "dataset_literals": [
+        "i_control%err_i"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 264,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"i_control%err_p_old\", i_control%err_p_old, ntime, error)",
+      "dataset_literals": [
+        "i_control%err_p_old"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 265,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"n_control%err_i\",     n_control%err_i,     ntime, error)",
+      "dataset_literals": [
+        "n_control%err_i"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 266,
+      "kind": "read",
+      "text": "call read_scalar(scalar_group_id, \"n_control%err_p_old\", n_control%err_p_old, ntime, error)",
+      "dataset_literals": [
+        "n_control%err_p_old"
+      ]
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 273,
+      "kind": "read",
+      "text": "call read_fields(time_id, 0, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 282,
+      "kind": "read",
+      "text": "call read_fields(eq_time_id, 1, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 368,
+      "kind": "read",
+      "text": "subroutine read_fields(time_group_id, equilibrium, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 584,
+      "kind": "read",
+      "text": "call read_field(group_id, name, dum(1:coefs,:), coefs, nelms, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "restart_hdf5.f90",
+      "line": 588,
+      "kind": "read",
+      "text": "call read_field(group_id,name//\"_i\", dum(1:coefs,:), coefs, nelms, &",
+      "dataset_literals": [
+        "_i"
+      ]
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 68,
+      "kind": "write",
+      "text": "call write_int_attr(root_id, \"ntime\", 0, error)",
+      "dataset_literals": [
+        "ntime"
+      ]
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 82,
+      "kind": "read",
+      "text": "call read_int_attr(root_id, \"ntime\", times_output, error)",
+      "dataset_literals": [
+        "ntime"
+      ]
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 120,
+      "kind": "read",
+      "text": "subroutine read_int_attr(parent_id, name, value, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 134,
+      "kind": "read",
+      "text": "call h5aread_f(attr_id, H5T_NATIVE_INTEGER, value, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 141,
+      "kind": "write",
+      "text": "subroutine write_int_attr(parent_id, name, val, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 158,
+      "kind": "write",
+      "text": "call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 183,
+      "kind": "write",
+      "text": "call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 190,
+      "kind": "read",
+      "text": "subroutine read_real_attr(parent_id, name, value, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 205,
+      "kind": "read",
+      "text": "! call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 211,
+      "kind": "read",
+      "text": "call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 219,
+      "kind": "write",
+      "text": "subroutine write_real_attr(parent_id, name, value, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 236,
+      "kind": "write",
+      "text": "call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 244,
+      "kind": "write",
+      "text": "subroutine write_str_attr(parent_id, name, value, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 271,
+      "kind": "write",
+      "text": "call h5awrite_f(attr_id, dtype_id, value, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 286,
+      "kind": "read",
+      "text": "subroutine read_vec_attr(parent_id, name, values, len, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 303,
+      "kind": "read",
+      "text": "call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 310,
+      "kind": "write",
+      "text": "subroutine write_vec_attr(parent_id, name, values, len, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 332,
+      "kind": "write",
+      "text": "call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 422,
+      "kind": "write",
+      "text": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 533,
+      "kind": "write",
+      "text": "call h5dwrite_f(dset_id, H5T_NATIVE_INTEGER, values, global_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 568,
+      "kind": "read",
+      "text": "subroutine read_field(parent_id, name, values, ndofs, nelms, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 618,
+      "kind": "read",
+      "text": "call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 730,
+      "kind": "write",
+      "text": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 747,
+      "kind": "read",
+      "text": "subroutine read_scalar(parent_id, name, value, t, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 786,
+      "kind": "read",
+      "text": "call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 877,
+      "kind": "write",
+      "text": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 997,
+      "kind": "write",
+      "text": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 1011,
+      "kind": "read",
+      "text": "subroutine read_1dextendarr(parent_id, name, value, NMAX, t, error)",
+      "dataset_literals": []
+    },
+    {
+      "path": "hdf5_output.f90",
+      "line": 1054,
+      "kind": "read",
+      "text": "call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &",
+      "dataset_literals": []
+    }
+  ],
+  "handoff_equivalence_status": "FAILED_AT_FIRST_POSTRESTART_STEP_IN_JOB_021",
+  "zero_equivalence_status": "NOT_APPLICABLE_SOURCE_RESTART_CAPABILITY_AUDIT",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+}
+
+finished_utc=2026-09-18T10:15:35.785256Z
+return_code=0
