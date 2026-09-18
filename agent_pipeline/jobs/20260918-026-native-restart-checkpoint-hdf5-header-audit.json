@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "parent_result_job_id": "20260918-025-native-restart-checkpoint-capture",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_checkpoint_hdf5_header_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/native_restart_checkpoint_hdf5_header_summary.json",
+  "purpose": "Repair job 025's schema-reader tooling gap without rerunning M3D-C1: read the persisted native restart checkpoint artifacts with h5dump -H, verify their SHA-256 provenance against job 025, and record the actual HDF5 schema for the next restart-state audit.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_CAPTURED_BUT_HDF5_SCHEMA_UNREADABLE",
+    "do_not_treat_job_025_h5py_import_failure_as_restart_physics_failure": true,
+    "do_not_treat_schema_presence_or_absence_alone_as_dynamic_causation": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
