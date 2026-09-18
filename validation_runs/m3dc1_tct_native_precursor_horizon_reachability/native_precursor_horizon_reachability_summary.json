@@ -1,0 +1,46 @@
+{
+  "calibrated_timing": {
+    "current_control_window_start_native": 0.05,
+    "earliest_boost_after_window_start_native": 6543.660389976083,
+    "minimum_causal_event_time_ms_from_native_origin": 8.37602292312516,
+    "minimum_causal_event_time_native": 18269.81020881321,
+    "physical_ms_per_solver_time_unit": 0.00045846250329872786,
+    "precursor_lead_ms": 8.375999999999994,
+    "precursor_lead_native_units": 18269.76020881321,
+    "required_response_ms": 3.0,
+    "required_response_native_units": 6543.610389976083
+  },
+  "claim_boundary": "Normalized native M3D-C1 planning/reachability only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_HORIZON_DIRECT_EXTENSION_IMPRACTICAL",
+  "current_native_cadence": {
+    "dt": 0.01,
+    "horizon": 0.3,
+    "steps": 30
+  },
+  "decision": "Do not launch the full physically timed controller matrix by brute-force horizon extension. First establish a physically relevant native event/window or a validated time-scaling/restart strategy; retain Mirnov/toroidal precursor authority and fail-closed NO ACTION meanwhile.",
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "parent_classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_TIMESCALE_WINDOW_MISMATCH",
+  "parent_job_id": "20260917-015-native-live-normalization-precursor-controller",
+  "pipeline_failure": false,
+  "precursor_authority": "Mirnov/toroidal; reduced-model proxies are not substituted",
+  "reachability": {
+    "direct_extension_practical_under_one_day_per_arm": false,
+    "horizon_multiplier_vs_0p30": 60899.367362710705,
+    "minimum_steps_at_current_dt": 1826982
+  },
+  "runtime_reference": {
+    "baseline_elapsed_seconds": 50.50784754753113,
+    "job_id": "20260914-008-h006-delta0295-confirmation",
+    "projected_days_for_six_arms_linear": 213.6038862845059,
+    "projected_days_per_arm_linear": 35.60064771408432,
+    "projection_model": "linear_in_native_step_count_planning_extrapolation",
+    "reference_dt": 0.01,
+    "reference_horizon": 0.3,
+    "warning": "Projection is a planning estimate only; validate scaling before authorizing a long native run."
+  },
+  "scientific_interpretation_allowed": true,
+  "zero_equivalence_status": "NOT_EVALUATED_IN_PARENT_TIMESCALE_PREREQUISITE_EXIT"
+}
