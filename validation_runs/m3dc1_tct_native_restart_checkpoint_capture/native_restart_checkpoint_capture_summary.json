@@ -1,0 +1,92 @@
+{
+  "artifacts": [
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "C1.h5",
+      "sha256": "842285cfec17235d76dc4f91c2230f74f31b5f9a25c224458f598dcdd5f1c5c4",
+      "size_bytes": 331834
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "equilibrium.h5",
+      "sha256": "bbafea066f96bea14ed31ef4064bab5354de4df5a6ceea782867b1359a7c63a4",
+      "size_bytes": 2551368
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "time_000.h5",
+      "sha256": "f0a91cc1d9c8e71751caefa15eab996544ee5f8bf507a7bb5060f1c968bc0bad",
+      "size_bytes": 2551368
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "time_001.h5",
+      "sha256": "32d4b5bd85648f93593533c79e6053b0678fb3831d0583221bffd7fa69a1dd80",
+      "size_bytes": 2551368
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "time_002.h5",
+      "sha256": "620c8dd7a8f28d0901d6f7f8551bdf1803a1f04fd0bc7c7d2e76c5cbecfc5c47",
+      "size_bytes": 2551368
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "time_003.h5",
+      "sha256": "cd0c5ce22e098d384455787d68c3550c143a32072e4778c21c2146c4952b3ae7",
+      "size_bytes": 2551368
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "time_004.h5",
+      "sha256": "4024dfe22bc1e61bc164878dbdf56480cb36a945a659bd3d87b4463fad12e4a4",
+      "size_bytes": 2551368
+    },
+    {
+      "attrs": {},
+      "datasets": [],
+      "hdf5": false,
+      "hdf5_error": "ModuleNotFoundError(\"No module named 'h5py'\")",
+      "name": "time_005.h5",
+      "sha256": "776b49b874dde55b5f0d901d8ef667d3a522e8dcc82ddd7a05b6749153f743bb",
+      "size_bytes": 2551368
+    }
+  ],
+  "audit_scope": "Regenerate one bounded source=0 five-step native checkpoint, persist its actual HDF5 artifacts, and inventory their schema; no controller efficacy run.",
+  "claim_boundary": "Normalized native M3D-C1 restart artifact/schema provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_CAPTURED_BUT_HDF5_SCHEMA_UNREADABLE",
+  "execution": {
+    "C1stdout_tail": "ter=    1, time=  1.439E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.461E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.483E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.522E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.611E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.565E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.529E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.30570000E-02  3.70760000E-02\nOUTPUT: hdf5_write_timings       5  5.29000000E-04  3.76050000E-02    0\nOUTPUT: hdf5_flush               5  3.39000000E-04  3.39000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 9.02397 (sec)\n ==============================================================\n END DATE: 2026 09 18   TIME: 05:24:13.6\n\n Stopped at           0\n",
+    "elapsed_seconds": 10.126970767974854,
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "finished_utc": "2026-09-18T12:24:13.794919+00:00",
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "frozen_width_gate_pct_gt": 0.02,
+  "handoff_equivalence": "NOT_EVALUATED_CAPTURE_AUDIT_ONLY",
+  "parent_job_id": "20260918-024-native-restart-checkpoint-schema-audit",
+  "pipeline_failure": false,
+  "zero_equivalence": "NOT_EVALUATED_CAPTURE_AUDIT_ONLY"
+}
