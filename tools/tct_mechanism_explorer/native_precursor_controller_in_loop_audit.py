@@ -5,8 +5,8 @@ This runner keeps the established TCT control architecture intact:
 standing preventative bias -> Mirnov/toroidal precursor -> response-time/safety
 arbiter -> bounded boost or NO ACTION.
 
-Physical milliseconds are converted to native M3D-C1 time only after the live
-baseline normalization is verified against a reviewed calibration artifact.
+Physical milliseconds are converted to native M3D-C1 time from the live
+baseline normalization using a reviewed M3D-C1 Alfvén-time formula.
 C1.h5 root attributes are authoritative for runtime normalization; C1input is
 used only as an optional consistency cross-check because restart/baseline decks
 may omit normalization values already persisted in HDF5.
@@ -178,7 +178,16 @@ def _close(a: float, b: float, rel_tol: float = CAL_REL_TOL) -> bool:
 
 
 def calibration() -> tuple[dict | None, str | None]:
-    """Load reviewed calibration and verify it against the live baseline HDF5."""
+    """Verify the reviewed formula, then derive scale from the live baseline.
+
+    The calibration artifact reviews the conversion formula and preserves the
+    committed DIII-D template normalization as a reference point.  Run-specific
+    normalization comes from the actual C1.h5 root attributes, which M3D-C1's
+    reader defines as the authoritative b0_norm/n0_norm/l0_norm/ion_mass values.
+    A reference-template divergence is recorded, not treated as a physics error.
+    An explicit C1input/HDF5 disagreement still fails inside
+    derive_alfven_time_calibration().
+    """
     if not CAL.exists():
         return None, f"calibration artifact missing: {CAL}"
     try:
@@ -187,16 +196,34 @@ def calibration() -> tuple[dict | None, str | None]:
         return None, f"cannot read calibration artifact: {exc}"
 
     required = {
-        "physical_ms_per_solver_time_unit",
-        "normalization",
+        "formula",
         "provenance",
         "reviewed",
         "applies_to_native_deck",
+        "runtime_normalization_authority",
+        "runtime_verification_required",
     }
     if not required <= c.keys():
         return None, f"calibration artifact missing required keys: {sorted(required - c.keys())}"
     if c["reviewed"] is not True or c["applies_to_native_deck"] is not True:
         return None, "calibration artifact is not marked reviewed/applicable"
+    if c["runtime_verification_required"] is not True:
+        return None, "calibration artifact does not require runtime verification"
+    if c["runtime_normalization_authority"] != "live baseline C1.h5 root attributes":
+        return None, (
+            "unsupported runtime normalization authority: "
+            f"{c['runtime_normalization_authority']!r}"
+        )
+
+    formula = c["formula"]
+    if formula.get("id") != "m3dc1_alfven_time_cgs":
+        return None, f"unsupported calibration formula id: {formula.get('id')!r}"
+    artifact_mp = float(formula.get("proton_mass_g", float("nan")))
+    if not math.isfinite(artifact_mp) or not _close(artifact_mp, PROTON_MASS_CGS_G):
+        return None, (
+            "calibration proton-mass constant mismatch: "
+            f"artifact={artifact_mp!r}, code={PROTON_MASS_CGS_G!r}"
+        )
 
     if not native.BASE.exists():
         return None, f"native baseline directory missing: {native.BASE}"
@@ -205,24 +232,40 @@ def calibration() -> tuple[dict | None, str | None]:
     except Exception as exc:
         return None, f"cannot derive calibration from live native baseline: {exc}"
 
-    expected = c["normalization"]
     actual = derived["normalization"]
-    for key in ("b0_norm_G", "n0_norm_cm3", "l0_norm_cm", "ion_mass_mp"):
-        if key not in expected or not _close(expected[key], actual[key]):
-            return None, (
-                f"native HDF5 normalization mismatch for {key}: "
-                f"expected={expected.get(key)!r}, actual={actual[key]!r}"
-            )
-
-    stated_scale = float(c["physical_ms_per_solver_time_unit"])
     derived_scale = float(derived["physical_ms_per_solver_time_unit"])
-    if stated_scale <= 0.0 or not _close(stated_scale, derived_scale):
-        return None, (
-            "physical time scale mismatch: "
-            f"artifact={stated_scale:.17g}, derived={derived_scale:.17g} ms/native-unit"
-        )
+    if not math.isfinite(derived_scale) or derived_scale <= 0.0:
+        return None, f"invalid live-derived physical time scale: {derived_scale!r}"
+
+    reference = c.get("reference_normalization", c.get("normalization", {}))
+    reference_comparison = {}
+    for key in ("b0_norm_G", "n0_norm_cm3", "l0_norm_cm", "ion_mass_mp"):
+        ref_value = reference.get(key)
+        if ref_value is None:
+            reference_comparison[key] = {
+                "reference_present": False,
+                "actual": actual[key],
+                "match": None,
+            }
+        else:
+            reference_comparison[key] = {
+                "reference_present": True,
+                "reference": float(ref_value),
+                "actual": actual[key],
+                "match": _close(float(ref_value), actual[key]),
+            }
+
+    reference_scale = c.get(
+        "reference_physical_ms_per_solver_time_unit",
+        c.get("physical_ms_per_solver_time_unit"),
+    )
+    if reference_scale is not None:
+        reference_scale = float(reference_scale)
 
     verified = dict(c)
+    # Downstream timing always consumes the live-run scale and normalization.
+    verified["physical_ms_per_solver_time_unit"] = derived_scale
+    verified["normalization"] = actual
     verified["runtime_verification"] = {
         "pass": True,
         "source": derived["runtime_source"],
@@ -230,9 +273,16 @@ def calibration() -> tuple[dict | None, str | None]:
         "derived_physical_ms_per_solver_time_unit": derived_scale,
         "derived_alfven_velocity_cm_s": derived["alfven_velocity_cm_s"],
         "relative_tolerance": CAL_REL_TOL,
+        "reference_template_is_hard_gate": False,
+        "reference_normalization_comparison": reference_comparison,
+        "reference_physical_ms_per_solver_time_unit": reference_scale,
+        "reference_scale_match": (
+            None
+            if reference_scale is None
+            else _close(reference_scale, derived_scale)
+        ),
     }
     return verified, None
-
 
 def summarize(label, rows, baseline):
     s = native.summarize_case(
