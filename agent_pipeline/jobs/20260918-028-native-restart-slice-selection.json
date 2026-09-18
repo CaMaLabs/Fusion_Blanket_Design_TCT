@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-028-native-restart-slice-selection",
+  "parent_result_job_id": "20260918-027-native-restart-checkpoint-link-consistency",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_slice_selection_audit.sh",
+  "timeout_seconds": 1800,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_slice_selection"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_slice_selection/native_restart_slice_selection_summary.json",
+  "purpose": "With checkpoint link/provenance consistency established, perform one bounded source=0 dynamic A/B audit to determine whether selecting the latest checkpoint explicitly with irestart_slice=5 resolves or changes the first-postrestart discontinuity relative to irestart_slice=-1.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_LINK_GRAPH_CONSISTENT",
+    "require_handoff_equivalence_tolerance_le": 1e-12,
+    "require_equal_native_final_time": true,
+    "do_not_treat_restart-capability outcome as controller efficacy": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
