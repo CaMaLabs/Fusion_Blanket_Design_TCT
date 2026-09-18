@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-023-native-restart-serialization-symmetry",
+  "parent_result_job_id": "20260918-022-native-restart-state-path-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_serialization_symmetry_audit.sh",
+  "timeout_seconds": 1800,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_serialization_symmetry"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_serialization_symmetry/native_restart_serialization_symmetry_summary.json",
+  "purpose": "Narrow the job-021 first-postrestart discontinuity by auditing native M3D-C1 restart read/write serialization symmetry and identifying state candidates that are written but not restored, restored but not written, or reconstructed on restart.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_STATE_PATH_SOURCE_AUDITED",
+    "require_source_level_restart_read_write_provenance": true,
+    "do_not_treat_literal_asymmetry_as_dynamic_causation": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
