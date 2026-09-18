@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "job_id": "20260917-016-native-precursor-horizon-reachability",
+  "processed_result_sha": "68f7cb013c771f2d19028d7fdf759eae663bfbbe",
+  "processed_head_before": "8bad9c3ab583d55fbee6d5313020bba80e5dbd56",
+  "processed_utc": "2026-09-18T04:23:56Z",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_HORIZON_DIRECT_EXTENSION_IMPRACTICAL",
+  "pipeline_failure": false,
+  "interpretation": "The live-normalized Mirnov/toroidal precursor timing requires a minimum causal event time of 18269.81020881321 native units versus the current 0.30 horizon, a 60899.367362710705x extension. Linear planning extrapolation estimates about 35.60 days per arm and 213.60 days for six arms, so a brute-force physically timed controller matrix is not justified. This is a reachability/planning result, not controller efficacy. Zero equivalence remains NOT_EVALUATED_IN_PARENT_TIMESCALE_PREREQUISITE_EXIT and is not treated as a pass. Frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "claim_boundary": "Normalized native M3D-C1 planning/reachability only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "zero_equivalence_status": "NOT_EVALUATED_IN_PARENT_TIMESCALE_PREREQUISITE_EXIT",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "new_job_id": "20260917-017-native-restart-capability-audit",
+  "next_step": "Bounded static audit of the installed native M3D-C1 tree for restart/checkpoint capability. If candidates exist, a later split-run versus continuous-run state-equivalence audit must validate restart semantics before using them to approach the physically calibrated horizon."
+}
