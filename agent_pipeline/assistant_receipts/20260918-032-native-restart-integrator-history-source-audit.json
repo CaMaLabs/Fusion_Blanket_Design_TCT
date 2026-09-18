@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-032-native-restart-integrator-history-source-audit",
+  "processed_result_path": "agent_pipeline/results/20260918-032-native-restart-integrator-history-source-audit.json",
+  "processed_result_sha": "5e96182d2964dbd7b21c3c1e6385eb3bfd6c1465",
+  "processed_result_head_before": "05bc8605fb4ee83c2c37043f741f57a2816a4054",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_INTEGRATOR_HISTORY_SOURCE_AUDIT_SOURCE_NOT_FOUND",
+  "pipeline_error": "/home/ubuntu/m3dc1 not found",
+  "interpretation": "Pipeline/code failure, not a scientific negative result. The static audit never examined native M3D-C1 source because it used the stale source root /home/ubuntu/m3dc1. Earlier successful native source auditing on this branch uses /home/ubuntu/M3DC1-official. The inherited handoff-equivalence failure at 1e-12 from job 028 remains required and uneffected; the frozen +0.020% width and +0.10% Jpk gates are unchanged. A single narrowly scoped replacement job corrects only source-root discovery and repeats the same static audit without solver execution or physics modification.",
+  "new_job_id": "20260918-033-native-restart-integrator-history-source-audit-repair",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-18T19:14:55Z"
+}
