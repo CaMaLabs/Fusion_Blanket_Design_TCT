@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "20260918-027-native-restart-checkpoint-link-consistency",
+  "parent_result_job_id": "20260918-026-native-restart-checkpoint-hdf5-header-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_checkpoint_link_consistency_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_checkpoint_link_consistency"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_checkpoint_link_consistency/native_restart_checkpoint_link_consistency_summary.json",
+  "purpose": "Use the readable, hash-verified persisted checkpoint to verify the C1.h5 external-link graph, target presence, and time-slice sequence before any further dynamic restart experiment.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_CHECKPOINT_HDF5_SCHEMA_READABLE",
+    "do_not_treat_link_graph_consistency_or_inconsistency_alone_as_dynamic_causation": true,
+    "require_job_025_sha256_provenance": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart artifact/link provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
