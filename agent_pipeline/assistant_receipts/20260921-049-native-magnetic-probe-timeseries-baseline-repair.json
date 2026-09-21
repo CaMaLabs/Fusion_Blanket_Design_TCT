@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-049-native-magnetic-probe-timeseries-baseline-repair",
+  "processed_result_receipt": "agent_pipeline/results/20260921-049-native-magnetic-probe-timeseries-baseline-repair.json",
+  "processed_result_receipt_sha": "876a26d12be715ff32463ed2f9f3c40398fa8fcf",
+  "processed_result_head_before": "bf235364b4ff1c287dac61bf41fd81eaf3a0fcb8",
+  "pipeline_failure": true,
+  "pipeline_error": "No local m3dc1_2d binary found after explicit and bounded discovery",
+  "classification": null,
+  "interpretation": "Pipeline/environment failure before M3D-C1 execution. The replacement job retained the diagnostic-only contract and broadened executable discovery, but the machine still could not locate a local m3dc1_2d binary. No validation summary was produced, so this is not a scientific negative result and no M3D-C1 classification is inferred. A second speculative discovery repair is not justified; the execution host needs a usable M3D-C1 binary restored, built, mounted, or its actual path supplied before this audit can proceed.",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic capture only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "new_job_id": null,
+  "human_intervention_required": true,
+  "human_intervention": "Restore/build/mount m3dc1_2d on the Ubuntu execution host or provide its actual executable path; the repaired bounded discovery found none.",
+  "timestamp": "2026-09-21T20:53:51Z"
+}
