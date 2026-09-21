@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-047-native-magnetic-probe-timeseries-baseline",
+  "processed_result_receipt": "agent_pipeline/results/20260921-047-native-magnetic-probe-timeseries-baseline.json",
+  "processed_result_receipt_sha": "a6488e6030203d2fdc349e69f78f3ddf6cf2da30",
+  "processed_result_head_before": "ade4e2c01602aa32aced8796bfb17636a6e626a3",
+  "pipeline_failure": true,
+  "pipeline_error": "No local m3dc1_2d binary found",
+  "classification": null,
+  "interpretation": "Pipeline/code failure before M3D-C1 execution: the runner searched only two build paths and omitted the repository-evidenced /root/M3DC1/unstructured/_localgnu-petsc-opt-25/m3dc1_2d path. No declared validation summary was produced, so this result is not a scientific negative and no M3D-C1 classification is inferred. The repair only broadens executable discovery and does not alter solver physics, source baseline, diagnostic configuration, frozen gates, or claim boundary.",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic capture only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "repair_commit": "9e8113483f9a0ffc55eaf3a13b1db59e050f0b1a",
+  "new_job_id": "20260921-049-native-magnetic-probe-timeseries-baseline-repair",
+  "new_job_commit": "85312f3a69b46acef19314612f034d7e70842f0f",
+  "timestamp": "2026-09-21T18:57:51Z"
+}
