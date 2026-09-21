@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-045-native-magnetic-probe-enablement-audit",
+  "processed_result_blob_sha": "47fef2dc987dde66c37a368b5d0ff66ef4422292",
+  "processed_result_head_before": "828325d1d70482418d8872c9fb406ca7d0838b9e",
+  "processed_result_finished_utc": "2026-09-21T15:04:00.405554Z",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_ENABLEMENT_EVIDENCE_FOUND",
+  "pipeline_error": null,
+  "interpretation": "Successful read-only diagnostic provenance result, not a pipeline failure. Nine repository cases evidence active native M3D-C1 magnetic-probe configuration while the current TCT baseline has no probe lines. This justifies one diagnostic-only baseline copy with the evidenced probe interface enabled to capture native magnetic time-series output before any precursor construction. No efficacy, lead-time, experimental, or reactor-scale claim is made; the frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260921-047-native-magnetic-probe-timeseries-baseline",
+  "timestamp_utc": "2026-09-21T16:52:28Z"
+}
