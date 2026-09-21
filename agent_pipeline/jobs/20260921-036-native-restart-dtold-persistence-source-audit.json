@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-036-native-restart-dtold-persistence-source-audit",
+  "parent_result_job_id": "20260921-035-native-restart-dtold-state-source-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_dtold_persistence_source_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_dtold_persistence_source"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_dtold_persistence_source/native_restart_dtold_persistence_source_summary.json",
+  "purpose": "Resolve the dtold-state lead from job 035 by tracing explicit native restart/HDF5 persistence paths for dt and dtold before any dynamic restart experiment.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_DTOLD_STATE_CONTEXT_CAPTURED",
+    "require_inherited_handoff_equivalence_status": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+    "do_not_treat_static_source_context_as_dynamic_causation": true,
+    "do_not_infer_non_persistence_from_textual_absence_alone": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_modify_solver_physics": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
