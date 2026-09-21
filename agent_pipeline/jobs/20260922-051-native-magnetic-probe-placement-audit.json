@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-051-native-magnetic-probe-placement-audit",
+  "parent_result_job_id": "20260921-050-native-magnetic-probe-timeseries-baseline-env-repair",
+  "enabled": true,
+  "runner": "python3 tools/tct_mechanism_explorer/audit_native_magnetic_probe_placement.py",
+  "timeout_seconds": 300,
+  "result_paths": ["validation_runs/m3dc1_tct_native_magnetic_probe_placement_audit"],
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_placement_audit/summary.json",
+  "purpose": "Audit the completed native magnetic-probe baseline for probe-placement validity after M3D-C1 explicitly reported the requested x=2.3,z=0 point outside the computational domain; establish the geometry/provenance boundary before any precursor analysis.",
+  "interpretation_contract": {
+    "parent_formal_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIMESERIES_BASELINE_CAPTURED",
+    "diagnostic_only": true,
+    "do_not_modify_solver_physics": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_infer_valid_probe_timeseries_from_solver_return_code_alone": true,
+    "require_in_domain_probe_before_precursor_analysis": true,
+    "forbidden_substitution": "Do not substitute Jpk, dJpk/dt, sheet width, generic flux/current scalars, or FAIR-MAST absolute milliseconds for a physically identified in-domain native magnetic probe.",
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic geometry/provenance only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+  }
+}
