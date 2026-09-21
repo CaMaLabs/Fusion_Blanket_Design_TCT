@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-050-native-magnetic-probe-timeseries-baseline-env-repair",
+  "processed_result_blob_sha": "d2d56ed22b275644770b9b605e4fca3b16fedb3a",
+  "processed_result_head_before": "dd457e5164cc11aff9435c12ec13f18072e05668",
+  "formal_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIMESERIES_BASELINE_CAPTURED",
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "The environment repair succeeded and native M3D-C1 completed with return code 0, so the earlier binary-discovery failure is resolved. However, the native log explicitly reports 'Point not found in domain' for the requested magnetic probe at x=2.3000,z=0.0000. Therefore the formal classification is preserved exactly but is not interpreted as a valid physical magnetic-probe timeseries measurement. A focused placement-validity audit is queued before any precursor analysis.",
+  "new_job_id": "20260922-051-native-magnetic-probe-placement-audit",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic capture/geometry only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "timestamp": "2026-09-22T00:00:00Z"
+}
