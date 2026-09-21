@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+REPO="/home/ubuntu/work/openmc/sweep"
+cd "$REPO"
+python3 -u tools/tct_mechanism_explorer/native_restart_unsplit_import_export_audit.py
