@@ -1,0 +1,82 @@
+{
+  "audit_scope": "Static native M3D-C1 audit of unsplit timestep initialization/history reconstruction after full-precision restart failed to restore 1e-12 handoff equivalence; no solver execution or modification.",
+  "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_HISTORY_RECONSTRUCTION_CONTEXT_CAPTURED",
+  "finished_utc": "2026-09-21T14:09:49.984626+00:00",
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "frozen_width_gate_pct_gt": 0.02,
+  "handoff_equivalence": "FAILED_AT_1E-12_IN_JOB_041_WITH_DOUBLE_CHECKPOINT_FIELDS",
+  "history_candidate_explicit_restart_mentions": {},
+  "history_candidate_symbols": [],
+  "history_candidates_without_explicit_restart_mention": [],
+  "interpretation_guard": "Static absence from restart_hdf5.f90 is not proof of missing persistence; use only to select one dynamic reconstruction test.",
+  "parent_job_id": "20260921-041-native-restart-full-precision-handoff-repair-rerun",
+  "pipeline_failure": false,
+  "restart_conditioned_routines": [
+    {
+      "end_line": 735,
+      "name": "find_lcfs",
+      "path": "/home/ubuntu/M3DC1-official/unstructured/newpar.f90",
+      "start_line": 707
+    },
+    {
+      "end_line": 905,
+      "name": "derived_quantities",
+      "path": "/home/ubuntu/M3DC1-official/unstructured/newpar.f90",
+      "start_line": 743
+    }
+  ],
+  "source_root": "/home/ubuntu/M3DC1-official",
+  "target_routines": [
+    {
+      "body": "  subroutine assign_variables_unsplit()\n    use basic\n\n    implicit none\n        \n    u_i = 1\n    psi_i = 2\n    vz_i = 3\n    bz_i = 4\n    chi_i = 5\n    den_i = 2*numvar+idens\n    nre_i = 2*numvar+idens+irunaway\n    if(numvar.ge.3) then\n       p_i = 6\n       if(ipres.eq.1) pe_i = 2*numvar+idens+irunaway+1\n    else\n       if(ipres.eq.1) p_i = 2*numvar+idens+irunaway+1\n    end if\n    if(imp_bf.eq.1) then\n       bf_i = 2*numvar+idens+irunaway+ipres+1\n       e_i = 2*numvar+idens+irunaway+ipres+2\n    else\n       bf_i = 1\n       e_i = 2*numvar+idens+irunaway+ipres+1\n    end if\n\n    call associate_field(u_v,    phi_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  phi_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)\n    endif\n    \n    if(ipres.eq.1 .and. numvar.ge.3) then\n       call associate_field(pe_v,  phi_vec,    pe_i)\n    end if\n    if(ipres.eq.1 .or. numvar.ge.3) then \n       call associate_field(p_v,  phi_vec,    p_i)\n    end if\n    \n    if(idens.eq.1) then\n       call associate_field(den_v,  phi_vec,    den_i)\n    end if\n\n    if(irunaway.eq.1) then\n       call associate_field(nre_v,  phi_vec,    nre_i)\n    end if\n\n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)\n    end if\n    \n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n       call associate_field(e_v, phi_vec, e_i)\n    end if       \n  end subroutine assign_variables_unsplit",
+      "end_line": 151,
+      "history_tokens": [
+        "0"
+      ],
+      "name": "assign_variables_unsplit",
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_unsplit.f90",
+      "restart_condition_present": false,
+      "start_line": 91
+    },
+    {
+      "body": "  subroutine finalize_timestep_unsplit\n    use basic\n    use sparse\n    implicit none\n\n    if(.not.initialized) return\n\n    call destroy_mat(s1_mat)\n    call destroy_mat(d1_mat)\n    if(i3d.eq.1) call destroy_mat(o1_mat)\n\n  end subroutine finalize_timestep_unsplit",
+      "end_line": 83,
+      "history_tokens": [],
+      "name": "finalize_timestep_unsplit",
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_unsplit.f90",
+      "restart_condition_present": false,
+      "start_line": 72
+    },
+    {
+      "body": "  subroutine initialize_timestep\n    use basic\n    implicit none\n\n    select case(isplitstep)\n    case(0)\n       call initialize_timestep_unsplit\n       call assign_variables_unsplit\n    case(1:2)\n       call initialize_timestep_split\n       call assign_variables_split\n    end select\n\n    if(myrank.eq.0 .and. iprint.ge.1) then\n       print *, 'Index of U: ', u_i\n       print *, 'Index of V: ', vz_i\n       print *, 'Index of Chi: ', chi_i\n       print *, 'Index of Psi: ', psi_i\n       print *, 'Index of Bz: ', bz_i\n       print *, 'Index of P: ', p_i\n       print *, 'Index of n: ', den_i\n       print *, 'Index of Pe: ', pe_i\n       print *, 'Index of f: ', bf_i\n       print *, 'Index of E: ', e_i\n    end if\n  end subroutine initialize_timestep",
+      "end_line": 36,
+      "history_tokens": [
+        "0"
+      ],
+      "name": "initialize_timestep",
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step.f90",
+      "restart_condition_present": false,
+      "start_line": 11
+    },
+    {
+      "body": "  subroutine initialize_timestep_unsplit\n    use sparse\n    use basic\n    implicit none\n\n    vecsize_phi  = numvar*2 + idens + irunaway + ipres + imp_bf\n    \n    ! add electrostatic potential equation\n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) &\n         vecsize_phi = vecsize_phi + 1\n    \n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    ! Matrices\n    call set_matrix_index(s1_mat, s1_mat_index)\n    call set_matrix_index(d1_mat, d1_mat_index)\n#ifdef REORDERED\n    call create_mat(s1_mat, vecsize_phi, vecsize_phi, icomplex, 1, is1_agg_blk_cnt, is1_agg_scp)\n#else\n    call create_mat(s1_mat, vecsize_phi, vecsize_phi, icomplex, 1)\n#endif\n    call create_mat(d1_mat, vecsize_phi, vecsize_phi, icomplex, 0)\n    if(i3d.eq.1) then\n       call set_matrix_index(o1_mat, o1_mat_index)\n       call create_mat(o1_mat, vecsize_phi, 1, icomplex, 0)\n    endif\n\n    initialized = .true.\n  end subroutine initialize_timestep_unsplit",
+      "end_line": 70,
+      "history_tokens": [
+        "0"
+      ],
+      "name": "initialize_timestep_unsplit",
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_unsplit.f90",
+      "restart_condition_present": false,
+      "start_line": 36
+    }
+  ],
+  "target_routines_found": [
+    "assign_variables_unsplit",
+    "finalize_timestep_unsplit",
+    "initialize_timestep",
+    "initialize_timestep_unsplit"
+  ],
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST"
+}
