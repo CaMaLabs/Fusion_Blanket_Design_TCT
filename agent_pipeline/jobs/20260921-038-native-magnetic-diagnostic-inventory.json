@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-038-native-magnetic-diagnostic-inventory",
+  "parent_result_job_id": "20260921-037-native-live-hdf5-precursor-controller",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_diagnostic_inventory.sh",
+  "timeout_seconds": 1800,
+  "result_paths": ["validation_runs/m3dc1_tct_native_magnetic_diagnostic_inventory"],
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_diagnostic_inventory/summary.json",
+  "purpose": "Inventory native M3D-C1 magnetic probe / Mirnov-like diagnostics in the live Taylor baseline after confirming that FAIR-MAST absolute milliseconds cannot be causally replayed in the current native characterization window. This is read-only diagnostic discovery for the next simulation-native precursor/controller validation.",
+  "interpretation_contract": {
+    "read_only": true,
+    "do_not_modify_physics": true,
+    "do_not_modify_baseline": true,
+    "precursor_authority_goal": "Identify a physically named native magnetic diagnostic suitable for Mirnov/toroidal-like precursor construction.",
+    "forbidden_substitution": "Do not silently substitute Jpk, dJpk/dt, sheet width, or FAIR-MAST absolute milliseconds for a native magnetic precursor.",
+    "claim_boundary": "Diagnostic/provenance inventory only; no precursor-performance, controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
