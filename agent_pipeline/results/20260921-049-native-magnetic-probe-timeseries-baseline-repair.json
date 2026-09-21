@@ -1,0 +1,27 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.06413912773132324,
+  "error": null,
+  "finished_utc": "2026-09-21T18:58:53.673195Z",
+  "head_before": "bf235364b4ff1c287dac61bf41fd81eaf3a0fcb8",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260921-049-native-magnetic-probe-timeseries-baseline-repair.json",
+  "job_id": "20260921-049-native-magnetic-probe-timeseries-baseline-repair",
+  "log_path": "agent_pipeline/logs/20260921-049-native-magnetic-probe-timeseries-baseline-repair.log",
+  "log_sha256": "314e1ce54a38da1bb6c9b0b2218492a999e16ac052a9ae8faf4c49d38ffb8246",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_timeseries_baseline"
+  ],
+  "return_code": 91,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_timeseries_baseline.sh",
+  "runner_sha256": "1c14395d53b985cd1a070821593e06fb7b4cdb6ac13afb99967cf3ffafdf2068",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:58:53.608030Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_timeseries_baseline/summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}
