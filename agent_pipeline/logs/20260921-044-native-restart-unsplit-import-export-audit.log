@@ -1,0 +1,91 @@
+job_id=20260921-044-native-restart-unsplit-import-export-audit
+started_utc=2026-09-21T14:13:50.844874Z
+head_before=91039ef01788149577c8073c06c4dea8c81071a3
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_IMPORT_EXPORT_CONTEXT_CAPTURED",
+  "pipeline_failure": false,
+  "parent_job_id": "20260921-043-native-restart-unsplit-work-vector-audit",
+  "audit_scope": "Static source trace of native unsplit time-advance vector import/export and call order; no solver execution or modification.",
+  "source_root": "/home/ubuntu/M3DC1-official",
+  "routines": [
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step.f90",
+      "name": "import_time_advance_vectors",
+      "start_line": 252,
+      "end_line": 263,
+      "body": "subroutine import_time_advance_vectors\n  use basic\n  implicit none\n\n  select case(isplitstep)\n  case(0)\n     call import_time_advance_vectors_unsplit\n  case(1:2)\n     call import_time_advance_vectors_split\n  end select\n\nend subroutine import_time_advance_vectors"
+    },
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step.f90",
+      "name": "export_time_advance_vectors",
+      "start_line": 271,
+      "end_line": 281,
+      "body": "subroutine export_time_advance_vectors\n  use basic\n  implicit none\n\n  select case(isplitstep)\n  case(0)\n     call export_time_advance_vectors_unsplit\n  case(1:2)\n     call export_time_advance_vectors_split\n  end select\nend subroutine export_time_advance_vectors"
+    },
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_split.f90",
+      "name": "import_time_advance_vectors_split",
+      "start_line": 649,
+      "end_line": 702,
+      "body": "subroutine import_time_advance_vectors_split\n  use basic\n  use arrays\n  use runaway_mod\n  use runaway_advection\n\n  implicit none\n\n  u_v = u_field(1)\n  psi_v = psi_field(1)\n  if(numvar.ge.2) then\n     vz_v = vz_field(1)\n     bz_v = bz_field(1)\n  end if\n  if(numvar.ge.3) then \n     chi_v = chi_field(1)\n  endif\n\n  if(ipressplit.eq.0) then\n     if(numvar.ge.3) then\n        if(ipres.eq.1) then\n        ! store electron pressure in pe_v\n           pe_v = pe_field(1)\n           p_v  = p_field(1)\n        else\n        ! store total pressure in pe_v\n           pe_v = p_field(1)\n        end if\n     else \n        if(ipres.eq.1) then\n           p_v = p_field(1)\n        endif\n     end if\n  else    ! on ipressplit.eq.0\n     p_v  = p_field(1)\n     te_v = te_field(1)\n     if(ipres.eq.1 .and. numvar.ge.3) then\n        pe_v = pe_field(1)\n        ti_v = ti_field(1)\n     endif\n  endif   ! on ipressplit.eq.0\n\n  den_v = den_field(1)\n  ne_v = ne_field(1)\n  if(irunaway .eq. 2) call runaway_advance\n  if((irunaway .ge. 1).and.(ra_characteristics.eq.1)) call runaway_advection_step(dt*t0_norm)\n  if(irunaway .gt. 0) nre_v = nre_field(1)\n#ifdef USEPARTICLES\n  if(itwofluid .gt. 0) densmooth_v = densmooth_field\n#endif\n  if(imp_bf.eq.1) bfp_v = bfp_field(1)\n  if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) e_v = e_field(1)\n\nend subroutine import_time_advance_vectors_split"
+    },
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_split.f90",
+      "name": "export_time_advance_vectors_split",
+      "start_line": 710,
+      "end_line": 781,
+      "body": "subroutine export_time_advance_vectors_split\n  use basic\n  use arrays\n\n  implicit none\n\n  if(iadapt .ne. 0) then\n    u_field_pre = u_field(1)\n    psi_field_pre = psi_field(1)\n  end if\n  u_field(1) = u_v\n  psi_field(1) = psi_v\n  if(numvar.ge.2) then\n     vz_field(1) = vz_v\n     bz_field(1) = bz_v\n  end if\n  if(numvar.ge.3) then\n     chi_field(1) = chi_v\n  endif\n \n  if(ipressplit.eq.0) then\n     if((numvar.ge.3 .or. ipres.eq.1) .and. isplitstep.ge.1) then\n        te_field(1) = te_v\n     endif\n     if(numvar.ge.3) then\n\n        if(ipres.eq.1) then\n        ! electron pressure is stored in pe_v\n           pe_field(1) = pe_v\n           p_field(1)  = p_v\n        else\n        ! total pressure is stored in pe_v\n           pe_field(1) = pe_v\n           call mult(pe_field(1), pefac)\n           p_field(1)  = pe_v\n        end if\n     else \n        if(ipres.eq.1) then\n           pe_field(1) = p_v\n           call mult(pe_field(1), pefac)\n           p_field(1) = p_v\n        endif\n     endif\n  else    ! on ipressplit.eq.0\n      p_field(1) = p_v\n      te_field(1) = te_v\n      if(ipres.eq.0 .or. (ipres.eq.1 .and. numvar.lt.3)) then\n         if(itemp.eq.1) then\n            ti_field(1) = te_v\n            call mult(ti_field(1), (1.-pefac)/pefac)\n         else\n            pe_field(1) = p_v\n            call mult(pe_field(1), pefac)\n         end if\n      else\n         pe_field(1) = pe_v\n         ti_field(1) = ti_v \n      endif\n\n  endif   ! on ipressplit.eq.0\n\n  if(idens.eq.1) then\n     ne_field(1) = ne_v\n     den_field(1) = den_v\n  end if\n  if(irunaway .gt. 0) then\n     nre_field(1) = nre_v\n  endif\n  if(imp_bf.eq.1) bfp_field(1) = bfp_v\n  if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) e_field(1) = e_v\n\nend subroutine export_time_advance_vectors_split"
+    },
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_unsplit.f90",
+      "name": "import_time_advance_vectors_unsplit",
+      "start_line": 180,
+      "end_line": 211,
+      "body": "subroutine import_time_advance_vectors_unsplit\n  use basic\n  use arrays\n\n  implicit none\n\n  u_v = u_field(1)\n  psi_v = psi_field(1)\n  if(numvar.ge.2) then\n     vz_v = vz_field(1)\n     bz_v = bz_field(1)\n  end if\n  if(numvar.ge.3) then \n     chi_v = chi_field(1)\n  endif\n\n  if(ipres.eq.1 .or. numvar.ge.3) then\n     p_v = p_field(1)\n  end if\n\n  if(ipres.eq.1 .and. numvar.ge.3) then\n     pe_v = pe_field(1)\n  end if\n\n  if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n     e_v = e_field(1)\n  end if\n\n  if(idens.eq.1) den_v = den_field(1)\n  if(irunaway.eq.1) nre_v = nre_field(1)\n  if(imp_bf.eq.1) bfp_v = bfp_field(1)\nend subroutine import_time_advance_vectors_unsplit"
+    },
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_unsplit.f90",
+      "name": "export_time_advance_vectors_unsplit",
+      "start_line": 219,
+      "end_line": 260,
+      "body": "subroutine export_time_advance_vectors_unsplit\n  use basic\n  use arrays\n\n  implicit none\n\n  if(iadapt .ne. 0) then\n    u_field_pre = u_field(1)\n    psi_field_pre = psi_field(1)\n  end if\n\n  u_field(1) = u_v\n  psi_field(1) = psi_v\n  if(numvar.ge.2) then\n     vz_field(1) = vz_v\n     bz_field(1) = bz_v\n  end if\n  if(numvar.ge.3) then\n     chi_field(1) = chi_v\n  endif\n\n  if(ipres.eq.1 .or. numvar.ge.3) then\n     p_field(1) = p_v\n  end if\n\n  if(ipres.eq.1 .and. numvar.ge.3) then\n     pe_field(1) = pe_v\n  else\n     if(ipres.eq.1 .or. numvar.ge.3) then\n        pe_field(1) = p_v\n        call mult(pe_field(1), pefac)\n     end if\n  end if\n\n  if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n     e_field(1) = e_v\n  end if\n\n  if(idens.eq.1) den_field(1) = den_v\n  if(irunaway.eq.1) nre_field(1) = nre_v\n  if(imp_bf.eq.1) bfp_field(1) = bfp_v\nend subroutine export_time_advance_vectors_unsplit"
+    },
+    {
+      "path": "/home/ubuntu/M3DC1-official/unstructured/time_step_unsplit.f90",
+      "name": "step_unsplit",
+      "start_line": 268,
+      "end_line": 346,
+      "body": "subroutine step_unsplit(calc_matrices)\n\n  use boundary_conditions\n  use basic\n  use arrays\n  use sparse\n  use diagnostics\n  use matrix_mod\n  use model\n  use auxiliary_fields\n  use hypervisc\n\n  implicit none\n\n\n  integer, intent(in) :: calc_matrices\n  integer :: jer\n  \n  real :: tstart, tend\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Solving matrix equation...\"\n\n  b1_phi = q4_vec\n\n  if(itime_independent.eq.0) then\n     ! vtemp = d1matrix_sm * phi(n)\n     call matvecmult(d1_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o1_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif\n  end if\n   \n  ! Insert boundary conditions\n  if(calc_matrices.eq.1) then\n     call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s1_mat)\n     call boundary_vel(b1_phi, u_v, vz_v, chi_v, s1_mat)\n     if(idens.eq.1) call boundary_den(b1_phi, den_v, s1_mat)\n     if(irunaway.eq.1) call boundary_nre(b1_phi, nre_v, s1_mat)\n     if(ipres.eq.1 .and. numvar.ge.3) call boundary_pe(b1_phi, pe_v, s1_mat)\n     if(ipres.eq.1 .or. numvar.ge.3) call boundary_p(b1_phi, p_v, s1_mat)\n     call finalize(s1_mat)\n  else\n     call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v)\n     call boundary_vel(b1_phi, u_v, vz_v, chi_v)\n     if(idens.eq.1) call boundary_den(b1_phi, den_v)\n     if(irunaway.eq.1) call boundary_nre(b1_phi, nre_v)\n     if(ipres.eq.1 .and. numvar.ge.3) call boundary_pe(b1_phi, pe_v)\n     if(ipres.eq.1 .or. numvar.ge.3)  call boundary_p(b1_phi, p_v)\n  endif\n\n  ! solve linear system...LU decomposition done first time\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"solving..\"\n  if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n  call newsolve(s1_mat, b1_phi, jer)\n  if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s1_mat)\n  if(myrank.eq.0 .and. itimer.eq.1) then\n     call second(tend)\n     t_solve_b = t_solve_b + tend - tstart\n  endif\n  if(jer.ne.0) then\n     write(*,*) 'Error in field solve', jer\n     call safestop(29)\n  endif\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"done solve.\"\n  \n  ! new field solution at time n+1     \n  phi_vec = b1_phi\n\n  ! apply smoothing operators\n  call apply_hyperv(u_v, vz_v, chi_v)\n  call smooth_fields(psi_v)\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Done solving matrix equation.\"\nend subroutine step_unsplit"
+    }
+  ],
+  "call_sites": [
+    {
+      "path": "unstructured/time_step.f90",
+      "line": 155,
+      "callee": "import_time_advance_vectors",
+      "context": "    if ((kinetic .eq. 1) .and. (linear .eq. 1)) then\n       if (myrank .eq. 0 .and. itimer .eq. 1) call second(tstart)\n       call ludefvel_nolin\n       if (myrank .eq. 0 .and. itimer .eq. 1) then\n          call second(tend)\n          t_ludefall = t_ludefall + tend - tstart\n       end if\n    end if\n#endif\n\n    ! copy field data to time-advance vectors\n    if(myrank.eq.0 .and. iprint.ge.1) print *,\"Importing time advance vectors..\"\n    call import_time_advance_vectors\n\n    ! advance time\n    if(myrank.eq.0 .and. iprint.ge.1) print *, \"Advancing time...\"\n    if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n    if(isplitstep.ge.1) then\n       call step_split(calc_matrices)\n    else\n       call step_unsplit(calc_matrices)\n    end if\n    if(myrank.eq.0 .and. itimer.eq.1) then \n       call second(tend)\n       if(iprint.ge.1) print *, \"Time spent in *_step: \", tend-tstart"
+    },
+    {
+      "path": "unstructured/time_step.f90",
+      "line": 163,
+      "callee": "step_unsplit",
+      "context": "#endif\n\n    ! copy field data to time-advance vectors\n    if(myrank.eq.0 .and. iprint.ge.1) print *,\"Importing time advance vectors..\"\n    call import_time_advance_vectors\n\n    ! advance time\n    if(myrank.eq.0 .and. iprint.ge.1) print *, \"Advancing time...\"\n    if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n    if(isplitstep.ge.1) then\n       call step_split(calc_matrices)\n    else\n       call step_unsplit(calc_matrices)\n    end if\n    if(myrank.eq.0 .and. itimer.eq.1) then \n       call second(tend)\n       if(iprint.ge.1) print *, \"Time spent in *_step: \", tend-tstart\n    end if\n\n    if(nplanes.le.1) exit\n    ! check if time step should be repeated\n\n#ifdef USE3D\n    maxiter = 0\n    do icount=1,maxnumofsolves"
+    },
+    {
+      "path": "unstructured/time_step.f90",
+      "line": 201,
+      "callee": "export_time_advance_vectors",
+      "context": "  time = time + dt\n  dtold = dt\n  if(ntime.gt.1 .and. linear.eq.0) call variable_timestep\n\n  call pellet_advance\n\n!  call runaway_advance\n\n  ! copy time advance vectors to field data\n  if(myrank.eq.0 .and. iprint.ge.2) print *, \"Exporting time advance vectors..\"\n\n! if(eqsubtract.eq.0) call subtract_axi    !DEBUG\n  call export_time_advance_vectors\n  !if (irunaway .eq. 2) then\n  !   call smooth_runaway\n  !endif\n\n#ifdef USEPARTICLES\n if(kinetic.eq.0) then\n    if (nplanes.gt.1) call filter_fields\n    call set_parallel_velocity\n endif\n#endif\n\n#ifdef USEPARTICLES"
+    }
+  ],
+  "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+  "handoff_equivalence": "FAILED_AT_1E-12_IN_JOB_041_WITH_DOUBLE_CHECKPOINT_FIELDS",
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "finished_utc": "2026-09-21T14:13:50.953503+00:00"
+}
+
+finished_utc=2026-09-21T14:13:50.960081Z
+return_code=0
