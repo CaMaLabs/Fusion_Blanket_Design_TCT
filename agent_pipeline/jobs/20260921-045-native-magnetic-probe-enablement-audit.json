@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-045-native-magnetic-probe-enablement-audit",
+  "parent_result_job_id": "20260921-038-native-magnetic-diagnostic-inventory",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_enablement_audit.sh",
+  "timeout_seconds": 1800,
+  "result_paths": ["validation_runs/m3dc1_tct_native_magnetic_probe_enablement_audit"],
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_enablement_audit/summary.json",
+  "purpose": "Resolve whether the native M3D-C1 magnetic-probe interface is evidenced and usable for a simulation-native precursor, because the parent inventory found candidate magnetic/flux datasets but the Taylor baseline has imag_probes=0 and no configured probe coordinates.",
+  "interpretation_contract": {
+    "read_only": true,
+    "do_not_modify_physics": true,
+    "do_not_modify_baseline": true,
+    "forbidden_substitution": "Do not substitute Jpk, dJpk/dt, sheet width, generic flux/current scalars, or FAIR-MAST absolute milliseconds for a physically identified native magnetic probe.",
+    "frozen_width_gate_pct": 0.020,
+    "frozen_jpk_gate_pct": 0.10,
+    "gate_note": "No efficacy gate is evaluated by this read-only audit; any later controller claim must retain the frozen gates without loosening them.",
+    "claim_boundary": "Normalized native M3D-C1 diagnostic provenance/enablement only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+  }
+}
