@@ -27,11 +27,21 @@ p.write_text(s)
 PY
 BIN="${M3DC1_BIN:-}"
 if [[ -z "$BIN" ]]; then
-  for c in /root/M3DC1/unstructured/build-mpich325/m3dc1_2d /root/M3DC1/unstructured/build-openmpi319/m3dc1_2d; do
+  for c in \
+    /root/M3DC1/unstructured/_localgnu-petsc-opt-25/m3dc1_2d \
+    /root/M3DC1/unstructured/build-mpich325/m3dc1_2d \
+    /root/M3DC1/unstructured/build-openmpi319/m3dc1_2d \
+    /home/ubuntu/M3DC1/unstructured/_localgnu-petsc-opt-25/m3dc1_2d \
+    /home/ubuntu/M3DC1/unstructured/build-mpich325/m3dc1_2d \
+    /home/ubuntu/M3DC1/unstructured/build-openmpi319/m3dc1_2d; do
     [[ -x "$c" ]] && BIN="$c" && break
   done
 fi
-[[ -n "$BIN" && -x "$BIN" ]] || { echo 'No local m3dc1_2d binary found' >&2; exit 91; }
+if [[ -z "$BIN" ]]; then
+  BIN="$(find /root/M3DC1 /home/ubuntu/M3DC1 -type f -name m3dc1_2d -perm -111 -print -quit 2>/dev/null || true)"
+fi
+[[ -n "$BIN" && -x "$BIN" ]] || { echo 'No local m3dc1_2d binary found after explicit and bounded discovery' >&2; exit 91; }
+echo "Using M3D-C1 binary: $BIN" >&2
 MPI="$(command -v mpiexec.mpich || command -v mpirun || true)"
 [[ -n "$MPI" ]] || { echo 'No MPI launcher found' >&2; exit 92; }
 set +e
