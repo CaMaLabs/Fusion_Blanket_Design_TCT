@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-043-native-restart-unsplit-work-vector-audit",
+  "processed_result_path": "agent_pipeline/results/20260921-043-native-restart-unsplit-work-vector-audit.json",
+  "processed_result_commit": "999fb691fdbd1de22ebdf9b99c0dbddd88193c1c",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_WORK_VECTOR_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "The work-vector trace confirms phi_vec, phip_vec, q4_vec, b1_phi and b2_phi have no direct restart_hdf5 persistence. q4_vec is explicitly zeroed/reassembled and used as the unsplit RHS source, so simple q4 persistence is not supported as the cause. The key remaining question is the import of restored physical fields into the freshly allocated phi_vec before the first postrestart step. A focused import/export call-order audit is queued. Handoff equivalence remains failed at 1e-12; frozen gates are unchanged.",
+  "new_job_id": "20260921-044-native-restart-unsplit-import-export-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-21T14:13:00Z"
+}
