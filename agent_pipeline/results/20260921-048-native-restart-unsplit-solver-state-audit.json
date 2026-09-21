@@ -1,0 +1,593 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.3643612861633301,
+  "error": null,
+  "finished_utc": "2026-09-21T18:26:46.735224Z",
+  "head_before": "981e244a851b46a4bdd768ef836f102f22d4cf00",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260921-048-native-restart-unsplit-solver-state-audit.json",
+  "job_id": "20260921-048-native-restart-unsplit-solver-state-audit",
+  "log_path": "agent_pipeline/logs/20260921-048-native-restart-unsplit-solver-state-audit.log",
+  "log_sha256": "f39a07511015fc6dc16f01ce37cd0f8f428d003eecb8094d3ce77e5272ed86e3",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_unsplit_solver_state"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_unsplit_solver_state_audit.sh",
+  "runner_sha256": "1a25ab18f93fc9f97298670f7ca724bfc40de73dd073956fedd6bb938accf0ed",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:26:46.369634Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Static source audit of restart-sensitive linear-solver initial-guess, matrix/preconditioner reuse, and rebuild state for the first unsplit post-restart step; no solver execution or modification.",
+    "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_SOLVER_STATE_CONTEXT_CAPTURED",
+    "finished_utc": "2026-09-21T18:26:46.702627+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "handoff_equivalence": "REQUIRED_REFERENCE_FAILURE_AT_1E-12_IN_JOB_041_WITH_DOUBLE_CHECKPOINT_FIELDS",
+    "match_count": 92,
+    "matches": [
+      {
+        "context": "  real    :: prad_fz  ! density of impurity species as fraction of electron density \n\n  ! general equilibrium parameters\n  integer :: irestart ! 1 = reads restart file as initial condition\n                      ! 2 = reads restart file to initialize GS solve\n                      ! 3 = reads 2D RL=1 restart file o initialize 2D COM=1 run\n  integer :: irestart_slice   ! field output timeslice from which to restart",
+        "line": 177,
+        "path": "unstructured/M3Dmodules.f90",
+        "text": "integer :: irestart ! 1 = reads restart file as initial condition"
+      },
+      {
+        "context": "\n  ! numerical parameters\n  integer :: ntimemax    ! number of timesteps\n  integer :: nskip       ! number of timesteps per matrix recalculation\n  integer :: pskip       ! number of timesteps per perconditioner recalculation\n  integer :: iskippc     ! number of times preconditioner is reused\n  integer :: iconstflux  ! 1 = conserve toroidal flux",
+        "line": 346,
+        "path": "unstructured/M3Dmodules.f90",
+        "text": "integer :: nskip       ! number of timesteps per matrix recalculation"
+      },
+      {
+        "context": "  ! numerical parameters\n  integer :: ntimemax    ! number of timesteps\n  integer :: nskip       ! number of timesteps per matrix recalculation\n  integer :: pskip       ! number of timesteps per perconditioner recalculation\n  integer :: iskippc     ! number of times preconditioner is reused\n  integer :: iconstflux  ! 1 = conserve toroidal flux\n  integer :: integrator  ! 0 = Crank-Nicholson, 1 = BDF2",
+        "line": 347,
+        "path": "unstructured/M3Dmodules.f90",
+        "text": "integer :: pskip       ! number of timesteps per perconditioner recalculation"
+      },
+      {
+        "context": "  integer :: ntimemax    ! number of timesteps\n  integer :: nskip       ! number of timesteps per matrix recalculation\n  integer :: pskip       ! number of timesteps per perconditioner recalculation\n  integer :: iskippc     ! number of times preconditioner is reused\n  integer :: iconstflux  ! 1 = conserve toroidal flux\n  integer :: integrator  ! 0 = Crank-Nicholson, 1 = BDF2\n  integer :: isplitstep  ! 1 = do timestep splitting",
+        "line": 348,
+        "path": "unstructured/M3Dmodules.f90",
+        "text": "integer :: iskippc     ! number of times preconditioner is reused"
+      },
+      {
+        "context": "  integer :: mod_null_rs, mod_null_rs2  ! if 1, modify xnull,znull or xnull2,znull2 at restart\n  real :: temax, temax_readin      ! maximum temperature, reading in for ibootstrap=3\n\n  integer :: isolve_with_guess=0 ! (=0; use zero initial guess); (=1; use previous step value as non-zero initial guess)\n\n  ! PID controllers\n  type(pid_control), save :: i_control, n_control",
+        "line": 542,
+        "path": "unstructured/M3Dmodules.f90",
+        "text": "integer :: isolve_with_guess=0 ! (=0; use zero initial guess); (=1; use previous step value as non-zero initial guess)"
+      },
+      {
+        "context": "  ! initialize output for HDF5 and C1ke\n  call initialize_output ()\n \n  select case (irestart)\n  case(0)\n     ! Initialize from routine\n",
+        "line": 224,
+        "path": "unstructured/newpar.f90",
+        "text": "select case (irestart)"
+      },
+      {
+        "context": "\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n",
+        "line": 271,
+        "path": "unstructured/newpar.f90",
+        "text": "if(irestart.ne.0) then"
+      },
+      {
+        "context": "\n  ! output simulation parameters\n  ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  if(irestart.eq.0) then\n     if(myrank.eq.0 .and. iprint.ge.1) &\n          print *, \" Writing simulation parameters\"\n     ",
+        "line": 287,
+        "path": "unstructured/newpar.f90",
+        "text": "if(irestart.eq.0) then"
+      },
+      {
+        "context": "  if (iadapt .eq. 4) call adapt_by_error\n#endif\n\n  if(irestart.eq.0  .or. iadapt.gt.0) then\n     tflux0 = tflux\n  endif\n",
+        "line": 342,
+        "path": "unstructured/newpar.f90",
+        "text": "if(irestart.eq.0  .or. iadapt.gt.0) then"
+      },
+      {
+        "context": "  subroutine get_pc_skip_count(MAX_SAME_PC_COUNT)\n    use basic, ONLY: iskippc, myrank\n    implicit none\n   \n    integer :: MAX_SAME_PC_COUNT",
+        "line": 2,
+        "path": "unstructured/get_pc_skip_count.f90",
+        "text": "use basic, ONLY: iskippc, myrank"
+      },
+      {
+        "context": "   \n    integer :: MAX_SAME_PC_COUNT\n\n    MAX_SAME_PC_COUNT = iskippc\n    if(myrank.eq.0) &\n    write(*,*) \"MAX_SAME_PC_COUNT=\", MAX_SAME_PC_COUNT\n    return",
+        "line": 7,
+        "path": "unstructured/get_pc_skip_count.f90",
+        "text": "MAX_SAME_PC_COUNT = iskippc"
+      },
+      {
+        "context": "! ~~~~~~~~~~~~\n! advance fields using unsplit time step\n!============================================================\nsubroutine step_unsplit(calc_matrices)\n\n  use boundary_conditions\n  use basic",
+        "line": 268,
+        "path": "unstructured/time_step_unsplit.f90",
+        "text": "subroutine step_unsplit(calc_matrices)"
+      },
+      {
+        "context": "  implicit none\n\n\n  integer, intent(in) :: calc_matrices\n  integer :: jer\n  \n  real :: tstart, tend",
+        "line": 283,
+        "path": "unstructured/time_step_unsplit.f90",
+        "text": "integer, intent(in) :: calc_matrices"
+      },
+      {
+        "context": "  end if\n   \n  ! Insert boundary conditions\n  if(calc_matrices.eq.1) then\n     call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s1_mat)\n     call boundary_vel(b1_phi, u_v, vz_v, chi_v, s1_mat)\n     if(idens.eq.1) call boundary_den(b1_phi, den_v, s1_mat)",
+        "line": 306,
+        "path": "unstructured/time_step_unsplit.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "\n    if (istartnew.eq.1) then\n       ntime = 0\n       irestart = 0\n       call hdf5_finalize(error)\n       call hdf5_initialize(.false., error)\n",
+        "line": 332,
+        "path": "unstructured/restart_hdf5.f90",
+        "text": "irestart = 0"
+      },
+      {
+        "context": "\ncall PetscLogStagePush(stageA,jer)\n#ifdef VERSION1\n    if(mod(ntime,pskip)==0) then\n        if(myrank.eq.0) print *, \" clear_mat s1_mat\",ntime, s1_mat%imatrix\n    call clear_mat(s1_mat)\n    else",
+        "line": 476,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(mod(ntime,pskip)==0) then"
+      },
+      {
+        "context": "        call zero_mat(s1_mat)\n    endif\n#else\n    if(pskip==0) then\n            !orgin solve option: kspSet=1, with KSP Object completely destroyed after each solve\n            if(myrank.eq.0) print *, \" clear_mat s1_mat\",ntime, s1_mat%imatrix\n            call clear_mat(s1_mat)",
+        "line": 484,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(pskip==0) then"
+      },
+      {
+        "context": "            !orgin solve option: kspSet=1, with KSP Object completely destroyed after each solve\n            if(myrank.eq.0) print *, \" clear_mat s1_mat\",ntime, s1_mat%imatrix\n            call clear_mat(s1_mat)\n    else if(pskip==1) then\n            !default\n            !third solve option: kspSet=3, similar to pskip>1, \n            !update both A&P contents at every timestep, but no KSP Object destroyed after each solve",
+        "line": 488,
+        "path": "unstructured/time_step_split.f90",
+        "text": "else if(pskip==1) then"
+      },
+      {
+        "context": "            call clear_mat(s1_mat)\n    else if(pskip==1) then\n            !default\n            !third solve option: kspSet=3, similar to pskip>1, \n            !update both A&P contents at every timestep, but no KSP Object destroyed after each solve\n            !to save memory usage and solve setup time.\n            if(myrank.eq.0) print *, \" update_mat s1_mat\",ntime, s1_mat%imatrix",
+        "line": 490,
+        "path": "unstructured/time_step_split.f90",
+        "text": "!third solve option: kspSet=3, similar to pskip>1,"
+      },
+      {
+        "context": "            if(myrank.eq.0) print *, \" update_mat s1_mat\",ntime, s1_mat%imatrix\n            call update_mat(s1_mat)\n\n    else !pskip>1\n            !second solve option: kspSet=2, \n            !update A content only at every timestep, update P every 'pskip' number of timesteps. \n            if(mod(ntime,pskip)==0) then",
+        "line": 496,
+        "path": "unstructured/time_step_split.f90",
+        "text": "else !pskip>1"
+      },
+      {
+        "context": "\n    else !pskip>1\n            !second solve option: kspSet=2, \n            !update A content only at every timestep, update P every 'pskip' number of timesteps. \n            if(mod(ntime,pskip)==0) then\n                    if(myrank.eq.0) print *, \" update_mat s1_mat\",ntime, s1_mat%imatrix \n                    call update_mat(s1_mat)",
+        "line": 498,
+        "path": "unstructured/time_step_split.f90",
+        "text": "!update A content only at every timestep, update P every 'pskip' number of timesteps."
+      },
+      {
+        "context": "    else !pskip>1\n            !second solve option: kspSet=2, \n            !update A content only at every timestep, update P every 'pskip' number of timesteps. \n            if(mod(ntime,pskip)==0) then\n                    if(myrank.eq.0) print *, \" update_mat s1_mat\",ntime, s1_mat%imatrix \n                    call update_mat(s1_mat)\n            else",
+        "line": 499,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(mod(ntime,pskip)==0) then"
+      },
+      {
+        "context": "! ~~~~~~~~~~\n! advance fields using split time step\n!============================================================\nsubroutine step_split(calc_matrices)\n\n  use basic\n  use arrays",
+        "line": 789,
+        "path": "unstructured/time_step_split.f90",
+        "text": "subroutine step_split(calc_matrices)"
+      },
+      {
+        "context": "  implicit none\n\n\n  integer, intent(in) :: calc_matrices\n  real :: tstart, tend, t_bound\n  integer :: jer, i \n  type(vector_type) :: temp, temp2",
+        "line": 807,
+        "path": "unstructured/time_step_split.f90",
+        "text": "integer, intent(in) :: calc_matrices"
+      },
+      {
+        "context": "     ! apply boundary conditions\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_vel(b1_vel, u_v, vz_v, chi_v, s1_mat)\n        call finalize(s1_mat)\n     else",
+        "line": 870,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\ncall PetscLogStagePush(stageS,jer)\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_vel)\n        xVec_guess = vel_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s1_mat, b1_vel, xVec_guess, jer)",
+        "line": 888,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "call PetscLogStagePush(stageS,jer)\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_vel)\n        xVec_guess = vel_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s1_mat, b1_vel, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else",
+        "line": 890,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = vel_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "     ! Insert boundary conditions\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_den(temp, den_v, s8_mat)\n        call finalize(s8_mat)\n     else",
+        "line": 945,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "     ! solve linear system...LU decomposition done first time\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_n)\n        xVec_guess = den_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s8_mat, temp, xVec_guess, jer)",
+        "line": 960,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_n)\n        xVec_guess = den_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s8_mat, temp, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else",
+        "line": 962,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = den_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "        ! Insert boundary conditions\n        if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        if((calc_matrices.eq.1).and.(i==1)) then\n           call boundary_nre(temp, nre_v, s15_mat)\n           call finalize(s15_mat)\n        else",
+        "line": 1025,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if((calc_matrices.eq.1).and.(i==1)) then"
+      },
+      {
+        "context": "        ! solve linear system...LU decomposition done first time\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n        if(isolve_with_guess==1) then\n           call create_vector(xVec_guess, vecsize_n)\n           xVec_guess = nreold_vec ! Set the value from the previous step as the initial guess.\n           call newsolve_with_guess(s15_mat, temp, xVec_guess, jer)",
+        "line": 1040,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "\n        if(isolve_with_guess==1) then\n           call create_vector(xVec_guess, vecsize_n)\n           xVec_guess = nreold_vec ! Set the value from the previous step as the initial guess.\n           call newsolve_with_guess(s15_mat, temp, xVec_guess, jer)\n           call destroy_vector(xVec_guess)\n        else",
+        "line": 1042,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = nreold_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "     \n     ! Insert boundary conditions\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_p(temp, p_v, s9_mat)\n        if(ipressplit.eq.1 .and. ipres.eq.1 .and. numvar.ge.3) &\n             call boundary_pe(temp, pe_v, s9_mat)",
+        "line": 1120,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, \"Advancing Pressure--before newsolve\"\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_p)\n        xVec_guess = pres_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s9_mat, temp, xVec_guess, jer)",
+        "line": 1140,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "     if(myrank.eq.0 .and. iprint.ge.1) print *, \"Advancing Pressure--before newsolve\"\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_p)\n        xVec_guess = pres_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s9_mat, temp, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else",
+        "line": 1142,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = pres_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "     \n     ! Insert boundary conditions\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_te(temp, te_v, s9_mat)\n        if(ipres.eq.1 .and. numvar.ge.3) call boundary_ti(temp, ti_v, s9_mat)\n        call finalize(s9_mat)",
+        "line": 1212,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "     ! solve linear system...LU decomposition done first time\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(isolve_with_guess==1) then\n       call create_vector(xVec_guess, vecsize_p)\n       xVec_guess = pret_vec ! Set the value from the previous step as the initial guess.\n       call newsolve_with_guess(s9_mat, temp, xVec_guess, jer)",
+        "line": 1229,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "\n     if(isolve_with_guess==1) then\n       call create_vector(xVec_guess, vecsize_p)\n       xVec_guess = pret_vec ! Set the value from the previous step as the initial guess.\n       call newsolve_with_guess(s9_mat, temp, xVec_guess, jer)\n       call destroy_vector(xVec_guess)\n     else",
+        "line": 1231,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = pret_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "     ! Insert boundary conditions\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s2_mat)\n        if(ipressplit.eq.0 .and. numvar.ge.3) then\n           if(ipres.eq.1) then",
+        "line": 1328,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "     ! solve linear system...LU decomposition done first time\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_phi)\n        xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)",
+        "line": 1357,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_phi)\n        xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else",
+        "line": 1359,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = phi_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "       \n        ! Insert boundary conditions\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        if(calc_matrices.eq.1) then\n           call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s2_mat)\n           if(ipressplit.eq.0 .and. numvar.ge.3) then\n              if(ipres.eq.1) then",
+        "line": 1456,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        \n        !if(linear.eq.0) call clear_mat(s2_mat)\n        if(isolve_with_guess==1) then\n            call create_vector(xVec_guess, vecsize_phi)\n            xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n            call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)",
+        "line": 1487,
+        "path": "unstructured/time_step_split.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "        !if(linear.eq.0) call clear_mat(s2_mat)\n        if(isolve_with_guess==1) then\n            call create_vector(xVec_guess, vecsize_phi)\n            xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n            call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n            call destroy_vector(xVec_guess)\n        else",
+        "line": 1489,
+        "path": "unstructured/time_step_split.f90",
+        "text": "xVec_guess = phi_vec ! Set the value from the previous step as the initial guess."
+      },
+      {
+        "context": "  call add_var_double(\"thimpsm\", thimpsm, 1., \"\", time_grp)\n  call add_var_double(\"harned_mikic\", harned_mikic, 0., \"\", time_grp)\n  call add_var_int(\"isources\", isources, 0, \"\", time_grp)\n  call add_var_int(\"nskip\", nskip, 1, \"\", time_grp)\n  call add_var_int(\"pskip\", pskip, 0, \"\", time_grp)\n  call add_var_int(\"iskippc\", iskippc, 1, \"\", time_grp)\n  call add_var_double(\"dt\", dt, 0.1, &",
+        "line": 490,
+        "path": "unstructured/input.f90",
+        "text": "call add_var_int(\"nskip\", nskip, 1, \"\", time_grp)"
+      },
+      {
+        "context": "  call add_var_double(\"harned_mikic\", harned_mikic, 0., \"\", time_grp)\n  call add_var_int(\"isources\", isources, 0, \"\", time_grp)\n  call add_var_int(\"nskip\", nskip, 1, \"\", time_grp)\n  call add_var_int(\"pskip\", pskip, 0, \"\", time_grp)\n  call add_var_int(\"iskippc\", iskippc, 1, \"\", time_grp)\n  call add_var_double(\"dt\", dt, 0.1, &\n       \"Size of time step\", time_grp)",
+        "line": 491,
+        "path": "unstructured/input.f90",
+        "text": "call add_var_int(\"pskip\", pskip, 0, \"\", time_grp)"
+      },
+      {
+        "context": "  call add_var_int(\"isources\", isources, 0, \"\", time_grp)\n  call add_var_int(\"nskip\", nskip, 1, \"\", time_grp)\n  call add_var_int(\"pskip\", pskip, 0, \"\", time_grp)\n  call add_var_int(\"iskippc\", iskippc, 1, \"\", time_grp)\n  call add_var_double(\"dt\", dt, 0.1, &\n       \"Size of time step\", time_grp)\n  call add_var_double(\"ddt\", ddt, 0., \"\", time_grp)",
+        "line": 492,
+        "path": "unstructured/input.f90",
+        "text": "call add_var_int(\"iskippc\", iskippc, 1, \"\", time_grp)"
+      },
+      {
+        "context": "       \"Number of Fourier harmonics of ke to be calculated and output\", output_grp)\n  call add_var_int(\"ibh_harmonics\", ibh_harmonics, 0, &\n       \"Number of Fourier harmonics of magnetic perturbation to be calculated and output\", output_grp)\n  call add_var_int(\"irestart\", irestart, 0, \"\", output_grp)\n  call add_var_int(\"itimer\", itimer, 0, &\n       \"1: Output internal timer data\", output_grp)\n  call add_var_int(\"iwrite_transport_coeffs\", iwrite_transport_coeffs, 1, &",
+        "line": 1120,
+        "path": "unstructured/input.f90",
+        "text": "call add_var_int(\"irestart\", irestart, 0, \"\", output_grp)"
+      },
+      {
+        "context": "       \"solver tolerance\", solver_grp) \n  call add_var_int(\"solver_type\", solver_type, 0, \"Solver type\", solver_grp)\n  call add_var_int(\"num_iter\", num_iter, 100, \"Maximum number of iterations\", solver_grp)\n  call add_var_int(\"isolve_with_guess\",isolve_with_guess,0, \"newsolve with nonzero initial guess\", solver_grp)\n\n  ! Trilinos options\n  call add_var_string(\"krylov_solver\", krylov_solver, 50,&",
+        "line": 1302,
+        "path": "unstructured/input.f90",
+        "text": "call add_var_int(\"isolve_with_guess\",isolve_with_guess,0, \"newsolve with nonzero initial guess\", solver_grp)"
+      },
+      {
+        "context": "    if(ierr.ne.0) return\n    \n    allocate(kprad_n(0:kprad_z))\n    if(isolve_with_guess==1) allocate(kprad_n_prev(0:kprad_z))\n    allocate(kprad_temp(0:kprad_z))\n    allocate(kprad_particle_source(0:kprad_z))\n    allocate(lp_source_rate(0:kprad_z))",
+        "line": 71,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) allocate(kprad_n_prev(0:kprad_z))"
+      },
+      {
+        "context": "          kprad_particle_source(i) = 0.\n       end do\n\n       if(isolve_with_guess==1) then\n          do i=0, kprad_z\n             call create_field(kprad_n_prev(i))\n          enddo",
+        "line": 101,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "  ! ~~~~~~~~~~~~~\n  !==================================\n  subroutine kprad_destroy\n    use basic, only:isolve_with_guess\n\n    implicit none\n",
+        "line": 127,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "use basic, only:isolve_with_guess"
+      },
+      {
+        "context": "          call destroy_field(kprad_particle_source(i))\n       end do\n       deallocate(kprad_n, kprad_temp)\n       if(isolve_with_guess==1) then\n          do i=0, kprad_z\n             call destroy_field(kprad_n_prev(i))\n          enddo",
+        "line": 142,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "       rhs = 0.\n       call matvecmult(nmat_rhs, kprad_n(j)%vec, rhs%vec)\n!       call boundary_kprad(rhs%vec, kprad_n(j))\n       if(isolve_with_guess==1) then\n         call newsolve_with_guess(nmat_lhs, rhs%vec, kprad_n_prev(j)%vec, ierr)\n       else\n         call newsolve(nmat_lhs, rhs%vec, ierr)",
+        "line": 378,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "       else\n          kprad_n(j) = rhs\n       end if\n       if(isolve_with_guess==1) kprad_n_prev(j) = kprad_n(j)\n    end do\n\n",
+        "line": 394,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) kprad_n_prev(j) = kprad_n(j)"
+      },
+      {
+        "context": "       rhs = 0.\n       call matvecmult(nmat_rhs, kprad_n(0)%vec, rhs%vec)\n       ierr = 0\n       if(isolve_with_guess==1) then\n         call newsolve_with_guess(nmat_lhs, rhs%vec, kprad_n_prev(0)%vec, ierr)\n       else\n         call newsolve(nmat_lhs, rhs%vec, ierr)",
+        "line": 468,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) then"
+      },
+      {
+        "context": "       else\n          kprad_n(0) = rhs          \n       end if\n       if(isolve_with_guess==1) kprad_n_prev(0) = kprad_n(0)\n    end if\n\n",
+        "line": 484,
+        "path": "unstructured/kprad_m3dc1.f90",
+        "text": "if(isolve_with_guess==1) kprad_n_prev(0) = kprad_n(0)"
+      },
+      {
+        "context": "    call unstraighten_fields()\n\n    call create_newvar_matrices\n    if(irestart .ne. 0) return\n    field_vec = 0.\n    field0_vec = 0.\n    if (myrank .eq. 0) print *, \"re-calculate equlibrium after adapt ..\"",
+        "line": 277,
+        "path": "unstructured/adapt.f90",
+        "text": "if(irestart .ne. 0) return"
+      },
+      {
+        "context": "    call unstraighten_fields()\n\n    call create_newvar_matrices\n    if(irestart .ne. 0 .or. linear .eq. 0) return\n    if (myrank .eq. 0) print *, \"reset simulation after adapt ..\"\n    field_vec = 0.\n    field0_vec = 0.",
+        "line": 340,
+        "path": "unstructured/adapt.f90",
+        "text": "if(irestart .ne. 0 .or. linear .eq. 0) return"
+      },
+      {
+        "context": "       call unstraighten_fields()\n\n       call create_newvar_matrices\n       if(irestart .ne. 0 .or. linear .eq. 0) return\n       if (myrank .eq. 0) print *, \"reset simulation after adapt ..\"\n       field_vec = 0.\n       field0_vec = 0.",
+        "line": 538,
+        "path": "unstructured/adapt.f90",
+        "text": "if(irestart .ne. 0 .or. linear .eq. 0) return"
+      },
+      {
+        "context": "    else\n       call h5dopen_f(parent_id, name, dset_id, error)\n\n       if(irestart.ne.0  .and. version_in.lt.32) then\n\n          ! in older versions, N dimension can't change [maxdims(1) was NMAX]\n          ! reset dims to have same NMAX dimension as original",
+        "line": 969,
+        "path": "unstructured/hdf5_output.f90",
+        "text": "if(irestart.ne.0  .and. version_in.lt.32) then"
+      },
+      {
+        "context": "\n    call h5dget_space_f(dset_id, filespace, error)\n\n    if(irestart.ne.0  .and. version_in.lt.32) then\n       ! Ensure NMAX isn't too long\n       call h5sget_simple_extent_dims_f(filespace, dims, maxdims, error)\n       if(maxdims(1).lt.NMAX) local_dims(1) = maxdims(1)",
+        "line": 1041,
+        "path": "unstructured/hdf5_output.f90",
+        "text": "if(irestart.ne.0  .and. version_in.lt.32) then"
+      },
+      {
+        "context": "\n   !Initialize particle population\n   call second(tstart)\n   call init_particles(irestart .gt. 0, ierr)\n   if (ierr .ne. 0) return\n   if (myrank .eq. 0) then\n      call second(tend)",
+        "line": 303,
+        "path": "unstructured/particle_com.f90",
+        "text": "call init_particles(irestart .gt. 0, ierr)"
+      },
+      {
+        "context": "   end if\n   !call particle_step(dt*t0_norm)\n\n   if (irestart.eq.0) then\n      nrmfac(:)=1.0\n      call update_particle_pressure\n      nrmfac_temp(:)=0.",
+        "line": 312,
+        "path": "unstructured/particle_com.f90",
+        "text": "if (irestart.eq.0) then"
+      },
+      {
+        "context": "  !call sum_shared(p_v%vec)\n  !call newsolve(diff3_mat, p_v%vec, ierr)\n  call newvar_solve(p_v%vec,mass_mat_lhs)\n  !if(calc_matrices.eq.1) then\n  !write(0,*) \"111111111111111111\"\n  vparsmooth_field=p_v\n  call destroy_field(p_v)",
+        "line": 4354,
+        "path": "unstructured/particle_com.f90",
+        "text": "!if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "  call sum_shared(p_v%vec)\n  call newsolve(diff3_mat, p_v%vec, ierr)\n  !call newvar_solve(p_v%vec,mass_mat_lhs)\n  !if(calc_matrices.eq.1) then\n  !write(0,*) \"111111111111111111\"\n  densmooth_field=p_v\n  call destroy_field(p_v)",
+        "line": 4518,
+        "path": "unstructured/particle_com.f90",
+        "text": "!if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "\n   !Initialize particle population\n   call second(tstart)\n   call init_particles(irestart .gt. 0, ierr)\n   if (ierr .ne. 0) return\n   if (myrank .eq. 0) then\n      call second(tend)",
+        "line": 305,
+        "path": "unstructured/particle.f90",
+        "text": "call init_particles(irestart .gt. 0, ierr)"
+      },
+      {
+        "context": "   end if\n   !call particle_step(dt*t0_norm)\n\n   if (irestart.eq.0) then\n      nrmfac(:)=1.0\n      call update_particle_pressure\n      nrmfac_temp(:)=0.",
+        "line": 314,
+        "path": "unstructured/particle.f90",
+        "text": "if (irestart.eq.0) then"
+      },
+      {
+        "context": "  !!call sum_shared(p_v%vec)\n  !!call newsolve(diff3_mat, p_v%vec, ierr)\n  !call newvar_solve(p_v%vec,mass_mat_lhs)\n  !!if(calc_matrices.eq.1) then\n  !!write(0,*) \"111111111111111111\"\n  !vparsmooth_field=p_v\n  !call destroy_field(p_v)",
+        "line": 4414,
+        "path": "unstructured/particle.f90",
+        "text": "!!if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "  call sum_shared(p_v%vec)\n  call newsolve(diff3_mat, p_v%vec, ierr)\n  !call newvar_solve(p_v%vec,mass_mat_lhs)\n  !if(calc_matrices.eq.1) then\n  !write(0,*) \"111111111111111111\"\n  densmooth_field=p_v\n  call destroy_field(p_v)",
+        "line": 4892,
+        "path": "unstructured/particle.f90",
+        "text": "!if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "    gamma_buffer = 0.0\n    gamma_converged_flag = 0\n    \n   call hdf5_initialize(irestart.ne.0, ier)\n\n    if(ier.lt.0) then \n       print *, \"Error initializing HDF5\"",
+        "line": 24,
+        "path": "unstructured/output.f90",
+        "text": "call hdf5_initialize(irestart.ne.0, ier)"
+      },
+      {
+        "context": "\n  call h5gopen_f(file_id, \"/\", root_id, error)\n\n  if(ntime.eq.0 .and. irestart.eq.0) then\n     call h5gcreate_f(root_id, \"scalars\", scalar_group_id, error)\n     call write_int_attr(scalar_group_id, \"ntimestep\", ntime, error)\n     if(imag_probes.ne.0) call h5gcreate_f(root_id, \"mag_probes\", mp_group_id, error)",
+        "line": 397,
+        "path": "unstructured/output.f90",
+        "text": "if(ntime.eq.0 .and. irestart.eq.0) then"
+      },
+      {
+        "context": "     call update_int_attr(scalar_group_id, \"ntimestep\", ntime, error)\n     if(imag_probes.ne.0) call h5gopen_f(root_id, \"mag_probes\", mp_group_id, error)\n     if(iflux_loops.ne.0) call h5gopen_f(root_id, \"flux_loops\", fl_group_id, error)\n     if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &\n          call h5gopen_f(root_id, \"pellet\", pel_group_id, error)\n  endif\n",
+        "line": 408,
+        "path": "unstructured/output.f90",
+        "text": "if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &"
+      },
+      {
+        "context": "\n  ! Pellet stuff\n  if(ipellet.ne.0) then\n     if((irestart.eq.0).or.(version_in.ge.31)) then\n        call output_1dextendarr(pel_group_id, \"pellet_r\",       pellet_r,       npellets, ntime, error)\n        call output_1dextendarr(pel_group_id, \"pellet_phi\",     pellet_phi,     npellets, ntime, error)\n        call output_1dextendarr(pel_group_id, \"pellet_z\",       pellet_z,       npellets, ntime, error)",
+        "line": 429,
+        "path": "unstructured/output.f90",
+        "text": "if((irestart.eq.0).or.(version_in.ge.31)) then"
+      },
+      {
+        "context": "        call output_1dextendarr(pel_group_id, \"r_p\",            r_p,            npellets, ntime, error)\n        call output_1dextendarr(pel_group_id, \"cloud_pel\",      cloud_pel,      npellets, ntime, error)\n        call output_1dextendarr(pel_group_id, \"pellet_mix\",     pellet_mix,     npellets, ntime, error)\n        if((irestart.eq.0).or.(version_in.ge.33)) then\n           call output_1dextendarr(pel_group_id, \"cauchy_fraction\", cauchy_fraction, npellets, ntime, error)\n        end if\n        if((irestart.eq.0).or.(version_in.ge.37)) then",
+        "line": 445,
+        "path": "unstructured/output.f90",
+        "text": "if((irestart.eq.0).or.(version_in.ge.33)) then"
+      },
+      {
+        "context": "        if((irestart.eq.0).or.(version_in.ge.33)) then\n           call output_1dextendarr(pel_group_id, \"cauchy_fraction\", cauchy_fraction, npellets, ntime, error)\n        end if\n        if((irestart.eq.0).or.(version_in.ge.37)) then\n           ! pellet_ne is normalized, but pellet_te is in eV\n           call output_1dextendarr(pel_group_id, \"pellet_te\", temp_pel*(n0_norm*1.6022e-12/p0_norm), npellets, ntime, error)\n           call output_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)",
+        "line": 448,
+        "path": "unstructured/output.f90",
+        "text": "if((irestart.eq.0).or.(version_in.ge.37)) then"
+      },
+      {
+        "context": "  call h5gclose_f(scalar_group_id, error)\n  if(imag_probes.ne.0) call h5gclose_f(mp_group_id, error)\n  if(iflux_loops.ne.0) call h5gclose_f(fl_group_id, error)\n  if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &\n          call h5gclose_f(pel_group_id, error)\n  call h5gclose_f(root_id, error)\n",
+        "line": 609,
+        "path": "unstructured/output.f90",
+        "text": "if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &"
+      },
+      {
+        "context": "\n  call h5gopen_f(file_id, \"/\", root_id, error)\n\n  if(ntime.eq.0 .and. irestart.eq.0) then\n     call h5gcreate_f(root_id, \"timings\", timing_group_id, error)\n  else\n     call h5gopen_f(root_id, \"timings\", timing_group_id, error)",
+        "line": 635,
+        "path": "unstructured/output.f90",
+        "text": "if(ntime.eq.0 .and. irestart.eq.0) then"
+      },
+      {
+        "context": "  allocate(dum(NMAX+1))\n  call h5gopen_f(file_id, \"/\", root_id, error)\n\n  if(ntime.eq.0 .and. irestart.eq.0) then\n     call h5gcreate_f(root_id, \"keharmonics\", keharmonics_group_id, error)\n  else\n     call h5gopen_f(root_id, \"keharmonics\", keharmonics_group_id, error)",
+        "line": 1743,
+        "path": "unstructured/output.f90",
+        "text": "if(ntime.eq.0 .and. irestart.eq.0) then"
+      },
+      {
+        "context": "  allocate(dum(BNMAX+1))\n  call h5gopen_f(file_id, \"/\", root_id, error)\n\n  if(ntime.eq.0 .and. irestart.eq.0) then\n     call h5gcreate_f(root_id, \"bharmonics\", bharmonics_group_id, error)\n  else\n     call h5gopen_f(root_id, \"bharmonics\", bharmonics_group_id, error)",
+        "line": 1784,
+        "path": "unstructured/output.f90",
+        "text": "if(ntime.eq.0 .and. irestart.eq.0) then"
+      },
+      {
+        "context": "!  enddo\n\n  call h5gopen_f(file_id, \"/\", root_id, error)\n  if(ntime.eq.0 .and. irestart.eq.0) then\n     call h5gcreate_f(root_id, \"kspits\", kspits_group_id, error)\n  else\n     call h5gopen_f(root_id, \"kspits\", kspits_group_id, error)",
+        "line": 1830,
+        "path": "unstructured/output.f90",
+        "text": "if(ntime.eq.0 .and. irestart.eq.0) then"
+      },
+      {
+        "context": "   call create_field(nreoB_field(0))\n   call create_field(nreoB_field(1))\n   call set_nreoB\n   call init_particles(irestart .gt. 0, ierr)\n   if (ierr .ne. 0) return\n   if (myrank .eq. 0) then\n      call second(tend)",
+        "line": 227,
+        "path": "unstructured/runaway_advection.f90",
+        "text": "call init_particles(irestart .gt. 0, ierr)"
+      },
+      {
+        "context": "  call newvar_solve(p_v%vec,mass_mat_lhs)\n  nreoB_field(1)=p_v\n  call newvar_solve(p2_v%vec,mass_mat_lhs)\n  !if(calc_matrices.eq.1) then\n  !write(0,*) \"111111111111111111\"\n  nreoB_field(0)=p2_v\n  call destroy_field(p_v)",
+        "line": 2184,
+        "path": "unstructured/runaway_advection.f90",
+        "text": "!if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "  !call sum_shared(p_v%vec)\n  !call newsolve(diff3_mat, p_v%vec, ierr)\n  call newvar_solve(p_v%vec,mass_mat_lhs)\n  !if(calc_matrices.eq.1) then\n  !write(0,*) \"111111111111111111\"\n  nre_field(1)=p_v\n  call destroy_field(p_v)",
+        "line": 2244,
+        "path": "unstructured/runaway_advection.f90",
+        "text": "!if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "\n  implicit none\n\n  integer :: calc_matrices, ivel_def, irepeat\n  logical, save :: first_time = .true.\n\n  real :: tstart, tend",
+        "line": 94,
+        "path": "unstructured/time_step.f90",
+        "text": "integer :: calc_matrices, ivel_def, irepeat"
+      },
+      {
+        "context": "\n  ! Determine whether matrices should be re-calculated\n  if(first_time &\n       .or. (linear.eq.0 .and. mod(ntime,nskip).eq.0) &\n       .or. (integrator.eq.1 .and. ntime.eq.1) .or. meshAdapted .eq. 1) then\n     calc_matrices = 1\n  else",
+        "line": 105,
+        "path": "unstructured/time_step.f90",
+        "text": ".or. (linear.eq.0 .and. mod(ntime,nskip).eq.0) &"
+      },
+      {
+        "context": "  if(first_time &\n       .or. (linear.eq.0 .and. mod(ntime,nskip).eq.0) &\n       .or. (integrator.eq.1 .and. ntime.eq.1) .or. meshAdapted .eq. 1) then\n     calc_matrices = 1\n  else\n     calc_matrices = 0\n  endif",
+        "line": 107,
+        "path": "unstructured/time_step.f90",
+        "text": "calc_matrices = 1"
+      },
+      {
+        "context": "       .or. (integrator.eq.1 .and. ntime.eq.1) .or. meshAdapted .eq. 1) then\n     calc_matrices = 1\n  else\n     calc_matrices = 0\n  endif\n\n  ! Advance impurity charge states",
+        "line": 109,
+        "path": "unstructured/time_step.f90",
+        "text": "calc_matrices = 0"
+      },
+      {
+        "context": "  do irepeat = 1, max_repeat\n\n    ! calculate matrices for time advance\n    if(calc_matrices.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.1) print *, \"Defining matrices\"\n       if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n",
+        "line": 127,
+        "path": "unstructured/time_step.f90",
+        "text": "if(calc_matrices.eq.1) then"
+      },
+      {
+        "context": "    if(myrank.eq.0 .and. iprint.ge.1) print *, \"Advancing time...\"\n    if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n    if(isplitstep.ge.1) then\n       call step_split(calc_matrices)\n    else\n       call step_unsplit(calc_matrices)\n    end if",
+        "line": 161,
+        "path": "unstructured/time_step.f90",
+        "text": "call step_split(calc_matrices)"
+      },
+      {
+        "context": "    if(isplitstep.ge.1) then\n       call step_split(calc_matrices)\n    else\n       call step_unsplit(calc_matrices)\n    end if\n    if(myrank.eq.0 .and. itimer.eq.1) then \n       call second(tend)",
+        "line": 163,
+        "path": "unstructured/time_step.f90",
+        "text": "call step_unsplit(calc_matrices)"
+      }
+    ],
+    "parent_job_id": "20260921-046-native-restart-unsplit-first-step-rebuild-audit",
+    "pipeline_failure": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_unsplit_solver_state/native_restart_unsplit_solver_state_summary.json",
+  "summary_sha256": "d35f4caef07432dee3deb198b697b0e92d1b5c57f84c7826c3fa2bd4e66c7683",
+  "timed_out": false
+}
