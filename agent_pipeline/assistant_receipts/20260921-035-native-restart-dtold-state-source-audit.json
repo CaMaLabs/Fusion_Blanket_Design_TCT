@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-035-native-restart-dtold-state-source-audit",
+  "processed_result_path": "agent_pipeline/results/20260921-035-native-restart-dtold-state-source-audit.json",
+  "processed_result_head_before": "33595b99480196efbb024ac158f05ccdfd704eb7",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_DTOLD_STATE_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "The static audit completed successfully and captured a concrete restart-history lead: native source declares dt and dtold as present/previous timestep state, restart handling reads restart state and later initialize_timestep is called, while newpar.f90 subsequently assigns dtold = dt. This is relevant to the first-postrestart discontinuity but remains STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION. Handoff equivalence remains INHERITED_FAILED_AT_1E-12_FROM_JOB_028; zero equivalence is not applicable to this source-only restart-capability audit. The frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260921-036-native-restart-dtold-persistence-source-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-21T12:53:19Z"
+}
