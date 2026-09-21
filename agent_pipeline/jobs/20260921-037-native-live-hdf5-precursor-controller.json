@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-037-native-live-hdf5-precursor-controller",
+  "parent_result_job_id": "20260917-014-native-isolated-h5py-precursor-controller",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": ["validation_runs/m3dc1_tct_native_precursor_controller_in_loop"],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "purpose": "Rerun the native TCT precursor controller-in-loop audit after correcting physical-time calibration policy. Derive the effective Alfvén time directly from authoritative live C1.h5 root attributes, including the live ion_mass value, while treating the committed DIII-D template normalization as reference/provenance only. Preserve standing bias + Mirnov/toroidal precursor + latency/safety arbiter + bounded boost/NO ACTION and never clip experimental milliseconds into the native window.",
+  "interpretation_contract": {
+    "runtime_normalization_authority": "live baseline C1.h5 root attributes",
+    "reference_template_is_hard_gate": false,
+    "reference_normalization_mismatch_is_recorded_not_rejected": true,
+    "explicit_c1input_hdf5_disagreement_is_fail_closed": true,
+    "require_reviewed_formula": "m3dc1_alfven_time_cgs",
+    "require_zero_equivalence_if_controller_matrix_executes": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "precursor_authority": "Mirnov/toroidal experimental precursor evidence; reduced-model proxies may not silently substitute",
+    "timing_policy": "Use the live-derived physical_ms_per_solver_time_unit. If the measured precursor lead and bounded-boost response cannot fit causally in the native characterization window, classify TIMESCALE_WINDOW_MISMATCH and execute NO ACTION rather than clipping or inventing trigger times.",
+    "required_matrix_if_timing_compatible": ["no_control", "standing_bias_only", "precursor_conditioned", "oracle_conditioned", "late_negative_control", "wrong_sign_negative_control"],
+    "claim_boundary": "Normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim unless stronger evidence is independently established."
+  }
+}
