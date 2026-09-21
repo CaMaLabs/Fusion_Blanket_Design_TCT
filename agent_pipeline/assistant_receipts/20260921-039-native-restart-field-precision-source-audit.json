@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-039-native-restart-field-precision-source-audit",
+  "processed_result_path": "agent_pipeline/results/20260921-039-native-restart-field-precision-source-audit.json",
+  "processed_result_commit": "106eccd542af703f0aa2557c4b0cd66311db42a5",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_PRECISION_PATH_CONFIRMED",
+  "pipeline_error": null,
+  "interpretation": "The static/provenance audit confirms that the persisted restart time-slice contains extensive IEEE float32 field datasets and that native hdf5_output.f90 has an explicit idouble_out-controlled H5T_NATIVE_DOUBLE path. This makes restart serialization precision a dynamically testable explanation for the first-postrestart discontinuity, but it is not yet causal evidence. A source=0 continuous-vs-split test using only the built-in idouble_out=1 output control is queued. Handoff equivalence remains required at 1e-12; frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260921-040-native-restart-full-precision-handoff-repair",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-21T13:59:00Z"
+}
