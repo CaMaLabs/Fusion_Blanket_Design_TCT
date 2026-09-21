@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-039-native-restart-field-precision-source-audit",
+  "parent_result_job_id": "20260921-036-native-restart-dtold-persistence-source-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_field_precision_source_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_field_precision_source"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_field_precision_source/native_restart_field_precision_source_summary.json",
+  "purpose": "Test the stronger restart-discontinuity lead from the captured native checkpoint: determine whether the time-slice field state consumed by native restart is serialized through a lower-precision HDF5 path than the live solver state before making any solver change.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_DTOLD_PERSISTENCE_CONTEXT_CAPTURED",
+    "require_inherited_handoff_equivalence_status": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+    "do_not_treat_precision_provenance_as_dynamic_causation": true,
+    "do_not_modify_solver_physics": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
