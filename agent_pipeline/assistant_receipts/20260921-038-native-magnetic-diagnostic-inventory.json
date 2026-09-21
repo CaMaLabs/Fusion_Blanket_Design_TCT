@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-038-native-magnetic-diagnostic-inventory",
+  "processed_result_blob_sha": "19014c5cf394432f0961070fda6949de84a74af8",
+  "processed_result_head_before": "0cba0aaadaad0899bf1bf81bee8ae0befbe42e10",
+  "processed_summary_sha256": "e5ba87f51418bfbb339bbe772103b13bcc2e608b034fd2a3c4e509c2c2e57792",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_DIAGNOSTIC_CANDIDATES_FOUND",
+  "pipeline_error": null,
+  "interpretation": "Scientific diagnostic/provenance result, not a pipeline failure. The live Taylor C1.h5 exposes 15 name-matched candidate scalar datasets, but the baseline explicitly has imag_probes=0 and no C1input probe configuration. Candidate flux/current scalars therefore are not yet sufficient authority for a Mirnov-like precursor. No zero-equivalence or handoff-equivalence gate was specified by this read-only inventory job. The frozen +0.020% width and +0.10% Jpk efficacy gates remain unchanged and are not evaluated here. Claim boundary remains normalized native M3D-C1 diagnostic provenance only.",
+  "new_job_id": "20260921-045-native-magnetic-probe-enablement-audit",
+  "timestamp": "2026-09-21T15:01:15Z"
+}
