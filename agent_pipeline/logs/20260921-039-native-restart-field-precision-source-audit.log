@@ -1,0 +1,328 @@
+job_id=20260921-039-native-restart-field-precision-source-audit
+started_utc=2026-09-21T13:57:48.614026Z
+head_before=7b156402e5d392de5369ed83bf05ca110722c67a
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_PRECISION_PATH_CONFIRMED",
+  "pipeline_failure": false,
+  "parent_job_id": "20260921-036-native-restart-dtold-persistence-source-audit",
+  "audit_scope": "Static source/provenance audit of native M3D-C1 restart time-slice field precision; no solver execution or physics modification.",
+  "source_root": "/home/ubuntu/M3DC1-official",
+  "source_hits": [
+    {
+      "path": "unstructured/M3Dmodules.f90",
+      "line": 436,
+      "match": "real :: mag_ctrl_period  ! repeated pulse period; <=0 means single gate",
+      "context": "  real :: mag_ctrl_t_ramp ! magnetic control smooth ramp duration\n  real :: mag_ctrl_t_off  ! magnetic control turn-off time\n  integer :: imag_control_staged ! 1 = scheduled bias/early/aggressive/hold magnetic command\n  real :: mag_ctrl_bias_amp      ! standing magnetic bias before early intervention\n  real :: mag_ctrl_early_amp     ! early/preconditioning magnetic command\n  real :: mag_ctrl_aggressive_amp ! strongest bounded magnetic command\n  real :: mag_ctrl_hold_amp      ! recovery/maintenance magnetic command\n  real :: mag_ctrl_t_early       ! transition bias -> early\n  real :: mag_ctrl_t_aggressive  ! transition early -> aggressive\n  real :: mag_ctrl_t_hold        ! transition aggressive -> hold\n  real :: mag_ctrl_period  ! repeated pulse period; <=0 means single gate\n  real :: mag_ctrl_pulse_width ! on-time within each repeated pulse period\n\n  ! xray diagnostic parameters\n  integer :: xray_detector_enabled ! 1 = enable xray diagnostic\n  real :: xray_r0        ! R coordinate of xray detector\n  real :: xray_phi0      ! Phi coordinate of xray detector\n  real :: xray_z0        ! Z coordinate of xray detector\n  real :: xray_theta     ! angle of xray detector chord (degrees)\n  real :: xray_sigma     ! spread of xray detector chord (degrees)\n"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 134,
+      "match": "call h5aread_f(attr_id, H5T_NATIVE_INTEGER, value, dims, error)",
+      "context": "    \n    integer(HID_T), intent(in) :: parent_id\n    character(LEN=*), intent(in) :: name\n    integer, intent(out)  :: value\n    integer, intent(out) :: error\n    \n    integer(HID_T) :: attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n\n    call h5aopen_name_f(parent_id, name, attr_id, error)\n    call h5aread_f(attr_id, H5T_NATIVE_INTEGER, value, dims, error)\n    call h5aclose_f(attr_id, error)\n    \n  end subroutine read_int_attr\n\n  ! write_int_attr\n  ! ==============\n  subroutine write_int_attr(parent_id, name, val, error)\n    use hdf5\n    \n    implicit none"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 156,
+      "match": "call h5acreate_f(parent_id, name, H5T_NATIVE_INTEGER, dspace_id, attr_id, error)",
+      "context": "    integer(HID_T), intent(in) :: parent_id\n    character(LEN=*), intent(in) :: name\n    integer, intent(in) :: val\n    integer, intent(out) :: error\n    \n    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n    integer :: v\n\n    call h5screate_f(H5S_SCALAR_F, dspace_id, error)\n    call h5acreate_f(parent_id, name, H5T_NATIVE_INTEGER, dspace_id, attr_id, error)\n    v = val\n    call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n  end subroutine write_int_attr\n\n  ! update_int_attr\n  ! ===============\n  subroutine update_int_attr(parent_id, name, val, error)\n    use hdf5"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 158,
+      "match": "call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)",
+      "context": "    integer, intent(in) :: val\n    integer, intent(out) :: error\n    \n    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n    integer :: v\n\n    call h5screate_f(H5S_SCALAR_F, dspace_id, error)\n    call h5acreate_f(parent_id, name, H5T_NATIVE_INTEGER, dspace_id, attr_id, error)\n    v = val\n    call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n  end subroutine write_int_attr\n\n  ! update_int_attr\n  ! ===============\n  subroutine update_int_attr(parent_id, name, val, error)\n    use hdf5\n    \n    implicit none"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 183,
+      "match": "call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)",
+      "context": "    integer, intent(out) :: error\n    \n    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n    integer :: v\n\n    call h5screate_f(H5S_SCALAR_F, dspace_id, error)\n       \n    call h5aopen_name_f(parent_id, name, attr_id, error)\n    v = val\n    call h5awrite_f(attr_id, H5T_NATIVE_INTEGER, v, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n  end subroutine update_int_attr\n\n  ! read_real_attr\n  ! =============\n  subroutine read_real_attr(parent_id, name, value, error)\n    use hdf5\n\n    implicit none"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 205,
+      "match": "! call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)",
+      "context": "    integer(HID_T), intent(in) :: parent_id\n    character(LEN=*), intent(in) :: name\n    real, intent(out)  :: value\n    integer, intent(out) :: error\n    logical :: attr_exists\n\n    integer(HID_T) :: attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n\n    ! call h5aopen_name_f(parent_id, name, attr_id, error)\n    ! call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)\n    ! call h5aclose_f(attr_id, error)\n\n    call h5aexists_f(parent_id, name, attr_exists, error)\n    if (error == 0 .and. attr_exists) then\n       call h5aopen_name_f(parent_id, name, attr_id, error)\n       call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)\n       call h5aclose_f(attr_id, error)\n    end if\n\n  end subroutine read_real_attr"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 211,
+      "match": "call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)",
+      "context": "    integer(HID_T) :: attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n\n    ! call h5aopen_name_f(parent_id, name, attr_id, error)\n    ! call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)\n    ! call h5aclose_f(attr_id, error)\n\n    call h5aexists_f(parent_id, name, attr_exists, error)\n    if (error == 0 .and. attr_exists) then\n       call h5aopen_name_f(parent_id, name, attr_id, error)\n       call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)\n       call h5aclose_f(attr_id, error)\n    end if\n\n  end subroutine read_real_attr\n\n  ! write_real_attr\n  ! ===============\n  subroutine write_real_attr(parent_id, name, value, error)\n    use hdf5\n    "
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 234,
+      "match": "call h5acreate_f(parent_id, name, H5T_NATIVE_DOUBLE, dspace_id, attr_id, &",
+      "context": "    integer(HID_T), intent(in) :: parent_id\n    character(LEN=*), intent(in) :: name\n    real, intent(in)  :: value\n    integer, intent(out) :: error\n    \n    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n\n    call h5screate_f(H5S_SCALAR_F, dspace_id, error)\n    \n    call h5acreate_f(parent_id, name, H5T_NATIVE_DOUBLE, dspace_id, attr_id, &\n         error)\n    call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n    \n  end subroutine write_real_attr\n\n  ! write_str_attr\n  ! ===============\n  subroutine write_str_attr(parent_id, name, value, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 236,
+      "match": "call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)",
+      "context": "    real, intent(in)  :: value\n    integer, intent(out) :: error\n    \n    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims = 1\n\n    call h5screate_f(H5S_SCALAR_F, dspace_id, error)\n    \n    call h5acreate_f(parent_id, name, H5T_NATIVE_DOUBLE, dspace_id, attr_id, &\n         error)\n    call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, value, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n    \n  end subroutine write_real_attr\n\n  ! write_str_attr\n  ! ===============\n  subroutine write_str_attr(parent_id, name, value, error)\n    use hdf5\n    implicit none"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 259,
+      "match": "call h5tcopy_f(H5T_NATIVE_CHARACTER, dtype_id, error)",
+      "context": "    character(LEN=*), intent(in) :: name, value\n    integer, intent(out) :: error\n\n    integer(HID_T) :: dspace_id, dtype_id, attr_id\n    integer(SIZE_T) :: dsize\n    integer(HSIZE_T), dimension(1) :: dims = 1\n\n    call h5screate_f(H5S_SCALAR_F, dspace_id, error)\n    if (error.eq.0) then\n\n       call h5tcopy_f(H5T_NATIVE_CHARACTER, dtype_id, error)\n       if (error.eq.0) then\n\n          dsize = LEN(value)\n          if (dsize.gt.0) then\n             call h5tset_size_f(dtype_id, dsize, error)\n             if (error.eq.0) then\n\n                call h5acreate_f(parent_id, name, dtype_id, dspace_id, &\n                     attr_id, error)\n                if (error.eq.0) then"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 303,
+      "match": "call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)",
+      "context": "    integer, intent(in) :: len\n    real, dimension(len), intent(out)  :: values\n    integer, intent(out) :: error\n\n    integer(HID_T) :: attr_id\n    integer(HSIZE_T), dimension(1) :: dims\n\n    dims(1) = len\n\n    call h5aopen_name_f(parent_id, name, attr_id, error)\n    call h5aread_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)\n    call h5aclose_f(attr_id, error)\n  end subroutine read_vec_attr\n\n\n  ! write_vec_attr\n  ! ==============\n  subroutine write_vec_attr(parent_id, name, values, len, error)\n    use hdf5\n    \n    implicit none"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 331,
+      "match": "call h5acreate_f(parent_id, name, H5T_NATIVE_DOUBLE, dspace_id, attr_id, error)",
+      "context": "    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n\n    dims(1) = len\n\n    call h5screate_simple_f(1, dims, dspace_id, error)\n    call h5acreate_f(parent_id, name, H5T_NATIVE_DOUBLE, dspace_id, attr_id, error)\n    call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n    \n  end subroutine write_vec_attr\n\n\n  ! output_field\n  ! =================\n  subroutine output_field(parent_id, name, values, ndofs, nelms, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 332,
+      "match": "call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)",
+      "context": "    integer(HSIZE_T), dimension(1) :: dims\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n\n    dims(1) = len\n\n    call h5screate_simple_f(1, dims, dspace_id, error)\n    call h5acreate_f(parent_id, name, H5T_NATIVE_DOUBLE, dspace_id, attr_id, error)\n    call h5awrite_f(attr_id, H5T_NATIVE_DOUBLE, values, dims, error)\n    call h5aclose_f(attr_id, error)\n    call h5sclose_f(dspace_id, error)\n    \n  end subroutine write_vec_attr\n\n\n  ! output_field\n  ! =================\n  subroutine output_field(parent_id, name, values, ndofs, nelms, error)\n    use hdf5"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 377,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &",
+      "context": "    off(1) = 0\n    off(2) = offset_elms\n\n    ! Create global dataset\n    call h5screate_simple_f(rank, global_dims, filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5screate_simple_f\"\n       call safestop(101)\n    endif\n    if(idouble_out.eq.1) then\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &\n            dset_id, error)\n    else\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &\n            dset_id, error)\n    end if\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5dcreate_f\"\n       call safestop(101)\n    endif\n    call h5sclose_f(filespace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 380,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &",
+      "context": "    ! Create global dataset\n    call h5screate_simple_f(rank, global_dims, filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5screate_simple_f\"\n       call safestop(101)\n    endif\n    if(idouble_out.eq.1) then\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &\n            dset_id, error)\n    else\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &\n            dset_id, error)\n    end if\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5dcreate_f\"\n       call safestop(101)\n    endif\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after hsclose_f\"\n       call safestop(101)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 384,
+      "match": "write(*,*) error,rank,\" after h5dcreate_f\"",
+      "context": "       call safestop(101)\n    endif\n    if(idouble_out.eq.1) then\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &\n            dset_id, error)\n    else\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &\n            dset_id, error)\n    end if\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5dcreate_f\"\n       call safestop(101)\n    endif\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after hsclose_f\"\n       call safestop(101)\n    endif\n    \n    ! Select local hyperslab within dataset\n    call h5screate_simple_f(rank, local_dims, memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 422,
+      "match": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+      "context": "       write(*,*) error,rank,\" after h5pcreate_f\"\n       call safestop(102)\n    endif\n    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n       call safestop(102)\n    endif\n    \n    ! Write the dataset\n    call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5dwrite_f\"\n       call safestop(103)\n    endif\n    \n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5sclose_f\""
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 425,
+      "match": "write(*,*) error,rank,\" h5dwrite_f\"",
+      "context": "    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n       call safestop(102)\n    endif\n    \n    ! Write the dataset\n    call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5dwrite_f\"\n       call safestop(103)\n    endif\n    \n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5sclose_f\"\n       call safestop(104)\n    endif\n    call h5sclose_f(memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 492,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_INTEGER, filespace, &",
+      "context": "    global_dims(2) = global_elms\n    off(1) = 0\n    off(2) = offset_elms\n\n    ! Create global dataset\n    call h5screate_simple_f(rank, global_dims, filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5screate_simple_f\"\n       call safestop(101)\n    endif\n    call h5dcreate_f(parent_id, name, H5T_NATIVE_INTEGER, filespace, &\n         dset_id, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5dcreate_f\"\n       call safestop(101)\n    endif\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after hsclose_f\"\n       call safestop(101)\n    endif"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 495,
+      "match": "write(*,*) error,rank,\" after h5dcreate_f\"",
+      "context": "\n    ! Create global dataset\n    call h5screate_simple_f(rank, global_dims, filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5screate_simple_f\"\n       call safestop(101)\n    endif\n    call h5dcreate_f(parent_id, name, H5T_NATIVE_INTEGER, filespace, &\n         dset_id, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5dcreate_f\"\n       call safestop(101)\n    endif\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after hsclose_f\"\n       call safestop(101)\n    endif\n\n    ! Select local hyperslab within dataset\n    call h5screate_simple_f(rank, local_dims, memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 533,
+      "match": "call h5dwrite_f(dset_id, H5T_NATIVE_INTEGER, values, global_dims, error, &",
+      "context": "       write(*,*) error,rank,\" after h5pcreate_f\"\n       call safestop(102)\n    endif\n    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n       call safestop(102)\n    endif\n\n    ! Write the dataset\n    call h5dwrite_f(dset_id, H5T_NATIVE_INTEGER, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5dwrite_f\"\n       call safestop(103)\n    endif\n\n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5sclose_f\""
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 536,
+      "match": "write(*,*) error,rank,\" h5dwrite_f\"",
+      "context": "    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n       call safestop(102)\n    endif\n\n    ! Write the dataset\n    call h5dwrite_f(dset_id, H5T_NATIVE_INTEGER, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5dwrite_f\"\n       call safestop(103)\n    endif\n\n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5sclose_f\"\n       call safestop(104)\n    endif\n    call h5sclose_f(memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 618,
+      "match": "call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+      "context": "       call safestop(102)\n    endif\n    \n    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n       call safestop(102)\n    endif\n  \n    ! Read the dataset\n    call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5dread_f\"\n       call safestop(103)\n    endif\n\n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5sclose_f\""
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 621,
+      "match": "write(*,*) error,rank,\" h5dread_f\"",
+      "context": "    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n       call safestop(102)\n    endif\n  \n    ! Read the dataset\n    call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5dread_f\"\n       call safestop(103)\n    endif\n\n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n    if(error.ne.0) then\n       write(*,*) error,rank,\" h5sclose_f\"\n       call safestop(104)\n    endif\n    call h5sclose_f(memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 692,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, &",
+      "context": "    maxdims(1) = H5S_UNLIMITED_F\n\n    call h5lexists_f(parent_id, name, exists, error)\n\n    if(.not.exists) then\n       num_elements = 1\n       call h5screate_simple_f(1, dims, filespace, error, maxdims)\n       call h5pcreate_f(H5P_DATASET_CREATE_F, p_id, error)\n       call h5pset_chunk_f(p_id, 1, chunk_size, error)\n       if(idouble_out.eq.1) then\n          call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, &\n               filespace, dset_id, error, p_id)\n       else\n          call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, &\n               filespace, dset_id, error, p_id)\n       end if\n       call h5pclose_f(p_id, error)\n       call h5sclose_f(filespace, error)\n       curdim = dims(1)\n    else\n       call h5dopen_f(parent_id, name, dset_id, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 695,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, &",
+      "context": "\n    if(.not.exists) then\n       num_elements = 1\n       call h5screate_simple_f(1, dims, filespace, error, maxdims)\n       call h5pcreate_f(H5P_DATASET_CREATE_F, p_id, error)\n       call h5pset_chunk_f(p_id, 1, chunk_size, error)\n       if(idouble_out.eq.1) then\n          call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, &\n               filespace, dset_id, error, p_id)\n       else\n          call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, &\n               filespace, dset_id, error, p_id)\n       end if\n       call h5pclose_f(p_id, error)\n       call h5sclose_f(filespace, error)\n       curdim = dims(1)\n    else\n       call h5dopen_f(parent_id, name, dset_id, error)\n       call h5dget_space_f(dset_id, filespace, error)\n       call h5sget_simple_extent_npoints_f(filespace, curdim, error)\n       call h5sclose_f(filespace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 730,
+      "match": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &",
+      "context": "    values(1) = value\n    coord(1,:) = (/ (i, i = dims(1), curdim) /)\n\n    if(myrank.eq.0) then\n       call h5screate_simple_f(1, local_dims, memspace, error)\n       call h5dget_space_f(dset_id, filespace, error)\n       call h5pcreate_f(H5P_DATASET_XFER_F, plist_id, error)\n       call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_INDEPENDENT_F, error)\n       call h5sselect_elements_f(filespace, H5S_SELECT_SET_F, 1, &\n            num_elements, coord, error)\n       call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &\n            file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n\n       ! Close HDF5 handles\n       call h5pclose_f(plist_id, error)\n       call h5sclose_f(filespace, error)\n       call h5sclose_f(memspace, error)\n    endif\n    call h5dclose_f(dset_id, error)\n\n    deallocate(values)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 786,
+      "match": "call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &",
+      "context": "    call h5dopen_f(parent_id, name, dset_id, error)\n\n    call h5screate_simple_f(1, local_dims, memspace, error)\n    call h5dget_space_f(dset_id, filespace, error)\n    call h5sselect_elements_f(filespace, H5S_SELECT_SET_F, 1, &\n         num_elements, coord, error)\n    \n    call h5pcreate_f(H5P_DATASET_XFER_F, plist_id, error)\n    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_INDEPENDENT_F, error)\n\n    call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n    value = values(1)\n    \n    ! Close HDF5 handles\n    call h5pclose_f(plist_id, error)\n    call h5sclose_f(filespace, error)\n    call h5sclose_f(memspace, error)\n    call h5dclose_f(dset_id, error)\n\n  end subroutine read_scalar"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 832,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &",
+      "context": "    global_dims(1) = ndim\n    off(1) = 0\n    \n    ! Create global dataset\n    call h5screate_simple_f(rank, global_dims, filespace, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5sceate_simple_f\"\n           call safestop(101)\n         endif\n    if(idouble_out.eq.1) then \n       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &\n            dset_id, error)\n    else\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &\n            dset_id, error)\n    end if\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5dcreate_f\"\n           call safestop(101)\n         endif\n    call h5sclose_f(filespace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 835,
+      "match": "call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &",
+      "context": "    ! Create global dataset\n    call h5screate_simple_f(rank, global_dims, filespace, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5sceate_simple_f\"\n           call safestop(101)\n         endif\n    if(idouble_out.eq.1) then \n       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &\n            dset_id, error)\n    else\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &\n            dset_id, error)\n    end if\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5dcreate_f\"\n           call safestop(101)\n         endif\n    call h5sclose_f(filespace, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after hsclose_f\"\n           call safestop(101)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 839,
+      "match": "write(*,*) error,rank,\" after h5dcreate_f\"",
+      "context": "           call safestop(101)\n         endif\n    if(idouble_out.eq.1) then \n       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &\n            dset_id, error)\n    else\n       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &\n            dset_id, error)\n    end if\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5dcreate_f\"\n           call safestop(101)\n         endif\n    call h5sclose_f(filespace, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after hsclose_f\"\n           call safestop(101)\n         endif\n    \n    ! Select local hyperslab within dataset\n    call h5screate_simple_f(rank, local_dims, memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 877,
+      "match": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+      "context": "           write(*,*) error,rank,\" after h5pcreate_f\"\n           call safestop(102)\n         endif\n    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n           call safestop(102)\n         endif\n  \n    ! Write the dataset\n    call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" h5dwrite_f\"\n           call safestop(103)\n         endif\n\n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" h5sclose_f\""
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 880,
+      "match": "write(*,*) error,rank,\" h5dwrite_f\"",
+      "context": "    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" after h5pset_dxpl_mpio_f\"\n           call safestop(102)\n         endif\n  \n    ! Write the dataset\n    call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" h5dwrite_f\"\n           call safestop(103)\n         endif\n\n    ! Close HDF5 handles\n    call h5sclose_f(filespace, error)\n         if(error.ne.0) then\n           write(*,*) error,rank,\" h5sclose_f\"\n           call safestop(104)\n         endif\n    call h5sclose_f(memspace, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 957,
+      "match": "type_id = H5T_NATIVE_DOUBLE",
+      "context": "\n       chunk_size(1) = NMAX\n       chunk_size(2) = 1\n       maxdims(1) = H5S_UNLIMITED_F\n       maxdims(2) = H5S_UNLIMITED_F\n\n       call h5screate_simple_f(rank, dims, filespace, error, maxdims)\n       call h5pcreate_f(H5P_DATASET_CREATE_F, p_id, error)\n       call h5pset_chunk_f(p_id, rank, chunk_size, error)\n       if(idouble_out.eq.1) then\n          type_id = H5T_NATIVE_DOUBLE\n       else\n          type_id = H5T_NATIVE_REAL\n       end if\n       call h5dcreate_f(parent_id, name, type_id, &\n            filespace, dset_id, error, p_id)\n       call h5pset_fill_value_f(p_id, type_id, 0., error)\n       call h5pclose_f(p_id, error)\n       call h5sclose_f(filespace, error)\n    else\n       call h5dopen_f(parent_id, name, dset_id, error)"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 959,
+      "match": "type_id = H5T_NATIVE_REAL",
+      "context": "       chunk_size(2) = 1\n       maxdims(1) = H5S_UNLIMITED_F\n       maxdims(2) = H5S_UNLIMITED_F\n\n       call h5screate_simple_f(rank, dims, filespace, error, maxdims)\n       call h5pcreate_f(H5P_DATASET_CREATE_F, p_id, error)\n       call h5pset_chunk_f(p_id, rank, chunk_size, error)\n       if(idouble_out.eq.1) then\n          type_id = H5T_NATIVE_DOUBLE\n       else\n          type_id = H5T_NATIVE_REAL\n       end if\n       call h5dcreate_f(parent_id, name, type_id, &\n            filespace, dset_id, error, p_id)\n       call h5pset_fill_value_f(p_id, type_id, 0., error)\n       call h5pclose_f(p_id, error)\n       call h5sclose_f(filespace, error)\n    else\n       call h5dopen_f(parent_id, name, dset_id, error)\n\n       if(irestart.ne.0  .and. version_in.lt.32) then"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 961,
+      "match": "call h5dcreate_f(parent_id, name, type_id, &",
+      "context": "       maxdims(2) = H5S_UNLIMITED_F\n\n       call h5screate_simple_f(rank, dims, filespace, error, maxdims)\n       call h5pcreate_f(H5P_DATASET_CREATE_F, p_id, error)\n       call h5pset_chunk_f(p_id, rank, chunk_size, error)\n       if(idouble_out.eq.1) then\n          type_id = H5T_NATIVE_DOUBLE\n       else\n          type_id = H5T_NATIVE_REAL\n       end if\n       call h5dcreate_f(parent_id, name, type_id, &\n            filespace, dset_id, error, p_id)\n       call h5pset_fill_value_f(p_id, type_id, 0., error)\n       call h5pclose_f(p_id, error)\n       call h5sclose_f(filespace, error)\n    else\n       call h5dopen_f(parent_id, name, dset_id, error)\n\n       if(irestart.ne.0  .and. version_in.lt.32) then\n\n          ! in older versions, N dimension can't change [maxdims(1) was NMAX]"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 997,
+      "match": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &",
+      "context": "\n    if(myrank.eq.0) then\n       call h5screate_simple_f(rank, local_dims, memspace, error)\n       call h5dget_space_f(dset_id, filespace, error)\n       call h5sselect_hyperslab_f(filespace, H5S_SELECT_SET_F, off, local_dims, &\n            error)\n       \n       call h5pcreate_f(H5P_DATASET_XFER_F, plist_id, error)\n       call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_INDEPENDENT_F, error)\n\n       call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &\n            file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n\n       ! Close HDF5 handles\n       call h5pclose_f(plist_id, error)\n       call h5sclose_f(filespace, error)\n       call h5sclose_f(memspace, error)\n    endif\n    call h5dclose_f(dset_id, error)\n\n  end subroutine output_1dextendarr"
+    },
+    {
+      "path": "unstructured/hdf5_output.f90",
+      "line": 1054,
+      "match": "call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &",
+      "context": "       if(maxdims(1).lt.NMAX) local_dims(1) = maxdims(1)\n    end if\n\n    call h5sselect_hyperslab_f(filespace, H5S_SELECT_SET_F, off, local_dims, &\n         error)\n    call h5screate_simple_f(rank, local_dims, memspace, error)\n\n    call h5pcreate_f(H5P_DATASET_XFER_F, plist_id, error)\n    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_INDEPENDENT_F, error)\n\n    call h5dread_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &\n         file_space_id=filespace, mem_space_id=memspace, xfer_prp=plist_id)\n\n    ! Close HDF5 handles\n    call h5pclose_f(plist_id, error)\n    call h5sclose_f(filespace, error)\n    call h5sclose_f(memspace, error)\n    call h5dclose_f(dset_id, error)\n\n  end subroutine read_1dextendarr\n"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line": 754,
+      "match": "call output_fields(time_root_id, equilibrium, error)",
+      "context": "  \n  ! Write version number\n  call write_int_attr(time_root_id, \"version\", version, error)\n  \n  ! Output the mesh data\n  if(myrank.eq.0 .and. iprint.ge.1) print *, '  Writing mesh '\n  call output_mesh(time_root_id, nelms, error)\n  \n  ! Output the field data \n  if(myrank.eq.0 .and. iprint.ge.1) print *, '  Writing fields '\n  call output_fields(time_root_id, equilibrium, error)\n  if(myrank.eq.0 .and. iprint.ge.1) print *, '  Done writing fields ', error\n\n  ! output wall regions\n#ifndef USE3D\n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Writing wall regions'\n  call output_regions(time_root_id, error)\n#endif\n  \n  ! Close the file\n  call h5gclose_f(time_root_id, error)"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line": 1012,
+      "match": "! output_fields",
+      "context": "       nelms, error)\n#ifdef USECOMPLEX\n  if(.not.ir) then\n     call output_field(group_id,name//\"_i\",aimag(dum),coeffs_per_element, &\n          nelms,error)\n  end if\n#endif\nend subroutine write_field\n\n\n! output_fields\n! =============\nsubroutine output_fields(time_group_id, equilibrium, error)\n  use hdf5\n  use hdf5_output\n  use basic\n  use arrays\n  use time_step\n  use auxiliary_fields\n  use transport_coefficients\n  use kprad_m3dc1"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line": 1014,
+      "match": "subroutine output_fields(time_group_id, equilibrium, error)",
+      "context": "  if(.not.ir) then\n     call output_field(group_id,name//\"_i\",aimag(dum),coeffs_per_element, &\n          nelms,error)\n  end if\n#endif\nend subroutine write_field\n\n\n! output_fields\n! =============\nsubroutine output_fields(time_group_id, equilibrium, error)\n  use hdf5\n  use hdf5_output\n  use basic\n  use arrays\n  use time_step\n  use auxiliary_fields\n  use transport_coefficients\n  use kprad_m3dc1\n\n  implicit none"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line": 1037,
+      "match": "if(myrank.eq.0 .and. iprint.ge.1) print *, 'In output_fields.  ilin=', ilin",
+      "context": "  integer, intent(out) :: error\n  integer, intent(in) :: equilibrium\n  \n  integer(HID_T) :: group_id\n  integer :: i, nelms, ilin\n  vectype, allocatable :: dum(:,:), dum2(:,:)\n  character(len=64) :: field_name\n\n  ilin = 1 - equilibrium\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, 'In output_fields.  ilin=', ilin\n\n  nelms = local_elements()\n  error = 0\n  \n  allocate(dum(coeffs_per_element,nelms))\n\n  ! Create the fields group\n  call h5gcreate_f(time_group_id, \"fields\", group_id, error)\n\n  ! Output the fields"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line": 1422,
+      "match": "end subroutine output_fields",
+      "context": "!!$     dum(1,:) = myrank\n!!$     call output_field(group_id, \"part\", real(dum), coeffs_per_element, &\n!!$          nelms, error)\n!!$  end if\n     \n  ! Close the mesh group\n  call h5gclose_f(group_id, error)\n\n  deallocate(dum)\n\nend subroutine output_fields\n\n! mark_fields (for solution transfer during adapt)\n! =============\nsubroutine mark_fields(equilibrium)\n  use hdf5\n  use hdf5_output\n  use basic\n  use arrays\n  use time_step\n  use auxiliary_fields"
+    },
+    {
+      "path": "unstructured/restart_hdf5.f90",
+      "line": 273,
+      "match": "call read_fields(time_id, 0, error)",
+      "context": "    call read_scalar(scalar_group_id, \"i_control%err_i\",     i_control%err_i,     ntime, error)\n    call read_scalar(scalar_group_id, \"i_control%err_p_old\", i_control%err_p_old, ntime, error)\n    call read_scalar(scalar_group_id, \"n_control%err_i\",     n_control%err_i,     ntime, error)\n    call read_scalar(scalar_group_id, \"n_control%err_p_old\", n_control%err_p_old, ntime, error)\n\n    call h5gclose_f(scalar_group_id, error)\n\n    ! Read Fields\n    if(myrank.eq.0 .and. iprint.ge.1) print *, 'Reading fields from time step', ntime\n\n    call read_fields(time_id, 0, error)\n\n    call h5gclose_f(time_id, error)\n\n    ! Read Equilibrium Fields\n    if(eqsubtract_in.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.1) print *, 'Reading equilibrium fields'\n\n       call h5gopen_f(root_id, \"equilibrium\", eq_time_id, error)\n       call read_fields(eq_time_id, 1, error)\n       call h5gclose_f(eq_time_id, error)"
+    },
+    {
+      "path": "unstructured/restart_hdf5.f90",
+      "line": 282,
+      "match": "call read_fields(eq_time_id, 1, error)",
+      "context": "\n    call read_fields(time_id, 0, error)\n\n    call h5gclose_f(time_id, error)\n\n    ! Read Equilibrium Fields\n    if(eqsubtract_in.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.1) print *, 'Reading equilibrium fields'\n\n       call h5gopen_f(root_id, \"equilibrium\", eq_time_id, error)\n       call read_fields(eq_time_id, 1, error)\n       call h5gclose_f(eq_time_id, error)\n    end if\n\n    call h5gclose_f(root_id, error)\n\n\n    ! If type of calculation has changed (i.e. real to complex)\n    ! then overwrite output\n    istartnew = 0\n"
+    },
+    {
+      "path": "unstructured/restart_hdf5.f90",
+      "line": 368,
+      "match": "subroutine read_fields(time_group_id, equilibrium, error)",
+      "context": "            call rmp_per\n         end if\n      end if\n\n    end if\n\n    if(allocated(phi_in)) deallocate(phi_in)\n  end subroutine rdrestart_hdf5\n\n\n  subroutine read_fields(time_group_id, equilibrium, error)\n    use basic\n    use hdf5\n    use h5lt\n    use mesh_mod\n    use field\n    use arrays\n    use hdf5_output\n    use kprad_m3dc1\n\n    implicit none"
+    },
+    {
+      "path": "unstructured/restart_hdf5.f90",
+      "line": 502,
+      "match": "end subroutine read_fields",
+      "context": "          call h5r_read_field(group_id,\"kprad_rec\",kprad_reck,   nelms,error)\n       else if(version.ge.24) then\n          call h5r_read_field(group_id,\"kprad_ion\",kprad_ion,   nelms,error)\n          call h5r_read_field(group_id,\"kprad_reck\",kprad_reck,   nelms,error)\n          call h5r_read_field(group_id,\"kprad_recp\",kprad_recp,   nelms,error)\n       end if\n    end if\n    \n    call h5gclose_f(group_id, error)\n\n  end subroutine read_fields\n\n  subroutine h5r_read_field(group_id, name, f, nelms, error, isreal)\n    use basic\n    use hdf5\n    use field\n    use hdf5_output\n    use mesh_mod\n\n    implicit none\n"
+    }
+  ],
+  "checkpoint_header_path": "/home/ubuntu/work/openmc/sweep/validation_runs/m3dc1_tct_native_restart_checkpoint_hdf5_header/C1.h5.header.txt",
+  "checkpoint_header_present": true,
+  "checkpoint_header_f32_type_occurrences": 337,
+  "checkpoint_header_f64_type_occurrences": 65,
+  "checkpoint_f32_dataset_examples": [
+    "               DATASET \"E_PHI\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"E_R\" {",
+    "               DATASET \"E_R\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"E_Z\" {",
+    "               DATASET \"E_Z\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"E_par\" {",
+    "               DATASET \"E_par\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"I\" {",
+    "               DATASET \"I\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"P\" {",
+    "               DATASET \"P\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"Pe\" {",
+    "               DATASET \"Pe\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"V\" {",
+    "               DATASET \"V\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"bdotgradp\" {",
+    "               DATASET \"bdotgradp\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"bdotgradt\" {",
+    "               DATASET \"bdotgradt\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"chi\" {",
+    "               DATASET \"chi\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"den\" {",
+    "               DATASET \"den\" {\n                  DATATYPE  H5T_IEEE_F32LE\n                  DATASPACE  SIMPLE { ( 1004, 20 ) / ( 1004, 20 ) }\n               }\n               DATASET \"denm\" {"
+  ],
+  "source_path_checks": {
+    "read_fields_found": true,
+    "output_fields_found": true,
+    "hdf5_dataset_io_found": true,
+    "precision_context_found": true
+  },
+  "causation_status": "PRECISION_PATH_PROVENANCE_ONLY_NOT_DYNAMIC_CAUSATION",
+  "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "finished_utc": "2026-09-21T13:57:48.682775+00:00"
+}
+
+finished_utc=2026-09-21T13:57:48.729605Z
+return_code=0
