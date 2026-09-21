@@ -1,0 +1,140 @@
+job_id=20260921-045-native-magnetic-probe-enablement-audit
+started_utc=2026-09-21T15:04:00.290628Z
+head_before=828325d1d70482418d8872c9fb406ca7d0838b9e
+{
+  "audit_scope": "Read-only provenance/enablement audit for native M3D-C1 magnetic probes; no solver physics modification.",
+  "baseline_c1input": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1input",
+  "baseline_probe_lines": [],
+  "repository_probe_example_count": 9,
+  "active_probe_example_count": 9,
+  "active_probe_examples": [
+    {
+      "path": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/C1input.geqdsk_baseline",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_inputs/geqdsk_efit_baseline/diii_d_158103_03796/C1input_base",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_inputs/machine_equilibria/nstx_u/C1input_base",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_inputs/machine_equilibria/diii_d/C1input_base",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_inputs/machine_equilibria/iter/C1input_base",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_runs/m3dc1_geqdsk_diiid_single_region_probe/C1input",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_runs/m3dc1_geqdsk_diiid_smoke_default/C1input.geqdsk_baseline.original",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    },
+    {
+      "path": "validation_runs/m3dc1_geqdsk_diiid_smoke_default/C1input",
+      "probe_lines": [
+        "imag_probes = 1",
+        "mag_probe_x(1) = 2.3",
+        "mag_probe_z(1) = 0.",
+        "mag_probe_nx(1) = 1.  ! probe is oriented to measure BR"
+      ]
+    },
+    {
+      "path": "validation_runs/m3dc1_geqdsk_diiid_hybrid_probe/C1input",
+      "probe_lines": [
+        "imag_probes=2",
+        "mag_probe_x(1) = 3",
+        "mag_probe_phi(1) = 0",
+        "mag_probe_z(1) = 0",
+        "mag_probe_nz(1) = 1",
+        "mag_probe_x(2) = 2",
+        "mag_probe_phi(2) = 90",
+        "mag_probe_z(2) = 2",
+        "mag_probe_nx(1) = 1"
+      ]
+    }
+  ],
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_ENABLEMENT_EVIDENCE_FOUND",
+  "pipeline_failure": false,
+  "claim_boundary": "Normalized native M3D-C1 diagnostic provenance/enablement only; no precursor lead-time, controller efficacy, experimental, or reactor-scale claim.",
+  "next_step_contract": "Only if native magnetic-probe enablement is evidenced, configure a diagnostic-only baseline rerun that preserves all plasma/actuator physics and records the native probe time series before constructing any precursor."
+}
+
+finished_utc=2026-09-21T15:04:00.405518Z
+return_code=0
