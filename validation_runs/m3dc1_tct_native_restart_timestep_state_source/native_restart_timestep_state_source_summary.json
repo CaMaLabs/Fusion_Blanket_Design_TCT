@@ -1,0 +1,131 @@
+{
+  "audit_scope": "Static source audit of restart timestep/history initialization paths identified by job 033; no M3D-C1 execution or physics modification.",
+  "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_TIMESTEP_STATE_CONTEXT_CAPTURED",
+  "files_scanned": 154,
+  "finished_utc": "2026-09-21T11:57:22.532119+00:00",
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "frozen_width_gate_pct_gt": 0.02,
+  "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+  "hits": [
+    {
+      "context": "  integer :: idifv       ! 1 = solve for difference in solution in v from n to n+1\n  integer :: ksp_max     ! if.gt.0  max number of petsc iterations before time step is repeated\n  integer :: max_repeat  ! max number of times time-step is repeated\n  integer :: ksp_warn    ! time step is  reduced  if max Petsc iterations > ksp_warn\n  integer :: ksp_min     ! time step is increased if max Petsc iterations < ksp_min\n  integer :: gamma_gr_stop  ! stop linear simulation when gamma is converged\n  integer :: nt_gamma_gr    ! number of time steps considered for gamma convergence check\n  real :: dt, dtold      ! timestep (present and previous)\n  real :: dtmin,dtmax,dtkecrit,dtfrac  ! quantities used in variable_timestep option\n  real :: ddt            ! change in timestep per timestep\n  real :: thimp          ! implicitness parameter (for Crank-Nicholson)\n  real :: thimpsm        ! implicitness parameter for smoothers\n  real :: regular        ! regularization constant in chi equation\n  real :: max_ke         ! max KE before fields are re-scaled when linear==1\n  real :: chiiner        ! factor to multiply chi inertial terms\n  real :: harned_mikic   ! coefficient of harned-mikic 2f stabilization term\n  real :: gamma_gr       ! growth rate based on kinetic energy -- used in variable_timestep",
+      "line": 377,
+      "match": "real :: dtmin,dtmax,dtkecrit,dtfrac  ! quantities used in variable_timestep option",
+      "path": "unstructured/M3Dmodules.f90"
+    },
+    {
+      "context": "  call add_var_int(\"nt_gamma_gr\", nt_gamma_gr, 10, \"Number of time steps considered for gamma convergence check\", time_grp)\n  call add_var_double(\"gamma_gr_stop_std\", gamma_gr_stop_std, 0.01, \"Standard deviation under which gamma is considered converged\", time_grp)\n\n\n  ! variable_timestep parameters\n\n  call add_var_double(\"dtmin\",dtmin,4.0,\"minimum time step\",time_grp)\n  call add_var_double(\"dtmax\",dtmax,40.,\"maximum time step\",time_grp)\n  call add_var_double(\"dtkecrit\",dtkecrit,0.0,\"ekin limit on timestep\",time_grp)\n  call add_var_double(\"dtfrac\",dtfrac,0.1,\"fractional change of time step\",time_grp)\n  call add_var_int(\"max_repeat\", max_repeat, 1, &\n       \"maximum number of times a time step can be attempted\", time_grp)\n  call add_var_int(\"ksp_max\", ksp_max, 10000, &\n       \"maximum number of ksp iterations without repeating time step\", time_grp)\n  call add_var_int(\"ksp_min\", ksp_min, 500, &\n       \"time step is increased if max ksp iterations is less than this\", time_grp)\n  call add_var_int(\"ksp_warn\", ksp_warn, 1000, &",
+      "line": 509,
+      "match": "call add_var_double(\"dtkecrit\",dtkecrit,0.0,\"ekin limit on timestep\",time_grp)",
+      "path": "unstructured/input.f90"
+    },
+    {
+      "context": "  implicit none\n#include \"petsc/finclude/petsc.h\"\n#else\n  implicit none\n#include \"finclude/petsc.h\"\n#endif\n\n  integer :: ier, i, adapt_flag\n  real :: tstart, tend, dtsave, t_solve, t_compute\n  character*10 :: datec, timec\n  character*256 :: arg, solveroption_filename\n  integer :: ip\n  character(len=32) :: mesh_file_name\n  logical :: update_mesh\n  type(c_funptr) :: sig_handler\n  type(c_funptr) :: old_handler\n  ! Initialize MPI",
+      "line": 49,
+      "match": "real :: tstart, tend, dtsave, t_solve, t_compute",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "     i_control%err_i = 0.\n     i_control%err_p_old = 0.\n     n_control%err_i = 0.\n     n_control%err_p_old = 0.\n\n  case(1)\n!\n!....save timestep from input file (needed if not a variable timestep run)\n     dtsave = dt\n     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n",
+      "line": 252,
+      "match": "dtsave = dt",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "\n  case(1)\n!\n!....save timestep from input file (needed if not a variable timestep run)\n     dtsave = dt\n     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file",
+      "line": 256,
+      "match": "call rdrestart_hdf5",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "!....save timestep from input file (needed if not a variable timestep run)\n     dtsave = dt\n     ! Read restart file(s)\n\n     if(myrank.eq.0 .and. iprint.ge.1) print *, ' Reading restart file(s)'\n     call rdrestart_hdf5\n!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave",
+      "line": 259,
+      "match": "if(dtkecrit.eq.0) dt = dtsave",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "!\n!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if",
+      "line": 265,
+      "match": "dtsave = dt",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "!....use timestep from input file if not a variable timestep run\n    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n",
+      "line": 266,
+      "match": "call rdrestart_hdf5",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "    if(dtkecrit.eq.0) dt = dtsave\n\n  case(3)\n!....read 2D real RL=1 restart file to start 2D complex COM=1 run\n!\n!....save timestep from input file\n     dtsave = dt\n     call rdrestart_hdf5\n     dt = dtsave\n\n  end select                     !  end of the branch on restart/no restart\n\n  if(irestart.ne.0) then\n     call hdf5_reconcile_version(version_in, ier)\n  end if\n\n  ntime0 = ntime",
+      "line": 267,
+      "match": "dt = dtsave",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "  if(irestart.eq.0  .or. iadapt.gt.0) then\n     tflux0 = tflux\n  endif\n\n  ! mark the fields necessary for solution transfer\n  if (ispradapt .eq. 1) call marker\n  \n  if(myrank.eq.0 .and. iprint.ge.1) print *, ' Initializing timestep'\n  call initialize_timestep\n\n#ifdef USEPARTICLES\n  if (kinetic.eq.1) then\n     call particle_test\n     !call safestop(0)\n  endif\n#endif\n",
+      "line": 350,
+      "match": "call initialize_timestep",
+      "path": "unstructured/newpar.f90"
+    },
+    {
+      "context": "\n  integer, private :: icomplex_in, eqsubtract_in, extsubtract_in, ifin, nplanes_in\n  integer, private :: ikprad_in, kprad_z_in, ipellet_in\n  real, private, allocatable :: phi_in(:)\n  real, private :: toroidal_period_in\n\ncontains\n  \n  subroutine rdrestart_hdf5()\n    use basic\n    use hdf5_output\n    use hdf5\n    use pellet\n    use arrays\n    use kprad_m3dc1\n    use init_common\n    use rmp",
+      "line": 11,
+      "match": "subroutine rdrestart_hdf5()",
+      "path": "unstructured/restart_hdf5.f90"
+    },
+    {
+      "context": "         else\n            call rmp_per\n         end if\n      end if\n\n    end if\n\n    if(allocated(phi_in)) deallocate(phi_in)\n  end subroutine rdrestart_hdf5\n\n\n  subroutine read_fields(time_group_id, equilibrium, error)\n    use basic\n    use hdf5\n    use h5lt\n    use mesh_mod\n    use field",
+      "line": 365,
+      "match": "end subroutine rdrestart_hdf5",
+      "path": "unstructured/restart_hdf5.f90"
+    },
+    {
+      "context": "  use time_step_unsplit\n  implicit none\n\n  integer :: meshAdapted\n  data meshAdapted /0/\n\ncontains\n\n  subroutine initialize_timestep\n    use basic\n    implicit none\n\n    select case(isplitstep)\n    case(0)\n       call initialize_timestep_unsplit\n       call assign_variables_unsplit\n    case(1:2)",
+      "line": 11,
+      "match": "subroutine initialize_timestep",
+      "path": "unstructured/time_step.f90"
+    },
+    {
+      "context": "       print *, 'Index of Psi: ', psi_i\n       print *, 'Index of Bz: ', bz_i\n       print *, 'Index of P: ', p_i\n       print *, 'Index of n: ', den_i\n       print *, 'Index of Pe: ', pe_i\n       print *, 'Index of f: ', bf_i\n       print *, 'Index of E: ', e_i\n    end if\n  end subroutine initialize_timestep\n\n  subroutine finalize_timestep\n    use basic\n    implicit none\n\n    select case(isplitstep)\n    case(0)\n       call finalize_timestep_unsplit",
+      "line": 36,
+      "match": "end subroutine initialize_timestep",
+      "path": "unstructured/time_step.f90"
+    },
+    {
+      "context": "    ! check if time step should be repeated\n\n#ifdef USE3D\n    maxiter = 0\n    do icount=1,maxnumofsolves\n       maxiter = max(maxiter,int(kspits(icount)))\n    enddo\n    if(myrank.eq.0) write(*,'(A,2i5)') 'ksp_max, maxiter =', ksp_max, maxiter\n    if((maxiter .lt. ksp_max) .or. dtkecrit .le. 0) exit\n\n    dt = dt/2.\n    if(myrank.eq.0) write(*,'(A,e12.4)') 'Time step reduced by 2:  dt =', dt\n#else\n    exit\n#endif\n  enddo\n",
+      "line": 179,
+      "match": "if((maxiter .lt. ksp_max) .or. dtkecrit .le. 0) exit",
+      "path": "unstructured/time_step.f90"
+    },
+    {
+      "context": "  implicit none\n  include 'mpif.h'\n  integer :: ierr\n\n#ifdef USE3D\n  integer :: maxiter, icount\n#endif\n\nif(dtkecrit.gt.0) then\n  if(myrank.eq.0) then\n!\n! decrease timestep based on kinetic energy or ksp iterations\n! but limit change to fraction dtfrac and bound by dtmin and dtmax\n!\n!   \n       if(ekin.gt.dtkecrit) then\n         dt = dtold/(1. + dtfrac)",
+      "line": 343,
+      "match": "if(dtkecrit.gt.0) then",
+      "path": "unstructured/time_step.f90"
+    },
+    {
+      "context": "\nif(dtkecrit.gt.0) then\n  if(myrank.eq.0) then\n!\n! decrease timestep based on kinetic energy or ksp iterations\n! but limit change to fraction dtfrac and bound by dtmin and dtmax\n!\n!   \n       if(ekin.gt.dtkecrit) then\n         dt = dtold/(1. + dtfrac)\n       else\n\n#ifdef USE3D\n         maxiter = 0\n         do icount=1,maxnumofsolves\n           maxiter = max(maxiter,int(kspits(icount)))\n         enddo",
+      "line": 350,
+      "match": "if(ekin.gt.dtkecrit) then",
+      "path": "unstructured/time_step.f90"
+    },
+    {
+      "context": "         if(maxiter .gt. ksp_warn) dt = dtold/(1. + dtfrac)\n         if(maxiter .lt. ksp_min)  dt = dtold*(1. + dtfrac)\n         if(iprint.ge.1) write(*,'(\"maxiter, ksp_warn, ksp_min\",3i5)') maxiter, ksp_warn, ksp_min\n#endif\n\n         dt = max(dt,dtmin)\n         dt = min(dt,dtmax)\n\n         if(iprint.ge.1) write(*,'(\"dtold,dt,dtkecrit,ekin\",1p4e12.4)') dtold,dt,dtkecrit,ekin\n       endif\n\n\n\n  endif ! on myrank.eq.0\n  call MPI_bcast(dt,1,MPI_DOUBLE_PRECISION,0,MPI_COMM_WORLD,ierr)\n\nendif   ! on dtkecrit",
+      "line": 368,
+      "match": "if(iprint.ge.1) write(*,'(\"dtold,dt,dtkecrit,ekin\",1p4e12.4)') dtold,dt,dtkecrit,ekin",
+      "path": "unstructured/time_step.f90"
+    },
+    {
+      "context": "         if(iprint.ge.1) write(*,'(\"dtold,dt,dtkecrit,ekin\",1p4e12.4)') dtold,dt,dtkecrit,ekin\n       endif\n\n\n\n  endif ! on myrank.eq.0\n  call MPI_bcast(dt,1,MPI_DOUBLE_PRECISION,0,MPI_COMM_WORLD,ierr)\n\nendif   ! on dtkecrit\n\nend subroutine variable_timestep\n\n\nend module time_step",
+      "line": 376,
+      "match": "endif   ! on dtkecrit",
+      "path": "unstructured/time_step.f90"
+    }
+  ],
+  "parent_job_id": "20260918-033-native-restart-integrator-history-source-audit-repair",
+  "pipeline_failure": false,
+  "source_root": "/home/ubuntu/M3DC1-official",
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST"
+}
