@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-046-native-restart-unsplit-first-step-rebuild-audit",
+  "processed_result_commit": "ca4458e958307409d9a4b5942eddbad78e7b87df",
+  "processed_result_receipt_sha": "d3ca61d3a14381c21db972fea37944bccf196bcf",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_FIRST_STEP_REBUILD_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "Successful static-source provenance audit, not a pipeline failure. It captures first post-restart unsplit rebuild context but explicitly does not establish dynamic causation. The required reference handoff remains failed at 1e-12 in job 041 despite double checkpoint fields. The source trace exposes restart-sensitive solver initial-guess and matrix/preconditioner reuse/rebuild state as a focused remaining numerical-state avenue. Frozen gates remain width > +0.020% and Jpk <= +0.10%; claim boundary remains normalized native M3D-C1 only.",
+  "new_job_id": "20260921-048-native-restart-unsplit-solver-state-audit",
+  "timestamp": "2026-09-21T18:24:36Z"
+}
