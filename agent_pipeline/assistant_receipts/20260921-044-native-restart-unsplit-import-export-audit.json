@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-044-native-restart-unsplit-import-export-audit",
+  "processed_result_path": "agent_pipeline/results/20260921-044-native-restart-unsplit-import-export-audit.json",
+  "processed_result_commit": "91039ef01788149577c8073c06c4dea8c81071a3",
+  "processed_result_receipt_sha": "26cb92af93b46b1df5176d184e5a5df3cb46ae97",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_IMPORT_EXPORT_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "Static native-source audit confirms restored physical fields are copied into unsplit time-advance vectors before step_unsplit and exported afterward. This rules against a missing ordinary field-to-vector import as the obvious handoff defect but is not dynamic causation. Handoff equivalence remains failed at 1e-12 in job 041 with double checkpoint fields. The focused next audit traces first post-restart calc_matrices/RHS/matrix reconstruction. Frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260921-046-native-restart-unsplit-first-step-rebuild-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-21T16:44:12Z"
+}
