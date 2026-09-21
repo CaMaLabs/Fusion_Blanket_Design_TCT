@@ -1,0 +1,234 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 40.04117560386658,
+  "error": null,
+  "finished_utc": "2026-09-21T14:06:29.205371Z",
+  "head_before": "3e8311b9fb6548cb5d01df39ffddacf6bbac1476",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260921-041-native-restart-full-precision-handoff-repair-rerun.json",
+  "job_id": "20260921-041-native-restart-full-precision-handoff-repair-rerun",
+  "log_path": "agent_pipeline/logs/20260921-041-native-restart-full-precision-handoff-repair-rerun.log",
+  "log_sha256": "abe7106fb307ebe851e1c60348249ac0df4cf22a45f4a7106727813f3c3112f0",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_full_precision_handoff"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_full_precision_handoff_repair.sh",
+  "runner_sha256": "13867b4b8a0ffc5459c9bc61889544ce9f91b244eef8e0762879685278e6efbd",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T14:05:49.163135Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Source=0 native continuous-vs-split restart validation using M3D-C1 built-in idouble_out=1 serialization only; no controller efficacy run and no solver-equation change.",
+    "checkpoint_precision": {
+      "I_double": true,
+      "exists": true,
+      "f32_occurrences": 0,
+      "f64_occurrences": 36,
+      "h5dump_return_code": 0,
+      "path": "/tmp/m3dc1_tct_native_restart_full_precision_handoff_runs/split_first/time_005.h5",
+      "psi_double": true,
+      "stderr_tail": ""
+    },
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_FULL_PRECISION_HANDOFF_EQUIVALENCE_FAILED",
+    "execution": {
+      "continuous": {
+        "C1stdout_tail": "03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.506E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.472E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.520E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.522E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.694E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.854E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.559E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.456E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.473E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_010.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_010.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice   10  3.24350000E-02  3.65190000E-02\nOUTPUT: hdf5_write_timings      10  5.17000000E-04  3.70360000E-02    0\nOUTPUT: hdf5_flush              10  3.29000000E-04  3.29000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 17.3277 (sec)\n ==============================================================\n END DATE: 2026 09 21   TIME: 07:06:07.7\n\n Stopped at           0\n",
+        "elapsed_seconds": 18.2029390335083,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_stderr_tail": "",
+        "wrapper_stdout_tail": ""
+      },
+      "split_first": {
+        "C1stdout_tail": "03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.227E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.263E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.372E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.281E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.304E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.256E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.142E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.110E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.157E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.08380000E-02  3.47100000E-02\nOUTPUT: hdf5_write_timings       5  5.65000000E-04  3.52750000E-02    0\nOUTPUT: hdf5_flush               5  3.25000000E-04  3.25000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 8.86223 (sec)\n ==============================================================\n END DATE: 2026 09 21   TIME: 07:06:17.4\n\n Stopped at           0\n",
+        "elapsed_seconds": 9.64008617401123,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_stderr_tail": "",
+        "wrapper_stdout_tail": ""
+      },
+      "split_second": {
+        "C1stdout_tail": "03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.239E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.202E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.241E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.281E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.290E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.218E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.177E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.169E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.161E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_010.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_010.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice   10  3.00050000E-02  3.41990000E-02\nOUTPUT: hdf5_write_timings      10  4.85000000E-04  3.46840000E-02    0\nOUTPUT: hdf5_flush              10  3.24000000E-04  3.24000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 50\n destroy field 51\n destroy field 52\n destroy field 53\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n\n* [M3D-C1 INFO] run time: 8.90653 (sec)\n ==============================================================\n END DATE: 2026 09 21   TIME: 07:06:27.8\n\n Stopped at           0\n",
+        "elapsed_seconds": 9.755955457687378,
+        "launcher_stderr_tail": "",
+        "return_code": 0,
+        "wrapper_stderr_tail": "",
+        "wrapper_stdout_tail": ""
+      }
+    },
+    "extraction_error": null,
+    "final_handoff_equivalence": {
+      "by_metric": {
+        "Jint_high": {
+          "continuous": 0.365471609098,
+          "delta": 0.12548113912199998,
+          "pass": false,
+          "split": 0.49095274822
+        },
+        "Jpk": {
+          "continuous": 0.873541,
+          "delta": 0.2098190000000001,
+          "pass": false,
+          "split": 1.08336
+        },
+        "Reconnected_Flux": {
+          "continuous": 0.000369091,
+          "delta": -1.9367999999999968e-05,
+          "pass": false,
+          "split": 0.000349723
+        },
+        "W_sheet": {
+          "continuous": 1.0053392262479937,
+          "delta": 0.7259400375347975,
+          "pass": false,
+          "split": 1.7312792637827912
+        },
+        "center_abs_current": {
+          "continuous": 0.597792592890341,
+          "delta": 0.26811277077485896,
+          "pass": false,
+          "split": 0.8659053636652
+        },
+        "magnetic_energy": {
+          "continuous": 209.01600000000002,
+          "delta": 0.0,
+          "pass": true,
+          "split": 209.01600000000002
+        },
+        "shoulder_abs_current": {
+          "continuous": 0.2504778449447269,
+          "delta": -0.1902870885197509,
+          "pass": false,
+          "split": 0.060190756424976004
+        }
+      },
+      "continuous_time": 0.1,
+      "pass": false,
+      "split_time": 0.1,
+      "time_delta": 0.0,
+      "time_pass": true
+    },
+    "first_postrestart_step_equivalence": {
+      "by_metric": {
+        "Jint_high": {
+          "continuous": 0.418267117924,
+          "delta": -0.21932009824400003,
+          "pass": false,
+          "split": 0.19894701967999998
+        },
+        "Jpk": {
+          "continuous": 0.915039,
+          "delta": 0.5747209999999999,
+          "pass": false,
+          "split": 1.48976
+        },
+        "Reconnected_Flux": {
+          "continuous": 0.000378569,
+          "delta": -9.886999999999998e-05,
+          "pass": false,
+          "split": 0.000279699
+        },
+        "W_sheet": {
+          "continuous": 1.5798456994292418,
+          "delta": 0.44046627207686706,
+          "pass": false,
+          "split": 2.020311971506109
+        },
+        "center_abs_current": {
+          "continuous": 0.76904753806949,
+          "delta": 0.27593373871021,
+          "pass": false,
+          "split": 1.0449812767797
+        },
+        "magnetic_energy": {
+          "continuous": 209.626,
+          "delta": 0.0,
+          "pass": true,
+          "split": 209.626
+        },
+        "shoulder_abs_current": {
+          "continuous": 0.066186787725421,
+          "delta": 0.04271523256819361,
+          "pass": false,
+          "split": 0.10890202029361461
+        }
+      },
+      "continuous_time": 0.06,
+      "pass": false,
+      "split_time": 0.06,
+      "time_delta": 0.0,
+      "time_pass": true
+    },
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "handoff_equivalence": {
+      "pass": false,
+      "tolerance": 1e-12
+    },
+    "native_output_control": {
+      "idouble_out": 1
+    },
+    "parent_classification": "M3DC1_TCT_NATIVE_RESTART_FIELD_PRECISION_PATH_CONFIRMED",
+    "parent_job_id": "20260921-039-native-restart-field-precision-source-audit",
+    "pipeline_failure": false,
+    "precheckpoint_equivalence": {
+      "by_metric": {
+        "Jint_high": {
+          "continuous": 0.49095274822,
+          "delta": 0.0,
+          "pass": true,
+          "split": 0.49095274822
+        },
+        "Jpk": {
+          "continuous": 1.08336,
+          "delta": 0.0,
+          "pass": true,
+          "split": 1.08336
+        },
+        "Reconnected_Flux": {
+          "continuous": 0.000349723,
+          "delta": 0.0,
+          "pass": true,
+          "split": 0.000349723
+        },
+        "W_sheet": {
+          "continuous": 1.7312792637827912,
+          "delta": 0.0,
+          "pass": true,
+          "split": 1.7312792637827912
+        },
+        "center_abs_current": {
+          "continuous": 0.8659053636652,
+          "delta": 0.0,
+          "pass": true,
+          "split": 0.8659053636652
+        },
+        "magnetic_energy": {
+          "continuous": 209.81600000000003,
+          "delta": 0.0,
+          "pass": true,
+          "split": 209.81600000000003
+        },
+        "shoulder_abs_current": {
+          "continuous": 0.060190756424976004,
+          "delta": 0.0,
+          "pass": true,
+          "split": 0.060190756424976004
+        }
+      },
+      "continuous_time": 0.05,
+      "pass": true,
+      "split_time": 0.05,
+      "time_delta": 0.0,
+      "time_pass": true
+    },
+    "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_full_precision_handoff/native_restart_full_precision_handoff_summary.json",
+  "summary_sha256": "6584573a475443130ff1245c88fcfd0d0648301cb5436dd6b5c497c1800688e6",
+  "timed_out": false
+}
