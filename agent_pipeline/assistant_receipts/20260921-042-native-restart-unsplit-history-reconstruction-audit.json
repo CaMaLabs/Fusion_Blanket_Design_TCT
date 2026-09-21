@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-042-native-restart-unsplit-history-reconstruction-audit",
+  "processed_result_path": "agent_pipeline/results/20260921-042-native-restart-unsplit-history-reconstruction-audit.json",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_HISTORY_RECONSTRUCTION_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "The source audit shows initialize_timestep_unsplit freshly allocates phi_vec, phip_vec, q4_vec, b1_phi, and b2_phi on process startup, while assign_variables_unsplit only associates physical field views with phi_vec. No restart-conditioned logic appears in these initialization routines. This is a focused hidden-state lead for the first-postrestart solve, not dynamic causation. Handoff equivalence remains failed at 1e-12 after the double-checkpoint test; frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260921-043-native-restart-unsplit-work-vector-audit",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-21T14:11:00Z"
+}
