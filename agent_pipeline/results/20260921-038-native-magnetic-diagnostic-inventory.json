@@ -1,0 +1,389 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.9163703918457031,
+  "error": null,
+  "finished_utc": "2026-09-21T13:21:40.972460Z",
+  "head_before": "0cba0aaadaad0899bf1bf81bee8ae0befbe42e10",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260921-038-native-magnetic-diagnostic-inventory.json",
+  "job_id": "20260921-038-native-magnetic-diagnostic-inventory",
+  "log_path": "agent_pipeline/logs/20260921-038-native-magnetic-diagnostic-inventory.log",
+  "log_sha256": "d640f8400533208b862dc7e7c048ab18b21469c3d07ea47036863b480a1215cd",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_diagnostic_inventory"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_diagnostic_inventory.sh",
+  "runner_sha256": "22218316de25be0163b6daade28eccfc29efab73fe36c2dc7135df48824ba3c3",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T13:21:40.055030Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Read-only inventory of native M3D-C1 magnetic/probe diagnostics for simulation-native TCT precursor construction.",
+    "baseline": {
+      "c1input_path": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1input",
+      "directory": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE",
+      "h5_path": "/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE/C1.h5",
+      "root_attrs": {
+        "3d": 0,
+        "amu": 0.0001,
+        "amuc": 0.0001,
+        "amupar": 0.0,
+        "b0_norm": 10000.0,
+        "bootstrap_alpha": 0.0,
+        "bzero": 1.0,
+        "bzsign": 0.0,
+        "db": 0.0,
+        "denm": 0.0001,
+        "eqsubtract": 0,
+        "eta0": 0.001,
+        "eta_te_offset": 0.0,
+        "eta_wall": 1.0,
+        "etar": 0.0,
+        "extsubtract": 0,
+        "frequency": 0.0,
+        "gam": 1.66666666666667,
+        "gravr": 0.0,
+        "gravz": 0.0,
+        "gyro": 0,
+        "hyper": 0.0,
+        "hyperc": 0.0,
+        "hyperi": 0.0,
+        "hyperp": 0.0,
+        "hyperv": 0.0,
+        "ibootstrap_model": 0,
+        "icomplex": 0,
+        "icsubract": 0,
+        "idens": 1,
+        "ifixedb": 0,
+        "iflux_loops": 0,
+        "igeometry": 0,
+        "ikprad": 0,
+        "imag_probes": 0,
+        "imulti_region": 1,
+        "integrator": 0,
+        "ion_mass": 1.0,
+        "ipellet": 0,
+        "ipellet_abl": 0,
+        "iper": 0,
+        "ipres": 0,
+        "ipressplit": 0,
+        "itemp": 0,
+        "itime_independent": 0,
+        "itor": 0,
+        "ivform": 1,
+        "jper": 0,
+        "kappa0": 0.0,
+        "kappar": 0.0,
+        "kappat": 0.0001,
+        "kinetic": 0,
+        "kprad_z": 1,
+        "l0_norm": 100.0,
+        "linear": 0,
+        "ln": 0.0,
+        "n0_norm": 100000000000000.0,
+        "nonrect": 1,
+        "npellets": 0,
+        "nplanes": 1,
+        "ntime": 6,
+        "ntor": 0,
+        "numvar": 3,
+        "rzero": 10.0,
+        "tflux0": 0.0,
+        "thimp": 0.6,
+        "version": 45,
+        "xlim": 0.0,
+        "xlim2": 0.0,
+        "z_ion": 1.0,
+        "zlim": 0.0,
+        "zlim2": 0.0
+      }
+    },
+    "c1input_probe_config": [],
+    "candidate_dataset_count": 15,
+    "candidate_datasets": [
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Flux_kinetic",
+        "sample_first": [
+          0.0,
+          4.1307073626666805e-15,
+          1.6637153748888522e-05
+        ],
+        "sample_last": [
+          1.3533396668208297e-05,
+          1.2121318832214456e-05,
+          8.281281225208659e-06
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Flux_poynting",
+        "sample_first": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sample_last": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Flux_pressure",
+        "sample_first": [
+          0.0,
+          9.365689766127616e-05,
+          0.07000281661748886
+        ],
+        "sample_last": [
+          0.07850108295679092,
+          0.08159715682268143,
+          0.0792110487818718
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Flux_thermal",
+        "sample_first": [
+          1.112911824837097e-16,
+          1.831749796110671e-05,
+          0.001666450873017311
+        ],
+        "sample_last": [
+          0.0049892752431333065,
+          0.00784149020910263,
+          0.010113227181136608
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Particle_Flux_convective",
+        "sample_first": [
+          0.0,
+          Infinity,
+          Infinity
+        ],
+        "sample_last": [
+          Infinity,
+          Infinity,
+          Infinity
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Particle_Flux_diffusive",
+        "sample_first": [
+          -3.7309036997612566e-05,
+          -3.14470125886146e-05,
+          0.0037551280111074448
+        ],
+        "sample_last": [
+          0.008145010098814964,
+          0.011780564673244953,
+          0.014640716835856438
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/Reconnected_Flux",
+        "sample_first": [
+          0.0005000000237487257,
+          0.0002791390288621187,
+          0.0004255962267052382
+        ],
+        "sample_last": [
+          0.00032764923525974154,
+          0.0003925753408111632,
+          0.0003490688977763057
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/brem_rad",
+        "sample_first": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sample_last": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/toroidal_current",
+        "sample_first": [
+          -0.000743711250834167,
+          -0.2989737391471863,
+          -0.18539924919605255
+        ],
+        "sample_last": [
+          -0.20672102272510529,
+          -0.19935935735702515,
+          -0.19800618290901184
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/toroidal_current_p",
+        "sample_first": [
+          -0.00046430909424088895,
+          -0.16003203392028809,
+          -0.18539924919605255
+        ],
+        "sample_last": [
+          -0.0013906708918511868,
+          -0.1989688277244568,
+          -0.0010606138966977596
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/toroidal_current_w",
+        "sample_first": [
+          -0.00043418543646112084,
+          -0.10742891579866409,
+          0.06536472588777542
+        ],
+        "sample_last": [
+          -0.08697996288537979,
+          0.03434010595083237,
+          -0.04213429614901543
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/toroidal_flux",
+        "sample_first": [
+          3.122103691101074,
+          3.122105598449707,
+          3.1184020042419434
+        ],
+        "sample_last": [
+          3.1148953437805176,
+          3.113278388977051,
+          3.1131503582000732
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/toroidal_flux_p",
+        "sample_first": [
+          3.0083670616149902,
+          0.11840816587209702,
+          3.1184020042419434
+        ],
+        "sample_last": [
+          0.003297894261777401,
+          3.1072275638580322,
+          0.007093729451298714
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/xmag",
+        "sample_first": [
+          10.000091552734375,
+          10.093221664428711,
+          10.004897117614746
+        ],
+        "sample_last": [
+          9.948492050170898,
+          10.023515701293945,
+          10.02015209197998
+        ],
+        "shape": [
+          6
+        ]
+      },
+      {
+        "attrs": {},
+        "dtype": "float32",
+        "path": "scalars/zmag",
+        "sample_first": [
+          0.8624348044395447,
+          1.1114193201065063,
+          0.974600076675415
+        ],
+        "sample_last": [
+          1.115861415863037,
+          0.9844412207603455,
+          0.995128333568573
+        ],
+        "shape": [
+          6
+        ]
+      }
+    ],
+    "candidate_group_count": 0,
+    "candidate_groups": [],
+    "claim_boundary": "Diagnostic/provenance inventory only; no precursor performance or controller-efficacy claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_DIAGNOSTIC_CANDIDATES_FOUND",
+    "dataset_count": 113,
+    "next_step_contract": "Use only a physically identified native magnetic diagnostic as a precursor input. Do not silently substitute Jpk/dJdt or FAIR-MAST absolute milliseconds.",
+    "pipeline_failure": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_diagnostic_inventory/summary.json",
+  "summary_sha256": "e5ba87f51418bfbb339bbe772103b13bcc2e608b034fd2a3c4e509c2c2e57792",
+  "timed_out": false
+}
