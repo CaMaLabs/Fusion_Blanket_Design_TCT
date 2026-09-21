@@ -3,6 +3,13 @@ set -euo pipefail
 REPO="/home/ubuntu/work/openmc/sweep"
 BASE="/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE"
 OUT="$REPO/validation_runs/m3dc1_tct_native_magnetic_probe_timeseries_baseline"
+
+source "$HOME/spack/share/spack/setup-env.sh"
+spack env activate m3dc1-deps
+export TMPDIR="/tmp/tct-${USER:-ubuntu}"
+export OMPI_MCA_orte_tmpdir_base="$TMPDIR"
+mkdir -p "$TMPDIR"
+
 mkdir -p "$OUT"
 rm -rf "$OUT/run"
 mkdir -p "$OUT/run"
@@ -28,6 +35,7 @@ PY
 BIN="${M3DC1_BIN:-}"
 if [[ -z "$BIN" ]]; then
   for c in \
+    /home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d \
     /root/M3DC1/unstructured/_localgnu-petsc-opt-25/m3dc1_2d \
     /root/M3DC1/unstructured/build-mpich325/m3dc1_2d \
     /root/M3DC1/unstructured/build-openmpi319/m3dc1_2d \
@@ -38,12 +46,12 @@ if [[ -z "$BIN" ]]; then
   done
 fi
 if [[ -z "$BIN" ]]; then
-  BIN="$(find /root/M3DC1 /home/ubuntu/M3DC1 -type f -name m3dc1_2d -perm -111 -print -quit 2>/dev/null || true)"
+  BIN="$(find /home/ubuntu/M3DC1-official /root/M3DC1 /home/ubuntu/M3DC1 -type f -name m3dc1_2d -perm -111 -print -quit 2>/dev/null || true)"
 fi
-[[ -n "$BIN" && -x "$BIN" ]] || { echo 'No local m3dc1_2d binary found after explicit and bounded discovery' >&2; exit 91; }
+[[ -n "$BIN" && -x "$BIN" ]] || { echo 'No local m3dc1_2d binary found after activating m3dc1-deps and bounded discovery' >&2; exit 91; }
 echo "Using M3D-C1 binary: $BIN" >&2
 MPI="$(command -v mpiexec.mpich || command -v mpirun || true)"
-[[ -n "$MPI" ]] || { echo 'No MPI launcher found' >&2; exit 92; }
+[[ -n "$MPI" ]] || { echo 'No MPI launcher found after activating m3dc1-deps' >&2; exit 92; }
 set +e
 "$MPI" -np 1 "$BIN" < C1input > probe_run.log 2>&1
 RC=$?
