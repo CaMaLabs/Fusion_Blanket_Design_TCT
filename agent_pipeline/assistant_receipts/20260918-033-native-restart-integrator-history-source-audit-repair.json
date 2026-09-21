@@ -6,9 +6,10 @@
   "classification": "M3DC1_TCT_NATIVE_RESTART_INTEGRATOR_HISTORY_CONTEXT_FOUND",
   "pipeline_error": null,
   "interpretation": "The repaired static audit completed successfully against /home/ubuntu/M3DC1-official and found restart-adjacent timestep/history source context, notably newpar.f90 preserving/restoring dt around rdrestart_hdf5 and subsequently calling initialize_timestep. This is a scientifically relevant lead for the first-postrestart discontinuity but remains STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION. Handoff equivalence remains INHERITED_FAILED_AT_1E-12_FROM_JOB_028; zero equivalence is NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST. The frozen +0.020% width and +0.10% Jpk gates are unchanged.",
-  "new_job_id": null,
-  "follow_up_status": "BLOCKED_BY_CONNECTED_GITHUB_WRITE_GUARD",
-  "follow_up_detail": "A focused static timestep-state source audit implementation was added, but the connected GitHub write guard repeatedly blocked creation of its required allow-listed run_*.sh wrapper. No enabled replacement job was published because publishing a manifest without a valid allow-listed runner would intentionally create a pipeline failure.",
+  "new_job_id": "20260918-034-native-restart-timestep-state-source-audit",
+  "follow_up_status": "QUEUED_AFTER_GITHUB_WRITE_GUARD_CLEARED",
+  "follow_up_detail": "The previously blocked allow-listed run_*.sh wrapper was successfully created, and exactly one enabled follow-up manifest was published for the focused static timestep-state source audit. No solver execution or physics modification is part of job 034.",
   "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
-  "timestamp": "2026-09-18T20:37:05Z"
+  "timestamp": "2026-09-18T20:37:05Z",
+  "follow_up_queued_timestamp": "2026-09-21T11:55:00Z"
 }
