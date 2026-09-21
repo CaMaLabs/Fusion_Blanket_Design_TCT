@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-040-native-restart-full-precision-handoff-repair",
+  "processed_result_path": "agent_pipeline/results/20260921-040-native-restart-full-precision-handoff-repair.json",
+  "processed_result_commit": "6c49c7f41d2638c0655f0ae5e37ec41d182fe792",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_FULL_PRECISION_HANDOFF_EXECUTION_FAILED",
+  "pipeline_error": "Postprocessing failed with RuntimeError('h5dump not found; activate m3dc1-deps'). All three native arms returned 0 and the split checkpoint was independently confirmed to contain double-precision I and psi datasets; therefore this is an environment/tooling failure, not a scientific negative result.",
+  "interpretation": "No handoff-equivalence conclusion is permitted from job 040 because metric extraction did not execute. The repair changes only the outer wrapper to activate m3dc1-deps and use the dedicated /tmp/tct-$USER MPI temp directory, then repeats the identical idouble_out=1 source=0 test. The 1e-12 handoff gate and frozen +0.020% width / +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260921-041-native-restart-full-precision-handoff-repair-rerun",
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "timestamp": "2026-09-21T14:04:00Z"
+}
