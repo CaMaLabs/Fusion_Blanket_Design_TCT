@@ -1,0 +1,48 @@
+job_id=20260921-036-native-restart-dtold-persistence-source-audit
+started_utc=2026-09-21T12:55:34.693353Z
+head_before=ec61e9337f14da7c1e7c6b7f909a9b54216d5a18
+{
+  "classification": "M3DC1_TCT_NATIVE_RESTART_DTOLD_PERSISTENCE_CONTEXT_CAPTURED",
+  "pipeline_failure": false,
+  "parent_job_id": "20260921-035-native-restart-dtold-state-source-audit",
+  "audit_scope": "Static source audit for explicit dt/dtold restart/HDF5 persistence paths; no M3D-C1 execution or physics modification.",
+  "source_root": "/home/ubuntu/M3DC1-official",
+  "hits": [
+    {
+      "path": "unstructured/output.f90",
+      "line": 417,
+      "match": "call output_scalar(scalar_group_id, \"dt\" ,     dt, ntime, error)",
+      "context": "     if(iflux_loops.ne.0) call h5gopen_f(root_id, \"flux_loops\", fl_group_id, error)\n     if((ipellet.ne.0).and.((irestart.eq.0).or.(version_in.ge.31))) &\n          call h5gopen_f(root_id, \"pellet\", pel_group_id, error)\n  endif\n\n  ! State Variables (needed for restart)\n  ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n  ! Time step\n  call output_scalar(scalar_group_id, \"time\" , time, ntime, error)\n  call output_scalar(scalar_group_id, \"dt\" ,     dt, ntime, error)\n\n  ! Magnetic geometry\n  call output_scalar(scalar_group_id, \"xnull\"   ,xnull   ,ntime,error)\n  call output_scalar(scalar_group_id, \"znull\"   ,znull   ,ntime,error)\n  call output_scalar(scalar_group_id, \"xnull2\"  ,xnull2  ,ntime,error)\n  call output_scalar(scalar_group_id, \"znull2\"  ,znull2  ,ntime,error)\n  call output_scalar(scalar_group_id, \"xmag\"    ,xmag    ,ntime,error)\n  call output_scalar(scalar_group_id, \"zmag\"    ,zmag    ,ntime,error)\n\n  ! Pellet stuff"
+    },
+    {
+      "path": "unstructured/read_jsolver.f90",
+      "line": 26,
+      "match": "read(ifile,1098) nz1,nz2,nthe,npsi_jsv,isym,dr,dt",
+      "context": " \n  subroutine load_jsolver\n \n    implicit none\n \n    integer, parameter :: ifile = 33\n    integer :: i,j\n \n    open(unit=ifile,file='fixed',status='old')\n \n    read(ifile,1098) nz1,nz2,nthe,npsi_jsv,isym,dr,dt\n    read(ifile,1099) xzero_jsv,p0_jsv,plimst,pminst\n \n  1098 format(5i5,1p2e12.4)\n  1099 format(1p5e16.8)\n \n    allocate(p_jsv(nz2), ppxx_jsv(nz2), q_jsv(nz2), qp_jsv(nz2), &\n         gxx_jsv(nz2), gpx_jsv(nz2), fb_jsv(nz2), fbp_jsv(nz2), &\n         f_jsv(nz2), fp_jsv(nz2), psival_jsv(nz2), &\n         x_jsv(nz1,nz2), z_jsv(nz1,nz2), aj3_jsv(nz1,nz2), aj_jsv(nz1,nz2), &\n         te_jsv(nz2), ane_jsv(nz2), ti_jsv(nz2), &"
+    },
+    {
+      "path": "unstructured/time_step.f90",
+      "line": 182,
+      "match": "if(myrank.eq.0) write(*,'(A,e12.4)') 'Time step reduced by 2:  dt =', dt",
+      "context": "\n#ifdef USE3D\n    maxiter = 0\n    do icount=1,maxnumofsolves\n       maxiter = max(maxiter,int(kspits(icount)))\n    enddo\n    if(myrank.eq.0) write(*,'(A,2i5)') 'ksp_max, maxiter =', ksp_max, maxiter\n    if((maxiter .lt. ksp_max) .or. dtkecrit .le. 0) exit\n\n    dt = dt/2.\n    if(myrank.eq.0) write(*,'(A,e12.4)') 'Time step reduced by 2:  dt =', dt\n#else\n    exit\n#endif\n  enddo\n\n\n  time = time + dt\n  dtold = dt\n  if(ntime.gt.1 .and. linear.eq.0) call variable_timestep\n"
+    },
+    {
+      "path": "unstructured/time_step.f90",
+      "line": 368,
+      "match": "if(iprint.ge.1) write(*,'(\"dtold,dt,dtkecrit,ekin\",1p4e12.4)') dtold,dt,dtkecrit,ekin",
+      "context": "         enddo\n\n         if(maxiter .gt. ksp_warn) dt = dtold/(1. + dtfrac)\n         if(maxiter .lt. ksp_min)  dt = dtold*(1. + dtfrac)\n         if(iprint.ge.1) write(*,'(\"maxiter, ksp_warn, ksp_min\",3i5)') maxiter, ksp_warn, ksp_min\n#endif\n\n         dt = max(dt,dtmin)\n         dt = min(dt,dtmax)\n\n         if(iprint.ge.1) write(*,'(\"dtold,dt,dtkecrit,ekin\",1p4e12.4)') dtold,dt,dtkecrit,ekin\n       endif\n\n\n\n  endif ! on myrank.eq.0\n  call MPI_bcast(dt,1,MPI_DOUBLE_PRECISION,0,MPI_COMM_WORLD,ierr)\n\nendif   ! on dtkecrit\n\nend subroutine variable_timestep"
+    }
+  ],
+  "explicit_dtold_io_match_count": 1,
+  "interpretation_guard": "Absence of a textual dtold I/O match is not proof that dtold is not persisted indirectly; source context only.",
+  "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+  "handoff_equivalence": "INHERITED_FAILED_AT_1E-12_FROM_JOB_028",
+  "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+  "finished_utc": "2026-09-21T12:55:35.049313+00:00"
+}
+
+finished_utc=2026-09-21T12:55:35.060411Z
+return_code=0
