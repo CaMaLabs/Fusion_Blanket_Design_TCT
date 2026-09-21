@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-037-native-live-hdf5-precursor-controller",
+  "processed_result": {
+    "path": "agent_pipeline/results/20260921-037-native-live-hdf5-precursor-controller.json",
+    "blob_sha": "680863cbeb013ea199dc6c437797c95fc3746ba0",
+    "result_head_before": "b52c57661ad0f71b9dbaa8768f7644ac6b770230",
+    "return_code": 0,
+    "success": true,
+    "summary_sha256": "91c08c374a38697bcdc564748fc9267557169e8731fb6085d465220799f4f390",
+    "log_sha256": "8e9f6fa8c8261e65a2ef089f2f1501835e19e649655aa37d000bf6a097d7020a"
+  },
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_TIMESCALE_WINDOW_MISMATCH",
+  "pipeline_error": null,
+  "interpretation": "Scientific negative/constraint result, not a pipeline failure. Live C1.h5 normalization passed the reviewed M3D-C1 Alfven-time calibration, but the authoritative 8.376 ms Mirnov/toroidal precursor lead and 3.0 ms bounded-boost response budget map far outside the current native characterization window (0.05 to 0.14 solver units). The controller matrix therefore did not execute and bounded boost correctly remained NO ACTION; zero-equivalence is not applicable because the contract requires it only if the controller matrix executes. Frozen gates remain unchanged at width_gain_pct > +0.020% and Jpk_change_pct <= +0.10%. Claim boundary remains normalized native M3D-C1 only; no reactor-scale or experimental stabilization claim.",
+  "new_job_id": null,
+  "follow_up_decision": "No new job queued from this result. Extending the native run by the ~10^4 solver-time units implied by experimental millisecond timing would not be a focused or computationally justified follow-up, and clipping/inventing trigger times would violate the timing contract.",
+  "processed_at_utc": "2026-09-21T14:37:11Z"
+}
