@@ -1,0 +1,1034 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.11397933959960938,
+  "error": null,
+  "finished_utc": "2026-09-21T14:11:50.528722Z",
+  "head_before": "ce3669f0c23a45ff81e838a87c421b9953c6c72a",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260921-043-native-restart-unsplit-work-vector-audit.json",
+  "job_id": "20260921-043-native-restart-unsplit-work-vector-audit",
+  "log_path": "agent_pipeline/logs/20260921-043-native-restart-unsplit-work-vector-audit.log",
+  "log_sha256": "20cf83856dbfa429724eaf42d185847e033847f257f32edef06bdbbfb66894ca",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_restart_unsplit_work_vectors"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_unsplit_work_vector_audit.sh",
+  "runner_sha256": "2e9e3d3e4b25810433cac972cb81cd522de9b7364eeaea1c8a5f233b844d3229",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T14:11:50.413670Z",
+  "success": true,
+  "summary": {
+    "audit_scope": "Static trace of unsplit timestep work-vector lifecycle after job 042 showed these vectors are freshly created on restart; no solver execution or modification.",
+    "causation_status": "STATIC_SOURCE_CONTEXT_ONLY_NOT_DYNAMIC_CAUSATION",
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim.",
+    "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_WORK_VECTOR_CONTEXT_CAPTURED",
+    "explicit_restart_hdf5_mentions": {
+      "b1_phi": false,
+      "b2_phi": false,
+      "phi_vec": false,
+      "phip_vec": false,
+      "q4_vec": false
+    },
+    "files_scanned": 114,
+    "finished_utc": "2026-09-21T14:11:50.517640+00:00",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "handoff_equivalence": "FAILED_AT_1E-12_IN_JOB_041_WITH_DOUBLE_CHECKPOINT_FIELDS",
+    "hits": {
+      "b1_phi": [
+        {
+          "context": "  type(field_type), private ::  ti_v\n  type(field_type), private ::  ne_v\n  type(field_type), private :: nre_v\n  type(field_type), private :: densmooth_v\n\n  integer :: vecsize_vel, vecsize_phi, vecsize_n, vecsize_p, vecsize_t\n\n  ! temporary vectors\n  type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi\n\n  logical, private :: initialized\n\ncontains\n\n  subroutine initialize_timestep_split\n    use sparse\n    use basic",
+          "line": 36,
+          "match": "type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "if (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n\n    call create_vector(vel_vec,      vecsize_vel, \"vel_vec\")\n    call create_vector(veln_vec,     vecsize_vel, \"veln_vec\")\n    call create_vector(r4_vec,       vecsize_vel, \"r4_vec\")\n    call mark_vector_for_solutiontransfer(vel_vec)",
+          "line": 99,
+          "match": "call create_vector(b1_phi, vecsize_phi, \"b1_phi\")",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n\n    call create_vector(vel_vec,      vecsize_vel, \"vel_vec\")\n    call create_vector(veln_vec,     vecsize_vel, \"veln_vec\")\n    call create_vector(r4_vec,       vecsize_vel, \"r4_vec\")\n    call mark_vector_for_solutiontransfer(vel_vec)\n    call mark_vector_for_solutiontransfer(veln_vec)\n    call mark_vector_for_solutiontransfer(r4_vec)",
+          "line": 101,
+          "match": "call mark_vector_for_solutiontransfer(b1_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call mark_vector_for_solutiontransfer(pret_vec)\nelse\n\n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    call create_vector(vel_vec,      vecsize_vel)\n    call create_vector(veln_vec,     vecsize_vel)\n    call create_vector(r4_vec,       vecsize_vel)\n\n    if(ipres.eq.1 .or. ipressplit.eq.1) then\n       call create_vector(pres_vec,    vecsize_p)",
+          "line": 154,
+          "match": "call create_vector(b1_phi, vecsize_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n     \n  ! Advance Fields\n  ! ==============\n  if(iestatic.eq.0) then\n     if(myrank.eq.0 .and. iprint.ge.1) print *, \" Advancing Fields\"\n\n     ! r2matrix_sm * vel(n+1)\n     call matvecmult(r2_mat,vel_vec,b1_phi)\n     call mult(b1_phi, -1.)\n\n     ! q2matrix_sm * vel(n)\n     call matvecmult(q2_mat,veln_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! d2matrix_sm * phi(n)\n",
+          "line": 1275,
+          "match": "call matvecmult(r2_mat,vel_vec,b1_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif\n\n     call add(b1_phi, q4_vec)\n \n     ! Insert boundary conditions\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s2_mat)\n        if(ipressplit.eq.0 .and. numvar.ge.3) then\n           if(ipres.eq.1) then",
+          "line": 1323,
+          "match": "call add(b1_phi, q4_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  solving\"\n     ! solve linear system...LU decomposition done first time\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_phi)\n        xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else\n        call newsolve(s2_mat, b1_phi, jer)\n     endif    \n     !if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s2_mat)\n\n\n   if(idiff .gt. 0) then",
+          "line": 1360,
+          "match": "call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_phi)\n        xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else\n        call newsolve(s2_mat, b1_phi, jer)\n     endif    \n     !if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s2_mat)\n\n\n   if(idiff .gt. 0) then\n         call add(b1_phi,phi_vec)\n   endif\n",
+          "line": 1363,
+          "match": "call newsolve(s2_mat, b1_phi, jer)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call destroy_vector(xVec_guess)\n     else\n        call newsolve(s2_mat, b1_phi, jer)\n     endif    \n     !if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s2_mat)\n\n\n   if(idiff .gt. 0) then\n         call add(b1_phi,phi_vec)\n   endif\n\n     if(myrank.eq.0 .and. itimer.eq.1) then\n        call second(tend)\n        t_solve_b = t_solve_b + tend - tstart\n     endif\n     if(jer.ne.0) then\n        write(*,*) 'Error in field solve', jer",
+          "line": 1369,
+          "match": "call add(b1_phi,phi_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n     ! Iterate field solve using re-defined transport coefficients\n     if(iteratephi.eq.1) then\n      \n        if(myrank.eq.0 .and. iprint.ge.1) &\n             print *, \" Advancing fields... corrector step\"\n        ! temporarily advance fields to new values\n        b2_phi = phi_vec\n        phi_vec = b1_phi\n!\n        call export_time_advance_vectors_split\n        ! redefine transport coefficients with new den/pe values\n        call lcfs(psi_field(1))\n        call define_transport_coefficients\n        ! revert fields to old values\n        phi_vec = b2_phi\n        ",
+          "line": 1390,
+          "match": "phi_vec = b1_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        call ludefall(0, 0, 0, 0, 1)\n        if(myrank.eq.0 .and. itimer.eq.1) then\n           call second(tend)\n           t_ludefall = t_ludefall + tend - tstart\n        endif\n\n        ! r2matrix_sm * vel(n+1)\n        call matvecmult(r2_mat,vel_vec,b1_phi)\n        call mult(b1_phi, -1.)\n   \n        ! q2matrix_sm * vel(n)\n        call matvecmult(q2_mat,veln_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n\n        ! d2matrix_sm * phi(n)\n        call matvecmult(d2_mat,phi_vec,b2_phi)",
+          "line": 1409,
+          "match": "call matvecmult(r2_mat,vel_vec,b1_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        if(irunaway .gt. 0) then\n           call matvecmult(r43_mat,nre_vec,b2_phi)\n           call mult(b2_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q43_mat,nreold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n        end if\n\n        call add(b1_phi, q4_vec)\n       \n        ! Insert boundary conditions\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        if(calc_matrices.eq.1) then\n           call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s2_mat)\n           if(ipressplit.eq.0 .and. numvar.ge.3) then\n              if(ipres.eq.1) then\n                 call boundary_pe(b1_phi, pe_v, s2_mat)",
+          "line": 1452,
+          "match": "call add(b1_phi, q4_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  \n        ! solve linear system...LU decomposition done first time\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        \n        !if(linear.eq.0) call clear_mat(s2_mat)\n        if(isolve_with_guess==1) then\n            call create_vector(xVec_guess, vecsize_phi)\n            xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n            call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n            call destroy_vector(xVec_guess)\n        else\n            call newsolve(s2_mat, b1_phi, jer)\n        endif    \n        \n        if(myrank.eq.0 .and. itimer.eq.1) then\n           call second(tend)\n           t_solve_b = t_solve_b + tend - tstart",
+          "line": 1490,
+          "match": "call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        \n        !if(linear.eq.0) call clear_mat(s2_mat)\n        if(isolve_with_guess==1) then\n            call create_vector(xVec_guess, vecsize_phi)\n            xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n            call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n            call destroy_vector(xVec_guess)\n        else\n            call newsolve(s2_mat, b1_phi, jer)\n        endif    \n        \n        if(myrank.eq.0 .and. itimer.eq.1) then\n           call second(tend)\n           t_solve_b = t_solve_b + tend - tstart\n        endif\n        if(jer.ne.0) then\n           write(*,*) 'Error in field solve', jer",
+          "line": 1493,
+          "match": "call newsolve(s2_mat, b1_phi, jer)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "           t_solve_b = t_solve_b + tend - tstart\n        endif\n        if(jer.ne.0) then\n           write(*,*) 'Error in field solve', jer\n           call safestop(29)\n        endif\n     end if     !...on iteratephi\n\n     phi_vec = b1_phi\n\n     ! apply smoothing operators\n     ! ~~~~~~~~~~~~~~~~~~~~~~~~~\n     call smooth_fields(psi_v) \n\n!!$     if(ipressplit.eq.0 .and. (numvar.ge.3 .or. ipres.eq.1)) &\n!!$          call get_temperatures(den_v, p_v, pe_v, te_v, ti_v)\n  end if       !...on iestatic",
+          "line": 1506,
+          "match": "phi_vec = b1_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  type(field_type), private :: nre_v\n  type(field_type), private ::   p_v\n  type(field_type), private ::   e_v\n  type(field_type), private ::  bfp_v\n\n  integer, private :: vecsize_phi\n\n  ! temporary vectors\n  type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi\n\n  logical, private :: initialized\n\ncontains\n\n  subroutine initialize_timestep_unsplit\n    use sparse\n    use basic",
+          "line": 30,
+          "match": "type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) &\n         vecsize_phi = vecsize_phi + 1\n    \n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    ! Matrices\n    call set_matrix_index(s1_mat, s1_mat_index)\n    call set_matrix_index(d1_mat, d1_mat_index)\n#ifdef REORDERED\n    call create_mat(s1_mat, vecsize_phi, vecsize_phi, icomplex, 1, is1_agg_blk_cnt, is1_agg_scp)\n#else",
+          "line": 52,
+          "match": "call create_vector(b1_phi, vecsize_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "\n  integer, intent(in) :: calc_matrices\n  integer :: jer\n  \n  real :: tstart, tend\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Solving matrix equation...\"\n\n  b1_phi = q4_vec\n\n  if(itime_independent.eq.0) then\n     ! vtemp = d1matrix_sm * phi(n)\n     call matvecmult(d1_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then",
+          "line": 290,
+          "match": "b1_phi = q4_vec",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "     if(irunaway.eq.1) call boundary_nre(b1_phi, nre_v)\n     if(ipres.eq.1 .and. numvar.ge.3) call boundary_pe(b1_phi, pe_v)\n     if(ipres.eq.1 .or. numvar.ge.3)  call boundary_p(b1_phi, p_v)\n  endif\n\n  ! solve linear system...LU decomposition done first time\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"solving..\"\n  if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n  call newsolve(s1_mat, b1_phi, jer)\n  if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s1_mat)\n  if(myrank.eq.0 .and. itimer.eq.1) then\n     call second(tend)\n     t_solve_b = t_solve_b + tend - tstart\n  endif\n  if(jer.ne.0) then\n     write(*,*) 'Error in field solve', jer\n     call safestop(29)",
+          "line": 326,
+          "match": "call newsolve(s1_mat, b1_phi, jer)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "  endif\n  if(jer.ne.0) then\n     write(*,*) 'Error in field solve', jer\n     call safestop(29)\n  endif\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"done solve.\"\n  \n  ! new field solution at time n+1     \n  phi_vec = b1_phi\n\n  ! apply smoothing operators\n  call apply_hyperv(u_v, vz_v, chi_v)\n  call smooth_fields(psi_v)\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Done solving matrix equation.\"\nend subroutine step_unsplit\n",
+          "line": 339,
+          "match": "phi_vec = b1_phi",
+          "path": "unstructured/time_step_unsplit.f90"
+        }
+      ],
+      "b2_phi": [
+        {
+          "context": "  type(field_type), private ::  ti_v\n  type(field_type), private ::  ne_v\n  type(field_type), private :: nre_v\n  type(field_type), private :: densmooth_v\n\n  integer :: vecsize_vel, vecsize_phi, vecsize_n, vecsize_p, vecsize_t\n\n  ! temporary vectors\n  type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi\n\n  logical, private :: initialized\n\ncontains\n\n  subroutine initialize_timestep_split\n    use sparse\n    use basic",
+          "line": 36,
+          "match": "type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n\n    call create_vector(vel_vec,      vecsize_vel, \"vel_vec\")\n    call create_vector(veln_vec,     vecsize_vel, \"veln_vec\")\n    call create_vector(r4_vec,       vecsize_vel, \"r4_vec\")\n    call mark_vector_for_solutiontransfer(vel_vec)\n    call mark_vector_for_solutiontransfer(veln_vec)",
+          "line": 100,
+          "match": "call create_vector(b2_phi, vecsize_phi, \"b2_phi\")",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n\n    call create_vector(vel_vec,      vecsize_vel, \"vel_vec\")\n    call create_vector(veln_vec,     vecsize_vel, \"veln_vec\")\n    call create_vector(r4_vec,       vecsize_vel, \"r4_vec\")\n    call mark_vector_for_solutiontransfer(vel_vec)\n    call mark_vector_for_solutiontransfer(veln_vec)\n    call mark_vector_for_solutiontransfer(r4_vec)\n",
+          "line": 102,
+          "match": "call mark_vector_for_solutiontransfer(b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "else\n\n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    call create_vector(vel_vec,      vecsize_vel)\n    call create_vector(veln_vec,     vecsize_vel)\n    call create_vector(r4_vec,       vecsize_vel)\n\n    if(ipres.eq.1 .or. ipressplit.eq.1) then\n       call create_vector(pres_vec,    vecsize_p)\n       call create_vector(qp4_vec,     vecsize_p)",
+          "line": 155,
+          "match": "call create_vector(b2_phi, vecsize_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  if(iestatic.eq.0) then\n     if(myrank.eq.0 .and. iprint.ge.1) print *, \" Advancing Fields\"\n\n     ! r2matrix_sm * vel(n+1)\n     call matvecmult(r2_mat,vel_vec,b1_phi)\n     call mult(b1_phi, -1.)\n\n     ! q2matrix_sm * vel(n)\n     call matvecmult(q2_mat,veln_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! d2matrix_sm * phi(n)\n\n     call matvecmult(d2_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Inculde density terms",
+          "line": 1279,
+          "match": "call matvecmult(q2_mat,veln_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     call mult(b1_phi, -1.)\n\n     ! q2matrix_sm * vel(n)\n     call matvecmult(q2_mat,veln_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! d2matrix_sm * phi(n)\n\n     call matvecmult(d2_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Inculde density terms\n     if(idens.eq.1) then\n#ifdef USEPARTICLES\n        call matvecmult(r42_mat,densmooth_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)",
+          "line": 1284,
+          "match": "call matvecmult(d2_mat,phi_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     ! d2matrix_sm * phi(n)\n\n     call matvecmult(d2_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Inculde density terms\n     if(idens.eq.1) then\n#ifdef USEPARTICLES\n        call matvecmult(r42_mat,densmooth_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,densmooth_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n#else\n        call matvecmult(r42_mat,ne_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,neold_vec,b2_phi)",
+          "line": 1290,
+          "match": "call matvecmult(r42_mat,densmooth_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     call add(b1_phi, b2_phi)\n\n     ! Inculde density terms\n     if(idens.eq.1) then\n#ifdef USEPARTICLES\n        call matvecmult(r42_mat,densmooth_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,densmooth_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n#else\n        call matvecmult(r42_mat,ne_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,neold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n!!$        call matvecmult(r42_mat,den_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)",
+          "line": 1293,
+          "match": "call matvecmult(q42_mat,densmooth_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     if(idens.eq.1) then\n#ifdef USEPARTICLES\n        call matvecmult(r42_mat,densmooth_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,densmooth_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n#else\n        call matvecmult(r42_mat,ne_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,neold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n!!$        call matvecmult(r42_mat,den_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n!!$        call matvecmult(q42_mat,denold_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n#endif",
+          "line": 1296,
+          "match": "call matvecmult(r42_mat,ne_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call matvecmult(r42_mat,densmooth_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,densmooth_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n#else\n        call matvecmult(r42_mat,ne_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,neold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n!!$        call matvecmult(r42_mat,den_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n!!$        call matvecmult(q42_mat,denold_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n#endif\n     end if\n",
+          "line": 1298,
+          "match": "call matvecmult(q42_mat,neold_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,densmooth_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n#else\n        call matvecmult(r42_mat,ne_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,neold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n!!$        call matvecmult(r42_mat,den_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n!!$        call matvecmult(q42_mat,denold_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n#endif\n     end if\n\n     ! Include RE density terms\n     if(irunaway .gt. 0) then",
+          "line": 1300,
+          "match": "!!$        call matvecmult(r42_mat,den_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call add(b1_phi, b2_phi)\n#else\n        call matvecmult(r42_mat,ne_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q42_mat,neold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n!!$        call matvecmult(r42_mat,den_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n!!$        call matvecmult(q42_mat,denold_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n#endif\n     end if\n\n     ! Include RE density terms\n     if(irunaway .gt. 0) then\n        call matvecmult(r43_mat,nre_vec,b2_phi)\n        call mult(b2_phi,-1.)",
+          "line": 1302,
+          "match": "!!$        call matvecmult(q42_mat,denold_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "!!$        call add(b1_phi, b2_phi)\n!!$        call matvecmult(q42_mat,denold_vec,b2_phi)\n!!$        call add(b1_phi, b2_phi)\n#endif\n     end if\n\n     ! Include RE density terms\n     if(irunaway .gt. 0) then\n        call matvecmult(r43_mat,nre_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q43_mat,nreold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     end if\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then",
+          "line": 1309,
+          "match": "call matvecmult(r43_mat,nre_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "#endif\n     end if\n\n     ! Include RE density terms\n     if(irunaway .gt. 0) then\n        call matvecmult(r43_mat,nre_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)\n        call matvecmult(q43_mat,nreold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     end if\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)",
+          "line": 1312,
+          "match": "call matvecmult(q43_mat,nreold_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call add(b1_phi, b2_phi)\n        call matvecmult(q43_mat,nreold_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     end if\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif\n\n     call add(b1_phi, q4_vec)\n \n     ! Insert boundary conditions\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)",
+          "line": 1319,
+          "match": "call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  done solve\"\n\n     ! Iterate field solve using re-defined transport coefficients\n     if(iteratephi.eq.1) then\n      \n        if(myrank.eq.0 .and. iprint.ge.1) &\n             print *, \" Advancing fields... corrector step\"\n        ! temporarily advance fields to new values\n        b2_phi = phi_vec\n        phi_vec = b1_phi\n!\n        call export_time_advance_vectors_split\n        ! redefine transport coefficients with new den/pe values\n        call lcfs(psi_field(1))\n        call define_transport_coefficients\n        ! revert fields to old values\n        phi_vec = b2_phi",
+          "line": 1389,
+          "match": "b2_phi = phi_vec",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        b2_phi = phi_vec\n        phi_vec = b1_phi\n!\n        call export_time_advance_vectors_split\n        ! redefine transport coefficients with new den/pe values\n        call lcfs(psi_field(1))\n        call define_transport_coefficients\n        ! revert fields to old values\n        phi_vec = b2_phi\n        \n        ! recalculate field advance matrix\n        ! (advanced velocity variables will be used in defining matrix)\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        call ludefall(0, 0, 0, 0, 1)\n        if(myrank.eq.0 .and. itimer.eq.1) then\n           call second(tend)\n           t_ludefall = t_ludefall + tend - tstart",
+          "line": 1397,
+          "match": "phi_vec = b2_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "           t_ludefall = t_ludefall + tend - tstart\n        endif\n\n        ! r2matrix_sm * vel(n+1)\n        call matvecmult(r2_mat,vel_vec,b1_phi)\n        call mult(b1_phi, -1.)\n   \n        ! q2matrix_sm * vel(n)\n        call matvecmult(q2_mat,veln_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n\n        ! d2matrix_sm * phi(n)\n        call matvecmult(d2_mat,phi_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n      \n        ! Include density terms\n        if(idens.eq.1) then",
+          "line": 1413,
+          "match": "call matvecmult(q2_mat,veln_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call matvecmult(r2_mat,vel_vec,b1_phi)\n        call mult(b1_phi, -1.)\n   \n        ! q2matrix_sm * vel(n)\n        call matvecmult(q2_mat,veln_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n\n        ! d2matrix_sm * phi(n)\n        call matvecmult(d2_mat,phi_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n      \n        ! Include density terms\n        if(idens.eq.1) then\n#ifdef USEPARTICLES\n           call matvecmult(r42_mat,densmooth_vec,b2_phi)\n           call mult(b1_phi,-1.)\n           call add(b1_phi, b2_phi)",
+          "line": 1417,
+          "match": "call matvecmult(d2_mat,phi_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n        ! d2matrix_sm * phi(n)\n        call matvecmult(d2_mat,phi_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n      \n        ! Include density terms\n        if(idens.eq.1) then\n#ifdef USEPARTICLES\n           call matvecmult(r42_mat,densmooth_vec,b2_phi)\n           call mult(b1_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,densmooth_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#else\n           call matvecmult(r42_mat,den_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,denold_vec,b2_phi)",
+          "line": 1423,
+          "match": "call matvecmult(r42_mat,densmooth_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call add(b1_phi, b2_phi)\n      \n        ! Include density terms\n        if(idens.eq.1) then\n#ifdef USEPARTICLES\n           call matvecmult(r42_mat,densmooth_vec,b2_phi)\n           call mult(b1_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,densmooth_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#else\n           call matvecmult(r42_mat,den_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,denold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#endif\n        end if",
+          "line": 1426,
+          "match": "call matvecmult(q42_mat,densmooth_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        if(idens.eq.1) then\n#ifdef USEPARTICLES\n           call matvecmult(r42_mat,densmooth_vec,b2_phi)\n           call mult(b1_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,densmooth_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#else\n           call matvecmult(r42_mat,den_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,denold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#endif\n        end if\n\n        ! Include linear f terms\n        if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then",
+          "line": 1429,
+          "match": "call matvecmult(r42_mat,den_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "           call matvecmult(r42_mat,densmooth_vec,b2_phi)\n           call mult(b1_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,densmooth_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#else\n           call matvecmult(r42_mat,den_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q42_mat,denold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#endif\n        end if\n\n        ! Include linear f terms\n        if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n           ! b2vector = r15 * bf(n)\n           call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)",
+          "line": 1431,
+          "match": "call matvecmult(q42_mat,denold_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "           call matvecmult(q42_mat,denold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n#endif\n        end if\n\n        ! Include linear f terms\n        if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n           ! b2vector = r15 * bf(n)\n           call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)\n           call add(b1_phi, b2_phi)\n        endif\n\n        ! Include RE density terms\n        if(irunaway .gt. 0) then\n           call matvecmult(r43_mat,nre_vec,b2_phi)\n           call mult(b2_phi,-1.)\n           call add(b1_phi, b2_phi)",
+          "line": 1439,
+          "match": "call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n           ! b2vector = r15 * bf(n)\n           call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)\n           call add(b1_phi, b2_phi)\n        endif\n\n        ! Include RE density terms\n        if(irunaway .gt. 0) then\n           call matvecmult(r43_mat,nre_vec,b2_phi)\n           call mult(b2_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q43_mat,nreold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n        end if\n\n        call add(b1_phi, q4_vec)\n       ",
+          "line": 1445,
+          "match": "call matvecmult(r43_mat,nre_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "           call add(b1_phi, b2_phi)\n        endif\n\n        ! Include RE density terms\n        if(irunaway .gt. 0) then\n           call matvecmult(r43_mat,nre_vec,b2_phi)\n           call mult(b2_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q43_mat,nreold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n        end if\n\n        call add(b1_phi, q4_vec)\n       \n        ! Insert boundary conditions\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        if(calc_matrices.eq.1) then",
+          "line": 1448,
+          "match": "call matvecmult(q43_mat,nreold_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  type(field_type), private :: nre_v\n  type(field_type), private ::   p_v\n  type(field_type), private ::   e_v\n  type(field_type), private ::  bfp_v\n\n  integer, private :: vecsize_phi\n\n  ! temporary vectors\n  type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi\n\n  logical, private :: initialized\n\ncontains\n\n  subroutine initialize_timestep_unsplit\n    use sparse\n    use basic",
+          "line": 30,
+          "match": "type(vector_type), private :: b1_vel, b2_vel, b1_phi, b2_phi",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "         vecsize_phi = vecsize_phi + 1\n    \n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    ! Matrices\n    call set_matrix_index(s1_mat, s1_mat_index)\n    call set_matrix_index(d1_mat, d1_mat_index)\n#ifdef REORDERED\n    call create_mat(s1_mat, vecsize_phi, vecsize_phi, icomplex, 1, is1_agg_blk_cnt, is1_agg_scp)\n#else\n    call create_mat(s1_mat, vecsize_phi, vecsize_phi, icomplex, 1)",
+          "line": 53,
+          "match": "call create_vector(b2_phi, vecsize_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "  real :: tstart, tend\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Solving matrix equation...\"\n\n  b1_phi = q4_vec\n\n  if(itime_independent.eq.0) then\n     ! vtemp = d1matrix_sm * phi(n)\n     call matvecmult(d1_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o1_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif",
+          "line": 294,
+          "match": "call matvecmult(d1_mat,phi_vec,b2_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "  if(itime_independent.eq.0) then\n     ! vtemp = d1matrix_sm * phi(n)\n     call matvecmult(d1_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o1_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif\n  end if\n   \n  ! Insert boundary conditions\n  if(calc_matrices.eq.1) then\n     call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s1_mat)\n     call boundary_vel(b1_phi, u_v, vz_v, chi_v, s1_mat)",
+          "line": 300,
+          "match": "call matvecmult(o1_mat,bfp_field(1)%vec,b2_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        }
+      ],
+      "phi_vec": [
+        {
+          "context": "    use diagnostics\n    use sparse\n    use boundary_conditions\n    use matrix_mod\n    use init_common\n\n    implicit none\n\n    type(field_type) :: jphi_vec, f_vec, vz_vec, p_vec\n    integer :: itri, numelms, ibound, ierr\n    integer, dimension(dofs_per_element) :: imask\n    vectype, dimension(dofs_per_element) :: dofs, dofs_vz, dofs_p\n    vectype, dimension(dofs_per_element,dofs_per_element) :: temp\n    type(matrix_type) :: dr_matrix, lp_matrix\n\n    if(myrank.eq.0 .and. iprint.ge.1) print *, 'Defining BASICJ Equilibrium'\n",
+          "line": 107,
+          "match": "type(field_type) :: jphi_vec, f_vec, vz_vec, p_vec",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "             basicj_nu = log(2.)/log(basicj_qa/basicj_q0)\n          else\n             if(myrank.eq.0) print *, 'Error: basicj_qa not available when xlim != 0'\n             call safestop(54)\n          end if\n       end select\n    end if\n\n    call create_field(jphi_vec)\n    jphi_vec = 0.\n\n    if(ibasicj_solvep.eq.0) then\n       call create_field(p_vec)\n       p_vec = 0.\n    end if\n\n    ! Create a matrix for solving -del*(A)/r = B",
+          "line": 135,
+          "match": "call create_field(jphi_vec)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "          else\n             if(myrank.eq.0) print *, 'Error: basicj_qa not available when xlim != 0'\n             call safestop(54)\n          end if\n       end select\n    end if\n\n    call create_field(jphi_vec)\n    jphi_vec = 0.\n\n    if(ibasicj_solvep.eq.0) then\n       call create_field(p_vec)\n       p_vec = 0.\n    end if\n\n    ! Create a matrix for solving -del*(A)/r = B\n    call set_matrix_index(lp_matrix, lp_mat_index)",
+          "line": 136,
+          "match": "jphi_vec = 0.",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "          dofs_p = intx2(mu79(:,:,OP_1),temp79b)\n       end if\n\n       call apply_boundary_mask(itri, ibound, temp, imask)\n       call apply_boundary_mask_vec(itri, ibound, dofs, imask)\n       \n!!$OMP CRITICAL\n       call insert_block(lp_matrix, itri, 1, 1, temp, MAT_ADD)\n       call vector_insert_block(jphi_vec%vec, itri, 1, dofs, VEC_ADD)\n\n       if(ibasicj_solvep.eq.0) then\n          call vector_insert_block(p_vec%vec, itri, 1, dofs_p, VEC_ADD)\n       end if\n!!$OMP END CRITICAL\n    enddo\n!!$OMP END PARALLEL DO\n    ",
+          "line": 177,
+          "match": "call vector_insert_block(jphi_vec%vec, itri, 1, dofs, VEC_ADD)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "\n       if(ibasicj_solvep.eq.0) then\n          call vector_insert_block(p_vec%vec, itri, 1, dofs_p, VEC_ADD)\n       end if\n!!$OMP END CRITICAL\n    enddo\n!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)",
+          "line": 186,
+          "match": "call sum_shared(jphi_vec%vec)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "       if(ibasicj_solvep.eq.0) then\n          call vector_insert_block(p_vec%vec, itri, 1, dofs_p, VEC_ADD)\n       end if\n!!$OMP END CRITICAL\n    enddo\n!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)\n",
+          "line": 187,
+          "match": "call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "    enddo\n!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)\n\n    if(ibasicj_solvep.eq.0) then\n       ! Evaluate pressure\n       call newvar_solve(p_vec%vec, mass_mat_lhs)\n       p_field(0) = p_vec",
+          "line": 191,
+          "match": "call newsolve(lp_matrix,jphi_vec%vec,ierr)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)\n\n    if(ibasicj_solvep.eq.0) then\n       ! Evaluate pressure\n       call newvar_solve(p_vec%vec, mass_mat_lhs)\n       p_field(0) = p_vec\n       call destroy_field(p_vec)",
+          "line": 192,
+          "match": "psi_field(0) = jphi_vec",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "       call destroy_field(p_vec)\n    end if\n\n    ! Create a matrix for solving (dA/dpsi)/(R) = Jphi - R p' (ibasicj_solvep == 0)\n    ! or R*(dA/dpsi) = Jphi (ibasicj_solvep == 1)\n    call set_matrix_index(dr_matrix, dr_mat_index)\n    call create_mat(dr_matrix, 1, 1, icomplex, 1)\n       \n    jphi_vec = 0.\n    if(basicj_j0 .eq. 0.) ibound = BOUNDARY_NONE\n!!$OMP PARALLEL DO &\n!!$OMP& PRIVATE(temp,dofs,imask)\n    do itri=1,numelms\n       \n       call define_element_quadrature(itri,int_pts_main,int_pts_tor)\n       call define_fields(itri,0,1,0)\n       ",
+          "line": 208,
+          "match": "jphi_vec = 0.",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "               - intx4(mu79(:,:,OP_1),r_79,ps079(:,OP_DZ),p079(:,OP_DZ))\n       end if\n\n       call apply_boundary_mask(itri, ibound, temp, imask)\n       call apply_boundary_mask_vec(itri, ibound, dofs, imask)\n          \n!!$OMP CRITICAL       \n       call insert_block(dr_matrix, itri, 1, 1, temp, MAT_ADD)\n       call vector_insert_block(jphi_vec%vec, itri, 1, dofs, MAT_ADD)\n!!$OMP END CRITICAL\n    enddo\n!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    if(basicj_j0.ne.0.) call boundary_dc(jphi_vec%vec, jphi_vec%vec, dr_matrix)\n    call finalize(dr_matrix)\n ",
+          "line": 258,
+          "match": "call vector_insert_block(jphi_vec%vec, itri, 1, dofs, MAT_ADD)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "          \n!!$OMP CRITICAL       \n       call insert_block(dr_matrix, itri, 1, 1, temp, MAT_ADD)\n       call vector_insert_block(jphi_vec%vec, itri, 1, dofs, MAT_ADD)\n!!$OMP END CRITICAL\n    enddo\n!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    if(basicj_j0.ne.0.) call boundary_dc(jphi_vec%vec, jphi_vec%vec, dr_matrix)\n    call finalize(dr_matrix)\n \n    if(ibasicj_solvep.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving p'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       p_field(0) = jphi_vec\n    else",
+          "line": 263,
+          "match": "call sum_shared(jphi_vec%vec)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "!!$OMP CRITICAL       \n       call insert_block(dr_matrix, itri, 1, 1, temp, MAT_ADD)\n       call vector_insert_block(jphi_vec%vec, itri, 1, dofs, MAT_ADD)\n!!$OMP END CRITICAL\n    enddo\n!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    if(basicj_j0.ne.0.) call boundary_dc(jphi_vec%vec, jphi_vec%vec, dr_matrix)\n    call finalize(dr_matrix)\n \n    if(ibasicj_solvep.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving p'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       p_field(0) = jphi_vec\n    else\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving G'",
+          "line": 264,
+          "match": "if(basicj_j0.ne.0.) call boundary_dc(jphi_vec%vec, jphi_vec%vec, dr_matrix)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "!!$OMP END PARALLEL DO\n    \n    call sum_shared(jphi_vec%vec)\n    if(basicj_j0.ne.0.) call boundary_dc(jphi_vec%vec, jphi_vec%vec, dr_matrix)\n    call finalize(dr_matrix)\n \n    if(ibasicj_solvep.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving p'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       p_field(0) = jphi_vec\n    else\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving G'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       ! jphi_vec now contains G = (F^2 - F0^2)/2\n    end if\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Calculating BZ, VZ'",
+          "line": 269,
+          "match": "call newsolve(dr_matrix,jphi_vec%vec,ierr)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "    \n    call sum_shared(jphi_vec%vec)\n    if(basicj_j0.ne.0.) call boundary_dc(jphi_vec%vec, jphi_vec%vec, dr_matrix)\n    call finalize(dr_matrix)\n \n    if(ibasicj_solvep.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving p'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       p_field(0) = jphi_vec\n    else\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving G'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       ! jphi_vec now contains G = (F^2 - F0^2)/2\n    end if\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Calculating BZ, VZ'\n    ! Calculate BZ from G = (F^2 - F0^2)/2",
+          "line": 270,
+          "match": "p_field(0) = jphi_vec",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "    call finalize(dr_matrix)\n \n    if(ibasicj_solvep.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving p'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       p_field(0) = jphi_vec\n    else\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving G'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       ! jphi_vec now contains G = (F^2 - F0^2)/2\n    end if\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Calculating BZ, VZ'\n    ! Calculate BZ from G = (F^2 - F0^2)/2\n    if(ibasicj_solvep.eq.0) then\n       call create_field(f_vec)\n       f_vec = 0.",
+          "line": 273,
+          "match": "call newsolve(dr_matrix,jphi_vec%vec,ierr)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": " \n    if(ibasicj_solvep.eq.1) then\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving p'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       p_field(0) = jphi_vec\n    else\n       if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving G'\n       call newsolve(dr_matrix,jphi_vec%vec,ierr)\n       ! jphi_vec now contains G = (F^2 - F0^2)/2\n    end if\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Calculating BZ, VZ'\n    ! Calculate BZ from G = (F^2 - F0^2)/2\n    if(ibasicj_solvep.eq.0) then\n       call create_field(f_vec)\n       f_vec = 0.\n    end if",
+          "line": 274,
+          "match": "! jphi_vec now contains G = (F^2 - F0^2)/2",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "\n!!$OMP PARALLEL DO &\n!!$OMP& PRIVATE(dofs,dofs_vz)\n    do itri=1,numelms\n\n       call define_element_quadrature(itri,int_pts_main,int_pts_tor)\n       call define_fields(itri,0,1,0)\n\n       call eval_ops(itri, jphi_vec, jt79, rfac)\n\n       call basicj_vz(x_79, z_79, temp79b)\n       dofs_vz = intx2(mu79(:,:,OP_1),temp79b)\n\n       if(ibasicj_solvep.eq.0) then\n          if(itor.eq.1) then \n             temp79a = sqrt(2.*jt79(:,OP_1) + (bzero*rzero)**2)\n          else",
+          "line": 294,
+          "match": "call eval_ops(itri, jphi_vec, jt79, rfac)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "          bz_field(0) = bzero\n       end if\n    end if\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving VZ'\n    call newvar_solve(vz_vec%vec, mass_mat_lhs)\n    vz_field(0) = vz_vec\n\n    call destroy_field(jphi_vec)\n    call destroy_field(vz_vec)\n\n    if(bzero.lt.0.) call mult(bz_field(0),-1.)\n\n!    if(ibasicj_solvep.eq.0) p_field(0) = p0\n    pe_field(0) = p_field(0)\n    call mult(pe_field(0),pefac)\n",
+          "line": 336,
+          "match": "call destroy_field(jphi_vec)",
+          "path": "unstructured/init_basicj.f90"
+        },
+        {
+          "context": "  use arrays\n  use field\n  use m3dc1_nint\n  use newvar_mod\n  use diagnostics\n\n  implicit none\n\n  type(field_type) :: psi_vec, phi_vec\n  integer :: itri, numelms, i, izone, ifield\n  integer, dimension(MAX_PTS) :: imr\n  vectype, dimension(dofs_per_element) :: dofs\n\n  call create_field(psi_vec)\n  call create_field(phi_vec)\n\n  psi_vec = 0.",
+          "line": 144,
+          "match": "type(field_type) :: psi_vec, phi_vec",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "  implicit none\n\n  type(field_type) :: psi_vec, phi_vec\n  integer :: itri, numelms, i, izone, ifield\n  integer, dimension(MAX_PTS) :: imr\n  vectype, dimension(dofs_per_element) :: dofs\n\n  call create_field(psi_vec)\n  call create_field(phi_vec)\n\n  psi_vec = 0.\n  phi_vec = 0.\n\n  ifield = FIELD_PSI + FIELD_P + FIELD_KIN\n\n  numelms = local_elements()\n",
+          "line": 150,
+          "match": "call create_field(phi_vec)",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "  integer :: itri, numelms, i, izone, ifield\n  integer, dimension(MAX_PTS) :: imr\n  vectype, dimension(dofs_per_element) :: dofs\n\n  call create_field(psi_vec)\n  call create_field(phi_vec)\n\n  psi_vec = 0.\n  phi_vec = 0.\n\n  ifield = FIELD_PSI + FIELD_P + FIELD_KIN\n\n  numelms = local_elements()\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, 'Defining initial perturbations'\n\n  do itri=1,numelms",
+          "line": 153,
+          "match": "phi_vec = 0.",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "     ! populate vectors for solves\n        \n     ! psi\n     dofs = intx2(mu79(:,:,OP_1),ps179(:,OP_1))\n     call vector_insert_block(psi_vec%vec,itri,1,dofs,VEC_ADD)\n     \n     ! phi\n     dofs = intx2(mu79(:,:,OP_1),ph179(:,OP_1))\n     call vector_insert_block(phi_vec%vec,itri,1,dofs,VEC_ADD)\n  end do\n\n  ! do solves\n  call newvar_solve(psi_vec%vec,mass_mat_lhs)\n  psi_field(1) = psi_vec\n\n  ! use dirichlet boundary conditions to avoid perturbations on boundary\n!  call newvar_solve(phi_vec%vec,mass_mat_lhs_dc)",
+          "line": 210,
+          "match": "call vector_insert_block(phi_vec%vec,itri,1,dofs,VEC_ADD)",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "     call vector_insert_block(phi_vec%vec,itri,1,dofs,VEC_ADD)\n  end do\n\n  ! do solves\n  call newvar_solve(psi_vec%vec,mass_mat_lhs)\n  psi_field(1) = psi_vec\n\n  ! use dirichlet boundary conditions to avoid perturbations on boundary\n!  call newvar_solve(phi_vec%vec,mass_mat_lhs_dc)\n  call newvar_solve(phi_vec%vec,mass_mat_lhs)\n  u_field(1) = phi_vec\n\n  call destroy_field(psi_vec)\n  call destroy_field(phi_vec)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, 'Done defining initial perturbations'",
+          "line": 218,
+          "match": "!  call newvar_solve(phi_vec%vec,mass_mat_lhs_dc)",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "  end do\n\n  ! do solves\n  call newvar_solve(psi_vec%vec,mass_mat_lhs)\n  psi_field(1) = psi_vec\n\n  ! use dirichlet boundary conditions to avoid perturbations on boundary\n!  call newvar_solve(phi_vec%vec,mass_mat_lhs_dc)\n  call newvar_solve(phi_vec%vec,mass_mat_lhs)\n  u_field(1) = phi_vec\n\n  call destroy_field(psi_vec)\n  call destroy_field(phi_vec)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, 'Done defining initial perturbations'\nend subroutine init_perturbations",
+          "line": 219,
+          "match": "call newvar_solve(phi_vec%vec,mass_mat_lhs)",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "\n  ! do solves\n  call newvar_solve(psi_vec%vec,mass_mat_lhs)\n  psi_field(1) = psi_vec\n\n  ! use dirichlet boundary conditions to avoid perturbations on boundary\n!  call newvar_solve(phi_vec%vec,mass_mat_lhs_dc)\n  call newvar_solve(phi_vec%vec,mass_mat_lhs)\n  u_field(1) = phi_vec\n\n  call destroy_field(psi_vec)\n  call destroy_field(phi_vec)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, 'Done defining initial perturbations'\nend subroutine init_perturbations\n",
+          "line": 220,
+          "match": "u_field(1) = phi_vec",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "  psi_field(1) = psi_vec\n\n  ! use dirichlet boundary conditions to avoid perturbations on boundary\n!  call newvar_solve(phi_vec%vec,mass_mat_lhs_dc)\n  call newvar_solve(phi_vec%vec,mass_mat_lhs)\n  u_field(1) = phi_vec\n\n  call destroy_field(psi_vec)\n  call destroy_field(phi_vec)\n\n  if(myrank.eq.0 .and. iprint.ge.1) &\n       print *, 'Done defining initial perturbations'\nend subroutine init_perturbations\n\nsubroutine den_eq\n  use basic\n  use arrays",
+          "line": 223,
+          "match": "call destroy_field(phi_vec)",
+          "path": "unstructured/init_common.f90"
+        },
+        {
+          "context": "    use boundary_conditions\n    use matrix_mod\n    use init_common\n    use read_ascii\n    use math\n\n    implicit none\n\n    type(field_type) :: jphi_vec, f_vec, vz_vec, p_vec, den_vec\n    integer :: itri, numelms, ibound, ierr\n    integer, dimension(dofs_per_element) :: imask\n    vectype, dimension(dofs_per_element) :: dofs_j, dofs_bz, dofs_vz, dofs_p, &\n         dofs_den\n    vectype, dimension(dofs_per_element,dofs_per_element) :: temp\n    type(matrix_type) :: lp_matrix\n\n    real, allocatable :: xvals(:), yvals(:)",
+          "line": 37,
+          "match": "type(field_type) :: jphi_vec, f_vec, vz_vec, p_vec, den_vec",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "       end if\n       yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n\n       call create_spline(te_spline, nvals, xvals, yvals)\n       deallocate(xvals, yvals)\n    end if     \n\n\n    call create_field(jphi_vec)\n    call create_field(p_vec)\n    call create_field(f_vec)\n    call create_field(vz_vec)\n    call create_field(den_vec)\n    jphi_vec = 0.\n    p_vec = 0.\n    f_vec = 0.\n    vz_vec = 0.",
+          "line": 165,
+          "match": "call create_field(jphi_vec)",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "    end if     \n\n\n    call create_field(jphi_vec)\n    call create_field(p_vec)\n    call create_field(f_vec)\n    call create_field(vz_vec)\n    call create_field(den_vec)\n    jphi_vec = 0.\n    p_vec = 0.\n    f_vec = 0.\n    vz_vec = 0.\n    den_vec = 0.\n\n    ! Create a matrix for solving -del*(A)/r = B\n    call set_matrix_index(lp_matrix, lp_mat_index)\n    call create_mat(lp_matrix, 1, 1, icomplex, 1)",
+          "line": 170,
+          "match": "jphi_vec = 0.",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "       dofs_den = intx2(mu79(:,:,OP_1),temp79a)\n\n\n       call apply_boundary_mask(itri, ibound, temp, imask)\n       call apply_boundary_mask_vec(itri, ibound, dofs_j, imask)\n       \n       call insert_block(lp_matrix, itri, 1, 1, temp, MAT_ADD)\n\n       call vector_insert_block(jphi_vec%vec, itri, 1, dofs_j,  VEC_ADD)\n       call vector_insert_block(p_vec%vec,    itri, 1, dofs_p,  VEC_ADD)\n       call vector_insert_block(f_vec%vec,    itri, 1, dofs_bz, VEC_ADD)\n       call vector_insert_block(vz_vec%vec,   itri, 1, dofs_vz, VEC_ADD)\n       call vector_insert_block(den_vec%vec,  itri, 1, dofs_den,VEC_ADD)\n    enddo\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)",
+          "line": 265,
+          "match": "call vector_insert_block(jphi_vec%vec, itri, 1, dofs_j,  VEC_ADD)",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "\n       call vector_insert_block(jphi_vec%vec, itri, 1, dofs_j,  VEC_ADD)\n       call vector_insert_block(p_vec%vec,    itri, 1, dofs_p,  VEC_ADD)\n       call vector_insert_block(f_vec%vec,    itri, 1, dofs_bz, VEC_ADD)\n       call vector_insert_block(vz_vec%vec,   itri, 1, dofs_vz, VEC_ADD)\n       call vector_insert_block(den_vec%vec,  itri, 1, dofs_den,VEC_ADD)\n    enddo\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)",
+          "line": 272,
+          "match": "call sum_shared(jphi_vec%vec)",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "       call vector_insert_block(jphi_vec%vec, itri, 1, dofs_j,  VEC_ADD)\n       call vector_insert_block(p_vec%vec,    itri, 1, dofs_p,  VEC_ADD)\n       call vector_insert_block(f_vec%vec,    itri, 1, dofs_bz, VEC_ADD)\n       call vector_insert_block(vz_vec%vec,   itri, 1, dofs_vz, VEC_ADD)\n       call vector_insert_block(den_vec%vec,  itri, 1, dofs_den,VEC_ADD)\n    enddo\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)\n",
+          "line": 273,
+          "match": "call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "       call vector_insert_block(den_vec%vec,  itri, 1, dofs_den,VEC_ADD)\n    enddo\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)\n\n    ! Evaluate pressure\n    call newvar_solve(p_vec%vec, mass_mat_lhs)\n    p_field(0) = p_vec\n    call destroy_field(p_vec)",
+          "line": 277,
+          "match": "call newsolve(lp_matrix,jphi_vec%vec,ierr)",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "    enddo\n    \n    call sum_shared(jphi_vec%vec)\n    call boundary_dc(jphi_vec%vec, jphi_vec%vec, lp_matrix)\n    call finalize(lp_matrix)\n\n    if(myrank.eq.0 .and. iprint.ge.2) print *, 'Solving PSI'\n    call newsolve(lp_matrix,jphi_vec%vec,ierr)\n    psi_field(0) = jphi_vec\n\n    call destroy_mat(lp_matrix)\n\n    ! Evaluate pressure\n    call newvar_solve(p_vec%vec, mass_mat_lhs)\n    p_field(0) = p_vec\n    call destroy_field(p_vec)\n",
+          "line": 278,
+          "match": "psi_field(0) = jphi_vec",
+          "path": "unstructured/init_cyl.f90"
+        },
+        {
+          "context": "module time_step_split\n\n  use field\n  use matrix_mod\n  use model\n\n  type(vector_type), private :: phi_vec, phip_vec\n  type(vector_type), private :: vel_vec, veln_vec\n  type(vector_type), private :: pres_vec\n  type(vector_type), private :: den_vec, denold_vec, ne_vec, neold_vec\n  type(vector_type), private :: pret_vec\n  type(vector_type), private :: nre_vec, nreold_vec\n  type(vector_type), private :: densmooth_vec\n\n  ! the following pointers point to the vector containing the named field.",
+          "line": 7,
+          "match": "type(vector_type), private :: phi_vec, phip_vec",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    ! add bf equation\n    if(imp_bf.eq.1) vecsize_phi = vecsize_phi + 1\n\n    ! add electrostatic potential equation OR implicit hyper-resistivity\n    if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) &\n                    vecsize_phi = vecsize_phi + 1\n  \nif (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")",
+          "line": 92,
+          "match": "call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    ! add electrostatic potential equation OR implicit hyper-resistivity\n    if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) &\n                    vecsize_phi = vecsize_phi + 1\n  \nif (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n",
+          "line": 95,
+          "match": "call mark_vector_for_solutiontransfer(phi_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call mark_vector_for_solutiontransfer(b1_vel)\n    call mark_vector_for_solutiontransfer(b2_vel)\n\n    call create_vector(pret_vec,    vecsize_t, \"pret_vec\")\n    call mark_vector_for_solutiontransfer(pret_vec)\nelse\n\n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    call create_vector(vel_vec,      vecsize_vel)\n    call create_vector(veln_vec,     vecsize_vel)",
+          "line": 150,
+          "match": "call create_vector(phi_vec,      vecsize_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "       pe_i = 3\n       if(ipres.eq.1) then\n          p_i = 1\n       end if\n       te_i = 1\n    endif\n\n    call associate_field(u_v,    vel_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  vel_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  vel_vec,    chi_i)",
+          "line": 422,
+          "match": "call associate_field(psi_v,  phi_vec,    psi_i)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "       te_i = 1\n    endif\n\n    call associate_field(u_v,    vel_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  vel_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  vel_vec,    chi_i)\n    endif\n    \n    if(numvar.ge.3 .or. ipres.eq.1) then\n       call associate_field(te_v, pret_vec, te_i)",
+          "line": 426,
+          "match": "call associate_field(bz_v,  phi_vec,    bz_i)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    if(ipressplit.eq.1) then\n       call associate_field(p_v, pres_vec, p_i)\n       if(ipres.eq.1 .and. numvar.eq.3) then\n          call associate_field(pe_v, pres_vec, pe_i)\n          call associate_field(ti_v, pret_vec, ti_i)\n       endif\n    else   !  on ipressplit.eq.1\n       if(numvar.ge.3) then\n          call associate_field(pe_v,   phi_vec,     pe_i)\n       endif\n       if(ipres.eq.1) then\n          call associate_field(p_v,  pres_vec,    p_i)\n       end if\n    endif  !  on ipressplit.eq.1\n    \n    call associate_field(den_v,  den_vec,    den_i)\n    call associate_field(ne_v,    ne_vec,        1)",
+          "line": 445,
+          "match": "call associate_field(pe_v,   phi_vec,     pe_i)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call associate_field(den_v,  den_vec,    den_i)\n    call associate_field(ne_v,    ne_vec,        1)\n    if(irunaway.gt.0) call associate_field(nre_v,  nre_vec,    nre_i)\n#ifdef USEPARTICLES\n    if(itwofluid.gt.0) call associate_field(densmooth_v,  densmooth_vec,    den_i)\n#endif\n    \n    if((jadv.eq.0).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n       call associate_field(e_v, phi_vec, e_i)\n    end if\n    \n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)\n    end if\n  end subroutine assign_variables_split\n\n  subroutine clear_matrices_split",
+          "line": 460,
+          "match": "call associate_field(e_v, phi_vec, e_i)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    if(itwofluid.gt.0) call associate_field(densmooth_v,  densmooth_vec,    den_i)\n#endif\n    \n    if((jadv.eq.0).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n       call associate_field(e_v, phi_vec, e_i)\n    end if\n    \n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)\n    end if\n  end subroutine assign_variables_split\n\n  subroutine clear_matrices_split\n    use basic\n    use m3dc1_vel_prof\n    implicit none\n    integer :: jer",
+          "line": 464,
+          "match": "call associate_field(bfp_v, phi_vec, bf_i)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "call PetscLogStagePush(stageA,jer)\n     ! d1matrix_sm * vel(n)\n     call matvecmult(d1_mat,vel_vec,b1_vel)\n  \n     ! q1matrix_sm * phi(n)\n     if(ipres.eq.1 .and. numvar.ge.3 .and. ipressplit.eq.0) then\n        ! replace electron pressure with total pressure\n\n        phip_vec = phi_vec\n        phip_3 = p_v\n        call matvecmult(q1_mat, phip_vec, b2_vel)\n     else\n        call matvecmult(q1_mat, phi_vec , b2_vel)\n     endif\n     call add(b1_vel, b2_vel)\n\n     ! If ipres==1 and numvar<3 or ipressplit==1, need to add in pressure contribution",
+          "line": 838,
+          "match": "phip_vec = phi_vec",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     ! q1matrix_sm * phi(n)\n     if(ipres.eq.1 .and. numvar.ge.3 .and. ipressplit.eq.0) then\n        ! replace electron pressure with total pressure\n\n        phip_vec = phi_vec\n        phip_3 = p_v\n        call matvecmult(q1_mat, phip_vec, b2_vel)\n     else\n        call matvecmult(q1_mat, phi_vec , b2_vel)\n     endif\n     call add(b1_vel, b2_vel)\n\n     ! If ipres==1 and numvar<3 or ipressplit==1, need to add in pressure contribution\n     ! separately\n     if((ipres.eq.1 .and. numvar.lt.3) .or. ipressplit.gt.0) then\n        call matvecmult(p1_mat,pres_vec,b2_vel)\n        call add(b1_vel, b2_vel)",
+          "line": 842,
+          "match": "call matvecmult(q1_mat, phi_vec , b2_vel)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  if(irunaway .gt. 0) then\n\n     ! Here\n     call create_vector(temp, vecsize_n)\n     call create_vector(temp2, vecsize_n)\n\n     nreold_vec = nre_vec\n     do i=1,ra_cyc\n        call matvecmult(q15_mat,phi_vec,temp)\n        call matvecmult(k15_mat,veln_vec,temp2)\n        call add(temp, temp2)\n\n        call matvecmult(d15_mat,nre_vec,temp2)\n        call add(temp, temp2)\n\n        call add(temp, qn5_vec)\n",
+          "line": 1013,
+          "match": "call matvecmult(q15_mat,phi_vec,temp)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     if(idens.eq.1) then\n        call matvecmult(rp42_mat,den_vec,temp2)\n        call add(temp, temp2)\n        call matvecmult(qp42_mat,denold_vec,temp2)\n        call add(temp, temp2)\n     end if\n\n     ! o9matrix_sm * phi(n)\n     call matvecmult(o9_mat,phi_vec,temp2)\n     call add(temp, temp2)\n\n     ! temp = d9matrix_sm * pres(n)\n     call matvecmult(d9_mat,pres_vec,temp2)\n     call add(temp, temp2)\n\n     call add(temp, qp4_vec)\n     if(myrank.eq.0 .and. iprint.ge.1) print *, \"Advancing Pressure -- before boundary_pres\"",
+          "line": 1107,
+          "match": "call matvecmult(o9_mat,phi_vec,temp2)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     call matvecmult(r9_mat,vel_vec,temp)\n     call mult(temp, -1.)    ! added 1/1/2013   SCJ\n\n     ! q9matrix_sm * vel(n)\n     call matvecmult(q9_mat,veln_vec,temp2)\n     call add(temp, temp2)\n\n     ! o9matrix_sm * phi(n)\n     call matvecmult(o9_mat,phi_vec,temp2)\n     call add(temp, temp2)\n\n     \n     ! temp = d9matrix_sm * temp(n)\n     call matvecmult(d9_mat,pret_vec,temp2)\n     call add(temp, temp2)\n\n ",
+          "line": 1192,
+          "match": "call matvecmult(o9_mat,phi_vec,temp2)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     call mult(b1_phi, -1.)\n\n     ! q2matrix_sm * vel(n)\n     call matvecmult(q2_mat,veln_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! d2matrix_sm * phi(n)\n\n     call matvecmult(d2_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Inculde density terms\n     if(idens.eq.1) then\n#ifdef USEPARTICLES\n        call matvecmult(r42_mat,densmooth_vec,b2_phi)\n        call mult(b2_phi,-1.)\n        call add(b1_phi, b2_phi)",
+          "line": 1284,
+          "match": "call matvecmult(d2_mat,phi_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     end if\n\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  solving\"\n     ! solve linear system...LU decomposition done first time\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n\n     if(isolve_with_guess==1) then\n        call create_vector(xVec_guess, vecsize_phi)\n        xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n        call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n        call destroy_vector(xVec_guess)\n     else\n        call newsolve(s2_mat, b1_phi, jer)\n     endif    \n     !if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s2_mat)\n\n",
+          "line": 1359,
+          "match": "xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call destroy_vector(xVec_guess)\n     else\n        call newsolve(s2_mat, b1_phi, jer)\n     endif    \n     !if(linear.eq.0 .and. iteratephi.eq.0) call clear_mat(s2_mat)\n\n\n   if(idiff .gt. 0) then\n         call add(b1_phi,phi_vec)\n   endif\n\n     if(myrank.eq.0 .and. itimer.eq.1) then\n        call second(tend)\n        t_solve_b = t_solve_b + tend - tstart\n     endif\n     if(jer.ne.0) then\n        write(*,*) 'Error in field solve', jer",
+          "line": 1369,
+          "match": "call add(b1_phi,phi_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  done solve\"\n\n     ! Iterate field solve using re-defined transport coefficients\n     if(iteratephi.eq.1) then\n      \n        if(myrank.eq.0 .and. iprint.ge.1) &\n             print *, \" Advancing fields... corrector step\"\n        ! temporarily advance fields to new values\n        b2_phi = phi_vec\n        phi_vec = b1_phi\n!\n        call export_time_advance_vectors_split\n        ! redefine transport coefficients with new den/pe values\n        call lcfs(psi_field(1))\n        call define_transport_coefficients\n        ! revert fields to old values\n        phi_vec = b2_phi",
+          "line": 1389,
+          "match": "b2_phi = phi_vec",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n     ! Iterate field solve using re-defined transport coefficients\n     if(iteratephi.eq.1) then\n      \n        if(myrank.eq.0 .and. iprint.ge.1) &\n             print *, \" Advancing fields... corrector step\"\n        ! temporarily advance fields to new values\n        b2_phi = phi_vec\n        phi_vec = b1_phi\n!\n        call export_time_advance_vectors_split\n        ! redefine transport coefficients with new den/pe values\n        call lcfs(psi_field(1))\n        call define_transport_coefficients\n        ! revert fields to old values\n        phi_vec = b2_phi\n        ",
+          "line": 1390,
+          "match": "phi_vec = b1_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        b2_phi = phi_vec\n        phi_vec = b1_phi\n!\n        call export_time_advance_vectors_split\n        ! redefine transport coefficients with new den/pe values\n        call lcfs(psi_field(1))\n        call define_transport_coefficients\n        ! revert fields to old values\n        phi_vec = b2_phi\n        \n        ! recalculate field advance matrix\n        ! (advanced velocity variables will be used in defining matrix)\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        call ludefall(0, 0, 0, 0, 1)\n        if(myrank.eq.0 .and. itimer.eq.1) then\n           call second(tend)\n           t_ludefall = t_ludefall + tend - tstart",
+          "line": 1397,
+          "match": "phi_vec = b2_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        call matvecmult(r2_mat,vel_vec,b1_phi)\n        call mult(b1_phi, -1.)\n   \n        ! q2matrix_sm * vel(n)\n        call matvecmult(q2_mat,veln_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n\n        ! d2matrix_sm * phi(n)\n        call matvecmult(d2_mat,phi_vec,b2_phi)\n        call add(b1_phi, b2_phi)\n      \n        ! Include density terms\n        if(idens.eq.1) then\n#ifdef USEPARTICLES\n           call matvecmult(r42_mat,densmooth_vec,b2_phi)\n           call mult(b1_phi,-1.)\n           call add(b1_phi, b2_phi)",
+          "line": 1417,
+          "match": "call matvecmult(d2_mat,phi_vec,b2_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n  \n        ! solve linear system...LU decomposition done first time\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        \n        !if(linear.eq.0) call clear_mat(s2_mat)\n        if(isolve_with_guess==1) then\n            call create_vector(xVec_guess, vecsize_phi)\n            xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.\n            call newsolve_with_guess(s2_mat, b1_phi, xVec_guess, jer)\n            call destroy_vector(xVec_guess)\n        else\n            call newsolve(s2_mat, b1_phi, jer)\n        endif    \n        \n        if(myrank.eq.0 .and. itimer.eq.1) then\n           call second(tend)",
+          "line": 1489,
+          "match": "xVec_guess = phi_vec ! Set the value from the previous step as the initial guess.",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "           t_solve_b = t_solve_b + tend - tstart\n        endif\n        if(jer.ne.0) then\n           write(*,*) 'Error in field solve', jer\n           call safestop(29)\n        endif\n     end if     !...on iteratephi\n\n     phi_vec = b1_phi\n\n     ! apply smoothing operators\n     ! ~~~~~~~~~~~~~~~~~~~~~~~~~\n     call smooth_fields(psi_v) \n\n!!$     if(ipressplit.eq.0 .and. (numvar.ge.3 .or. ipres.eq.1)) &\n!!$          call get_temperatures(den_v, p_v, pe_v, te_v, ti_v)\n  end if       !...on iestatic",
+          "line": 1506,
+          "match": "phi_vec = b1_phi",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "module time_step_unsplit\n  use field\n  use matrix_mod\n  use model\n\n  type(vector_type), private :: phi_vec, phip_vec\n  type(vector_type), private :: vel_vec, veln_vec\n  type(vector_type), private :: pres_vec\n  type(vector_type), private :: den_vec\n  type(vector_type), private :: nre_vec\n  type(vector_type), private :: pret_vec\n\n  ! the following pointers point to the vector containing the named field.\n  ! set by assign_variables()",
+          "line": 6,
+          "match": "type(vector_type), private :: phi_vec, phip_vec",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "\n    vecsize_phi  = numvar*2 + idens + irunaway + ipres + imp_bf\n    \n    ! add electrostatic potential equation\n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) &\n         vecsize_phi = vecsize_phi + 1\n    \n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    ! Matrices\n    call set_matrix_index(s1_mat, s1_mat_index)",
+          "line": 48,
+          "match": "call create_vector(phi_vec,      vecsize_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "    if(imp_bf.eq.1) then\n       bf_i = 2*numvar+idens+irunaway+ipres+1\n       e_i = 2*numvar+idens+irunaway+ipres+2\n    else\n       bf_i = 1\n       e_i = 2*numvar+idens+irunaway+ipres+1\n    end if\n\n    call associate_field(u_v,    phi_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  phi_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then",
+          "line": 117,
+          "match": "call associate_field(u_v,    phi_vec,      u_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       bf_i = 2*numvar+idens+irunaway+ipres+1\n       e_i = 2*numvar+idens+irunaway+ipres+2\n    else\n       bf_i = 1\n       e_i = 2*numvar+idens+irunaway+ipres+1\n    end if\n\n    call associate_field(u_v,    phi_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  phi_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)",
+          "line": 118,
+          "match": "call associate_field(psi_v,  phi_vec,    psi_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       bf_i = 1\n       e_i = 2*numvar+idens+irunaway+ipres+1\n    end if\n\n    call associate_field(u_v,    phi_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  phi_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)\n    endif\n    \n    if(ipres.eq.1 .and. numvar.ge.3) then",
+          "line": 121,
+          "match": "call associate_field(vz_v,  phi_vec,    vz_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       e_i = 2*numvar+idens+irunaway+ipres+1\n    end if\n\n    call associate_field(u_v,    phi_vec,      u_i)\n    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  phi_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)\n    endif\n    \n    if(ipres.eq.1 .and. numvar.ge.3) then\n       call associate_field(pe_v,  phi_vec,    pe_i)",
+          "line": 122,
+          "match": "call associate_field(bz_v,  phi_vec,    bz_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "    call associate_field(psi_v,  phi_vec,    psi_i)\n    \n    if(numvar.ge.2) then\n       call associate_field(vz_v,  phi_vec,    vz_i)\n       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)\n    endif\n    \n    if(ipres.eq.1 .and. numvar.ge.3) then\n       call associate_field(pe_v,  phi_vec,    pe_i)\n    end if\n    if(ipres.eq.1 .or. numvar.ge.3) then \n       call associate_field(p_v,  phi_vec,    p_i)\n    end if",
+          "line": 126,
+          "match": "call associate_field(chi_v,  phi_vec,    chi_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       call associate_field(bz_v,  phi_vec,    bz_i)\n    endif\n    \n    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)\n    endif\n    \n    if(ipres.eq.1 .and. numvar.ge.3) then\n       call associate_field(pe_v,  phi_vec,    pe_i)\n    end if\n    if(ipres.eq.1 .or. numvar.ge.3) then \n       call associate_field(p_v,  phi_vec,    p_i)\n    end if\n    \n    if(idens.eq.1) then\n       call associate_field(den_v,  phi_vec,    den_i)\n    end if",
+          "line": 130,
+          "match": "call associate_field(pe_v,  phi_vec,    pe_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "    if(numvar.ge.3) then\n       call associate_field(chi_v,  phi_vec,    chi_i)\n    endif\n    \n    if(ipres.eq.1 .and. numvar.ge.3) then\n       call associate_field(pe_v,  phi_vec,    pe_i)\n    end if\n    if(ipres.eq.1 .or. numvar.ge.3) then \n       call associate_field(p_v,  phi_vec,    p_i)\n    end if\n    \n    if(idens.eq.1) then\n       call associate_field(den_v,  phi_vec,    den_i)\n    end if\n\n    if(irunaway.eq.1) then\n       call associate_field(nre_v,  phi_vec,    nre_i)",
+          "line": 133,
+          "match": "call associate_field(p_v,  phi_vec,    p_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "    if(ipres.eq.1 .and. numvar.ge.3) then\n       call associate_field(pe_v,  phi_vec,    pe_i)\n    end if\n    if(ipres.eq.1 .or. numvar.ge.3) then \n       call associate_field(p_v,  phi_vec,    p_i)\n    end if\n    \n    if(idens.eq.1) then\n       call associate_field(den_v,  phi_vec,    den_i)\n    end if\n\n    if(irunaway.eq.1) then\n       call associate_field(nre_v,  phi_vec,    nre_i)\n    end if\n\n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)",
+          "line": 137,
+          "match": "call associate_field(den_v,  phi_vec,    den_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       call associate_field(p_v,  phi_vec,    p_i)\n    end if\n    \n    if(idens.eq.1) then\n       call associate_field(den_v,  phi_vec,    den_i)\n    end if\n\n    if(irunaway.eq.1) then\n       call associate_field(nre_v,  phi_vec,    nre_i)\n    end if\n\n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)\n    end if\n    \n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n       call associate_field(e_v, phi_vec, e_i)",
+          "line": 141,
+          "match": "call associate_field(nre_v,  phi_vec,    nre_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       call associate_field(den_v,  phi_vec,    den_i)\n    end if\n\n    if(irunaway.eq.1) then\n       call associate_field(nre_v,  phi_vec,    nre_i)\n    end if\n\n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)\n    end if\n    \n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n       call associate_field(e_v, phi_vec, e_i)\n    end if       \n  end subroutine assign_variables_unsplit\n\n  subroutine clear_matrices_unsplit",
+          "line": 145,
+          "match": "call associate_field(bfp_v, phi_vec, bf_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "       call associate_field(nre_v,  phi_vec,    nre_i)\n    end if\n\n    if(imp_bf.eq.1) then\n       call associate_field(bfp_v, phi_vec, bf_i)\n    end if\n    \n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) then\n       call associate_field(e_v, phi_vec, e_i)\n    end if       \n  end subroutine assign_variables_unsplit\n\n  subroutine clear_matrices_unsplit\n    use basic\n    implicit none\n\n    call clear_mat(s1_mat)",
+          "line": 149,
+          "match": "call associate_field(e_v, phi_vec, e_i)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "  real :: tstart, tend\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Solving matrix equation...\"\n\n  b1_phi = q4_vec\n\n  if(itime_independent.eq.0) then\n     ! vtemp = d1matrix_sm * phi(n)\n     call matvecmult(d1_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o1_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif",
+          "line": 294,
+          "match": "call matvecmult(d1_mat,phi_vec,b2_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "  endif\n  if(jer.ne.0) then\n     write(*,*) 'Error in field solve', jer\n     call safestop(29)\n  endif\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"done solve.\"\n  \n  ! new field solution at time n+1     \n  phi_vec = b1_phi\n\n  ! apply smoothing operators\n  call apply_hyperv(u_v, vz_v, chi_v)\n  call smooth_fields(psi_v)\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Done solving matrix equation.\"\nend subroutine step_unsplit\n",
+          "line": 339,
+          "match": "phi_vec = b1_phi",
+          "path": "unstructured/time_step_unsplit.f90"
+        }
+      ],
+      "phip_vec": [
+        {
+          "context": "module time_step_split\n\n  use field\n  use matrix_mod\n  use model\n\n  type(vector_type), private :: phi_vec, phip_vec\n  type(vector_type), private :: vel_vec, veln_vec\n  type(vector_type), private :: pres_vec\n  type(vector_type), private :: den_vec, denold_vec, ne_vec, neold_vec\n  type(vector_type), private :: pret_vec\n  type(vector_type), private :: nre_vec, nreold_vec\n  type(vector_type), private :: densmooth_vec\n\n  ! the following pointers point to the vector containing the named field.",
+          "line": 7,
+          "match": "type(vector_type), private :: phi_vec, phip_vec",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    if(imp_bf.eq.1) vecsize_phi = vecsize_phi + 1\n\n    ! add electrostatic potential equation OR implicit hyper-resistivity\n    if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) &\n                    vecsize_phi = vecsize_phi + 1\n  \nif (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)",
+          "line": 93,
+          "match": "call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) &\n                    vecsize_phi = vecsize_phi + 1\n  \nif (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n\n    call create_vector(vel_vec,      vecsize_vel, \"vel_vec\")",
+          "line": 96,
+          "match": "call mark_vector_for_solutiontransfer(phip_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    call mark_vector_for_solutiontransfer(b2_vel)\n\n    call create_vector(pret_vec,    vecsize_t, \"pret_vec\")\n    call mark_vector_for_solutiontransfer(pret_vec)\nelse\n\n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    call create_vector(vel_vec,      vecsize_vel)\n    call create_vector(veln_vec,     vecsize_vel)\n    call create_vector(r4_vec,       vecsize_vel)",
+          "line": 151,
+          "match": "call create_vector(phip_vec,     vecsize_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  integer, intent(in) :: calc_matrices\n  real :: tstart, tend, t_bound\n  integer :: jer, i \n  type(vector_type) :: temp, temp2\n  type(vector_type) :: xVec_guess\n\n  type(field_type) :: phip_1, phip_2, phip_3\n\n  call associate_field(phip_1, phip_vec, 1)\n  if(numvar.ge.2) call associate_field(phip_2, phip_vec, 2)\n  if(numvar.ge.3 .and. ipressplit.eq.0) call associate_field(phip_3, phip_vec, 3)\n\n  t_bound = 0.\n\n  ! Store current-time velocity matrices for use in field advance\n  veln_vec = vel_vec\n",
+          "line": 815,
+          "match": "call associate_field(phip_1, phip_vec, 1)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  real :: tstart, tend, t_bound\n  integer :: jer, i \n  type(vector_type) :: temp, temp2\n  type(vector_type) :: xVec_guess\n\n  type(field_type) :: phip_1, phip_2, phip_3\n\n  call associate_field(phip_1, phip_vec, 1)\n  if(numvar.ge.2) call associate_field(phip_2, phip_vec, 2)\n  if(numvar.ge.3 .and. ipressplit.eq.0) call associate_field(phip_3, phip_vec, 3)\n\n  t_bound = 0.\n\n  ! Store current-time velocity matrices for use in field advance\n  veln_vec = vel_vec\n\n  if(istatic.ne.1) then",
+          "line": 816,
+          "match": "if(numvar.ge.2) call associate_field(phip_2, phip_vec, 2)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "  integer :: jer, i \n  type(vector_type) :: temp, temp2\n  type(vector_type) :: xVec_guess\n\n  type(field_type) :: phip_1, phip_2, phip_3\n\n  call associate_field(phip_1, phip_vec, 1)\n  if(numvar.ge.2) call associate_field(phip_2, phip_vec, 2)\n  if(numvar.ge.3 .and. ipressplit.eq.0) call associate_field(phip_3, phip_vec, 3)\n\n  t_bound = 0.\n\n  ! Store current-time velocity matrices for use in field advance\n  veln_vec = vel_vec\n\n  if(istatic.ne.1) then\n",
+          "line": 817,
+          "match": "if(numvar.ge.3 .and. ipressplit.eq.0) call associate_field(phip_3, phip_vec, 3)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "call PetscLogStagePush(stageA,jer)\n     ! d1matrix_sm * vel(n)\n     call matvecmult(d1_mat,vel_vec,b1_vel)\n  \n     ! q1matrix_sm * phi(n)\n     if(ipres.eq.1 .and. numvar.ge.3 .and. ipressplit.eq.0) then\n        ! replace electron pressure with total pressure\n\n        phip_vec = phi_vec\n        phip_3 = p_v\n        call matvecmult(q1_mat, phip_vec, b2_vel)\n     else\n        call matvecmult(q1_mat, phi_vec , b2_vel)\n     endif\n     call add(b1_vel, b2_vel)\n\n     ! If ipres==1 and numvar<3 or ipressplit==1, need to add in pressure contribution",
+          "line": 838,
+          "match": "phip_vec = phi_vec",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "     call matvecmult(d1_mat,vel_vec,b1_vel)\n  \n     ! q1matrix_sm * phi(n)\n     if(ipres.eq.1 .and. numvar.ge.3 .and. ipressplit.eq.0) then\n        ! replace electron pressure with total pressure\n\n        phip_vec = phi_vec\n        phip_3 = p_v\n        call matvecmult(q1_mat, phip_vec, b2_vel)\n     else\n        call matvecmult(q1_mat, phi_vec , b2_vel)\n     endif\n     call add(b1_vel, b2_vel)\n\n     ! If ipres==1 and numvar<3 or ipressplit==1, need to add in pressure contribution\n     ! separately\n     if((ipres.eq.1 .and. numvar.lt.3) .or. ipressplit.gt.0) then",
+          "line": 840,
+          "match": "call matvecmult(q1_mat, phip_vec, b2_vel)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "module time_step_unsplit\n  use field\n  use matrix_mod\n  use model\n\n  type(vector_type), private :: phi_vec, phip_vec\n  type(vector_type), private :: vel_vec, veln_vec\n  type(vector_type), private :: pres_vec\n  type(vector_type), private :: den_vec\n  type(vector_type), private :: nre_vec\n  type(vector_type), private :: pret_vec\n\n  ! the following pointers point to the vector containing the named field.\n  ! set by assign_variables()",
+          "line": 6,
+          "match": "type(vector_type), private :: phi_vec, phip_vec",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "    vecsize_phi  = numvar*2 + idens + irunaway + ipres + imp_bf\n    \n    ! add electrostatic potential equation\n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) &\n         vecsize_phi = vecsize_phi + 1\n    \n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    ! Matrices\n    call set_matrix_index(s1_mat, s1_mat_index)\n    call set_matrix_index(d1_mat, d1_mat_index)",
+          "line": 49,
+          "match": "call create_vector(phip_vec,     vecsize_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        }
+      ],
+      "q4_vec": [
+        {
+          "context": "\n   ieq(1) = u_i\n   ieq(2) = vz_i\n   ieq(3) = chi_i\n\n   if (isplitstep .ge. 1) then\n      vsource => r4_vec\n   else\n      vsource => q4_vec\n   end if\n   vsource = 0.\n   do itri = 1, local_elements()\n\n      call get_zone(itri, izone)\n\n      call define_element_quadrature(itri, int_pts_main, int_pts_tor)\n      call define_fields(itri, FIELD_PSI + FIELD_I + FIELD_P + FIELD_B2I + FIELD_KIN, 1, linear)",
+          "line": 5168,
+          "match": "vsource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "     vv1 => s1_mat\n     vv0 => d1_mat\n     vb1 => s1_mat\n     vb0 => d1_mat\n     vp1 => s1_mat\n     vp0 => d1_mat\n     vn1 => s1_mat\n     vn0 => d1_mat\n     vsource => q4_vec\n     pp_i = p_i\n     if(imp_bf.eq.1) then\n        vf1 => s1_mat\n        vf0 => d1_mat\n     else\n        vf0 => o1_mat\n     end if\n  endif",
+          "line": 5281,
+          "match": "vsource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "     bnre1 => r43_mat\n     bnre0 => q43_mat\n     if(imp_bf.eq.1) then\n        bf1 => s2_mat\n        bf0 => d2_mat\n     else\n        bf0 => o2_mat\n     end if\n     bsource => q4_vec\n     pp_i = pe_i\n     ppe_i = pe_i\n     maxk = vecsize_phi\n  else\n     bb1 => s1_mat\n     bb0 => d1_mat\n     bv1 => s1_mat\n     bv0 => d1_mat",
+          "line": 5465,
+          "match": "bsource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "     bnre1 => s1_mat\n     bnre0 => d1_mat\n     if(imp_bf.eq.1) then\n        bf1 => s1_mat\n        bf0 => d1_mat\n     else\n        bf0 => o1_mat\n     end if\n     bsource => q4_vec\n     pp_i = p_i\n     if(ipres.eq.1 .and. numvar.ge.3) then\n        ppe_i = pe_i\n     else\n        ! If electron pressure equation is not included,\n        ! terms that should multiply pe will instead multiply p\n        ! (we add a factor of pefac to these terms below)\n        ppe_i = p_i",
+          "line": 5484,
+          "match": "bsource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "     pb0 => d1_mat\n     pn1 => s1_mat\n     pn0 => d1_mat\n     if(imp_bf.eq.1) then\n        pf0 => d1_mat\n     else\n        pf0 => o1_mat\n     endif\n     psource => q4_vec\n     thimpf = thimp\n  endif\n  select case(ipressplit)\n  case(0)\n     ieq(1) = p_i\n     maxk = 1\n  case(1)\n     select case(imode)",
+          "line": 5747,
+          "match": "psource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "     nv1 => r8_mat\n     nv0 => q8_mat\n     nsource => qn4_vec\n  else\n     nn1 => s1_mat\n     nn0 => d1_mat\n     nv1 => s1_mat\n     nv0 => d1_mat\n     nsource => q4_vec\n  endif\n\n  ssterm = 0.\n  ddterm = 0.\n  rrterm = 0.\n  qqterm = 0.\n  oterm = 0.\n",
+          "line": 5997,
+          "match": "nsource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "     !nsource => qn4_vec\n  else\n     nrenre1 => s1_mat\n     nrenre0 => d1_mat\n     nreb1 => s1_mat\n     nreb0 => d1_mat\n     nrev1   => s1_mat\n     nrev0   => d1_mat\n     !nsource => q4_vec\n  endif\n\n  ssterm = 0.\n  ddterm = 0.\n  qqterm = 0.\n  rrterm = 0.\n  kkterm = 0.\n  oterm = 0.",
+          "line": 6201,
+          "match": "!nsource => q4_vec",
+          "path": "unstructured/ludef_t.f90"
+        },
+        {
+          "context": "\n   ieq(1) = u_i\n   ieq(2) = vz_i\n   ieq(3) = chi_i\n\n   if (isplitstep .ge. 1) then\n      vsource => r4_vec\n   else\n      vsource => q4_vec\n   end if\n   vsource = 0.\n   do itri = 1, local_elements()\n\n      call get_zone(itri, izone)\n\n      call define_element_quadrature(itri, int_pts_main, int_pts_tor)\n      call define_fields(itri, FIELD_PSI + FIELD_I + FIELD_P + FIELD_B2I + FIELD_KIN, 1, linear)",
+          "line": 5783,
+          "match": "vsource => q4_vec",
+          "path": "unstructured/ludef_t_gpu.f90"
+        },
+        {
+          "context": "     vv1 => s1_mat\n     vv0 => d1_mat\n     vb1 => s1_mat\n     vb0 => d1_mat\n     vp1 => s1_mat\n     vp0 => d1_mat\n     vn1 => s1_mat\n     vn0 => d1_mat\n     vsource => q4_vec\n     pp_i = p_i\n     if(imp_bf.eq.1) then\n        vf1 => s1_mat\n        vf0 => d1_mat\n     else\n        vf0 => o1_mat\n     end if\n  endif",
+          "line": 5902,
+          "match": "vsource => q4_vec",
+          "path": "unstructured/ludef_t_gpu.f90"
+        },
+        {
+          "context": "     bnre1 => r43_mat\n     bnre0 => q43_mat\n     if(imp_bf.eq.1) then\n        bf1 => s2_mat\n        bf0 => d2_mat\n     else\n        bf0 => o2_mat\n     end if\n     bsource => q4_vec\n     pp_i = pe_i\n     ppe_i = pe_i\n     maxk = vecsize_phi\n  else\n     bb1 => s1_mat\n     bb0 => d1_mat\n     bv1 => s1_mat\n     bv0 => d1_mat",
+          "line": 6125,
+          "match": "bsource => q4_vec",
+          "path": "unstructured/ludef_t_gpu.f90"
+        },
+        {
+          "context": "     bn1 => s1_mat\n     bn0 => d1_mat\n     if(imp_bf.eq.1) then\n        bf1 => s1_mat\n        bf0 => d1_mat\n     else\n        bf0 => o1_mat\n     end if\n     bsource => q4_vec\n     pp_i = p_i\n     if(ipres.eq.1 .and. numvar.ge.3) then\n        ppe_i = pe_i\n     else\n        ! If electron pressure equation is not included,\n        ! terms that should multiply pe will instead multiply p\n        ! (we add a factor of pefac to these terms below)\n        ppe_i = p_i",
+          "line": 6142,
+          "match": "bsource => q4_vec",
+          "path": "unstructured/ludef_t_gpu.f90"
+        },
+        {
+          "context": "     pb0 => d1_mat\n     pn1 => s1_mat\n     pn0 => d1_mat\n     if(imp_bf.eq.1) then\n        pf0 => d1_mat\n     else\n        pf0 => o1_mat\n     endif\n     psource => q4_vec\n     thimpf = thimp\n  endif\n  select case(ipressplit)\n  case(0)\n     ieq(1) = p_i\n     maxk = 1\n  case(1)\n     select case(imode)",
+          "line": 6454,
+          "match": "psource => q4_vec",
+          "path": "unstructured/ludef_t_gpu.f90"
+        },
+        {
+          "context": "     nv1 => r8_mat\n     nv0 => q8_mat\n     nsource => qn4_vec\n  else\n     nn1 => s1_mat\n     nn0 => d1_mat\n     nv1 => s1_mat\n     nv0 => d1_mat\n     nsource => q4_vec\n  endif\n\n  ssterm = 0.\n  ddterm = 0.\n  rrterm = 0.\n  qqterm = 0.\n  oterm = 0.\n",
+          "line": 6759,
+          "match": "nsource => q4_vec",
+          "path": "unstructured/ludef_t_gpu.f90"
+        },
+        {
+          "context": "module model\n\n  use vector_mod\n  use matrix_mod\n\n  integer, allocatable :: global_dof_ids_1(:)\n  integer, allocatable :: global_dof_ids_row(:), global_dof_ids_col(:)\n\n  type(vector_type), target :: q4_vec, r4_vec, qp4_vec, qn4_vec, qn5_vec\n\n  ! matrices\n  type(matrix_type), target :: s1_mat, d1_mat, q1_mat, r14_mat\n  type(matrix_type), target :: o1_mat, p1_mat\n  type(matrix_type), target :: q42_mat, r42_mat, q43_mat, r43_mat\n  type(matrix_type), target :: q44_mat, r44_mat\n  type(matrix_type), target :: s2_mat, d2_mat, r2_mat, q2_mat, o2_mat, o3_mat\n  type(matrix_type), target :: s8_mat, d8_mat, r8_mat, q8_mat",
+          "line": 9,
+          "match": "type(vector_type), target :: q4_vec, r4_vec, qp4_vec, qn4_vec, qn5_vec",
+          "path": "unstructured/model.f90"
+        },
+        {
+          "context": "     \n   ieq(1) = 1\n   ieq(2) = 2\n   ieq(3) = 3\n\n   if (isplitstep .ge. 1) then\n      vsource => r4_vec\n   else\n      vsource => q4_vec\n   end if\n   vsource = 0.\n   do itri = 1, local_elements()\n\n      call get_zone(itri, izone)\n\n      call define_element_quadrature(itri, int_pts_main, int_pts_tor)\n      call define_fields(itri, FIELD_PSI + FIELD_I + FIELD_PHI + FIELD_V + FIELD_CHI+FIELD_N+FIELD_NI+FIELD_B2I+FIELD_KIN, 1, 1)",
+          "line": 4477,
+          "match": "vsource => q4_vec",
+          "path": "unstructured/particle.f90"
+        },
+        {
+          "context": "\n      ! ieq(1) = u_i\n      ! ieq(2) = vz_i\n      ! ieq(3) = chi_i\n\n      ! if (isplitstep .ge. 1) then\n      !    vsource => r4_vec\n      ! else\n      !    vsource => q4_vec\n      ! end if\n      ! vsource = 0.\n\n      f_v = 0.\n\n      do itri = 1, local_elements()\n         call get_zone(itri, izone)\n",
+          "line": 4683,
+          "match": "!    vsource => q4_vec",
+          "path": "unstructured/particle.f90"
+        },
+        {
+          "context": "\n   ieq(1) = u_i\n   ieq(2) = vz_i\n   ieq(3) = chi_i\n\n   if (isplitstep .ge. 1) then\n      vsource => r4_vec\n   else\n      vsource => q4_vec\n   end if\n   vsource = 0.\n   do itri = 1, local_elements()\n\n      call get_zone(itri, izone)\n\n      call define_element_quadrature(itri, int_pts_main, int_pts_tor)\n      call define_fields(itri, FIELD_PSI + FIELD_I + FIELD_PHI + FIELD_V + FIELD_CHI+FIELD_N+FIELD_NI+FIELD_KIN, 1, 0)",
+          "line": 4205,
+          "match": "vsource => q4_vec",
+          "path": "unstructured/particle_com.f90"
+        },
+        {
+          "context": "\n    ! add electrostatic potential equation OR implicit hyper-resistivity\n    if((jadv.eq.0) .or. (jadv.eq.1 .and. imp_hyper.ge.1)) &\n                    vecsize_phi = vecsize_phi + 1\n  \nif (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)",
+          "line": 94,
+          "match": "call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "                    vecsize_phi = vecsize_phi + 1\n  \nif (ispradapt .eq. 1) then\n    call create_vector(phi_vec,      vecsize_phi, \"phi_vec\")\n    call create_vector(phip_vec,     vecsize_phi, \"phip_vec\")\n    call create_vector(q4_vec,       vecsize_phi, \"q4_vec\")\n    call mark_vector_for_solutiontransfer(phi_vec)\n    call mark_vector_for_solutiontransfer(phip_vec)\n    call mark_vector_for_solutiontransfer(q4_vec)\n\n    call create_vector(b1_phi, vecsize_phi, \"b1_phi\")\n    call create_vector(b2_phi, vecsize_phi, \"b2_phi\")\n    call mark_vector_for_solutiontransfer(b1_phi)\n    call mark_vector_for_solutiontransfer(b2_phi)\n\n    call create_vector(vel_vec,      vecsize_vel, \"vel_vec\")\n    call create_vector(veln_vec,     vecsize_vel, \"veln_vec\")",
+          "line": 97,
+          "match": "call mark_vector_for_solutiontransfer(q4_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n    call create_vector(pret_vec,    vecsize_t, \"pret_vec\")\n    call mark_vector_for_solutiontransfer(pret_vec)\nelse\n\n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    call create_vector(vel_vec,      vecsize_vel)\n    call create_vector(veln_vec,     vecsize_vel)\n    call create_vector(r4_vec,       vecsize_vel)\n",
+          "line": 152,
+          "match": "call create_vector(q4_vec,       vecsize_phi)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    if(irunaway .gt. 0) then\n       call clear_mat(r43_mat)\n       call clear_mat(q43_mat)\n    end if\n    if(i3d.eq.1) then\n       call clear_mat(o2_mat)\n       if(ipres.eq.1 .or. ipressplit.eq.1) call clear_mat(o3_mat)\n    endif\n    q4_vec = 0.\n    \n    if(idens.eq.1) then\n       call clear_mat(s8_mat)\n       call clear_mat(d8_mat)\n       call clear_mat(r8_mat)\n       call clear_mat(q8_mat)\n       qn4_vec = 0.\n    end if",
+          "line": 535,
+          "match": "q4_vec = 0.",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    if(idens.eq.1) then\n       call finalize(r42_mat)\n       call finalize(q42_mat)\n    end if\n    if(irunaway .gt. 0) then\n       call finalize(r43_mat)\n       call finalize(q43_mat)\n    end if\n    call sum_shared(q4_vec)\n    \n    if(idens.eq.1) then\n       call finalize(d8_mat)\n       call finalize(q8_mat)\n       call finalize(r8_mat)\n       call flush(s8_mat)\n       call sum_shared(qn4_vec)\n       ",
+          "line": 605,
+          "match": "call sum_shared(q4_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then\n        ! b2vector = r15 * bf(n)\n        call matvecmult(o2_mat,bfp_field(1)%vec,b2_phi)\n        call add(b1_phi, b2_phi)\n     endif\n\n     call add(b1_phi, q4_vec)\n \n     ! Insert boundary conditions\n     if(myrank.eq.0 .and. iprint.ge.2) print *, \"  inserting bcs\"\n     if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n     if(calc_matrices.eq.1) then\n        call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s2_mat)\n        if(ipressplit.eq.0 .and. numvar.ge.3) then\n           if(ipres.eq.1) then",
+          "line": 1323,
+          "match": "call add(b1_phi, q4_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "        if(irunaway .gt. 0) then\n           call matvecmult(r43_mat,nre_vec,b2_phi)\n           call mult(b2_phi,-1.)\n           call add(b1_phi, b2_phi)\n           call matvecmult(q43_mat,nreold_vec,b2_phi)\n           call add(b1_phi, b2_phi)\n        end if\n\n        call add(b1_phi, q4_vec)\n       \n        ! Insert boundary conditions\n        if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n        if(calc_matrices.eq.1) then\n           call boundary_mag(b1_phi, psi_v, bz_v, bfp_v, e_v, s2_mat)\n           if(ipressplit.eq.0 .and. numvar.ge.3) then\n              if(ipres.eq.1) then\n                 call boundary_pe(b1_phi, pe_v, s2_mat)",
+          "line": 1452,
+          "match": "call add(b1_phi, q4_vec)",
+          "path": "unstructured/time_step_split.f90"
+        },
+        {
+          "context": "    \n    ! add electrostatic potential equation\n    if((jadv.eq.0 .and. i3d.eq.1).or.(jadv.eq.1 .and. imp_hyper.ge.1)) &\n         vecsize_phi = vecsize_phi + 1\n    \n    ! Vectors\n    call create_vector(phi_vec,      vecsize_phi)\n    call create_vector(phip_vec,     vecsize_phi)\n    call create_vector(q4_vec,       vecsize_phi)\n     \n    call create_vector(b1_phi, vecsize_phi)\n    call create_vector(b2_phi, vecsize_phi)\n\n    ! Matrices\n    call set_matrix_index(s1_mat, s1_mat_index)\n    call set_matrix_index(d1_mat, d1_mat_index)\n#ifdef REORDERED",
+          "line": 50,
+          "match": "call create_vector(q4_vec,       vecsize_phi)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "\n  subroutine clear_matrices_unsplit\n    use basic\n    implicit none\n\n    call clear_mat(s1_mat)\n    call clear_mat(d1_mat)\n    if(i3d.eq.1) call clear_mat(o1_mat)\n    q4_vec = 0.\n  end subroutine clear_matrices_unsplit\n\n  subroutine finalize_matrices_unsplit\n    use basic\n    implicit none\n\n    ! Finalize matrices for multiplication\n    call flush(s1_mat)",
+          "line": 160,
+          "match": "q4_vec = 0.",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "  subroutine finalize_matrices_unsplit\n    use basic\n    implicit none\n\n    ! Finalize matrices for multiplication\n    call flush(s1_mat)\n    call finalize(d1_mat)\n    if(i3d.eq.1) call finalize(o1_mat)\n    call sum_shared(q4_vec)\n  end subroutine finalize_matrices_unsplit\n\n\n!======================================================================\n! import_time_advance_vectors\n! ~~~~~~~~~~~~~~~~~~~~~~~~~~~\n! construct vectors for time-advance\n!======================================================================",
+          "line": 171,
+          "match": "call sum_shared(q4_vec)",
+          "path": "unstructured/time_step_unsplit.f90"
+        },
+        {
+          "context": "\n  integer, intent(in) :: calc_matrices\n  integer :: jer\n  \n  real :: tstart, tend\n\n  if(myrank.eq.0 .and. iprint.ge.1) print *, \"Solving matrix equation...\"\n\n  b1_phi = q4_vec\n\n  if(itime_independent.eq.0) then\n     ! vtemp = d1matrix_sm * phi(n)\n     call matvecmult(d1_mat,phi_vec,b2_phi)\n     call add(b1_phi, b2_phi)\n\n     ! Include linear f terms\n     if(numvar.ge.2 .and. i3d.eq.1 .and. imp_bf.eq.0) then",
+          "line": 290,
+          "match": "b1_phi = q4_vec",
+          "path": "unstructured/time_step_unsplit.f90"
+        }
+      ]
+    },
+    "interpretation_guard": "Fresh allocation or lack of a direct restart_hdf5 mention does not by itself prove a causative missing state. Use the source trace to define one minimal dynamic initialization test.",
+    "parent_job_id": "20260921-042-native-restart-unsplit-history-reconstruction-audit",
+    "pipeline_failure": false,
+    "source_root": "/home/ubuntu/M3DC1-official",
+    "tokens": [
+      "phi_vec",
+      "phip_vec",
+      "q4_vec",
+      "b1_phi",
+      "b2_phi"
+    ],
+    "zero_equivalence": "NOT_APPLICABLE_SOURCE0_RESTART_CAPABILITY_TEST"
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_unsplit_work_vectors/native_restart_unsplit_work_vector_summary.json",
+  "summary_sha256": "9d3c0c5d32b320cea87013245f46a84896172d7e2c1039b472ad69adced482e0",
+  "timed_out": false
+}
