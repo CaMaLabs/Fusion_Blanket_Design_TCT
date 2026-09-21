@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-048-native-restart-unsplit-solver-state-audit",
+  "processed_result_commit": "ef7901b0523fe01af9b4dd9bb78dcc47d33a8061",
+  "processed_result_receipt": "agent_pipeline/results/20260921-048-native-restart-unsplit-solver-state-audit.json",
+  "classification": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_SOLVER_STATE_CONTEXT_CAPTURED",
+  "pipeline_error": null,
+  "interpretation": "Successful static-source provenance audit, not a pipeline failure and not dynamic causation. Restart-sensitive unsplit solver-state candidates were identified, including initial-guess and matrix/preconditioner rebuild/reuse controls, but this result alone does not establish that any candidate causes the job-041 handoff mismatch. The required 1e-12 handoff-equivalence reference remains failed in job 041 with double checkpoint fields. Frozen gates remain width > +0.020% and Jpk <= +0.10%; claim boundary remains normalized native M3D-C1 restart capability/provenance only.",
+  "new_job_id": null,
+  "follow_up_reason": "No additional job queued from this static audit alone: a scientifically useful next test would need a controlled dynamic restart-equivalence intervention that isolates solver-state reconstruction without changing solver physics; the present evidence does not justify guessing such an intervention or extending the static-audit chain.",
+  "timestamp": "2026-09-21T19:54:06Z"
+}
