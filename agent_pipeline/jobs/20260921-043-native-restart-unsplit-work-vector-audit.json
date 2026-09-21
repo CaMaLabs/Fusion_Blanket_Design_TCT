@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-043-native-restart-unsplit-work-vector-audit",
+  "parent_result_job_id": "20260921-042-native-restart-unsplit-history-reconstruction-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_unsplit_work_vector_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_unsplit_work_vectors"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_unsplit_work_vectors/native_restart_unsplit_work_vector_summary.json",
+  "purpose": "Trace the lifecycle and restart persistence/reconstruction of phi_vec, phip_vec, q4_vec, b1_phi, and b2_phi after job 042 showed they are freshly created by initialize_timestep_unsplit. Identify one minimal dynamic initialization test without changing solver physics.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_HISTORY_RECONSTRUCTION_CONTEXT_CAPTURED",
+    "require_parent_handoff_failure_tolerance": 1e-12,
+    "do_not_infer_causation_from_static_absence": true,
+    "do_not_modify_solver_physics": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
