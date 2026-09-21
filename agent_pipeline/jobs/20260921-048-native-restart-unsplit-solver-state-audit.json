@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job_id": "20260921-048-native-restart-unsplit-solver-state-audit",
+  "parent_result_job_id": "20260921-046-native-restart-unsplit-first-step-rebuild-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_restart_unsplit_solver_state_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": ["validation_runs/m3dc1_tct_native_restart_unsplit_solver_state"],
+  "summary_path": "validation_runs/m3dc1_tct_native_restart_unsplit_solver_state/native_restart_unsplit_solver_state_summary.json",
+  "purpose": "Trace restart-sensitive unsplit linear-solver initial-guess, matrix/preconditioner reuse, and rebuild state after the first-step source audit exposed these as remaining numerical-state candidates, without modifying solver physics.",
+  "interpretation_contract": {
+    "parent_classification_required": "M3DC1_TCT_NATIVE_RESTART_UNSPLIT_FIRST_STEP_REBUILD_CONTEXT_CAPTURED",
+    "require_reference_handoff_failure_tolerance": 1e-12,
+    "reference_handoff_failure_job_id": "20260921-041-native-restart-full-precision-handoff-repair-rerun",
+    "do_not_treat_static_call_order_as_dynamic_causation": true,
+    "do_not_modify_solver_physics": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Normalized native M3D-C1 restart capability/provenance only; no controller-efficacy, reactor-scale, or experimental stabilization claim."
+  }
+}
