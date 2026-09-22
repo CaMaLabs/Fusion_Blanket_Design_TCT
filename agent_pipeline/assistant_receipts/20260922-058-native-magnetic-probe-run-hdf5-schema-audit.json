@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-058-native-magnetic-probe-run-hdf5-schema-audit",
+  "processed_result_commit": "c4b3bed2621a1216955d8e00a3259a2016fa7367",
+  "processed_result_receipt": "agent_pipeline/results/20260922-058-native-magnetic-probe-run-hdf5-schema-audit.json",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_RUN_HDF5_SCHEMA_AUDITED",
+  "pipeline_failure": false,
+  "interpretation": "Successful diagnostic-only schema audit of eight native HDF5 files. C1.h5 positively exposes mag_probes/value with shape [6,1], imag_probes=1 and ntime=6. This establishes a native magnetic-probe dataset exists, but schema inventory alone does not establish physical-time calibration, Mirnov equivalence, precursor lead time, or controller efficacy.",
+  "new_job_id": "20260922-059-native-magnetic-probe-value-semantics-audit",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "processed_utc": "2026-09-23T03:43:00Z"
+}
