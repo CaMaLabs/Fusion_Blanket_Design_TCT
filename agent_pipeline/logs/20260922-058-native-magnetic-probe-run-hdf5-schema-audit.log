@@ -1,0 +1,3681 @@
+job_id=20260922-058-native-magnetic-probe-run-hdf5-schema-audit
+started_utc=2026-09-22T20:13:12.825950Z
+head_before=17f057fc27ef477afb324160e1e37be029a1cf00
+audit_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+h5py 3.16.0
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_RUN_HDF5_SCHEMA_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_HDF5_SCHEMA_AUDITED",
+  "source_directory": "/home/ubuntu/work/openmc/sweep/validation_runs/m3dc1_tct_native_magnetic_probe_selected_timeseries/run",
+  "hdf5_inspection_error": null,
+  "file_count": 8,
+  "inventory": [
+    {
+      "file": "C1.h5",
+      "root_attributes": {
+        "3d": 0,
+        "amu": 0.0001,
+        "amuc": 0.0001,
+        "amupar": 0.0,
+        "b0_norm": 10000.0,
+        "bootstrap_alpha": 0.0,
+        "bzero": 1.0,
+        "bzsign": 0.0,
+        "db": 0.0,
+        "denm": 0.0001,
+        "eqsubtract": 0,
+        "eta0": 0.001,
+        "eta_te_offset": 0.0,
+        "eta_wall": 1.0,
+        "etar": 0.0,
+        "extsubtract": 0,
+        "frequency": 0.0,
+        "gam": 1.66666666666667,
+        "gravr": 0.0,
+        "gravz": 0.0,
+        "gyro": 0,
+        "hyper": 0.0,
+        "hyperc": 0.0,
+        "hyperi": 0.0,
+        "hyperp": 0.0,
+        "hyperv": 0.0,
+        "ibootstrap_model": 0,
+        "icomplex": 0,
+        "icsubract": 0,
+        "idens": 1,
+        "ifixedb": 0,
+        "iflux_loops": 0,
+        "igeometry": 0,
+        "ikprad": 0,
+        "imag_probes": 1,
+        "imulti_region": 1,
+        "integrator": 0,
+        "ion_mass": 1.0,
+        "ipellet": 0,
+        "ipellet_abl": 0,
+        "iper": 0,
+        "ipres": 0,
+        "ipressplit": 0,
+        "itemp": 0,
+        "itime_independent": 0,
+        "itor": 0,
+        "ivform": 1,
+        "jper": 0,
+        "kappa0": 0.0,
+        "kappar": 0.0,
+        "kappat": 0.0001,
+        "kinetic": 0,
+        "kprad_z": 1,
+        "l0_norm": 100.0,
+        "linear": 0,
+        "ln": 0.0,
+        "n0_norm": 100000000000000.0,
+        "nonrect": 1,
+        "npellets": 0,
+        "nplanes": 1,
+        "ntime": 6,
+        "ntor": 0,
+        "numvar": 3,
+        "rzero": 10.0,
+        "tflux0": 0.0,
+        "thimp": 0.6,
+        "version": 45,
+        "xlim": 0.0,
+        "xlim2": 0.0,
+        "z_ion": 1.0,
+        "zlim": 0.0,
+        "zlim2": 0.0
+      },
+      "objects": [
+        {
+          "name": "mag_probes",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "mag_probes/value",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6,
+            1
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars",
+          "kind": "Group",
+          "attributes": {
+            "ntimestep": 5
+          }
+        },
+        {
+          "name": "scalars/Ave_P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_K3",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_K3D",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_K3H",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_KP",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_KPD",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_KPH",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_KT",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_KTD",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_KTH",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MP",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MPC",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MPD",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MPH",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MPV",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MT",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MTC",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MTD",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MTH",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_MTV",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_PD",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_PE",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_PH",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/E_grav",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Flux_kinetic",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Flux_poynting",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Flux_pressure",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Flux_thermal",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/IP_co",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/IP_sn",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/M_IZ",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/M_IZ_co",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/M_IZ_sn",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Parallel_viscous_heating",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Particle_Flux_convective",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Particle_Flux_diffusive",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Particle_source",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Reconnected_Flux",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Torque_com",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Torque_gyro",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Torque_parvisc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Torque_sol",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Torque_visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/W_M",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/W_P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n0_x",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n0_x_halo",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n0_y",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n0_z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n0_z_halo",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n1_x",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/Wall_Force_n1_y",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/angular_momentum",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/angular_momentum_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/area",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/area_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/brem_rad",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/circulation",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/dt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/electron_number",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/helicity",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/i_control%err_i",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/i_control%err_p_old",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/ion_loss",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/kprad_dt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/kprad_n",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/kprad_n0",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/line_rad",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/loop_voltage",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/n_control%err_i",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/n_control%err_p_old",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/particle_number",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/particle_number_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/power_injected",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/psi0",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/psi_lcfs",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/psimin",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/radiation",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/reck_rad",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/recp_rad",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/runaways",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/temax",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/time",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/toroidal_current",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/toroidal_current_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/toroidal_current_w",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/toroidal_flux",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/toroidal_flux_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/volume",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/volume_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/volume_pd",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/xmag",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/xnull",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/xnull2",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/zmag",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/znull",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "scalars/znull2",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "timings/t_aux",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_kprad",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_ludefall",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_mvm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_onestep",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_output_cgm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_output_hdf5",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_output_reset",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_smoother",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_solve_b",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_solve_n",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_solve_p",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_solve_v",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "timings/t_sources",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            6
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "equilibrium.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 0,
+        "time": 0.0,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "time_000.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 0,
+        "time": 0.0,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "time_001.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 1,
+        "time": 0.05,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "time_002.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 2,
+        "time": 0.1,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "time_003.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 3,
+        "time": 0.15000000000000002,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "time_004.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 4,
+        "time": 0.2,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    {
+      "file": "time_005.h5",
+      "root_attributes": {
+        "iwall_regions": 0,
+        "nspace": 2,
+        "ntimestep": 5,
+        "time": 0.25,
+        "version": 45
+      },
+      "objects": [
+        {
+          "name": "fields",
+          "kind": "Group",
+          "attributes": {}
+        },
+        {
+          "name": "fields/E_PHI",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_R",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_Z",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/E_par",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/I",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/P",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/Pe",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/V",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradp",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/bdotgradt",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/chi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/den",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/denm",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/eta_J",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/jphi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappa",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/kappar",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/magnetic_region",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/mesh_zone",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ne",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/phi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/psi",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/te",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/ti",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_em",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/torque_ntv",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/visc_c",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/wall_dist",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fields/zeff",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            20
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "mesh",
+          "kind": "Group",
+          "attributes": {
+            "3D": 0,
+            "height": 5.999140494776385,
+            "ifull_torus": 1,
+            "nelms": 1004,
+            "nperiods": 1,
+            "nplanes": 1,
+            "period": 62.83185307179586,
+            "version": 45,
+            "width": 5.9984595058244246
+          }
+        },
+        {
+          "name": "mesh/adjacency",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            3
+          ],
+          "dtype": "int32"
+        },
+        {
+          "name": "mesh/elements",
+          "kind": "Dataset",
+          "attributes": {},
+          "shape": [
+            1004,
+            8
+          ],
+          "dtype": "float32"
+        }
+      ]
+    }
+  ],
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "next_step_contract": "Use this corrected run-directory schema inventory only to locate documented native probe output semantics; do not construct a precursor until a magnetic observable and its time/value semantics are positively established."
+}
+
+finished_utc=2026-09-22T20:13:14.444609Z
+return_code=0
