@@ -1,0 +1,34 @@
+job_id=20260922-053-native-magnetic-probe-selected-timeseries
+started_utc=2026-09-22T15:20:13.467960Z
+head_before=c05f74b828f95f34ad769e9f024112056413039f
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SELECTED_TIMESERIES_CAPTURED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_IN_DOMAIN_CANDIDATE_FOUND",
+  "selected_probe": {
+    "r": 11.12,
+    "z": 0.9951,
+    "orientation": "BR/nx=1.0"
+  },
+  "requested_point_rejected": false,
+  "return_code": 0,
+  "hdf5_files": [
+    "C1.h5",
+    "equilibrium.h5",
+    "time_000.h5",
+    "time_001.h5",
+    "time_002.h5",
+    "time_003.h5",
+    "time_004.h5",
+    "time_005.h5"
+  ],
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic capture only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "next_step_contract": "Do not construct a precursor until the native magnetic-probe observable is positively identified in the captured output and shown to contain a usable time series."
+}
+
+finished_utc=2026-09-22T15:20:24.855712Z
+return_code=0
