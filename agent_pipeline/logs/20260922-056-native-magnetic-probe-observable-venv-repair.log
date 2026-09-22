@@ -1,3 +1,10 @@
+job_id=20260922-056-native-magnetic-probe-observable-venv-repair
+started_utc=2026-09-22T18:16:49.059024Z
+head_before=1a2bfb1a70d2832dd6f599a62bcaf48ddd2c4aca
+Using existing audit venv: /home/ubuntu/work/openmc/sweep/.venv-dudson
+audit_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+verified_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+h5py 3.16.0
 {
   "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
   "pipeline_failure": false,
@@ -12,3 +19,6 @@
   "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
   "next_step_contract": "Construct no precursor unless a native magnetic-probe observable is positively identified and its time ordering/value semantics are verified."
 }
+
+finished_utc=2026-09-22T18:16:50.378490Z
+return_code=0
