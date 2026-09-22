@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-060-native-magnetic-probe-time-metadata-audit",
+  "processed_result_commit": "87ce021f874e50e15984cbb79e80f5f0bf470d2e",
+  "result_receipt_sha": "unknown-from-receipt-content-api",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_METADATA_AUDITED",
+  "pipeline_error": null,
+  "interpretation": "Successful diagnostic audit. Native C1.h5 scalars/time and scalars/dt agree with time_*.h5 root time attributes and C1input dt=0.05 across six samples, establishing native time ordering and internal native-time consistency only. No explicit unit or normalization was established, so physical-time calibration remains fail-closed; no milliseconds, Mirnov equivalence, precursor lead time, or controller-efficacy claim is made. Frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260922-061-native-magnetic-probe-time-normalization-provenance-audit",
+  "timestamp": "2026-09-23T00:00:00Z"
+}
