@@ -1,0 +1,393 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_IN_DOMAIN_CANDIDATE_FOUND",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PLACEMENT_INVALID_CONFIRMED",
+  "native_magnetic_axis": {
+    "r": 10.02,
+    "z": 0.9951
+  },
+  "candidate_results": [
+    {
+      "name": "axis",
+      "r": 10.02,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.7736E+00   compute  9.7020E-01   solve  8.0344E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.00400000E-03  4.45600000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.709E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.555E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.362E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.303E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.404E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.407E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.390E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.338E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.310E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.277E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.269E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.277E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.09830000E-02  3.54390000E-02\nOUTPUT: hdf5_write_timings       5  5.44000000E-04  3.59830000E-02    0\nOUTPUT: hdf5_flush               5  4.05000000E-04  4.05000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.5184 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:58:20.9\n\n Stopped at           0\n"
+    },
+    {
+      "name": "out_r_0p50",
+      "r": 10.52,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.7905E+00   compute  9.5232E-01   solve  8.3821E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.07600000E-03  4.51000000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.820E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.638E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.574E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.545E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.726E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.706E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.621E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.589E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.549E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.540E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.527E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.518E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.45380000E-02  3.90480000E-02\nOUTPUT: hdf5_write_timings       5  5.46000000E-04  3.95940000E-02    0\nOUTPUT: hdf5_flush               5  4.44000000E-04  4.44000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.3743 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:58:31.4\n\n Stopped at           0\n"
+    },
+    {
+      "name": "out_r_0p80",
+      "r": 10.82,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.8336E+00   compute  9.9742E-01   solve  8.3622E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.09400000E-03  4.53900000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.743E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.558E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.384E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.328E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.296E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.308E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.375E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.408E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.407E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.381E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.349E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.327E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.15570000E-02  3.60960000E-02\nOUTPUT: hdf5_write_timings       5  5.49000000E-04  3.66450000E-02    0\nOUTPUT: hdf5_flush               5  4.35000000E-04  4.35000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.4318 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:58:41.9\n\n Stopped at           0\n"
+    },
+    {
+      "name": "out_r_0p95",
+      "r": 10.969999999999999,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.9732E+00   compute  1.0472E+00   solve  9.2598E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  3.99700000E-03  4.42000000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  2.698E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  2.613E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.973E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.872E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.788E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.744E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.785E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  2.156E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.521E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.426E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.376E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.354E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.55350000E-02  3.99550000E-02\nOUTPUT: hdf5_write_timings       5  5.27000000E-04  4.04820000E-02    0\nOUTPUT: hdf5_flush               5  4.62000000E-04  4.62000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.7995 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:58:52.8\n\n Stopped at           0\n"
+    },
+    {
+      "name": "out_r_1p10",
+      "r": 11.12,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.7552E+00   compute  9.4971E-01   solve  8.0550E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.01100000E-03  4.43500000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.748E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.545E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.336E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.272E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.260E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.252E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.280E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.403E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.408E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.394E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.333E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.288E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.14980000E-02  3.59330000E-02\nOUTPUT: hdf5_write_timings       5  5.51000000E-04  3.64840000E-02    0\nOUTPUT: hdf5_flush               5  4.10000000E-04  4.10000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.3857 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:59:03.3\n\n Stopped at           0\n"
+    },
+    {
+      "name": "in_r_0p50",
+      "r": 9.52,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "   Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.8132E+00   compute  9.5319E-01   solve  8.5998E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.06200000E-03  4.48800000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.699E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.533E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.408E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.319E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.311E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.298E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.296E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.286E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.308E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.395E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.379E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.405E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.15830000E-02  3.60710000E-02\nOUTPUT: hdf5_write_timings       5  5.52000000E-04  3.66230000E-02    0\nOUTPUT: hdf5_flush               5  4.14000000E-04  4.14000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.375 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:59:13.7\n\n Stopped at           0\n"
+    },
+    {
+      "name": "in_r_0p80",
+      "r": 9.219999999999999,
+      "z": 0.9951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "   Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.7657E+00   compute  9.5099E-01   solve  8.1472E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.09700000E-03  4.57000000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.719E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.577E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.538E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.458E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.418E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.338E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.360E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.326E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.307E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.299E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.318E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.416E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.18610000E-02  3.64310000E-02\nOUTPUT: hdf5_write_timings       5  5.38000000E-04  3.69690000E-02    0\nOUTPUT: hdf5_flush               5  4.24000000E-04  4.24000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.411 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:59:24.2\n\n Stopped at           0\n"
+    },
+    {
+      "name": "up_z_0p50",
+      "r": 10.02,
+      "z": 1.4950999999999999,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.8145E+00   compute  9.5070E-01   solve  8.6379E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  3.94500000E-03  4.37200000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.714E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.614E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.490E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.596E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.624E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.520E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.465E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.418E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.509E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.457E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.411E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.431E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.10700000E-02  3.54420000E-02\nOUTPUT: hdf5_write_timings       5  5.26000000E-04  3.59680000E-02    0\nOUTPUT: hdf5_flush               5  4.08000000E-04  4.08000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.3498 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:59:34.6\n\n Stopped at           0\n"
+    },
+    {
+      "name": "down_z_0p50",
+      "r": 10.02,
+      "z": 0.4951,
+      "return_code": 0,
+      "requested_point_rejected": false,
+      "in_domain_candidate": true,
+      "point_not_found_matches": [
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ],
+        [
+          12.9992,
+          0.0,
+          2.9996
+        ]
+      ],
+      "log_tail": "  Ionization loss =    0.0000000000000000     \n   Recombination radiation (kinetic) =    0.0000000000000000     \n   Recombination radiation (potential) =    0.0000000000000000     \n LOOP TIME    5   Tot  1.7792E+00   compute  9.6407E-01   solve  8.1518E-01\n  Writing output.\n  Writing scalars\nPoint not found in domain:      12.9992      0.0000      2.9996\n Done writing scalars\nOUTPUT: hdf5_write_scalars       5  4.01500000E-03  4.46200000E-03\n  Calculating diagnostic fields\n  before bdotgradp solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.726E-03 secs\n  before bdotgradt solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.533E-03 secs\n  before torque_density solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.341E-03 secs\n  before torque_density_ntv solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.337E-03 secs\n  before mag_reg solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.486E-03 secs\n  before ef solve\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.442E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.401E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.339E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.302E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.286E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.281E-03 secs\n[M3DC1 INFO] copyField2PetscVec_5: MatCreateVecs\n\t-- # solver iterations 1\nFor mat%imatrix=  22, newsolve takes num_iter=    1, time=  1.308E-03 secs\n before J parallel bootstrap solve\n  Done calculating diagnostic fields\n  Writing time slice file time_005.h5        \n   Writing attr \n   Writing mesh \n Calculating mesh adjacency\n   Writing fields \n In output_fields.  ilin=           1\n   Done writing fields            0\n  Writing wall regions\n linking time_005.h5        \n   End of hdf5_write_time_slice \nOUTPUT: hdf5_write_time_slice    5  3.14380000E-02  3.59000000E-02\nOUTPUT: hdf5_write_timings       5  5.40000000E-04  3.64400000E-02    0\nOUTPUT: hdf5_flush               5  4.21000000E-04  4.21000000E-04    0\n Done time loop.\n destroy field  1\n destroy field  2\n destroy field  3\n destroy field  4\n destroy field  5\n destroy field  6\n destroy field  7\n destroy field  8\n destroy field  9\n destroy field 10\n destroy field 11\n destroy field 12\n destroy field 13\n destroy field 14\n destroy field 15\n destroy field 16\n destroy field 17\n destroy field 18\n destroy field 19\n destroy field 20\n destroy field 21\n destroy field 22\n destroy field 23\n destroy field 24\n destroy field 25\n destroy field 26\n destroy field 27\n destroy field 28\n destroy field 54\n destroy field 55\n destroy field 56\n destroy field 57\n destroy field 58\n destroy field 59\n destroy field 60\n destroy field 61\n destroy field 62\n destroy field 63\n destroy field 64\n destroy field 65\n destroy field 66\n destroy field 67\n destroy field 68\n destroy field 69\n destroy field 70\n\n* [M3D-C1 INFO] run time: 10.3751 (sec)\n ==============================================================\n END DATE: 2026 09 22   TIME: 07:59:45.1\n\n Stopped at           0\n"
+    }
+  ],
+  "selected_in_domain_candidate": {
+    "name": "out_r_1p10",
+    "r": 11.12,
+    "z": 0.9951,
+    "orientation": "BR/nx=1.0"
+  },
+  "selected_candidate_status": "GEOMETRY_ONLY_NOT_YET_MIRNOV_EQUIVALENT",
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic geometry/provenance only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "next_step_contract": "Only if an in-domain candidate is found, use a separate diagnostic-only native run to capture its magnetic-probe time series before any precursor or controller analysis."
+}
