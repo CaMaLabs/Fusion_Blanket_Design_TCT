@@ -1,0 +1,54 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.8154740333557129,
+  "error": null,
+  "finished_utc": "2026-09-22T23:21:49.140386Z",
+  "head_before": "c0e403afc71016cebdae18c30791445449eb3d2a",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260922-061-native-magnetic-probe-time-normalization-provenance-audit.json",
+  "job_id": "20260922-061-native-magnetic-probe-time-normalization-provenance-audit",
+  "log_path": "agent_pipeline/logs/20260922-061-native-magnetic-probe-time-normalization-provenance-audit.log",
+  "log_sha256": "c7a338c08af4fbea72bcfc536439e9659b948cd31fa9a3b0dd6b7d75fd022d00",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_time_normalization_provenance_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_time_normalization_provenance_audit.sh",
+  "runner_sha256": "5c879b511bf62c00dc24aeb984e4354f0c2292d32a9ab21e4529c51902475e71",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T23:21:48.323732Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_NORMALIZATION_PROVENANCE_AUDITED",
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "Native time values and dt are internally cross-consistent, but physical-time conversion remains fail-closed unless native output/input provenance explicitly establishes the time unit or normalization relation. No SI time is inferred from dimensional-looking input scalars alone.",
+    "native_input_scalars": {
+      "bzero": "1.0",
+      "dt": "0.05",
+      "ion_mass": "1.",
+      "p0": "0.25",
+      "pi0": "0.125",
+      "rzero": "10.",
+      "xmag": "10.",
+      "xzero": "10.",
+      "z_ion": "1."
+    },
+    "normalization_provenance_matches": [
+      {
+        "source": "C1stdout",
+        "text": "seconds"
+      }
+    ],
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_METADATA_AUDITED",
+    "physical_time_calibrated": false,
+    "pipeline_failure": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_time_normalization_provenance_audit/summary.json",
+  "summary_sha256": "6b1b490ef909071e60f893836d6eee464740ae06c640a658225d19244b654727",
+  "timed_out": false
+}

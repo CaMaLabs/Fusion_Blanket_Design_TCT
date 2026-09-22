@@ -1,0 +1,35 @@
+job_id=20260922-061-native-magnetic-probe-time-normalization-provenance-audit
+started_utc=2026-09-22T23:21:48.323732Z
+head_before=c0e403afc71016cebdae18c30791445449eb3d2a
+audit_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_NORMALIZATION_PROVENANCE_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_METADATA_AUDITED",
+  "native_input_scalars": {
+    "dt": "0.05",
+    "rzero": "10.",
+    "bzero": "1.0",
+    "ion_mass": "1.",
+    "z_ion": "1.",
+    "xzero": "10.",
+    "xmag": "10.",
+    "p0": "0.25",
+    "pi0": "0.125"
+  },
+  "normalization_provenance_matches": [
+    {
+      "source": "C1stdout",
+      "text": "seconds"
+    }
+  ],
+  "physical_time_calibrated": false,
+  "interpretation": "Native time values and dt are internally cross-consistent, but physical-time conversion remains fail-closed unless native output/input provenance explicitly establishes the time unit or normalization relation. No SI time is inferred from dimensional-looking input scalars alone.",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
+
+finished_utc=2026-09-22T23:21:49.140354Z
+return_code=0
