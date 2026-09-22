@@ -1,0 +1,66 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.031650543212890625,
+  "error": null,
+  "finished_utc": "2026-09-22T14:54:08.562465Z",
+  "head_before": "9c26084c5d6f4c6dd0b1baf78de274c9db252655",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260922-051-native-magnetic-probe-placement-audit.json",
+  "job_id": "20260922-051-native-magnetic-probe-placement-audit",
+  "log_path": "agent_pipeline/logs/20260922-051-native-magnetic-probe-placement-audit.log",
+  "log_sha256": "b4bdb39896e2ceebedb47a11a31336c3ec40735268398ff80b84d1feed96b63c",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_placement_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_placement_audit.sh",
+  "runner_sha256": "87b39e39855210728fc50b8d2d0675ce23d6e520e15e59519310346b574e41ef",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T14:54:08.529841Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic geometry/provenance only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PLACEMENT_INVALID_CONFIRMED",
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "The native solver completed, but the requested magnetic probe point was explicitly reported outside the computational domain. Do not treat the run as a valid magnetic-probe timeseries measurement. Establish an in-domain probe location from native geometry before any precursor analysis.",
+    "magnetic_axis_matches": [
+      [
+        "0.1002E+02",
+        "0.9951E+00"
+      ]
+    ],
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIMESERIES_BASELINE_CAPTURED",
+    "pipeline_failure": false,
+    "point_not_found_matches": [
+      [
+        "12.9992",
+        "0.0000",
+        "2.9996"
+      ],
+      [
+        "2.3000",
+        "0.0000",
+        "0.0000"
+      ],
+      [
+        "12.9992",
+        "0.0000",
+        "2.9996"
+      ]
+    ],
+    "probe_valid": false,
+    "requested_probe_point": {
+      "nx": 1.0,
+      "x": 2.3,
+      "z": 0.0
+    },
+    "scientific_negative_result": true,
+    "solver_physics_modified": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_placement_audit/summary.json",
+  "summary_sha256": "51f79ef374498e0d1da0e82b422aa8c7ddac316619062cefce1c4d1d3aa07d37",
+  "timed_out": false
+}

@@ -1,0 +1,40 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PLACEMENT_INVALID_CONFIRMED",
+  "pipeline_failure": false,
+  "scientific_negative_result": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIMESERIES_BASELINE_CAPTURED",
+  "requested_probe_point": {
+    "x": 2.3,
+    "z": 0.0,
+    "nx": 1.0
+  },
+  "point_not_found_matches": [
+    [
+      "12.9992",
+      "0.0000",
+      "2.9996"
+    ],
+    [
+      "2.3000",
+      "0.0000",
+      "0.0000"
+    ],
+    [
+      "12.9992",
+      "0.0000",
+      "2.9996"
+    ]
+  ],
+  "magnetic_axis_matches": [
+    [
+      "0.1002E+02",
+      "0.9951E+00"
+    ]
+  ],
+  "probe_valid": false,
+  "interpretation": "The native solver completed, but the requested magnetic probe point was explicitly reported outside the computational domain. Do not treat the run as a valid magnetic-probe timeseries measurement. Establish an in-domain probe location from native geometry before any precursor analysis.",
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic geometry/provenance only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
