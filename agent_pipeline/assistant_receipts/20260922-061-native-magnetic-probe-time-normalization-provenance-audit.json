@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-061-native-magnetic-probe-time-normalization-provenance-audit",
+  "processed_result_commit": "c0e403afc71016cebdae18c30791445449eb3d2a",
+  "processed_result_receipt_sha": "4f00217fc43b82ec5598e699562746e264215b73",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_NORMALIZATION_PROVENANCE_AUDITED",
+  "pipeline_error": null,
+  "interpretation": "Successful diagnostic audit. Native time values/dt remain internally consistent, and C1stdout contains a bare 'seconds' provenance match, but that token alone does not establish an explicit native-time-to-SI conversion. Physical-time calibration therefore remains fail-closed. Frozen +0.020% width and +0.10% Jpk gates are unchanged; claim boundary remains normalized native M3D-C1 magnetic diagnostic provenance only.",
+  "new_job_id": "20260922-062-native-magnetic-probe-seconds-context-audit",
+  "timestamp": "2026-09-22T23:43:00Z"
+}
