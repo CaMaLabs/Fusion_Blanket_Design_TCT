@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-056-native-magnetic-probe-observable-venv-repair",
+  "processed_result_receipt_sha": "092ba2fcd29838c1ceca84cacc7414f7d1126f3a",
+  "processed_result_head_before": "1a2bfb1a70d2832dd6f599a62bcaf48ddd2c4aca",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+  "pipeline_error": null,
+  "interpretation": "The repaired run used the established .venv-dudson interpreter with h5py 3.16.0 and completed HDF5 inspection without error. No dataset/group name matched the limited magnetic/probe keyword audit, so this is a scientific/diagnostic negative result rather than a pipeline failure. It does not establish absence of native magnetic data because the first audit searched names only. A schema-only inventory is justified before any precursor construction.",
+  "new_job_id": "20260922-057-native-magnetic-probe-hdf5-schema-audit",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "processed_utc": "2026-09-23T00:00:00Z"
+}
