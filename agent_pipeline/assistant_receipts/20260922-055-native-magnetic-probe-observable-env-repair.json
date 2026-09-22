@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-055-native-magnetic-probe-observable-env-repair",
+  "processed_result_receipt_sha": "379cbca18ecf35155e5516eca9e68074fc2680d7",
+  "processed_result_head_before": "c312e2ae1d13b2732ee7a58728e75345e61ed865",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+  "pipeline_failure": true,
+  "pipeline_error": "ModuleNotFoundError: No module named 'h5py'",
+  "interpretation": "Infrastructure failure, not a scientific negative result. Job 055 executed the pre-repair runner at head c312e2ae1d13b2732ee7a58728e75345e61ed865, which checked bare python3 in m3dc1-deps and failed before HDF5 inspection. The branch now contains the narrowly scoped runner repair that uses the established .venv-dudson interpreter and installs h5py into that exact venv only if absent. No native magnetic observable, Mirnov equivalence, precursor lead time, or controller efficacy may be inferred from 055.",
+  "new_job_id": "20260922-056-native-magnetic-probe-observable-venv-repair",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "processed_utc": "2026-09-23T00:00:00Z"
+}
