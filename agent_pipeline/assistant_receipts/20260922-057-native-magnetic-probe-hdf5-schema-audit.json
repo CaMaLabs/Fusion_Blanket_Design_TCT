@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-057-native-magnetic-probe-hdf5-schema-audit",
+  "processed_result_commit": "da825ff6a6c83d3ea7d124424adddf8956a8d2e6",
+  "processed_result_receipt_sha": "2b95ce5cea57d36507b0898a4acbdabecd3d7b3d",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_HDF5_SCHEMA_AUDITED",
+  "pipeline_failure": false,
+  "interpretation": "The schema audit itself completed successfully with the established .venv-dudson/h5py environment, but file_count=0 is non-informative because the audit searched the selected-timeseries validation directory while job 053 recorded the native HDF5 files under its run/ subdirectory. This is an audit path defect rather than evidence that native HDF5 output is absent. No magnetic observable, Mirnov equivalence, or precursor lead time is established.",
+  "new_job_id": "20260922-058-native-magnetic-probe-run-hdf5-schema-audit",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "processed_utc": "2026-09-22T19:20:00Z"
+}
