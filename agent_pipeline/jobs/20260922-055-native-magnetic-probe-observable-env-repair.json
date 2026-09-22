@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-055-native-magnetic-probe-observable-env-repair",
+  "parent_result_job_id": "20260922-054-native-magnetic-probe-observable-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_observable_audit_env_repair.sh",
+  "timeout_seconds": 300,
+  "result_paths": ["validation_runs/m3dc1_tct_native_magnetic_probe_observable_audit"],
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_observable_audit/summary.json",
+  "purpose": "Retry the diagnostic-only native magnetic-probe observable audit inside the established m3dc1-deps environment after job 054 failed solely because h5py was unavailable to the runner Python.",
+  "interpretation_contract": {
+    "parent_pipeline_error": "ModuleNotFoundError: No module named 'h5py'",
+    "parent_formal_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+    "diagnostic_only": true,
+    "do_not_modify_solver_physics": true,
+    "require_positive_native_observable_identification": true,
+    "require_time_ordering_and_value_semantics_before_precursor": true,
+    "do_not_infer_mirnov_equivalence": true,
+    "do_not_infer_precursor_lead_time": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+  }
+}
