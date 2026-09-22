@@ -1,0 +1,44 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_VALUE_SEMANTICS_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_RUN_HDF5_SCHEMA_AUDITED",
+  "source_file": "/home/ubuntu/work/openmc/sweep/validation_runs/m3dc1_tct_native_magnetic_probe_selected_timeseries/run/C1.h5",
+  "observable_path": "mag_probes/value",
+  "observable_identified": true,
+  "time_ordering_identified": true,
+  "value_semantics_identified": true,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "shape": [
+    6,
+    1
+  ],
+  "dtype": "float32",
+  "values": [
+    [
+      0.999517023563385
+    ],
+    [
+      0.9179592132568359
+    ],
+    [
+      0.9720608592033386
+    ],
+    [
+      0.9367676973342896
+    ],
+    [
+      0.9611517190933228
+    ],
+    [
+      0.9457909464836121
+    ]
+  ],
+  "dataset_attributes": {},
+  "root_ntime": 6,
+  "scalar_ntimestep": 5,
+  "time_semantics": "native solver output-index ordering only; no physical-time calibration inferred",
+  "value_semantics": "native M3D-C1 mag_probes/value output for the configured single probe; component/unit interpretation remains limited to configured native probe provenance"
+}
