@@ -1,0 +1,40 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5648536682128906,
+  "error": null,
+  "finished_utc": "2026-09-22T16:50:32.361433Z",
+  "head_before": "c312e2ae1d13b2732ee7a58728e75345e61ed865",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260922-055-native-magnetic-probe-observable-env-repair.json",
+  "job_id": "20260922-055-native-magnetic-probe-observable-env-repair",
+  "log_path": "agent_pipeline/logs/20260922-055-native-magnetic-probe-observable-env-repair.log",
+  "log_sha256": "ed67f3277be087e420b263b70bd10295ee6f0a77d1f2c986f813f4f7c6887ae8",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_observable_audit"
+  ],
+  "return_code": 1,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_observable_audit_env_repair.sh",
+  "runner_sha256": "296e015fcf7b1ebdda763eae9c7ff5b47caa6576c2a8d77118ea2900406ec8ad",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T16:50:31.795556Z",
+  "success": false,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "hdf5_inspection_error": "ModuleNotFoundError: No module named 'h5py'",
+    "next_step_contract": "Construct no precursor unless a native magnetic-probe observable is positively identified and its time ordering/value semantics are verified.",
+    "observable_matches": [],
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SELECTED_TIMESERIES_CAPTURED",
+    "pipeline_failure": true,
+    "solver_physics_modified": false,
+    "usable_native_observable_identified": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_observable_audit/summary.json",
+  "summary_sha256": "3dbec17339b63ee6848fee1fbc135973341b7ec4e5ff07a1227ea93175f7b66c",
+  "timed_out": false
+}

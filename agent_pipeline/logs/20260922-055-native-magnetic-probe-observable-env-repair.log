@@ -1,0 +1,7 @@
+job_id=20260922-055-native-magnetic-probe-observable-env-repair
+started_utc=2026-09-22T16:50:31.795556Z
+head_before=c312e2ae1d13b2732ee7a58728e75345e61ed865
+h5py unavailable in m3dc1-deps environment: No module named 'h5py'
+
+finished_utc=2026-09-22T16:50:32.361394Z
+return_code=1
