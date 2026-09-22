@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-059-native-magnetic-probe-value-semantics-audit",
+  "processed_result_commit": "661181c188b9a8ccbd12dd3b6f767a2b62b62da5",
+  "processed_result_receipt": "agent_pipeline/results/20260922-059-native-magnetic-probe-value-semantics-audit.json",
+  "result_receipt_sha": "9f50afc221bdce3c3569773505dcaf957a8f13b7",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_VALUE_SEMANTICS_AUDITED",
+  "pipeline_failure": false,
+  "interpretation": "Native C1.h5 mag_probes/value was positively identified as a 6x1 float32 single-probe output with native output-index ordering and bounded native value semantics. This does not establish physical milliseconds, Mirnov equivalence, precursor lead time, or controller efficacy. Frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260922-060-native-magnetic-probe-time-metadata-audit",
+  "processed_at_utc": "2026-09-23T00:00:00Z"
+}
