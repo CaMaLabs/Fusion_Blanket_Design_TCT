@@ -1,0 +1,84 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SECONDS_CONTEXT_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_NORMALIZATION_PROVENANCE_AUDITED",
+  "seconds_context_matches": [
+    {
+      "source": "C1stdout",
+      "line_number": 616,
+      "matched_line": "model circle-0.10-0.0-0.0.txt loaded in 0.000005 seconds",
+      "context": [
+        {
+          "line_number": 613,
+          "text": "zzero_rekc           = 0 "
+        },
+        {
+          "line_number": 614,
+          "text": "  Loading mesh nplane="
+        },
+        {
+          "line_number": 615,
+          "text": " full torus..."
+        },
+        {
+          "line_number": 616,
+          "text": "model circle-0.10-0.0-0.0.txt loaded in 0.000005 seconds"
+        },
+        {
+          "line_number": 617,
+          "text": "mesh part.smb loaded in 0.000519 seconds"
+        },
+        {
+          "line_number": 618,
+          "text": "number of triangle 1004 quad 0"
+        },
+        {
+          "line_number": 619,
+          "text": "mesh entity counts: v 535 e 1538 f 1004 r 0"
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 617,
+      "matched_line": "mesh part.smb loaded in 0.000519 seconds",
+      "context": [
+        {
+          "line_number": 614,
+          "text": "  Loading mesh nplane="
+        },
+        {
+          "line_number": 615,
+          "text": " full torus..."
+        },
+        {
+          "line_number": 616,
+          "text": "model circle-0.10-0.0-0.0.txt loaded in 0.000005 seconds"
+        },
+        {
+          "line_number": 617,
+          "text": "mesh part.smb loaded in 0.000519 seconds"
+        },
+        {
+          "line_number": 618,
+          "text": "number of triangle 1004 quad 0"
+        },
+        {
+          "line_number": 619,
+          "text": "mesh entity counts: v 535 e 1538 f 1004 r 0"
+        },
+        {
+          "line_number": 620,
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "explicit_native_time_to_seconds_relation_established": false,
+  "physical_time_calibrated": false,
+  "interpretation": "Context around every native provenance occurrence of seconds was captured. Physical-time conversion remains fail-closed unless the context explicitly relates the native time coordinate or dt to seconds.",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
