@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-051-native-magnetic-probe-placement-audit",
+  "processed_result_commit": "369b2cf913d540e35bd7e5d3146fb88174744c26",
+  "processed_result_receipt": "agent_pipeline/results/20260922-051-native-magnetic-probe-placement-audit.json",
+  "formal_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PLACEMENT_INVALID_CONFIRMED",
+  "pipeline_failure": false,
+  "scientific_negative_result": true,
+  "interpretation": "Native M3D-C1 completed successfully, but explicitly rejected the requested BR-oriented probe at x=2.3,z=0 as outside the computational domain. The parent timeseries run therefore cannot be treated as a valid magnetic-probe measurement. The solver-reported magnetic axis provides a native geometry anchor for a bounded diagnostic-only placement sweep; an accepted point will remain geometry/provenance evidence only and must not be treated as Mirnov-equivalent or as a precursor measurement without a later dedicated timeseries run.",
+  "handoff_equivalence_gate": "NOT_APPLICABLE_TO_DIAGNOSTIC_ONLY_PROBE_PLACEMENT_AUDIT",
+  "zero_equivalence_gate": "NOT_APPLICABLE_TO_DIAGNOSTIC_ONLY_PROBE_PLACEMENT_AUDIT",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic geometry/provenance only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "new_job_id": "20260922-052-native-magnetic-probe-in-domain-sweep",
+  "processed_utc": "2026-09-22T14:57:00.044004Z"
+}
