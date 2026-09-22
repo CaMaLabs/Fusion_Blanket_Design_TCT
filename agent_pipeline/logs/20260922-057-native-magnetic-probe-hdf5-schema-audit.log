@@ -1,0 +1,22 @@
+job_id=20260922-057-native-magnetic-probe-hdf5-schema-audit
+started_utc=2026-09-22T19:11:00.649954Z
+head_before=a1a656a44ffcf0184ff000557056b4c01712acaa
+audit_python /home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+h5py 3.16.0
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_HDF5_SCHEMA_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+  "hdf5_inspection_error": null,
+  "file_count": 0,
+  "inventory": [],
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "next_step_contract": "Use this schema inventory only to locate documented native probe output semantics; do not construct a precursor until a magnetic observable and its time/value semantics are positively established."
+}
+
+finished_utc=2026-09-22T19:11:02.172958Z
+return_code=0

@@ -1,0 +1,40 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.522085428237915,
+  "error": null,
+  "finished_utc": "2026-09-22T19:11:02.172996Z",
+  "head_before": "a1a656a44ffcf0184ff000557056b4c01712acaa",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260922-057-native-magnetic-probe-hdf5-schema-audit.json",
+  "job_id": "20260922-057-native-magnetic-probe-hdf5-schema-audit",
+  "log_path": "agent_pipeline/logs/20260922-057-native-magnetic-probe-hdf5-schema-audit.log",
+  "log_sha256": "9cf977fc915aa456b54ef76a8e18dab93e2c8d51a4d0f7f13777d70a66eaf6de",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_hdf5_schema_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_hdf5_schema_audit.sh",
+  "runner_sha256": "eb393bd7ed9adbae8704f10a1db8a9e908a6ebf69636ed423f5a81eb7f01bce3",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T19:11:00.649954Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_HDF5_SCHEMA_AUDITED",
+    "diagnostic_only": true,
+    "file_count": 0,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "hdf5_inspection_error": null,
+    "inventory": [],
+    "next_step_contract": "Use this schema inventory only to locate documented native probe output semantics; do not construct a precursor until a magnetic observable and its time/value semantics are positively established.",
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+    "pipeline_failure": false,
+    "solver_physics_modified": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_hdf5_schema_audit/summary.json",
+  "summary_sha256": "833e2f6ec89238f3da504c6a32c83609b63ae0a555b20cebb13a6fe9188bb6cd",
+  "timed_out": false
+}
