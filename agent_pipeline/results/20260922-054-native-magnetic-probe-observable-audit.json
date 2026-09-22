@@ -1,0 +1,40 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.03184843063354492,
+  "error": null,
+  "finished_utc": "2026-09-22T16:46:31.314952Z",
+  "head_before": "6afcbe7627fc3aa56d3535185effd5e719a4b3b1",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260922-054-native-magnetic-probe-observable-audit.json",
+  "job_id": "20260922-054-native-magnetic-probe-observable-audit",
+  "log_path": "agent_pipeline/logs/20260922-054-native-magnetic-probe-observable-audit.log",
+  "log_sha256": "cdea997600a1536e281850ec7c412066b7b89a19b9cd8c68732d542daa43b01a",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_observable_audit"
+  ],
+  "return_code": 2,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_observable_audit.sh",
+  "runner_sha256": "cc5c64170c4c84ada39b0ea0f1ecbea61dce0d768aedd4273876cfaa0300197d",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T16:46:31.282044Z",
+  "success": false,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "hdf5_inspection_error": "ModuleNotFoundError: No module named 'h5py'",
+    "next_step_contract": "Construct no precursor unless a native magnetic-probe observable is positively identified and its time ordering/value semantics are verified.",
+    "observable_matches": [],
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SELECTED_TIMESERIES_CAPTURED",
+    "pipeline_failure": true,
+    "solver_physics_modified": false,
+    "usable_native_observable_identified": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_observable_audit/summary.json",
+  "summary_sha256": "3dbec17339b63ee6848fee1fbc135973341b7ec4e5ff07a1227ea93175f7b66c",
+  "timed_out": false
+}

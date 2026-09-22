@@ -1,0 +1,14 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+  "pipeline_failure": true,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SELECTED_TIMESERIES_CAPTURED",
+  "hdf5_inspection_error": "ModuleNotFoundError: No module named 'h5py'",
+  "observable_matches": [],
+  "usable_native_observable_identified": false,
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "next_step_contract": "Construct no precursor unless a native magnetic-probe observable is positively identified and its time ordering/value semantics are verified."
+}
