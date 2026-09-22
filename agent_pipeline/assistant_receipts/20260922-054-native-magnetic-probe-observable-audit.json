@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-054-native-magnetic-probe-observable-audit",
+  "processed_result_commit": "dd96c83accfd913cd22e96fbbb6921196a7339e4",
+  "result_receipt": "agent_pipeline/results/20260922-054-native-magnetic-probe-observable-audit.json",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_OBSERVABLE_NOT_IDENTIFIED",
+  "pipeline_failure": true,
+  "pipeline_error": "ModuleNotFoundError: No module named 'h5py'",
+  "interpretation": "Pipeline/code-environment failure, not a scientific negative result. The audit could not inspect the already captured native HDF5 because its runner used an environment without h5py. No conclusion about native magnetic-probe observable availability is justified from job 054. The replacement activates the established m3dc1-deps environment and retries the same diagnostic-only audit without changing solver physics or scientific gates.",
+  "new_job_id": "20260922-055-native-magnetic-probe-observable-env-repair",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "timestamp": "2026-09-22T17:00:00Z"
+}
