@@ -3,7 +3,7 @@
   "job_id": "20260922-051-native-magnetic-probe-placement-audit",
   "parent_result_job_id": "20260921-050-native-magnetic-probe-timeseries-baseline-env-repair",
   "enabled": true,
-  "runner": "python3 tools/tct_mechanism_explorer/audit_native_magnetic_probe_placement.py",
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_placement_audit.sh",
   "timeout_seconds": 300,
   "result_paths": ["validation_runs/m3dc1_tct_native_magnetic_probe_placement_audit"],
   "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_placement_audit/summary.json",
