@@ -1,0 +1,262 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.3181350231170654,
+  "error": null,
+  "finished_utc": "2026-09-22T22:11:37.183525Z",
+  "head_before": "87ce021f874e50e15984cbb79e80f5f0bf470d2e",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260922-060-native-magnetic-probe-time-metadata-audit.json",
+  "job_id": "20260922-060-native-magnetic-probe-time-metadata-audit",
+  "log_path": "agent_pipeline/logs/20260922-060-native-magnetic-probe-time-metadata-audit.log",
+  "log_sha256": "a67262334df7cdd5691dbf737eef0440fd11cf24ca20ca89b3a41e402aba0d95",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_time_metadata_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_time_metadata_audit.sh",
+  "runner_sha256": "06da661b3aa0fa477e97f24ad1ee256ee33fbf3bbb9d585babc088b939860103",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T22:11:35.864134Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_TIME_METADATA_AUDITED",
+    "diagnostic_only": true,
+    "files_inspected": 7,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "Native time-related metadata inventoried. Physical-time calibration remains fail-closed until an explicit native time value plus unit/normalization is positively identified and cross-checked; output index is not milliseconds.",
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_VALUE_SEMANTICS_AUDITED",
+    "physical_time_calibrated": false,
+    "pipeline_failure": false,
+    "time_metadata_candidates": [
+      {
+        "file": "C1.h5",
+        "key": "itime_independent",
+        "source": "root_attribute",
+        "value": 0
+      },
+      {
+        "file": "C1.h5",
+        "key": "ntime",
+        "source": "root_attribute",
+        "value": 6
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "C1.h5",
+        "path": "scalars/dt",
+        "shape": [
+          6
+        ],
+        "source": "object",
+        "value": [
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806
+        ]
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "C1.h5",
+        "path": "scalars/kprad_dt",
+        "shape": [
+          6
+        ],
+        "source": "object",
+        "value": [
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10
+        ]
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "C1.h5",
+        "path": "scalars/time",
+        "shape": [
+          6
+        ],
+        "source": "object",
+        "value": [
+          0.0,
+          0.05000000074505806,
+          0.10000000149011612,
+          0.15000000596046448,
+          0.20000000298023224,
+          0.25
+        ]
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "C1.h5",
+        "path": "timings/t_onestep",
+        "shape": [
+          6
+        ],
+        "source": "object",
+        "value": [
+          0.0,
+          1.9382610321044922,
+          1.821133017539978,
+          1.7669730186462402,
+          1.7951229810714722,
+          1.7706630229949951
+        ]
+      },
+      {
+        "file": "time_000.h5",
+        "key": "ntimestep",
+        "source": "root_attribute",
+        "value": 0
+      },
+      {
+        "file": "time_000.h5",
+        "key": "time",
+        "source": "root_attribute",
+        "value": 0.0
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "time_000.h5",
+        "path": "fields/bdotgradt",
+        "shape": [
+          1004,
+          20
+        ],
+        "source": "object"
+      },
+      {
+        "file": "time_001.h5",
+        "key": "ntimestep",
+        "source": "root_attribute",
+        "value": 1
+      },
+      {
+        "file": "time_001.h5",
+        "key": "time",
+        "source": "root_attribute",
+        "value": 0.05
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "time_001.h5",
+        "path": "fields/bdotgradt",
+        "shape": [
+          1004,
+          20
+        ],
+        "source": "object"
+      },
+      {
+        "file": "time_002.h5",
+        "key": "ntimestep",
+        "source": "root_attribute",
+        "value": 2
+      },
+      {
+        "file": "time_002.h5",
+        "key": "time",
+        "source": "root_attribute",
+        "value": 0.1
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "time_002.h5",
+        "path": "fields/bdotgradt",
+        "shape": [
+          1004,
+          20
+        ],
+        "source": "object"
+      },
+      {
+        "file": "time_003.h5",
+        "key": "ntimestep",
+        "source": "root_attribute",
+        "value": 3
+      },
+      {
+        "file": "time_003.h5",
+        "key": "time",
+        "source": "root_attribute",
+        "value": 0.15000000000000002
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "time_003.h5",
+        "path": "fields/bdotgradt",
+        "shape": [
+          1004,
+          20
+        ],
+        "source": "object"
+      },
+      {
+        "file": "time_004.h5",
+        "key": "ntimestep",
+        "source": "root_attribute",
+        "value": 4
+      },
+      {
+        "file": "time_004.h5",
+        "key": "time",
+        "source": "root_attribute",
+        "value": 0.2
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "time_004.h5",
+        "path": "fields/bdotgradt",
+        "shape": [
+          1004,
+          20
+        ],
+        "source": "object"
+      },
+      {
+        "file": "time_005.h5",
+        "key": "ntimestep",
+        "source": "root_attribute",
+        "value": 5
+      },
+      {
+        "file": "time_005.h5",
+        "key": "time",
+        "source": "root_attribute",
+        "value": 0.25
+      },
+      {
+        "attributes": {},
+        "dtype": "float32",
+        "file": "time_005.h5",
+        "path": "fields/bdotgradt",
+        "shape": [
+          1004,
+          20
+        ],
+        "source": "object"
+      }
+    ]
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_time_metadata_audit/summary.json",
+  "summary_sha256": "45c343c59e60ffe0fd33e0de30c304b813cb2832d46cde47ca5fba62a7c31277",
+  "timed_out": false
+}

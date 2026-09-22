@@ -1,0 +1,271 @@
+[
+  {
+    "file": "C1.h5",
+    "root_attributes": {
+      "3d": 0,
+      "amu": 0.0001,
+      "amuc": 0.0001,
+      "amupar": 0.0,
+      "b0_norm": 10000.0,
+      "bootstrap_alpha": 0.0,
+      "bzero": 1.0,
+      "bzsign": 0.0,
+      "db": 0.0,
+      "denm": 0.0001,
+      "eqsubtract": 0,
+      "eta0": 0.001,
+      "eta_te_offset": 0.0,
+      "eta_wall": 1.0,
+      "etar": 0.0,
+      "extsubtract": 0,
+      "frequency": 0.0,
+      "gam": 1.66666666666667,
+      "gravr": 0.0,
+      "gravz": 0.0,
+      "gyro": 0,
+      "hyper": 0.0,
+      "hyperc": 0.0,
+      "hyperi": 0.0,
+      "hyperp": 0.0,
+      "hyperv": 0.0,
+      "ibootstrap_model": 0,
+      "icomplex": 0,
+      "icsubract": 0,
+      "idens": 1,
+      "ifixedb": 0,
+      "iflux_loops": 0,
+      "igeometry": 0,
+      "ikprad": 0,
+      "imag_probes": 1,
+      "imulti_region": 1,
+      "integrator": 0,
+      "ion_mass": 1.0,
+      "ipellet": 0,
+      "ipellet_abl": 0,
+      "iper": 0,
+      "ipres": 0,
+      "ipressplit": 0,
+      "itemp": 0,
+      "itime_independent": 0,
+      "itor": 0,
+      "ivform": 1,
+      "jper": 0,
+      "kappa0": 0.0,
+      "kappar": 0.0,
+      "kappat": 0.0001,
+      "kinetic": 0,
+      "kprad_z": 1,
+      "l0_norm": 100.0,
+      "linear": 0,
+      "ln": 0.0,
+      "n0_norm": 100000000000000.0,
+      "nonrect": 1,
+      "npellets": 0,
+      "nplanes": 1,
+      "ntime": 6,
+      "ntor": 0,
+      "numvar": 3,
+      "rzero": 10.0,
+      "tflux0": 0.0,
+      "thimp": 0.6,
+      "version": 45,
+      "xlim": 0.0,
+      "xlim2": 0.0,
+      "z_ion": 1.0,
+      "zlim": 0.0,
+      "zlim2": 0.0
+    },
+    "time_like_objects": [
+      {
+        "path": "scalars/dt",
+        "attributes": {},
+        "shape": [
+          6
+        ],
+        "dtype": "float32",
+        "value": [
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806
+        ]
+      },
+      {
+        "path": "scalars/kprad_dt",
+        "attributes": {},
+        "shape": [
+          6
+        ],
+        "dtype": "float32",
+        "value": [
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10,
+          1.000000013351432e-10
+        ]
+      },
+      {
+        "path": "scalars/time",
+        "attributes": {},
+        "shape": [
+          6
+        ],
+        "dtype": "float32",
+        "value": [
+          0.0,
+          0.05000000074505806,
+          0.10000000149011612,
+          0.15000000596046448,
+          0.20000000298023224,
+          0.25
+        ]
+      },
+      {
+        "path": "timings/t_onestep",
+        "attributes": {},
+        "shape": [
+          6
+        ],
+        "dtype": "float32",
+        "value": [
+          0.0,
+          1.9382610321044922,
+          1.821133017539978,
+          1.7669730186462402,
+          1.7951229810714722,
+          1.7706630229949951
+        ]
+      }
+    ]
+  },
+  {
+    "file": "time_000.h5",
+    "root_attributes": {
+      "iwall_regions": 0,
+      "nspace": 2,
+      "ntimestep": 0,
+      "time": 0.0,
+      "version": 45
+    },
+    "time_like_objects": [
+      {
+        "path": "fields/bdotgradt",
+        "attributes": {},
+        "shape": [
+          1004,
+          20
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  {
+    "file": "time_001.h5",
+    "root_attributes": {
+      "iwall_regions": 0,
+      "nspace": 2,
+      "ntimestep": 1,
+      "time": 0.05,
+      "version": 45
+    },
+    "time_like_objects": [
+      {
+        "path": "fields/bdotgradt",
+        "attributes": {},
+        "shape": [
+          1004,
+          20
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  {
+    "file": "time_002.h5",
+    "root_attributes": {
+      "iwall_regions": 0,
+      "nspace": 2,
+      "ntimestep": 2,
+      "time": 0.1,
+      "version": 45
+    },
+    "time_like_objects": [
+      {
+        "path": "fields/bdotgradt",
+        "attributes": {},
+        "shape": [
+          1004,
+          20
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  {
+    "file": "time_003.h5",
+    "root_attributes": {
+      "iwall_regions": 0,
+      "nspace": 2,
+      "ntimestep": 3,
+      "time": 0.15000000000000002,
+      "version": 45
+    },
+    "time_like_objects": [
+      {
+        "path": "fields/bdotgradt",
+        "attributes": {},
+        "shape": [
+          1004,
+          20
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  {
+    "file": "time_004.h5",
+    "root_attributes": {
+      "iwall_regions": 0,
+      "nspace": 2,
+      "ntimestep": 4,
+      "time": 0.2,
+      "version": 45
+    },
+    "time_like_objects": [
+      {
+        "path": "fields/bdotgradt",
+        "attributes": {},
+        "shape": [
+          1004,
+          20
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  {
+    "file": "time_005.h5",
+    "root_attributes": {
+      "iwall_regions": 0,
+      "nspace": 2,
+      "ntimestep": 5,
+      "time": 0.25,
+      "version": 45
+    },
+    "time_like_objects": [
+      {
+        "path": "fields/bdotgradt",
+        "attributes": {},
+        "shape": [
+          1004,
+          20
+        ],
+        "dtype": "float32"
+      }
+    ]
+  }
+]
