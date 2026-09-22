@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-052-native-magnetic-probe-in-domain-sweep",
+  "parent_result_job_id": "20260922-051-native-magnetic-probe-placement-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_in_domain_sweep.sh",
+  "timeout_seconds": 1800,
+  "result_paths": ["validation_runs/m3dc1_tct_native_magnetic_probe_in_domain_sweep"],
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_in_domain_sweep/summary.json",
+  "purpose": "Run a bounded diagnostic-only native M3D-C1 probe-placement sweep around the solver-reported magnetic axis to identify at least one in-domain magnetic-probe candidate without changing plasma or solver physics.",
+  "interpretation_contract": {
+    "parent_formal_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PLACEMENT_INVALID_CONFIRMED",
+    "diagnostic_only": true,
+    "do_not_modify_solver_physics": true,
+    "do_not_run_controller_efficacy_matrix": true,
+    "require_native_solver_acceptance_of_probe_location": true,
+    "do_not_infer_mirnov_equivalence_from_in_domain_status": true,
+    "do_not_infer_precursor_lead_time": true,
+    "forbidden_substitution": "Do not substitute Jpk, dJpk/dt, sheet width, generic flux/current scalars, or FAIR-MAST absolute milliseconds for a physically identified native magnetic probe.",
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic geometry/provenance only; no precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+  }
+}
