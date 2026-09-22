@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-052-native-magnetic-probe-in-domain-sweep",
+  "processed_result_commit": "30673566f2ff4a9fc0ebb4f9983963e5cabf9cfb",
+  "processed_result_receipt": "agent_pipeline/results/20260922-052-native-magnetic-probe-in-domain-sweep.json",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_IN_DOMAIN_CANDIDATE_FOUND",
+  "pipeline_error": null,
+  "interpretation": "Native M3D-C1 completed the bounded diagnostic-only placement sweep and accepted multiple probe candidates without rejecting the requested coordinates. This establishes in-domain geometry candidates only; it does not establish Mirnov equivalence, precursor lead time, or controller efficacy. The frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260922-053-native-magnetic-probe-selected-timeseries",
+  "timestamp": "2026-09-22T15:10:00Z"
+}
