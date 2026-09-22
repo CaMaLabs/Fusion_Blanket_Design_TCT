@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-053-native-magnetic-probe-selected-timeseries",
+  "processed_result_commit": "46778cf9fdbf9b1c7df517a4e9cd46b637839f2b",
+  "processed_result_receipt": "agent_pipeline/results/20260922-053-native-magnetic-probe-selected-timeseries.json",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SELECTED_TIMESERIES_CAPTURED",
+  "pipeline_failure": false,
+  "interpretation": "Native M3D-C1 accepted the selected in-domain BR/nx=1.0 probe at r=11.12,z=0.9951 and produced captured native HDF5 output. This establishes diagnostic capture only; the probe observable itself has not yet been positively identified or given verified time/value semantics, so no precursor, Mirnov-equivalence, or lead-time claim is justified.",
+  "new_job_id": "20260922-054-native-magnetic-probe-observable-audit",
+  "timestamp": "2026-09-22T15:24:00Z",
+  "claim_boundary": "Normalized native M3D-C1 magnetic diagnostic capture only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10
+}
