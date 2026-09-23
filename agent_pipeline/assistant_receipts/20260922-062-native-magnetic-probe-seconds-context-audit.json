@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260922-062-native-magnetic-probe-seconds-context-audit",
+  "processed_result_blob_sha": "48fa51aa8164d678532e513edca7bb8f3a17b31c",
+  "processed_result_head_before": "51feb3a597462bf5e324e77e3aac5cd380654d1a",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SECONDS_CONTEXT_AUDITED",
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Successful diagnostic audit. Both native C1stdout occurrences of 'seconds' are mesh/model loading wall-clock timings, not a relation between the native M3D-C1 time coordinate or dt and SI seconds. Physical-time calibration therefore remains fail-closed. Frozen +0.020% width and +0.10% Jpk gates remain unchanged; no Mirnov equivalence, precursor lead-time, or controller-efficacy claim is made.",
+  "new_job_id": "20260923-063-native-time-normalization-parameter-provenance-audit",
+  "timestamp": "2026-09-23T00:00:00Z"
+}
