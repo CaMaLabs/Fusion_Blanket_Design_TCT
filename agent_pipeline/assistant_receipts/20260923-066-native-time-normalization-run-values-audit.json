@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-066-native-time-normalization-run-values-audit",
+  "processed_result_commit": "d8a01dc2157e34d2738cc7c066bd4a8994b57e57",
+  "processed_result_receipt": "agent_pipeline/results/20260923-066-native-time-normalization-run-values-audit.json",
+  "processed_result_receipt_sha": "6dbe664101eed9b04c75519cf1f1400ddbf042d1",
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUN_VALUES_AUDITED",
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Successful diagnostic negative for physical-time calibration. The explicit native normalization relations are verified and C1input supplies ion_mass=1.0, but the selected C1.h5 exposes no run-specific b0_norm/n0_norm/l0_norm candidates, so physical_time_calibrated remains false. Frozen +0.020% width and +0.10% Jpk gates and the normalized-native-M3D-C1 claim boundary are unchanged.",
+  "new_job_id": "20260923-067-native-time-normalization-runtime-provenance-audit",
+  "timestamp": "2026-09-23T04:52:26Z"
+}
