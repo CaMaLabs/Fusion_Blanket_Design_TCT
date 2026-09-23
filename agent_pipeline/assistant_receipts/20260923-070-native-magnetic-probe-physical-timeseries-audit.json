@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-070-native-magnetic-probe-physical-timeseries-audit",
+  "processed_result_receipt_sha": "49158964b09116dfef72499d9b45d41cc6e5b92a",
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PHYSICAL_TIMESERIES_AUDITED",
+  "pipeline_failure": false,
+  "interpretation": "Native M3D-C1 magnetic-probe samples have verified physical timestamps. This remains diagnostic-only; Mirnov equivalence, precursor lead time, and controller efficacy are not established. Frozen width and Jpk gates are unchanged.",
+  "new_job_id": null,
+  "timestamp": "2026-09-23T22:51:53Z"
+}
