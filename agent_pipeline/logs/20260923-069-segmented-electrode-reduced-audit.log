@@ -1,0 +1,25 @@
+job_id=20260923-069-segmented-electrode-reduced-audit
+started_utc=2026-09-23T20:35:54.868826Z
+head_before=238bf7e0348e695ba843edd6830334fd8c93237c
+test_exb_species_independent (tools.tct_mechanism_explorer.tests.test_segmented_electrodes.SegmentedElectrodeTests.test_exb_species_independent) ... ok
+test_latency_and_slew_limit (tools.tct_mechanism_explorer.tests.test_segmented_electrodes.SegmentedElectrodeTests.test_latency_and_slew_limit) ... ok
+test_overlapping_zones_superpose (tools.tct_mechanism_explorer.tests.test_segmented_electrodes.SegmentedElectrodeTests.test_overlapping_zones_superpose) ... FAIL
+test_shear_suppresses_reduced_transport (tools.tct_mechanism_explorer.tests.test_segmented_electrodes.SegmentedElectrodeTests.test_shear_suppresses_reduced_transport) ... ok
+test_zero_command_zero_field (tools.tct_mechanism_explorer.tests.test_segmented_electrodes.SegmentedElectrodeTests.test_zero_command_zero_field) ... ok
+
+======================================================================
+FAIL: test_overlapping_zones_superpose (tools.tct_mechanism_explorer.tests.test_segmented_electrodes.SegmentedElectrodeTests.test_overlapping_zones_superpose)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/tests/test_segmented_electrodes.py", line 22, in test_overlapping_zones_superpose
+    self.assertAlmostEqual(s['E_r'][0][0],5.0,places=5)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.1998001998001998 != 5.0 within 5 places (4.8001998001998 difference)
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1)
+
+finished_utc=2026-09-23T20:35:55.038309Z
+return_code=1

@@ -1,0 +1,27 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.1676018238067627,
+  "error": null,
+  "finished_utc": "2026-09-23T20:35:55.038350Z",
+  "head_before": "238bf7e0348e695ba843edd6830334fd8c93237c",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-069-segmented-electrode-reduced-audit.json",
+  "job_id": "20260923-069-segmented-electrode-reduced-audit",
+  "log_path": "agent_pipeline/logs/20260923-069-segmented-electrode-reduced-audit.log",
+  "log_sha256": "f68c501dd95ca5fad6c154015dd1aa97014ace7f45dda63e482b1a3e9741bf1f",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_audit"
+  ],
+  "return_code": 1,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_audit.sh",
+  "runner_sha256": "9ba6cff8e8bca0b1af0c2909d3fd30dc1268c7ada3622570c223ff64a9e0bddc",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T20:35:54.868826Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/tct_segmented_electrode_audit/summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}
