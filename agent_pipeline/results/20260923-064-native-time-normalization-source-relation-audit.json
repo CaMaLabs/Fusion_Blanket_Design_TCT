@@ -1,0 +1,1839 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.6150681972503662,
+  "error": null,
+  "finished_utc": "2026-09-23T01:52:19.543904Z",
+  "head_before": "1cab4428322fd5f8bd5c4a78ff0267e24c58ea6c",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-064-native-time-normalization-source-relation-audit.json",
+  "job_id": "20260923-064-native-time-normalization-source-relation-audit",
+  "log_path": "agent_pipeline/logs/20260923-064-native-time-normalization-source-relation-audit.log",
+  "log_sha256": "69c03726157c29abd89dad50769be602cb5c5392dffcef990a776f9aa2555094",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_time_normalization_source_relation_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_time_normalization_source_relation_audit.sh",
+  "runner_sha256": "98e0f3ddb49f98e2210cb836c98203230a6e57e823e0b8ec2968fe30dd2e2c98",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T01:52:18.927646Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_SOURCE_RELATION_AUDITED",
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "Native M3D-C1 source context relevant to time normalization was captured for explicit-relation review. Keyword/source context alone is not an SI time calibration; physical time remains fail-closed unless an explicit documented relation with sufficient parameters is present and subsequently verified.",
+    "parent_classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_PARAMETER_PROVENANCE_AUDITED",
+    "physical_time_calibrated": false,
+    "pipeline_failure": false,
+    "source_context_hits": [
+      {
+        "context": "  real, private, parameter :: ec = 1.60217662D-19 ![C]\n  real, private, parameter :: hbar = 1.05457180D-34\n  real, private, parameter :: me = 9.10938356D-31 ![kg]\n  real, private, parameter :: va = 1542350 ![m/s]\n\n  real, dimension(MAX_PTS) :: re_j79\n",
+        "line_number": 21,
+        "matched_line": "real, private, parameter :: va = 1542350 ![m/s]",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "    real, intent(in) :: bi\n    real, intent(out) :: re_79,dndt,re_j79,re_epar,Ecrit\n    real :: Clog,x,nu,vth,esign,teval,jpar,nrel,a,r,Ed, &\n            f,dt_si,tmp,nretmp,Dens1,sd,sa,nra,gamma,tau\n    integer, intent(in) :: mr\n    integer :: l, nl\n    ",
+        "line_number": 89,
+        "matched_line": "f,dt_si,tmp,nretmp,Dens1,sd,sa,nra,gamma,tau",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "!   Note that nre is the density of RE flowing in the direction of B field,\n!   thus their growth is linked to -epar (due to the negative charge)\n    esign = sign(1., -epar)\n       jpar = nre!*ec*cre*va\n       nra = nre/ec/cre/va \n       re_epar = epar! - 1.0*abs(eta*jpar/b1/bz/ri)\n       if (Temp.ge.teval .and. mr.eq.0) then",
+        "line_number": 114,
+        "matched_line": "jpar = nre!*ec*cre*va",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "!   thus their growth is linked to -epar (due to the negative charge)\n    esign = sign(1., -epar)\n       jpar = nre!*ec*cre*va\n       nra = nre/ec/cre/va \n       re_epar = epar! - 1.0*abs(eta*jpar/b1/bz/ri)\n       if (Temp.ge.teval .and. mr.eq.0) then\n          Clog = 14.78D0-0.5*log(Dens1/1.d20)+log(Temp/1.d3)",
+        "line_number": 115,
+        "matched_line": "nra = nre/ec/cre/va",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "          Ecrit = ec**3*Dens1*Clog/(4*pi*eps0**2*me*c**2) \n          vth = sqrt(2*ec*Temp/me)\n          nu = Dens1*ec**4*Clog/(4*pi*eps0**2*me**2*vth**3)\n          tau = me*c/ec/Ecrit\n          a = sqrt((1/ri-xmag)**2+(z-zmag)**2)\n          r = sqrt(1/ri**2+z**2)\n          gamma = 1/(1+1.46*sqrt(a/r)+1.72*a/r) ",
+        "line_number": 122,
+        "matched_line": "tau = me*c/ec/Ecrit",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "                 *exp(-1.D0/(4*x)-sqrt((1.D0+Zeff)/x))\n              ! avalanche growth only when epar and nre have opposite sign\n              if (re_epar*nre<0) then\n                 sa = nra/tau/Clog*sqrt(pi*gamma/3/(Zeff+5))*(Ed-1)* &\n                    1/sqrt(1-1/Ed+4*pi*(Zeff+1)**2/3/gamma/(Zeff+5)/(Ed**2+4/gamma**2-1)) \n              else\n                 sa = 0.",
+        "line_number": 134,
+        "matched_line": "sa = nra/tau/Clog*sqrt(pi*gamma/3/(Zeff+5))*(Ed-1)* &",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "              else\n                 sa = 0.\n              endif\n              dndt = (sd*esign + sa)*cre*ec*va\n                 nrel = nre + dndt*dt_si\n          else\n              nrel = nre ",
+        "line_number": 139,
+        "matched_line": "dndt = (sd*esign + sa)*cre*ec*va",
+        "path": "unstructured/runaway.f90"
+      },
+      {
+        "context": "    pe_field(0) = p_field(0)\n    call mult(pe_field(0),pefac)\n\n    den_field(0) = den0\n    \n    if(xlim.eq.0) then\n       xlim = xmag + ln",
+        "line_number": 345,
+        "matched_line": "den_field(0) = den0",
+        "path": "unstructured/init_basicj.f90"
+      },
+      {
+        "context": "!!$    r2 = (x_79 - xmag)**2 + (z_79 - zmag)**2\n!!$\n!!$    bz079(:,OP_1) = bzero\n!!$    n079(:,OP_1) = den0\n!!$    \n!!$    where(r2.lt.r02)\n!!$       ps079(:,OP_1) = bzero * r2 / (2.*rzero*q0)",
+        "line_number": 117,
+        "matched_line": "!!$    n079(:,OP_1) = den0",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "  real :: x, phi, z\n  real, parameter :: e=2.7183\n  real :: a, r1, r2, u, fa, ra\n  real :: b0,r0\n  integer :: m,n\n  integer :: numnodes, nelms, l, itri, i, j, ier, icounter_tt\n  integer :: imask(dofs_per_element)",
+        "line_number": 180,
+        "matched_line": "real :: b0,r0",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "\n  psi_vec = 0.\n\n  !input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA\n  b0 = bzero\n  r0 = rzero\n  m = mpol",
+        "line_number": 195,
+        "matched_line": "!input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "  psi_vec = 0.\n\n  !input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA\n  b0 = bzero\n  r0 = rzero\n  m = mpol\n  n = igs",
+        "line_number": 196,
+        "matched_line": "b0 = bzero",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "\n  !input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA\n  b0 = bzero\n  r0 = rzero\n  m = mpol\n  n = igs\n  a = alpha0",
+        "line_number": 197,
+        "matched_line": "r0 = rzero",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "  ra = p2\n  \n  if(myrank.eq.0 .and. iprint.ge.1) write(*,*)   &\n                                    'b0,r0,m,n,e,a,r1,r2,u,fa,ra'   &\n                                    ,b0,r0,m,n,e,a,r1,r2,u,fa,ra\n\n  numnodes = owned_nodes()",
+        "line_number": 208,
+        "matched_line": "'b0,r0,m,n,e,a,r1,r2,u,fa,ra'   &",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "  \n  if(myrank.eq.0 .and. iprint.ge.1) write(*,*)   &\n                                    'b0,r0,m,n,e,a,r1,r2,u,fa,ra'   &\n                                    ,b0,r0,m,n,e,a,r1,r2,u,fa,ra\n\n  numnodes = owned_nodes()\n",
+        "line_number": 209,
+        "matched_line": ",b0,r0,m,n,e,a,r1,r2,u,fa,ra",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "     co = cos(theta)\n     sn = sin(theta)\n\n     rdpsidr = (B0*r**2)/ &\n          ((1+fA/E**((-r1+r/a)**2/r2**2))*q0*R0* &\n          (1+((r*Abs(-1+(m/(n*q0))**u)**(1/(2.*u)))/(a*rA))**(2*u))**(1/u))\n      ",
+        "line_number": 242,
+        "matched_line": "rdpsidr = (B0*r**2)/ &",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "     sn = sin(theta)\n\n     rdpsidr = (B0*r**2)/ &\n          ((1+fA/E**((-r1+r/a)**2/r2**2))*q0*R0* &\n          (1+((r*Abs(-1+(m/(n*q0))**u)**(1/(2.*u)))/(a*rA))**(2*u))**(1/u))\n      \n     call get_boundary_mask(itri, BOUNDARY_DIRICHLET, imask, BOUND_DOMAIN)",
+        "line_number": 243,
+        "matched_line": "((1+fA/E**((-r1+r/a)**2/r2**2))*q0*R0* &",
+        "path": "unstructured/init_kstar.f90"
+      },
+      {
+        "context": "\n  ! normalizations\n  real :: b0_norm     ! magnetic field normalization (in Gauss)\n  real :: l0_norm     ! length normalization (in centimeters)\n  real :: n0_norm     ! density normalization (in cm^-3)\n  real :: v0_norm\n  real :: t0_norm",
+        "line_number": 40,
+        "matched_line": "real :: l0_norm     ! length normalization (in centimeters)",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "\n  integer :: idenfunc ! specifies a specific form for equilibrium density\n  real :: den_edge\n  real :: den0\n  real :: dendelt\n  real :: denoff\n",
+        "line_number": 254,
+        "matched_line": "real :: den0",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "  real :: delta_cd2      ! second-window shoulder separation\n  integer :: imag_control ! 1 = localized magnetic flux/vector-potential source\n  real :: mag_ctrl_amp    ! localized magnetic control amplitude\n  real :: mag_ctrl_r0     ! R coordinate of magnetic control center\n  real :: mag_ctrl_z0     ! Z coordinate of magnetic control center\n  real :: mag_ctrl_wr     ! R width of magnetic control source\n  real :: mag_ctrl_wz     ! Z width of magnetic control source",
+        "line_number": 421,
+        "matched_line": "real :: mag_ctrl_r0     ! R coordinate of magnetic control center",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "\n  ! xray diagnostic parameters\n  integer :: xray_detector_enabled ! 1 = enable xray diagnostic\n  real :: xray_r0        ! R coordinate of xray detector\n  real :: xray_phi0      ! Phi coordinate of xray detector\n  real :: xray_z0        ! Z coordinate of xray detector\n  real :: xray_theta     ! angle of xray detector chord (degrees)",
+        "line_number": 441,
+        "matched_line": "real :: xray_r0        ! R coordinate of xray detector",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "  real :: tcur_t0        ! transition time for variable target current\n  real :: tcur_tw        ! transition time width for variable target current\n  real :: control_p      ! proportionality constant\n  real :: control_i      ! integral control inverse time-scale\n  real :: control_d      ! derivative control time-scale\n  integer :: control_type  ! type of current control  0:orig  1:standard\n  ! density controller parameters",
+        "line_number": 454,
+        "matched_line": "real :: control_i      ! integral control inverse time-scale",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "  real :: tcur_tw        ! transition time width for variable target current\n  real :: control_p      ! proportionality constant\n  real :: control_i      ! integral control inverse time-scale\n  real :: control_d      ! derivative control time-scale\n  integer :: control_type  ! type of current control  0:orig  1:standard\n  ! density controller parameters\n  real :: n_target       ! target particle number",
+        "line_number": 455,
+        "matched_line": "real :: control_d      ! derivative control time-scale",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "  ! density controller parameters\n  real :: n_target       ! target particle number\n  real :: n_control_p    ! proportionality constant\n  real :: n_control_i    ! integral control inverse time-scale\n  real :: n_control_d    ! derivative control time-scale\n  integer :: n_control_type  ! type of density control  0:orig 1:standard\n",
+        "line_number": 460,
+        "matched_line": "real :: n_control_i    ! integral control inverse time-scale",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "  real :: n_target       ! target particle number\n  real :: n_control_p    ! proportionality constant\n  real :: n_control_i    ! integral control inverse time-scale\n  real :: n_control_d    ! derivative control time-scale\n  integer :: n_control_type  ! type of density control  0:orig 1:standard\n\n",
+        "line_number": 461,
+        "matched_line": "real :: n_control_d    ! derivative control time-scale",
+        "path": "unstructured/M3Dmodules.f90"
+      },
+      {
+        "context": "      end if\n      den = temper/p\n    else\n      den=den0\n    endif\n\n    call zernike_evaluate(r,mn_mode,mb,rmncz,rstc)",
+        "line_number": 339,
+        "matched_line": "den=den0",
+        "path": "unstructured/init_vmec.f90"
+      },
+      {
+        "context": "              + ri2_79 * bzt79(:, OP_1) * tet79(:, OP_DP) & \n               - (tet79(:, OP_DZ) * bfpt79(:, OP_DZ)      &\n                 +tet79(:, OP_DR) * bfpt79(:, OP_DR)))**2 &\n    ! Assuming that B0.grad(T0) = 0\n    !          (ri_79 * (te179(:, OP_DZ) * pst79(:, OP_DR) &\n    !                   -te179(:, OP_DR) * pst79(:, OP_DZ) &\n    !                   +te079(:, OP_DZ) * ps179(:, OP_DR) &",
+        "line_number": 22366,
+        "matched_line": "! Assuming that B0.grad(T0) = 0",
+        "path": "unstructured/metricterms_new_gpu.f90"
+      },
+      {
+        "context": "\n     ! x-ray detector signal\n     if(xray_detector_enabled.eq.1) then\n        call get_chord_mask(xray_r0, xray_phi0*pi/180., xray_z0, &\n             x_79, phi_79, z_79, npoints, &\n             xray_theta*pi/180., xray_sigma*pi/180., temp79a)\n        dofs = intx2(mu79(:,:,OP_1),temp79a)",
+        "line_number": 949,
+        "matched_line": "call get_chord_mask(xray_r0, xray_phi0*pi/180., xray_z0, &",
+        "path": "unstructured/auxiliary_fields.f90"
+      },
+      {
+        "context": "     if(iread_ne.eq.0) then \n        select case(idenfunc)\n        case(1)\n           n079(:,OP_1) = den0*.5* &\n                (1. + &\n                tanh((real(ps079(:,OP_1))-(psibound+denoff*(psibound-psimin)))&\n                /(dendelt*(psibound-psimin))))",
+        "line_number": 307,
+        "matched_line": "n079(:,OP_1) = den0*.5* &",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "                /(dendelt*(psibound-psimin))))\n           \n        case(2)        \n           n079(:,OP_1) = den0\n           if(den0.ne.den_edge) then\n              temp79a = ((real(ps079(:,OP_1))-psimin)/(psibound-psimin) - denoff)&\n                   /dendelt",
+        "line_number": 313,
+        "matched_line": "n079(:,OP_1) = den0",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "           \n        case(2)        \n           n079(:,OP_1) = den0\n           if(den0.ne.den_edge) then\n              temp79a = ((real(ps079(:,OP_1))-psimin)/(psibound-psimin) - denoff)&\n                   /dendelt\n              n079(:,OP_1) = n079(:,OP_1) &",
+        "line_number": 314,
+        "matched_line": "if(den0.ne.den_edge) then",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "              temp79a = ((real(ps079(:,OP_1))-psimin)/(psibound-psimin) - denoff)&\n                   /dendelt\n              n079(:,OP_1) = n079(:,OP_1) &\n                   + .5*(den_edge-den0)*(1. + tanh(real(temp79a)))\n           end if\n\n        ! idenfunc = 20 in lieu of 0 (unclear why 0 is disabled here). YZ",
+        "line_number": 318,
+        "matched_line": "+ .5*(den_edge-den0)*(1. + tanh(real(temp79a)))",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "        ! idenfunc = 20 in lieu of 0 (unclear why 0 is disabled here). YZ\n        case(20) \n           if(expn.eq.0.) then\n              n079(:,OP_1) = den0 + den_edge\n           else\n#ifndef USECOMPLEX\n              do ip = 1, MAX_PTS",
+        "line_number": 324,
+        "matched_line": "n079(:,OP_1) = den0 + den_edge",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "                 temp79a(ip) = max(p079(ip,OP_1), 0.)\n              end do\n#endif     \n              n079(:,OP_1) = den0*(temp79a/p0)**expn + den_edge\n           end if\n#ifdef USEST\n        case(21)",
+        "line_number": 331,
+        "matched_line": "n079(:,OP_1) = den0*(temp79a/p0)**expn + den_edge",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "        case(21)\n           if(igeometry.eq.1) then\n              temp79b = sqrt((xl_79-xcenter)**2 + (zl_79-zcenter)**2 + regular**2)\n              n079(:,OP_1) = den0 + (den_edge-den0)*.5*&\n                   (1. + tanh((temp79b-(1.+denoff))/dendelt))\n           else\n              if(myrank.eq.0) print *, 'idenfunc = 21 requires igeometry = 1'",
+        "line_number": 337,
+        "matched_line": "n079(:,OP_1) = den0 + (den_edge-den0)*.5*&",
+        "path": "unstructured/init_common.f90"
+      },
+      {
+        "context": "       q_bf = q_bf + (3./12. - thimp_bf*bdf)*dt*temp            \n       \n       if(eqsubtract.eq.1) then\n        !(at+a0)(bt+b0)(ct+c0)=(at bt + at b0 + a0 bt + a0 b0)(ct + c0)=\n       != (at bt ct + at b0 ct + a0 bt ct + a0 b0 ct) + (at bt c0 + at b0 c0 + a0 bt c0 + a0 b0 c0)\n\n        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0  ",
+        "line_number": 651,
+        "matched_line": "!(at+a0)(bt+b0)(ct+c0)=(at bt + at b0 + a0 bt + a0 b0)(ct + c0)=",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "       \n       if(eqsubtract.eq.1) then\n        !(at+a0)(bt+b0)(ct+c0)=(at bt + at b0 + a0 bt + a0 b0)(ct + c0)=\n       != (at bt ct + at b0 ct + a0 bt ct + a0 b0 ct) + (at bt c0 + at b0 c0 + a0 bt c0 + a0 b0 c0)\n\n        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bz079) & !a0 bt c0",
+        "line_number": 652,
+        "matched_line": "!= (at bt ct + at b0 ct + a0 bt ct + a0 b0 ct) + (at bt c0 + at b0 c0 + a0 bt c0 + a0 b0 c0)",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bz079) & !a0 bt c0\n             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct ",
+        "line_number": 656,
+        "matched_line": "+ bs_b1psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bz079) & !a0 bt c0\n             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct",
+        "line_number": 657,
+        "matched_line": "+ bs_b1psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct\n        !--------------------------------------------------------!\n             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0  ",
+        "line_number": 659,
+        "matched_line": "+ bs_b1psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct\n        !--------------------------------------------------------!\n             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bz079) & !a0 bt c0",
+        "line_number": 660,
+        "matched_line": "+ bs_b1psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        !--------------------------------------------------------!\n             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n             + bs_b1psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct ",
+        "line_number": 664,
+        "matched_line": "+ bs_b1psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n             + bs_b1psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct",
+        "line_number": 665,
+        "matched_line": "+ bs_b1psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct\n         !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,lin,bfpt79,bzt79,bz079) & !at bt c0  ",
+        "line_number": 667,
+        "matched_line": "+ bs_b1psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct\n         !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,lin,bfpt79,bzt79,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bz079) & !a0 bt c0",
+        "line_number": 668,
+        "matched_line": "+ bs_b1psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "         !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,lin,bfpt79,bzt79,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bz079) & !a0 bt c0\n             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bz079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bzt79) & !at b0 ct   ",
+        "line_number": 672,
+        "matched_line": "+ bs_b1psifbb  (trial,lin,bfpt79,bz079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,lin,bfpt79,bzt79,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bz079) & !a0 bt c0\n             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bz079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,lin,bfp079,bz079,bzt79) &  !a0 b0 ct",
+        "line_number": 673,
+        "matched_line": "+ bs_b1psifbb  (trial,lin,bfp079,bz079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bz079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,lin,bfp079,bz079,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0  ",
+        "line_number": 675,
+        "matched_line": "+ bs_b1psifbb  (trial,lin,bfpt79,bz079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,lin,bfp079,bz079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,lin,bfp079,bzt79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,lin,bfpt79,bz079,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,lin,bfp079,bz079,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bz079) & !a0 bt c0",
+        "line_number": 676,
+        "matched_line": "+ bs_b1psifbb  (trial,lin,bfp079,bz079,bzt79) &  !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bz079) & !a0 bt c0\n             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct   ",
+        "line_number": 680,
+        "matched_line": "+ bs_b1psiffb  (trial,lin,bfpt79,bfp079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bz079) & !a0 bt c0\n             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct",
+        "line_number": 681,
+        "matched_line": "+ bs_b1psiffb  (trial,lin,bfp079,bfp079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct\n         !--------------------------------------------------------!  \n        ddterm(:,psi_g) = ddterm(:,psi_g) + (1./12.)*dt*temp      ",
+        "line_number": 683,
+        "matched_line": "+ bs_b1psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct\n         !--------------------------------------------------------!  \n        ddterm(:,psi_g) = ddterm(:,psi_g) + (1./12.)*dt*temp      \n          ",
+        "line_number": 684,
+        "matched_line": "+ bs_b1psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n        temp = bs_b1psifpsib(trial,pst79,bfpt79,ps079,lin) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,bfpt79,ps079,lin) & !a0 bt c0\n             + bs_b1psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct ",
+        "line_number": 691,
+        "matched_line": "+ bs_b1psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        temp = bs_b1psifpsib(trial,pst79,bfpt79,ps079,lin) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,bfpt79,ps079,lin) & !a0 bt c0\n             + bs_b1psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct",
+        "line_number": 692,
+        "matched_line": "+ bs_b1psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct\n        !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  ",
+        "line_number": 694,
+        "matched_line": "+ bs_b1psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct\n        !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0",
+        "line_number": 695,
+        "matched_line": "+ bs_b1psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n             + bs_b1psifbb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   ",
+        "line_number": 699,
+        "matched_line": "+ bs_b1psifbb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n             + bs_b1psifbb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,bfp079,lin,bzt79) &  !a0 b0 ct",
+        "line_number": 700,
+        "matched_line": "+ bs_b1psifbb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,bfp079,lin,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,bfpt79,bz079,lin) & !at bt c0  ",
+        "line_number": 702,
+        "matched_line": "+ bs_b1psifbb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,bfp079,lin,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,bfpt79,bz079,lin) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,bfpt79,bz079,lin) & !a0 bt c0",
+        "line_number": 703,
+        "matched_line": "+ bs_b1psifbb  (trial,ps079,bfp079,lin,bzt79) &  !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "         !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,bfpt79,bz079,lin) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,bfpt79,bz079,lin) & !a0 bt c0\n             + bs_b1psifbb  (trial,pst79,bfp079,bz079,lin) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,bfp079,bz079,lin)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,bzt79,lin) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,bzt79,lin) & !at b0 ct   ",
+        "line_number": 707,
+        "matched_line": "+ bs_b1psifbb  (trial,pst79,bfp079,bz079,lin) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,pst79,bfpt79,bz079,lin) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,bfpt79,bz079,lin) & !a0 bt c0\n             + bs_b1psifbb  (trial,pst79,bfp079,bz079,lin) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,bfp079,bz079,lin)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,bzt79,lin) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,bzt79,lin) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,bfp079,bzt79,lin) &  !a0 b0 ct",
+        "line_number": 708,
+        "matched_line": "+ bs_b1psifbb  (trial,ps079,bfp079,bz079,lin)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,pst79,bfp079,bz079,lin) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,bfp079,bz079,lin)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,bzt79,lin) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,bzt79,lin) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,bfp079,bzt79,lin) &  !a0 b0 ct\n         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0  ",
+        "line_number": 710,
+        "matched_line": "+ bs_b1psifbb  (trial,pst79,bfp079,bzt79,lin) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,ps079,bfp079,bz079,lin)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,bfpt79,bzt79,lin) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,bfp079,bzt79,lin) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,bfp079,bzt79,lin) &  !a0 b0 ct\n         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,bfpt79,bfp079,lin) & !a0 bt c0",
+        "line_number": 711,
+        "matched_line": "+ bs_b1psifbb  (trial,ps079,bfp079,bzt79,lin) &  !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,bfpt79,bfp079,lin) & !a0 bt c0\n             + bs_b1psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct   ",
+        "line_number": 715,
+        "matched_line": "+ bs_b1psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,bfpt79,bfp079,lin) & !a0 bt c0\n             + bs_b1psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct",
+        "line_number": 716,
+        "matched_line": "+ bs_b1psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct\n         !--------------------------------------------------------!  \n        ddterm(:,bz_g) = ddterm(:,bz_g) + (1./12.)*dt*temp    ",
+        "line_number": 718,
+        "matched_line": "+ bs_b1psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct\n         !--------------------------------------------------------!  \n        ddterm(:,bz_g) = ddterm(:,bz_g) + (1./12.)*dt*temp    \n",
+        "line_number": 719,
+        "matched_line": "+ bs_b1psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n        temp = bs_b1psifpsib(trial,pst79,lin,pst79,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,lin,pst79,bz079) & !a0 bt c0\n             + bs_b1psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct ",
+        "line_number": 725,
+        "matched_line": "+ bs_b1psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        temp = bs_b1psifpsib(trial,pst79,lin,pst79,bz079) & !at bt c0  \n             + bs_b1psifpsib(trial,ps079,lin,pst79,bz079) & !a0 bt c0\n             + bs_b1psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct",
+        "line_number": 726,
+        "matched_line": "+ bs_b1psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct\n        !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,lin,pst79,bz079) & !at bt c0  ",
+        "line_number": 728,
+        "matched_line": "+ bs_b1psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct \n             + bs_b1psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct\n        !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,lin,pst79,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,lin,pst79,bz079) & !a0 bt c0",
+        "line_number": 729,
+        "matched_line": "+ bs_b1psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        !--------------------------------------------------------!\n             + bs_b1psifbb  (trial,pst79,lin,pst79,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,lin,pst79,bz079) & !a0 bt c0\n             + bs_b1psifbb  (trial,pst79,lin,ps079,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,lin,ps079,bzt79) & !at b0 ct   ",
+        "line_number": 733,
+        "matched_line": "+ bs_b1psifbb  (trial,pst79,lin,ps079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,pst79,lin,pst79,bz079) & !at bt c0  \n             + bs_b1psifbb  (trial,ps079,lin,pst79,bz079) & !a0 bt c0\n             + bs_b1psifbb  (trial,pst79,lin,ps079,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,lin,ps079,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,lin,ps079,bzt79) &  !a0 b0 ct",
+        "line_number": 734,
+        "matched_line": "+ bs_b1psifbb  (trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,pst79,lin,ps079,bz079) & !at b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,lin,ps079,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,lin,ps079,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------!\n             + bs_b1psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0  ",
+        "line_number": 736,
+        "matched_line": "+ bs_b1psifbb  (trial,pst79,lin,ps079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psifbb  (trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n             + bs_b1psifbb  (trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n             + bs_b1psifbb  (trial,pst79,lin,ps079,bzt79) & !at b0 ct   \n             + bs_b1psifbb  (trial,ps079,lin,ps079,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------!\n             + bs_b1psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bz079) & !a0 bt c0",
+        "line_number": 737,
+        "matched_line": "+ bs_b1psifbb  (trial,ps079,lin,ps079,bzt79) &  !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "         !--------------------------------------------------------!\n             + bs_b1psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bz079) & !a0 bt c0\n             + bs_b1psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct   ",
+        "line_number": 741,
+        "matched_line": "+ bs_b1psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bz079) & !a0 bt c0\n             + bs_b1psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,lin,bfp079,bzt79) &  !a0 b0 ct",
+        "line_number": 742,
+        "matched_line": "+ bs_b1psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,lin,bfp079,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  ",
+        "line_number": 744,
+        "matched_line": "+ bs_b1psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,lin,bfp079,bzt79) &  !a0 b0 ct\n         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0",
+        "line_number": 745,
+        "matched_line": "+ bs_b1psiffb  (trial,ps079,lin,bfp079,bzt79) &  !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "         !--------------------------------------------------------! \n             + bs_b1psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n             + bs_b1psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   ",
+        "line_number": 749,
+        "matched_line": "+ bs_b1psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0  \n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n             + bs_b1psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct",
+        "line_number": 750,
+        "matched_line": "+ bs_b1psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n             + bs_b1psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct\n         !--------------------------------------------------------!      \n         q_bf = q_bf + (1./12.)*dt*temp    ",
+        "line_number": 752,
+        "matched_line": "+ bs_b1psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b1psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n             + bs_b1psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n             + bs_b1psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct   \n             + bs_b1psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct\n         !--------------------------------------------------------!      \n         q_bf = q_bf + (1./12.)*dt*temp    \n       end if",
+        "line_number": 753,
+        "matched_line": "+ bs_b1psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n    if(eqsubtract.eq.1) then\n\n       !(at+a0)(bt+b0)(ct+c0)=(at bt + at b0 + a0 bt + a0 b0)(ct + c0)=\n       != (at bt ct + at b0 ct + a0 bt ct + a0 b0 ct) + (at bt c0 + at b0 c0 + a0 bt c0 + a0 b0 c0)\n\n       temp = bs_b2psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0",
+        "line_number": 806,
+        "matched_line": "!(at+a0)(bt+b0)(ct+c0)=(at bt + at b0 + a0 bt + a0 b0)(ct + c0)=",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "    if(eqsubtract.eq.1) then\n\n       !(at+a0)(bt+b0)(ct+c0)=(at bt + at b0 + a0 bt + a0 b0)(ct + c0)=\n       != (at bt ct + at b0 ct + a0 bt ct + a0 b0 ct) + (at bt c0 + at b0 c0 + a0 bt c0 + a0 b0 c0)\n\n       temp = bs_b2psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bz079) & !a0 bt c0",
+        "line_number": 807,
+        "matched_line": "!= (at bt ct + at b0 ct + a0 bt ct + a0 b0 ct) + (at bt c0 + at b0 c0 + a0 bt c0 + a0 b0 c0)",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n       temp = bs_b2psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bz079) & !a0 bt c0\n            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct",
+        "line_number": 811,
+        "matched_line": "+ bs_b2psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "       temp = bs_b2psifpsib(trial,lin,bfpt79,pst79,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bz079) & !a0 bt c0\n            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct",
+        "line_number": 812,
+        "matched_line": "+ bs_b2psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct\n            !--------------------------------------------------------!\n            + bs_b2psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0",
+        "line_number": 814,
+        "matched_line": "+ bs_b2psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,lin,bfp079,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,lin,bfp079,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,lin,bfpt79,ps079,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct\n            !--------------------------------------------------------!\n            + bs_b2psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bz079) & !a0 bt c0",
+        "line_number": 815,
+        "matched_line": "+ bs_b2psifpsib(trial,lin,bfp079,ps079,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            !--------------------------------------------------------!\n            + bs_b2psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n            + bs_b2psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "line_number": 819,
+        "matched_line": "+ bs_b2psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,pst79,bfpt79,lin,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n            + bs_b2psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct",
+        "line_number": 820,
+        "matched_line": "+ bs_b2psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,pst79,bfp079,lin,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct\n             !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0",
+        "line_number": 822,
+        "matched_line": "+ bs_b2psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,bfp079,lin,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct\n             !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bz079) & !a0 bt c0",
+        "line_number": 823,
+        "matched_line": "+ bs_b2psifpsib(trial,ps079,bfp079,lin,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bz079) & !a0 bt c0\n            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bz079)*6 & !at b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bz079) & !a0 b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct",
+        "line_number": 827,
+        "matched_line": "+ bs_b2psiffb  (trial,lin,bfpt79,bfp079,bz079)*6 & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,lin,bfpt79,bfpt79,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bz079) & !a0 bt c0\n            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bz079)*6 & !at b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bz079) & !a0 b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct",
+        "line_number": 828,
+        "matched_line": "+ bs_b2psiffb  (trial,lin,bfp079,bfp079,bz079) & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bz079)*6 & !at b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bz079) & !a0 b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct\n             !--------------------------------------------------------!\n       ddterm(:,psi_g) = ddterm(:,psi_g) + (1./12.)*dt*temp",
+        "line_number": 830,
+        "matched_line": "+ bs_b2psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bz079) & !a0 b0 c0\n            + bs_b2psiffb  (trial,lin,bfp079,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,lin,bfpt79,bfp079,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct\n             !--------------------------------------------------------!\n       ddterm(:,psi_g) = ddterm(:,psi_g) + (1./12.)*dt*temp\n",
+        "line_number": 831,
+        "matched_line": "+ bs_b2psiffb  (trial,lin,bfp079,bfp079,bzt79)   !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n        temp = bs_b2psifpsib(trial,pst79,bfpt79,ps079,lin) & !at bt c0\n             + bs_b2psifpsib(trial,ps079,bfpt79,ps079,lin) & !a0 bt c0\n             + bs_b2psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0\n             + bs_b2psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b2psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b2psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct",
+        "line_number": 838,
+        "matched_line": "+ bs_b2psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "        temp = bs_b2psifpsib(trial,pst79,bfpt79,ps079,lin) & !at bt c0\n             + bs_b2psifpsib(trial,ps079,bfpt79,ps079,lin) & !a0 bt c0\n             + bs_b2psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0\n             + bs_b2psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b2psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b2psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct\n             + bs_b2psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct",
+        "line_number": 839,
+        "matched_line": "+ bs_b2psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b2psifpsib(trial,pst79,bfp079,ps079,lin) & !at b0 c0\n             + bs_b2psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b2psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b2psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct\n             + bs_b2psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct\n             !--------------------------------------------------------!\n             + bs_b2psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0",
+        "line_number": 841,
+        "matched_line": "+ bs_b2psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b2psifpsib(trial,ps079,bfp079,ps079,lin)*6 & !a0 b0 c0\n             + bs_b2psifpsib(trial,ps079,bfpt79,pst79,lin) & !a0 bt ct\n             + bs_b2psifpsib(trial,pst79,bfp079,pst79,lin) & !at b0 ct\n             + bs_b2psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct\n             !--------------------------------------------------------!\n             + bs_b2psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfp079,lin) & !a0 bt c0",
+        "line_number": 842,
+        "matched_line": "+ bs_b2psifpsib(trial,ps079,bfp079,pst79,lin) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             !--------------------------------------------------------!\n             + bs_b2psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfp079,lin) & !a0 bt c0\n             + bs_b2psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0\n             + bs_b2psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b2psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct",
+        "line_number": 846,
+        "matched_line": "+ bs_b2psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b2psiffb  (trial,pst79,bfpt79,bfp079,lin) & !at bt c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfp079,lin) & !a0 bt c0\n             + bs_b2psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0\n             + bs_b2psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b2psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct\n             + bs_b2psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct",
+        "line_number": 847,
+        "matched_line": "+ bs_b2psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b2psiffb  (trial,pst79,bfp079,bfp079,lin) & !at b0 c0\n             + bs_b2psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b2psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct\n             + bs_b2psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct\n       ddterm(:,bz_g) = ddterm(:,bz_g) + (1./12.)*dt*temp\n",
+        "line_number": 849,
+        "matched_line": "+ bs_b2psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "             + bs_b2psiffb  (trial,ps079,bfp079,bfp079,lin)*6 & !a0 b0 c0\n             + bs_b2psiffb  (trial,ps079,bfpt79,bfpt79,lin) & !a0 bt ct\n             + bs_b2psiffb  (trial,pst79,bfp079,bfpt79,lin) & !at b0 ct\n             + bs_b2psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct\n       ddterm(:,bz_g) = ddterm(:,bz_g) + (1./12.)*dt*temp\n\n",
+        "line_number": 850,
+        "matched_line": "+ bs_b2psiffb  (trial,ps079,bfp079,bfpt79,lin)   !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "\n       temp = bs_b2psifpsib(trial,pst79,lin,pst79,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,ps079,lin,pst79,bz079) & !a0 bt c0\n            + bs_b2psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct",
+        "line_number": 857,
+        "matched_line": "+ bs_b2psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "       temp = bs_b2psifpsib(trial,pst79,lin,pst79,bz079) & !at bt c0\n            + bs_b2psifpsib(trial,ps079,lin,pst79,bz079) & !a0 bt c0\n            + bs_b2psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct",
+        "line_number": 858,
+        "matched_line": "+ bs_b2psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,pst79,lin,ps079,bz079) & !at b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct\n            !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0",
+        "line_number": 860,
+        "matched_line": "+ bs_b2psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psifpsib(trial,ps079,lin,ps079,bz079)*6 & !a0 b0 c0\n            + bs_b2psifpsib(trial,ps079,lin,pst79,bzt79) & !a0 bt ct\n            + bs_b2psifpsib(trial,pst79,lin,ps079,bzt79) & !at b0 ct\n            + bs_b2psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct\n            !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bz079) & !a0 bt c0",
+        "line_number": 861,
+        "matched_line": "+ bs_b2psifpsib(trial,ps079,lin,ps079,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bz079) & !a0 bt c0\n            + bs_b2psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct",
+        "line_number": 865,
+        "matched_line": "+ bs_b2psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,pst79,lin,bfpt79,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bz079) & !a0 bt c0\n            + bs_b2psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,ps079,lin,bfp079,bzt79) & !a0 b0 ct",
+        "line_number": 866,
+        "matched_line": "+ bs_b2psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,pst79,lin,bfp079,bz079) & !at b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,ps079,lin,bfp079,bzt79) & !a0 b0 ct\n            !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0",
+        "line_number": 868,
+        "matched_line": "+ bs_b2psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,ps079,lin,bfp079,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,lin,bfpt79,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,lin,bfp079,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,ps079,lin,bfp079,bzt79) & !a0 b0 ct\n            !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0",
+        "line_number": 869,
+        "matched_line": "+ bs_b2psiffb  (trial,ps079,lin,bfp079,bzt79) & !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            !--------------------------------------------------------!\n            + bs_b2psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n            + bs_b2psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n            + bs_b2psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "line_number": 873,
+        "matched_line": "+ bs_b2psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,pst79,bfpt79,lin,bz079) & !at bt c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bz079) & !a0 bt c0\n            + bs_b2psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n            + bs_b2psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct",
+        "line_number": 874,
+        "matched_line": "+ bs_b2psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,pst79,bfp079,lin,bz079) & !at b0 c0\n            + bs_b2psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct\n       q_bf = q_bf + (1./12.)*dt*temp\n    end if",
+        "line_number": 876,
+        "matched_line": "+ bs_b2psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "            + bs_b2psiffb  (trial,ps079,bfp079,lin,bz079)*6 & !a0 b0 c0\n            + bs_b2psiffb  (trial,ps079,bfpt79,lin,bzt79) & !a0 bt ct\n            + bs_b2psiffb  (trial,pst79,bfp079,lin,bzt79) & !at b0 ct\n            + bs_b2psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct\n       q_bf = q_bf + (1./12.)*dt*temp\n    end if\n  end subroutine bootstrap_axial_field",
+        "line_number": 877,
+        "matched_line": "+ bs_b2psiffb  (trial,ps079,bfp079,lin,bzt79)   !a0 b0 ct",
+        "path": "unstructured/bootstrap.f90"
+      },
+      {
+        "context": "  real, parameter :: eps = 1e-6\n  \n  real :: a0,a1,a2,a3,a4\n  real :: b0,b1,b2,b3,b4\n  real :: c1,c2,c3,c4\n  real :: d1,d2,d3,d4\n",
+        "line_number": 235,
+        "matched_line": "real :: b0,b1,b2,b3,b4",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "\n  data a0,a1,a2,a3,a4/1.38629436112,9.666344259e-2,                 &\n       3.590092383e-2,3.742563713e-2,1.451196212e-2/\n  data b0,b1,b2,b3,b4/.5,.12498593597,6.880248576e-2,               &\n       3.328355346e-2,4.41787012e-3/\n  data c1,c2,c3,c4/.44325141463,6.260601220e-2,                     &\n       4.757383546e-2,1.736506451e-2/",
+        "line_number": 246,
+        "matched_line": "data b0,b1,b2,b3,b4/.5,.12498593597,6.880248576e-2,               &",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "        ce=1.+x*(c1+x*(c2+x*(c3+x*c4)))+                               &\n             x*(d1+x*(d2+x*(d3+x*d4)))*(-alog(x))\n        ck=a0+x*(a1+x*(a2+x*(a3+x*a4)))+                               &\n             (b0+x*(b1+x*(b2+x*(b3+x*b4))))*(-alog(x))\n\n        term1=2.*ck-2.*ce-ce*rksq/x\n        term2=2.*xi(i)-rksq*rpxi",
+        "line_number": 267,
+        "matched_line": "(b0+x*(b1+x*(b2+x*(b3+x*b4))))*(-alog(x))",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  real, dimension(npt,n), intent(out) :: g\n  \n  real :: a0,a1,a2,a3,a4\n  real :: b0,b1,b2,b3,b4\n  real :: c1,c2,c3,c4\n  real :: d1,d2,d3,d4\n",
+        "line_number": 524,
+        "matched_line": "real :: b0,b1,b2,b3,b4",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "\n  data a0,a1,a2,a3,a4/1.38629436112,9.666344259e-2,                 &\n       3.590092383e-2,3.742563713e-2,1.451196212e-2/\n  data b0,b1,b2,b3,b4/.5,.12498593597,6.880248576e-2,               &\n       3.328355346e-2,4.41787012e-3/\n  data c1,c2,c3,c4/.44325141463,6.260601220e-2,                     &\n       4.757383546e-2,1.736506451e-2/",
+        "line_number": 535,
+        "matched_line": "data b0,b1,b2,b3,b4/.5,.12498593597,6.880248576e-2,               &",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "        ce=1.+x*(c1+x*(c2+x*(c3+x*c4)))+                               &\n             x*(d1+x*(d2+x*(d3+x*d4)))*(-alog(x))\n        ck=a0+x*(a1+x*(a2+x*(a3+x*a4)))+                               &\n             (b0+x*(b1+x*(b2+x*(b3+x*b4))))*(-alog(x))\n\n        g(:,i) = -sqrxi*(2.*ck-2.*ce-ck*rksq)/rk\n     end do",
+        "line_number": 556,
+        "matched_line": "(b0+x*(b1+x*(b2+x*(b3+x*b4))))*(-alog(x))",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "end subroutine integral\n\n\nsubroutine coil(curr, r1, z1, npts, r0, z0, ntor, fr, fphi, fz)\n  implicit none\n\n  complex, intent(in) :: curr",
+        "line_number": 686,
+        "matched_line": "subroutine coil(curr, r1, z1, npts, r0, z0, ntor, fr, fphi, fz)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  complex, intent(in) :: curr\n  real, intent(in) :: r1, z1\n  integer, intent(in) :: ntor, npts\n  real, intent(in), dimension(npts) :: r0, z0\n  complex, intent(inout), dimension(npts) :: fr, fphi, fz\n\n  real, dimension(npts) :: dr2, k2, temp, co",
+        "line_number": 692,
+        "matched_line": "real, intent(in), dimension(npts) :: r0, z0",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  complex, dimension(npts) :: fac\n  real, parameter :: dr2_fac = 1e-4\n\n  dr2 = (r0 - r1)**2 + (z0 - z1)**2 + dr2_fac\n  k2 = 4.*r1*r0/dr2\n\n  fac = curr*r1/sqrt(dr2**3)",
+        "line_number": 699,
+        "matched_line": "dr2 = (r0 - r1)**2 + (z0 - z1)**2 + dr2_fac",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  real, parameter :: dr2_fac = 1e-4\n\n  dr2 = (r0 - r1)**2 + (z0 - z1)**2 + dr2_fac\n  k2 = 4.*r1*r0/dr2\n\n  fac = curr*r1/sqrt(dr2**3)\n",
+        "line_number": 700,
+        "matched_line": "k2 = 4.*r1*r0/dr2",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  call integral(npts,k2,ntor-1,temp)\n\n  fr = fr + fac*(z0 - z1)*(co + temp)/2.\n  fz = fz - fac*r0*(co + temp)/2.\n  fphi = fphi - fac*(0.,1.)*(z0 - z1)*(co - temp)/2.\n  \nend subroutine coil",
+        "line_number": 712,
+        "matched_line": "fz = fz - fac*r0*(co + temp)/2.",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  \nend subroutine coil\n\nsubroutine surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr, fphi, fz)\n  implicit none\n\n  real, intent(in) :: r, z, dldZ, dldR",
+        "line_number": 717,
+        "matched_line": "subroutine surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr, fphi, fz)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "\n  real, intent(in) :: r, z, dldZ, dldR\n  integer, intent(in) :: npts, ntor\n  real, intent(in), dimension(npts) :: r0, z0\n  complex, intent(out), dimension(npts) :: fr, fphi, fz\n  \n  real, dimension(npts) :: dr2, fac, k2, temp1, temp2",
+        "line_number": 722,
+        "matched_line": "real, intent(in), dimension(npts) :: r0, z0",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  real, dimension(npts) :: dr2, fac, k2, temp1, temp2\n  real, parameter :: dr2_fac = 1e-4\n\n  dr2 = (r - r0)**2 + (z - z0)**2 + dr2_fac\n  k2 = 4.*r*r0/dr2\n  fac = -ntor/sqrt(dr2**3)\n",
+        "line_number": 728,
+        "matched_line": "dr2 = (r - r0)**2 + (z - z0)**2 + dr2_fac",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  real, parameter :: dr2_fac = 1e-4\n\n  dr2 = (r - r0)**2 + (z - z0)**2 + dr2_fac\n  k2 = 4.*r*r0/dr2\n  fac = -ntor/sqrt(dr2**3)\n\n  call integral(npts, k2, ntor+1, temp1)",
+        "line_number": 729,
+        "matched_line": "k2 = 4.*r*r0/dr2",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  call integral(npts, k2, ntor-1, temp2)\n\n  fr =  fac*(dldZ*r+dldR*(z0-z))*(temp1 - temp2)/2.\n  fz = -fac*dldR*r0*(temp1 - temp2)/2.\n  fphi =  -fac*(0.,1.)*(dldZ*r + dldR*(z0 - z))*(temp1 + temp2)/2.\n\n  call integral(npts, k2, ntor, temp1)",
+        "line_number": 736,
+        "matched_line": "fz = -fac*dldR*r0*(temp1 - temp2)/2.",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  fphi =  -fac*(0.,1.)*(dldZ*r + dldR*(z0 - z))*(temp1 + temp2)/2.\n\n  call integral(npts, k2, ntor, temp1)\n  fphi = fphi + fac*(0.,1.)*dldZ*r0*temp1\nend subroutine surface\n\n!======================================================================",
+        "line_number": 740,
+        "matched_line": "fphi = fphi + fac*(0.,1.)*dldZ*r0*temp1",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "! pane\n! ~~~~\n! Adds 'window pane' contribution to magnetic field (fr, fphi, fz)\n! at observation point r=(r0, z0) from two axisymmetric coils\n! at (r1,z1) and (r2,z2) carrying currents curr and -curr\n!======================================================================\nsubroutine pane(curr, r1, r2, z1, z2, npts, r0, z0, ntor, fr, fphi, fz)",
+        "line_number": 747,
+        "matched_line": "! at observation point r=(r0, z0) from two axisymmetric coils",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "! at observation point r=(r0, z0) from two axisymmetric coils\n! at (r1,z1) and (r2,z2) carrying currents curr and -curr\n!======================================================================\nsubroutine pane(curr, r1, r2, z1, z2, npts, r0, z0, ntor, fr, fphi, fz)\n  implicit none\n\n  complex, intent(in) :: curr",
+        "line_number": 750,
+        "matched_line": "subroutine pane(curr, r1, r2, z1, z2, npts, r0, z0, ntor, fr, fphi, fz)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  complex, intent(in) :: curr\n  real, intent(in) :: r1, r2, z1, z2\n  integer, intent(in) :: ntor, npts\n  real, intent(in), dimension(npts) :: r0, z0\n  complex, intent(inout), dimension(npts) :: fr, fphi, fz\n\n  complex, dimension(npts) :: fr0, fphi0, fz0",
+        "line_number": 756,
+        "matched_line": "real, intent(in), dimension(npts) :: r0, z0",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  real, intent(in), dimension(npts) :: r0, z0\n  complex, intent(inout), dimension(npts) :: fr, fphi, fz\n\n  complex, dimension(npts) :: fr0, fphi0, fz0\n  complex, dimension(npts) :: fr1, fphi1, fz1\n  complex, dimension(npts) :: fr2, fphi2, fz2\n  real :: l, dl, lmax, dldZ, dldR, r, z, dl2",
+        "line_number": 759,
+        "matched_line": "complex, dimension(npts) :: fr0, fphi0, fz0",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  integer, parameter :: ilmax = 100\n\n  ! calculate conitrbution from coils\n  call coil( curr,r1,z1,npts,r0,z0,ntor,fr,fphi,fz)\n  call coil(-curr,r2,z2,npts,r0,z0,ntor,fr,fphi,fz)\n\n  lmax = sqrt((r2-r1)**2 + (z2-z1)**2)",
+        "line_number": 767,
+        "matched_line": "call coil( curr,r1,z1,npts,r0,z0,ntor,fr,fphi,fz)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "\n  ! calculate conitrbution from coils\n  call coil( curr,r1,z1,npts,r0,z0,ntor,fr,fphi,fz)\n  call coil(-curr,r2,z2,npts,r0,z0,ntor,fr,fphi,fz)\n\n  lmax = sqrt((r2-r1)**2 + (z2-z1)**2)\n  dl = lmax/ilmax",
+        "line_number": 768,
+        "matched_line": "call coil(-curr,r2,z2,npts,r0,z0,ntor,fr,fphi,fz)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "  ! calculate contribution from surface currents \n  r = r1\n  z = z1\n  call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr0, fphi0, fz0)\n  l = 0.\n  do il=1, ilmax\n     ",
+        "line_number": 780,
+        "matched_line": "call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr0, fphi0, fz0)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "     \n     r = (r2*(l+dl2) + r1*(lmax-(l+dl2)))/lmax\n     z = (z2*(l+dl2) + z1*(lmax-(l+dl2)))/lmax\n     call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr1, fphi1, fz1)\n       \n     r = (r2*(l+dl) + r1*(lmax-(l+dl)))/lmax\n     z = (z2*(l+dl) + z1*(lmax-(l+dl)))/lmax",
+        "line_number": 786,
+        "matched_line": "call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr1, fphi1, fz1)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "       \n     r = (r2*(l+dl) + r1*(lmax-(l+dl)))/lmax\n     z = (z2*(l+dl) + z1*(lmax-(l+dl)))/lmax\n     call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr2, fphi2, fz2)\n\n     fr = fr + curr*dl*(fr0 + 4.*fr1 + fr2)/6.\n     fphi = fphi + curr*dl*(fphi0 + 4.*fphi1 + fphi2)/6.",
+        "line_number": 790,
+        "matched_line": "call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr2, fphi2, fz2)",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "     z = (z2*(l+dl) + z1*(lmax-(l+dl)))/lmax\n     call surface(r, z, dldR, dldZ, npts, r0, z0, ntor, fr2, fphi2, fz2)\n\n     fr = fr + curr*dl*(fr0 + 4.*fr1 + fr2)/6.\n     fphi = fphi + curr*dl*(fphi0 + 4.*fphi1 + fphi2)/6.\n     fz = fz + curr*dl*(fz0 + 4.*fz1 + fz2)/6.\n",
+        "line_number": 792,
+        "matched_line": "fr = fr + curr*dl*(fr0 + 4.*fr1 + fr2)/6.",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "     fphi = fphi + curr*dl*(fphi0 + 4.*fphi1 + fphi2)/6.\n     fz = fz + curr*dl*(fz0 + 4.*fz1 + fz2)/6.\n\n     fr0 = fr2\n     fphi0 = fphi2\n     fz0 = fz2\n     ",
+        "line_number": 796,
+        "matched_line": "fr0 = fr2",
+        "path": "unstructured/coils.f90"
+      },
+      {
+        "context": "\n    !......distributed source added 11/23/2011   (scj)\n    case(2)\n       pellet_distribution = den0*(max(pedge,real(pres))/p0)**expn\n\n    ! gaussian pellet source\n    case(3)",
+        "line_number": 211,
+        "matched_line": "pellet_distribution = den0*(max(pedge,real(pres))/p0)**expn",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "\n    !......distributed source added 11/23/2011   (scj)\n    case(2)\n       pellet_distribution = den0*(max(pedge,real(pres))/p0)**expn\n\n    ! pressure-weighted gaussian pellet source\n    case(3)",
+        "line_number": 273,
+        "matched_line": "pellet_distribution = den0*(max(pedge,real(pres))/p0)**expn",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "    real :: Ieff       ! Effective ionization potential (eV)\n    real :: subl, T_S, Mach, f_l\n    real :: C_abl, Xp_abl, Xn_abl, a_Te, b_Te, c_Te, d_Te, B_Li\n    real :: G, lambda, rho0\n    real :: temin_eV\n    real :: rho_D2, M_D2\n    real :: ve_th !electron thermal velocity (cm/s)",
+        "line_number": 411,
+        "matched_line": "real :: G, lambda, rho0",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "             pellet_mix(ip) = 0.\n          end if\n\n          rho0 = rho_z\n\n          ! First model: Parks NF 94 + Lunsford\n          shield_p = 0.3",
+        "line_number": 498,
+        "matched_line": "rho0 = rho_z",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "             pellet_mix(ip) = 0.\n          end if\n\n          rho0 = rho_z\n\n          ! Second model: Parks 2015 with multienergetic electrons\n          B_Li = inv3*sqrt(1./(2.*log(7.69e1*1.97836e-3*sqrt(2.*temp_pel(ip))*3.**(-inv3)/(6e-1))*&",
+        "line_number": 522,
+        "matched_line": "rho0 = rho_z",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "          pellet_rate_D2(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n\n          ! pellet surface recession speed\n          rho0 = ((1.-pellet_mix(ip))*M_z + pellet_mix(ip)*M_D2)/((1.-pellet_mix(ip))*(M_z/rho_z) + pellet_mix(ip)*(M_D2/rho_D2)) ! g/cm^3\n          rpdot(ip) = (G/(4.*pi*rho0*(r_p(ip)*l0_norm)**2))*(t0_norm/l0_norm)\n\n",
+        "line_number": 562,
+        "matched_line": "rho0 = ((1.-pellet_mix(ip))*M_z + pellet_mix(ip)*M_D2)/((1.-pellet_mix(ip))*(M_z/rho_z) + pellet_mix(ip)*(M_D2/rho_D2)) ! g/cm^3",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "\n          ! pellet surface recession speed\n          rho0 = ((1.-pellet_mix(ip))*M_z + pellet_mix(ip)*M_D2)/((1.-pellet_mix(ip))*(M_z/rho_z) + pellet_mix(ip)*(M_D2/rho_D2)) ! g/cm^3\n          rpdot(ip) = (G/(4.*pi*rho0*(r_p(ip)*l0_norm)**2))*(t0_norm/l0_norm)\n\n\n      case(43)",
+        "line_number": 563,
+        "matched_line": "rpdot(ip) = (G/(4.*pi*rho0*(r_p(ip)*l0_norm)**2))*(t0_norm/l0_norm)",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "       if(dr_p.gt.r_p(ip)) then\n          ! we've ablated the whole pellet\n          if(myrank.eq.0 .and. iprint.ge.1) print *, \"Pellet fully ablated at radius \", r_p(ip)\n          pellet_rate(ip)    = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*(1.-pellet_mix(ip))/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n          pellet_rate_D2(ip) = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*pellet_mix(ip)/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))",
+        "line_number": 601,
+        "matched_line": "pellet_rate(ip)    = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*(1.-pellet_mix(ip))/&",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "          if(myrank.eq.0 .and. iprint.ge.1) print *, \"Pellet fully ablated at radius \", r_p(ip)\n          pellet_rate(ip)    = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*(1.-pellet_mix(ip))/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n          pellet_rate_D2(ip) = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*pellet_mix(ip)/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n       else\n       end if",
+        "line_number": 603,
+        "matched_line": "pellet_rate_D2(ip) = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*pellet_mix(ip)/&",
+        "path": "unstructured/pellet.f90"
+      },
+      {
+        "context": "        case(-1)\n           bz_field(0) = bzero*rzero\n           vz_field(0) = vzero\n           den_field(0) = den0\n           p_field(0) = p0\n           pe_field(0) = p0*pefac\n        case(0)",
+        "line_number": 602,
+        "matched_line": "den_field(0) = den0",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "  real :: x, phi, z\n  real, parameter :: e=2.7183\n  real :: a, r1, r2, u, fa, ra\n  real :: b0,r0\n  integer :: m,n\n  integer :: numnodes, nelms, l, itri, i, j, ier, icounter_tt\n  integer :: imask(dofs_per_element)",
+        "line_number": 744,
+        "matched_line": "real :: b0,r0",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "\n  psi_vec = 0.\n\n  !input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA\n  b0 = bzero\n  r0 = rzero\n  m = mpol",
+        "line_number": 759,
+        "matched_line": "!input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "  psi_vec = 0.\n\n  !input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA\n  b0 = bzero\n  r0 = rzero\n  m = mpol\n  n = igs",
+        "line_number": 760,
+        "matched_line": "b0 = bzero",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "\n  !input variables: B0,fA,r1,r2,q0,R0,m,n,u,rA\n  b0 = bzero\n  r0 = rzero\n  m = mpol\n  n = igs\n  a = alpha0",
+        "line_number": 761,
+        "matched_line": "r0 = rzero",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "  ra = p2\n  \n  if(myrank.eq.0 .and. iprint.ge.1) write(*,*)   &\n                                    'b0,r0,m,n,e,a,r1,r2,u,fa,ra'   &\n                                    ,b0,r0,m,n,e,a,r1,r2,u,fa,ra\n\n  numnodes = owned_nodes()",
+        "line_number": 772,
+        "matched_line": "'b0,r0,m,n,e,a,r1,r2,u,fa,ra'   &",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "  \n  if(myrank.eq.0 .and. iprint.ge.1) write(*,*)   &\n                                    'b0,r0,m,n,e,a,r1,r2,u,fa,ra'   &\n                                    ,b0,r0,m,n,e,a,r1,r2,u,fa,ra\n\n  numnodes = owned_nodes()\n",
+        "line_number": 773,
+        "matched_line": ",b0,r0,m,n,e,a,r1,r2,u,fa,ra",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "     co = cos(theta)\n     sn = sin(theta)\n\n     rdpsidr = (B0*r**2)/ &\n          ((1+fA/E**((-r1+r/a)**2/r2**2))*q0*R0* &\n          (1+((r*Abs(-1+(m/(n*q0))**u)**(1/(2.*u)))/(a*rA))**(2*u))**(1/u))\n      ",
+        "line_number": 806,
+        "matched_line": "rdpsidr = (B0*r**2)/ &",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "     sn = sin(theta)\n\n     rdpsidr = (B0*r**2)/ &\n          ((1+fA/E**((-r1+r/a)**2/r2**2))*q0*R0* &\n          (1+((r*Abs(-1+(m/(n*q0))**u)**(1/(2.*u)))/(a*rA))**(2*u))**(1/u))\n      \n     call get_boundary_mask(itri, BOUNDARY_DIRICHLET, imask, BOUND_DOMAIN)",
+        "line_number": 807,
+        "matched_line": "((1+fA/E**((-r1+r/a)**2/r2**2))*q0*R0* &",
+        "path": "unstructured/init_conds.f90"
+      },
+      {
+        "context": "       dofsbz = intx2(mu79(:,:,OP_1),temp79b)\n       dofspr = intx2(mu79(:,:,OP_1),temp79c)\n       dofsvz = intx2(mu79(:,:,OP_1),temp79d)\n       ! dofsden = den0*intx1(mu79(:,:,OP_1))\n      temp79e = den0\n      if(linear.eq.0) temp79e = den0*(temp79c/p0_qp)**expn + den_edge\n      dofsden = intx2(mu79(:,:,OP_1),temp79e)",
+        "line_number": 142,
+        "matched_line": "! dofsden = den0*intx1(mu79(:,:,OP_1))",
+        "path": "unstructured/init_basicq.f90"
+      },
+      {
+        "context": "       dofspr = intx2(mu79(:,:,OP_1),temp79c)\n       dofsvz = intx2(mu79(:,:,OP_1),temp79d)\n       ! dofsden = den0*intx1(mu79(:,:,OP_1))\n      temp79e = den0\n      if(linear.eq.0) temp79e = den0*(temp79c/p0_qp)**expn + den_edge\n      dofsden = intx2(mu79(:,:,OP_1),temp79e)\n",
+        "line_number": 143,
+        "matched_line": "temp79e = den0",
+        "path": "unstructured/init_basicq.f90"
+      },
+      {
+        "context": "       dofsvz = intx2(mu79(:,:,OP_1),temp79d)\n       ! dofsden = den0*intx1(mu79(:,:,OP_1))\n      temp79e = den0\n      if(linear.eq.0) temp79e = den0*(temp79c/p0_qp)**expn + den_edge\n      dofsden = intx2(mu79(:,:,OP_1),temp79e)\n\n!!$OMP CRITICAL",
+        "line_number": 144,
+        "matched_line": "if(linear.eq.0) temp79e = den0*(temp79c/p0_qp)**expn + den_edge",
+        "path": "unstructured/init_basicq.f90"
+      },
+      {
+        "context": "                temp79b = (pst79(:,OP_DR)*(x_79 - xmag) &\n                     +     pst79(:,OP_DZ)*(z_79 - zmag))*(psibound-psimin)\n                where(real(temp79a).lt.denoff .and. real(temp79b).gt.0.)\n                   n079(:,OP_1) = den0\n                elsewhere\n                   n079(:,OP_1) = den_edge\n                end where",
+        "line_number": 990,
+        "matched_line": "n079(:,OP_1) = den0",
+        "path": "unstructured/m3dc1_nint.f90"
+      },
+      {
+        "context": "  integer :: BNMAX\n\n  ! momentum diagnostics\n  real :: tau_em, tau_sol, tau_com, tau_visc, tau_gyro, tau_parvisc\n\n  logical :: ifirsttime = .true.\n",
+        "line_number": 61,
+        "matched_line": "real :: tau_em, tau_sol, tau_com, tau_visc, tau_gyro, tau_parvisc",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "    jbs = 0.\n    volpd = 0.\n\n    tau_em = 0.\n    tau_sol = 0.\n    tau_com = 0.\n    tau_visc = 0.",
+        "line_number": 248,
+        "matched_line": "tau_em = 0.",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "    volpd = 0.\n\n    tau_em = 0.\n    tau_sol = 0.\n    tau_com = 0.\n    tau_visc = 0.\n    tau_gyro = 0.",
+        "line_number": 249,
+        "matched_line": "tau_sol = 0.",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "\n    tau_em = 0.\n    tau_sol = 0.\n    tau_com = 0.\n    tau_visc = 0.\n    tau_gyro = 0.\n    tau_parvisc = 0.",
+        "line_number": 250,
+        "matched_line": "tau_com = 0.",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "    tau_em = 0.\n    tau_sol = 0.\n    tau_com = 0.\n    tau_visc = 0.\n    tau_gyro = 0.\n    tau_parvisc = 0.\n",
+        "line_number": 251,
+        "matched_line": "tau_visc = 0.",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "    tau_sol = 0.\n    tau_com = 0.\n    tau_visc = 0.\n    tau_gyro = 0.\n    tau_parvisc = 0.\n\n    nfluxd = 0.",
+        "line_number": 252,
+        "matched_line": "tau_gyro = 0.",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "    tau_com = 0.\n    tau_visc = 0.\n    tau_gyro = 0.\n    tau_parvisc = 0.\n\n    nfluxd = 0.\n    nfluxv = 0.",
+        "line_number": 253,
+        "matched_line": "tau_parvisc = 0.",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       temp(36) = nfluxd\n       temp(37) = nfluxv\n       temp(38) = nsource\n       temp(39) = tau_em\n       temp(40) = tau_sol\n       temp(41) = tau_com\n       temp(42) = tau_visc",
+        "line_number": 346,
+        "matched_line": "temp(39) = tau_em",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       temp(37) = nfluxv\n       temp(38) = nsource\n       temp(39) = tau_em\n       temp(40) = tau_sol\n       temp(41) = tau_com\n       temp(42) = tau_visc\n       temp(43) = tau_gyro",
+        "line_number": 347,
+        "matched_line": "temp(40) = tau_sol",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       temp(38) = nsource\n       temp(39) = tau_em\n       temp(40) = tau_sol\n       temp(41) = tau_com\n       temp(42) = tau_visc\n       temp(43) = tau_gyro\n       temp(44) = tau_parvisc",
+        "line_number": 348,
+        "matched_line": "temp(41) = tau_com",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       temp(39) = tau_em\n       temp(40) = tau_sol\n       temp(41) = tau_com\n       temp(42) = tau_visc\n       temp(43) = tau_gyro\n       temp(44) = tau_parvisc\n       temp(45) = bwb2",
+        "line_number": 349,
+        "matched_line": "temp(42) = tau_visc",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       temp(40) = tau_sol\n       temp(41) = tau_com\n       temp(42) = tau_visc\n       temp(43) = tau_gyro\n       temp(44) = tau_parvisc\n       temp(45) = bwb2\n       temp(46) = volume",
+        "line_number": 350,
+        "matched_line": "temp(43) = tau_gyro",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       temp(41) = tau_com\n       temp(42) = tau_visc\n       temp(43) = tau_gyro\n       temp(44) = tau_parvisc\n       temp(45) = bwb2\n       temp(46) = volume\n       temp(47) = xray_signal",
+        "line_number": 351,
+        "matched_line": "temp(44) = tau_parvisc",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       nfluxd          = temp2(36)\n       nfluxv          = temp2(37)\n       nsource         = temp2(38)\n       tau_em          = temp2(39)\n       tau_sol         = temp2(40)\n       tau_com         = temp2(41)\n       tau_visc        = temp2(42)",
+        "line_number": 433,
+        "matched_line": "tau_em          = temp2(39)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       nfluxv          = temp2(37)\n       nsource         = temp2(38)\n       tau_em          = temp2(39)\n       tau_sol         = temp2(40)\n       tau_com         = temp2(41)\n       tau_visc        = temp2(42)\n       tau_gyro        = temp2(43)",
+        "line_number": 434,
+        "matched_line": "tau_sol         = temp2(40)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       nsource         = temp2(38)\n       tau_em          = temp2(39)\n       tau_sol         = temp2(40)\n       tau_com         = temp2(41)\n       tau_visc        = temp2(42)\n       tau_gyro        = temp2(43)\n       tau_parvisc     = temp2(44)",
+        "line_number": 435,
+        "matched_line": "tau_com         = temp2(41)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       tau_em          = temp2(39)\n       tau_sol         = temp2(40)\n       tau_com         = temp2(41)\n       tau_visc        = temp2(42)\n       tau_gyro        = temp2(43)\n       tau_parvisc     = temp2(44)\n       bwb2            = temp2(45)",
+        "line_number": 436,
+        "matched_line": "tau_visc        = temp2(42)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       tau_sol         = temp2(40)\n       tau_com         = temp2(41)\n       tau_visc        = temp2(42)\n       tau_gyro        = temp2(43)\n       tau_parvisc     = temp2(44)\n       bwb2            = temp2(45)\n       volume          = temp2(46)",
+        "line_number": 437,
+        "matched_line": "tau_gyro        = temp2(43)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "       tau_com         = temp2(41)\n       tau_visc        = temp2(42)\n       tau_gyro        = temp2(43)\n       tau_parvisc     = temp2(44)\n       bwb2            = temp2(45)\n       volume          = temp2(46)\n       xray_signal     = temp2(47)",
+        "line_number": 438,
+        "matched_line": "tau_parvisc     = temp2(44)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "  ! BCL Warning: nsource_pel and temp_pel are now vectors\n  !              this compiles, but may break at runtime for OpenMP (OMP=1)\n!!$OMP PARALLEL DO PRIVATE(mr,dum1,ier,is_edge,n,iedge,idim,izone,izonedim,izone_ind,i) &\n!!$OMP& REDUCTION(+:ekinp,ekinpd,ekinph,ekint,ekintd,ekinth,ekin3,ekin3d,ekin3h,wallcur,emagp,emagpd,emagph,emagt,emagtd,emagth,emag3,area,parea,totcur,pcur,m_iz,tflux,pflux,tvor,volume,pvol,volpd,totden,pden,totrad,linerad,bremrad,ionrad,reckrad,recprad,totre,nsource,epotg,tmom,pmom,bwb2,efluxp,efluxt,efluxs,efluxk,tau_em,tau_sol,tau_com,tau_visc,tau_gyro,tau_parvisc,nfluxd,nfluxv,xray_signal,Lor_vol,nsource_pel,temp_pel,wall_force_n0_x,wall_force_n0_y,wall_force_n0_z,wall_force_n1_x,wall_force_n1_y,wall_force_n1_z,totne,w_pe,pcur_co,pcur_sn,m_iz_co,m_iz_sn,w_m,w_p,wall_force_n0_x_halo,wall_force_n0_z_halo,helicity,pinj,totkprad,totkprad0,emagpc,emagtc,emagpv,emagtv,jbs)\n  do itri=1,numelms\n\n     !call zonfac(itri, izone, izonedim)",
+        "line_number": 819,
+        "matched_line": "!!$OMP& REDUCTION(+:ekinp,ekinpd,ekinph,ekint,ekintd,ekinth,ekin3,ekin3d,ekin3h,wallcur,emagp,emagpd,emagph,emagt,emagtd,emagth,emag3,area,parea,totcur,pcur,m_iz,tflux,pflux,tvor,volume,pvol,volpd,totden,pden,totrad,linerad,bremrad,ionrad,reckrad,recprad,totre,nsource,epotg,tmom,pmom,bwb2,efluxp,efluxt,efluxs,efluxk,tau_em,tau_sol,tau_com,tau_visc,tau_gyro,tau_parvisc,nfluxd,nfluxv,xray_signal,Lor_vol,nsource_pel,temp_pel,wall_force_n0_x,wall_force_n0_y,wall_force_n0_z,wall_force_n1_x,wall_force_n1_y,wall_force_n1_z,totne,w_pe,pcur_co,pcur_sn,m_iz_co,m_iz_sn,w_m,w_p,wall_force_n0_x_halo,wall_force_n0_z_halo,helicity,pinj,totkprad,totkprad0,emagpc,emagtc,emagpv,emagtv,jbs)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "        ! Toroidal momentum fluxes\n        ! ~~~~~~~~~~~~~~~~~~~~~~~~\n        if(numvar.ge.2) then\n           tau_em   = tau_em   + torque_em()\n           tau_sol  = tau_sol  + torque_sol()\n           tau_com  = tau_com  + torque_com()\n           tau_visc = tau_visc + torque_visc()",
+        "line_number": 1086,
+        "matched_line": "tau_em   = tau_em   + torque_em()",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "        ! ~~~~~~~~~~~~~~~~~~~~~~~~\n        if(numvar.ge.2) then\n           tau_em   = tau_em   + torque_em()\n           tau_sol  = tau_sol  + torque_sol()\n           tau_com  = tau_com  + torque_com()\n           tau_visc = tau_visc + torque_visc()\n           tau_gyro = tau_gyro + torque_gyro()",
+        "line_number": 1087,
+        "matched_line": "tau_sol  = tau_sol  + torque_sol()",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "        if(numvar.ge.2) then\n           tau_em   = tau_em   + torque_em()\n           tau_sol  = tau_sol  + torque_sol()\n           tau_com  = tau_com  + torque_com()\n           tau_visc = tau_visc + torque_visc()\n           tau_gyro = tau_gyro + torque_gyro()\n           tau_parvisc = tau_parvisc + torque_parvisc()",
+        "line_number": 1088,
+        "matched_line": "tau_com  = tau_com  + torque_com()",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "           tau_em   = tau_em   + torque_em()\n           tau_sol  = tau_sol  + torque_sol()\n           tau_com  = tau_com  + torque_com()\n           tau_visc = tau_visc + torque_visc()\n           tau_gyro = tau_gyro + torque_gyro()\n           tau_parvisc = tau_parvisc + torque_parvisc()\n        endif",
+        "line_number": 1089,
+        "matched_line": "tau_visc = tau_visc + torque_visc()",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "           tau_sol  = tau_sol  + torque_sol()\n           tau_com  = tau_com  + torque_com()\n           tau_visc = tau_visc + torque_visc()\n           tau_gyro = tau_gyro + torque_gyro()\n           tau_parvisc = tau_parvisc + torque_parvisc()\n        endif\n",
+        "line_number": 1090,
+        "matched_line": "tau_gyro = tau_gyro + torque_gyro()",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "           tau_com  = tau_com  + torque_com()\n           tau_visc = tau_visc + torque_visc()\n           tau_gyro = tau_gyro + torque_gyro()\n           tau_parvisc = tau_parvisc + torque_parvisc()\n        endif\n\n        ! Particle fluxes",
+        "line_number": 1091,
+        "matched_line": "tau_parvisc = tau_parvisc + torque_parvisc()",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "\n        ! xray signal\n        temp79b = bremsstrahlung(nt79(:,OP_1), pet79(:,OP_1))\n        call get_chord_mask(xray_r0, xray_phi0*pi/180., xray_z0, &\n             x_79, phi_79, z_79, npoints, &\n             xray_theta*pi/180., xray_sigma*pi/180., temp79a)\n        xray_signal = xray_signal + int2(temp79a, temp79b)",
+        "line_number": 1116,
+        "matched_line": "call get_chord_mask(xray_r0, xray_phi0*pi/180., xray_z0, &",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "! get_chord_mask\n! ~~~~~~~~~~~~~~\n! calculates the transfer function\n! exp(-t^2/(2*sigma)^2) / |r - r0|^2\n! where cos(t) = d.(r - r0) and \n! d is the unit vector in the director of the chord\n!======================================================================",
+        "line_number": 2273,
+        "matched_line": "! exp(-t^2/(2*sigma)^2) / |r - r0|^2",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "! ~~~~~~~~~~~~~~\n! calculates the transfer function\n! exp(-t^2/(2*sigma)^2) / |r - r0|^2\n! where cos(t) = d.(r - r0) and \n! d is the unit vector in the director of the chord\n!======================================================================\nsubroutine get_chord_mask(r0, phi0, z0, r, phi, z, npts, theta, sigma, mask)",
+        "line_number": 2274,
+        "matched_line": "! where cos(t) = d.(r - r0) and",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "! where cos(t) = d.(r - r0) and \n! d is the unit vector in the director of the chord\n!======================================================================\nsubroutine get_chord_mask(r0, phi0, z0, r, phi, z, npts, theta, sigma, mask)\n  implicit none\n\n  integer, intent(in) :: npts      ! number of source points",
+        "line_number": 2277,
+        "matched_line": "subroutine get_chord_mask(r0, phi0, z0, r, phi, z, npts, theta, sigma, mask)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "  implicit none\n\n  integer, intent(in) :: npts      ! number of source points\n  real, intent(in) :: r0, phi0, z0 ! location of detector\n  real, intent(in), dimension(npts) :: r, phi, z    ! location of source\n  real, intent(in) :: theta        ! angle of chord w.r.t. horizontal (radians)\n  real, intent(in) :: sigma        ! variance of chord (radians)",
+        "line_number": 2281,
+        "matched_line": "real, intent(in) :: r0, phi0, z0 ! location of detector",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "  real, dimension(npts) :: l, t\n\n  ! distance of source to detector\n  l = sqrt(r**2 + r0**2 - 2.*r*r0*cos(phi-phi0) + (z-z0)**2)\n\n  ! angle of source to detector relative to angle of chord\n  t = acos(((r*cos(phi-phi0) - r0)*cos(theta) + (z-z0)*sin(theta))/l)",
+        "line_number": 2290,
+        "matched_line": "l = sqrt(r**2 + r0**2 - 2.*r*r0*cos(phi-phi0) + (z-z0)**2)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "  l = sqrt(r**2 + r0**2 - 2.*r*r0*cos(phi-phi0) + (z-z0)**2)\n\n  ! angle of source to detector relative to angle of chord\n  t = acos(((r*cos(phi-phi0) - r0)*cos(theta) + (z-z0)*sin(theta))/l)\n\n  ! assume that signal falls off as l**2\n  ! and shape function is guassian in angle from chord",
+        "line_number": 2293,
+        "matched_line": "t = acos(((r*cos(phi-phi0) - r0)*cos(theta) + (z-z0)*sin(theta))/l)",
+        "path": "unstructured/diagnostics.f90"
+      },
+      {
+        "context": "    zlim = zmag\n\n    if(myrank.eq.0) then\n       print *, 'Analytic resonant frequency: ', j0*ntor*(q0 - mpol/ntor)/(2.*sqrt(den0))\n    end if\n    \n    call create_field(psi_vec)",
+        "line_number": 33,
+        "matched_line": "print *, 'Analytic resonant frequency: ', j0*ntor*(q0 - mpol/ntor)/(2.*sqrt(den0))",
+        "path": "unstructured/init_circle.f90"
+      },
+      {
+        "context": "     p079(:,OP_1) = pedge\n  end where\n  bz079(:,OP_1) = bzero\n  n079(:,OP_1) = den0\n\nend subroutine circular_field_equ\n",
+        "line_number": 125,
+        "matched_line": "n079(:,OP_1) = den0",
+        "path": "unstructured/init_circle.f90"
+      },
+      {
+        "context": "  \n  call add_var_int(\"idenfunc\", idenfunc, 0, \"\", gs_grp)\n  call add_var_double(\"den_edge\", den_edge, 0., \"\", gs_grp)\n  call add_var_double(\"den0\", den0, 1., \"\", gs_grp)\n  call add_var_double(\"dendelt\", dendelt, 0.1, \"\", gs_grp)\n  call add_var_double(\"denoff\", denoff, 1., \"\", gs_grp)\n",
+        "line_number": 757,
+        "matched_line": "call add_var_double(\"den0\", den0, 1., \"\", gs_grp)",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "  call add_var_double(\"sigma_rekc\", sigma_rekc, 0., &\n       \"Angular half-width of REKC\", rw_grp)\n  call add_var_double(\"rzero_rekc\", rzero_rekc, 0., &\n       \"R0 for computing theta of REKC\", rw_grp)\n  call add_var_double(\"zzero_rekc\", zzero_rekc, 0., &\n       \"Z0 for computing theta of REKC\", rw_grp)\n  ",
+        "line_number": 892,
+        "matched_line": "\"R0 for computing theta of REKC\", rw_grp)",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "       \"1: localized magnetic flux/vector-potential control source\", source_grp)\n  call add_var_double(\"mag_ctrl_amp\", mag_ctrl_amp, 0., &\n       \"localized magnetic control amplitude\", source_grp)\n  call add_var_double(\"mag_ctrl_r0\", mag_ctrl_r0, 10., &\n       \"R-coordinate of magnetic control center\", source_grp)\n  call add_var_double(\"mag_ctrl_z0\", mag_ctrl_z0, 1., &\n       \"Z-coordinate of magnetic control center\", source_grp)",
+        "line_number": 1011,
+        "matched_line": "call add_var_double(\"mag_ctrl_r0\", mag_ctrl_r0, 10., &",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "  ! diagnostics\n  call add_var_int(\"xray_detector_enabled\", xray_detector_enabled, 0, &\n       \"1: enable xray detector\", diagnostic_grp)\n  call add_var_double(\"xray_r0\", xray_r0, 0., &\n       \"R coordinate of xray detector\", diagnostic_grp)\n  call add_var_double(\"xray_phi0\", xray_phi0, 0., &\n       \"Phi coordinate of xray detector\", diagnostic_grp)",
+        "line_number": 1148,
+        "matched_line": "call add_var_double(\"xray_r0\", xray_r0, 0., &",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "  end if \n\n  if(den_edge.le.0.) then\n     de = den0*(pedge/p0)**expn\n  else\n     de = den_edge\n     if(iread_ne.ne.0) then",
+        "line_number": 1751,
+        "matched_line": "de = den0*(pedge/p0)**expn",
+        "path": "unstructured/input.f90"
+      },
+      {
+        "context": "\n\n\n!! Routine that calculates rho0 as a function of gamma\nreal function rho0(gamma,beta,drho,t_end) result(y)\n  real, intent(in)  :: gamma, beta, drho, t_end\n  real              :: rho",
+        "line_number": 67,
+        "matched_line": "!! Routine that calculates rho0 as a function of gamma",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "\n\n!! Routine that calculates rho0 as a function of gamma\nreal function rho0(gamma,beta,drho,t_end) result(y)\n  real, intent(in)  :: gamma, beta, drho, t_end\n  real              :: rho\n  real, dimension(2):: t_bucket, g_bucket",
+        "line_number": 68,
+        "matched_line": "real function rho0(gamma,beta,drho,t_end) result(y)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  end do\n  !! Return the final coordinate\n  y             = rho\nend function rho0\n\n!! Routine that finds rho0(gamma_final)=1\nreal function gamma_final(beta,drho,t_end) result(y)",
+        "line_number": 93,
+        "matched_line": "end function rho0",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  y             = rho\nend function rho0\n\n!! Routine that finds rho0(gamma_final)=1\nreal function gamma_final(beta,drho,t_end) result(y)\n  real, intent(in)  :: beta, drho,t_end\n  real, dimension(2):: gamma0, rhoarr",
+        "line_number": 95,
+        "matched_line": "!! Routine that finds rho0(gamma_final)=1",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  real, intent(in)  :: beta, drho,t_end\n  real, dimension(2):: gamma0, rhoarr\n\n  !! Initialize two gamma guesses and calculate corresponding rho0\n  gamma0        = (/ 1, 10 /)\n  rhoarr(1)     = rho0(gamma0(1),beta,drho,t_end)\n  rhoarr(2)     = rho0(gamma0(2),beta,drho,t_end)",
+        "line_number": 100,
+        "matched_line": "!! Initialize two gamma guesses and calculate corresponding rho0",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "\n  !! Initialize two gamma guesses and calculate corresponding rho0\n  gamma0        = (/ 1, 10 /)\n  rhoarr(1)     = rho0(gamma0(1),beta,drho,t_end)\n  rhoarr(2)     = rho0(gamma0(2),beta,drho,t_end)\n\n  !! Go through Newton-Rhpason method to approximate root.",
+        "line_number": 102,
+        "matched_line": "rhoarr(1)     = rho0(gamma0(1),beta,drho,t_end)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  !! Initialize two gamma guesses and calculate corresponding rho0\n  gamma0        = (/ 1, 10 /)\n  rhoarr(1)     = rho0(gamma0(1),beta,drho,t_end)\n  rhoarr(2)     = rho0(gamma0(2),beta,drho,t_end)\n\n  !! Go through Newton-Rhpason method to approximate root.\n  do while (abs(rhoarr(2)-1) .gt. 1E-6)",
+        "line_number": 103,
+        "matched_line": "rhoarr(2)     = rho0(gamma0(2),beta,drho,t_end)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "    gamma0(1) = abs(gamma0(1) - (rhoarr(1) - 1) * (gamma0(2) - gamma0(1)) / (rhoarr(2) - rhoarr(1)))\n    gamma0    = gamma0(2:1:-1)\n\n    rhoarr(1)   = rho0(gamma0(2),beta,drho,t_end)\n    rhoarr      = rhoarr(2:1:-1)\n  end do\n  ! Return final gamma",
+        "line_number": 111,
+        "matched_line": "rhoarr(1)   = rho0(gamma0(2),beta,drho,t_end)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  use eqcalc\n  implicit none\n  real              :: drho, beta, gamma,t1, betap, b_zval, t_end, p_inf\n  real              :: eta0, a, Ip, kappa0, R0, T0, VL, epsilon, &\n                       B1, p_tot, p0, eta_fac, ln_lambda, z_ion\n  integer           :: b_flat\n  real, dimension(:), allocatable  :: t_prof, g_prof, btheta_prof,rho_array, p_prof, bz_arr, rho_arr, v_arr",
+        "line_number": 371,
+        "matched_line": "real              :: eta0, a, Ip, kappa0, R0, T0, VL, epsilon, &",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  a       = 1.0       ! Minor radius\n  Ip      = 1E6       ! Total plasma current\n  kappa0  = 1E22      ! Heat diffusivity\n  R0      = 10.0      ! Major radius\n  B1      = mu0*Ip/(2*pi*a) ! Strength of poloidal magnetic field at edge\n  epsilon = a/R0      ! Minor of Major radius\n  b_flat  = 0         ! Parameter indiciating if the pressure will be calculated",
+        "line_number": 405,
+        "matched_line": "R0      = 10.0      ! Major radius",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  kappa0  = 1E22      ! Heat diffusivity\n  R0      = 10.0      ! Major radius\n  B1      = mu0*Ip/(2*pi*a) ! Strength of poloidal magnetic field at edge\n  epsilon = a/R0      ! Minor of Major radius\n  b_flat  = 0         ! Parameter indiciating if the pressure will be calculated\n                      ! consistently via the q profile (b_flat = 1),\n                      ! or if one will assume a flat b_z profile (b_flat = 0).",
+        "line_number": 407,
+        "matched_line": "epsilon = a/R0      ! Minor of Major radius",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "\n  !! Calculate dimensionfull quantities\n  T0 =  (eta0**0.4*gamma**0.4*Ip**0.8)/(a**0.8*kappa0**0.4*(2*pi)**0.8*(abs(beta*gamma*p_tot - k(1.0)*t1))**0.8)\n  VL =  (2*2**0.2*eta0**0.4*gamma**0.4*kappa0**0.6*pi**1.2*R0*(abs(beta*gamma*p_tot - k(1.0)*t1))**0.2)/(a**0.8*Ip**0.2)\n  p0 =  mu0*Ip**2.0/(8.0 * pi**2.0 * a**2.0 * betap )\n  q0      = 3.0     !! Centre value for q\n  b_zval  = q0*B1*(btheta_prof(2) - btheta_prof(1))/epsilon/drho",
+        "line_number": 430,
+        "matched_line": "VL =  (2*2**0.2*eta0**0.4*gamma**0.4*kappa0**0.6*pi**1.2*R0*(abs(beta*gamma*p_tot - k(1.0)*t1))**0.2)/(a**0.8*Ip**0.2)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  !! Make to be written matrices\n  allocate ( profile_j(2,n_nodes) )\n  profile_j(1,:) = a*rho_arr\n  profile_j(2,:) = VL*T0**(1.5)/(2.0*pi*R0*eta0)*t_prof**(1.5)\n\n  allocate ( profile_p(2,n_nodes) )\n  profile_p(1,:) = a*rho_arr",
+        "line_number": 440,
+        "matched_line": "profile_j(2,:) = VL*T0**(1.5)/(2.0*pi*R0*eta0)*t_prof**(1.5)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "\n  allocate ( profile_q(2,n_nodes) )\n  profile_q(1,:)  = a*rho_arr\n  profile_q(2,:)  = rho_arr*bz_arr/(epsilon*R0*btheta_prof)\n  if ( b_flat  == 0 ) then\n    profile_q(2,:) = a*rho_arr*b_zval/(R0*btheta_prof*B1)\n  end if",
+        "line_number": 463,
+        "matched_line": "profile_q(2,:)  = rho_arr*bz_arr/(epsilon*R0*btheta_prof)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  profile_q(1,:)  = a*rho_arr\n  profile_q(2,:)  = rho_arr*bz_arr/(epsilon*R0*btheta_prof)\n  if ( b_flat  == 0 ) then\n    profile_q(2,:) = a*rho_arr*b_zval/(R0*btheta_prof*B1)\n  end if\n\n  allocate ( profile_omega(2,n_nodes) )",
+        "line_number": 465,
+        "matched_line": "profile_q(2,:) = a*rho_arr*b_zval/(R0*btheta_prof*B1)",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "  profile_omega(2,:)  = v_arr * ( F0 * a**2.0 /(mu_v * alpha) )\n  print *, 'Core rotation (m/s) :', profile_omega(2,1)\n  ! convert from m/s to krad/s\n  profile_omega(2,:) = profile_omega(2,:) / R0 / 1e3\n\n  d = n_nodes / n_out\n",
+        "line_number": 473,
+        "matched_line": "profile_omega(2,:) = profile_omega(2,:) / R0 / 1e3",
+        "path": "unstructured/mackenbach_profiles.f90"
+      },
+      {
+        "context": "     case default\n        if(myrank.eq.0) then\n           print *, 'Error: iwave must be one of the following:'\n           print *, ' iwave = 0: Shear Alfven wave'\n        end if\n        call safestop(4)\n     end select",
+        "line_number": 42,
+        "matched_line": "print *, ' iwave = 0: Shear Alfven wave'",
+        "path": "unstructured/init_3dwave.f90"
+      },
+      {
+        "context": "  case(2)\n     select case(iwave)\n     case(0)\n        if(myrank.eq.0) print *, 'Shear Alfven wave'\n        \n        omega = bx0*kx*kB + 0.5*b2*kphi**2 &\n             + 0.5*sqrt((2.*bx0*kx*kB + B2*kphi**2)**2 &",
+        "line_number": 50,
+        "matched_line": "if(myrank.eq.0) print *, 'Shear Alfven wave'",
+        "path": "unstructured/init_3dwave.f90"
+      },
+      {
+        "context": "     case default\n        if(myrank.eq.0) then\n           print *, 'Error: iwave must be one of the following:'\n           print *, ' iwave = 0: Shear Alfven wave'\n           print *, ' iwave = 1: Fast wave'\n        end if\n        call safestop(4)",
+        "line_number": 68,
+        "matched_line": "print *, ' iwave = 0: Shear Alfven wave'",
+        "path": "unstructured/init_3dwave.f90"
+      },
+      {
+        "context": "\n     select case(iwave)\n     case(0)\n        if(myrank.eq.0) print *, 'Shear Alfven wave'\n        omega = bzero*kphi\n\n     case(1)",
+        "line_number": 82,
+        "matched_line": "if(myrank.eq.0) print *, 'Shear Alfven wave'",
+        "path": "unstructured/init_3dwave.f90"
+      },
+      {
+        "context": "     case default\n        if(myrank.eq.0) then\n           print *, 'Error: iwave must be one of the following:'\n           print *, ' iwave = 0: Shear Alfven wave'\n           print *, ' iwave = 1: Fast wave'\n           print *, ' iwave = 2: Slow wave'\n        end if",
+        "line_number": 102,
+        "matched_line": "print *, ' iwave = 0: Shear Alfven wave'",
+        "path": "unstructured/init_3dwave.f90"
+      },
+      {
+        "context": "\n  /* Step 8: hybrid solve */\n      /* 8.0 hybrid solve: clean solver content \n         dpdslin_solver( double *b0, double *x, dPDSLinMatrix *matrix, pdslin_param *input, pdslin_stat *stat, int *info );\n       */\n        if(hs_array[whichMatrix].init >= 1 && flag==1) {\n      hs_array[whichMatrix].input.job =  PDSLin_CLEAN;",
+        "line_number": 482,
+        "matched_line": "dpdslin_solver( double *b0, double *x, dPDSLinMatrix *matrix, pdslin_param *input, pdslin_stat *stat, int *info );",
+        "path": "unstructured/PETScInterface.cpp"
+      },
+      {
+        "context": "      hs_array[whichMatrix].input.verbose = PDSLin_VALL;\n      hs_array[whichMatrix].input.remove_zero = PDSLin_NO;\n      hs_array[whichMatrix].input.job = PDSLin_PRECO;\n      //if(*matrixId==5) hs_array[whichMatrix].input.drop_tau0 = 1.e-8;\n      dpdslin_solver( hs_array[whichMatrix].b_loc, \n                      hs_array[whichMatrix].x_loc, \n                      &(hs_array[whichMatrix].A), ",
+        "line_number": 631,
+        "matched_line": "//if(*matrixId==5) hs_array[whichMatrix].input.drop_tau0 = 1.e-8;",
+        "path": "unstructured/PETScInterface.cpp"
+      },
+      {
+        "context": "  implicit none\n\n  real, intent(in) :: x, z\n  real :: r,Bp0,integral,rs, Bz_edge,Bz,dBzdx,dBzdz,r0\n  integer :: m,n\n\n",
+        "line_number": 52,
+        "matched_line": "real :: r,Bp0,integral,rs, Bz_edge,Bz,dBzdx,dBzdz,r0",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  integer :: m,n\n\n\n  r0=xlim ! Current channel with\n  rs=zlim! Position of singular surface\n\n  m=mpol ",
+        "line_number": 56,
+        "matched_line": "r0=xlim ! Current channel with",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "\n\n  Bp0=sqrt((Bz_edge**2 -2.*p0*(1.-rs**2)) &\n       /((real(m)/real(n)*rzero*(rs/r0)/(1+(rs/r0)**2)/rs )**2 &\n       +2.*(-1./2.)*((1.+(rs/r0)**2)**(-2)-(1.+(1./r0)**2)**(-2))))\n\n  call constant_field(den0_l, 1.)",
+        "line_number": 65,
+        "matched_line": "/((real(m)/real(n)*rzero*(rs/r0)/(1+(rs/r0)**2)/rs )**2 &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "\n  Bp0=sqrt((Bz_edge**2 -2.*p0*(1.-rs**2)) &\n       /((real(m)/real(n)*rzero*(rs/r0)/(1+(rs/r0)**2)/rs )**2 &\n       +2.*(-1./2.)*((1.+(rs/r0)**2)**(-2)-(1.+(1./r0)**2)**(-2))))\n\n  call constant_field(den0_l, 1.)\n",
+        "line_number": 66,
+        "matched_line": "+2.*(-1./2.)*((1.+(rs/r0)**2)**(-2)-(1.+(1./r0)**2)**(-2))))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  pe0_l(6)=0.\n\n\n  psi0_l(1) = (-rzero*Bp0*r0/2.*log(1.+(r/r0)**2) &\n       +rzero*Bp0*r0/2.*log(1.+(1./r0)**2))\n  psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)\n  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)",
+        "line_number": 90,
+        "matched_line": "psi0_l(1) = (-rzero*Bp0*r0/2.*log(1.+(r/r0)**2) &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "\n\n  psi0_l(1) = (-rzero*Bp0*r0/2.*log(1.+(r/r0)**2) &\n       +rzero*Bp0*r0/2.*log(1.+(1./r0)**2))\n  psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)\n  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)\n  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &",
+        "line_number": 91,
+        "matched_line": "+rzero*Bp0*r0/2.*log(1.+(1./r0)**2))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "\n  psi0_l(1) = (-rzero*Bp0*r0/2.*log(1.+(r/r0)**2) &\n       +rzero*Bp0*r0/2.*log(1.+(1./r0)**2))\n  psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)\n  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)\n  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))",
+        "line_number": 92,
+        "matched_line": "psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  psi0_l(1) = (-rzero*Bp0*r0/2.*log(1.+(r/r0)**2) &\n       +rzero*Bp0*r0/2.*log(1.+(1./r0)**2))\n  psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)\n  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)\n  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2",
+        "line_number": 93,
+        "matched_line": "psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "       +rzero*Bp0*r0/2.*log(1.+(1./r0)**2))\n  psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)\n  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)\n  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2\n  psi0_l(6) = -rzero*Bp0*r0/2.*(-(2.*z/r0**2)**2/(1+(r/r0)**2)**2 &",
+        "line_number": 94,
+        "matched_line": "psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  psi0_l(2) = -rzero*Bp0*(x/r0)/(1.+(r/r0)**2)\n  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)\n  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2\n  psi0_l(6) = -rzero*Bp0*r0/2.*(-(2.*z/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))",
+        "line_number": 95,
+        "matched_line": "+2./r0**2/(1+(r/r0)**2))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  psi0_l(3) = -rzero*Bp0*(z/r0)/(1.+(r/r0)**2)\n  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2\n  psi0_l(6) = -rzero*Bp0*r0/2.*(-(2.*z/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  ",
+        "line_number": 96,
+        "matched_line": "psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  psi0_l(4) = -rzero*Bp0*r0/2.*(-(2.*x/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2\n  psi0_l(6) = -rzero*Bp0*r0/2.*(-(2.*z/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  \n",
+        "line_number": 97,
+        "matched_line": "psi0_l(6) = -rzero*Bp0*r0/2.*(-(2.*z/r0**2)**2/(1+(r/r0)**2)**2 &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "       +2./r0**2/(1+(r/r0)**2))\n  psi0_l(5) = -rzero*Bp0*r0/2.*(-4.*z*x)/r0**4/(1+(r/r0)**2)**2\n  psi0_l(6) = -rzero*Bp0*r0/2.*(-(2.*z/r0**2)**2/(1+(r/r0)**2)**2 &\n       +2./r0**2/(1+(r/r0)**2))\n  \n\n",
+        "line_number": 98,
+        "matched_line": "+2./r0**2/(1+(r/r0)**2))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  \n\n\n  integral=(-1./2.)*((1.+(r/r0)**2)**(-2)-(1.+(1./r0)**2)**(-2))\n\n  Bz=sqrt(Bz_edge**2-2.*p0_l(1)-2.*Bp0**2*integral)\n",
+        "line_number": 102,
+        "matched_line": "integral=(-1./2.)*((1.+(r/r0)**2)**(-2)-(1.+(1./r0)**2)**(-2))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "\n  Bz=sqrt(Bz_edge**2-2.*p0_l(1)-2.*Bp0**2*integral)\n\n  dBzdx=(1./Bz)*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x)\n  dBzdz=(1./Bz)*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z)\n  bz0_l(1)=rzero*Bz\n  bz0_l(2)=rzero*dBzdx",
+        "line_number": 106,
+        "matched_line": "dBzdx=(1./Bz)*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x)",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  Bz=sqrt(Bz_edge**2-2.*p0_l(1)-2.*Bp0**2*integral)\n\n  dBzdx=(1./Bz)*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x)\n  dBzdz=(1./Bz)*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z)\n  bz0_l(1)=rzero*Bz\n  bz0_l(2)=rzero*dBzdx\n  bz0_l(3)=rzero*dBzdz",
+        "line_number": 107,
+        "matched_line": "dBzdz=(1./Bz)*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z)",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  bz0_l(2)=rzero*dBzdx\n  bz0_l(3)=rzero*dBzdz\n  bz0_l(4)=rzero* &\n       (-1./Bz**2*dBzdx*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*x/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n  bz0_l(5)=rzero* &",
+        "line_number": 112,
+        "matched_line": "(-1./Bz**2*dBzdx*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  bz0_l(3)=rzero*dBzdz\n  bz0_l(4)=rzero* &\n       (-1./Bz**2*dBzdx*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*x/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n  bz0_l(5)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &",
+        "line_number": 113,
+        "matched_line": "+1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  bz0_l(4)=rzero* &\n       (-1./Bz**2*dBzdx*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*x/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n  bz0_l(5)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(-3.)*4.*x*z/r0**4/(1.+(r/r0)**2)**4))",
+        "line_number": 114,
+        "matched_line": "- 3.*(2.*x/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*x/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n  bz0_l(5)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(-3.)*4.*x*z/r0**4/(1.+(r/r0)**2)**4))\n  bz0_l(6)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z) &",
+        "line_number": 116,
+        "matched_line": "(-1./Bz**2*dBzdz*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "                        - 3.*(2.*x/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n  bz0_l(5)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(-3.)*4.*x*z/r0**4/(1.+(r/r0)**2)**4))\n  bz0_l(6)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &",
+        "line_number": 117,
+        "matched_line": "+1./Bz*(-Bp0**2*(-3.)*4.*x*z/r0**4/(1.+(r/r0)**2)**4))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "       (-1./Bz**2*dBzdz*(-Bp0**2*2.*x/r0**2/(1.+(r/r0)**2)**3+2.*p0*x) &\n       +1./Bz*(-Bp0**2*(-3.)*4.*x*z/r0**4/(1.+(r/r0)**2)**4))\n  bz0_l(6)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*z/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n",
+        "line_number": 119,
+        "matched_line": "(-1./Bz**2*dBzdz*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z) &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "       +1./Bz*(-Bp0**2*(-3.)*4.*x*z/r0**4/(1.+(r/r0)**2)**4))\n  bz0_l(6)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*z/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n\nend subroutine frs_equ",
+        "line_number": 120,
+        "matched_line": "+1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "  bz0_l(6)=rzero* &\n       (-1./Bz**2*dBzdz*(-Bp0**2*2.*z/r0**2/(1.+(r/r0)**2)**3+2.*p0*z) &\n       +1./Bz*(-Bp0**2*(2./r0**2/(1.+(r/r0)**2)**3 &\n                        - 3.*(2.*z/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))\n\nend subroutine frs_equ\n",
+        "line_number": 121,
+        "matched_line": "- 3.*(2.*z/r0**2)**2/(1.+(r/r0)**2)**4  )+2.*p0))",
+        "path": "unstructured/init_frs.f90"
+      },
+      {
+        "context": "    \n    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 323,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HID_T) :: dspace_id, attr_id\n    integer(HSIZE_T), dimension(1) :: dims\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n",
+        "line_number": 324,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSIZE_T), dimension(rank) :: local_dims, global_dims\n    integer(HSSIZE_T), dimension(rank) :: off\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 358,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSSIZE_T), dimension(rank) :: off\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n    ",
+        "line_number": 359,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSIZE_T), dimension(rank) :: local_dims, global_dims\n    integer(HSSIZE_T), dimension(rank) :: off\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 474,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSSIZE_T), dimension(rank) :: off\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n",
+        "line_number": 475,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSSIZE_T), dimension(rank) :: off\n    integer :: offset_loc, global_elms_loc \n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 586,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer :: offset_loc, global_elms_loc \n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n    ",
+        "line_number": 587,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    real, allocatable :: values(:)\n    logical :: exists\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 676,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    logical :: exists\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n",
+        "line_number": 677,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HID_T) :: memspace, filespace, dset_id, plist_id\n    real :: values(1)\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 767,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    real :: values(1)\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n",
+        "line_number": 768,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSIZE_T), dimension(rank) :: local_dims, global_dims\n    integer(HSSIZE_T), dimension(rank) :: off\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 816,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSSIZE_T), dimension(rank) :: off\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n    ",
+        "line_number": 817,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "\n    integer :: NOUT\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 932,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer :: NOUT\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n",
+        "line_number": 933,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HSIZE_T) :: dims(2), maxdims(2), local_dims(2), off(2)\n    integer(HID_T) :: memspace, filespace, dset_id, plist_id\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif",
+        "line_number": 1027,
+        "matched_line": "#ifdef USETAU",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "    integer(HID_T) :: memspace, filespace, dset_id, plist_id\n\n#ifdef USETAU\n    integer :: dummy     ! this is necessary to prevent TAU from\n    dummy = 0            ! breaking formatting requirements\n#endif\n",
+        "line_number": 1028,
+        "matched_line": "integer :: dummy     ! this is necessary to prevent TAU from",
+        "path": "unstructured/hdf5_output.f90"
+      },
+      {
+        "context": "      vectype, dimension(coeffs_per_element) :: er, ephi, ez\n      vectype, dimension(coeffs_per_element) :: rho, nf, tf\n      vectype, dimension(coeffs_per_element) :: nfi, tfi\n      vectype, dimension(coeffs_per_element) :: B0, B1, B1_last\n      vectype, dimension(coeffs_per_element) :: pe, ne, pe0, ne0, te0\n      vectype, dimension(coeffs_per_element) :: rst, zst\n   end type elfield",
+        "line_number": 40,
+        "matched_line": "vectype, dimension(coeffs_per_element) :: B0, B1, B1_last",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "      real, dimension(vspdims) :: v           !Velocity\n      real                     :: wt    !Particle weighting in delta-f scheme\n      real                     :: dB      !Time\n      real                     :: B0\n      real                     :: dE\n      integer                  :: sps\n      integer                  :: gid         !Unique global particle index",
+        "line_number": 62,
+        "matched_line": "real                     :: B0",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "   pdspls(3) = pdspls(3) - pdspls(1)\n   call mpi_get_address(dum_par%dB, pdspls(4), ierr)\n   pdspls(4) = pdspls(4) - pdspls(1)\n   call mpi_get_address(dum_par%B0, pdspls(5), ierr)\n   pdspls(5) = pdspls(5) - pdspls(1)\n   call mpi_get_address(dum_par%dE, pdspls(6), ierr)\n   pdspls(6) = pdspls(6) - pdspls(1)",
+        "line_number": 162,
+        "matched_line": "call mpi_get_address(dum_par%B0, pdspls(5), ierr)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "   pdspls(13) = pdspls(13) - pdspls(1)\n   call mpi_get_address(dum_elfield%tfi, pdspls(14), ierr)\n   pdspls(14) = pdspls(14) - pdspls(1)\n   call mpi_get_address(dum_elfield%B0, pdspls(15), ierr)\n   pdspls(15) = pdspls(15) - pdspls(1)\n   call mpi_get_address(dum_elfield%B1, pdspls(16), ierr)\n   pdspls(16) = pdspls(16) - pdspls(1)",
+        "line_number": 238,
+        "matched_line": "call mpi_get_address(dum_elfield%B0, pdspls(15), ierr)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "#endif\n   real    :: x1, x2, x3, z1, z2, z3, phi1, phi2, phi3, pdx, pdphi, pdz, pdl, vpar, vperp\n   real    :: x_min, x_max, phi_min, phi_max, z_min, z_max, area\n   real    :: maxspeed, lambda_min, lambda_max, B0, Bmax, pphi, lambda\n   real    :: gyroperiod, gfrac = 5.0e-3, gkfrac = 800.0, dtp, ldtmin\n   real    :: par_r, par_theta, x_temp, z_temp, ran_temp, ran_temp2, y1, y2\n   integer :: npr, npphi, npz, npe, npmu, nphiv, ir, iphi, iz, ip, ipar, nptheta",
+        "line_number": 404,
+        "matched_line": "real    :: maxspeed, lambda_min, lambda_max, B0, Bmax, pphi, lambda",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "   real, allocatable, dimension(:) :: rho_vals, psi_vals, nf_vals, tf_vals\n   integer :: ipoint, dotloc\n\n   real, dimension(3) :: bhat, Bstar, Jcyl, svec, dBdR, dBdphi, dBdz, gradB0, gradB1, BxgrdB, dvdt\n   real :: gradcoef0, df0de0, df0dxi0\n   real :: Rinv, Bss, dB1, di, R_axis, di_axis\n   integer :: num_f",
+        "line_number": 436,
+        "matched_line": "real, dimension(3) :: bhat, Bstar, Jcyl, svec, dBdR, dBdphi, dBdz, gradB0, gradB1, BxgrdB, dvdt",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "         dpar%x = (mesh_coord(:, 1, itri) + mesh_coord(:, 2, itri) + mesh_coord(:, 3, itri))/3.\n#endif\n         dpar%v = 0.\n         B0 = 1.\n         call get_geom_terms(dpar%x, itri, geomterms, .false., ierr)\n#ifdef USEST\n         di = 1./(dot_product(elfieldcoefs(itri)%rst,geomterms%dr)*dot_product(elfieldcoefs(itri)%zst,geomterms%dz)&",
+        "line_number": 762,
+        "matched_line": "B0 = 1.",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "               !y2 = acos(ran_temp*2-1)\n               !vpar = maxspeed * cos(y2)\n               !vperp = maxspeed * sin(y2)\n               !Pphi = dot_product(elfieldcoefs(itri)%psiv0, geomterms%g) + (1./qm_ion) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0\n               !dpar%f0=Pphi\n               !dpar%f0=maxspeed**2\n            if ((sps.eq.1).or.(fast_ion_dist.eq.1)) then",
+        "line_number": 833,
+        "matched_line": "!Pphi = dot_product(elfieldcoefs(itri)%psiv0, geomterms%g) + (1./qm_ion) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "               vpar = y1 * pitch\n               vperp = y1 * sqrt(1-pitch**2)\n\n               call getBcyl(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, gradB0, gradB1, dB1)\n               B0 = sqrt(dot_product(Bcyl, Bcyl))\n               pphi = (dot_product(elfieldcoefs(itri)%psiv0, geomterms%g)+(1./qm_ion(sps)) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0)-psimin\n               radi_i=int((pphi-r_array(1))/(r_array(2)-r_array(1)))+1",
+        "line_number": 866,
+        "matched_line": "call getBcyl(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, gradB0, gradB1, dB1)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "               vperp = y1 * sqrt(1-pitch**2)\n\n               call getBcyl(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, gradB0, gradB1, dB1)\n               B0 = sqrt(dot_product(Bcyl, Bcyl))\n               pphi = (dot_product(elfieldcoefs(itri)%psiv0, geomterms%g)+(1./qm_ion(sps)) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0)-psimin\n               radi_i=int((pphi-r_array(1))/(r_array(2)-r_array(1)))+1\n               lambda = vperp**2/B0*1.99/y1**2",
+        "line_number": 867,
+        "matched_line": "B0 = sqrt(dot_product(Bcyl, Bcyl))",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "\n               call getBcyl(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, gradB0, gradB1, dB1)\n               B0 = sqrt(dot_product(Bcyl, Bcyl))\n               pphi = (dot_product(elfieldcoefs(itri)%psiv0, geomterms%g)+(1./qm_ion(sps)) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0)-psimin\n               radi_i=int((pphi-r_array(1))/(r_array(2)-r_array(1)))+1\n               lambda = vperp**2/B0*1.99/y1**2\n               pitch_i=int((lambda-pitch_array(1))/(pitch_array(2)-pitch_array(1)))+1",
+        "line_number": 868,
+        "matched_line": "pphi = (dot_product(elfieldcoefs(itri)%psiv0, geomterms%g)+(1./qm_ion(sps)) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0)-psimin",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "               B0 = sqrt(dot_product(Bcyl, Bcyl))\n               pphi = (dot_product(elfieldcoefs(itri)%psiv0, geomterms%g)+(1./qm_ion(sps)) * vpar *  dot_product(elfieldcoefs(itri)%Bzv0, geomterms%g)/B0)-psimin\n               radi_i=int((pphi-r_array(1))/(r_array(2)-r_array(1)))+1\n               lambda = vperp**2/B0*1.99/y1**2\n               pitch_i=int((lambda-pitch_array(1))/(pitch_array(2)-pitch_array(1)))+1\n               energy_i=int((energy-energy_array(1))/(energy_array(2)-energy_array(1)))+1\n",
+        "line_number": 870,
+        "matched_line": "lambda = vperp**2/B0*1.99/y1**2",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            f0 = 1.0\n            dpar%f0=f0\n            if (vspdims .eq. 2) then\n               call getBcyl(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, gradB0, gradB1, dB1)\n            else\n               !call getBcylprime(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, dBdR, dBdphi, dBdz, .false.)\n            end if",
+        "line_number": 930,
+        "matched_line": "call getBcyl(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, gradB0, gradB1, dB1)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "               !call getBcylprime(dpar%x, elfieldcoefs(itri), geomterms, Bcyl, deltaB, dBdR, dBdphi, dBdz, .false.)\n            end if\n            !write(0,*) Bcyl\n            B0 = sqrt(dot_product(Bcyl, Bcyl))\n            bhat = Bcyl/B0                         !Unit vector in b direction\n            !dpar%f0=dpar%f0*1./((vpar**2+vperp**2)**(1.5)+T00**3)\n",
+        "line_number": 935,
+        "matched_line": "B0 = sqrt(dot_product(Bcyl, Bcyl))",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            end if\n            !write(0,*) Bcyl\n            B0 = sqrt(dot_product(Bcyl, Bcyl))\n            bhat = Bcyl/B0                         !Unit vector in b direction\n            !dpar%f0=dpar%f0*1./((vpar**2+vperp**2)**(1.5)+T00**3)\n\n            !if (vspdims.eq.5) then !full orbit",
+        "line_number": 936,
+        "matched_line": "bhat = Bcyl/B0                         !Unit vector in b direction",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "\n            !if (vspdims.eq.5) then !full orbit\n            !dpar%v(4) = vpar\n            !dpar%v(5) = (0.5*vperp**2)/(qm_ion*B0)\n            !gradB0(1) = dot_product(bhat, dBdR)\n            !gradB0(2) = Rinv*dot_product(bhat, dBdphi)\n            !gradB0(3) = dot_product(bhat, dBdz)",
+        "line_number": 941,
+        "matched_line": "!dpar%v(5) = (0.5*vperp**2)/(qm_ion*B0)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !if (vspdims.eq.5) then !full orbit\n            !dpar%v(4) = vpar\n            !dpar%v(5) = (0.5*vperp**2)/(qm_ion*B0)\n            !gradB0(1) = dot_product(bhat, dBdR)\n            !gradB0(2) = Rinv*dot_product(bhat, dBdphi)\n            !gradB0(3) = dot_product(bhat, dBdz)\n",
+        "line_number": 942,
+        "matched_line": "!gradB0(1) = dot_product(bhat, dBdR)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !dpar%v(4) = vpar\n            !dpar%v(5) = (0.5*vperp**2)/(qm_ion*B0)\n            !gradB0(1) = dot_product(bhat, dBdR)\n            !gradB0(2) = Rinv*dot_product(bhat, dBdphi)\n            !gradB0(3) = dot_product(bhat, dBdz)\n\n            !BxgrdB(1) = Bcyl(2)*gradB0(3) - Bcyl(3)*gradB0(2)",
+        "line_number": 943,
+        "matched_line": "!gradB0(2) = Rinv*dot_product(bhat, dBdphi)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !dpar%v(5) = (0.5*vperp**2)/(qm_ion*B0)\n            !gradB0(1) = dot_product(bhat, dBdR)\n            !gradB0(2) = Rinv*dot_product(bhat, dBdphi)\n            !gradB0(3) = dot_product(bhat, dBdz)\n\n            !BxgrdB(1) = Bcyl(2)*gradB0(3) - Bcyl(3)*gradB0(2)\n            !BxgrdB(2) = Bcyl(3)*gradB0(1) - Bcyl(1)*gradB0(3)",
+        "line_number": 944,
+        "matched_line": "!gradB0(3) = dot_product(bhat, dBdz)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !gradB0(2) = Rinv*dot_product(bhat, dBdphi)\n            !gradB0(3) = dot_product(bhat, dBdz)\n\n            !BxgrdB(1) = Bcyl(2)*gradB0(3) - Bcyl(3)*gradB0(2)\n            !BxgrdB(2) = Bcyl(3)*gradB0(1) - Bcyl(1)*gradB0(3)\n            !BxgrdB(3) = Bcyl(1)*gradB0(2) - Bcyl(2)*gradB0(1)\n",
+        "line_number": 946,
+        "matched_line": "!BxgrdB(1) = Bcyl(2)*gradB0(3) - Bcyl(3)*gradB0(2)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !gradB0(3) = dot_product(bhat, dBdz)\n\n            !BxgrdB(1) = Bcyl(2)*gradB0(3) - Bcyl(3)*gradB0(2)\n            !BxgrdB(2) = Bcyl(3)*gradB0(1) - Bcyl(1)*gradB0(3)\n            !BxgrdB(3) = Bcyl(1)*gradB0(2) - Bcyl(2)*gradB0(1)\n\n            !Jcyl(1) = Rinv*dBdphi(3) - dBdz(2)",
+        "line_number": 947,
+        "matched_line": "!BxgrdB(2) = Bcyl(3)*gradB0(1) - Bcyl(1)*gradB0(3)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "\n            !BxgrdB(1) = Bcyl(2)*gradB0(3) - Bcyl(3)*gradB0(2)\n            !BxgrdB(2) = Bcyl(3)*gradB0(1) - Bcyl(1)*gradB0(3)\n            !BxgrdB(3) = Bcyl(1)*gradB0(2) - Bcyl(2)*gradB0(1)\n\n            !Jcyl(1) = Rinv*dBdphi(3) - dBdz(2)\n            !Jcyl(2) = dBdz(1) - dBdR(3)",
+        "line_number": 948,
+        "matched_line": "!BxgrdB(3) = Bcyl(1)*gradB0(2) - Bcyl(2)*gradB0(1)",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "    !!if (itor.eq.1) Jcyl(3) = Jcyl(3) + Rinv*B_cyl(2)\n            !Jcyl(3) = Jcyl(3) + Rinv*Bcyl(2)\n\n            !svec = (Jcyl + BxgrdB/B0)/B0\n            !Bstar = Bcyl + (vpar/qm_ion)*svec\n            !Bss = dot_product(Bstar, bhat)\n            !svec = dpar%v(5)*gradB0 ! - g_mks/qm_ion",
+        "line_number": 956,
+        "matched_line": "!svec = (Jcyl + BxgrdB/B0)/B0",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !svec = (Jcyl + BxgrdB/B0)/B0\n            !Bstar = Bcyl + (vpar/qm_ion)*svec\n            !Bss = dot_product(Bstar, bhat)\n            !svec = dpar%v(5)*gradB0 ! - g_mks/qm_ion\n            !dpar%v(1) = (vpar*Bstar(1) + bhat(2)*svec(3) - bhat(3)*svec(2))/Bss\n            !dpar%v(2) = (vpar*Bstar(2) + bhat(3)*svec(1) - bhat(1)*svec(3))/Bss\n            !dpar%v(3) = (vpar*Bstar(3) + bhat(1)*svec(2) - bhat(2)*svec(1))/Bss",
+        "line_number": 959,
+        "matched_line": "!svec = dpar%v(5)*gradB0 ! - g_mks/qm_ion",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !else !gyro- or drift kinetic\n            dpar%v(1) = vpar                        !v_parallel\n            !pdata(ielm)%ion(ip)%v(1) = 100000.                        !v_parallel\n            dpar%v(2) = (0.5*vperp**2)/(qm_ion(sps)*B0)  !mu/q\n            !pdata(ielm)%ion(ip)%wt = 1.\n            dpar%x0=dpar%x\n            dpar%v0=dpar%v",
+        "line_number": 967,
+        "matched_line": "dpar%v(2) = (0.5*vperp**2)/(qm_ion(sps)*B0)  !mu/q",
+        "path": "unstructured/particle_com.f90"
+      },
+      {
+        "context": "            !endif !vspdims\n\n            dpar%wt = 0.\n            dpar%B0 = B0\n            dpar%kel(:) = itri\n            do ipoint = 1, 4\n               dpar%kx(:, ipoint) = dpar%x",
+        "line_number": 976,
+        "matched_line": "dpar%B0 = B0",
+        "path": "unstructured/particle_com.f90"
+      }
+    ]
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_time_normalization_source_relation_audit/summary.json",
+  "summary_sha256": "69e0e82d1bbbfa1cced7f5ff4625bd6cd837218cb932a9045c6e462be6f7302b",
+  "timed_out": false
+}
