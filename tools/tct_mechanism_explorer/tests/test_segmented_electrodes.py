@@ -15,7 +15,11 @@ class SegmentedElectrodeTests(unittest.TestCase):
         self.assertAlmostEqual(s['peak_abs_shear'],0.0,places=12)
 
     def test_overlapping_zones_superpose(self):
-        def zone(v): return ElectrodeZone(1.0,0.0,0.2,0.2,tau_response=1e-6,slew_v_per_t=1e9,command=lambda t:v)
+        # Isolate spatial superposition from the independently tested actuator
+        # current/loading limits. With C=0 and a high current limit, the two
+        # coincident 0.2 V and 0.3 V zones should add linearly to 0.5 V; at a
+        # 0.1 gap scale this is E_r=5 in the reduced model's native units.
+        def zone(v): return ElectrodeZone(1.0,0.0,0.2,0.2,tau_response=1e-6,slew_v_per_t=1e9,capacitance=0.0,i_limit=1e9,command=lambda t:v)
         a=SegmentedElectrodeArray([zone(0.2),zone(0.3)],electrode_gap_scale=0.1)
         a.snapshot(0.0,[1.0],[0.0],2.0)
         s=a.snapshot(0.01,[1.0],[0.0],2.0)
