@@ -1,0 +1,1285 @@
+job_id=20260923-065-native-time-normalization-assignment-audit
+started_utc=2026-09-23T02:52:31.649366Z
+head_before=aa98f4a5694c27e2ed4c2c85d0a09d4b6619ae97
+{
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_ASSIGNMENT_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_SOURCE_RELATION_AUDITED",
+  "normalization_symbol_hits": [
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 49,
+      "matched_line": "ec**3*(n0_norm*1e6)*17./(4.*pi*eps0**2*me*c**2), ' V/m'",
+      "context": "    \n    implicit none\n    if(irunaway.eq.0) return\n\n    print *, 'Estimated Ecrit for runaways = ', &\n         ec**3*(n0_norm*1e6)*17./(4.*pi*eps0**2*me*c**2), ' V/m'\n\n    call create_field(dnre_field1)\n    call create_field(dnre_field2)\n    call create_field(depar_field)\n    call create_field(ere_field)"
+    },
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 96,
+      "matched_line": "dt_si = dt * t0_norm",
+      "context": "    integer :: l, nl\n    \n    dndt = 0.\n    sd = 0.\n    sa = 0.\n    dt_si = dt * t0_norm\n    nrel = nre\n    nl = 10\n    tmp = 0.\n    nretmp = 0.\n    Dens1 = Dens "
+    },
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 188,
+      "matched_line": "te = tet79(:,OP_1)*(p0_norm/n0_norm)/1.6022e-12",
+      "context": "    dofs = intx2(mu79(:,:,OP_1),epar)\n    call vector_insert_block(ere_field%vec,itri,1,dofs,VEC_ADD)\n    \n    ! convert to SI units\n    epar = epar*e0_norm*c*1e-4\n    te = tet79(:,OP_1)*(p0_norm/n0_norm)/1.6022e-12\n    ne = net79(:,OP_1)*n0_norm*1e6\n    nre = nre179(:,OP_1)*j0_norm/(c*1e-3)!n0_norm*1e6\n    eta = eta79(:,OP_1)*e0_norm/j0_norm*c**2*1e-7\n    call magnetic_region(pst79(:,OP_1),&\n         pst79(:,OP_DR),pst79(:,OP_DZ),x_79,Z_79,mr)"
+    },
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 189,
+      "matched_line": "ne = net79(:,OP_1)*n0_norm*1e6",
+      "context": "    call vector_insert_block(ere_field%vec,itri,1,dofs,VEC_ADD)\n    \n    ! convert to SI units\n    epar = epar*e0_norm*c*1e-4\n    te = tet79(:,OP_1)*(p0_norm/n0_norm)/1.6022e-12\n    ne = net79(:,OP_1)*n0_norm*1e6\n    nre = nre179(:,OP_1)*j0_norm/(c*1e-3)!n0_norm*1e6\n    eta = eta79(:,OP_1)*e0_norm/j0_norm*c**2*1e-7\n    call magnetic_region(pst79(:,OP_1),&\n         pst79(:,OP_DR),pst79(:,OP_DZ),x_79,Z_79,mr)\n    bz = pst79(:,OP_GS)/((c*1e-3)/j0_norm)"
+    },
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 190,
+      "matched_line": "nre = nre179(:,OP_1)*j0_norm/(c*1e-3)!n0_norm*1e6",
+      "context": "    \n    ! convert to SI units\n    epar = epar*e0_norm*c*1e-4\n    te = tet79(:,OP_1)*(p0_norm/n0_norm)/1.6022e-12\n    ne = net79(:,OP_1)*n0_norm*1e6\n    nre = nre179(:,OP_1)*j0_norm/(c*1e-3)!n0_norm*1e6\n    eta = eta79(:,OP_1)*e0_norm/j0_norm*c**2*1e-7\n    call magnetic_region(pst79(:,OP_1),&\n         pst79(:,OP_DR),pst79(:,OP_DZ),x_79,Z_79,mr)\n    bz = pst79(:,OP_GS)/((c*1e-3)/j0_norm)\n    bi = bi79(:,OP_1)"
+    },
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 201,
+      "matched_line": "dndt = dndt*t0_norm/(j0_norm/c/1e-3)",
+      "context": "    \n    call runaway_current(nre,epar,te,ne,z_ion,eta,ecrit,&\n                         re_79,re_j79,re_epar,dndt,mr,bz,bi,ri_79,z_79)\n\n    ! convert back to normalized units\n    dndt = dndt*t0_norm/(j0_norm/c/1e-3)\n\n    re_79 = re_79*(c*1e-3)/j0_norm!/(n0_norm*1e6)\n\n    re_j79 = re_j79*(c*1e-3)/j0_norm\n   "
+    },
+    {
+      "path": "unstructured/runaway.f90",
+      "line_number": 203,
+      "matched_line": "re_79 = re_79*(c*1e-3)/j0_norm!/(n0_norm*1e6)",
+      "context": "                         re_79,re_j79,re_epar,dndt,mr,bz,bi,ri_79,z_79)\n\n    ! convert back to normalized units\n    dndt = dndt*t0_norm/(j0_norm/c/1e-3)\n\n    re_79 = re_79*(c*1e-3)/j0_norm!/(n0_norm*1e6)\n\n    re_j79 = re_j79*(c*1e-3)/j0_norm\n   \n    re_j79 = re_j79+dndt*dt\n"
+    },
+    {
+      "path": "unstructured/M3Dmodules.f90",
+      "line_number": 39,
+      "matched_line": "real :: b0_norm     ! magnetic field normalization (in Gauss)",
+      "context": "  logical :: momentum_source\n  logical :: heat_source\n  logical :: rad_source\n\n  ! normalizations\n  real :: b0_norm     ! magnetic field normalization (in Gauss)\n  real :: l0_norm     ! length normalization (in centimeters)\n  real :: n0_norm     ! density normalization (in cm^-3)\n  real :: v0_norm\n  real :: t0_norm\n  real :: p0_norm"
+    },
+    {
+      "path": "unstructured/M3Dmodules.f90",
+      "line_number": 40,
+      "matched_line": "real :: l0_norm     ! length normalization (in centimeters)",
+      "context": "  logical :: heat_source\n  logical :: rad_source\n\n  ! normalizations\n  real :: b0_norm     ! magnetic field normalization (in Gauss)\n  real :: l0_norm     ! length normalization (in centimeters)\n  real :: n0_norm     ! density normalization (in cm^-3)\n  real :: v0_norm\n  real :: t0_norm\n  real :: p0_norm\n  real :: e0_norm"
+    },
+    {
+      "path": "unstructured/M3Dmodules.f90",
+      "line_number": 41,
+      "matched_line": "real :: n0_norm     ! density normalization (in cm^-3)",
+      "context": "  logical :: rad_source\n\n  ! normalizations\n  real :: b0_norm     ! magnetic field normalization (in Gauss)\n  real :: l0_norm     ! length normalization (in centimeters)\n  real :: n0_norm     ! density normalization (in cm^-3)\n  real :: v0_norm\n  real :: t0_norm\n  real :: p0_norm\n  real :: e0_norm\n  real :: j0_norm"
+    },
+    {
+      "path": "unstructured/M3Dmodules.f90",
+      "line_number": 42,
+      "matched_line": "real :: v0_norm",
+      "context": "\n  ! normalizations\n  real :: b0_norm     ! magnetic field normalization (in Gauss)\n  real :: l0_norm     ! length normalization (in centimeters)\n  real :: n0_norm     ! density normalization (in cm^-3)\n  real :: v0_norm\n  real :: t0_norm\n  real :: p0_norm\n  real :: e0_norm\n  real :: j0_norm\n  real :: m0_norm"
+    },
+    {
+      "path": "unstructured/M3Dmodules.f90",
+      "line_number": 43,
+      "matched_line": "real :: t0_norm",
+      "context": "  ! normalizations\n  real :: b0_norm     ! magnetic field normalization (in Gauss)\n  real :: l0_norm     ! length normalization (in centimeters)\n  real :: n0_norm     ! density normalization (in cm^-3)\n  real :: v0_norm\n  real :: t0_norm\n  real :: p0_norm\n  real :: e0_norm\n  real :: j0_norm\n  real :: m0_norm\n"
+    },
+    {
+      "path": "unstructured/init_vmec.f90",
+      "line_number": 46,
+      "matched_line": "presf = presf*pi*40/b0_norm**2",
+      "context": "    real :: fzero\n    real, allocatable :: xvals(:), yvals(:)\n    integer :: nvals\n\n    ! normalize pressure\n    presf = presf*pi*40/b0_norm**2\n    ! 1D spline for pressure\n    call create_spline(presf_spline, ns, s_vmec, presf)\n\n    if(itor.eq.0) then \n      fzero = bzero"
+    },
+    {
+      "path": "unstructured/init_vmec.f90",
+      "line_number": 70,
+      "matched_line": "yvals = yvals / 1e6 / n0_norm / z_ion",
+      "context": "      den_f = 0.\n      nvals = 0\n      call read_ascii_column('n_profile', xvals, nvals, icol=1)\n      call read_ascii_column('n_profile', yvals, nvals, icol=2)\n      if(nvals.eq.0) call safestop(5)\n      yvals = yvals / 1e6 / n0_norm / z_ion\n      call create_spline(den_spline, nvals, xvals, yvals)\n      deallocate(xvals, yvals)\n    endif\n\n    if(iread_te.eq.21) then "
+    },
+    {
+      "path": "unstructured/init_vmec.f90",
+      "line_number": 82,
+      "matched_line": "yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "      te_f = 0.\n      nvals = 0\n      call read_ascii_column('te_profile', xvals, nvals, icol=1)\n      call read_ascii_column('te_profile', yvals, nvals, icol=2)\n      if(nvals.eq.0) call safestop(5)\n      yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n      call create_spline(temper_spline , nvals, xvals, yvals)\n      deallocate(xvals, yvals)\n    endif\n\n    if(iread_p.eq.21) then "
+    },
+    {
+      "path": "unstructured/init_vmec.f90",
+      "line_number": 94,
+      "matched_line": "yvals = yvals * 10. / (b0_norm**2/(4.*pi))",
+      "context": "      pexternal_f = 0.\n      nvals = 0\n      call read_ascii_column('p_profile', xvals, nvals, icol=1)\n      call read_ascii_column('p_profile', yvals, nvals, icol=2)\n      if(nvals.eq.0) call safestop(5)\n      yvals = yvals * 10. / (b0_norm**2/(4.*pi))\n      call create_spline(press_ext_spline , nvals, xvals, yvals)\n      deallocate(xvals, yvals)\n    endif\n\n    call create_vector(fppsi_vec,2)"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 276,
+      "matched_line": "yvals = yvals / 1e6 / n0_norm",
+      "context": "  if (iread_ne .eq. 22) then\n     nvals = 0\n      call read_ascii_column('n_profile', xvals, nvals, icol=1)\n      call read_ascii_column('n_profile', yvals, nvals, icol=2)\n      if(nvals.eq.0) call safestop(5)\n      yvals = yvals / 1e6 / n0_norm \n     if(allocated(yvals)) then\n        call create_spline(den_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if\n     den_vec=0."
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 288,
+      "matched_line": "yvals = yvals / 1e6 / n0_norm !normalized density",
+      "context": "  if (iread_ne .eq. 23) then\n     nvals = 0\n      call read_ascii_column('n_profile_vs_p', xvals, nvals, icol=1)\n      call read_ascii_column('n_profile_vs_p', yvals, nvals, icol=2)\n      if(nvals.eq.0) call safestop(5)\n      yvals = yvals / 1e6 / n0_norm !normalized density\n      xvals = xvals * 10 / p0_norm  !normalized Pr\n     if(allocated(yvals)) then\n        call create_spline(den_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 492,
+      "matched_line": "yvals = yvals / 1e6 / n0_norm !rsae",
+      "context": "  if ((kinetic.eq.1).and.(kinetic_fast_ion.eq.1)) then\n     nvals = 0\n     call read_ascii_column('nf_profile', xvals, nvals, icol=1)\n     call read_ascii_column('nf_profile', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals / 1e6 / n0_norm !rsae\n     xvals = xvals / xvals(nvals) ! normalize rho\n     if(allocated(yvals)) then\n        call create_spline(nf_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 518,
+      "matched_line": "!yvals = yvals / n0_norm !rsae",
+      "context": "\n     nvals = 0\n     call read_ascii_column('tf_profile', xvals, nvals, icol=1)\n     call read_ascii_column('tf_profile', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     !yvals = yvals / n0_norm !rsae\n     xvals = xvals / xvals(nvals) ! normalize rho\n     if(allocated(yvals)) then\n        call create_spline(tf_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 550,
+      "matched_line": "n079(j,OP_1) = val*val2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae",
+      "context": "        temp79b = (xl_79-xcenter)**2 + (zl_79-zcenter)**2\n        do j=1, npoints\n          call evaluate_spline(nf_spline,temp79b(j),val)\n          call evaluate_spline(tf_spline,temp79b(j),val2)\n          if (fast_ion_dist==1) then\n            n079(j,OP_1) = val*val2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae\n          endif\n        end do\n        dofs = intx2(mu79(:,:,OP_1),n079(:,OP_1))\n        call vector_insert_block(den_vec%vec,itri,1,dofs,VEC_ADD)\n     end do"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 569,
+      "matched_line": "yvals = yvals / 1e6 / n0_norm      ! normalize density",
+      "context": "        call read_ascii_column('ni_profile', xvals, nvals, icol=1)\n        call read_ascii_column('ni_profile', yvals, nvals, icol=2)\n\n        if (nvals .eq. 0) call safestop(5)\n\n        yvals = yvals / 1e6 / n0_norm      ! normalize density\n        xvals = xvals / xvals(nvals)       ! normalize rho\n\n        if (allocated(yvals)) then\n           call create_spline(nfi_spline, nvals, xvals, yvals)\n           deallocate(xvals, yvals)"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 612,
+      "matched_line": "! yvals = yvals / 1e6 / n0_norm      ! normalize density",
+      "context": "        call read_ascii_column('ti_profile', xvals, nvals, icol=1)\n        call read_ascii_column('ti_profile', yvals, nvals, icol=2)\n\n        if (nvals .eq. 0) call safestop(5)\n\n        ! yvals = yvals / 1e6 / n0_norm      ! normalize density\n        xvals = xvals / xvals(nvals)       ! normalize rho\n\n        if (allocated(yvals)) then\n           call create_spline(tfi_spline, nvals, xvals, yvals)\n           deallocate(xvals, yvals)"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 637,
+      "matched_line": "temp79a=0.5*p079(:,OP_1)/n079(:,OP_1)/(1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm)))",
+      "context": "           do j = 1, npoints\n              call evaluate_spline(tfi_spline, temp79b(j), val)\n              temp79a(j) = val\n           end do\n        else\n           temp79a=0.5*p079(:,OP_1)/n079(:,OP_1)/(1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm)))\n        endif\n\n        dofs = intx2(mu79(:,:,OP_1), temp79a)\n        call vector_insert_block(den_vec%vec, itri, 1, dofs, VEC_ADD)\n     end do"
+    },
+    {
+      "path": "unstructured/init_common.f90",
+      "line_number": 658,
+      "matched_line": "temp79a(j) = val*val2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae",
+      "context": "        temp79b = (xl_79 - xcenter)**2 + (zl_79 - zcenter)**2\n        if (file_exists) then\n           do j = 1, npoints\n              call evaluate_spline(nfi_spline, temp79b(j), val)\n              call evaluate_spline(tfi_spline, temp79b(j), val2)\n              temp79a(j) = val*val2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae\n           end do\n        else\n           temp79a = 0.5*p079(:,OP_1)\n        endif\n        dofs = intx2(mu79(:,:,OP_1), temp79a)"
+    },
+    {
+      "path": "unstructured/bootstrap.f90",
+      "line_number": 1503,
+      "matched_line": "telec(i)=max(real(tet79(i,OP_1))*1e3/(1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)),eps_val)",
+      "context": "    !--------------------------------------------------------!\n    ! Calculate ln_lambda_e and nu_e_star for electrons\n    !--------------------------------------------------------!\n    \n    do i = 1, npoints\n      telec(i)=max(real(tet79(i,OP_1))*1e3/(1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)),eps_val)\n      tion(i)=max(real(tit79(i,OP_1))*1e3/(1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)),eps_val)\n      denelec(i)=max(real(net79(i,OP_1))*1e20,eps_val)\n      denion(i)=max(real(nt79(i,OP_1))*1e20,eps_val)\n\n      !inverseaspect_ratio & ftrap can't be negative"
+    },
+    {
+      "path": "unstructured/bootstrap.f90",
+      "line_number": 1504,
+      "matched_line": "tion(i)=max(real(tit79(i,OP_1))*1e3/(1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)),eps_val)",
+      "context": "    ! Calculate ln_lambda_e and nu_e_star for electrons\n    !--------------------------------------------------------!\n    \n    do i = 1, npoints\n      telec(i)=max(real(tet79(i,OP_1))*1e3/(1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)),eps_val)\n      tion(i)=max(real(tit79(i,OP_1))*1e3/(1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)),eps_val)\n      denelec(i)=max(real(net79(i,OP_1))*1e20,eps_val)\n      denion(i)=max(real(nt79(i,OP_1))*1e20,eps_val)\n\n      !inverseaspect_ratio & ftrap can't be negative\n      jbs_invAspectRatio79(i, OP_1) = max(real(jbs_invAspectRatio79(i, OP_1)),eps_val)"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 427,
+      "matched_line": "temin_eV = temin_abl*p0_norm/(1.6022e-12*n0_norm)",
+      "context": "    print_pel = iprint.ge.3 .or. (iprint.ge.1 .and. npellets.eq.1)\n\n    do ip=1, npellets\n       pellet_rate_D2(ip) = 0. ! no mixture by default\n\n       temin_eV = temin_abl*p0_norm/(1.6022e-12*n0_norm)\n       if((r_p(ip)*l0_norm).lt.1e-8 .or. &\n          temp_pel(ip).lt.temin_eV .or. temp_pel(ip).ne.temp_pel(ip) .or. &\n          pellet_state(ip).ne.1) then\n\n          if((r_p(ip)*l0_norm).lt.1e-8) then"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 428,
+      "matched_line": "if((r_p(ip)*l0_norm).lt.1e-8 .or. &",
+      "context": "\n    do ip=1, npellets\n       pellet_rate_D2(ip) = 0. ! no mixture by default\n\n       temin_eV = temin_abl*p0_norm/(1.6022e-12*n0_norm)\n       if((r_p(ip)*l0_norm).lt.1e-8 .or. &\n          temp_pel(ip).lt.temin_eV .or. temp_pel(ip).ne.temp_pel(ip) .or. &\n          pellet_state(ip).ne.1) then\n\n          if((r_p(ip)*l0_norm).lt.1e-8) then\n             if(myrank.eq.0 .and. print_pel) print *, \"No pellet left to ablate: \", ip"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 432,
+      "matched_line": "if((r_p(ip)*l0_norm).lt.1e-8) then",
+      "context": "       temin_eV = temin_abl*p0_norm/(1.6022e-12*n0_norm)\n       if((r_p(ip)*l0_norm).lt.1e-8 .or. &\n          temp_pel(ip).lt.temin_eV .or. temp_pel(ip).ne.temp_pel(ip) .or. &\n          pellet_state(ip).ne.1) then\n\n          if((r_p(ip)*l0_norm).lt.1e-8) then\n             if(myrank.eq.0 .and. print_pel) print *, \"No pellet left to ablate: \", ip\n             r_p(ip) = 0.\n             pellet_state(ip) = -1\n          else if(temp_pel(ip).lt.temin_eV) then\n             if(myrank.eq.0 .and. print_pel) print *, \"Temperature too low for pellet ablation: \", ip"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 509,
+      "matched_line": "pellet_rate(ip) = 4.*pi*(l0_norm*pellet_var(ip))**2*q_s*shield_p*f_b*0.906!/(1.e-3*rho_z*(subl+10./3.*T_s))",
+      "context": "          T_S = 0.14 !in eV\n          subl = 1.6 !in eV/atom\n          Mach = 1.\n\n          q_s = 0.5*nsource_pel(ip)*temp_pel(ip)*sqrt(8.*temp_pel(ip)/(pi*1.e3*m_p*me_mp))\n          pellet_rate(ip) = 4.*pi*(l0_norm*pellet_var(ip))**2*q_s*shield_p*f_b*0.906!/(1.e-3*rho_z*(subl+10./3.*T_s))\n          pellet_rate(ip) = t0_norm*pellet_rate(ip)/n0_norm\n\n          rpdot(ip) = shield_p*f_b*f_l*1.e-6*1.e-5*sqrt(1.e-5)*q_s*0.906!/&     !(rho_z*(subl+T_S*(2.5+0.833*Mach**2)))\n\n       case(2)"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 510,
+      "matched_line": "pellet_rate(ip) = t0_norm*pellet_rate(ip)/n0_norm",
+      "context": "          subl = 1.6 !in eV/atom\n          Mach = 1.\n\n          q_s = 0.5*nsource_pel(ip)*temp_pel(ip)*sqrt(8.*temp_pel(ip)/(pi*1.e3*m_p*me_mp))\n          pellet_rate(ip) = 4.*pi*(l0_norm*pellet_var(ip))**2*q_s*shield_p*f_b*0.906!/(1.e-3*rho_z*(subl+10./3.*T_s))\n          pellet_rate(ip) = t0_norm*pellet_rate(ip)/n0_norm\n\n          rpdot(ip) = shield_p*f_b*f_l*1.e-6*1.e-5*sqrt(1.e-5)*q_s*0.906!/&     !(rho_z*(subl+T_S*(2.5+0.833*Mach**2)))\n\n       case(2)\n"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 530,
+      "matched_line": "Xn_abl = 8.1468e-9*(5.*inv3-1.)**(inv3)*f_l**inv3*M_z**(-inv3)*(r_p(ip)*l0_norm)**(4.*inv3)&",
+      "context": "          B_Li = inv3*sqrt(1./(2.*log(7.69e1*1.97836e-3*sqrt(2.*temp_pel(ip))*3.**(-inv3)/(6e-1))*&\n               log((2.*temp_pel(ip))/(3.33e1)*sqrt(exp(1.)/2.))))\n\n          f_l = 0.2*(1.-0.0946*log((4.**1.3878+1.9155)/(1.9155)))\n\n          Xn_abl = 8.1468e-9*(5.*inv3-1.)**(inv3)*f_l**inv3*M_z**(-inv3)*(r_p(ip)*l0_norm)**(4.*inv3)&\n               *(n0_norm*nsource_pel(ip))**inv3*temp_pel(ip)**(5.5*inv3)*B_Li**(2.*inv3)\n\n          Xp_abl = Xn_abl*M_z/(4.*pi*rho_z*(r_p(ip)*l0_norm)**2)\n\n          a_Te = 9.0624343*(1.25e-3*temp_pel(ip))**(log(9.0091993/9.0624343)/log(2.5))"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 531,
+      "matched_line": "*(n0_norm*nsource_pel(ip))**inv3*temp_pel(ip)**(5.5*inv3)*B_Li**(2.*inv3)",
+      "context": "               log((2.*temp_pel(ip))/(3.33e1)*sqrt(exp(1.)/2.))))\n\n          f_l = 0.2*(1.-0.0946*log((4.**1.3878+1.9155)/(1.9155)))\n\n          Xn_abl = 8.1468e-9*(5.*inv3-1.)**(inv3)*f_l**inv3*M_z**(-inv3)*(r_p(ip)*l0_norm)**(4.*inv3)&\n               *(n0_norm*nsource_pel(ip))**inv3*temp_pel(ip)**(5.5*inv3)*B_Li**(2.*inv3)\n\n          Xp_abl = Xn_abl*M_z/(4.*pi*rho_z*(r_p(ip)*l0_norm)**2)\n\n          a_Te = 9.0624343*(1.25e-3*temp_pel(ip))**(log(9.0091993/9.0624343)/log(2.5))\n          b_Te = 1.5915421*(1.25e-3*temp_pel(ip))**(log(1.1109535/1.5915421)/log(2.5))"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 533,
+      "matched_line": "Xp_abl = Xn_abl*M_z/(4.*pi*rho_z*(r_p(ip)*l0_norm)**2)",
+      "context": "          f_l = 0.2*(1.-0.0946*log((4.**1.3878+1.9155)/(1.9155)))\n\n          Xn_abl = 8.1468e-9*(5.*inv3-1.)**(inv3)*f_l**inv3*M_z**(-inv3)*(r_p(ip)*l0_norm)**(4.*inv3)&\n               *(n0_norm*nsource_pel(ip))**inv3*temp_pel(ip)**(5.5*inv3)*B_Li**(2.*inv3)\n\n          Xp_abl = Xn_abl*M_z/(4.*pi*rho_z*(r_p(ip)*l0_norm)**2)\n\n          a_Te = 9.0624343*(1.25e-3*temp_pel(ip))**(log(9.0091993/9.0624343)/log(2.5))\n          b_Te = 1.5915421*(1.25e-3*temp_pel(ip))**(log(1.1109535/1.5915421)/log(2.5))\n          c_Te = 1.9177788*(1.25e-3*temp_pel(ip))**(log(1.7309993/1.9177788)/log(2.5))\n          d_Te = 6.6657409*(1.25e-3*temp_pel(ip))**(log(4.10722254/6.6657409)/log(2.5))"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 540,
+      "matched_line": "C_abl = a_Te*log(1.+b_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))/&",
+      "context": "          a_Te = 9.0624343*(1.25e-3*temp_pel(ip))**(log(9.0091993/9.0624343)/log(2.5))\n          b_Te = 1.5915421*(1.25e-3*temp_pel(ip))**(log(1.1109535/1.5915421)/log(2.5))\n          c_Te = 1.9177788*(1.25e-3*temp_pel(ip))**(log(1.7309993/1.9177788)/log(2.5))\n          d_Te = 6.6657409*(1.25e-3*temp_pel(ip))**(log(4.10722254/6.6657409)/log(2.5))\n\n          C_abl = a_Te*log(1.+b_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))/&\n               log(c_Te+d_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))\n\n          pellet_rate(ip) = N_Avo*C_abl*Xn_abl*t0_norm/(n0_norm*l0_norm**3)\n          rpdot(ip) = C_abl*Xp_abl*1.e-2\n"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 541,
+      "matched_line": "log(c_Te+d_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))",
+      "context": "          b_Te = 1.5915421*(1.25e-3*temp_pel(ip))**(log(1.1109535/1.5915421)/log(2.5))\n          c_Te = 1.9177788*(1.25e-3*temp_pel(ip))**(log(1.7309993/1.9177788)/log(2.5))\n          d_Te = 6.6657409*(1.25e-3*temp_pel(ip))**(log(4.10722254/6.6657409)/log(2.5))\n\n          C_abl = a_Te*log(1.+b_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))/&\n               log(c_Te+d_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))\n\n          pellet_rate(ip) = N_Avo*C_abl*Xn_abl*t0_norm/(n0_norm*l0_norm**3)\n          rpdot(ip) = C_abl*Xp_abl*1.e-2\n\n       case(3)"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 543,
+      "matched_line": "pellet_rate(ip) = N_Avo*C_abl*Xn_abl*t0_norm/(n0_norm*l0_norm**3)",
+      "context": "          d_Te = 6.6657409*(1.25e-3*temp_pel(ip))**(log(4.10722254/6.6657409)/log(2.5))\n\n          C_abl = a_Te*log(1.+b_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))/&\n               log(c_Te+d_Te*(r_p(ip)*l0_norm)**(2.*inv3)*(nsource_pel(ip)/0.45)**(2.*inv3))\n\n          pellet_rate(ip) = N_Avo*C_abl*Xn_abl*t0_norm/(n0_norm*l0_norm**3)\n          rpdot(ip) = C_abl*Xp_abl*1.e-2\n\n       case(3)\n          ! Parks composite neon-deuterium model from 6/20/2017 (implemented 6/11/18 BCL)\n          if(z_abl.ne.10 .and. myrank.eq.0) print *, \"Warning: ipellet_abl=3 only valid for neon\""
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 551,
+      "matched_line": "G = lambda*(temp_pel(ip)*5e-4)**(5.*inv3)*(5.*r_p(ip)*l0_norm)**(4.*inv3)*nsource_pel(ip)**(inv3)  ! g/s",
+      "context": "       case(3)\n          ! Parks composite neon-deuterium model from 6/20/2017 (implemented 6/11/18 BCL)\n          if(z_abl.ne.10 .and. myrank.eq.0) print *, \"Warning: ipellet_abl=3 only valid for neon\"\n\n          lambda = 27.0837 + tan(1.48709*pellet_mix(ip))\n          G = lambda*(temp_pel(ip)*5e-4)**(5.*inv3)*(5.*r_p(ip)*l0_norm)**(4.*inv3)*nsource_pel(ip)**(inv3)  ! g/s\n\n          ! impurity number\n          Xn_abl = (1.-pellet_mix(ip))*G/(M_z*(1.-pellet_mix(ip)) + pellet_mix(ip)*M_D2) ! mole/s\n          pellet_rate(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 555,
+      "matched_line": "pellet_rate(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected",
+      "context": "          lambda = 27.0837 + tan(1.48709*pellet_mix(ip))\n          G = lambda*(temp_pel(ip)*5e-4)**(5.*inv3)*(5.*r_p(ip)*l0_norm)**(4.*inv3)*nsource_pel(ip)**(inv3)  ! g/s\n\n          ! impurity number\n          Xn_abl = (1.-pellet_mix(ip))*G/(M_z*(1.-pellet_mix(ip)) + pellet_mix(ip)*M_D2) ! mole/s\n          pellet_rate(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n\n          ! D2 number\n          Xn_abl = pellet_mix(ip)*G/(M_z*(1.-pellet_mix(ip)) + pellet_mix(ip)*M_D2) ! mole/s\n          pellet_rate_D2(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 559,
+      "matched_line": "pellet_rate_D2(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected",
+      "context": "          Xn_abl = (1.-pellet_mix(ip))*G/(M_z*(1.-pellet_mix(ip)) + pellet_mix(ip)*M_D2) ! mole/s\n          pellet_rate(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n\n          ! D2 number\n          Xn_abl = pellet_mix(ip)*G/(M_z*(1.-pellet_mix(ip)) + pellet_mix(ip)*M_D2) ! mole/s\n          pellet_rate_D2(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n\n          ! pellet surface recession speed\n          rho0 = ((1.-pellet_mix(ip))*M_z + pellet_mix(ip)*M_D2)/((1.-pellet_mix(ip))*(M_z/rho_z) + pellet_mix(ip)*(M_D2/rho_D2)) ! g/cm^3\n          rpdot(ip) = (G/(4.*pi*rho0*(r_p(ip)*l0_norm)**2))*(t0_norm/l0_norm)\n"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 563,
+      "matched_line": "rpdot(ip) = (G/(4.*pi*rho0*(r_p(ip)*l0_norm)**2))*(t0_norm/l0_norm)",
+      "context": "          Xn_abl = pellet_mix(ip)*G/(M_z*(1.-pellet_mix(ip)) + pellet_mix(ip)*M_D2) ! mole/s\n          pellet_rate_D2(ip) = N_Avo*Xn_abl*t0_norm/(n0_norm*l0_norm**3) ! particles injected\n\n          ! pellet surface recession speed\n          rho0 = ((1.-pellet_mix(ip))*M_z + pellet_mix(ip)*M_D2)/((1.-pellet_mix(ip))*(M_z/rho_z) + pellet_mix(ip)*(M_D2/rho_D2)) ! g/cm^3\n          rpdot(ip) = (G/(4.*pi*rho0*(r_p(ip)*l0_norm)**2))*(t0_norm/l0_norm)\n\n\n      case(43)\n        ! --------------------\n        !Sergeev06: Sergeev et al., Plasma Phys. Rep. 32 (2006) 363"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 578,
+      "matched_line": "pellet_rate(ip) = sqrt(8.*pi)*(temp_pel(ip)/subl)*nsource_pel(ip)*n0_norm*(r_p(ip)*l0_norm)**2*ve_th",
+      "context": "        ! rate43 = rate_Eq26*rate_Eq20/(rate_Eq26 + rate_Eq20)\n\n        ve_th = 4.19e7*sqrt(temp_pel(ip)) !sqrt(T_e/m_e) [cm/sec]  !temp_pel has to be in eV\n\n        !pellet_rate [Particles/Second]:\n        pellet_rate(ip) = sqrt(8.*pi)*(temp_pel(ip)/subl)*nsource_pel(ip)*n0_norm*(r_p(ip)*l0_norm)**2*ve_th\n        pellet_rate_aux = 1.94e14*(nsource_pel(ip)*n0_norm)**(0.45)*temp_pel(ip)**(1.72)*(r_p(ip)*l0_norm)**(1.44)*&\n                          subl**(-0.16)*A_z**(-0.28)*real(z_abl,8)**(-0.56)*(gamma_ad-1.)**(0.28)\n\n        pellet_rate(ip) = pellet_rate(ip)*pellet_rate_aux/(pellet_rate_aux + pellet_rate(ip))\n        !pellet radius derivative (cm/s)"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 579,
+      "matched_line": "pellet_rate_aux = 1.94e14*(nsource_pel(ip)*n0_norm)**(0.45)*temp_pel(ip)**(1.72)*(r_p(ip)*l0_norm)**(1.44)*&",
+      "context": "\n        ve_th = 4.19e7*sqrt(temp_pel(ip)) !sqrt(T_e/m_e) [cm/sec]  !temp_pel has to be in eV\n\n        !pellet_rate [Particles/Second]:\n        pellet_rate(ip) = sqrt(8.*pi)*(temp_pel(ip)/subl)*nsource_pel(ip)*n0_norm*(r_p(ip)*l0_norm)**2*ve_th\n        pellet_rate_aux = 1.94e14*(nsource_pel(ip)*n0_norm)**(0.45)*temp_pel(ip)**(1.72)*(r_p(ip)*l0_norm)**(1.44)*&\n                          subl**(-0.16)*A_z**(-0.28)*real(z_abl,8)**(-0.56)*(gamma_ad-1.)**(0.28)\n\n        pellet_rate(ip) = pellet_rate(ip)*pellet_rate_aux/(pellet_rate_aux + pellet_rate(ip))\n        !pellet radius derivative (cm/s)\n        rpdot(ip) = 1./(4.*pi*(N_Avo/M_z)*rho_z)*pellet_rate(ip)/r_p(ip)/r_p(ip)/l0_norm/l0_norm"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 584,
+      "matched_line": "rpdot(ip) = 1./(4.*pi*(N_Avo/M_z)*rho_z)*pellet_rate(ip)/r_p(ip)/r_p(ip)/l0_norm/l0_norm",
+      "context": "        pellet_rate_aux = 1.94e14*(nsource_pel(ip)*n0_norm)**(0.45)*temp_pel(ip)**(1.72)*(r_p(ip)*l0_norm)**(1.44)*&\n                          subl**(-0.16)*A_z**(-0.28)*real(z_abl,8)**(-0.56)*(gamma_ad-1.)**(0.28)\n\n        pellet_rate(ip) = pellet_rate(ip)*pellet_rate_aux/(pellet_rate_aux + pellet_rate(ip))\n        !pellet radius derivative (cm/s)\n        rpdot(ip) = 1./(4.*pi*(N_Avo/M_z)*rho_z)*pellet_rate(ip)/r_p(ip)/r_p(ip)/l0_norm/l0_norm\n\n        !Adimensional quantity\n        pellet_rate(ip) = pellet_rate(ip)*t0_norm/(n0_norm*l0_norm**3)\n        rpdot(ip) = rpdot(ip) * (t0_norm/l0_norm)\n"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 587,
+      "matched_line": "pellet_rate(ip) = pellet_rate(ip)*t0_norm/(n0_norm*l0_norm**3)",
+      "context": "        pellet_rate(ip) = pellet_rate(ip)*pellet_rate_aux/(pellet_rate_aux + pellet_rate(ip))\n        !pellet radius derivative (cm/s)\n        rpdot(ip) = 1./(4.*pi*(N_Avo/M_z)*rho_z)*pellet_rate(ip)/r_p(ip)/r_p(ip)/l0_norm/l0_norm\n\n        !Adimensional quantity\n        pellet_rate(ip) = pellet_rate(ip)*t0_norm/(n0_norm*l0_norm**3)\n        rpdot(ip) = rpdot(ip) * (t0_norm/l0_norm)\n\n       end select\n\n       pellet_rate(ip) = pellet_rate(ip)*abl_fac"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 588,
+      "matched_line": "rpdot(ip) = rpdot(ip) * (t0_norm/l0_norm)",
+      "context": "        !pellet radius derivative (cm/s)\n        rpdot(ip) = 1./(4.*pi*(N_Avo/M_z)*rho_z)*pellet_rate(ip)/r_p(ip)/r_p(ip)/l0_norm/l0_norm\n\n        !Adimensional quantity\n        pellet_rate(ip) = pellet_rate(ip)*t0_norm/(n0_norm*l0_norm**3)\n        rpdot(ip) = rpdot(ip) * (t0_norm/l0_norm)\n\n       end select\n\n       pellet_rate(ip) = pellet_rate(ip)*abl_fac\n       pellet_rate_D2(ip) = pellet_rate_D2(ip)*abl_fac"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 601,
+      "matched_line": "pellet_rate(ip)    = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*(1.-pellet_mix(ip))/&",
+      "context": "       dr_p = dt*rpdot(ip)  ! change in pellet radius\n\n       if(dr_p.gt.r_p(ip)) then\n          ! we've ablated the whole pellet\n          if(myrank.eq.0 .and. iprint.ge.1) print *, \"Pellet fully ablated at radius \", r_p(ip)\n          pellet_rate(ip)    = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*(1.-pellet_mix(ip))/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n          pellet_rate_D2(ip) = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*pellet_mix(ip)/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n       else\n       end if"
+    },
+    {
+      "path": "unstructured/pellet.f90",
+      "line_number": 603,
+      "matched_line": "pellet_rate_D2(ip) = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*pellet_mix(ip)/&",
+      "context": "       if(dr_p.gt.r_p(ip)) then\n          ! we've ablated the whole pellet\n          if(myrank.eq.0 .and. iprint.ge.1) print *, \"Pellet fully ablated at radius \", r_p(ip)\n          pellet_rate(ip)    = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*(1.-pellet_mix(ip))/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n          pellet_rate_D2(ip) = (N_Avo/(n0_norm*l0_norm**3*dt))*(4.*inv3*pi*(r_p(ip)*l0_norm)**3)*rho0*pellet_mix(ip)/&\n                               (M_z*(1.-pellet_mix(ip))+M_D2*pellet_mix(ip))\n       else\n       end if\n    end do\n"
+    },
+    {
+      "path": "unstructured/init_conds.f90",
+      "line_number": 346,
+      "matched_line": "vz = vtor / (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "     end if\n\n     theta = atan2(z_79-zmag,x_79-xmag)\n     psival = -(ps079(:,OP_1) - psimin)\n     call neo_eval_vel(int_pts_main, psival, theta, vpol, vtor, iout)\n     vz = vtor / (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n     vp = vpol / (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n\n     ! NEO coordinates are (r, theta, phi_neo) = (r, phi, theta)\n     ! --> theta = grad(r)xgrad(phi)\n     ! if grad(psi).grad(r) < 0 then vpol is opposite direction to Bpol"
+    },
+    {
+      "path": "unstructured/init_conds.f90",
+      "line_number": 347,
+      "matched_line": "vp = vpol / (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "\n     theta = atan2(z_79-zmag,x_79-xmag)\n     psival = -(ps079(:,OP_1) - psimin)\n     call neo_eval_vel(int_pts_main, psival, theta, vpol, vtor, iout)\n     vz = vtor / (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n     vp = vpol / (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n\n     ! NEO coordinates are (r, theta, phi_neo) = (r, phi, theta)\n     ! --> theta = grad(r)xgrad(phi)\n     ! if grad(psi).grad(r) < 0 then vpol is opposite direction to Bpol\n     if(psimin.gt.psibound) vp = -vp"
+    },
+    {
+      "path": "unstructured/init_dskbal.f90",
+      "line_number": 94,
+      "matched_line": "den0_l = den0_l / n0_norm",
+      "context": "     den0_l(2) = (a(2) + 2.*a(3)*dp + 3.*a(4)*dp**2)*psi0_l(2)\n     den0_l(3) = (a(2) + 2.*a(3)*dp + 3.*a(4)*dp**2)*psi0_l(3)\n     den0_l(4) = (2.*a(3) + 6.*a(4)*dp)*psi0_l(4)\n     den0_l(5) = (2.*a(3) + 6.*a(4)*dp)*psi0_l(5)\n     den0_l(6) = (2.*a(3) + 6.*a(4)*dp)*psi0_l(6)\n     den0_l = den0_l / n0_norm\n     call set_local_vals(inode)\n  enddo\n\n  call unload_dskbal\n"
+    },
+    {
+      "path": "unstructured/diagnostics.f90",
+      "line_number": 1025,
+      "matched_line": "temp_pel(ip) = temp_pel(ip) + twopi*int2(temp79b,temp79a)*p0_norm/(1.6022e-12*n0_norm*tpifac)",
+      "context": "                 ! weight density/temp by pellet distribution (normalized)\n                 temp79a = pellet_distribution(ip, x_79, phi_79, z_79, real(pt79(:,OP_1)), 1, izone)\n                 nsource_pel(ip) = nsource_pel(ip) + twopi*int2(net79(:,OP_1),temp79a)/tpifac\n                 temp79b = pet79(:,OP_1)/net79(:,OP_1)\n                 if(ikprad_te_offset .gt. 0) temp79b = temp79b - eta_te_offset\n                 temp_pel(ip) = temp_pel(ip) + twopi*int2(temp79b,temp79a)*p0_norm/(1.6022e-12*n0_norm*tpifac)\n              else\n                 nsource_pel(ip) = 0.\n                 temp_pel(ip) = 0.\n              end if\n           end do"
+    },
+    {
+      "path": "unstructured/diagnostics.f90",
+      "line_number": 1178,
+      "matched_line": "print *, \"    particles injected = \", pellet_rate(ip)*dt*(n0_norm*l0_norm**3)",
+      "context": "     if(ipellet_abl.gt.0) then\n        if(iprint.ge.3 .or. npellets.eq.1) then\n           do ip=1,npellets\n              print *, \"  Pellet #\", ip\n              print *, \"    state = \", pellet_state(ip)\n              print *, \"    particles injected = \", pellet_rate(ip)*dt*(n0_norm*l0_norm**3)\n              print *, \"    radius (in cm) = \", r_p(ip)*l0_norm\n              print *, \"    local electron temperature (in eV) = \", temp_pel(ip)\n              print *, \"    local electron density (in ne14) = \", nsource_pel(ip)\n              print *, \"    rpdot (in cm/s) = \", rpdot(ip)*l0_norm/t0_norm\n              print *, \"    Lor_vol = \", Lor_vol(ip)"
+    },
+    {
+      "path": "unstructured/diagnostics.f90",
+      "line_number": 1179,
+      "matched_line": "print *, \"    radius (in cm) = \", r_p(ip)*l0_norm",
+      "context": "        if(iprint.ge.3 .or. npellets.eq.1) then\n           do ip=1,npellets\n              print *, \"  Pellet #\", ip\n              print *, \"    state = \", pellet_state(ip)\n              print *, \"    particles injected = \", pellet_rate(ip)*dt*(n0_norm*l0_norm**3)\n              print *, \"    radius (in cm) = \", r_p(ip)*l0_norm\n              print *, \"    local electron temperature (in eV) = \", temp_pel(ip)\n              print *, \"    local electron density (in ne14) = \", nsource_pel(ip)\n              print *, \"    rpdot (in cm/s) = \", rpdot(ip)*l0_norm/t0_norm\n              print *, \"    Lor_vol = \", Lor_vol(ip)\n              print *, \"    R position: \", pellet_r(ip)*l0_norm"
+    },
+    {
+      "path": "unstructured/diagnostics.f90",
+      "line_number": 1182,
+      "matched_line": "print *, \"    rpdot (in cm/s) = \", rpdot(ip)*l0_norm/t0_norm",
+      "context": "              print *, \"    state = \", pellet_state(ip)\n              print *, \"    particles injected = \", pellet_rate(ip)*dt*(n0_norm*l0_norm**3)\n              print *, \"    radius (in cm) = \", r_p(ip)*l0_norm\n              print *, \"    local electron temperature (in eV) = \", temp_pel(ip)\n              print *, \"    local electron density (in ne14) = \", nsource_pel(ip)\n              print *, \"    rpdot (in cm/s) = \", rpdot(ip)*l0_norm/t0_norm\n              print *, \"    Lor_vol = \", Lor_vol(ip)\n              print *, \"    R position: \", pellet_r(ip)*l0_norm\n              print *, \"    phi position: \", pellet_phi(ip)\n              print *, \"    Z position: \", pellet_z(ip)*l0_norm\n           end do"
+    },
+    {
+      "path": "unstructured/diagnostics.f90",
+      "line_number": 1184,
+      "matched_line": "print *, \"    R position: \", pellet_r(ip)*l0_norm",
+      "context": "              print *, \"    radius (in cm) = \", r_p(ip)*l0_norm\n              print *, \"    local electron temperature (in eV) = \", temp_pel(ip)\n              print *, \"    local electron density (in ne14) = \", nsource_pel(ip)\n              print *, \"    rpdot (in cm/s) = \", rpdot(ip)*l0_norm/t0_norm\n              print *, \"    Lor_vol = \", Lor_vol(ip)\n              print *, \"    R position: \", pellet_r(ip)*l0_norm\n              print *, \"    phi position: \", pellet_phi(ip)\n              print *, \"    Z position: \", pellet_z(ip)*l0_norm\n           end do\n        elseif(iprint.ge.2) then\n           print *, \"  Pellet diagnostic output suppressed for multi-pellet\""
+    },
+    {
+      "path": "unstructured/diagnostics.f90",
+      "line_number": 1186,
+      "matched_line": "print *, \"    Z position: \", pellet_z(ip)*l0_norm",
+      "context": "              print *, \"    local electron density (in ne14) = \", nsource_pel(ip)\n              print *, \"    rpdot (in cm/s) = \", rpdot(ip)*l0_norm/t0_norm\n              print *, \"    Lor_vol = \", Lor_vol(ip)\n              print *, \"    R position: \", pellet_r(ip)*l0_norm\n              print *, \"    phi position: \", pellet_phi(ip)\n              print *, \"    Z position: \", pellet_z(ip)*l0_norm\n           end do\n        elseif(iprint.ge.2) then\n           print *, \"  Pellet diagnostic output suppressed for multi-pellet\"\n           print *, \"    Set iprint >= 3 to output multi-pellet diagnostics\"\n        endif"
+    },
+    {
+      "path": "unstructured/restart_hdf5.f90",
+      "line_number": 223,
+      "matched_line": "temp_pel = temp_pel*p0_norm/(n0_norm*1.6022e-12)",
+      "context": "                 if(version_in.ge.33) then\n                    call read_1dextendarr(pel_group_id, \"cauchy_fraction\",cauchy_fraction, npellets, ntime, error)\n                 end if\n                 if(version_in.ge.37) then\n                    call read_1dextendarr(pel_group_id, \"pellet_te\", temp_pel, npellets, ntime, error)\n                    temp_pel = temp_pel*p0_norm/(n0_norm*1.6022e-12)\n                    call read_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)\n                 end if\n\n             else if(irestart_pellet.eq.1) then\n                 ! Control ablated cloud size and others parameters from C1input"
+    },
+    {
+      "path": "unstructured/time_step_split.f90",
+      "line_number": 694,
+      "matched_line": "if((irunaway .ge. 1).and.(ra_characteristics.eq.1)) call runaway_advection_step(dt*t0_norm)",
+      "context": "  endif   ! on ipressplit.eq.0\n\n  den_v = den_field(1)\n  ne_v = ne_field(1)\n  if(irunaway .eq. 2) call runaway_advance\n  if((irunaway .ge. 1).and.(ra_characteristics.eq.1)) call runaway_advection_step(dt*t0_norm)\n  if(irunaway .gt. 0) nre_v = nre_field(1)\n#ifdef USEPARTICLES\n  if(itwofluid .gt. 0) densmooth_v = densmooth_field\n#endif\n  if(imp_bf.eq.1) bfp_v = bfp_field(1)"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 217,
+      "matched_line": "call add_var_double(\"b0_norm\", b0_norm, 1.e4, &",
+      "context": "  call add_group(\"KPRAD Options\", kprad_grp)\n  call add_group(\"Particle Simulation Options\", particle_grp)\n\n\n  ! Normalizations\n  call add_var_double(\"b0_norm\", b0_norm, 1.e4, &\n       \"Normalization magnetic field (in G)\", norm_grp)\n  call add_var_double(\"n0_norm\", n0_norm, 1.e14, &\n       \"Normalization density (in e-/cm3)\", norm_grp)\n  call add_var_double(\"l0_norm\", l0_norm, 100.,  &\n       \"Normalization length (in cm)\", norm_grp)"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 219,
+      "matched_line": "call add_var_double(\"n0_norm\", n0_norm, 1.e14, &",
+      "context": "\n\n  ! Normalizations\n  call add_var_double(\"b0_norm\", b0_norm, 1.e4, &\n       \"Normalization magnetic field (in G)\", norm_grp)\n  call add_var_double(\"n0_norm\", n0_norm, 1.e14, &\n       \"Normalization density (in e-/cm3)\", norm_grp)\n  call add_var_double(\"l0_norm\", l0_norm, 100.,  &\n       \"Normalization length (in cm)\", norm_grp)\n \n  ! Input"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 221,
+      "matched_line": "call add_var_double(\"l0_norm\", l0_norm, 100.,  &",
+      "context": "  ! Normalizations\n  call add_var_double(\"b0_norm\", b0_norm, 1.e4, &\n       \"Normalization magnetic field (in G)\", norm_grp)\n  call add_var_double(\"n0_norm\", n0_norm, 1.e14, &\n       \"Normalization density (in e-/cm3)\", norm_grp)\n  call add_var_double(\"l0_norm\", l0_norm, 100.,  &\n       \"Normalization length (in cm)\", norm_grp)\n \n  ! Input\n  call add_var_int(\"iread_eqdsk\", iread_eqdsk, 0, \"\", input_grp)\n  call add_var_int(\"iread_dskbal\", iread_dskbal, 0, \"\", input_grp)"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1841,
+      "matched_line": "v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)",
+      "context": "     if(myrank.eq.0) print *, 'Error: kappai_fac must equal 1 when itemp=0.'\n     call safestop(1)\n  end if\n\n  m0_norm = m_p*ion_mass\n  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)\n  t0_norm = l0_norm / v0_norm\n  p0_norm = b0_norm**2/(4.*pi)\n  e0_norm = v0_norm*b0_norm / c_light\n  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)\n  !write(0,*) 'v0_norm',v0_norm/100"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1842,
+      "matched_line": "t0_norm = l0_norm / v0_norm",
+      "context": "     call safestop(1)\n  end if\n\n  m0_norm = m_p*ion_mass\n  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)\n  t0_norm = l0_norm / v0_norm\n  p0_norm = b0_norm**2/(4.*pi)\n  e0_norm = v0_norm*b0_norm / c_light\n  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)\n  !write(0,*) 'v0_norm',v0_norm/100\n"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1843,
+      "matched_line": "p0_norm = b0_norm**2/(4.*pi)",
+      "context": "  end if\n\n  m0_norm = m_p*ion_mass\n  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)\n  t0_norm = l0_norm / v0_norm\n  p0_norm = b0_norm**2/(4.*pi)\n  e0_norm = v0_norm*b0_norm / c_light\n  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)\n  !write(0,*) 'v0_norm',v0_norm/100\n\n  ! For pure Hydrogen plasma"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1844,
+      "matched_line": "e0_norm = v0_norm*b0_norm / c_light",
+      "context": "\n  m0_norm = m_p*ion_mass\n  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)\n  t0_norm = l0_norm / v0_norm\n  p0_norm = b0_norm**2/(4.*pi)\n  e0_norm = v0_norm*b0_norm / c_light\n  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)\n  !write(0,*) 'v0_norm',v0_norm/100\n\n  ! For pure Hydrogen plasma\n  ! nu_e = nufac * n_e / T_e^(3/2) "
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1845,
+      "matched_line": "j0_norm = c_light*b0_norm/(4.*pi*l0_norm)",
+      "context": "  m0_norm = m_p*ion_mass\n  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)\n  t0_norm = l0_norm / v0_norm\n  p0_norm = b0_norm**2/(4.*pi)\n  e0_norm = v0_norm*b0_norm / c_light\n  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)\n  !write(0,*) 'v0_norm',v0_norm/100\n\n  ! For pure Hydrogen plasma\n  ! nu_e = nufac * n_e / T_e^(3/2) \n  ! eta_perp = etafac / T_e^(3/2)"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1846,
+      "matched_line": "!write(0,*) 'v0_norm',v0_norm/100",
+      "context": "  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)\n  t0_norm = l0_norm / v0_norm\n  p0_norm = b0_norm**2/(4.*pi)\n  e0_norm = v0_norm*b0_norm / c_light\n  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)\n  !write(0,*) 'v0_norm',v0_norm/100\n\n  ! For pure Hydrogen plasma\n  ! nu_e = nufac * n_e / T_e^(3/2) \n  ! eta_perp = etafac / T_e^(3/2)\n  ! (all in normlized units)"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1854,
+      "matched_line": "* (n0_norm**3 * l0_norm / B0_norm**4)",
+      "context": "  ! nu_e = nufac * n_e / T_e^(3/2) \n  ! eta_perp = etafac / T_e^(3/2)\n  ! (all in normlized units)\n  nufac  = eta_fac * (4.*sqrt(2.*pi)*(4.*pi)**2 / 3.) &\n       * e_c**4 * sqrt(m0_norm / m_e) * lambda_coulomb  &\n       * (n0_norm**3 * l0_norm / B0_norm**4)\n  efac = nufac * m_e * c_light**2 / (4.*pi*e_c**2) / (n0_norm * l0_norm**2)\n  if(eta_max.le.0.) eta_max = eta_vac\n  if(eta_min.le.0.) eta_min = 0.\n\n  krfac = (9.6 / (4. * sqrt(2.*pi) * sqrt(m_e) * lambda_coulomb * e_c**4)) &"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1855,
+      "matched_line": "efac = nufac * m_e * c_light**2 / (4.*pi*e_c**2) / (n0_norm * l0_norm**2)",
+      "context": "  ! eta_perp = etafac / T_e^(3/2)\n  ! (all in normlized units)\n  nufac  = eta_fac * (4.*sqrt(2.*pi)*(4.*pi)**2 / 3.) &\n       * e_c**4 * sqrt(m0_norm / m_e) * lambda_coulomb  &\n       * (n0_norm**3 * l0_norm / B0_norm**4)\n  efac = nufac * m_e * c_light**2 / (4.*pi*e_c**2) / (n0_norm * l0_norm**2)\n  if(eta_max.le.0.) eta_max = eta_vac\n  if(eta_min.le.0.) eta_min = 0.\n\n  krfac = (9.6 / (4. * sqrt(2.*pi) * sqrt(m_e) * lambda_coulomb * e_c**4)) &\n       * t0_norm * p0_norm**2.5 / (l0_norm**2 * n0_norm**3.5)"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1860,
+      "matched_line": "* t0_norm * p0_norm**2.5 / (l0_norm**2 * n0_norm**3.5)",
+      "context": "  efac = nufac * m_e * c_light**2 / (4.*pi*e_c**2) / (n0_norm * l0_norm**2)\n  if(eta_max.le.0.) eta_max = eta_vac\n  if(eta_min.le.0.) eta_min = 0.\n\n  krfac = (9.6 / (4. * sqrt(2.*pi) * sqrt(m_e) * lambda_coulomb * e_c**4)) &\n       * t0_norm * p0_norm**2.5 / (l0_norm**2 * n0_norm**3.5)\n  if(kappa_max.le.0.) kappa_max = kappar\n  if(kappar_max.le.0.) kappar_max = kappar\n  if(kappar_min.le.0.) kappar_min = kappar\n\n  if(myrank.eq.0 .and. iprint.ge.1) then"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1869,
+      "matched_line": "* (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'",
+      "context": "\n  if(myrank.eq.0 .and. iprint.ge.1) then\n     print *, 'nufac = ', nufac\n     print *, 'efac = ', efac\n     print *, 'Te associated with eta_max = ', (efac*z_ion**2/eta_max)**(2./3.) &\n          * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'\n     print *, 'Te associated with eta_max = ', (efac*z_ion**2/eta_max)**(2./3.), &\n          ' dimensionless'\n     if (eta_min.gt.0) then\n        print *, 'Te associated with eta_min = ', (efac*z_ion**2/eta_min)**(2./3.) &\n             * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1874,
+      "matched_line": "* (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'",
+      "context": "          * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'\n     print *, 'Te associated with eta_max = ', (efac*z_ion**2/eta_max)**(2./3.), &\n          ' dimensionless'\n     if (eta_min.gt.0) then\n        print *, 'Te associated with eta_min = ', (efac*z_ion**2/eta_min)**(2./3.) &\n             * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'\n        print *, 'Te associated with eta_min = ', (efac*z_ion**2/eta_min)**(2./3.), &\n             ' dimensionless'\n     end if\n  end if\n"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1882,
+      "matched_line": "sqrt(4.*pi*n0_norm*(z_ion*e_c)**2/m0_norm) / &",
+      "context": "     end if\n  end if\n\n  if(db.lt.0.) then\n     db = c_light / &\n          sqrt(4.*pi*n0_norm*(z_ion*e_c)**2/m0_norm) / &\n          l0_norm\n     if(myrank.eq.0 .and. iprint.ge.1) then\n        print *, 'Physical value of db = ', db\n        print *, 'Scaled value of db = ', db*db_fac\n     end if"
+    },
+    {
+      "path": "unstructured/input.f90",
+      "line_number": 1883,
+      "matched_line": "l0_norm",
+      "context": "  end if\n\n  if(db.lt.0.) then\n     db = c_light / &\n          sqrt(4.*pi*n0_norm*(z_ion*e_c)**2/m0_norm) / &\n          l0_norm\n     if(myrank.eq.0 .and. iprint.ge.1) then\n        print *, 'Physical value of db = ', db\n        print *, 'Scaled value of db = ', db*db_fac\n     end if\n     db = db*db_fac"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 116,
+      "matched_line": "kprad_nemin = kprad_nemin*n0_norm",
+      "context": "       call create_field(kprad_recp)\n       call create_field(kprad_sigma_e)\n       call create_field(kprad_sigma_i)\n    endif\n    if(ikprad_min_option.eq.2 .or. ikprad_min_option.eq.3) then\n       kprad_nemin = kprad_nemin*n0_norm\n       kprad_temin = kprad_temin*p0_norm/n0_norm / 1.6022e-12\n    end if\n\n  end subroutine kprad_init\n    "
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 117,
+      "matched_line": "kprad_temin = kprad_temin*p0_norm/n0_norm / 1.6022e-12",
+      "context": "       call create_field(kprad_sigma_e)\n       call create_field(kprad_sigma_i)\n    endif\n    if(ikprad_min_option.eq.2 .or. ikprad_min_option.eq.3) then\n       kprad_nemin = kprad_nemin*n0_norm\n       kprad_temin = kprad_temin*p0_norm/n0_norm / 1.6022e-12\n    end if\n\n  end subroutine kprad_init\n    \n  !=================================="
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 616,
+      "matched_line": "nz = nz*n0_norm",
+      "context": "\n       if(any(advance_kprad)) then ! skip if no KPRAD advance in this triangle\n\n          ! convert nz, ne, te, dt to cgs / eV\n          p = p*p0_norm\n          nz = nz*n0_norm\n          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 617,
+      "matched_line": "ne = ne*n0_norm",
+      "context": "       if(any(advance_kprad)) then ! skip if no KPRAD advance in this triangle\n\n          ! convert nz, ne, te, dt to cgs / eV\n          p = p*p0_norm\n          nz = nz*n0_norm\n          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12\n          dt_s = dti*t0_norm"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 618,
+      "matched_line": "den = den*n0_norm",
+      "context": "\n          ! convert nz, ne, te, dt to cgs / eV\n          p = p*p0_norm\n          nz = nz*n0_norm\n          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12\n          dt_s = dti*t0_norm\n       "
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 619,
+      "matched_line": "source = source*n0_norm/t0_norm",
+      "context": "          ! convert nz, ne, te, dt to cgs / eV\n          p = p*p0_norm\n          nz = nz*n0_norm\n          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12\n          dt_s = dti*t0_norm\n       \n          ! advance densities at each integration point"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 620,
+      "matched_line": "te = te*p0_norm/n0_norm / 1.6022e-12",
+      "context": "          p = p*p0_norm\n          nz = nz*n0_norm\n          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12\n          dt_s = dti*t0_norm\n       \n          ! advance densities at each integration point\n          ! for one MHD timestep (dt_s)"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 621,
+      "matched_line": "ti = ti*p0_norm/n0_norm / 1.6022e-12",
+      "context": "          nz = nz*n0_norm\n          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12\n          dt_s = dti*t0_norm\n       \n          ! advance densities at each integration point\n          ! for one MHD timestep (dt_s)\n          if(izone.eq.1) then"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 622,
+      "matched_line": "dt_s = dti*t0_norm",
+      "context": "          ne = ne*n0_norm\n          den = den*n0_norm\n          source = source*n0_norm/t0_norm\n          te = te*p0_norm/n0_norm / 1.6022e-12\n          ti = ti*p0_norm/n0_norm / 1.6022e-12\n          dt_s = dti*t0_norm\n       \n          ! advance densities at each integration point\n          ! for one MHD timestep (dt_s)\n          if(izone.eq.1) then\n             call kprad_advance_densities(dt_s, MAX_PTS, kprad_z, p, ne, &"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 639,
+      "matched_line": "nz = nz / n0_norm",
+      "context": "             dw_recp = 0.\n          end if\n       \n          ! convert nz, dw_rad, dw_brem to normalized units\n          ! nz is given in /cm^3\n          nz = nz / n0_norm\n          ne = ne / n0_norm\n\n          ! dw is given in J/cm^3\n          ! factor of 1e7 needed to convert J to erg\n          dw_rad = dw_rad * 1.e7 / p0_norm"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 640,
+      "matched_line": "ne = ne / n0_norm",
+      "context": "          end if\n       \n          ! convert nz, dw_rad, dw_brem to normalized units\n          ! nz is given in /cm^3\n          nz = nz / n0_norm\n          ne = ne / n0_norm\n\n          ! dw is given in J/cm^3\n          ! factor of 1e7 needed to convert J to erg\n          dw_rad = dw_rad * 1.e7 / p0_norm\n          dw_brem = dw_brem * 1.e7 / p0_norm"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 787,
+      "matched_line": "x_vals = x_vals / l0_norm",
+      "context": "       return\n    end if\n    allocate(phi_vals(n))\n\n    ! convert from cgs to normalized units\n    x_vals = x_vals / l0_norm\n    y_vals = y_vals / l0_norm\n    z_vals = z_vals / l0_norm\n    n_vals = n_vals / n0_norm\n    lp_source_dt = lp_source_dt / t0_norm\n"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 788,
+      "matched_line": "y_vals = y_vals / l0_norm",
+      "context": "    end if\n    allocate(phi_vals(n))\n\n    ! convert from cgs to normalized units\n    x_vals = x_vals / l0_norm\n    y_vals = y_vals / l0_norm\n    z_vals = z_vals / l0_norm\n    n_vals = n_vals / n0_norm\n    lp_source_dt = lp_source_dt / t0_norm\n\n    ! Each LP has same impurity mass, defined by lp_source_mass"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 789,
+      "matched_line": "z_vals = z_vals / l0_norm",
+      "context": "    allocate(phi_vals(n))\n\n    ! convert from cgs to normalized units\n    x_vals = x_vals / l0_norm\n    y_vals = y_vals / l0_norm\n    z_vals = z_vals / l0_norm\n    n_vals = n_vals / n0_norm\n    lp_source_dt = lp_source_dt / t0_norm\n\n    ! Each LP has same impurity mass, defined by lp_source_mass\n    N_per_LP = (N_Avo/(n0_norm*l0_norm**3))*lp_source_mass/M_table(kprad_z)"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 790,
+      "matched_line": "n_vals = n_vals / n0_norm",
+      "context": "\n    ! convert from cgs to normalized units\n    x_vals = x_vals / l0_norm\n    y_vals = y_vals / l0_norm\n    z_vals = z_vals / l0_norm\n    n_vals = n_vals / n0_norm\n    lp_source_dt = lp_source_dt / t0_norm\n\n    ! Each LP has same impurity mass, defined by lp_source_mass\n    N_per_LP = (N_Avo/(n0_norm*l0_norm**3))*lp_source_mass/M_table(kprad_z)\n    if(iprint.ge.1 .and. myrank.eq.0) then"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 791,
+      "matched_line": "lp_source_dt = lp_source_dt / t0_norm",
+      "context": "    ! convert from cgs to normalized units\n    x_vals = x_vals / l0_norm\n    y_vals = y_vals / l0_norm\n    z_vals = z_vals / l0_norm\n    n_vals = n_vals / n0_norm\n    lp_source_dt = lp_source_dt / t0_norm\n\n    ! Each LP has same impurity mass, defined by lp_source_mass\n    N_per_LP = (N_Avo/(n0_norm*l0_norm**3))*lp_source_mass/M_table(kprad_z)\n    if(iprint.ge.1 .and. myrank.eq.0) then\n       print *, 'PELLET N_per_LP: ', N_per_LP"
+    },
+    {
+      "path": "unstructured/kprad_m3dc1.f90",
+      "line_number": 794,
+      "matched_line": "N_per_LP = (N_Avo/(n0_norm*l0_norm**3))*lp_source_mass/M_table(kprad_z)",
+      "context": "    z_vals = z_vals / l0_norm\n    n_vals = n_vals / n0_norm\n    lp_source_dt = lp_source_dt / t0_norm\n\n    ! Each LP has same impurity mass, defined by lp_source_mass\n    N_per_LP = (N_Avo/(n0_norm*l0_norm**3))*lp_source_mass/M_table(kprad_z)\n    if(iprint.ge.1 .and. myrank.eq.0) then\n       print *, 'PELLET N_per_LP: ', N_per_LP\n    end if\n    do j=1, n\n       ntot = sum(n_vals(j,:))"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 310,
+      "matched_line": "!call particle_step(dt*t0_norm)",
+      "context": "   if (myrank .eq. 0) then\n      call second(tend)\n      write (0, '(I12,A,f9.2,A)') nparticles, ' particles initialized in', &\n         tend - tstart, ' seconds.'\n   end if\n   !call particle_step(dt*t0_norm)\n\n   if (irestart.eq.0) then\n      nrmfac(:)=1.0\n      call update_particle_pressure\n      nrmfac_temp(:)=0."
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 364,
+      "matched_line": "speed = (v0_norm/100.0)*4.0",
+      "context": "   !q_ion = Z_ion * e_mks                       !Ion charge in C\n   q_ion(1) = z_ion*e_mks                       !fishbone\n   q_ion(2) = fast_ion_z*e_mks                       !fishbone\n   qm_ion = q_ion/m_ion                      !Ion charge/mass ratio\n   speed = sqrt(EmaxeV/ion_mass)*vp1eV     !Peak ion speed in m/s\n   speed = (v0_norm/100.0)*4.0\n   !speed = v0_norm/100.*2.58\n   !if (myrank.eq.0) print *,'peak ion speed = ',speed,' m/s = ',speed/c_mks,' c.'\nend subroutine get_ion_physics_params\n!---------------------------------------------------------------------------\nreal function tri_area(x1, z1, x2, z2, x3, z3)"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 365,
+      "matched_line": "!speed = v0_norm/100.*2.58",
+      "context": "   q_ion(1) = z_ion*e_mks                       !fishbone\n   q_ion(2) = fast_ion_z*e_mks                       !fishbone\n   qm_ion = q_ion/m_ion                      !Ion charge/mass ratio\n   speed = sqrt(EmaxeV/ion_mass)*vp1eV     !Peak ion speed in m/s\n   speed = (v0_norm/100.0)*4.0\n   !speed = v0_norm/100.*2.58\n   !if (myrank.eq.0) print *,'peak ion speed = ',speed,' m/s = ',speed/c_mks,' c.'\nend subroutine get_ion_physics_params\n!---------------------------------------------------------------------------\nreal function tri_area(x1, z1, x2, z2, x3, z3)\n!$acc routine seq"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 607,
+      "matched_line": "t0_norm_particle = t0_norm",
+      "context": "\n   !Set up 'neighborlist' table of element neighbors for ensemble tracking\n   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   particle_linear_particle = particle_linear\n   toroidal_period_particle = toroidal_period"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 608,
+      "matched_line": "v0_norm_particle = v0_norm",
+      "context": "   !Set up 'neighborlist' table of element neighbors for ensemble tracking\n   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   particle_linear_particle = particle_linear\n   toroidal_period_particle = toroidal_period\n   gyroaverage_particle = igyroaverage"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 609,
+      "matched_line": "b0_norm_particle = b0_norm",
+      "context": "   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   particle_linear_particle = particle_linear\n   toroidal_period_particle = toroidal_period\n   gyroaverage_particle = igyroaverage\n   iconst_f0_particle = iconst_f0"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 963,
+      "matched_line": "!call advancex(dpar%x, dpar%v, dt*t0_norm/psubsteps/2.)",
+      "context": "            !Bss = dot_product(Bstar, bhat)\n            !svec = dpar%v(5)*gradB0 ! - g_mks/qm_ion\n            !dpar%v(1) = (vpar*Bstar(1) + bhat(2)*svec(3) - bhat(3)*svec(2))/Bss\n            !dpar%v(2) = (vpar*Bstar(2) + bhat(3)*svec(1) - bhat(1)*svec(3))/Bss\n            !dpar%v(3) = (vpar*Bstar(3) + bhat(1)*svec(2) - bhat(2)*svec(1))/Bss\n            !call advancex(dpar%x, dpar%v, dt*t0_norm/psubsteps/2.)\n            !else !gyro- or drift kinetic\n            dpar%v(1) = vpar                        !v_parallel\n            !pdata(ielm)%ion(ip)%v(1) = 100000.                        !v_parallel\n            dpar%v(2) = (0.5*vperp**2)/(qm_ion(sps)*B0)  !mu/q\n            !pdata(ielm)%ion(ip)%wt = 1."
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 2646,
+      "matched_line": "sqrt(4.*3.14159*n0_norm*(z_ion*e_c)**2/m0_norm)/ &",
+      "context": "      call calcavector(ielm, bfp_field(1), elfieldcoefs(ielm_global)%Bfpv1)\n      call calcavector(ielm, psi_field(1), elfieldcoefs(ielm_global)%psiv1)\n      call calcavector(ielm, bz_field(1), elfieldcoefs(ielm_global)%Bzv1)\n      if (kinetic_thermal_ion.eq.1) then\n         factor = 1*c_light/ &\n                  sqrt(4.*3.14159*n0_norm*(z_ion*e_c)**2/m0_norm)/ &\n                  l0_norm*(v0_norm/100.0*b0_norm/1.e4)\n         call calcavector(ielm, p_field(1), elfieldcoefs(ielm_global)%pe)\n         call calcavector(ielm, densmooth_field, elfieldcoefs(ielm_global)%ne)\n         !call calcavector(ielm, den_field(1), elfieldcoefs(ielm_global)%ne)\n         elfieldcoefs(ielm_global)%pe=elfieldcoefs(ielm_global)%pe*factor"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 2647,
+      "matched_line": "l0_norm*(v0_norm/100.0*b0_norm/1.e4)",
+      "context": "      call calcavector(ielm, psi_field(1), elfieldcoefs(ielm_global)%psiv1)\n      call calcavector(ielm, bz_field(1), elfieldcoefs(ielm_global)%Bzv1)\n      if (kinetic_thermal_ion.eq.1) then\n         factor = 1*c_light/ &\n                  sqrt(4.*3.14159*n0_norm*(z_ion*e_c)**2/m0_norm)/ &\n                  l0_norm*(v0_norm/100.0*b0_norm/1.e4)\n         call calcavector(ielm, p_field(1), elfieldcoefs(ielm_global)%pe)\n         call calcavector(ielm, densmooth_field, elfieldcoefs(ielm_global)%ne)\n         !call calcavector(ielm, den_field(1), elfieldcoefs(ielm_global)%ne)\n         elfieldcoefs(ielm_global)%pe=elfieldcoefs(ielm_global)%pe*factor\n         if (eq==1) then"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3367,
+      "matched_line": "if (vspdims .eq. 5) call advancex(xtemp, vtemp, -t0_norm*dt/particle_substeps/2)",
+      "context": "            call get_geom_terms(pdata(ipart)%kx(:, ipoint), itri, &\n                                geomterms, .false., ierr)\n         else\n            xtemp = pdata(ipart)%x\n            vtemp = pdata(ipart)%v\n            if (vspdims .eq. 5) call advancex(xtemp, vtemp, -t0_norm*dt/particle_substeps/2)\n            call get_geom_terms(xtemp, itri, &\n                                geomterms, .false., ierr)\n         end if\n#ifdef USEST\n            call update_geom_terms_st(geomterms, elfieldcoefs(itri), .false.)"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3440,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "         !endif\n         !wnuhere = pdata(ipart)%wt * matmul(cl, geomterms%g) * pdata(ipart)%x(1)/10.\n         !deltaBhere = pdata(ielm)%ion(ipart)%f0 *dot_product(B_part,deltaB)/B0**2* matmul(cl,geomterms%g)\n         if (pdata(ipart)%sps == 1) then\n            coeffsdei0_local(:,itri) = coeffsdei0_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n#ifndef USECOMPLEX\n            coeffspai_local(:, itri) = coeffspai_local(:, itri) + ppar*wnuhere/4\n            ! coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*wnuhere2/4\n            ! coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3447,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "            coeffspai_local(:, itri) = coeffspai_local(:, itri) + ppar*wnuhere/4\n            ! coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*wnuhere2/4\n            ! coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3448,
+      "matched_line": "coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&",
+      "context": "            ! coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*wnuhere2/4\n            ! coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3449,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*wnuhere2/4\n            ! coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution\n            if (igyroaverage.eq.1) then"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3464,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "            coeffspai_local(:, itri) = coeffspai_local(:, itri) + ppar*phfac*wnuhere/4*2\n            !coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*phfac*wnuhere2/4*2\n            !coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3465,
+      "matched_line": "coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&",
+      "context": "            !coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*phfac*wnuhere2/4*2\n            !coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3466,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "            coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*phfac*wnuhere2/4*2\n            !coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif\n         else"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3473,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif\n         else\n            coeffsdef0_local(:,itri) = coeffsdef0_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n#ifndef USECOMPLEX\n            !coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*wnuhere/4\n            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*wnuhere2/4"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3480,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "            !coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*wnuhere/4\n            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*wnuhere2/4\n            coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3481,
+      "matched_line": "coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&",
+      "context": "            coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*wnuhere/4\n            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*wnuhere2/4\n            coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3482,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*wnuhere2/4\n            coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution\n            if (igyroaverage.eq.1) then"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3498,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "            coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*phfac*wnuhere/4*2\n            !coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*phfac*wnuhere2/4*2\n            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3499,
+      "matched_line": "coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&",
+      "context": "            !coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*phfac*wnuhere2/4*2\n            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif"
+    },
+    {
+      "path": "unstructured/particle_com.f90",
+      "line_number": 3500,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "            coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*phfac*wnuhere2/4*2\n            !coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n            coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif\n         end if"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 405,
+      "matched_line": "yvals = yvals * 10. / (b0_norm**2/(4.*pi))",
+      "context": "     ! Read in J/m^3\n     nvals = 0\n     call read_ascii_column('profile_p', xvals, nvals, icol=1)\n     call read_ascii_column('profile_p', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals * 10. / (b0_norm**2/(4.*pi))\n\n  case default\n\n  end select\n"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 437,
+      "matched_line": "yvals = yvals * 1e6 / (b0_norm*l0_norm)",
+      "context": "     ! Read in T*m\n     nvals = 0\n     call read_ascii_column('profile_f', xvals, nvals, icol=1)\n     call read_ascii_column('profile_f', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals * 1e6 / (b0_norm*l0_norm)\n\n  case default\n\n  end select\n"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 569,
+      "matched_line": "yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "     ! Read in keV vs Psi\n     nvals = 0\n     call read_ascii_column('profile_te', xvals, nvals, icol=1)\n     call read_ascii_column('profile_te', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n  case(2)\n     ! Read in eV vs Psi\n     nvals = 0\n     call read_ascii_column('profile_te', xvals, nvals, icol=1)\n     call read_ascii_column('profile_te', yvals, nvals, icol=2)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 576,
+      "matched_line": "yvals = yvals * 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "     ! Read in eV vs Psi\n     nvals = 0\n     call read_ascii_column('profile_te', xvals, nvals, icol=1)\n     call read_ascii_column('profile_te', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals * 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))\n\n  case(4)\n     ! Read in keV vs Rho (sqrt Phi)\n     nvals = 0\n     call read_ascii_column('profile_te_rho_3', xvals, nvals, icol=1)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 584,
+      "matched_line": "yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "     ! Read in keV vs Rho (sqrt Phi)\n     nvals = 0\n     call read_ascii_column('profile_te_rho_3', xvals, nvals, icol=1)\n     call read_ascii_column('profile_te_rho_3', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n     xvals = xvals / xvals(nvals) ! normalize rho\n     call rho_to_psi(nvals, xvals, xvals)\n\n  case(10)\n     ! Read from Corsica file (keV vs Psi)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 596,
+      "matched_line": "yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "     call read_ascii_column('corsica', xvals, nvals, icol=4, &\n          read_until='profile data:', skip=2)\n     call read_ascii_column('corsica', yvals, nvals, icol=6, &\n          read_until='profile data:', skip=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n\n  case(20)\n     ! Read from iterdb text file (keV vs Psi)\n     nvals = idb_nj\n     allocate(xvals(nvals), yvals(nvals))"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 605,
+      "matched_line": "yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "     nvals = idb_nj\n     allocate(xvals(nvals), yvals(nvals))\n     xvals = idb_psi\n     xvals = (xvals(:) - xvals(1)) / (xvals(nvals) - xvals(1))\n     yvals = idb_Te\n     yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n\n  case default\n     \n  end select\n"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 657,
+      "matched_line": "yvals = yvals / n0_norm !rsae",
+      "context": "  if ((kinetic.eq.1).and.(kinetic_fast_ion.eq.1)) then\n     nvals = 0\n     call read_ascii_column('profile_nf_rho', xvals, nvals, icol=1)\n     call read_ascii_column('profile_nf_rho', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals / n0_norm !rsae\n     xvals = xvals / xvals(nvals) ! normalize rho\n     if (allocated(psi_spline%y)) then\n        call rho_to_psi(nvals, xvals, xvals)\n     else\n        xvals=xvals**2"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 693,
+      "matched_line": "yvals = yvals / n0_norm !rsae",
+      "context": "  if ((kinetic.eq.1).and.(kinetic_thermal_ion.eq.1)) then\n     nvals = 0\n     call read_ascii_column('profile_ni_rho', xvals, nvals, icol=1)\n     call read_ascii_column('profile_ni_rho', yvals, nvals, icol=2)\n     if(nvals.eq.0) call safestop(5)\n     yvals = yvals / n0_norm !rsae\n     xvals = xvals / xvals(nvals) ! normalize rho\n     if (allocated(psi_spline%y)) then\n        call rho_to_psi(nvals, xvals, xvals)\n     else\n        xvals=xvals**2"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 743,
+      "matched_line": "yvals = yvals * 1e14 / n0_norm / z_ion",
+      "context": "        call read_ascii_column('profile_ne', yvals, nvals, icol=2)\n        if(nvals.eq.0) then\n             if(myrank.eq.0 .and. iprint.ge.0) print *,\"nvals=0 when reading profile_ne\"\n             call safestop(5)\n        endif\n        yvals = yvals * 1e14 / n0_norm / z_ion\n        \n     case(2)\n        ! Read in 10^19/m^3 vs Psi\n        call read_ascii_column('dne.xy', xvals, nvals, skip=3, icol=1)\n        call read_ascii_column('dne.xy', yvals, nvals, skip=3, icol=7)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 750,
+      "matched_line": "yvals = yvals * 1e13 / n0_norm / z_ion",
+      "context": "     case(2)\n        ! Read in 10^19/m^3 vs Psi\n        call read_ascii_column('dne.xy', xvals, nvals, skip=3, icol=1)\n        call read_ascii_column('dne.xy', yvals, nvals, skip=3, icol=7)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals * 1e13 / n0_norm / z_ion\n        \n     case(4)\n        ! Read in cm^-3 vs Rho (sqrt Phi)\n        nvals = 0\n        call read_ascii_column('profile_ne_rho_0', xvals, nvals, icol=1)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 758,
+      "matched_line": "yvals = yvals / n0_norm / z_ion",
+      "context": "        ! Read in cm^-3 vs Rho (sqrt Phi)\n        nvals = 0\n        call read_ascii_column('profile_ne_rho_0', xvals, nvals, icol=1)\n        call read_ascii_column('profile_ne_rho_0', yvals, nvals, icol=2)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals / n0_norm / z_ion\n        xvals = xvals / xvals(nvals) ! normalize rho\n        call rho_to_psi(nvals, xvals, xvals)\n\n     case(10)\n        ! Read in corsica (10^20 m^-3 vs Psi)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 770,
+      "matched_line": "yvals = yvals * 1e14 / n0_norm / z_ion",
+      "context": "        call read_ascii_column('corsica', xvals, nvals, icol=4, &\n          read_until='profile data:', skip=2)\n        call read_ascii_column('corsica', yvals, nvals, icol=8, &\n          read_until='profile data:', skip=2)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals * 1e14 / n0_norm / z_ion\n\n     case(20)\n        ! Read from iterdb text file (m^-3 vs Psi)\n        nvals = idb_nj\n        allocate(xvals(nvals), yvals(nvals))"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 779,
+      "matched_line": "yvals = yvals / 1e6 / n0_norm / z_ion",
+      "context": "        nvals = idb_nj\n        allocate(xvals(nvals), yvals(nvals))\n        xvals = idb_psi\n        xvals = (xvals(:) - xvals(1)) / (xvals(nvals) - xvals(1))\n        yvals = idb_ne\n        yvals = yvals / 1e6 / n0_norm / z_ion\n        \n     case default\n        call density_profile\n        \n     end select"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 866,
+      "matched_line": "(b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "        nvals = 0\n        call read_ascii_column('profile_omega', xvals, nvals, icol=1)\n        call read_ascii_column('profile_omega', yvals, nvals, icol=2)\n        if(nvals.eq.0) call safestop(5)\n        yvals = 1000.* yvals / &\n             (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n        \n     case(2)\n        ! Read in rad/sec\n        call read_ascii_column('dtrot.xy', xvals, nvals, skip=3, icol=1)\n        call read_ascii_column('dtrot.xy', yvals, nvals, skip=3, icol=7)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 874,
+      "matched_line": "(b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "        ! Read in rad/sec\n        call read_ascii_column('dtrot.xy', xvals, nvals, skip=3, icol=1)\n        call read_ascii_column('dtrot.xy', yvals, nvals, skip=3, icol=7)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals / &\n             (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n\n     case(3)\n        ! Read in m/sec\n        nvals = 0\n        call read_ascii_column('profile_vphi', xvals, nvals, icol=1)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 883,
+      "matched_line": "(b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm) &",
+      "context": "        nvals = 0\n        call read_ascii_column('profile_vphi', xvals, nvals, icol=1)\n        call read_ascii_column('profile_vphi', yvals, nvals, icol=2)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals / &\n             (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm) &\n             / rzero\n\n     case(4)\n        ! Read in rad/sec vs Rho (sqrt Phi)\n        nvals = 0"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 893,
+      "matched_line": "(b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "        nvals = 0\n        call read_ascii_column('profile_omega_rho_0',xvals,nvals,icol=1)\n        call read_ascii_column('profile_omega_rho_0',yvals,nvals,icol=2)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals / &\n             (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n        xvals = xvals / xvals(nvals) ! normalize rho\n        call rho_to_psi(nvals, xvals, xvals)\n\n     case(5)    ! added 1/1/2014 to read J.Menard files   (scj)\n        ! Read in rad/sec"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 905,
+      "matched_line": "(b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "        call read_ascii_column('profile_omega', xvals, nvals, 1, icol=1)\n! Question:  do we need to square this to get normalized poloidal flux?\n        call read_ascii_column('profile_omega', yvals, nvals, 1, icol=2)\n        if(nvals.eq.0) call safestop(5)\n        yvals = yvals / &\n             (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n\n     case(20)\n        ! Read from iterdb text file (rad/s vs Psi)\n        nvals = idb_nj\n        allocate(xvals(nvals), yvals(nvals))"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 915,
+      "matched_line": "(b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)",
+      "context": "        allocate(xvals(nvals), yvals(nvals))\n        xvals = idb_psi\n        xvals = (xvals(:) - xvals(1)) / (xvals(nvals) - xvals(1))\n        yvals = idb_omega\n        yvals = yvals / &\n             (b0_norm/sqrt(4.*pi*1.6726e-24*ion_mass*n0_norm)/l0_norm)\n\n     case default\n        call default_omega\n        call copy_spline(omega_spline_0, omega_spline)\n     end select"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 1599,
+      "matched_line": "temp79a(i) =tf*tf2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae",
+      "context": "\n        do i=1, npoints\n           call calc_fdensity(ps079(i,:),tf,x_79(i),z_79(i),izone)\n           call calc_ftemp(ps079(i,:),tf2,x_79(i),z_79(i),izone)\n           if ((fast_ion_dist==1).or.(fast_ion_dist==0)) then\n              temp79a(i) =tf*tf2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae\n           else\n              crit_v=sqrt(2*tf2*1.6e-19/fast_ion_mass/m_p)\n              max_v=sqrt(2*fast_ion_max_energy*1.6e-19/fast_ion_mass/m_p)\n              norm_1=1./6.*(-crit_v**2*log(crit_v**2-crit_v*max_v+max_v**2)+2*crit_v**2*log(crit_v+max_v)-2*sqrt(3.)*&\n                 crit_v**2*atan((2*max_v-crit_v)/(sqrt(3.)*crit_v))+3*max_v**2)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 1608,
+      "matched_line": "*1.e7 / (b0_norm**2/(4.*pi*n0_norm))!rsae",
+      "context": "              norm_1=1./6.*(-crit_v**2*log(crit_v**2-crit_v*max_v+max_v**2)+2*crit_v**2*log(crit_v+max_v)-2*sqrt(3.)*&\n                 crit_v**2*atan((2*max_v-crit_v)/(sqrt(3.)*crit_v))+3*max_v**2)\n              norm_2=1./6.*(-crit_v**2*log(crit_v**2)+2*crit_v**2*log(crit_v)-2*sqrt(3.)*crit_v**2*atan(-1./sqrt(3.)))\n              dnorm=1./3.*(log(max_v**3+crit_v**3)-log(crit_v**3))\n              temp79a(i) =tf*(norm_1-norm_2)/dnorm*fast_ion_mass*m_p/3.0&\n                 *1.e7 / (b0_norm**2/(4.*pi*n0_norm))!rsae\n           endif\n        end do\n\n        temp(:,1) = intx2(mu79(:,:,OP_1),temp79a)\n        call vector_insert_block(b1vecini_vec%vec,itri,1,temp(:,1),VEC_ADD)"
+    },
+    {
+      "path": "unstructured/gradshafranov.f90",
+      "line_number": 1697,
+      "matched_line": "temp79a(i) =tf*tf2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae",
+      "context": "        call get_zone(itri, izone)\n\n        do i=1, npoints\n           call calc_fidensity(ps079(i,:),tf,x_79(i),z_79(i),izone)\n           call calc_fitemp(ps079(i,:),tf2,x_79(i),z_79(i),izone)\n           temp79a(i) =tf*tf2* 1.6022e-12 / (b0_norm**2/(4.*pi*n0_norm))!rsae\n        end do\n\n        temp(:,1) = intx2(mu79(:,:,OP_1),temp79a)\n        call vector_insert_block(b1vecini_vec%vec,itri,1,temp(:,1),VEC_ADD)\n     end do"
+    },
+    {
+      "path": "unstructured/rmp.f90",
+      "line_number": 391,
+      "matched_line": "br = br + (1e4/b0_norm)*fr  *scale_ext_field*sfac",
+      "context": "  if(iread_ext_field.ne.0) then\n     do i=1, iread_ext_field \n#if defined(USECOMPLEX)\n        sfac = exp(-cmplx(0.,1.)*ntor*shift_ext_field(i)*pi/180.)\n        call get_external_field_ft(sf(i),x,z,fr,fphi,fz,n)\n        br = br + (1e4/b0_norm)*fr  *scale_ext_field*sfac\n        bphi = bphi + (1e4/b0_norm)*fphi*scale_ext_field*sfac\n        bz = bz + (1e4/b0_norm)*fz  *scale_ext_field*sfac\n#elif defined(USE3D)\n        call get_external_field(sf(i),&\n             x,phi-shift_ext_field(i)*pi/180.,z,&"
+    },
+    {
+      "path": "unstructured/rmp.f90",
+      "line_number": 392,
+      "matched_line": "bphi = bphi + (1e4/b0_norm)*fphi*scale_ext_field*sfac",
+      "context": "     do i=1, iread_ext_field \n#if defined(USECOMPLEX)\n        sfac = exp(-cmplx(0.,1.)*ntor*shift_ext_field(i)*pi/180.)\n        call get_external_field_ft(sf(i),x,z,fr,fphi,fz,n)\n        br = br + (1e4/b0_norm)*fr  *scale_ext_field*sfac\n        bphi = bphi + (1e4/b0_norm)*fphi*scale_ext_field*sfac\n        bz = bz + (1e4/b0_norm)*fz  *scale_ext_field*sfac\n#elif defined(USE3D)\n        call get_external_field(sf(i),&\n             x,phi-shift_ext_field(i)*pi/180.,z,&\n             gr,gphi,gz,q,n)"
+    },
+    {
+      "path": "unstructured/rmp.f90",
+      "line_number": 393,
+      "matched_line": "bz = bz + (1e4/b0_norm)*fz  *scale_ext_field*sfac",
+      "context": "#if defined(USECOMPLEX)\n        sfac = exp(-cmplx(0.,1.)*ntor*shift_ext_field(i)*pi/180.)\n        call get_external_field_ft(sf(i),x,z,fr,fphi,fz,n)\n        br = br + (1e4/b0_norm)*fr  *scale_ext_field*sfac\n        bphi = bphi + (1e4/b0_norm)*fphi*scale_ext_field*sfac\n        bz = bz + (1e4/b0_norm)*fz  *scale_ext_field*sfac\n#elif defined(USE3D)\n        call get_external_field(sf(i),&\n             x,phi-shift_ext_field(i)*pi/180.,z,&\n             gr,gphi,gz,q,n)\n        br = br + (1e4/b0_norm)*gr  *scale_ext_field"
+    },
+    {
+      "path": "unstructured/rmp.f90",
+      "line_number": 398,
+      "matched_line": "br = br + (1e4/b0_norm)*gr  *scale_ext_field",
+      "context": "        bz = bz + (1e4/b0_norm)*fz  *scale_ext_field*sfac\n#elif defined(USE3D)\n        call get_external_field(sf(i),&\n             x,phi-shift_ext_field(i)*pi/180.,z,&\n             gr,gphi,gz,q,n)\n        br = br + (1e4/b0_norm)*gr  *scale_ext_field\n        bphi = bphi + (1e4/b0_norm)*gphi*scale_ext_field\n        bz = bz + (1e4/b0_norm)*gz  *scale_ext_field\n        if(sf(i)%vmec .and. present(p)) then\n           p = p + q*10/p0_norm + pedge\n        end if"
+    },
+    {
+      "path": "unstructured/rmp.f90",
+      "line_number": 399,
+      "matched_line": "bphi = bphi + (1e4/b0_norm)*gphi*scale_ext_field",
+      "context": "#elif defined(USE3D)\n        call get_external_field(sf(i),&\n             x,phi-shift_ext_field(i)*pi/180.,z,&\n             gr,gphi,gz,q,n)\n        br = br + (1e4/b0_norm)*gr  *scale_ext_field\n        bphi = bphi + (1e4/b0_norm)*gphi*scale_ext_field\n        bz = bz + (1e4/b0_norm)*gz  *scale_ext_field\n        if(sf(i)%vmec .and. present(p)) then\n           p = p + q*10/p0_norm + pedge\n        end if\n#endif"
+    },
+    {
+      "path": "unstructured/rmp.f90",
+      "line_number": 400,
+      "matched_line": "bz = bz + (1e4/b0_norm)*gz  *scale_ext_field",
+      "context": "        call get_external_field(sf(i),&\n             x,phi-shift_ext_field(i)*pi/180.,z,&\n             gr,gphi,gz,q,n)\n        br = br + (1e4/b0_norm)*gr  *scale_ext_field\n        bphi = bphi + (1e4/b0_norm)*gphi*scale_ext_field\n        bz = bz + (1e4/b0_norm)*gz  *scale_ext_field\n        if(sf(i)%vmec .and. present(p)) then\n           p = p + q*10/p0_norm + pedge\n        end if\n#endif\n     end do"
+    },
+    {
+      "path": "unstructured/neutral_beam.f90",
+      "line_number": 27,
+      "matched_line": "nb_n = beam_rate*t0_norm/(n0_norm*l0_norm**3)",
+      "context": "\n  subroutine neutral_beam_init()\n    use basic\n    implicit none\n\n    nb_n = beam_rate*t0_norm/(n0_norm*l0_norm**3)\n    nb_r = beam_x/(l0_norm/100.)\n    nb_z = beam_z/(l0_norm/100.)\n    nb_dr = beam_dr/(l0_norm/100.)\n    nb_v = sqrt(2.*beam_zeff*e_c*(abs(beam_v)*1.e8/c_light)/(ion_mass*m_p)) &\n         /v0_norm"
+    },
+    {
+      "path": "unstructured/neutral_beam.f90",
+      "line_number": 28,
+      "matched_line": "nb_r = beam_x/(l0_norm/100.)",
+      "context": "  subroutine neutral_beam_init()\n    use basic\n    implicit none\n\n    nb_n = beam_rate*t0_norm/(n0_norm*l0_norm**3)\n    nb_r = beam_x/(l0_norm/100.)\n    nb_z = beam_z/(l0_norm/100.)\n    nb_dr = beam_dr/(l0_norm/100.)\n    nb_v = sqrt(2.*beam_zeff*e_c*(abs(beam_v)*1.e8/c_light)/(ion_mass*m_p)) &\n         /v0_norm\n    if(beam_v.lt.0.) nb_v = -nb_v"
+    },
+    {
+      "path": "unstructured/neutral_beam.f90",
+      "line_number": 29,
+      "matched_line": "nb_z = beam_z/(l0_norm/100.)",
+      "context": "    use basic\n    implicit none\n\n    nb_n = beam_rate*t0_norm/(n0_norm*l0_norm**3)\n    nb_r = beam_x/(l0_norm/100.)\n    nb_z = beam_z/(l0_norm/100.)\n    nb_dr = beam_dr/(l0_norm/100.)\n    nb_v = sqrt(2.*beam_zeff*e_c*(abs(beam_v)*1.e8/c_light)/(ion_mass*m_p)) &\n         /v0_norm\n    if(beam_v.lt.0.) nb_v = -nb_v\n    nb_dv =sqrt(2.*beam_zeff*e_c*(beam_dv*1.e8/c_light)/(ion_mass*m_p))/v0_norm"
+    },
+    {
+      "path": "unstructured/neutral_beam.f90",
+      "line_number": 30,
+      "matched_line": "nb_dr = beam_dr/(l0_norm/100.)",
+      "context": "    implicit none\n\n    nb_n = beam_rate*t0_norm/(n0_norm*l0_norm**3)\n    nb_r = beam_x/(l0_norm/100.)\n    nb_z = beam_z/(l0_norm/100.)\n    nb_dr = beam_dr/(l0_norm/100.)\n    nb_v = sqrt(2.*beam_zeff*e_c*(abs(beam_v)*1.e8/c_light)/(ion_mass*m_p)) &\n         /v0_norm\n    if(beam_v.lt.0.) nb_v = -nb_v\n    nb_dv =sqrt(2.*beam_zeff*e_c*(beam_dv*1.e8/c_light)/(ion_mass*m_p))/v0_norm\n  end subroutine neutral_beam_init"
+    },
+    {
+      "path": "unstructured/neutral_beam.f90",
+      "line_number": 32,
+      "matched_line": "/v0_norm",
+      "context": "    nb_n = beam_rate*t0_norm/(n0_norm*l0_norm**3)\n    nb_r = beam_x/(l0_norm/100.)\n    nb_z = beam_z/(l0_norm/100.)\n    nb_dr = beam_dr/(l0_norm/100.)\n    nb_v = sqrt(2.*beam_zeff*e_c*(abs(beam_v)*1.e8/c_light)/(ion_mass*m_p)) &\n         /v0_norm\n    if(beam_v.lt.0.) nb_v = -nb_v\n    nb_dv =sqrt(2.*beam_zeff*e_c*(beam_dv*1.e8/c_light)/(ion_mass*m_p))/v0_norm\n  end subroutine neutral_beam_init\n  \n"
+    },
+    {
+      "path": "unstructured/neutral_beam.f90",
+      "line_number": 34,
+      "matched_line": "nb_dv =sqrt(2.*beam_zeff*e_c*(beam_dv*1.e8/c_light)/(ion_mass*m_p))/v0_norm",
+      "context": "    nb_z = beam_z/(l0_norm/100.)\n    nb_dr = beam_dr/(l0_norm/100.)\n    nb_v = sqrt(2.*beam_zeff*e_c*(abs(beam_v)*1.e8/c_light)/(ion_mass*m_p)) &\n         /v0_norm\n    if(beam_v.lt.0.) nb_v = -nb_v\n    nb_dv =sqrt(2.*beam_zeff*e_c*(beam_dv*1.e8/c_light)/(ion_mass*m_p))/v0_norm\n  end subroutine neutral_beam_init\n  \n\n  vectype elemental function neutral_beam_deposition(r, z)\n    use math"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 312,
+      "matched_line": "!call particle_step(dt*t0_norm)",
+      "context": "   if (myrank .eq. 0) then\n      call second(tend)\n      write (0, '(I12,A,f9.2,A)') nparticles, ' particles initialized in', &\n         tend - tstart, ' seconds.'\n   end if\n   !call particle_step(dt*t0_norm)\n\n   if (irestart.eq.0) then\n      nrmfac(:)=1.0\n      call update_particle_pressure\n      nrmfac_temp(:)=0."
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 371,
+      "matched_line": "speed = (v0_norm/100.0)*4.0",
+      "context": "   !q_ion = Z_ion * e_mks                       !Ion charge in C\n   q_ion(1) = z_ion*e_mks                       !fishbone\n   q_ion(2) = fast_ion_z*e_mks                       !fishbone\n   qm_ion = q_ion/m_ion                      !Ion charge/mass ratio\n   speed = sqrt(EmaxeV/ion_mass)*vp1eV     !Peak ion speed in m/s\n   speed = (v0_norm/100.0)*4.0\n   !speed = v0_norm/100.*2.58\n   !if (myrank.eq.0) print *,'peak ion speed = ',speed,' m/s = ',speed/c_mks,' c.'\nend subroutine get_ion_physics_params\n!---------------------------------------------------------------------------\nreal function tri_area(x1, z1, x2, z2, x3, z3)"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 372,
+      "matched_line": "!speed = v0_norm/100.*2.58",
+      "context": "   q_ion(1) = z_ion*e_mks                       !fishbone\n   q_ion(2) = fast_ion_z*e_mks                       !fishbone\n   qm_ion = q_ion/m_ion                      !Ion charge/mass ratio\n   speed = sqrt(EmaxeV/ion_mass)*vp1eV     !Peak ion speed in m/s\n   speed = (v0_norm/100.0)*4.0\n   !speed = v0_norm/100.*2.58\n   !if (myrank.eq.0) print *,'peak ion speed = ',speed,' m/s = ',speed/c_mks,' c.'\nend subroutine get_ion_physics_params\n!---------------------------------------------------------------------------\nreal function tri_area(x1, z1, x2, z2, x3, z3)\n!$acc routine seq"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 620,
+      "matched_line": "t0_norm_particle = t0_norm",
+      "context": "\n   !Set up 'neighborlist' table of element neighbors for ensemble tracking\n   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   particle_linear_particle = particle_linear\n   toroidal_period_particle = toroidal_period"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 621,
+      "matched_line": "v0_norm_particle = v0_norm",
+      "context": "   !Set up 'neighborlist' table of element neighbors for ensemble tracking\n   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   particle_linear_particle = particle_linear\n   toroidal_period_particle = toroidal_period\n   gyroaverage_particle = igyroaverage"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 622,
+      "matched_line": "b0_norm_particle = b0_norm",
+      "context": "   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   particle_linear_particle = particle_linear\n   toroidal_period_particle = toroidal_period\n   gyroaverage_particle = igyroaverage\n   ifullf_particle = ifullf"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 984,
+      "matched_line": "!call advancex(dpar%x, dpar%v, dt*t0_norm/psubsteps/2.)",
+      "context": "            !Bss = dot_product(Bstar, bhat)\n            !svec = dpar%v(5)*gradB0 ! - g_mks/qm_ion\n            !dpar%v(1) = (vpar*Bstar(1) + bhat(2)*svec(3) - bhat(3)*svec(2))/Bss\n            !dpar%v(2) = (vpar*Bstar(2) + bhat(3)*svec(1) - bhat(1)*svec(3))/Bss\n            !dpar%v(3) = (vpar*Bstar(3) + bhat(1)*svec(2) - bhat(2)*svec(1))/Bss\n            !call advancex(dpar%x, dpar%v, dt*t0_norm/psubsteps/2.)\n            !else !gyro- or drift kinetic\n            dpar%v(1) = vpar                        !v_parallel\n            !pdata(ielm)%ion(ip)%v(1) = 100000.                        !v_parallel\n            dpar%v(2) = (0.5*vperp**2)/(qm_ion(sps)*B0)  !mu/q\n            !pdata(ielm)%ion(ip)%wt = 1."
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 2731,
+      "matched_line": "sqrt(4.*3.14159*n0_norm*(z_ion*e_c)**2/m0_norm)/ &",
+      "context": "#endif\n      call calcavector(ielm, psi_field(1), elfieldcoefs(ielm_global)%psiv1)\n      call calcavector(ielm, bz_field(1), elfieldcoefs(ielm_global)%Bzv1)\n      if (kinetic_thermal_ion.eq.1) then\n         factor = 1*c_light/ &\n                  sqrt(4.*3.14159*n0_norm*(z_ion*e_c)**2/m0_norm)/ &\n                  l0_norm*(v0_norm/100.0*b0_norm/1.e4)\n         call calcavector(ielm, p_field(1), elfieldcoefs(ielm_global)%pe)\n         call calcavector(ielm, densmooth_field, elfieldcoefs(ielm_global)%ne)\n         !call calcavector(ielm, den_field(1), elfieldcoefs(ielm_global)%ne)\n         call calcavector(ielm, te_field(1), elfieldcoefs(ielm_global)%te)"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 2732,
+      "matched_line": "l0_norm*(v0_norm/100.0*b0_norm/1.e4)",
+      "context": "      call calcavector(ielm, psi_field(1), elfieldcoefs(ielm_global)%psiv1)\n      call calcavector(ielm, bz_field(1), elfieldcoefs(ielm_global)%Bzv1)\n      if (kinetic_thermal_ion.eq.1) then\n         factor = 1*c_light/ &\n                  sqrt(4.*3.14159*n0_norm*(z_ion*e_c)**2/m0_norm)/ &\n                  l0_norm*(v0_norm/100.0*b0_norm/1.e4)\n         call calcavector(ielm, p_field(1), elfieldcoefs(ielm_global)%pe)\n         call calcavector(ielm, densmooth_field, elfieldcoefs(ielm_global)%ne)\n         !call calcavector(ielm, den_field(1), elfieldcoefs(ielm_global)%ne)\n         call calcavector(ielm, te_field(1), elfieldcoefs(ielm_global)%te)\n         elfieldcoefs(ielm_global)%pe=elfieldcoefs(ielm_global)%pe*factor"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3391,
+      "matched_line": "if (vspdims .eq. 5) call advancex(xtemp, vtemp, -t0_norm*dt/particle_substeps/2)",
+      "context": "            call get_geom_terms(pdata(ipart)%kx(:, ipoint), itri, &\n                                geomterms, .false., ierr)\n         else\n            xtemp = pdata(ipart)%x\n            vtemp = pdata(ipart)%v\n            if (vspdims .eq. 5) call advancex(xtemp, vtemp, -t0_norm*dt/particle_substeps/2)\n            call get_geom_terms(xtemp, itri, &\n                                geomterms, .false., ierr)\n         end if\n#ifdef USEST\n            call update_geom_terms_st(geomterms, elfieldcoefs(itri), .false.)"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3464,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "         !endif\n         !wnuhere = pdata(ipart)%wt * matmul(cl, geomterms%g) * pdata(ipart)%x(1)/10.\n         !deltaBhere = pdata(ielm)%ion(ipart)%f0 *dot_product(B_part,deltaB)/B0**2* matmul(cl,geomterms%g)\n         if (pdata(ipart)%sps == 1) then\n            coeffsdei0_local(:,itri) = coeffsdei0_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n#ifndef USECOMPLEX\n            if (ifullf.eq.0) then\n               coeffspai_local(:, itri) = coeffspai_local(:, itri) + ppar*wnuhere/4\n               coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*wnuhere2/4\n               coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + wnuhere/4&"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3470,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "#ifndef USECOMPLEX\n            if (ifullf.eq.0) then\n               coeffspai_local(:, itri) = coeffspai_local(:, itri) + ppar*wnuhere/4\n               coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*wnuhere2/4\n               coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + wnuhere/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            else\n               coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:, itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3475,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            else\n               coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:, itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            endif\n            coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3477,
+      "matched_line": "coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&",
+      "context": "               coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:, itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            endif\n            coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3478,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:, itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            endif\n            coeffsvpi_local(:, itri) = coeffsvpi_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution\n            if (igyroaverage.eq.1) then"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3492,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "            end if\n            if (ifullf.eq.0) then\n               coeffspai_local(:, itri) = coeffspai_local(:, itri) + ppar*phfac*wnuhere/4*2\n               coeffspei_local(:, itri) = coeffspei_local(:, itri) + pperp*phfac*wnuhere2/4*2\n               coeffsdei_local(:, itri) = coeffsdei_local(:, itri) + phfac*wnuhere/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            else\n               coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3497,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            else\n               coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            endif\n            coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3499,
+      "matched_line": "coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&",
+      "context": "               coeffspai_local(:,itri) = coeffspai_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            endif\n            coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3500,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "               coeffspei_local(:,itri) = coeffspei_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdei_local(:,itri) = coeffsdei_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            endif\n            coeffsvpi_local(:,itri) = coeffsvpi_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif\n         else"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3507,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif\n         else\n            coeffsdef0_local(:,itri) = coeffsdef0_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n#ifndef USECOMPLEX\n            if (ifullf.eq.0) then\n               coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*wnuhere/4\n               coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*wnuhere2/4\n               coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + wnuhere/4&"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3513,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "#ifndef USECOMPLEX\n            if (ifullf.eq.0) then\n               coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*wnuhere/4\n               coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*wnuhere2/4\n               coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + wnuhere/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            else\n               coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3518,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            else\n               coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            endif\n            coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3520,
+      "matched_line": "coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&",
+      "context": "               coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            endif\n            coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3521,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)",
+      "context": "               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            endif\n            coeffsvpf_local(:, itri) = coeffsvpf_local(:, itri) + vpar/(v0_norm/100.)*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)\n            !dofspa = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspe = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#else\n            !Extract appropriate Fourier component of particle contribution\n            if (igyroaverage.eq.1) then"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3535,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "            end if\n            if (ifullf.eq.0) then\n               coeffspaf_local(:, itri) = coeffspaf_local(:, itri) + ppar*phfac*wnuhere/4*2\n               coeffspef_local(:, itri) = coeffspef_local(:, itri) + pperp*phfac*wnuhere2/4*2\n               coeffsdef_local(:, itri) = coeffsdef_local(:, itri) + phfac*wnuhere/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            else\n               coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3540,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            else\n               coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            endif\n            coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3542,
+      "matched_line": "coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&",
+      "context": "               coeffspaf_local(:,itri) = coeffspaf_local(:,itri) + ppar*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            endif\n            coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif"
+    },
+    {
+      "path": "unstructured/particle.f90",
+      "line_number": 3543,
+      "matched_line": "*(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2",
+      "context": "               coeffspef_local(:,itri) = coeffspef_local(:,itri) + pperp*geomterms%g*nrmfac(pdata(ipart)%sps)/4\n               coeffsdef_local(:,itri) = coeffsdef_local(:,itri) + geomterms%g*nrmfac(pdata(ipart)%sps)/4&\n                  *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            endif\n            coeffsvpf_local(:,itri) = coeffsvpf_local(:,itri) + vpar/(v0_norm/100.)*phfac*wnuhere/4&\n               *(b0_norm/1e4)**2/(4*3.14159*1e-7)/(n0_norm*1e6)*2\n            !dofspen = dofspen + pperp*phfac*deltaBhere\n            !dofspan = intx2(mu79(:,:,OP_1),ppar79(:,OP_1))\n            !dofspen = intx2(mu79(:,:,OP_1),pper79(:,OP_1))\n#endif\n         end if"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line_number": 300,
+      "matched_line": "call write_real_attr(root_id, \"b0_norm\"    , b0_norm,    error)",
+      "context": "  call write_real_attr(root_id, \"hyper\"      , hyper,      error)\n  call write_real_attr(root_id, \"hyperi\"     , hyperi,     error)\n  call write_real_attr(root_id, \"hyperv\"     , hyperv,     error)\n  call write_real_attr(root_id, \"hyperc\"     , hyperc,     error)\n  call write_real_attr(root_id, \"hyperp\"     , hyperp,     error)\n  call write_real_attr(root_id, \"b0_norm\"    , b0_norm,    error)\n  call write_real_attr(root_id, \"n0_norm\"    , n0_norm,    error)\n  call write_real_attr(root_id, \"l0_norm\"    , l0_norm,    error)  \n  call write_real_attr(root_id, \"eta_wall\"   , eta_wall,   error)\n  call write_real_attr(root_id, \"z_ion\"      , z_ion,      error)\n  call write_real_attr(root_id, \"ion_mass\"   , ion_mass,   error)"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line_number": 301,
+      "matched_line": "call write_real_attr(root_id, \"n0_norm\"    , n0_norm,    error)",
+      "context": "  call write_real_attr(root_id, \"hyperi\"     , hyperi,     error)\n  call write_real_attr(root_id, \"hyperv\"     , hyperv,     error)\n  call write_real_attr(root_id, \"hyperc\"     , hyperc,     error)\n  call write_real_attr(root_id, \"hyperp\"     , hyperp,     error)\n  call write_real_attr(root_id, \"b0_norm\"    , b0_norm,    error)\n  call write_real_attr(root_id, \"n0_norm\"    , n0_norm,    error)\n  call write_real_attr(root_id, \"l0_norm\"    , l0_norm,    error)  \n  call write_real_attr(root_id, \"eta_wall\"   , eta_wall,   error)\n  call write_real_attr(root_id, \"z_ion\"      , z_ion,      error)\n  call write_real_attr(root_id, \"ion_mass\"   , ion_mass,   error)\n  call write_real_attr(root_id, \"frequency\"  , frequency,  error)"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line_number": 302,
+      "matched_line": "call write_real_attr(root_id, \"l0_norm\"    , l0_norm,    error)",
+      "context": "  call write_real_attr(root_id, \"hyperv\"     , hyperv,     error)\n  call write_real_attr(root_id, \"hyperc\"     , hyperc,     error)\n  call write_real_attr(root_id, \"hyperp\"     , hyperp,     error)\n  call write_real_attr(root_id, \"b0_norm\"    , b0_norm,    error)\n  call write_real_attr(root_id, \"n0_norm\"    , n0_norm,    error)\n  call write_real_attr(root_id, \"l0_norm\"    , l0_norm,    error)  \n  call write_real_attr(root_id, \"eta_wall\"   , eta_wall,   error)\n  call write_real_attr(root_id, \"z_ion\"      , z_ion,      error)\n  call write_real_attr(root_id, \"ion_mass\"   , ion_mass,   error)\n  call write_real_attr(root_id, \"frequency\"  , frequency,  error)\n  call write_int_attr (root_id, \"ibootstrap_model\", ibootstrap_model, error)"
+    },
+    {
+      "path": "unstructured/output.f90",
+      "line_number": 450,
+      "matched_line": "call output_1dextendarr(pel_group_id, \"pellet_te\", temp_pel*(n0_norm*1.6022e-12/p0_norm), npellets, ntime, error)",
+      "context": "        if((irestart.eq.0).or.(version_in.ge.33)) then\n           call output_1dextendarr(pel_group_id, \"cauchy_fraction\", cauchy_fraction, npellets, ntime, error)\n        end if\n        if((irestart.eq.0).or.(version_in.ge.37)) then\n           ! pellet_ne is normalized, but pellet_te is in eV\n           call output_1dextendarr(pel_group_id, \"pellet_te\", temp_pel*(n0_norm*1.6022e-12/p0_norm), npellets, ntime, error)\n           call output_1dextendarr(pel_group_id, \"pellet_ne\", nsource_pel, npellets, ntime, error)\n        end if\n\n     else\n        call output_scalar(scalar_group_id, \"pellet_r\",   pellet_r(1),   ntime, error)"
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 234,
+      "matched_line": "!call particle_step(dt*t0_norm)",
+      "context": "   if (myrank .eq. 0) then\n      call second(tend)\n      write (0, '(I12,A,f9.2,A)') nparticles, ' particles initialized in', &\n         tend - tstart, ' seconds.'\n   end if\n   !call particle_step(dt*t0_norm)\n\n   !call update_particle_pressure\n\n   call MPI_Barrier(MPI_COMM_WORLD, ierr)\nend subroutine runaway_advection_initialize"
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 477,
+      "matched_line": "t0_norm_particle = t0_norm",
+      "context": "\n   !Set up 'neighborlist' table of element neighbors for ensemble tracking\n   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   linear_particle = linear\n   eqsubtract_particle = eqsubtract"
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 478,
+      "matched_line": "v0_norm_particle = v0_norm",
+      "context": "   !Set up 'neighborlist' table of element neighbors for ensemble tracking\n   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   linear_particle = linear\n   eqsubtract_particle = eqsubtract\n   itor_particle = itor"
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 479,
+      "matched_line": "b0_norm_particle = b0_norm",
+      "context": "   call find_element_neighbors\n\n   dt_particle = dt\n   t0_norm_particle = t0_norm\n   v0_norm_particle = v0_norm\n   b0_norm_particle = b0_norm\n   rfac_particle = rfac\n   linear_particle = linear\n   eqsubtract_particle = eqsubtract\n   itor_particle = itor\n   toroidal_period_particle = toroidal_period"
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 485,
+      "matched_line": "if (cre==0) cre=3.0e8/(v0_norm/100.)",
+      "context": "   rfac_particle = rfac\n   linear_particle = linear\n   eqsubtract_particle = eqsubtract\n   itor_particle = itor\n   toroidal_period_particle = toroidal_period\n   if (cre==0) cre=3.0e8/(v0_norm/100.)\n   !psubsteps = 16*dt*cre\n   psubsteps = ra_cyc\n   ra_cyc = 1\n   !linear_particle=0\n"
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 587,
+      "matched_line": "dpar%v(1) =  v0_norm/100*cre*bzsign",
+      "context": "            if (izone.eq.ZONE_PLASMA) then\n               dpar%x(1) = x_79(ipar)\n               dpar%x(3) = z_79(ipar)\n               dpar%x(2) = phi_79(ipar)\n               dpar%jel = itri\n               dpar%v(1) =  v0_norm/100*cre*bzsign\n               dpar%v(2) = 0.\n               !pdata(ielm)%ion(ip)%v(1) = 100000.                        !v_parallel\n\n               dpar%wt = 0.\n               dpar%f0 = 0."
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 1980,
+      "matched_line": "!if (pdata(ipart)%dt<dt*t0_norm/psubsteps*0.5) pdata(ipart)%dt=pdata(ipart)%dt*1.9932235932",
+      "context": "             cycle !next particle\n          endif\n          !iok = iok + 1\n          !B0 = sqrt(dot_product(B_part(1:3:2), B_part(1:3:2)))\n          !pdata(ipart)%dt=pdata(ipart)%dt*0.93247923\n          !if (pdata(ipart)%dt<dt*t0_norm/psubsteps*0.5) pdata(ipart)%dt=pdata(ipart)%dt*1.9932235932\n          !pdata(ipart)%dt=dt*t0_norm/psubsteps/B0*0.25\n          !if (pdata(ipart)%dt>dt*t0_norm/psubsteps*2) pdata(ipart)%dt=dt*t0_norm/psubsteps*2\n          if (pdata(ipart)%deleted) then\n             !pdata(ipart)%deleted=real((pst79(part_index,OP_1)-psimin)/(psibound-psimin))>1\n             pdata(ipart)%deleted=.false."
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 1981,
+      "matched_line": "!pdata(ipart)%dt=dt*t0_norm/psubsteps/B0*0.25",
+      "context": "          endif\n          !iok = iok + 1\n          !B0 = sqrt(dot_product(B_part(1:3:2), B_part(1:3:2)))\n          !pdata(ipart)%dt=pdata(ipart)%dt*0.93247923\n          !if (pdata(ipart)%dt<dt*t0_norm/psubsteps*0.5) pdata(ipart)%dt=pdata(ipart)%dt*1.9932235932\n          !pdata(ipart)%dt=dt*t0_norm/psubsteps/B0*0.25\n          !if (pdata(ipart)%dt>dt*t0_norm/psubsteps*2) pdata(ipart)%dt=dt*t0_norm/psubsteps*2\n          if (pdata(ipart)%deleted) then\n             !pdata(ipart)%deleted=real((pst79(part_index,OP_1)-psimin)/(psibound-psimin))>1\n             pdata(ipart)%deleted=.false.\n             pdata(ipart)%wt=0."
+    },
+    {
+      "path": "unstructured/runaway_advection.f90",
+      "line_number": 1982,
+      "matched_line": "!if (pdata(ipart)%dt>dt*t0_norm/psubsteps*2) pdata(ipart)%dt=dt*t0_norm/psubsteps*2",
+      "context": "          !iok = iok + 1\n          !B0 = sqrt(dot_product(B_part(1:3:2), B_part(1:3:2)))\n          !pdata(ipart)%dt=pdata(ipart)%dt*0.93247923\n          !if (pdata(ipart)%dt<dt*t0_norm/psubsteps*0.5) pdata(ipart)%dt=pdata(ipart)%dt*1.9932235932\n          !pdata(ipart)%dt=dt*t0_norm/psubsteps/B0*0.25\n          !if (pdata(ipart)%dt>dt*t0_norm/psubsteps*2) pdata(ipart)%dt=dt*t0_norm/psubsteps*2\n          if (pdata(ipart)%deleted) then\n             !pdata(ipart)%deleted=real((pst79(part_index,OP_1)-psimin)/(psibound-psimin))>1\n             pdata(ipart)%deleted=.false.\n             pdata(ipart)%wt=0.\n             pdata(ipart)%f0=0."
+    },
+    {
+      "path": "unstructured/init_cyl.f90",
+      "line_number": 101,
+      "matched_line": "yvals = yvals / b0_norm * 1e4",
+      "context": "       call read_ascii_column('profile_f', yvals, nvals, icol=2)\n       if(nvals.eq.0) then \n          if(myrank.eq.0) print *, 'Error: could not find profile_f'\n          call safestop(5)\n       end if\n       yvals = yvals / b0_norm * 1e4\n\n       bzero = yvals(nvals)\n\n       call create_spline(f_spline, nvals, xvals, yvals)\n       deallocate(xvals, yvals)"
+    },
+    {
+      "path": "unstructured/init_cyl.f90",
+      "line_number": 120,
+      "matched_line": "yvals = yvals * t0_norm * 1e3",
+      "context": "       call read_ascii_column('profile_omega', yvals, nvals, icol=2)\n       if(nvals.eq.0) then \n          if(myrank.eq.0) print *, 'Error: could not find profile_omega'\n          call safestop(5)\n       end if\n       yvals = yvals * t0_norm * 1e3\n\n       ! convert from angular frequency to velocity\n       yvals = yvals * toroidal_period / (2.*pi)\n\n       call create_spline(v_spline, nvals, xvals, yvals)"
+    },
+    {
+      "path": "unstructured/init_cyl.f90",
+      "line_number": 140,
+      "matched_line": "yvals = yvals / n0_norm / 1.e6",
+      "context": "       call read_ascii_column('profile_ne', yvals, nvals, icol=2)\n       if(nvals.eq.0) then \n          if(myrank.eq.0) print *, 'Error: could not find profile_ne'\n          call safestop(5)\n       end if\n       yvals = yvals / n0_norm / 1.e6\n       yvals = yvals / z_ion      ! convert from ne to ni\n\n       call create_spline(den_spline, nvals, xvals, yvals)\n       deallocate(xvals, yvals)\n    end if     "
+    },
+    {
+      "path": "unstructured/init_cyl.f90",
+      "line_number": 158,
+      "matched_line": "yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))",
+      "context": "       call read_ascii_column('profile_te', yvals, nvals, icol=2)\n       if(nvals.eq.0) then \n          if(myrank.eq.0) print *, 'Error: could not find profile_te'\n          call safestop(5)\n       end if\n       yvals = yvals * 1.6022e-9 / (b0_norm**2/(4.*pi*n0_norm))\n\n       call create_spline(te_spline, nvals, xvals, yvals)\n       deallocate(xvals, yvals)\n    end if     \n"
+    },
+    {
+      "path": "unstructured/time_step.f90",
+      "line_number": 215,
+      "matched_line": "if(kinetic.eq.1) call particle_step(dt*t0_norm)",
+      "context": " endif\n#endif\n\n#ifdef USEPARTICLES\n  if(myrank.eq.0 .and. itimer.eq.1) call second(tstart)\n  if(kinetic.eq.1) call particle_step(dt*t0_norm)\n  if(myrank.eq.0 .and. itimer.eq.1) then\n     call second(tend)\n     t_particle = t_particle + tend - tstart\n  endif\n#endif"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 136,
+      "matched_line": "yvals = yvals * 1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)",
+      "context": "            ! Read in L31 or L32 or L34 or alpha or 1/<B^2> or dte/dpsit or G from col number 2,3,4,5,6,7,8\n            nvals = 0\n            call read_ascii_column(Coeff_filename, xvals, nvals,skip=1, icol=1)\n            call read_ascii_column(Coeff_filename, yvals, nvals,skip=1, icol=col_number)\n            if(nvals.eq.0) call safestop(6)\n            yvals = yvals * 1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)\n            call create_spline(coef_spline_dtedpsit, nvals, xvals, yvals)\n            deallocate(xvals, yvals) \n         end if\n       endif\n      endif"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 151,
+      "matched_line": "!yvals = yvals * 1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)",
+      "context": "               ! Read in L31 or L32 or L34 or alpha or 1/<B^2> or dte/dpsit or G from col number 2,3,4,5,6,7,8\n               nvals = 0\n               call read_ascii_column(Coeff_filename, xvals, nvals,skip=1, icol=1)\n               call read_ascii_column(Coeff_filename, yvals, nvals,skip=1, icol=col_number)\n               if(nvals.eq.0) call safestop(6)\n               !yvals = yvals * 1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)\n               call create_spline(coef_spline_dtedpsit, nvals, xvals, yvals)\n               deallocate(xvals, yvals) \n            end if\n         elseif(col_number==9)then\n            if(.not.allocated(coef_spline_ftrap%x)) then"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 196,
+      "matched_line": "temax_readin=yvals(1)* 1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)",
+      "context": "               call read_ascii_column(Coeff_filename, xvals, nvals,skip=1, icol=1)\n               call read_ascii_column(Coeff_filename, yvals, nvals,skip=1, icol=col_number)\n               if(nvals.eq.0) call safestop(6)\n               call create_spline(coef_spline_temax, nvals, xvals, yvals)\n               !print*,'xvals,yvals',xvals,yvals\n               temax_readin=yvals(1)* 1.6022e-9 * (4.*pi*n0_norm)/ (b0_norm**2)\n               deallocate(xvals, yvals)\n            endif\n         endif\n      endif\n      "
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 221,
+      "matched_line": "pso=pso * (p0_norm / n0_norm) / 1.6022e-12",
+      "context": "               pso = real(tet79(j,OP_1))\n            else\n               pso=pet79(j,OP_1)/net79(j,OP_1)\n            endif\n            !convert to pso to eV\n            pso=pso * (p0_norm / n0_norm) / 1.6022e-12\n         else if (ibootstrap == 3) then\n         !using normalized temperature That = 1 - Te/Temax\n            if(temax .le. 1e-8) then              \n              ! pso = 1. - abs(pet79(j,OP_1)/net79(j,OP_1))/temax_readin\n               pso =1. - MIN( MAX(real(pet79(j,OP_1) / MAX(real(net79(j,OP_1)), regular**2)), regular**2), &"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 716,
+      "matched_line": "temp79b = temp79b * (p0_norm / n0_norm) / 1.6022e-12 / 1000.",
+      "context": "     else\n        temp79b = pet79(:,OP_1)/net79(:,OP_1)\n     end if\n\n     ! convert temperature to keV\n     temp79b = temp79b * (p0_norm / n0_norm) / 1.6022e-12 / 1000.\n\n     ! convert density to /m^3\n     temp79c = net79(:,OP_1) * n0_norm * 1e6\n\n    "
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 719,
+      "matched_line": "temp79c = net79(:,OP_1) * n0_norm * 1e6",
+      "context": "\n     ! convert temperature to keV\n     temp79b = temp79b * (p0_norm / n0_norm) / 1.6022e-12 / 1000.\n\n     ! convert density to /m^3\n     temp79c = net79(:,OP_1) * n0_norm * 1e6\n\n    \n     if(iread_prad.eq.1) then \n        if(.not.allocated(prad_nz_spline%x)) then\n           ! Read in units of 10^20 / m^3"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 729,
+      "matched_line": "yvals = yvals * 1e14 / n0_norm",
+      "context": "           ! Read in units of 10^20 / m^3\n           nvals = 0\n           call read_ascii_column('profile_nz', xvals, nvals, icol=1)\n           call read_ascii_column('profile_nz', yvals, nvals, icol=2)\n           if(nvals.eq.0) call safestop(6)\n           yvals = yvals * 1e14 / n0_norm\n           call create_spline(prad_nz_spline, nvals, xvals, yvals)\n           deallocate(xvals, yvals)\n        end if\n\n        ! evaluate impurity density"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 743,
+      "matched_line": "temp79d = temp79d * n0_norm * 1e6",
+      "context": "        \n           temp79d(j) = val\n        end do\n\n        ! convert impurity density to /m^3\n        temp79d = temp79d * n0_norm * 1e6\n     else\n      \n        ! impurity density is prad_fz * electron density\n        temp79d = temp79c*prad_fz\n     end if"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 757,
+      "matched_line": "temp79a = temp79a * 10. / (p0_norm / t0_norm)",
+      "context": "        call get_Prad_simple(temp79a(j), temp79b(j), temp79d(j), &\n             prad_z, temp79c(j), ierr)\n     end do\n\n     ! convert output to normalized units\n     temp79a = temp79a * 10. / (p0_norm / t0_norm)\n     \n     temp = temp - intx2(mu79(:,:,OP_1),temp79a)\n  end if\n\n  if(ikprad.ne.0) then"
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 1147,
+      "matched_line": "yvals = yvals / (4.*pi*(v0_norm/c_light)**2 * t0_norm)  ! convert from s",
+      "context": "           call read_ascii_column('profile_eta', xvals, nvals, icol=1)\n           call read_ascii_column('profile_eta', yvals, nvals, icol=2)\n           if(nvals.eq.0) call safestop(6)\n           if(iresfunc.eq.10) then\n              yvals = yvals / (c_light**2 / 1.e11)            ! convert from ohm-m to s\n              yvals = yvals / (4.*pi*(v0_norm/c_light)**2 * t0_norm)  ! convert from s\n           end if\n           call create_spline(eta_spline, nvals, xvals, yvals)\n           deallocate(xvals, yvals)\n        end if\n        "
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 1250,
+      "matched_line": "yvals = yvals * 1e4 / (l0_norm * v0_norm)",
+      "context": "        nvals = 0\n        call read_ascii_column('profile_amu', xvals, nvals, icol=1)\n        call read_ascii_column('profile_amu', yvals, nvals, icol=2)\n        if(nvals.eq.0) call safestop(6)\n        if(ivisfunc.eq.10) then\n           yvals = yvals * 1e4 / (l0_norm * v0_norm)\n        end if\n        call create_spline(amu_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if\n     "
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 1402,
+      "matched_line": "yvals = yvals * 1e4 / (l0_norm * v0_norm)",
+      "context": "        nvals = 0\n        call read_ascii_column('profile_kappa', xvals, nvals, icol=1)\n        call read_ascii_column('profile_kappa', yvals, nvals, icol=2)\n        if(nvals.eq.0) call safestop(6)\n        if(ikappafunc.eq.10) then\n           yvals = yvals * 1e4 / (l0_norm * v0_norm)\n        end if\n        call create_spline(kappa_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if\n     "
+    },
+    {
+      "path": "unstructured/transport.f90",
+      "line_number": 1546,
+      "matched_line": "yvals = yvals * 1e4 / (l0_norm * v0_norm)",
+      "context": "        nvals = 0\n        call read_ascii_column('profile_denm', xvals, nvals, icol=1)\n        call read_ascii_column('profile_denm', yvals, nvals, icol=2)\n        if(nvals.eq.0) call safestop(6)\n        if(idenmfunc.eq.10) then\n           yvals = yvals * 1e4 / (l0_norm * v0_norm)\n        end if\n        call create_spline(denm_spline, nvals, xvals, yvals)\n        deallocate(xvals, yvals)\n     end if\n     "
+    }
+  ],
+  "physical_time_calibrated": false,
+  "interpretation": "Focused source audit of assignments and uses of t0_norm/v0_norm/l0_norm and companion normalization symbols. Presence or dimensional plausibility alone is not SI calibration; an explicit implemented relation and run-specific values must be verified before any physical-time claim.",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
+
+finished_utc=2026-09-23T02:52:32.015541Z
+return_code=0
