@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-065-native-time-normalization-assignment-audit",
+  "processed_result_receipt_sha": "60b5a06febd00b45e92b1e1e7b5974c47648debd",
+  "processed_result_head_before": "aa98f4a5694c27e2ed4c2c85d0a09d4b6619ae97",
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_ASSIGNMENT_AUDITED",
+  "pipeline_failure": false,
+  "pipeline_error": null,
+  "interpretation": "Successful diagnostic source audit. The official native source explicitly implements v0_norm = b0_norm / sqrt(4*pi*m0_norm*n0_norm) and t0_norm = l0_norm / v0_norm, and separately uses dt_si = dt * t0_norm. Job 065 still correctly leaves physical_time_calibrated false because the run-specific normalization values were not verified by that job. No Mirnov equivalence, precursor lead-time, or controller-efficacy claim is supported.",
+  "new_job_id": "20260923-066-native-time-normalization-run-values-audit",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "processed_utc": "2026-09-23T04:01:57Z"
+}
