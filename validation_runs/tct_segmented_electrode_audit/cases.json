@@ -1,0 +1,6002 @@
+[
+  {
+    "case": "no_electrode",
+    "width_gain_pct": 0.0,
+    "Jpk_change_pct": -0.0,
+    "integrated_high_J_change_pct": -0.0,
+    "sustained_control_fraction": 0.0,
+    "peak_abs_shear": 0.0,
+    "actuator_energy_reduced": 0.0,
+    "width_gate_pass": false,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.11,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.115,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.12,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.125,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.13,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.135,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.14,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.145,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.15,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.155,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.16,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.165,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.17,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.18,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.185,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.19,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.195,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.2,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.21,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.215,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.22,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.225,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.23,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.24,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.245,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.25,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.255,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.26,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.265,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.27,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.275,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.28,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.29,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.295,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.3,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.305,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.31,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.315,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.32,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.325,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.33,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.335,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.34,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.355,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.36,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.365,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.37,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.375,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.38,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.385,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.39,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.395,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      },
+      {
+        "t": 0.4,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "uniform_static",
+    "width_gain_pct": 0.032383282545475185,
+    "Jpk_change_pct": -0.12953313018190074,
+    "integrated_high_J_change_pct": -1.0794427515158396,
+    "sustained_control_fraction": 0.9753086419753086,
+    "peak_abs_shear": 6.330952837512709,
+    "actuator_energy_reduced": 0.02606299820397704,
+    "width_gate_pass": true,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.4604329336504762,
+        "transport_multiplier": 0.8250835386590003,
+        "power": 0.0258
+      },
+      {
+        "t": 0.015,
+        "shear": 0.9208658673009521,
+        "transport_multiplier": 0.5411273139734254,
+        "power": 0.051999999999999984
+      },
+      {
+        "t": 0.02,
+        "shear": 1.3812988009514282,
+        "transport_multiplier": 0.3438805655122474,
+        "power": 0.0786
+      },
+      {
+        "t": 0.025,
+        "shear": 1.8417317346019049,
+        "transport_multiplier": 0.25,
+        "power": 0.10560000000000001
+      },
+      {
+        "t": 0.03,
+        "shear": 2.302164668252381,
+        "transport_multiplier": 0.25,
+        "power": 0.133
+      },
+      {
+        "t": 0.035,
+        "shear": 2.7625976019028573,
+        "transport_multiplier": 0.25,
+        "power": 0.16080000000000003
+      },
+      {
+        "t": 0.04,
+        "shear": 3.223030535553333,
+        "transport_multiplier": 0.25,
+        "power": 0.18900000000000017
+      },
+      {
+        "t": 0.045,
+        "shear": 3.6834634692038097,
+        "transport_multiplier": 0.25,
+        "power": 0.21760000000000002
+      },
+      {
+        "t": 0.05,
+        "shear": 4.143896402854287,
+        "transport_multiplier": 0.25,
+        "power": 0.24660000000000004
+      },
+      {
+        "t": 0.055,
+        "shear": 4.604329336504762,
+        "transport_multiplier": 0.25,
+        "power": 0.276
+      },
+      {
+        "t": 0.06,
+        "shear": 5.064762270155237,
+        "transport_multiplier": 0.25,
+        "power": 0.3058
+      },
+      {
+        "t": 0.065,
+        "shear": 5.4236876508992955,
+        "transport_multiplier": 0.25,
+        "power": 0.2628262912023044
+      },
+      {
+        "t": 0.07,
+        "shear": 5.680868924362031,
+        "transport_multiplier": 0.25,
+        "power": 0.20687124028632436
+      },
+      {
+        "t": 0.075,
+        "shear": 5.865147359291318,
+        "transport_multiplier": 0.25,
+        "power": 0.16296808436302623
+      },
+      {
+        "t": 0.08,
+        "shear": 5.997188627781687,
+        "transport_multiplier": 0.25,
+        "power": 0.12955417954209253
+      },
+      {
+        "t": 0.085,
+        "shear": 6.091800330942918,
+        "transport_multiplier": 0.25,
+        "power": 0.1046078682472929
+      },
+      {
+        "t": 0.09,
+        "shear": 6.159592578604657,
+        "transport_multiplier": 0.25,
+        "power": 0.08621748047866343
+      },
+      {
+        "t": 0.095,
+        "shear": 6.208167846668462,
+        "transport_multiplier": 0.25,
+        "power": 0.07277548698120502
+      },
+      {
+        "t": 0.1,
+        "shear": 6.242973547155692,
+        "transport_multiplier": 0.25,
+        "power": 0.06300797376347628
+      },
+      {
+        "t": 0.105,
+        "shear": 6.26791292134125,
+        "transport_multiplier": 0.25,
+        "power": 0.055939469276245365
+      },
+      {
+        "t": 0.11,
+        "shear": 6.285782763811317,
+        "transport_multiplier": 0.25,
+        "power": 0.05083884058668436
+      },
+      {
+        "t": 0.115,
+        "shear": 6.298587065456136,
+        "transport_multiplier": 0.25,
+        "power": 0.04716568782063345
+      },
+      {
+        "t": 0.12,
+        "shear": 6.307761748494683,
+        "transport_multiplier": 0.25,
+        "power": 0.04452431577626336
+      },
+      {
+        "t": 0.125,
+        "shear": 6.314335696156394,
+        "transport_multiplier": 0.25,
+        "power": 0.0426268417651954
+      },
+      {
+        "t": 0.13,
+        "shear": 6.319046135490081,
+        "transport_multiplier": 0.25,
+        "power": 0.041264753056674285
+      },
+      {
+        "t": 0.135,
+        "shear": 6.322421312759228,
+        "transport_multiplier": 0.25,
+        "power": 0.040287495867471206
+      },
+      {
+        "t": 0.14,
+        "shear": 6.324839732951307,
+        "transport_multiplier": 0.25,
+        "power": 0.03958660435520695
+      },
+      {
+        "t": 0.145,
+        "shear": 6.326572606741056,
+        "transport_multiplier": 0.25,
+        "power": 0.03908405676901754
+      },
+      {
+        "t": 0.15,
+        "shear": 6.327814265068685,
+        "transport_multiplier": 0.25,
+        "power": 0.03872379273243549
+      },
+      {
+        "t": 0.155,
+        "shear": 6.328703952137467,
+        "transport_multiplier": 0.25,
+        "power": 0.03846556347156624
+      },
+      {
+        "t": 0.16,
+        "shear": 6.32934144077886,
+        "transport_multiplier": 0.25,
+        "power": 0.03828048853013513
+      },
+      {
+        "t": 0.165,
+        "shear": 6.329798221350553,
+        "transport_multiplier": 0.25,
+        "power": 0.03814785313274304
+      },
+      {
+        "t": 0.17,
+        "shear": 6.330125518932232,
+        "transport_multiplier": 0.25,
+        "power": 0.03805280370004059
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 6.330360037897382,
+        "transport_multiplier": 0.25,
+        "power": 0.037984691635425186
+      },
+      {
+        "t": 0.18,
+        "shear": 6.330528078078834,
+        "transport_multiplier": 0.25,
+        "power": 0.03793588404070035
+      },
+      {
+        "t": 0.185,
+        "shear": 6.330648484130282,
+        "transport_multiplier": 0.25,
+        "power": 0.03790091024448333
+      },
+      {
+        "t": 0.19,
+        "shear": 6.330734758836125,
+        "transport_multiplier": 0.25,
+        "power": 0.03787584958942072
+      },
+      {
+        "t": 0.195,
+        "shear": 6.330796577364172,
+        "transport_multiplier": 0.25,
+        "power": 0.03785789241669006
+      },
+      {
+        "t": 0.2,
+        "shear": 6.330840872275089,
+        "transport_multiplier": 0.25,
+        "power": 0.03784502532006883
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 6.3308726109656615,
+        "transport_multiplier": 0.25,
+        "power": 0.037835805529456014
+      },
+      {
+        "t": 0.21,
+        "shear": 6.330895352731214,
+        "transport_multiplier": 0.25,
+        "power": 0.037829199202784616
+      },
+      {
+        "t": 0.215,
+        "shear": 6.330911647918287,
+        "transport_multiplier": 0.25,
+        "power": 0.037824465533088374
+      },
+      {
+        "t": 0.22,
+        "shear": 6.33092332393004,
+        "transport_multiplier": 0.25,
+        "power": 0.037821073695243464
+      },
+      {
+        "t": 0.225,
+        "shear": 6.330931690158045,
+        "transport_multiplier": 0.25,
+        "power": 0.03781864332937459
+      },
+      {
+        "t": 0.23,
+        "shear": 6.33093768482236,
+        "transport_multiplier": 0.25,
+        "power": 0.03781690189210169
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 6.330941980187041,
+        "transport_multiplier": 0.25,
+        "power": 0.037815654095700604
+      },
+      {
+        "t": 0.24,
+        "shear": 6.330945057950318,
+        "transport_multiplier": 0.25,
+        "power": 0.03781476000944707
+      },
+      {
+        "t": 0.245,
+        "shear": 6.330947263264077,
+        "transport_multiplier": 0.25,
+        "power": 0.037814119368106566
+      },
+      {
+        "t": 0.25,
+        "shear": 6.330948843440434,
+        "transport_multiplier": 0.25,
+        "power": 0.037813660328247636
+      },
+      {
+        "t": 0.255,
+        "shear": 6.330949975686274,
+        "transport_multiplier": 0.25,
+        "power": 0.03781333141167189
+      },
+      {
+        "t": 0.26,
+        "shear": 6.3309507869758646,
+        "transport_multiplier": 0.25,
+        "power": 0.03781309573257237
+      },
+      {
+        "t": 0.265,
+        "shear": 6.330951368290261,
+        "transport_multiplier": 0.25,
+        "power": 0.03781292686108117
+      },
+      {
+        "t": 0.27,
+        "shear": 6.330951784820226,
+        "transport_multiplier": 0.25,
+        "power": 0.037812805859350374
+      },
+      {
+        "t": 0.275,
+        "shear": 6.330952083276989,
+        "transport_multiplier": 0.25,
+        "power": 0.037812719157811175
+      },
+      {
+        "t": 0.28,
+        "shear": 6.330952297130604,
+        "transport_multiplier": 0.25,
+        "power": 0.03781265703343954
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 6.330952450363414,
+        "transport_multiplier": 0.25,
+        "power": 0.03781261251937876
+      },
+      {
+        "t": 0.29,
+        "shear": 6.330952560159523,
+        "transport_multiplier": 0.25,
+        "power": 0.03781258062365974
+      },
+      {
+        "t": 0.295,
+        "shear": 6.33095263883187,
+        "transport_multiplier": 0.25,
+        "power": 0.037812557769377315
+      },
+      {
+        "t": 0.3,
+        "shear": 6.330952695203072,
+        "transport_multiplier": 0.25,
+        "power": 0.037812541393568204
+      },
+      {
+        "t": 0.305,
+        "shear": 6.330952735594801,
+        "transport_multiplier": 0.25,
+        "power": 0.0378125296597878
+      },
+      {
+        "t": 0.31,
+        "shear": 6.3309527645367405,
+        "transport_multiplier": 0.25,
+        "power": 0.03781252125216625
+      },
+      {
+        "t": 0.315,
+        "shear": 6.330952785274546,
+        "transport_multiplier": 0.25,
+        "power": 0.037812515227842805
+      },
+      {
+        "t": 0.32,
+        "shear": 6.330952800133831,
+        "transport_multiplier": 0.25,
+        "power": 0.03781251091122581
+      },
+      {
+        "t": 0.325,
+        "shear": 6.3309528107809765,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250781823514
+      },
+      {
+        "t": 0.33,
+        "shear": 6.3309528184099895,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250560201038
+      },
+      {
+        "t": 0.335,
+        "shear": 6.330952823876416,
+        "transport_multiplier": 0.25,
+        "power": 0.037812504014015764
+      },
+      {
+        "t": 0.34,
+        "shear": 6.330952827793283,
+        "transport_multiplier": 0.25,
+        "power": 0.037812502876168504
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 6.330952830599839,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250206086461
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 6.3309528326108255,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250147667398
+      },
+      {
+        "t": 0.355,
+        "shear": 6.330952834051759,
+        "transport_multiplier": 0.25,
+        "power": 0.0378125010580825
+      },
+      {
+        "t": 0.36,
+        "shear": 6.330952835084234,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250075815011
+      },
+      {
+        "t": 0.365,
+        "shear": 6.330952835824033,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500543237496
+      },
+      {
+        "t": 0.37,
+        "shear": 6.330952836354124,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500389247425
+      },
+      {
+        "t": 0.375,
+        "shear": 6.33095283673395,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500278907375
+      },
+      {
+        "t": 0.38,
+        "shear": 6.330952837006108,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250019984644
+      },
+      {
+        "t": 0.385,
+        "shear": 6.330952837201117,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500143195586
+      },
+      {
+        "t": 0.39,
+        "shear": 6.330952837340848,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500102604736
+      },
+      {
+        "t": 0.395,
+        "shear": 6.33095283744097,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250007351969
+      },
+      {
+        "t": 0.4,
+        "shear": 6.330952837512709,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250005267853
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "segmented_static",
+    "width_gain_pct": 0.03260787234426422,
+    "Jpk_change_pct": -0.13043148937705687,
+    "integrated_high_J_change_pct": -1.0869290781421406,
+    "sustained_control_fraction": 0.9753086419753086,
+    "peak_abs_shear": 9.383543113130342,
+    "actuator_energy_reduced": 0.13382453760184157,
+    "width_gate_pass": true,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.6640238142995144,
+        "transport_multiplier": 0.6939973819545104,
+        "power": 0.129
+      },
+      {
+        "t": 0.015,
+        "shear": 1.3280476285990288,
+        "transport_multiplier": 0.3618323983699035,
+        "power": 0.2599999999999999
+      },
+      {
+        "t": 0.02,
+        "shear": 1.9920714428985438,
+        "transport_multiplier": 0.25,
+        "power": 0.393
+      },
+      {
+        "t": 0.025,
+        "shear": 2.623297967275585,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488685
+      },
+      {
+        "t": 0.03,
+        "shear": 3.14572944151769,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345735
+      },
+      {
+        "t": 0.035,
+        "shear": 3.60876922871815,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880413
+      },
+      {
+        "t": 0.04,
+        "shear": 4.084267493598892,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652013
+      },
+      {
+        "t": 0.045,
+        "shear": 4.53572989150256,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939267
+      },
+      {
+        "t": 0.05,
+        "shear": 4.9699698381403685,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596453
+      },
+      {
+        "t": 0.055,
+        "shear": 5.391869359201358,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879904
+      },
+      {
+        "t": 0.06,
+        "shear": 5.905017488679389,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331798
+      },
+      {
+        "t": 0.065,
+        "shear": 6.441826370043285,
+        "transport_multiplier": 0.25,
+        "power": 1.042780348949685
+      },
+      {
+        "t": 0.07,
+        "shear": 6.9786348428108225,
+        "transport_multiplier": 0.25,
+        "power": 1.129255996069584
+      },
+      {
+        "t": 0.075,
+        "shear": 7.445635487949129,
+        "transport_multiplier": 0.25,
+        "power": 1.097077198542366
+      },
+      {
+        "t": 0.08,
+        "shear": 7.806646697190311,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861633
+      },
+      {
+        "t": 0.085,
+        "shear": 8.179707059688887,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562892
+      },
+      {
+        "t": 0.09,
+        "shear": 8.49729142157322,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887436
+      },
+      {
+        "t": 0.095,
+        "shear": 8.748516027346529,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037886
+      },
+      {
+        "t": 0.1,
+        "shear": 8.928526323369669,
+        "transport_multiplier": 0.25,
+        "power": 0.5974956026138348
+      },
+      {
+        "t": 0.105,
+        "shear": 9.057509336695901,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515785
+      },
+      {
+        "t": 0.11,
+        "shear": 9.149929704276309,
+        "transport_multiplier": 0.25,
+        "power": 0.4096381462370542
+      },
+      {
+        "t": 0.115,
+        "shear": 9.216151791382398,
+        "transport_multiplier": 0.25,
+        "power": 0.3509868558927196
+      },
+      {
+        "t": 0.12,
+        "shear": 9.263601990245464,
+        "transport_multiplier": 0.25,
+        "power": 0.308263943119889
+      },
+      {
+        "t": 0.125,
+        "shear": 9.297601543423799,
+        "transport_multiplier": 0.25,
+        "power": 0.2772935675625932
+      },
+      {
+        "t": 0.13,
+        "shear": 9.321963287821594,
+        "transport_multiplier": 0.25,
+        "power": 0.2549184840576618
+      },
+      {
+        "t": 0.135,
+        "shear": 9.339419240462814,
+        "transport_multiplier": 0.25,
+        "power": 0.23879164969134734
+      },
+      {
+        "t": 0.14,
+        "shear": 9.351926977086144,
+        "transport_multiplier": 0.25,
+        "power": 0.22718780830393873
+      },
+      {
+        "t": 0.145,
+        "shear": 9.360889162001166,
+        "transport_multiplier": 0.25,
+        "power": 0.2188484126266349
+      },
+      {
+        "t": 0.15,
+        "shear": 9.367310848103934,
+        "transport_multiplier": 0.25,
+        "power": 0.2128602006945119
+      },
+      {
+        "t": 0.155,
+        "shear": 9.371912187263236,
+        "transport_multiplier": 0.25,
+        "power": 0.2085629010539196
+      },
+      {
+        "t": 0.16,
+        "shear": 9.375209190841456,
+        "transport_multiplier": 0.25,
+        "power": 0.20548038416863196
+      },
+      {
+        "t": 0.165,
+        "shear": 9.37757159713632,
+        "transport_multiplier": 0.25,
+        "power": 0.2032699355566639
+      },
+      {
+        "t": 0.17,
+        "shear": 9.37926433521488,
+        "transport_multiplier": 0.25,
+        "power": 0.20168519234680904
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 9.380477235048776,
+        "transport_multiplier": 0.25,
+        "power": 0.2005492185246299
+      },
+      {
+        "t": 0.18,
+        "shear": 9.381346315756357,
+        "transport_multiplier": 0.25,
+        "power": 0.19973502375240595
+      },
+      {
+        "t": 0.185,
+        "shear": 9.38196903929475,
+        "transport_multiplier": 0.25,
+        "power": 0.19915150758580472
+      },
+      {
+        "t": 0.19,
+        "shear": 9.382415240207834,
+        "transport_multiplier": 0.25,
+        "power": 0.19873333831085344
+      },
+      {
+        "t": 0.195,
+        "shear": 9.382734957132877,
+        "transport_multiplier": 0.25,
+        "power": 0.19843367526910413
+      },
+      {
+        "t": 0.2,
+        "shear": 9.382964044320179,
+        "transport_multiplier": 0.25,
+        "power": 0.19821894106067328
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 9.38312819246273,
+        "transport_multiplier": 0.25,
+        "power": 0.19806506893057338
+      },
+      {
+        "t": 0.21,
+        "shear": 9.383245809746457,
+        "transport_multiplier": 0.25,
+        "power": 0.19795481044639146
+      },
+      {
+        "t": 0.215,
+        "shear": 9.3833300862129,
+        "transport_multiplier": 0.25,
+        "power": 0.19787580459015544
+      },
+      {
+        "t": 0.22,
+        "shear": 9.383390472939855,
+        "transport_multiplier": 0.25,
+        "power": 0.19781919329089395
+      },
+      {
+        "t": 0.225,
+        "shear": 9.38343374192046,
+        "transport_multiplier": 0.25,
+        "power": 0.19777862894251183
+      },
+      {
+        "t": 0.23,
+        "shear": 9.383464745499845,
+        "transport_multiplier": 0.25,
+        "power": 0.19774956301905552
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 9.383486960535208,
+        "transport_multiplier": 0.25,
+        "power": 0.19772873622196013
+      },
+      {
+        "t": 0.24,
+        "shear": 9.383502878303611,
+        "transport_multiplier": 0.25,
+        "power": 0.1977138130912559
+      },
+      {
+        "t": 0.245,
+        "shear": 9.383514283883066,
+        "transport_multiplier": 0.25,
+        "power": 0.19770312016056232
+      },
+      {
+        "t": 0.25,
+        "shear": 9.383522456337861,
+        "transport_multiplier": 0.25,
+        "power": 0.19769545832022786
+      },
+      {
+        "t": 0.255,
+        "shear": 9.383528312157605,
+        "transport_multiplier": 0.25,
+        "power": 0.19768996836111025
+      },
+      {
+        "t": 0.26,
+        "shear": 9.383532508035808,
+        "transport_multiplier": 0.25,
+        "power": 0.19768603462805615
+      },
+      {
+        "t": 0.265,
+        "shear": 9.38353551451391,
+        "transport_multiplier": 0.25,
+        "power": 0.1976832159823543
+      },
+      {
+        "t": 0.27,
+        "shear": 9.383537668749602,
+        "transport_multiplier": 0.25,
+        "power": 0.19768119633301845
+      },
+      {
+        "t": 0.275,
+        "shear": 9.38353921232693,
+        "transport_multiplier": 0.25,
+        "power": 0.1976797491902938
+      },
+      {
+        "t": 0.28,
+        "shear": 9.383540318348409,
+        "transport_multiplier": 0.25,
+        "power": 0.1976787122668442
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 9.383541110847437,
+        "transport_multiplier": 0.25,
+        "power": 0.19767796927853046
+      },
+      {
+        "t": 0.29,
+        "shear": 9.383541678697803,
+        "transport_multiplier": 0.25,
+        "power": 0.19767743690404033
+      },
+      {
+        "t": 0.295,
+        "shear": 9.38354208558037,
+        "transport_multiplier": 0.25,
+        "power": 0.19767705544099795
+      },
+      {
+        "t": 0.3,
+        "shear": 9.383542377124463,
+        "transport_multiplier": 0.25,
+        "power": 0.19767678211075712
+      },
+      {
+        "t": 0.305,
+        "shear": 9.383542586024937,
+        "transport_multiplier": 0.25,
+        "power": 0.1976765862610684
+      },
+      {
+        "t": 0.31,
+        "shear": 9.383542735708676,
+        "transport_multiplier": 0.25,
+        "power": 0.19767644592862793
+      },
+      {
+        "t": 0.315,
+        "shear": 9.383542842961752,
+        "transport_multiplier": 0.25,
+        "power": 0.19767634537603584
+      },
+      {
+        "t": 0.32,
+        "shear": 9.38354291981194,
+        "transport_multiplier": 0.25,
+        "power": 0.1976762733269531
+      },
+      {
+        "t": 0.325,
+        "shear": 9.38354297487751,
+        "transport_multiplier": 0.25,
+        "power": 0.1976762217015301
+      },
+      {
+        "t": 0.33,
+        "shear": 9.383543014333712,
+        "transport_multiplier": 0.25,
+        "power": 0.1976761847102969
+      },
+      {
+        "t": 0.335,
+        "shear": 9.383543042605314,
+        "transport_multiplier": 0.25,
+        "power": 0.1976761582049189
+      },
+      {
+        "t": 0.34,
+        "shear": 9.383543062862808,
+        "transport_multiplier": 0.25,
+        "power": 0.19767613921298702
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 9.383543077377931,
+        "transport_multiplier": 0.25,
+        "power": 0.19767612560467085
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 9.383543087778468,
+        "transport_multiplier": 0.25,
+        "power": 0.19767611585388853
+      },
+      {
+        "t": 0.355,
+        "shear": 9.383543095230785,
+        "transport_multiplier": 0.25,
+        "power": 0.19767610886714845
+      },
+      {
+        "t": 0.36,
+        "shear": 9.383543100570597,
+        "transport_multiplier": 0.25,
+        "power": 0.19767610386092854
+      },
+      {
+        "t": 0.365,
+        "shear": 9.38354310439676,
+        "transport_multiplier": 0.25,
+        "power": 0.19767610027381438
+      },
+      {
+        "t": 0.37,
+        "shear": 9.383543107138301,
+        "transport_multiplier": 0.25,
+        "power": 0.197676097703536
+      },
+      {
+        "t": 0.375,
+        "shear": 9.38354310910271,
+        "transport_multiplier": 0.25,
+        "power": 0.19767609586185172
+      },
+      {
+        "t": 0.38,
+        "shear": 9.383543110510272,
+        "transport_multiplier": 0.25,
+        "power": 0.19767609454222615
+      },
+      {
+        "t": 0.385,
+        "shear": 9.383543111518838,
+        "transport_multiplier": 0.25,
+        "power": 0.19767609359667299
+      },
+      {
+        "t": 0.39,
+        "shear": 9.383543112241497,
+        "transport_multiplier": 0.25,
+        "power": 0.19767609291915536
+      },
+      {
+        "t": 0.395,
+        "shear": 9.383543112759309,
+        "transport_multiplier": 0.25,
+        "power": 0.1976760924336931
+      },
+      {
+        "t": 0.4,
+        "shear": 9.383543113130342,
+        "transport_multiplier": 0.25,
+        "power": 0.19767609208584339
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "segmented_open_loop",
+    "width_gain_pct": 0.01584123282376236,
+    "Jpk_change_pct": -0.06336493129504944,
+    "integrated_high_J_change_pct": -0.528041094125412,
+    "sustained_control_fraction": 0.5061728395061729,
+    "peak_abs_shear": 9.149929704276309,
+    "actuator_energy_reduced": 0.12592462852849357,
+    "width_gate_pass": false,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.11,
+        "shear": 0.6640238142995153,
+        "transport_multiplier": 0.6939973819545098,
+        "power": 0.12900000000000011
+      },
+      {
+        "t": 0.115,
+        "shear": 1.3280476285990306,
+        "transport_multiplier": 0.36183239836990283,
+        "power": 0.26000000000000023
+      },
+      {
+        "t": 0.12,
+        "shear": 1.9920714428985438,
+        "transport_multiplier": 0.25,
+        "power": 0.393
+      },
+      {
+        "t": 0.125,
+        "shear": 2.6232979672755845,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488684
+      },
+      {
+        "t": 0.13,
+        "shear": 3.145729441517689,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345737
+      },
+      {
+        "t": 0.135,
+        "shear": 3.608769228718151,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880414
+      },
+      {
+        "t": 0.14,
+        "shear": 4.084267493598893,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652011
+      },
+      {
+        "t": 0.145,
+        "shear": 4.53572989150256,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939265
+      },
+      {
+        "t": 0.15,
+        "shear": 4.969969838140368,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596453
+      },
+      {
+        "t": 0.155,
+        "shear": 5.391869359201358,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879904
+      },
+      {
+        "t": 0.16,
+        "shear": 5.905017488679389,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331799
+      },
+      {
+        "t": 0.165,
+        "shear": 6.441826370043287,
+        "transport_multiplier": 0.25,
+        "power": 1.042780348949685
+      },
+      {
+        "t": 0.17,
+        "shear": 6.978634842810821,
+        "transport_multiplier": 0.25,
+        "power": 1.1292559960695856
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 7.4456354879491355,
+        "transport_multiplier": 0.25,
+        "power": 1.0970771985423657
+      },
+      {
+        "t": 0.18,
+        "shear": 7.806646697190311,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861639
+      },
+      {
+        "t": 0.185,
+        "shear": 8.179707059688887,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562892
+      },
+      {
+        "t": 0.19,
+        "shear": 8.497291421573216,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887441
+      },
+      {
+        "t": 0.195,
+        "shear": 8.74851602734653,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037887
+      },
+      {
+        "t": 0.2,
+        "shear": 8.928526323369669,
+        "transport_multiplier": 0.25,
+        "power": 0.597495602613835
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 9.057509336695906,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515707
+      },
+      {
+        "t": 0.21,
+        "shear": 9.149929704276309,
+        "transport_multiplier": 0.25,
+        "power": 0.40963814623705386
+      },
+      {
+        "t": 0.215,
+        "shear": 8.759247227247513,
+        "transport_multiplier": 0.25,
+        "power": 1.3260487670963181
+      },
+      {
+        "t": 0.22,
+        "shear": 8.368564750218717,
+        "transport_multiplier": 0.25,
+        "power": 1.2203389365896362
+      },
+      {
+        "t": 0.225,
+        "shear": 8.115912551340118,
+        "transport_multiplier": 0.25,
+        "power": 1.1126291060829543
+      },
+      {
+        "t": 0.23,
+        "shear": 7.834763525009301,
+        "transport_multiplier": 0.25,
+        "power": 0.9972840951130494
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 7.44521213812986,
+        "transport_multiplier": 0.25,
+        "power": 0.883247329089615
+      },
+      {
+        "t": 0.24,
+        "shear": 6.977987065777228,
+        "transport_multiplier": 0.25,
+        "power": 0.7933777734337008
+      },
+      {
+        "t": 0.245,
+        "shear": 6.455106365775382,
+        "transport_multiplier": 0.25,
+        "power": 0.7153321778425716
+      },
+      {
+        "t": 0.25,
+        "shear": 5.892346665953256,
+        "transport_multiplier": 0.25,
+        "power": 0.6427733063063001
+      },
+      {
+        "t": 0.255,
+        "shear": 5.301012414125517,
+        "transport_multiplier": 0.25,
+        "power": 0.5724475133700397
+      },
+      {
+        "t": 0.26,
+        "shear": 4.689203601100148,
+        "transport_multiplier": 0.25,
+        "power": 0.5026843217580093
+      },
+      {
+        "t": 0.265,
+        "shear": 4.111796426220642,
+        "transport_multiplier": 0.25,
+        "power": 0.4326260798398682
+      },
+      {
+        "t": 0.27,
+        "shear": 3.545856025677662,
+        "transport_multiplier": 0.25,
+        "power": 0.36183245458643315
+      },
+      {
+        "t": 0.275,
+        "shear": 2.971613544048023,
+        "transport_multiplier": 0.25,
+        "power": 0.290077371482446
+      },
+      {
+        "t": 0.28,
+        "shear": 2.4335088685006587,
+        "transport_multiplier": 0.25,
+        "power": 0.2060665598437556
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 1.9344748883229312,
+        "transport_multiplier": 0.25,
+        "power": 0.14432963456806544
+      },
+      {
+        "t": 0.29,
+        "shear": 1.4634362847034426,
+        "transport_multiplier": 0.31830450553255346,
+        "power": 0.10069288661459827
+      },
+      {
+        "t": 0.295,
+        "shear": 1.0485979190197945,
+        "transport_multiplier": 0.4762908157477799,
+        "power": 0.06306934149357711
+      },
+      {
+        "t": 0.3,
+        "shear": 0.7513532411802013,
+        "transport_multiplier": 0.6391688992007851,
+        "power": 0.03238087960891506
+      },
+      {
+        "t": 0.305,
+        "shear": 0.5383681226067139,
+        "transport_multiplier": 0.7752898169280535,
+        "power": 0.016624897920550358
+      },
+      {
+        "t": 0.31,
+        "shear": 0.3857576164625391,
+        "transport_multiplier": 0.8704667646192049,
+        "power": 0.00853550719457989
+      },
+      {
+        "t": 0.315,
+        "shear": 0.2764074104877242,
+        "transport_multiplier": 0.9290217562440851,
+        "power": 0.004382275513323167
+      },
+      {
+        "t": 0.32,
+        "shear": 0.1980545640890762,
+        "transport_multiplier": 0.9622549618046293,
+        "power": 0.0022499352688574526
+      },
+      {
+        "t": 0.325,
+        "shear": 0.1419122963718664,
+        "transport_multiplier": 0.9802584766486551,
+        "power": 0.0011551552837466132
+      },
+      {
+        "t": 0.33,
+        "shear": 0.10168460370586932,
+        "transport_multiplier": 0.9897660578607421,
+        "power": 0.0005930764978164623
+      },
+      {
+        "t": 0.335,
+        "shear": 0.07286020235854293,
+        "transport_multiplier": 0.9947194234290451,
+        "power": 0.0003044956268748672
+      },
+      {
+        "t": 0.34,
+        "shear": 0.052206616284638255,
+        "transport_multiplier": 0.9972818775425408,
+        "power": 0.0001563332675081174
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 0.037407675187054755,
+        "transport_multiplier": 0.9986026212369415,
+        "power": 8.02641758129691e-05
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 0.026803770527298952,
+        "transport_multiplier": 0.9992820736740275,
+        "power": 4.120900190742002e-05
+      },
+      {
+        "t": 0.355,
+        "shear": 0.01920574082424469,
+        "transport_multiplier": 0.9996312755272782,
+        "power": 2.1157407037516276e-05
+      },
+      {
+        "t": 0.36,
+        "shear": 0.013761514643336569,
+        "transport_multiplier": 0.9998106565724443,
+        "power": 1.0862574967401513e-05
+      },
+      {
+        "t": 0.365,
+        "shear": 0.009860556122870342,
+        "transport_multiplier": 0.9999027788858117,
+        "power": 5.5770319450388325e-06
+      },
+      {
+        "t": 0.37,
+        "shear": 0.007065397201706687,
+        "transport_multiplier": 0.999950082654248,
+        "power": 2.8633436739745683e-06
+      },
+      {
+        "t": 0.375,
+        "shear": 0.0050625783166632745,
+        "transport_multiplier": 0.9999743709576524,
+        "power": 1.4700896598922202e-06
+      },
+      {
+        "t": 0.38,
+        "shear": 0.0036274958761211822,
+        "transport_multiplier": 0.9999868414468186,
+        "power": 7.547691979014661e-07
+      },
+      {
+        "t": 0.385,
+        "shear": 0.002599214374218127,
+        "transport_multiplier": 0.9999932441302789,
+        "power": 3.875114271211109e-07
+      },
+      {
+        "t": 0.39,
+        "shear": 0.001862418482020745,
+        "transport_multiplier": 0.9999965314094289,
+        "power": 1.9895500050472893e-07
+      },
+      {
+        "t": 0.395,
+        "shear": 0.0013344811557591714,
+        "transport_multiplier": 0.9999982191632163,
+        "power": 1.0214690317626573e-07
+      },
+      {
+        "t": 0.4,
+        "shear": 0.0009561975314721436,
+        "transport_multiplier": 0.9999990856871168,
+        "power": 5.244396874685945e-08
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "segmented_precursor_triggered",
+    "width_gain_pct": 0.01584123282376236,
+    "Jpk_change_pct": -0.06336493129504944,
+    "integrated_high_J_change_pct": -0.528041094125412,
+    "sustained_control_fraction": 0.5061728395061729,
+    "peak_abs_shear": 9.149929704276309,
+    "actuator_energy_reduced": 0.12592462852849357,
+    "width_gate_pass": false,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.11,
+        "shear": 0.6640238142995153,
+        "transport_multiplier": 0.6939973819545098,
+        "power": 0.12900000000000011
+      },
+      {
+        "t": 0.115,
+        "shear": 1.3280476285990306,
+        "transport_multiplier": 0.36183239836990283,
+        "power": 0.26000000000000023
+      },
+      {
+        "t": 0.12,
+        "shear": 1.9920714428985438,
+        "transport_multiplier": 0.25,
+        "power": 0.393
+      },
+      {
+        "t": 0.125,
+        "shear": 2.6232979672755845,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488684
+      },
+      {
+        "t": 0.13,
+        "shear": 3.145729441517689,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345737
+      },
+      {
+        "t": 0.135,
+        "shear": 3.608769228718151,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880414
+      },
+      {
+        "t": 0.14,
+        "shear": 4.084267493598893,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652011
+      },
+      {
+        "t": 0.145,
+        "shear": 4.53572989150256,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939265
+      },
+      {
+        "t": 0.15,
+        "shear": 4.969969838140368,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596453
+      },
+      {
+        "t": 0.155,
+        "shear": 5.391869359201358,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879904
+      },
+      {
+        "t": 0.16,
+        "shear": 5.905017488679389,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331799
+      },
+      {
+        "t": 0.165,
+        "shear": 6.441826370043287,
+        "transport_multiplier": 0.25,
+        "power": 1.042780348949685
+      },
+      {
+        "t": 0.17,
+        "shear": 6.978634842810821,
+        "transport_multiplier": 0.25,
+        "power": 1.1292559960695856
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 7.4456354879491355,
+        "transport_multiplier": 0.25,
+        "power": 1.0970771985423657
+      },
+      {
+        "t": 0.18,
+        "shear": 7.806646697190311,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861639
+      },
+      {
+        "t": 0.185,
+        "shear": 8.179707059688887,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562892
+      },
+      {
+        "t": 0.19,
+        "shear": 8.497291421573216,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887441
+      },
+      {
+        "t": 0.195,
+        "shear": 8.74851602734653,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037887
+      },
+      {
+        "t": 0.2,
+        "shear": 8.928526323369669,
+        "transport_multiplier": 0.25,
+        "power": 0.597495602613835
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 9.057509336695906,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515707
+      },
+      {
+        "t": 0.21,
+        "shear": 9.149929704276309,
+        "transport_multiplier": 0.25,
+        "power": 0.40963814623705386
+      },
+      {
+        "t": 0.215,
+        "shear": 8.759247227247513,
+        "transport_multiplier": 0.25,
+        "power": 1.3260487670963181
+      },
+      {
+        "t": 0.22,
+        "shear": 8.368564750218717,
+        "transport_multiplier": 0.25,
+        "power": 1.2203389365896362
+      },
+      {
+        "t": 0.225,
+        "shear": 8.115912551340118,
+        "transport_multiplier": 0.25,
+        "power": 1.1126291060829543
+      },
+      {
+        "t": 0.23,
+        "shear": 7.834763525009301,
+        "transport_multiplier": 0.25,
+        "power": 0.9972840951130494
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 7.44521213812986,
+        "transport_multiplier": 0.25,
+        "power": 0.883247329089615
+      },
+      {
+        "t": 0.24,
+        "shear": 6.977987065777228,
+        "transport_multiplier": 0.25,
+        "power": 0.7933777734337008
+      },
+      {
+        "t": 0.245,
+        "shear": 6.455106365775382,
+        "transport_multiplier": 0.25,
+        "power": 0.7153321778425716
+      },
+      {
+        "t": 0.25,
+        "shear": 5.892346665953256,
+        "transport_multiplier": 0.25,
+        "power": 0.6427733063063001
+      },
+      {
+        "t": 0.255,
+        "shear": 5.301012414125517,
+        "transport_multiplier": 0.25,
+        "power": 0.5724475133700397
+      },
+      {
+        "t": 0.26,
+        "shear": 4.689203601100148,
+        "transport_multiplier": 0.25,
+        "power": 0.5026843217580093
+      },
+      {
+        "t": 0.265,
+        "shear": 4.111796426220642,
+        "transport_multiplier": 0.25,
+        "power": 0.4326260798398682
+      },
+      {
+        "t": 0.27,
+        "shear": 3.545856025677662,
+        "transport_multiplier": 0.25,
+        "power": 0.36183245458643315
+      },
+      {
+        "t": 0.275,
+        "shear": 2.971613544048023,
+        "transport_multiplier": 0.25,
+        "power": 0.290077371482446
+      },
+      {
+        "t": 0.28,
+        "shear": 2.4335088685006587,
+        "transport_multiplier": 0.25,
+        "power": 0.2060665598437556
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 1.9344748883229312,
+        "transport_multiplier": 0.25,
+        "power": 0.14432963456806544
+      },
+      {
+        "t": 0.29,
+        "shear": 1.4634362847034426,
+        "transport_multiplier": 0.31830450553255346,
+        "power": 0.10069288661459827
+      },
+      {
+        "t": 0.295,
+        "shear": 1.0485979190197945,
+        "transport_multiplier": 0.4762908157477799,
+        "power": 0.06306934149357711
+      },
+      {
+        "t": 0.3,
+        "shear": 0.7513532411802013,
+        "transport_multiplier": 0.6391688992007851,
+        "power": 0.03238087960891506
+      },
+      {
+        "t": 0.305,
+        "shear": 0.5383681226067139,
+        "transport_multiplier": 0.7752898169280535,
+        "power": 0.016624897920550358
+      },
+      {
+        "t": 0.31,
+        "shear": 0.3857576164625391,
+        "transport_multiplier": 0.8704667646192049,
+        "power": 0.00853550719457989
+      },
+      {
+        "t": 0.315,
+        "shear": 0.2764074104877242,
+        "transport_multiplier": 0.9290217562440851,
+        "power": 0.004382275513323167
+      },
+      {
+        "t": 0.32,
+        "shear": 0.1980545640890762,
+        "transport_multiplier": 0.9622549618046293,
+        "power": 0.0022499352688574526
+      },
+      {
+        "t": 0.325,
+        "shear": 0.1419122963718664,
+        "transport_multiplier": 0.9802584766486551,
+        "power": 0.0011551552837466132
+      },
+      {
+        "t": 0.33,
+        "shear": 0.10168460370586932,
+        "transport_multiplier": 0.9897660578607421,
+        "power": 0.0005930764978164623
+      },
+      {
+        "t": 0.335,
+        "shear": 0.07286020235854293,
+        "transport_multiplier": 0.9947194234290451,
+        "power": 0.0003044956268748672
+      },
+      {
+        "t": 0.34,
+        "shear": 0.052206616284638255,
+        "transport_multiplier": 0.9972818775425408,
+        "power": 0.0001563332675081174
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 0.037407675187054755,
+        "transport_multiplier": 0.9986026212369415,
+        "power": 8.02641758129691e-05
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 0.026803770527298952,
+        "transport_multiplier": 0.9992820736740275,
+        "power": 4.120900190742002e-05
+      },
+      {
+        "t": 0.355,
+        "shear": 0.01920574082424469,
+        "transport_multiplier": 0.9996312755272782,
+        "power": 2.1157407037516276e-05
+      },
+      {
+        "t": 0.36,
+        "shear": 0.013761514643336569,
+        "transport_multiplier": 0.9998106565724443,
+        "power": 1.0862574967401513e-05
+      },
+      {
+        "t": 0.365,
+        "shear": 0.009860556122870342,
+        "transport_multiplier": 0.9999027788858117,
+        "power": 5.5770319450388325e-06
+      },
+      {
+        "t": 0.37,
+        "shear": 0.007065397201706687,
+        "transport_multiplier": 0.999950082654248,
+        "power": 2.8633436739745683e-06
+      },
+      {
+        "t": 0.375,
+        "shear": 0.0050625783166632745,
+        "transport_multiplier": 0.9999743709576524,
+        "power": 1.4700896598922202e-06
+      },
+      {
+        "t": 0.38,
+        "shear": 0.0036274958761211822,
+        "transport_multiplier": 0.9999868414468186,
+        "power": 7.547691979014661e-07
+      },
+      {
+        "t": 0.385,
+        "shear": 0.002599214374218127,
+        "transport_multiplier": 0.9999932441302789,
+        "power": 3.875114271211109e-07
+      },
+      {
+        "t": 0.39,
+        "shear": 0.001862418482020745,
+        "transport_multiplier": 0.9999965314094289,
+        "power": 1.9895500050472893e-07
+      },
+      {
+        "t": 0.395,
+        "shear": 0.0013344811557591714,
+        "transport_multiplier": 0.9999982191632163,
+        "power": 1.0214690317626573e-07
+      },
+      {
+        "t": 0.4,
+        "shear": 0.0009561975314721436,
+        "transport_multiplier": 0.9999990856871168,
+        "power": 5.244396874685945e-08
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "optimized_7zones",
+    "width_gain_pct": 0.024849285905335326,
+    "Jpk_change_pct": -0.0993971436213413,
+    "integrated_high_J_change_pct": -0.8283095301778443,
+    "sustained_control_fraction": 0.7407407407407407,
+    "peak_abs_shear": 14.546856659943257,
+    "actuator_energy_reduced": 0.17244678733798954,
+    "width_gate_pass": true,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.9582979993689412,
+        "transport_multiplier": 0.5212853703964077,
+        "power": 0.18059999999999965
+      },
+      {
+        "t": 0.11,
+        "shear": 1.9165959987378847,
+        "transport_multiplier": 0.25,
+        "power": 0.3639999999999998
+      },
+      {
+        "t": 0.115,
+        "shear": 2.874893998106828,
+        "transport_multiplier": 0.25,
+        "power": 0.5502
+      },
+      {
+        "t": 0.12,
+        "shear": 3.813495767975619,
+        "transport_multiplier": 0.25,
+        "power": 0.7191138357488682
+      },
+      {
+        "t": 0.125,
+        "shear": 4.686761277409369,
+        "transport_multiplier": 0.25,
+        "power": 0.8282385594345735
+      },
+      {
+        "t": 0.13,
+        "shear": 5.5132113105256115,
+        "transport_multiplier": 0.25,
+        "power": 0.9366233307880412
+      },
+      {
+        "t": 0.135,
+        "shear": 6.306116589040934,
+        "transport_multiplier": 0.25,
+        "power": 1.0502229194652009
+      },
+      {
+        "t": 0.14,
+        "shear": 7.0749860005791785,
+        "transport_multiplier": 0.25,
+        "power": 1.170784539793927
+      },
+      {
+        "t": 0.145,
+        "shear": 7.9103225749041775,
+        "transport_multiplier": 0.25,
+        "power": 1.298266537959645
+      },
+      {
+        "t": 0.15,
+        "shear": 8.789235576266599,
+        "transport_multiplier": 0.25,
+        "power": 1.43197491768799
+      },
+      {
+        "t": 0.155,
+        "shear": 9.617263020348764,
+        "transport_multiplier": 0.25,
+        "power": 1.500599176950642
+      },
+      {
+        "t": 0.16,
+        "shear": 10.333363456523474,
+        "transport_multiplier": 0.25,
+        "power": 1.4702684267608488
+      },
+      {
+        "t": 0.165,
+        "shear": 10.969264687033663,
+        "transport_multiplier": 0.25,
+        "power": 1.4654788190642303
+      },
+      {
+        "t": 0.17,
+        "shear": 11.547700675602075,
+        "transport_multiplier": 0.25,
+        "power": 1.4841665195617422
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 12.0849610190495,
+        "transport_multiplier": 0.25,
+        "power": 1.5224995543906186
+      },
+      {
+        "t": 0.18,
+        "shear": 12.672493177303785,
+        "transport_multiplier": 0.25,
+        "power": 1.4844890052809572
+      },
+      {
+        "t": 0.185,
+        "shear": 13.180151301331577,
+        "transport_multiplier": 0.25,
+        "power": 1.3092282363975976
+      },
+      {
+        "t": 0.19,
+        "shear": 13.567569708999248,
+        "transport_multiplier": 0.25,
+        "power": 1.1095125308877987
+      },
+      {
+        "t": 0.195,
+        "shear": 13.845167128385759,
+        "transport_multiplier": 0.25,
+        "power": 0.8939769004679664
+      },
+      {
+        "t": 0.2,
+        "shear": 14.044074371110678,
+        "transport_multiplier": 0.25,
+        "power": 0.7322633518626833
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 14.186597638422983,
+        "transport_multiplier": 0.25,
+        "power": 0.6126551539809262
+      },
+      {
+        "t": 0.21,
+        "shear": 14.28872002193753,
+        "transport_multiplier": 0.25,
+        "power": 0.5250343287189649
+      },
+      {
+        "t": 0.215,
+        "shear": 14.361893907236125,
+        "transport_multiplier": 0.25,
+        "power": 0.46126662928347295
+      },
+      {
+        "t": 0.22,
+        "shear": 14.414325287168912,
+        "transport_multiplier": 0.25,
+        "power": 0.41506954773552407
+      },
+      {
+        "t": 0.225,
+        "shear": 14.451894012547342,
+        "transport_multiplier": 0.25,
+        "power": 0.3817083454663435
+      },
+      {
+        "t": 0.23,
+        "shear": 14.478813180579328,
+        "transport_multiplier": 0.25,
+        "power": 0.3576707436691955
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 14.498101607328849,
+        "transport_multiplier": 0.25,
+        "power": 0.3403786335348859
+      },
+      {
+        "t": 0.24,
+        "shear": 14.51192236902658,
+        "transport_multiplier": 0.25,
+        "power": 0.327953169346844
+      },
+      {
+        "t": 0.245,
+        "shear": 14.521825377518999,
+        "transport_multiplier": 0.25,
+        "power": 0.3190319009945183
+      },
+      {
+        "t": 0.25,
+        "shear": 14.528921193172687,
+        "transport_multiplier": 0.25,
+        "power": 0.31263027381626973
+      },
+      {
+        "t": 0.255,
+        "shear": 14.534005567262613,
+        "transport_multiplier": 0.25,
+        "power": 0.3080385537374541
+      },
+      {
+        "t": 0.26,
+        "shear": 14.537648680492715,
+        "transport_multiplier": 0.25,
+        "power": 0.3047460018662406
+      },
+      {
+        "t": 0.265,
+        "shear": 14.54025908519005,
+        "transport_multiplier": 0.25,
+        "power": 0.30238553227945775
+      },
+      {
+        "t": 0.27,
+        "shear": 14.542129521888956,
+        "transport_multiplier": 0.25,
+        "power": 0.30069353856046793
+      },
+      {
+        "t": 0.275,
+        "shear": 14.543469748348178,
+        "transport_multiplier": 0.25,
+        "power": 0.2994808417753828
+      },
+      {
+        "t": 0.28,
+        "shear": 14.54443006256946,
+        "transport_multiplier": 0.25,
+        "power": 0.2986117369727851
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 14.545118157776995,
+        "transport_multiplier": 0.25,
+        "power": 0.2979889091012753
+      },
+      {
+        "t": 0.29,
+        "shear": 14.54561119953786,
+        "transport_multiplier": 0.25,
+        "power": 0.2975425887278948
+      },
+      {
+        "t": 0.295,
+        "shear": 14.545964479396936,
+        "transport_multiplier": 0.25,
+        "power": 0.29722276325487124
+      },
+      {
+        "t": 0.3,
+        "shear": 14.546217615477362,
+        "transport_multiplier": 0.25,
+        "power": 0.29699358650612084
+      },
+      {
+        "t": 0.305,
+        "shear": 14.546398995404827,
+        "transport_multiplier": 0.25,
+        "power": 0.2968293681401793
+      },
+      {
+        "t": 0.31,
+        "shear": 14.546528959801947,
+        "transport_multiplier": 0.25,
+        "power": 0.29671169743313786
+      },
+      {
+        "t": 0.315,
+        "shear": 14.546622083361756,
+        "transport_multiplier": 0.25,
+        "power": 0.2966273810924954
+      },
+      {
+        "t": 0.32,
+        "shear": 14.546688809308112,
+        "transport_multiplier": 0.25,
+        "power": 0.29656696497568136
+      },
+      {
+        "t": 0.325,
+        "shear": 14.546736620537905,
+        "transport_multiplier": 0.25,
+        "power": 0.2965236745159561
+      },
+      {
+        "t": 0.33,
+        "shear": 14.54677087878104,
+        "transport_multiplier": 0.25,
+        "power": 0.2964926553302969
+      },
+      {
+        "t": 0.335,
+        "shear": 14.5467954258849,
+        "transport_multiplier": 0.25,
+        "power": 0.2964704290017349
+      },
+      {
+        "t": 0.34,
+        "shear": 14.5468130146534,
+        "transport_multiplier": 0.25,
+        "power": 0.29645450308451066
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 14.546825617556738,
+        "transport_multiplier": 0.25,
+        "power": 0.2964430916369667
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 14.546834647931592,
+        "transport_multiplier": 0.25,
+        "power": 0.29643491496250063
+      },
+      {
+        "t": 0.355,
+        "shear": 14.546841118477916,
+        "transport_multiplier": 0.25,
+        "power": 0.29642905611153203
+      },
+      {
+        "t": 0.36,
+        "shear": 14.546845754826945,
+        "transport_multiplier": 0.25,
+        "power": 0.2964248580574176
+      },
+      {
+        "t": 0.365,
+        "shear": 14.546849076916203,
+        "transport_multiplier": 0.25,
+        "power": 0.29642185001817206
+      },
+      {
+        "t": 0.37,
+        "shear": 14.546851457297175,
+        "transport_multiplier": 0.25,
+        "power": 0.29641969466282414
+      },
+      {
+        "t": 0.375,
+        "shear": 14.546853162914662,
+        "transport_multiplier": 0.25,
+        "power": 0.2964181502826984
+      },
+      {
+        "t": 0.38,
+        "shear": 14.546854385043003,
+        "transport_multiplier": 0.25,
+        "power": 0.29641704368571115
+      },
+      {
+        "t": 0.385,
+        "shear": 14.546855260736228,
+        "transport_multiplier": 0.25,
+        "power": 0.29641625077417794
+      },
+      {
+        "t": 0.39,
+        "shear": 14.54685588819783,
+        "transport_multiplier": 0.25,
+        "power": 0.29641568262816587
+      },
+      {
+        "t": 0.395,
+        "shear": 14.54685633779372,
+        "transport_multiplier": 0.25,
+        "power": 0.29641527553372216
+      },
+      {
+        "t": 0.4,
+        "shear": 14.546856659943257,
+        "transport_multiplier": 0.25,
+        "power": 0.29641498383778514
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "wrong_polarity",
+    "width_gain_pct": 0.02469120567759755,
+    "Jpk_change_pct": -0.0987648227103902,
+    "integrated_high_J_change_pct": -0.8230401892532516,
+    "sustained_control_fraction": 0.7407407407407407,
+    "peak_abs_shear": 9.383542586024937,
+    "actuator_energy_reduced": 0.11504530269151768,
+    "width_gate_pass": true,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.6640238142995131,
+        "transport_multiplier": 0.6939973819545113,
+        "power": 0.12899999999999975
+      },
+      {
+        "t": 0.11,
+        "shear": 1.3280476285990281,
+        "transport_multiplier": 0.3618323983699037,
+        "power": 0.2599999999999999
+      },
+      {
+        "t": 0.115,
+        "shear": 1.9920714428985438,
+        "transport_multiplier": 0.25,
+        "power": 0.393
+      },
+      {
+        "t": 0.12,
+        "shear": 2.623297967275583,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488683
+      },
+      {
+        "t": 0.125,
+        "shear": 3.14572944151769,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345736
+      },
+      {
+        "t": 0.13,
+        "shear": 3.60876922871815,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880412
+      },
+      {
+        "t": 0.135,
+        "shear": 4.084267493598892,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652007
+      },
+      {
+        "t": 0.14,
+        "shear": 4.53572989150256,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939268
+      },
+      {
+        "t": 0.145,
+        "shear": 4.969969838140367,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596451
+      },
+      {
+        "t": 0.15,
+        "shear": 5.391869359201354,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879901
+      },
+      {
+        "t": 0.155,
+        "shear": 5.905017488679386,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331797
+      },
+      {
+        "t": 0.16,
+        "shear": 6.441826370043285,
+        "transport_multiplier": 0.25,
+        "power": 1.0427803489496847
+      },
+      {
+        "t": 0.165,
+        "shear": 6.9786348428108225,
+        "transport_multiplier": 0.25,
+        "power": 1.1292559960695854
+      },
+      {
+        "t": 0.17,
+        "shear": 7.445635487949129,
+        "transport_multiplier": 0.25,
+        "power": 1.0970771985423655
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 7.806646697190311,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861636
+      },
+      {
+        "t": 0.18,
+        "shear": 8.179707059688878,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562888
+      },
+      {
+        "t": 0.185,
+        "shear": 8.497291421573216,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887452
+      },
+      {
+        "t": 0.19,
+        "shear": 8.74851602734653,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037886
+      },
+      {
+        "t": 0.195,
+        "shear": 8.928526323369669,
+        "transport_multiplier": 0.25,
+        "power": 0.5974956026138349
+      },
+      {
+        "t": 0.2,
+        "shear": 9.057509336695906,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515696
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 9.149929704276305,
+        "transport_multiplier": 0.25,
+        "power": 0.4096381462370542
+      },
+      {
+        "t": 0.21,
+        "shear": 9.2161517913824,
+        "transport_multiplier": 0.25,
+        "power": 0.3509868558927191
+      },
+      {
+        "t": 0.215,
+        "shear": 9.263601990245464,
+        "transport_multiplier": 0.25,
+        "power": 0.3082639431198888
+      },
+      {
+        "t": 0.22,
+        "shear": 9.297601543423804,
+        "transport_multiplier": 0.25,
+        "power": 0.277293567562593
+      },
+      {
+        "t": 0.225,
+        "shear": 9.3219632878216,
+        "transport_multiplier": 0.25,
+        "power": 0.25491848405766326
+      },
+      {
+        "t": 0.23,
+        "shear": 9.339419240462819,
+        "transport_multiplier": 0.25,
+        "power": 0.23879164969134736
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 9.351926977086142,
+        "transport_multiplier": 0.25,
+        "power": 0.22718780830393873
+      },
+      {
+        "t": 0.24,
+        "shear": 9.360889162001168,
+        "transport_multiplier": 0.25,
+        "power": 0.2188484126266349
+      },
+      {
+        "t": 0.245,
+        "shear": 9.367310848103935,
+        "transport_multiplier": 0.25,
+        "power": 0.21286020069451192
+      },
+      {
+        "t": 0.25,
+        "shear": 9.37191218726324,
+        "transport_multiplier": 0.25,
+        "power": 0.2085629010539196
+      },
+      {
+        "t": 0.255,
+        "shear": 9.375209190841456,
+        "transport_multiplier": 0.25,
+        "power": 0.20548038416863082
+      },
+      {
+        "t": 0.26,
+        "shear": 9.37757159713632,
+        "transport_multiplier": 0.25,
+        "power": 0.2032699355566639
+      },
+      {
+        "t": 0.265,
+        "shear": 9.37926433521488,
+        "transport_multiplier": 0.25,
+        "power": 0.20168519234680904
+      },
+      {
+        "t": 0.27,
+        "shear": 9.380477235048776,
+        "transport_multiplier": 0.25,
+        "power": 0.2005492185246299
+      },
+      {
+        "t": 0.275,
+        "shear": 9.381346315756357,
+        "transport_multiplier": 0.25,
+        "power": 0.19973502375240595
+      },
+      {
+        "t": 0.28,
+        "shear": 9.38196903929475,
+        "transport_multiplier": 0.25,
+        "power": 0.19915150758580472
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 9.382415240207834,
+        "transport_multiplier": 0.25,
+        "power": 0.19873333831085344
+      },
+      {
+        "t": 0.29,
+        "shear": 9.382734957132877,
+        "transport_multiplier": 0.25,
+        "power": 0.19843367526910413
+      },
+      {
+        "t": 0.295,
+        "shear": 9.382964044320179,
+        "transport_multiplier": 0.25,
+        "power": 0.19821894106067328
+      },
+      {
+        "t": 0.3,
+        "shear": 9.38312819246273,
+        "transport_multiplier": 0.25,
+        "power": 0.19806506893057338
+      },
+      {
+        "t": 0.305,
+        "shear": 9.383245809746457,
+        "transport_multiplier": 0.25,
+        "power": 0.19795481044639146
+      },
+      {
+        "t": 0.31,
+        "shear": 9.3833300862129,
+        "transport_multiplier": 0.25,
+        "power": 0.19787580459015544
+      },
+      {
+        "t": 0.315,
+        "shear": 9.383390472939855,
+        "transport_multiplier": 0.25,
+        "power": 0.19781919329089395
+      },
+      {
+        "t": 0.32,
+        "shear": 9.38343374192046,
+        "transport_multiplier": 0.25,
+        "power": 0.19777862894251183
+      },
+      {
+        "t": 0.325,
+        "shear": 9.383464745499845,
+        "transport_multiplier": 0.25,
+        "power": 0.19774956301905552
+      },
+      {
+        "t": 0.33,
+        "shear": 9.383486960535208,
+        "transport_multiplier": 0.25,
+        "power": 0.19772873622196013
+      },
+      {
+        "t": 0.335,
+        "shear": 9.383502878303611,
+        "transport_multiplier": 0.25,
+        "power": 0.1977138130912559
+      },
+      {
+        "t": 0.34,
+        "shear": 9.383514283883066,
+        "transport_multiplier": 0.25,
+        "power": 0.19770312016056232
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 9.383522456337861,
+        "transport_multiplier": 0.25,
+        "power": 0.19769545832022786
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 9.383528312157605,
+        "transport_multiplier": 0.25,
+        "power": 0.19768996836111025
+      },
+      {
+        "t": 0.355,
+        "shear": 9.383532508035808,
+        "transport_multiplier": 0.25,
+        "power": 0.19768603462805615
+      },
+      {
+        "t": 0.36,
+        "shear": 9.38353551451391,
+        "transport_multiplier": 0.25,
+        "power": 0.1976832159823543
+      },
+      {
+        "t": 0.365,
+        "shear": 9.383537668749602,
+        "transport_multiplier": 0.25,
+        "power": 0.19768119633301845
+      },
+      {
+        "t": 0.37,
+        "shear": 9.38353921232693,
+        "transport_multiplier": 0.25,
+        "power": 0.1976797491902938
+      },
+      {
+        "t": 0.375,
+        "shear": 9.383540318348409,
+        "transport_multiplier": 0.25,
+        "power": 0.1976787122668442
+      },
+      {
+        "t": 0.38,
+        "shear": 9.383541110847437,
+        "transport_multiplier": 0.25,
+        "power": 0.19767796927853046
+      },
+      {
+        "t": 0.385,
+        "shear": 9.383541678697803,
+        "transport_multiplier": 0.25,
+        "power": 0.19767743690404033
+      },
+      {
+        "t": 0.39,
+        "shear": 9.38354208558037,
+        "transport_multiplier": 0.25,
+        "power": 0.19767705544099795
+      },
+      {
+        "t": 0.395,
+        "shear": 9.383542377124463,
+        "transport_multiplier": 0.25,
+        "power": 0.19767678211075712
+      },
+      {
+        "t": 0.4,
+        "shear": 9.383542586024937,
+        "transport_multiplier": 0.25,
+        "power": 0.1976765862610684
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "no_shear_control",
+    "width_gain_pct": 0.0,
+    "Jpk_change_pct": -0.0,
+    "integrated_high_J_change_pct": -0.0,
+    "sustained_control_fraction": 0.0,
+    "peak_abs_shear": 0.0,
+    "actuator_energy_reduced": 0.11235405164891833,
+    "width_gate_pass": false,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.12899999999999975
+      },
+      {
+        "t": 0.11,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.2599999999999999
+      },
+      {
+        "t": 0.115,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.393
+      },
+      {
+        "t": 0.12,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.5279999999999998
+      },
+      {
+        "t": 0.125,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.6649999999999999
+      },
+      {
+        "t": 0.13,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.804
+      },
+      {
+        "t": 0.135,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.9450000000000002
+      },
+      {
+        "t": 0.14,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 1.0880000000000003
+      },
+      {
+        "t": 0.145,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 1.2329999999999997
+      },
+      {
+        "t": 0.15,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 1.3799999999999994
+      },
+      {
+        "t": 0.155,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 1.5290000000000001
+      },
+      {
+        "t": 0.16,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 1.3141314560115238
+      },
+      {
+        "t": 0.165,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 1.0343562014316219
+      },
+      {
+        "t": 0.17,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.8148404218151339
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.6477708977104628
+      },
+      {
+        "t": 0.18,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.5230393412364617
+      },
+      {
+        "t": 0.185,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.4310874023933164
+      },
+      {
+        "t": 0.19,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.3638774349060251
+      },
+      {
+        "t": 0.195,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.3150398688173814
+      },
+      {
+        "t": 0.2,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.27969734638122656
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.25419420293342176
+      },
+      {
+        "t": 0.21,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.23582843910316753
+      },
+      {
+        "t": 0.215,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.22262157888131667
+      },
+      {
+        "t": 0.22,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.213134208825977
+      },
+      {
+        "t": 0.225,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.20632376528337143
+      },
+      {
+        "t": 0.23,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.20143747933735603
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.19793302177603475
+      },
+      {
+        "t": 0.24,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.19542028384508772
+      },
+      {
+        "t": 0.245,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.19361896366217743
+      },
+      {
+        "t": 0.25,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.1923278173578312
+      },
+      {
+        "t": 0.255,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.19140244265067566
+      },
+      {
+        "t": 0.26,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.1907392656637152
+      },
+      {
+        "t": 0.265,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.19026401850020297
+      },
+      {
+        "t": 0.27,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18992345817712591
+      },
+      {
+        "t": 0.275,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18967942020350176
+      },
+      {
+        "t": 0.28,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18950455122241666
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.1893792479471036
+      },
+      {
+        "t": 0.29,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18928946208345032
+      },
+      {
+        "t": 0.295,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18922512660034416
+      },
+      {
+        "t": 0.3,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18917902764728006
+      },
+      {
+        "t": 0.305,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18914599601392307
+      },
+      {
+        "t": 0.31,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18912232766544188
+      },
+      {
+        "t": 0.315,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.1891053684762173
+      },
+      {
+        "t": 0.32,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18909321664687295
+      },
+      {
+        "t": 0.325,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18908450946050845
+      },
+      {
+        "t": 0.33,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.189078270478503
+      },
+      {
+        "t": 0.335,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18907380004723534
+      },
+      {
+        "t": 0.34,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18907059684053285
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906830164123817
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906665705835946
+      },
+      {
+        "t": 0.355,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906547866286183
+      },
+      {
+        "t": 0.36,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906463430540585
+      },
+      {
+        "t": 0.365,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906402929675187
+      },
+      {
+        "t": 0.37,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906359578905588
+      },
+      {
+        "t": 0.375,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906328516719773
+      },
+      {
+        "t": 0.38,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.1890630625968938
+      },
+      {
+        "t": 0.385,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.1890629031182987
+      },
+      {
+        "t": 0.39,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906278884688657
+      },
+      {
+        "t": 0.395,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906270696784103
+      },
+      {
+        "t": 0.4,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.18906264829893898
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "excessive_shear",
+    "width_gain_pct": -0.0049999999999999975,
+    "Jpk_change_pct": 0.01999999999999999,
+    "integrated_high_J_change_pct": -0.033333333333333326,
+    "sustained_control_fraction": 0.7407407407407407,
+    "peak_abs_shear": 37.53417034409975,
+    "actuator_energy_reduced": 0.11504530269151768,
+    "width_gate_pass": false,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 2.6560952571980523,
+        "transport_multiplier": 0.25,
+        "power": 0.12899999999999975
+      },
+      {
+        "t": 0.11,
+        "shear": 5.312190514396113,
+        "transport_multiplier": 0.25,
+        "power": 0.2599999999999999
+      },
+      {
+        "t": 0.115,
+        "shear": 7.968285771594175,
+        "transport_multiplier": 0.25,
+        "power": 0.393
+      },
+      {
+        "t": 0.12,
+        "shear": 10.493191869102333,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488683
+      },
+      {
+        "t": 0.125,
+        "shear": 12.58291776607076,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345736
+      },
+      {
+        "t": 0.13,
+        "shear": 14.4350769148726,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880412
+      },
+      {
+        "t": 0.135,
+        "shear": 16.33706997439557,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652007
+      },
+      {
+        "t": 0.14,
+        "shear": 18.14291956601024,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939268
+      },
+      {
+        "t": 0.145,
+        "shear": 19.879879352561467,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596451
+      },
+      {
+        "t": 0.15,
+        "shear": 21.567477436805415,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879901
+      },
+      {
+        "t": 0.155,
+        "shear": 23.620069954717543,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331797
+      },
+      {
+        "t": 0.16,
+        "shear": 25.76730548017314,
+        "transport_multiplier": 0.25,
+        "power": 1.0427803489496847
+      },
+      {
+        "t": 0.165,
+        "shear": 27.91453937124329,
+        "transport_multiplier": 0.25,
+        "power": 1.1292559960695854
+      },
+      {
+        "t": 0.17,
+        "shear": 29.782541951796517,
+        "transport_multiplier": 0.25,
+        "power": 1.0970771985423655
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 31.226586788761242,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861636
+      },
+      {
+        "t": 0.18,
+        "shear": 32.71882823875551,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562888
+      },
+      {
+        "t": 0.185,
+        "shear": 33.989165686292864,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887452
+      },
+      {
+        "t": 0.19,
+        "shear": 34.99406410938612,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037886
+      },
+      {
+        "t": 0.195,
+        "shear": 35.714105293478674,
+        "transport_multiplier": 0.25,
+        "power": 0.5974956026138349
+      },
+      {
+        "t": 0.2,
+        "shear": 36.230037346783625,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515696
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 36.59971881710522,
+        "transport_multiplier": 0.25,
+        "power": 0.4096381462370542
+      },
+      {
+        "t": 0.21,
+        "shear": 36.8646071655296,
+        "transport_multiplier": 0.25,
+        "power": 0.3509868558927191
+      },
+      {
+        "t": 0.215,
+        "shear": 37.054407960981855,
+        "transport_multiplier": 0.25,
+        "power": 0.3082639431198888
+      },
+      {
+        "t": 0.22,
+        "shear": 37.190406173695216,
+        "transport_multiplier": 0.25,
+        "power": 0.277293567562593
+      },
+      {
+        "t": 0.225,
+        "shear": 37.2878531512864,
+        "transport_multiplier": 0.25,
+        "power": 0.25491848405766326
+      },
+      {
+        "t": 0.23,
+        "shear": 37.357676961851276,
+        "transport_multiplier": 0.25,
+        "power": 0.23879164969134736
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 37.40770790834457,
+        "transport_multiplier": 0.25,
+        "power": 0.22718780830393873
+      },
+      {
+        "t": 0.24,
+        "shear": 37.44355664800467,
+        "transport_multiplier": 0.25,
+        "power": 0.2188484126266349
+      },
+      {
+        "t": 0.245,
+        "shear": 37.46924339241574,
+        "transport_multiplier": 0.25,
+        "power": 0.21286020069451192
+      },
+      {
+        "t": 0.25,
+        "shear": 37.48764874905296,
+        "transport_multiplier": 0.25,
+        "power": 0.2085629010539196
+      },
+      {
+        "t": 0.255,
+        "shear": 37.500836763365825,
+        "transport_multiplier": 0.25,
+        "power": 0.20548038416863082
+      },
+      {
+        "t": 0.26,
+        "shear": 37.51028638854528,
+        "transport_multiplier": 0.25,
+        "power": 0.2032699355566639
+      },
+      {
+        "t": 0.265,
+        "shear": 37.51705734085952,
+        "transport_multiplier": 0.25,
+        "power": 0.20168519234680904
+      },
+      {
+        "t": 0.27,
+        "shear": 37.521908940195104,
+        "transport_multiplier": 0.25,
+        "power": 0.2005492185246299
+      },
+      {
+        "t": 0.275,
+        "shear": 37.52538526302543,
+        "transport_multiplier": 0.25,
+        "power": 0.19973502375240595
+      },
+      {
+        "t": 0.28,
+        "shear": 37.527876157179,
+        "transport_multiplier": 0.25,
+        "power": 0.19915150758580472
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 37.529660960831336,
+        "transport_multiplier": 0.25,
+        "power": 0.19873333831085344
+      },
+      {
+        "t": 0.29,
+        "shear": 37.53093982853151,
+        "transport_multiplier": 0.25,
+        "power": 0.19843367526910413
+      },
+      {
+        "t": 0.295,
+        "shear": 37.531856177280716,
+        "transport_multiplier": 0.25,
+        "power": 0.19821894106067328
+      },
+      {
+        "t": 0.3,
+        "shear": 37.53251276985092,
+        "transport_multiplier": 0.25,
+        "power": 0.19806506893057338
+      },
+      {
+        "t": 0.305,
+        "shear": 37.53298323898583,
+        "transport_multiplier": 0.25,
+        "power": 0.19795481044639146
+      },
+      {
+        "t": 0.31,
+        "shear": 37.5333203448516,
+        "transport_multiplier": 0.25,
+        "power": 0.19787580459015544
+      },
+      {
+        "t": 0.315,
+        "shear": 37.53356189175942,
+        "transport_multiplier": 0.25,
+        "power": 0.19781919329089395
+      },
+      {
+        "t": 0.32,
+        "shear": 37.53373496768184,
+        "transport_multiplier": 0.25,
+        "power": 0.19777862894251183
+      },
+      {
+        "t": 0.325,
+        "shear": 37.53385898199938,
+        "transport_multiplier": 0.25,
+        "power": 0.19774956301905552
+      },
+      {
+        "t": 0.33,
+        "shear": 37.53394784214083,
+        "transport_multiplier": 0.25,
+        "power": 0.19772873622196013
+      },
+      {
+        "t": 0.335,
+        "shear": 37.534011513214445,
+        "transport_multiplier": 0.25,
+        "power": 0.1977138130912559
+      },
+      {
+        "t": 0.34,
+        "shear": 37.534057135532265,
+        "transport_multiplier": 0.25,
+        "power": 0.19770312016056232
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 37.534089825351444,
+        "transport_multiplier": 0.25,
+        "power": 0.19769545832022786
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 37.53411324863042,
+        "transport_multiplier": 0.25,
+        "power": 0.19768996836111025
+      },
+      {
+        "t": 0.355,
+        "shear": 37.53413003214323,
+        "transport_multiplier": 0.25,
+        "power": 0.19768603462805615
+      },
+      {
+        "t": 0.36,
+        "shear": 37.53414205805564,
+        "transport_multiplier": 0.25,
+        "power": 0.1976832159823543
+      },
+      {
+        "t": 0.365,
+        "shear": 37.53415067499841,
+        "transport_multiplier": 0.25,
+        "power": 0.19768119633301845
+      },
+      {
+        "t": 0.37,
+        "shear": 37.53415684930772,
+        "transport_multiplier": 0.25,
+        "power": 0.1976797491902938
+      },
+      {
+        "t": 0.375,
+        "shear": 37.534161273393636,
+        "transport_multiplier": 0.25,
+        "power": 0.1976787122668442
+      },
+      {
+        "t": 0.38,
+        "shear": 37.53416444338975,
+        "transport_multiplier": 0.25,
+        "power": 0.19767796927853046
+      },
+      {
+        "t": 0.385,
+        "shear": 37.53416671479121,
+        "transport_multiplier": 0.25,
+        "power": 0.19767743690404033
+      },
+      {
+        "t": 0.39,
+        "shear": 37.53416834232148,
+        "transport_multiplier": 0.25,
+        "power": 0.19767705544099795
+      },
+      {
+        "t": 0.395,
+        "shear": 37.534169508497854,
+        "transport_multiplier": 0.25,
+        "power": 0.19767678211075712
+      },
+      {
+        "t": 0.4,
+        "shear": 37.53417034409975,
+        "transport_multiplier": 0.25,
+        "power": 0.1976765862610684
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "deliberately_late",
+    "width_gain_pct": 0.015818540388665828,
+    "Jpk_change_pct": -0.06327416155466331,
+    "integrated_high_J_change_pct": -0.5272846796221944,
+    "sustained_control_fraction": 0.5061728395061729,
+    "peak_abs_shear": 9.149929704276309,
+    "actuator_energy_reduced": 0.1259127587278563,
+    "width_gate_pass": false,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.11,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.115,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.12,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.125,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.13,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.135,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.14,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.145,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.15,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.155,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.16,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.165,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.17,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.18,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.185,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.19,
+        "shear": 0.6640238142995153,
+        "transport_multiplier": 0.6939973819545098,
+        "power": 0.12900000000000011
+      },
+      {
+        "t": 0.195,
+        "shear": 1.3280476285990306,
+        "transport_multiplier": 0.36183239836990283,
+        "power": 0.26000000000000023
+      },
+      {
+        "t": 0.2,
+        "shear": 1.992071442898546,
+        "transport_multiplier": 0.25,
+        "power": 0.39300000000000035
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 2.6232979672755863,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488687
+      },
+      {
+        "t": 0.21,
+        "shear": 3.14572944151769,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345733
+      },
+      {
+        "t": 0.215,
+        "shear": 3.60876922871815,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880413
+      },
+      {
+        "t": 0.22,
+        "shear": 4.084267493598892,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652007
+      },
+      {
+        "t": 0.225,
+        "shear": 4.53572989150256,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939268
+      },
+      {
+        "t": 0.23,
+        "shear": 4.9699698381403685,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596456
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 5.391869359201359,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879907
+      },
+      {
+        "t": 0.24,
+        "shear": 5.90501748867939,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331799
+      },
+      {
+        "t": 0.245,
+        "shear": 6.441826370043285,
+        "transport_multiplier": 0.25,
+        "power": 1.0427803489496845
+      },
+      {
+        "t": 0.25,
+        "shear": 6.9786348428108225,
+        "transport_multiplier": 0.25,
+        "power": 1.1292559960695854
+      },
+      {
+        "t": 0.255,
+        "shear": 7.445635487949129,
+        "transport_multiplier": 0.25,
+        "power": 1.0970771985423655
+      },
+      {
+        "t": 0.26,
+        "shear": 7.806646697190311,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861636
+      },
+      {
+        "t": 0.265,
+        "shear": 8.179707059688887,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562893
+      },
+      {
+        "t": 0.27,
+        "shear": 8.497291421573216,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887443
+      },
+      {
+        "t": 0.275,
+        "shear": 8.74851602734653,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037875
+      },
+      {
+        "t": 0.28,
+        "shear": 8.928526323369669,
+        "transport_multiplier": 0.25,
+        "power": 0.597495602613835
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 9.057509336695906,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515707
+      },
+      {
+        "t": 0.29,
+        "shear": 9.149929704276309,
+        "transport_multiplier": 0.25,
+        "power": 0.4096381462370551
+      },
+      {
+        "t": 0.295,
+        "shear": 8.759247227247513,
+        "transport_multiplier": 0.25,
+        "power": 1.3260487670963181
+      },
+      {
+        "t": 0.3,
+        "shear": 8.368564750218717,
+        "transport_multiplier": 0.25,
+        "power": 1.2203389365896362
+      },
+      {
+        "t": 0.305,
+        "shear": 8.115912551340118,
+        "transport_multiplier": 0.25,
+        "power": 1.1126291060829543
+      },
+      {
+        "t": 0.31,
+        "shear": 7.834763525009301,
+        "transport_multiplier": 0.25,
+        "power": 0.9972840951130494
+      },
+      {
+        "t": 0.315,
+        "shear": 7.44521213812986,
+        "transport_multiplier": 0.25,
+        "power": 0.883247329089615
+      },
+      {
+        "t": 0.32,
+        "shear": 6.977987065777223,
+        "transport_multiplier": 0.25,
+        "power": 0.7933777734337003
+      },
+      {
+        "t": 0.325,
+        "shear": 6.455106365775382,
+        "transport_multiplier": 0.25,
+        "power": 0.7153321778425711
+      },
+      {
+        "t": 0.33,
+        "shear": 5.8923466659532515,
+        "transport_multiplier": 0.25,
+        "power": 0.6427733063062997
+      },
+      {
+        "t": 0.335,
+        "shear": 5.301012414125515,
+        "transport_multiplier": 0.25,
+        "power": 0.5724475133700393
+      },
+      {
+        "t": 0.34,
+        "shear": 4.689203601100146,
+        "transport_multiplier": 0.25,
+        "power": 0.5026843217580089
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 4.11179642622064,
+        "transport_multiplier": 0.25,
+        "power": 0.43262607983986784
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 3.5458560256776575,
+        "transport_multiplier": 0.25,
+        "power": 0.36183245458643276
+      },
+      {
+        "t": 0.355,
+        "shear": 2.9716135440480276,
+        "transport_multiplier": 0.25,
+        "power": 0.2900773714824464
+      },
+      {
+        "t": 0.36,
+        "shear": 2.433508868500662,
+        "transport_multiplier": 0.25,
+        "power": 0.20606655984375605
+      },
+      {
+        "t": 0.365,
+        "shear": 1.9344748883229337,
+        "transport_multiplier": 0.25,
+        "power": 0.14432963456806575
+      },
+      {
+        "t": 0.37,
+        "shear": 1.4634362847034414,
+        "transport_multiplier": 0.31830450553255374,
+        "power": 0.1006928866145981
+      },
+      {
+        "t": 0.375,
+        "shear": 1.0485979190197927,
+        "transport_multiplier": 0.47629081574778076,
+        "power": 0.06306934149357689
+      },
+      {
+        "t": 0.38,
+        "shear": 0.7513532411801999,
+        "transport_multiplier": 0.639168899200786,
+        "power": 0.03238087960891495
+      },
+      {
+        "t": 0.385,
+        "shear": 0.5383681226067127,
+        "transport_multiplier": 0.7752898169280542,
+        "power": 0.016624897920550306
+      },
+      {
+        "t": 0.39,
+        "shear": 0.38575761646253826,
+        "transport_multiplier": 0.8704667646192055,
+        "power": 0.008535507194579862
+      },
+      {
+        "t": 0.395,
+        "shear": 0.2764074104877237,
+        "transport_multiplier": 0.9290217562440853,
+        "power": 0.004382275513323152
+      },
+      {
+        "t": 0.4,
+        "shear": 0.19805456408907587,
+        "transport_multiplier": 0.9622549618046295,
+        "power": 0.0022499352688574448
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "misplaced_shear_layer",
+    "width_gain_pct": 0.02469120567759754,
+    "Jpk_change_pct": -0.09876482271039017,
+    "integrated_high_J_change_pct": -0.8230401892532515,
+    "sustained_control_fraction": 0.7407407407407407,
+    "peak_abs_shear": 9.383542586024934,
+    "actuator_energy_reduced": 0.11504530269151768,
+    "width_gate_pass": true,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.015,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.02,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.025,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.03,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.035,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.04,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.045,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.05,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.055,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.06,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.065,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.07,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.075,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.08,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.085,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.09,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.095,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.1,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.105,
+        "shear": 0.6640238142995092,
+        "transport_multiplier": 0.6939973819545138,
+        "power": 0.12899999999999975
+      },
+      {
+        "t": 0.11,
+        "shear": 1.3280476285990206,
+        "transport_multiplier": 0.3618323983699063,
+        "power": 0.2599999999999999
+      },
+      {
+        "t": 0.115,
+        "shear": 1.9920714428985316,
+        "transport_multiplier": 0.25,
+        "power": 0.393
+      },
+      {
+        "t": 0.12,
+        "shear": 2.6232979672755685,
+        "transport_multiplier": 0.25,
+        "power": 0.5079138357488683
+      },
+      {
+        "t": 0.125,
+        "shear": 3.1457294415176675,
+        "transport_multiplier": 0.25,
+        "power": 0.5622385594345736
+      },
+      {
+        "t": 0.13,
+        "shear": 3.608769228718132,
+        "transport_multiplier": 0.25,
+        "power": 0.6150233307880412
+      },
+      {
+        "t": 0.135,
+        "shear": 4.08426749359887,
+        "transport_multiplier": 0.25,
+        "power": 0.6722229194652007
+      },
+      {
+        "t": 0.14,
+        "shear": 4.53572989150253,
+        "transport_multiplier": 0.25,
+        "power": 0.7355845397939268
+      },
+      {
+        "t": 0.145,
+        "shear": 4.969969838140328,
+        "transport_multiplier": 0.25,
+        "power": 0.8050665379596451
+      },
+      {
+        "t": 0.15,
+        "shear": 5.391869359201306,
+        "transport_multiplier": 0.25,
+        "power": 0.8799749176879901
+      },
+      {
+        "t": 0.155,
+        "shear": 5.90501748867936,
+        "transport_multiplier": 0.25,
+        "power": 0.9594714229331797
+      },
+      {
+        "t": 0.16,
+        "shear": 6.441826370043256,
+        "transport_multiplier": 0.25,
+        "power": 1.0427803489496847
+      },
+      {
+        "t": 0.165,
+        "shear": 6.978634842810791,
+        "transport_multiplier": 0.25,
+        "power": 1.1292559960695854
+      },
+      {
+        "t": 0.17,
+        "shear": 7.445635487949096,
+        "transport_multiplier": 0.25,
+        "power": 1.0970771985423655
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 7.8066466971902795,
+        "transport_multiplier": 0.25,
+        "power": 0.9818803040861636
+      },
+      {
+        "t": 0.18,
+        "shear": 8.179707059688882,
+        "transport_multiplier": 0.25,
+        "power": 0.8997221631562888
+      },
+      {
+        "t": 0.185,
+        "shear": 8.497291421573216,
+        "transport_multiplier": 0.25,
+        "power": 0.8456895102887452
+      },
+      {
+        "t": 0.19,
+        "shear": 8.748516027346529,
+        "transport_multiplier": 0.25,
+        "power": 0.7408884481037886
+      },
+      {
+        "t": 0.195,
+        "shear": 8.928526323369663,
+        "transport_multiplier": 0.25,
+        "power": 0.5974956026138349
+      },
+      {
+        "t": 0.2,
+        "shear": 9.057509336695905,
+        "transport_multiplier": 0.25,
+        "power": 0.48959681309515696
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 9.149929704276301,
+        "transport_multiplier": 0.25,
+        "power": 0.4096381462370542
+      },
+      {
+        "t": 0.21,
+        "shear": 9.216151791382396,
+        "transport_multiplier": 0.25,
+        "power": 0.3509868558927191
+      },
+      {
+        "t": 0.215,
+        "shear": 9.26360199024546,
+        "transport_multiplier": 0.25,
+        "power": 0.3082639431198888
+      },
+      {
+        "t": 0.22,
+        "shear": 9.297601543423799,
+        "transport_multiplier": 0.25,
+        "power": 0.277293567562593
+      },
+      {
+        "t": 0.225,
+        "shear": 9.32196328782159,
+        "transport_multiplier": 0.25,
+        "power": 0.25491848405766326
+      },
+      {
+        "t": 0.23,
+        "shear": 9.339419240462812,
+        "transport_multiplier": 0.25,
+        "power": 0.23879164969134736
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 9.351926977086139,
+        "transport_multiplier": 0.25,
+        "power": 0.22718780830393873
+      },
+      {
+        "t": 0.24,
+        "shear": 9.360889162001161,
+        "transport_multiplier": 0.25,
+        "power": 0.2188484126266349
+      },
+      {
+        "t": 0.245,
+        "shear": 9.36731084810393,
+        "transport_multiplier": 0.25,
+        "power": 0.21286020069451192
+      },
+      {
+        "t": 0.25,
+        "shear": 9.371912187263234,
+        "transport_multiplier": 0.25,
+        "power": 0.2085629010539196
+      },
+      {
+        "t": 0.255,
+        "shear": 9.37520919084145,
+        "transport_multiplier": 0.25,
+        "power": 0.20548038416863082
+      },
+      {
+        "t": 0.26,
+        "shear": 9.377571597136313,
+        "transport_multiplier": 0.25,
+        "power": 0.2032699355566639
+      },
+      {
+        "t": 0.265,
+        "shear": 9.379264335214879,
+        "transport_multiplier": 0.25,
+        "power": 0.20168519234680904
+      },
+      {
+        "t": 0.27,
+        "shear": 9.380477235048767,
+        "transport_multiplier": 0.25,
+        "power": 0.2005492185246299
+      },
+      {
+        "t": 0.275,
+        "shear": 9.38134631575635,
+        "transport_multiplier": 0.25,
+        "power": 0.19973502375240595
+      },
+      {
+        "t": 0.28,
+        "shear": 9.381969039294743,
+        "transport_multiplier": 0.25,
+        "power": 0.19915150758580472
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 9.382415240207829,
+        "transport_multiplier": 0.25,
+        "power": 0.19873333831085344
+      },
+      {
+        "t": 0.29,
+        "shear": 9.382734957132868,
+        "transport_multiplier": 0.25,
+        "power": 0.19843367526910413
+      },
+      {
+        "t": 0.295,
+        "shear": 9.382964044320172,
+        "transport_multiplier": 0.25,
+        "power": 0.19821894106067328
+      },
+      {
+        "t": 0.3,
+        "shear": 9.383128192462728,
+        "transport_multiplier": 0.25,
+        "power": 0.19806506893057338
+      },
+      {
+        "t": 0.305,
+        "shear": 9.38324580974645,
+        "transport_multiplier": 0.25,
+        "power": 0.19795481044639146
+      },
+      {
+        "t": 0.31,
+        "shear": 9.383330086212895,
+        "transport_multiplier": 0.25,
+        "power": 0.19787580459015544
+      },
+      {
+        "t": 0.315,
+        "shear": 9.383390472939846,
+        "transport_multiplier": 0.25,
+        "power": 0.19781919329089395
+      },
+      {
+        "t": 0.32,
+        "shear": 9.383433741920454,
+        "transport_multiplier": 0.25,
+        "power": 0.19777862894251183
+      },
+      {
+        "t": 0.325,
+        "shear": 9.383464745499836,
+        "transport_multiplier": 0.25,
+        "power": 0.19774956301905552
+      },
+      {
+        "t": 0.33,
+        "shear": 9.383486960535203,
+        "transport_multiplier": 0.25,
+        "power": 0.19772873622196013
+      },
+      {
+        "t": 0.335,
+        "shear": 9.383502878303604,
+        "transport_multiplier": 0.25,
+        "power": 0.1977138130912559
+      },
+      {
+        "t": 0.34,
+        "shear": 9.383514283883063,
+        "transport_multiplier": 0.25,
+        "power": 0.19770312016056232
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 9.383522456337854,
+        "transport_multiplier": 0.25,
+        "power": 0.19769545832022786
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 9.383528312157598,
+        "transport_multiplier": 0.25,
+        "power": 0.19768996836111025
+      },
+      {
+        "t": 0.355,
+        "shear": 9.383532508035803,
+        "transport_multiplier": 0.25,
+        "power": 0.19768603462805615
+      },
+      {
+        "t": 0.36,
+        "shear": 9.383535514513898,
+        "transport_multiplier": 0.25,
+        "power": 0.1976832159823543
+      },
+      {
+        "t": 0.365,
+        "shear": 9.383537668749593,
+        "transport_multiplier": 0.25,
+        "power": 0.19768119633301845
+      },
+      {
+        "t": 0.37,
+        "shear": 9.383539212326921,
+        "transport_multiplier": 0.25,
+        "power": 0.1976797491902938
+      },
+      {
+        "t": 0.375,
+        "shear": 9.383540318348404,
+        "transport_multiplier": 0.25,
+        "power": 0.1976787122668442
+      },
+      {
+        "t": 0.38,
+        "shear": 9.38354111084743,
+        "transport_multiplier": 0.25,
+        "power": 0.19767796927853046
+      },
+      {
+        "t": 0.385,
+        "shear": 9.383541678697796,
+        "transport_multiplier": 0.25,
+        "power": 0.19767743690404033
+      },
+      {
+        "t": 0.39,
+        "shear": 9.38354208558036,
+        "transport_multiplier": 0.25,
+        "power": 0.19767705544099795
+      },
+      {
+        "t": 0.395,
+        "shear": 9.383542377124458,
+        "transport_multiplier": 0.25,
+        "power": 0.19767678211075712
+      },
+      {
+        "t": 0.4,
+        "shear": 9.383542586024934,
+        "transport_multiplier": 0.25,
+        "power": 0.1976765862610684
+      }
+    ],
+    "reduced_model_only": true
+  },
+  {
+    "case": "equivalent_energy_unsegmented",
+    "width_gain_pct": 0.032383282545475185,
+    "Jpk_change_pct": -0.12953313018190074,
+    "integrated_high_J_change_pct": -1.0794427515158396,
+    "sustained_control_fraction": 0.9753086419753086,
+    "peak_abs_shear": 6.330952837512709,
+    "actuator_energy_reduced": 0.02606299820397704,
+    "width_gate_pass": true,
+    "Jpk_gate_pass": true,
+    "trace": [
+      {
+        "t": 0.0,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.005,
+        "shear": 0.0,
+        "transport_multiplier": 1.0,
+        "power": 0.0
+      },
+      {
+        "t": 0.01,
+        "shear": 0.4604329336504762,
+        "transport_multiplier": 0.8250835386590003,
+        "power": 0.0258
+      },
+      {
+        "t": 0.015,
+        "shear": 0.9208658673009521,
+        "transport_multiplier": 0.5411273139734254,
+        "power": 0.051999999999999984
+      },
+      {
+        "t": 0.02,
+        "shear": 1.3812988009514282,
+        "transport_multiplier": 0.3438805655122474,
+        "power": 0.0786
+      },
+      {
+        "t": 0.025,
+        "shear": 1.8417317346019049,
+        "transport_multiplier": 0.25,
+        "power": 0.10560000000000001
+      },
+      {
+        "t": 0.03,
+        "shear": 2.302164668252381,
+        "transport_multiplier": 0.25,
+        "power": 0.133
+      },
+      {
+        "t": 0.035,
+        "shear": 2.7625976019028573,
+        "transport_multiplier": 0.25,
+        "power": 0.16080000000000003
+      },
+      {
+        "t": 0.04,
+        "shear": 3.223030535553333,
+        "transport_multiplier": 0.25,
+        "power": 0.18900000000000017
+      },
+      {
+        "t": 0.045,
+        "shear": 3.6834634692038097,
+        "transport_multiplier": 0.25,
+        "power": 0.21760000000000002
+      },
+      {
+        "t": 0.05,
+        "shear": 4.143896402854287,
+        "transport_multiplier": 0.25,
+        "power": 0.24660000000000004
+      },
+      {
+        "t": 0.055,
+        "shear": 4.604329336504762,
+        "transport_multiplier": 0.25,
+        "power": 0.276
+      },
+      {
+        "t": 0.06,
+        "shear": 5.064762270155237,
+        "transport_multiplier": 0.25,
+        "power": 0.3058
+      },
+      {
+        "t": 0.065,
+        "shear": 5.4236876508992955,
+        "transport_multiplier": 0.25,
+        "power": 0.2628262912023044
+      },
+      {
+        "t": 0.07,
+        "shear": 5.680868924362031,
+        "transport_multiplier": 0.25,
+        "power": 0.20687124028632436
+      },
+      {
+        "t": 0.075,
+        "shear": 5.865147359291318,
+        "transport_multiplier": 0.25,
+        "power": 0.16296808436302623
+      },
+      {
+        "t": 0.08,
+        "shear": 5.997188627781687,
+        "transport_multiplier": 0.25,
+        "power": 0.12955417954209253
+      },
+      {
+        "t": 0.085,
+        "shear": 6.091800330942918,
+        "transport_multiplier": 0.25,
+        "power": 0.1046078682472929
+      },
+      {
+        "t": 0.09,
+        "shear": 6.159592578604657,
+        "transport_multiplier": 0.25,
+        "power": 0.08621748047866343
+      },
+      {
+        "t": 0.095,
+        "shear": 6.208167846668462,
+        "transport_multiplier": 0.25,
+        "power": 0.07277548698120502
+      },
+      {
+        "t": 0.1,
+        "shear": 6.242973547155692,
+        "transport_multiplier": 0.25,
+        "power": 0.06300797376347628
+      },
+      {
+        "t": 0.105,
+        "shear": 6.26791292134125,
+        "transport_multiplier": 0.25,
+        "power": 0.055939469276245365
+      },
+      {
+        "t": 0.11,
+        "shear": 6.285782763811317,
+        "transport_multiplier": 0.25,
+        "power": 0.05083884058668436
+      },
+      {
+        "t": 0.115,
+        "shear": 6.298587065456136,
+        "transport_multiplier": 0.25,
+        "power": 0.04716568782063345
+      },
+      {
+        "t": 0.12,
+        "shear": 6.307761748494683,
+        "transport_multiplier": 0.25,
+        "power": 0.04452431577626336
+      },
+      {
+        "t": 0.125,
+        "shear": 6.314335696156394,
+        "transport_multiplier": 0.25,
+        "power": 0.0426268417651954
+      },
+      {
+        "t": 0.13,
+        "shear": 6.319046135490081,
+        "transport_multiplier": 0.25,
+        "power": 0.041264753056674285
+      },
+      {
+        "t": 0.135,
+        "shear": 6.322421312759228,
+        "transport_multiplier": 0.25,
+        "power": 0.040287495867471206
+      },
+      {
+        "t": 0.14,
+        "shear": 6.324839732951307,
+        "transport_multiplier": 0.25,
+        "power": 0.03958660435520695
+      },
+      {
+        "t": 0.145,
+        "shear": 6.326572606741056,
+        "transport_multiplier": 0.25,
+        "power": 0.03908405676901754
+      },
+      {
+        "t": 0.15,
+        "shear": 6.327814265068685,
+        "transport_multiplier": 0.25,
+        "power": 0.03872379273243549
+      },
+      {
+        "t": 0.155,
+        "shear": 6.328703952137467,
+        "transport_multiplier": 0.25,
+        "power": 0.03846556347156624
+      },
+      {
+        "t": 0.16,
+        "shear": 6.32934144077886,
+        "transport_multiplier": 0.25,
+        "power": 0.03828048853013513
+      },
+      {
+        "t": 0.165,
+        "shear": 6.329798221350553,
+        "transport_multiplier": 0.25,
+        "power": 0.03814785313274304
+      },
+      {
+        "t": 0.17,
+        "shear": 6.330125518932232,
+        "transport_multiplier": 0.25,
+        "power": 0.03805280370004059
+      },
+      {
+        "t": 0.17500000000000002,
+        "shear": 6.330360037897382,
+        "transport_multiplier": 0.25,
+        "power": 0.037984691635425186
+      },
+      {
+        "t": 0.18,
+        "shear": 6.330528078078834,
+        "transport_multiplier": 0.25,
+        "power": 0.03793588404070035
+      },
+      {
+        "t": 0.185,
+        "shear": 6.330648484130282,
+        "transport_multiplier": 0.25,
+        "power": 0.03790091024448333
+      },
+      {
+        "t": 0.19,
+        "shear": 6.330734758836125,
+        "transport_multiplier": 0.25,
+        "power": 0.03787584958942072
+      },
+      {
+        "t": 0.195,
+        "shear": 6.330796577364172,
+        "transport_multiplier": 0.25,
+        "power": 0.03785789241669006
+      },
+      {
+        "t": 0.2,
+        "shear": 6.330840872275089,
+        "transport_multiplier": 0.25,
+        "power": 0.03784502532006883
+      },
+      {
+        "t": 0.20500000000000002,
+        "shear": 6.3308726109656615,
+        "transport_multiplier": 0.25,
+        "power": 0.037835805529456014
+      },
+      {
+        "t": 0.21,
+        "shear": 6.330895352731214,
+        "transport_multiplier": 0.25,
+        "power": 0.037829199202784616
+      },
+      {
+        "t": 0.215,
+        "shear": 6.330911647918287,
+        "transport_multiplier": 0.25,
+        "power": 0.037824465533088374
+      },
+      {
+        "t": 0.22,
+        "shear": 6.33092332393004,
+        "transport_multiplier": 0.25,
+        "power": 0.037821073695243464
+      },
+      {
+        "t": 0.225,
+        "shear": 6.330931690158045,
+        "transport_multiplier": 0.25,
+        "power": 0.03781864332937459
+      },
+      {
+        "t": 0.23,
+        "shear": 6.33093768482236,
+        "transport_multiplier": 0.25,
+        "power": 0.03781690189210169
+      },
+      {
+        "t": 0.23500000000000001,
+        "shear": 6.330941980187041,
+        "transport_multiplier": 0.25,
+        "power": 0.037815654095700604
+      },
+      {
+        "t": 0.24,
+        "shear": 6.330945057950318,
+        "transport_multiplier": 0.25,
+        "power": 0.03781476000944707
+      },
+      {
+        "t": 0.245,
+        "shear": 6.330947263264077,
+        "transport_multiplier": 0.25,
+        "power": 0.037814119368106566
+      },
+      {
+        "t": 0.25,
+        "shear": 6.330948843440434,
+        "transport_multiplier": 0.25,
+        "power": 0.037813660328247636
+      },
+      {
+        "t": 0.255,
+        "shear": 6.330949975686274,
+        "transport_multiplier": 0.25,
+        "power": 0.03781333141167189
+      },
+      {
+        "t": 0.26,
+        "shear": 6.3309507869758646,
+        "transport_multiplier": 0.25,
+        "power": 0.03781309573257237
+      },
+      {
+        "t": 0.265,
+        "shear": 6.330951368290261,
+        "transport_multiplier": 0.25,
+        "power": 0.03781292686108117
+      },
+      {
+        "t": 0.27,
+        "shear": 6.330951784820226,
+        "transport_multiplier": 0.25,
+        "power": 0.037812805859350374
+      },
+      {
+        "t": 0.275,
+        "shear": 6.330952083276989,
+        "transport_multiplier": 0.25,
+        "power": 0.037812719157811175
+      },
+      {
+        "t": 0.28,
+        "shear": 6.330952297130604,
+        "transport_multiplier": 0.25,
+        "power": 0.03781265703343954
+      },
+      {
+        "t": 0.28500000000000003,
+        "shear": 6.330952450363414,
+        "transport_multiplier": 0.25,
+        "power": 0.03781261251937876
+      },
+      {
+        "t": 0.29,
+        "shear": 6.330952560159523,
+        "transport_multiplier": 0.25,
+        "power": 0.03781258062365974
+      },
+      {
+        "t": 0.295,
+        "shear": 6.33095263883187,
+        "transport_multiplier": 0.25,
+        "power": 0.037812557769377315
+      },
+      {
+        "t": 0.3,
+        "shear": 6.330952695203072,
+        "transport_multiplier": 0.25,
+        "power": 0.037812541393568204
+      },
+      {
+        "t": 0.305,
+        "shear": 6.330952735594801,
+        "transport_multiplier": 0.25,
+        "power": 0.0378125296597878
+      },
+      {
+        "t": 0.31,
+        "shear": 6.3309527645367405,
+        "transport_multiplier": 0.25,
+        "power": 0.03781252125216625
+      },
+      {
+        "t": 0.315,
+        "shear": 6.330952785274546,
+        "transport_multiplier": 0.25,
+        "power": 0.037812515227842805
+      },
+      {
+        "t": 0.32,
+        "shear": 6.330952800133831,
+        "transport_multiplier": 0.25,
+        "power": 0.03781251091122581
+      },
+      {
+        "t": 0.325,
+        "shear": 6.3309528107809765,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250781823514
+      },
+      {
+        "t": 0.33,
+        "shear": 6.3309528184099895,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250560201038
+      },
+      {
+        "t": 0.335,
+        "shear": 6.330952823876416,
+        "transport_multiplier": 0.25,
+        "power": 0.037812504014015764
+      },
+      {
+        "t": 0.34,
+        "shear": 6.330952827793283,
+        "transport_multiplier": 0.25,
+        "power": 0.037812502876168504
+      },
+      {
+        "t": 0.34500000000000003,
+        "shear": 6.330952830599839,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250206086461
+      },
+      {
+        "t": 0.35000000000000003,
+        "shear": 6.3309528326108255,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250147667398
+      },
+      {
+        "t": 0.355,
+        "shear": 6.330952834051759,
+        "transport_multiplier": 0.25,
+        "power": 0.0378125010580825
+      },
+      {
+        "t": 0.36,
+        "shear": 6.330952835084234,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250075815011
+      },
+      {
+        "t": 0.365,
+        "shear": 6.330952835824033,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500543237496
+      },
+      {
+        "t": 0.37,
+        "shear": 6.330952836354124,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500389247425
+      },
+      {
+        "t": 0.375,
+        "shear": 6.33095283673395,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500278907375
+      },
+      {
+        "t": 0.38,
+        "shear": 6.330952837006108,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250019984644
+      },
+      {
+        "t": 0.385,
+        "shear": 6.330952837201117,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500143195586
+      },
+      {
+        "t": 0.39,
+        "shear": 6.330952837340848,
+        "transport_multiplier": 0.25,
+        "power": 0.037812500102604736
+      },
+      {
+        "t": 0.395,
+        "shear": 6.33095283744097,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250007351969
+      },
+      {
+        "t": 0.4,
+        "shear": 6.330952837512709,
+        "transport_multiplier": 0.25,
+        "power": 0.03781250005267853
+      }
+    ],
+    "reduced_model_only": true
+  }
+]

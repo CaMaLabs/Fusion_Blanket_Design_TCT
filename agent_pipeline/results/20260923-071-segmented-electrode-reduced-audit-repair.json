@@ -1,0 +1,227 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.0662176609039307,
+  "error": null,
+  "finished_utc": "2026-09-23T22:44:18.925887Z",
+  "head_before": "5de78f2fd090ab8f917ed7389618f96e9b52d836",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-071-segmented-electrode-reduced-audit-repair.json",
+  "job_id": "20260923-071-segmented-electrode-reduced-audit-repair",
+  "log_path": "agent_pipeline/logs/20260923-071-segmented-electrode-reduced-audit-repair.log",
+  "log_sha256": "4dad06be69e5417d2ff5b38269a529f89751b6c93ae764878128892bbf45c4e6",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_audit.sh",
+  "runner_sha256": "9ba6cff8e8bca0b1af0c2909d3fd30dc1268c7ada3622570c223ff64a9e0bddc",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T22:44:17.858233Z",
+  "success": true,
+  "summary": {
+    "cases": [
+      {
+        "Jpk_change_pct": -0.0,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.0,
+        "case": "no_electrode",
+        "integrated_high_J_change_pct": -0.0,
+        "peak_abs_shear": 0.0,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.0,
+        "width_gain_pct": 0.0,
+        "width_gate_pass": false
+      },
+      {
+        "Jpk_change_pct": -0.12953313018190074,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.02606299820397704,
+        "case": "uniform_static",
+        "integrated_high_J_change_pct": -1.0794427515158396,
+        "peak_abs_shear": 6.330952837512709,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.9753086419753086,
+        "width_gain_pct": 0.032383282545475185,
+        "width_gate_pass": true
+      },
+      {
+        "Jpk_change_pct": -0.13043148937705687,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.13382453760184157,
+        "case": "segmented_static",
+        "integrated_high_J_change_pct": -1.0869290781421406,
+        "peak_abs_shear": 9.383543113130342,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.9753086419753086,
+        "width_gain_pct": 0.03260787234426422,
+        "width_gate_pass": true
+      },
+      {
+        "Jpk_change_pct": -0.06336493129504944,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.12592462852849357,
+        "case": "segmented_open_loop",
+        "integrated_high_J_change_pct": -0.528041094125412,
+        "peak_abs_shear": 9.149929704276309,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.5061728395061729,
+        "width_gain_pct": 0.01584123282376236,
+        "width_gate_pass": false
+      },
+      {
+        "Jpk_change_pct": -0.06336493129504944,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.12592462852849357,
+        "case": "segmented_precursor_triggered",
+        "integrated_high_J_change_pct": -0.528041094125412,
+        "peak_abs_shear": 9.149929704276309,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.5061728395061729,
+        "width_gain_pct": 0.01584123282376236,
+        "width_gate_pass": false
+      },
+      {
+        "Jpk_change_pct": -0.0993971436213413,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.17244678733798954,
+        "case": "optimized_7zones",
+        "integrated_high_J_change_pct": -0.8283095301778443,
+        "peak_abs_shear": 14.546856659943257,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.7407407407407407,
+        "width_gain_pct": 0.024849285905335326,
+        "width_gate_pass": true
+      },
+      {
+        "Jpk_change_pct": -0.0987648227103902,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.11504530269151768,
+        "case": "wrong_polarity",
+        "integrated_high_J_change_pct": -0.8230401892532516,
+        "peak_abs_shear": 9.383542586024937,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.7407407407407407,
+        "width_gain_pct": 0.02469120567759755,
+        "width_gate_pass": true
+      },
+      {
+        "Jpk_change_pct": -0.0,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.11235405164891833,
+        "case": "no_shear_control",
+        "integrated_high_J_change_pct": -0.0,
+        "peak_abs_shear": 0.0,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.0,
+        "width_gain_pct": 0.0,
+        "width_gate_pass": false
+      },
+      {
+        "Jpk_change_pct": 0.01999999999999999,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.11504530269151768,
+        "case": "excessive_shear",
+        "integrated_high_J_change_pct": -0.033333333333333326,
+        "peak_abs_shear": 37.53417034409975,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.7407407407407407,
+        "width_gain_pct": -0.0049999999999999975,
+        "width_gate_pass": false
+      },
+      {
+        "Jpk_change_pct": -0.06327416155466331,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.1259127587278563,
+        "case": "deliberately_late",
+        "integrated_high_J_change_pct": -0.5272846796221944,
+        "peak_abs_shear": 9.149929704276309,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.5061728395061729,
+        "width_gain_pct": 0.015818540388665828,
+        "width_gate_pass": false
+      },
+      {
+        "Jpk_change_pct": -0.09876482271039017,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.11504530269151768,
+        "case": "misplaced_shear_layer",
+        "integrated_high_J_change_pct": -0.8230401892532515,
+        "peak_abs_shear": 9.383542586024934,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.7407407407407407,
+        "width_gain_pct": 0.02469120567759754,
+        "width_gate_pass": true
+      },
+      {
+        "Jpk_change_pct": -0.12953313018190074,
+        "Jpk_gate_pass": true,
+        "actuator_energy_reduced": 0.02606299820397704,
+        "case": "equivalent_energy_unsegmented",
+        "integrated_high_J_change_pct": -1.0794427515158396,
+        "peak_abs_shear": 6.330952837512709,
+        "reduced_model_only": true,
+        "sustained_control_fraction": 0.9753086419753086,
+        "width_gain_pct": 0.032383282545475185,
+        "width_gate_pass": true
+      }
+    ],
+    "claim_boundary": "Reduced TCT segmented-electrode model only. No claim of native M3D-C1 electrode physics, experimental validation, reactor-scale performance, or demonstrated species separation.",
+    "classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_MODEL_AUDITED",
+    "controller_architecture_preserved": "standing/preventative bias -> Mirnov/toroidal precursor -> response-time feasibility gate -> bounded/spatially shaped response -> NO ACTION if too late",
+    "existing_physics_verified": {
+      "poloidal_momentum_was_proxy_not_electrode_Er": true,
+      "preexisting_channels": [
+        "localized magnetic control",
+        "current drive/redistribution",
+        "standing poloidal momentum source"
+      ],
+      "segmented_electrodes_preexisting": false
+    },
+    "formal_m3dc1_classification": null,
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "handoff": [
+      "map E_r(r,z,t) to BOUT++ electrostatic potential/vorticity boundary or source terms",
+      "implement and validate electrode-compatible electrostatic boundary/source operator in native M3D-C1 before any native efficacy claim",
+      "require zero-equivalence and energy-matched controls in higher-fidelity handoff"
+    ],
+    "limitations": [
+      "electrode sheath/boundary conditions not solved",
+      "reduced Gaussian field coupling",
+      "transport response uses conservative shear-decorrelation closure",
+      "species module is guiding-center diagnostic, not kinetic separation proof"
+    ],
+    "pipeline_failure": false,
+    "species_diagnostics": {
+      "alpha": {
+        "charge_C": 3.204353268e-19,
+        "mass_kg": 6.644657e-27,
+        "species_separation_claim_supported": false,
+        "v_ExB": 0.1388888888888889,
+        "v_gradB_proxy": 24302.875958681598
+      },
+      "electron": {
+        "charge_C": -1.602176634e-19,
+        "mass_kg": 9.1093837e-31,
+        "species_separation_claim_supported": false,
+        "v_ExB": 0.1388888888888889,
+        "v_gradB_proxy": 13.887357690675197
+      },
+      "thermal_fuel_ion": {
+        "charge_C": 1.602176634e-19,
+        "mass_kg": 3.344e-27,
+        "species_separation_claim_supported": false,
+        "v_ExB": 0.1388888888888889,
+        "v_gradB_proxy": 138.87357690675196
+      }
+    },
+    "species_separation_demonstrated": false
+  },
+  "summary_path": "validation_runs/tct_segmented_electrode_audit/summary.json",
+  "summary_sha256": "1a9e45019316996fa193d51e7dfb40f33c9a37440eee1d828aa7600c7cd530c8",
+  "timed_out": false
+}
