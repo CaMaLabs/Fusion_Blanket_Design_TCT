@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-068-native-time-physical-conversion-audit",
+  "processed_result_receipt_path": "agent_pipeline/results/20260923-068-native-time-physical-conversion-audit.json",
+  "processed_result_receipt_blob_sha": "61499a83fe9c7be392f30752a91dbd0edc92fda5",
+  "processed_result_head_before": "331c9e6ed1f46136b193cd6349edfc2b6b3464af",
+  "classification": "M3DC1_TCT_NATIVE_TIME_PHYSICAL_CONVERSION_AUDITED",
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Verified source relations plus selected-run normalization values establish the run-specific native M3D-C1 time conversion: t0_norm=4.5846250654542e-7 s and native dt=0.05 corresponds to 2.2923125327271e-8 s. This strengthens timing provenance only; it does not establish Mirnov equivalence, precursor lead time, or controller efficacy. Frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260923-070-native-magnetic-probe-physical-timeseries-audit",
+  "timestamp_utc": "2026-09-23T21:35:20Z",
+  "claim_boundary": "Run-specific native M3D-C1 timing provenance; no experimental, reactor-scale, Mirnov-equivalence, precursor-lead-time, or controller-efficacy claim."
+}
