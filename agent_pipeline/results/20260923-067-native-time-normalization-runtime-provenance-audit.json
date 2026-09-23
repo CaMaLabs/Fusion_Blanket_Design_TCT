@@ -1,0 +1,126 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.06625795364379883,
+  "error": null,
+  "finished_utc": "2026-09-23T04:54:54.563938Z",
+  "head_before": "15dc5b4fe3d6d7b5db9dde9948204dccd5989866",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-067-native-time-normalization-runtime-provenance-audit.json",
+  "job_id": "20260923-067-native-time-normalization-runtime-provenance-audit",
+  "log_path": "agent_pipeline/logs/20260923-067-native-time-normalization-runtime-provenance-audit.log",
+  "log_sha256": "4a2c7ad4f34d68fa003d07889abb9a6167975388e8528506166b124b70f7ad66",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_time_normalization_runtime_provenance_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_time_normalization_runtime_provenance_audit.sh",
+  "runner_sha256": "74809a90522e41552538f25a5ab0011ab93dae9114075bee35e6e8f455607221",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T04:54:54.494970Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUNTIME_PROVENANCE_AUDITED",
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "Audit selected-run C1input/C1stdout/C1ke for explicit runtime b0_norm/n0_norm/l0_norm values and retain official source contexts for provenance. Source declarations or defaults alone do not establish run-specific physical-time calibration.",
+    "parent_classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUN_VALUES_AUDITED",
+    "physical_time_calibrated": true,
+    "pipeline_failure": false,
+    "runtime_and_source_contexts": {
+      "C1input": [],
+      "C1ke": [],
+      "C1stdout": [
+        {
+          "line": 70,
+          "text": "b0_norm              = 10000 "
+        },
+        {
+          "line": 427,
+          "text": "l0_norm              = 100 "
+        },
+        {
+          "line": 451,
+          "text": "n0_norm              = 1e+14 "
+        }
+      ],
+      "official_input_f90": [
+        {
+          "line": 217,
+          "text": "  call add_var_double(\"b0_norm\", b0_norm, 1.e4, &"
+        },
+        {
+          "line": 219,
+          "text": "  call add_var_double(\"n0_norm\", n0_norm, 1.e14, &"
+        },
+        {
+          "line": 221,
+          "text": "  call add_var_double(\"l0_norm\", l0_norm, 100.,  &"
+        },
+        {
+          "line": 1841,
+          "text": "  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)"
+        },
+        {
+          "line": 1842,
+          "text": "  t0_norm = l0_norm / v0_norm"
+        },
+        {
+          "line": 1843,
+          "text": "  p0_norm = b0_norm**2/(4.*pi)"
+        },
+        {
+          "line": 1844,
+          "text": "  e0_norm = v0_norm*b0_norm / c_light"
+        },
+        {
+          "line": 1845,
+          "text": "  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)"
+        },
+        {
+          "line": 1846,
+          "text": "  !write(0,*) 'v0_norm',v0_norm/100"
+        },
+        {
+          "line": 1854,
+          "text": "       * (n0_norm**3 * l0_norm / B0_norm**4)"
+        },
+        {
+          "line": 1855,
+          "text": "  efac = nufac * m_e * c_light**2 / (4.*pi*e_c**2) / (n0_norm * l0_norm**2)"
+        },
+        {
+          "line": 1860,
+          "text": "       * t0_norm * p0_norm**2.5 / (l0_norm**2 * n0_norm**3.5)"
+        },
+        {
+          "line": 1869,
+          "text": "          * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'"
+        },
+        {
+          "line": 1874,
+          "text": "             * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'"
+        },
+        {
+          "line": 1882,
+          "text": "          sqrt(4.*pi*n0_norm*(z_ion*e_c)**2/m0_norm) / &"
+        },
+        {
+          "line": 1883,
+          "text": "          l0_norm"
+        }
+      ]
+    },
+    "selected_run_runtime_normalization_values": {
+      "b0_norm": 10000.0,
+      "l0_norm": 100.0,
+      "n0_norm": 100000000000000.0
+    }
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_time_normalization_runtime_provenance_audit/summary.json",
+  "summary_sha256": "f79e58d4e00126a197ce94dadf98569642dbf16d1bbf4d4b71cdf699a8bf5c0e",
+  "timed_out": false
+}

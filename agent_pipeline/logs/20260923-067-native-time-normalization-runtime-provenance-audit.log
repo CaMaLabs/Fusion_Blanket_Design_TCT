@@ -1,0 +1,106 @@
+job_id=20260923-067-native-time-normalization-runtime-provenance-audit
+started_utc=2026-09-23T04:54:54.494970Z
+head_before=15dc5b4fe3d6d7b5db9dde9948204dccd5989866
+{
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUNTIME_PROVENANCE_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUN_VALUES_AUDITED",
+  "selected_run_runtime_normalization_values": {
+    "b0_norm": 10000.0,
+    "l0_norm": 100.0,
+    "n0_norm": 100000000000000.0
+  },
+  "runtime_and_source_contexts": {
+    "C1input": [],
+    "C1stdout": [
+      {
+        "line": 70,
+        "text": "b0_norm              = 10000 "
+      },
+      {
+        "line": 427,
+        "text": "l0_norm              = 100 "
+      },
+      {
+        "line": 451,
+        "text": "n0_norm              = 1e+14 "
+      }
+    ],
+    "C1ke": [],
+    "official_input_f90": [
+      {
+        "line": 217,
+        "text": "  call add_var_double(\"b0_norm\", b0_norm, 1.e4, &"
+      },
+      {
+        "line": 219,
+        "text": "  call add_var_double(\"n0_norm\", n0_norm, 1.e14, &"
+      },
+      {
+        "line": 221,
+        "text": "  call add_var_double(\"l0_norm\", l0_norm, 100.,  &"
+      },
+      {
+        "line": 1841,
+        "text": "  v0_norm = b0_norm / sqrt(4.*pi*m0_norm*n0_norm)"
+      },
+      {
+        "line": 1842,
+        "text": "  t0_norm = l0_norm / v0_norm"
+      },
+      {
+        "line": 1843,
+        "text": "  p0_norm = b0_norm**2/(4.*pi)"
+      },
+      {
+        "line": 1844,
+        "text": "  e0_norm = v0_norm*b0_norm / c_light"
+      },
+      {
+        "line": 1845,
+        "text": "  j0_norm = c_light*b0_norm/(4.*pi*l0_norm)"
+      },
+      {
+        "line": 1846,
+        "text": "  !write(0,*) 'v0_norm',v0_norm/100"
+      },
+      {
+        "line": 1854,
+        "text": "       * (n0_norm**3 * l0_norm / B0_norm**4)"
+      },
+      {
+        "line": 1855,
+        "text": "  efac = nufac * m_e * c_light**2 / (4.*pi*e_c**2) / (n0_norm * l0_norm**2)"
+      },
+      {
+        "line": 1860,
+        "text": "       * t0_norm * p0_norm**2.5 / (l0_norm**2 * n0_norm**3.5)"
+      },
+      {
+        "line": 1869,
+        "text": "          * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'"
+      },
+      {
+        "line": 1874,
+        "text": "             * (b0_norm**2 / (4.*pi*n0_norm)) * 6.242e11, ' eV'"
+      },
+      {
+        "line": 1882,
+        "text": "          sqrt(4.*pi*n0_norm*(z_ion*e_c)**2/m0_norm) / &"
+      },
+      {
+        "line": 1883,
+        "text": "          l0_norm"
+      }
+    ]
+  },
+  "physical_time_calibrated": true,
+  "interpretation": "Audit selected-run C1input/C1stdout/C1ke for explicit runtime b0_norm/n0_norm/l0_norm values and retain official source contexts for provenance. Source declarations or defaults alone do not establish run-specific physical-time calibration.",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
+
+finished_utc=2026-09-23T04:54:54.563868Z
+return_code=0
