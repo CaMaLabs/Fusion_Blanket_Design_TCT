@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-069-segmented-electrode-reduced-audit",
+  "processed_result_receipt_sha": "647e302f0a9dcbe6ff7c3c8216a01978187ea6fa",
+  "processed_result_head_before": "238bf7e0348e695ba843edd6830334fd8c93237c",
+  "pipeline_error": "UNIT_TEST_FAILURE: test_overlapping_zones_superpose expected unloaded linear field superposition while the fixture retained finite capacitance/current limiting; observed E_r=0.1998001998001998 instead of 5.0 because actuator loading correctly limited the voltage response.",
+  "classification": null,
+  "interpretation": "Pipeline/code-test failure, not a scientific negative result. Four of five reduced-electrode tests passed. The failing test conflated spatial field superposition with RC/current-loading dynamics. The repair changes only the test fixture to disable capacitance and raise the current limit for the superposition-specific test; segmented-electrode physics, precursor architecture, and frozen +0.020% width/+0.10% Jpk gates are unchanged.",
+  "new_job_id": "20260923-071-segmented-electrode-reduced-audit-repair",
+  "timestamp": "2026-09-23T22:43:09Z"
+}
