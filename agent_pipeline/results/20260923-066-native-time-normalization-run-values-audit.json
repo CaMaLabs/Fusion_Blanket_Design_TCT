@@ -1,0 +1,41 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5961270332336426,
+  "error": null,
+  "finished_utc": "2026-09-23T04:04:44.767488Z",
+  "head_before": "0c23abdef9c9c0d881bb4f0710263137c6ea2cc4",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-066-native-time-normalization-run-values-audit.json",
+  "job_id": "20260923-066-native-time-normalization-run-values-audit",
+  "log_path": "agent_pipeline/logs/20260923-066-native-time-normalization-run-values-audit.log",
+  "log_sha256": "04340989c7a3e8f9763632154a22130959483e65264e60e613dfc272ef120f22",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_time_normalization_run_values_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_time_normalization_run_values_audit.sh",
+  "runner_sha256": "d1d34a2e1013456395cb6f974a7e802a99942925b4ac050f5a3d0b90b99db4bf",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T04:04:44.169087Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUN_VALUES_AUDITED",
+    "derived_from_explicit_source_relation": {},
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "hdf5_normalization_candidates": {},
+    "implemented_relations_verified": true,
+    "interpretation": "Official native source explicitly implements v0_norm=b0_norm/sqrt(4*pi*m0_norm*n0_norm) and t0_norm=l0_norm/v0_norm. Physical-time calibration is accepted only if the selected native run also exposes positive run-specific b0_norm/n0_norm/l0_norm values in C1.h5 and ion_mass in C1input; otherwise it remains fail-closed.",
+    "ion_mass_from_C1input": 1.0,
+    "parent_classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_ASSIGNMENT_AUDITED",
+    "physical_time_calibrated": false,
+    "pipeline_failure": false
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_time_normalization_run_values_audit/summary.json",
+  "summary_sha256": "eb3a294a834edbbbc5448cc522dce47d289a06f4f6b2204c17b91f451db58c3f",
+  "timed_out": false
+}

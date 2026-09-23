@@ -1,0 +1,15 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUN_VALUES_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_ASSIGNMENT_AUDITED",
+  "implemented_relations_verified": true,
+  "hdf5_normalization_candidates": {},
+  "ion_mass_from_C1input": 1.0,
+  "derived_from_explicit_source_relation": {},
+  "physical_time_calibrated": false,
+  "interpretation": "Official native source explicitly implements v0_norm=b0_norm/sqrt(4*pi*m0_norm*n0_norm) and t0_norm=l0_norm/v0_norm. Physical-time calibration is accepted only if the selected native run also exposes positive run-specific b0_norm/n0_norm/l0_norm values in C1.h5 and ion_mass in C1input; otherwise it remains fail-closed.",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
