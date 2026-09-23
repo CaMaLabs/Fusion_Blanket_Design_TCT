@@ -1,0 +1,88 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.03552651405334473,
+  "error": null,
+  "finished_utc": "2026-09-23T21:38:05.480981Z",
+  "head_before": "93f1227d3c0c2d4219f99bfa87bd8ecb63ab03f7",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-070-native-magnetic-probe-physical-timeseries-audit.json",
+  "job_id": "20260923-070-native-magnetic-probe-physical-timeseries-audit",
+  "log_path": "agent_pipeline/logs/20260923-070-native-magnetic-probe-physical-timeseries-audit.log",
+  "log_sha256": "30335b6072e2756d3af3390b99e5a8dfe9993712be97ec0c76380539cf418cec",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_magnetic_probe_physical_timeseries"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_magnetic_probe_physical_timeseries_audit.sh",
+  "runner_sha256": "dccc5c3185dcafbee6d60aa9aa35a49db277e4715bc6d3c7c7f455d82840aff8",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T21:38:05.444373Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Run-specific native M3D-C1 magnetic diagnostic timing only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PHYSICAL_TIMESERIES_AUDITED",
+    "controller_efficacy_established": false,
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "The configured native magnetic-probe samples now have run-specific physical timestamps from verified M3D-C1 normalization provenance. This does not establish Mirnov equivalence or a precursor lead time.",
+    "mirnov_equivalence_established": false,
+    "observable_path": "mag_probes/value",
+    "physical_time_calibrated": true,
+    "pipeline_failure": false,
+    "precursor_lead_time_established": false,
+    "sample_interval_s": 2.2923125668852185e-08,
+    "sample_interval_us": 0.022923125668852184,
+    "samples": [
+      {
+        "index": 0,
+        "probe_value_native": 0.999517023563385,
+        "time_native": 0.0,
+        "time_s": 0.0,
+        "time_us": 0.0
+      },
+      {
+        "index": 1,
+        "probe_value_native": 0.9179592132568359,
+        "time_native": 0.05000000074505806,
+        "time_s": 2.2923125668852185e-08,
+        "time_us": 0.022923125668852184
+      },
+      {
+        "index": 2,
+        "probe_value_native": 0.9720608592033386,
+        "time_native": 0.10000000149011612,
+        "time_s": 4.584625133770437e-08,
+        "time_us": 0.04584625133770437
+      },
+      {
+        "index": 3,
+        "probe_value_native": 0.9367676973342896,
+        "time_native": 0.15000000596046448,
+        "time_s": 6.876937871446249e-08,
+        "time_us": 0.0687693787144625
+      },
+      {
+        "index": 4,
+        "probe_value_native": 0.9611517190933228,
+        "time_native": 0.20000000298023224,
+        "time_s": 9.169250267540874e-08,
+        "time_us": 0.09169250267540874
+      },
+      {
+        "index": 5,
+        "probe_value_native": 0.9457909464836121,
+        "time_native": 0.25,
+        "time_s": 1.14615626636355e-07,
+        "time_us": 0.114615626636355
+      }
+    ],
+    "solver_physics_modified": false,
+    "t0_norm_s": 4.5846250654542e-07
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_magnetic_probe_physical_timeseries/summary.json",
+  "summary_sha256": "c22c9459bcc0cdbccde21e8b455ad3bc8f6eddfebc28d74663cf00a94b952edb",
+  "timed_out": false
+}

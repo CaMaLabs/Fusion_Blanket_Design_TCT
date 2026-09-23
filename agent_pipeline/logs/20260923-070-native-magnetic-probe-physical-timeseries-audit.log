@@ -1,0 +1,68 @@
+job_id=20260923-070-native-magnetic-probe-physical-timeseries-audit
+started_utc=2026-09-23T21:38:05.444373Z
+head_before=93f1227d3c0c2d4219f99bfa87bd8ecb63ab03f7
+{
+  "classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_PHYSICAL_TIMESERIES_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "physical_time_calibrated": true,
+  "observable_path": "mag_probes/value",
+  "t0_norm_s": 4.5846250654542e-07,
+  "samples": [
+    {
+      "index": 0,
+      "time_native": 0.0,
+      "time_s": 0.0,
+      "time_us": 0.0,
+      "probe_value_native": 0.999517023563385
+    },
+    {
+      "index": 1,
+      "time_native": 0.05000000074505806,
+      "time_s": 2.2923125668852185e-08,
+      "time_us": 0.022923125668852184,
+      "probe_value_native": 0.9179592132568359
+    },
+    {
+      "index": 2,
+      "time_native": 0.10000000149011612,
+      "time_s": 4.584625133770437e-08,
+      "time_us": 0.04584625133770437,
+      "probe_value_native": 0.9720608592033386
+    },
+    {
+      "index": 3,
+      "time_native": 0.15000000596046448,
+      "time_s": 6.876937871446249e-08,
+      "time_us": 0.0687693787144625,
+      "probe_value_native": 0.9367676973342896
+    },
+    {
+      "index": 4,
+      "time_native": 0.20000000298023224,
+      "time_s": 9.169250267540874e-08,
+      "time_us": 0.09169250267540874,
+      "probe_value_native": 0.9611517190933228
+    },
+    {
+      "index": 5,
+      "time_native": 0.25,
+      "time_s": 1.14615626636355e-07,
+      "time_us": 0.114615626636355,
+      "probe_value_native": 0.9457909464836121
+    }
+  ],
+  "sample_interval_s": 2.2923125668852185e-08,
+  "sample_interval_us": 0.022923125668852184,
+  "mirnov_equivalence_established": false,
+  "precursor_lead_time_established": false,
+  "controller_efficacy_established": false,
+  "solver_physics_modified": false,
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "interpretation": "The configured native magnetic-probe samples now have run-specific physical timestamps from verified M3D-C1 normalization provenance. This does not establish Mirnov equivalence or a precursor lead time.",
+  "claim_boundary": "Run-specific native M3D-C1 magnetic diagnostic timing only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
+
+finished_utc=2026-09-23T21:38:05.480923Z
+return_code=0
