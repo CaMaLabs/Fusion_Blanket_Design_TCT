@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-063-native-time-normalization-parameter-provenance-audit",
+  "processed_result_blob_sha": "3505707b55156582d7abdf06c6cacff0a22d6184",
+  "processed_result_head_before": "718fa8d3a766f569ecc6491aa7506e75e9dd9b7a",
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_PARAMETER_PROVENANCE_AUDITED",
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Successful diagnostic audit. Native normalization/characteristic-scale parameter provenance was inventoried, including dimensionless/physical-scaling context, but no explicit documented relation converting the native M3D-C1 time coordinate to SI time was established. Physical-time calibration therefore remains fail-closed. Frozen +0.020% width and +0.10% Jpk gates remain unchanged; no Mirnov equivalence, precursor lead-time, or controller-efficacy claim is made.",
+  "new_job_id": "20260923-064-native-time-normalization-source-relation-audit",
+  "timestamp": "2026-09-23T15:00:00Z"
+}
