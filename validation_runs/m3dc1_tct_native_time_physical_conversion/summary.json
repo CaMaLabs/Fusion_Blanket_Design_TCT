@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "Normalized native M3D-C1 timing provenance only; no experimental, reactor-scale, Mirnov-equivalence, or controller-efficacy claim.",
+  "classification": "M3DC1_TCT_NATIVE_TIME_PHYSICAL_CONVERSION_AUDITED",
+  "dt_si_ms": 2.2923125327271002e-05,
+  "dt_si_s": 2.2923125327271e-08,
+  "m0_norm_g": 1.67262192369e-24,
+  "missing": [],
+  "physical_time_calibrated": true,
+  "pipeline_failure": false,
+  "provenance_relation": {
+    "dt_si": "dt * t0_norm",
+    "m0_norm": "m_p * ion_mass",
+    "t0_norm": "l0_norm / v0_norm",
+    "v0_norm": "b0_norm / sqrt(4*pi*m0_norm*n0_norm)"
+  },
+  "run_values": {
+    "b0_norm": 10000.0,
+    "dt_native": 0.05,
+    "ion_mass": 1.0,
+    "l0_norm": 100.0,
+    "n0_norm": 100000000000000.0
+  },
+  "t0_norm_s": 4.5846250654542e-07,
+  "v0_norm_cm_s": 218120344.7878741
+}

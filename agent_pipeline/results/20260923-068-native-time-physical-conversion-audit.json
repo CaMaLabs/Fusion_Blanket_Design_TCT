@@ -1,0 +1,51 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.06733965873718262,
+  "error": null,
+  "finished_utc": "2026-09-23T20:29:53.171770Z",
+  "head_before": "331c9e6ed1f46136b193cd6349edfc2b6b3464af",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-068-native-time-physical-conversion-audit.json",
+  "job_id": "20260923-068-native-time-physical-conversion-audit",
+  "log_path": "agent_pipeline/logs/20260923-068-native-time-physical-conversion-audit.log",
+  "log_sha256": "0aee746e0101d2bc6d6a00ace6d3a52664d45021871a4d6b1fa2aa6e3a9a78b6",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_time_physical_conversion"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_time_normalization_physical_conversion.sh",
+  "runner_sha256": "28809e143c742d588d5caa833139214b280d59cfcdbfda6be4195ec1ee589aa8",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T20:29:53.098591Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 timing provenance only; no experimental, reactor-scale, Mirnov-equivalence, or controller-efficacy claim.",
+    "classification": "M3DC1_TCT_NATIVE_TIME_PHYSICAL_CONVERSION_AUDITED",
+    "dt_si_ms": 2.2923125327271002e-05,
+    "dt_si_s": 2.2923125327271e-08,
+    "m0_norm_g": 1.67262192369e-24,
+    "missing": [],
+    "physical_time_calibrated": true,
+    "pipeline_failure": false,
+    "provenance_relation": {
+      "dt_si": "dt * t0_norm",
+      "m0_norm": "m_p * ion_mass",
+      "t0_norm": "l0_norm / v0_norm",
+      "v0_norm": "b0_norm / sqrt(4*pi*m0_norm*n0_norm)"
+    },
+    "run_values": {
+      "b0_norm": 10000.0,
+      "dt_native": 0.05,
+      "ion_mass": 1.0,
+      "l0_norm": 100.0,
+      "n0_norm": 100000000000000.0
+    },
+    "t0_norm_s": 4.5846250654542e-07,
+    "v0_norm_cm_s": 218120344.7878741
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_time_physical_conversion/summary.json",
+  "summary_sha256": "aeebc8633567b0b6c77b4628ec632a2507ac095336d7c533e8880810f34a5aba",
+  "timed_out": false
+}
