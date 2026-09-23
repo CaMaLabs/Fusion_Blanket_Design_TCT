@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-067-native-time-normalization-runtime-provenance-audit",
+  "processed_result_head_before": "15dc5b4fe3d6d7b5db9dde9948204dccd5989866",
+  "processed_result_receipt_sha": "8e4d9936f6500457a33759ac4d3b1e0b5da9d148",
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_RUNTIME_PROVENANCE_AUDITED",
+  "pipeline_failure": false,
+  "interpretation": "Successful diagnostic result. The selected native M3D-C1 run explicitly emitted b0_norm=10000, l0_norm=100, and n0_norm=1e14 in C1stdout, satisfying job 067's run-specific normalization provenance requirement. Official source provenance establishes m0_norm=m_p*ion_mass, v0_norm=b0_norm/sqrt(4*pi*m0_norm*n0_norm), t0_norm=l0_norm/v0_norm, and dt_si=dt*t0_norm. This is stronger provenance for physical-time calibration, but the claim remains limited to the selected normalized native M3D-C1 run; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim is made. Frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "new_job_id": null,
+  "follow_up_status": "A physical-time conversion audit is scientifically justified, but no follow-up job was published in this processing pass because the repository write for the proposed audit implementation was blocked by the connected GitHub safety layer. No solver or unrelated files were changed.",
+  "timestamp": "2026-09-23T06:44:07Z"
+}
