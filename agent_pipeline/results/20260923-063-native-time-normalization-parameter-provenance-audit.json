@@ -1,0 +1,255 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.06410574913024902,
+  "error": null,
+  "finished_utc": "2026-09-23T00:52:06.636841Z",
+  "head_before": "718fa8d3a766f569ecc6491aa7506e75e9dd9b7a",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-063-native-time-normalization-parameter-provenance-audit.json",
+  "job_id": "20260923-063-native-time-normalization-parameter-provenance-audit",
+  "log_path": "agent_pipeline/logs/20260923-063-native-time-normalization-parameter-provenance-audit.log",
+  "log_sha256": "15a93d99c333b6b77078451041cdcb3b1903a29b60138950f31f5e9638a53263",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_time_normalization_parameter_provenance_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_time_normalization_parameter_provenance_audit.sh",
+  "runner_sha256": "5c4cbfa4014798e7cfeafd4fb75f8ed69eaa454c5f4305bcc99e2013321684d3",
+  "schema_version": 1,
+  "started_utc": "2026-09-23T00:52:06.571697Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+    "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_PARAMETER_PROVENANCE_AUDITED",
+    "diagnostic_only": true,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "frozen_width_gate_pct_gt": 0.02,
+    "interpretation": "Native normalization/characteristic-scale parameter provenance was inventoried. No SI time conversion is established by this inventory alone; any conversion requires an explicit documented normalization relation and sufficient native parameters.",
+    "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SECONDS_CONTEXT_AUDITED",
+    "physical_time_calibrated": false,
+    "pipeline_failure": false,
+    "provenance_matches": [
+      {
+        "context": [
+          {
+            "line_number": 53,
+            "text": " iread_te = 0"
+          },
+          {
+            "line_number": 54,
+            "text": " iresfunc = 0"
+          },
+          {
+            "line_number": 55,
+            "text": " eta0 = 1e-3"
+          },
+          {
+            "line_number": 56,
+            "text": " eta_wall = 1."
+          },
+          {
+            "line_number": 57,
+            "text": " amu = 1e-4"
+          }
+        ],
+        "line_number": 55,
+        "matched_line": " eta0 = 1e-3",
+        "source": "C1input"
+      },
+      {
+        "context": [
+          {
+            "line_number": 21,
+            "text": " efac =    5.7786562044406081E-011"
+          },
+          {
+            "line_number": 22,
+            "text": " Te associated with eta_max =    7.4244645597534289E-003  eV"
+          },
+          {
+            "line_number": 23,
+            "text": " Te associated with eta_max =    1.4946903760178885E-007  dimensionless"
+          },
+          {
+            "line_number": 24,
+            "text": " Physical value of db =    2.2770912210841106E-002"
+          },
+          {
+            "line_number": 25,
+            "text": " Scaled value of db =    0.0000000000000000     "
+          }
+        ],
+        "line_number": 23,
+        "matched_line": " Te associated with eta_max =    1.4946903760178885E-007  dimensionless",
+        "source": "C1stdout"
+      },
+      {
+        "context": [
+          {
+            "line_number": 49,
+            "text": "adapt_zup            = 0 "
+          },
+          {
+            "line_number": 50,
+            "text": "aforce               = 0 "
+          },
+          {
+            "line_number": 51,
+            "text": "alpha0               = 0 "
+          },
+          {
+            "line_number": 52,
+            "text": "alpha1               = 0 "
+          },
+          {
+            "line_number": 53,
+            "text": "alpha2               = 0 "
+          }
+        ],
+        "line_number": 51,
+        "matched_line": "alpha0               = 0 ",
+        "source": "C1stdout"
+      },
+      {
+        "context": [
+          {
+            "line_number": 114,
+            "text": "deex                 = 1 "
+          },
+          {
+            "line_number": 115,
+            "text": "delta_cd             = 0 "
+          },
+          {
+            "line_number": 116,
+            "text": "den0                 = 1 "
+          },
+          {
+            "line_number": 117,
+            "text": "den_edge             = 0 "
+          },
+          {
+            "line_number": 118,
+            "text": "dendelt              = 0.1 "
+          }
+        ],
+        "line_number": 116,
+        "matched_line": "den0                 = 1 ",
+        "source": "C1stdout"
+      },
+      {
+        "context": [
+          {
+            "line_number": 136,
+            "text": "eqsubtract           = 0 "
+          },
+          {
+            "line_number": 137,
+            "text": "equilibrate          = 0 "
+          },
+          {
+            "line_number": 138,
+            "text": "eta0                 = 0.001 "
+          },
+          {
+            "line_number": 139,
+            "text": "etaRZ_zone           = 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+          },
+          {
+            "line_number": 140,
+            "text": "eta_break            = 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "
+          }
+        ],
+        "line_number": 138,
+        "matched_line": "eta0                 = 0.001 ",
+        "source": "C1stdout"
+      },
+      {
+        "context": [
+          {
+            "line_number": 399,
+            "text": "jper                 = 0 "
+          },
+          {
+            "line_number": 400,
+            "text": "k_fac                = 1 "
+          },
+          {
+            "line_number": 401,
+            "text": "kappa0               = 0 "
+          },
+          {
+            "line_number": 402,
+            "text": "kappa_max            = 0 "
+          },
+          {
+            "line_number": 403,
+            "text": "kappadelt            = 0 "
+          }
+        ],
+        "line_number": 401,
+        "matched_line": "kappa0               = 0 ",
+        "source": "C1stdout"
+      },
+      {
+        "context": [
+          {
+            "line_number": 518,
+            "text": "scale_ext_field      = 1 "
+          },
+          {
+            "line_number": 519,
+            "text": "shift_ext_field      = 0 0 0 0 0 0 0 0 "
+          },
+          {
+            "line_number": 520,
+            "text": "sigma0               = 0 "
+          },
+          {
+            "line_number": 521,
+            "text": "sigma_rekc           = 0 "
+          },
+          {
+            "line_number": 522,
+            "text": "sink1_rate           = 0 "
+          }
+        ],
+        "line_number": 520,
+        "matched_line": "sigma0               = 0 ",
+        "source": "C1stdout"
+      },
+      {
+        "context": [
+          {
+            "line_number": 593,
+            "text": "xray_detector_enabled = 0 "
+          },
+          {
+            "line_number": 594,
+            "text": "xray_phi0            = 0 "
+          },
+          {
+            "line_number": 595,
+            "text": "xray_r0              = 0 "
+          },
+          {
+            "line_number": 596,
+            "text": "xray_sigma           = 1 "
+          },
+          {
+            "line_number": 597,
+            "text": "xray_theta           = 0 "
+          }
+        ],
+        "line_number": 595,
+        "matched_line": "xray_r0              = 0 ",
+        "source": "C1stdout"
+      }
+    ]
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_time_normalization_parameter_provenance_audit/summary.json",
+  "summary_sha256": "b848e52b7bfd90b933258ba7dcfd0246c76308028ac4454101885aeeb3ad9528",
+  "timed_out": false
+}

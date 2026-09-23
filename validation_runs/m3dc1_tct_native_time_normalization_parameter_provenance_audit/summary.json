@@ -1,0 +1,229 @@
+{
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_PARAMETER_PROVENANCE_AUDITED",
+  "pipeline_failure": false,
+  "diagnostic_only": true,
+  "parent_classification": "M3DC1_TCT_NATIVE_MAGNETIC_PROBE_SECONDS_CONTEXT_AUDITED",
+  "provenance_matches": [
+    {
+      "source": "C1input",
+      "line_number": 55,
+      "matched_line": " eta0 = 1e-3",
+      "context": [
+        {
+          "line_number": 53,
+          "text": " iread_te = 0"
+        },
+        {
+          "line_number": 54,
+          "text": " iresfunc = 0"
+        },
+        {
+          "line_number": 55,
+          "text": " eta0 = 1e-3"
+        },
+        {
+          "line_number": 56,
+          "text": " eta_wall = 1."
+        },
+        {
+          "line_number": 57,
+          "text": " amu = 1e-4"
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 23,
+      "matched_line": " Te associated with eta_max =    1.4946903760178885E-007  dimensionless",
+      "context": [
+        {
+          "line_number": 21,
+          "text": " efac =    5.7786562044406081E-011"
+        },
+        {
+          "line_number": 22,
+          "text": " Te associated with eta_max =    7.4244645597534289E-003  eV"
+        },
+        {
+          "line_number": 23,
+          "text": " Te associated with eta_max =    1.4946903760178885E-007  dimensionless"
+        },
+        {
+          "line_number": 24,
+          "text": " Physical value of db =    2.2770912210841106E-002"
+        },
+        {
+          "line_number": 25,
+          "text": " Scaled value of db =    0.0000000000000000     "
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 51,
+      "matched_line": "alpha0               = 0 ",
+      "context": [
+        {
+          "line_number": 49,
+          "text": "adapt_zup            = 0 "
+        },
+        {
+          "line_number": 50,
+          "text": "aforce               = 0 "
+        },
+        {
+          "line_number": 51,
+          "text": "alpha0               = 0 "
+        },
+        {
+          "line_number": 52,
+          "text": "alpha1               = 0 "
+        },
+        {
+          "line_number": 53,
+          "text": "alpha2               = 0 "
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 116,
+      "matched_line": "den0                 = 1 ",
+      "context": [
+        {
+          "line_number": 114,
+          "text": "deex                 = 1 "
+        },
+        {
+          "line_number": 115,
+          "text": "delta_cd             = 0 "
+        },
+        {
+          "line_number": 116,
+          "text": "den0                 = 1 "
+        },
+        {
+          "line_number": 117,
+          "text": "den_edge             = 0 "
+        },
+        {
+          "line_number": 118,
+          "text": "dendelt              = 0.1 "
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 138,
+      "matched_line": "eta0                 = 0.001 ",
+      "context": [
+        {
+          "line_number": 136,
+          "text": "eqsubtract           = 0 "
+        },
+        {
+          "line_number": 137,
+          "text": "equilibrate          = 0 "
+        },
+        {
+          "line_number": 138,
+          "text": "eta0                 = 0.001 "
+        },
+        {
+          "line_number": 139,
+          "text": "etaRZ_zone           = 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+        },
+        {
+          "line_number": 140,
+          "text": "eta_break            = 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 401,
+      "matched_line": "kappa0               = 0 ",
+      "context": [
+        {
+          "line_number": 399,
+          "text": "jper                 = 0 "
+        },
+        {
+          "line_number": 400,
+          "text": "k_fac                = 1 "
+        },
+        {
+          "line_number": 401,
+          "text": "kappa0               = 0 "
+        },
+        {
+          "line_number": 402,
+          "text": "kappa_max            = 0 "
+        },
+        {
+          "line_number": 403,
+          "text": "kappadelt            = 0 "
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 520,
+      "matched_line": "sigma0               = 0 ",
+      "context": [
+        {
+          "line_number": 518,
+          "text": "scale_ext_field      = 1 "
+        },
+        {
+          "line_number": 519,
+          "text": "shift_ext_field      = 0 0 0 0 0 0 0 0 "
+        },
+        {
+          "line_number": 520,
+          "text": "sigma0               = 0 "
+        },
+        {
+          "line_number": 521,
+          "text": "sigma_rekc           = 0 "
+        },
+        {
+          "line_number": 522,
+          "text": "sink1_rate           = 0 "
+        }
+      ]
+    },
+    {
+      "source": "C1stdout",
+      "line_number": 595,
+      "matched_line": "xray_r0              = 0 ",
+      "context": [
+        {
+          "line_number": 593,
+          "text": "xray_detector_enabled = 0 "
+        },
+        {
+          "line_number": 594,
+          "text": "xray_phi0            = 0 "
+        },
+        {
+          "line_number": 595,
+          "text": "xray_r0              = 0 "
+        },
+        {
+          "line_number": 596,
+          "text": "xray_sigma           = 1 "
+        },
+        {
+          "line_number": 597,
+          "text": "xray_theta           = 0 "
+        }
+      ]
+    }
+  ],
+  "physical_time_calibrated": false,
+  "interpretation": "Native normalization/characteristic-scale parameter provenance was inventoried. No SI time conversion is established by this inventory alone; any conversion requires an explicit documented normalization relation and sufficient native parameters.",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim."
+}
