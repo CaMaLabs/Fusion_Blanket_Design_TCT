@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-064-native-time-normalization-source-relation-audit",
+  "processed_result_receipt_sha": "463948f85a282bac6ca78e5a098d1431ba3542fa",
+  "processed_result_head_before": "1cab4428322fd5f8bd5c4a78ff0267e24c58ea6c",
+  "classification": "M3DC1_TCT_NATIVE_TIME_NORMALIZATION_SOURCE_RELATION_AUDITED",
+  "pipeline_failure": false,
+  "pipeline_error": null,
+  "interpretation": "Successful diagnostic source audit. Native source declares b0_norm, l0_norm, n0_norm, v0_norm, and t0_norm, and contains SI-oriented contexts such as dt_si, but job 064 intentionally did not establish the assignment/relation or run-specific values needed for an SI time conversion. Physical time therefore remains fail-closed; no Mirnov equivalence, precursor lead time, or controller-efficacy claim is supported.",
+  "new_job_id": "20260923-065-native-time-normalization-assignment-audit",
+  "frozen_width_gate_pct_gt": 0.020,
+  "frozen_Jpk_gate_pct_le": 0.10,
+  "claim_boundary": "Normalized native M3D-C1 provenance only; no Mirnov equivalence, precursor lead-time, controller-efficacy, experimental, or reactor-scale claim.",
+  "processed_utc": "2026-09-23T17:43:00Z"
+}
