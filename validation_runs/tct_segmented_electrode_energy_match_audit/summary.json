@@ -1,0 +1,23 @@
+{
+  "classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCH_NOT_ESTABLISHED",
+  "formal_m3dc1_classification": null,
+  "pipeline_failure": false,
+  "reduced_model_only": true,
+  "source_classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_MODEL_AUDITED",
+  "comparison": {
+    "segmented_case": "segmented_static",
+    "segmented_energy_reduced": 0.13382453760184157,
+    "unsegmented_case": "equivalent_energy_unsegmented",
+    "unsegmented_energy_reduced": 0.02606299820397704,
+    "relative_energy_mismatch": 0.8052449971355748,
+    "tolerance_fraction_le": 0.01,
+    "energy_match_pass": false
+  },
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "zero_field_control_present": true,
+  "interpretation": "The case labelled equivalent_energy_unsegmented is not energy matched to segmented_static; efficacy differences must not be attributed to segmentation until a genuinely matched control is generated.",
+  "claim_boundary": "Reduced-model energy-accounting audit only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim."
+}

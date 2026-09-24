@@ -1,0 +1,49 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.03204679489135742,
+  "error": null,
+  "finished_utc": "2026-09-24T00:28:41.138963Z",
+  "head_before": "c2b755eb3838326ad615d305eb0031f093b4c5d6",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-072-segmented-electrode-energy-match-audit.json",
+  "job_id": "20260923-072-segmented-electrode-energy-match-audit",
+  "log_path": "agent_pipeline/logs/20260923-072-segmented-electrode-energy-match-audit.log",
+  "log_sha256": "1c350b711f1d8ed68041283b2ef1f29cafb6e7744b7a8a6621d4d7dc2a26a873",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_energy_match_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_energy_match_audit.sh",
+  "runner_sha256": "2ac52d7e275c24adff68e5d63f40f4b224f95763481b8df73e8d9787cf4a6c35",
+  "schema_version": 1,
+  "started_utc": "2026-09-24T00:28:41.105618Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Reduced-model energy-accounting audit only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim.",
+    "classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCH_NOT_ESTABLISHED",
+    "comparison": {
+      "energy_match_pass": false,
+      "relative_energy_mismatch": 0.8052449971355748,
+      "segmented_case": "segmented_static",
+      "segmented_energy_reduced": 0.13382453760184157,
+      "tolerance_fraction_le": 0.01,
+      "unsegmented_case": "equivalent_energy_unsegmented",
+      "unsegmented_energy_reduced": 0.02606299820397704
+    },
+    "formal_m3dc1_classification": null,
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "interpretation": "The case labelled equivalent_energy_unsegmented is not energy matched to segmented_static; efficacy differences must not be attributed to segmentation until a genuinely matched control is generated.",
+    "pipeline_failure": false,
+    "reduced_model_only": true,
+    "source_classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_MODEL_AUDITED",
+    "zero_field_control_present": true
+  },
+  "summary_path": "validation_runs/tct_segmented_electrode_energy_match_audit/summary.json",
+  "summary_sha256": "6ccf17bd2ae7e838d341f2d99567617e97a0fba3c3fac7a68238c4ca6f2e4eeb",
+  "timed_out": false
+}
