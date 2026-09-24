@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-075-segmented-electrode-spatial-identifiability-audit",
+  "processed_result_head_before": "6d5ef0d50f3e0ca9decc60f1e5815ed3b264fcd7",
+  "processed_result_receipt": "agent_pipeline/results/20260923-075-segmented-electrode-spatial-identifiability-audit.json",
+  "processed_summary_sha256": "4f46c6852eb9f14f8cf68907ae7ad93d1e5f6c4d307fe2afafa0734c706c880c",
+  "classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_SPATIAL_IDENTIFIABILITY_NOT_ESTABLISHED",
+  "formal_m3dc1_classification": null,
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Scientific/structural negative, not a pipeline failure. The reduced closure scalarizes each spatial shear snapshot to peak |shear|, so the prior energy-matched segmentation result cannot identify benefits from shear-layer position, width, sign, or motion. The existing frozen +0.020% width and +0.10% Jpk gates remain unchanged. No native M3D-C1 electrode-efficacy claim is made.",
+  "new_job_id": "20260923-076-segmented-electrode-bout-handoff-audit",
+  "timestamp": "2026-09-24T04:18:52Z"
+}
