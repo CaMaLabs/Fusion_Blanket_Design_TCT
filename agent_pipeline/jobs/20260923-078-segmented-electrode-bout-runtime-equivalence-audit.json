@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-078-segmented-electrode-bout-runtime-equivalence-audit",
+  "parent_result_job_id": "20260923-077-segmented-electrode-bout-coupling-audit",
+  "enabled": true,
+  "kind": "validation_audit",
+  "command": [
+    "python3",
+    "tools/tct_mechanism_explorer/run_segmented_electrode_bout_runtime_equivalence_audit.py"
+  ],
+  "declared_summary": "validation_runs/tct_segmented_electrode_bout_runtime_equivalence_audit/summary.json",
+  "required_gates": {
+    "zero_equivalence": true,
+    "handoff_equivalence": true,
+    "width_gain_pct_min": 0.020,
+    "jpk_improvement_pct_min": 0.10
+  },
+  "claim_boundary": "BOUT++ compiled-runtime coupling/equivalence audit only; no segmented-electrode efficacy or native M3D-C1 electrode-efficacy claim."
+}
