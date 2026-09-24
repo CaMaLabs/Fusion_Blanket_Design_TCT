@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-074-segmented-electrode-energy-matched-advantage-audit",
+  "processed_result_commit": "b5e2aa72d7860efb34260481b6506388ad142935",
+  "processed_result_receipt": "agent_pipeline/results/20260923-074-segmented-electrode-energy-matched-advantage-audit.json",
+  "classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_ENERGY_MATCHED_ADVANTAGE_NOT_FOUND",
+  "formal_m3dc1_classification": null,
+  "pipeline_failure": false,
+  "interpretation": "Valid reduced-model scientific negative under the present scalar response closure: energy match passed at 2.0740273878777047e-16 relative mismatch, zero-field control was present, and both cases passed the unchanged +0.020% width / +0.10% Jpk gates, but segmentation degraded width, Jpk, and integrated high-J relative to the energy-matched unsegmented control and improved no principal metric. Inspection of the underlying reduced audit shows response metrics are computed from peak_abs_shear -> scalar transport multiplier -> scalar gain, so this rung cannot establish whether spatial shear-layer location/width/sign or moving E_r(r,z,t) structure is beneficial. Do not attribute benefit to segmentation, and do not interpret this as a native M3D-C1 electrode result.",
+  "new_job_id": "20260923-075-segmented-electrode-spatial-identifiability-audit",
+  "timestamp": "2026-09-24T02:52:58Z",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.020,
+    "Jpk_change_pct_le": 0.10
+  },
+  "claim_boundary": "Reduced-model energy-matched segmentation comparison only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim."
+}
