@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-077-segmented-electrode-bout-coupling-audit",
+  "processed_result_head_before": "c2425354f0448cdd85b97785ed1b087b5defe5ca",
+  "processed_result_receipt_blob_sha": "e2e099d48d77ee41737a8d6f4cc6fbbad52e5fd3",
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_COUPLING_IMPLEMENTED_UNVERIFIED_RUNTIME",
+  "formal_m3dc1_classification": null,
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Structural coupling audit passed: signed spatial electrode potential is present in the BOUT++ electrostatic potential path and legacy psi/omega actuator terms remain unchanged. This does not establish runtime equivalence or efficacy. Compiled-runtime zero-equivalence and handoff-equivalence remain mandatory before efficacy testing. Frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260923-078-segmented-electrode-bout-runtime-equivalence-audit",
+  "timestamp": "2026-09-24T05:45:29Z",
+  "claim_boundary": "BOUT++ coupling implementation/audit only; no native M3D-C1 electrode efficacy, BOUT++ segmented-electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim."
+}
