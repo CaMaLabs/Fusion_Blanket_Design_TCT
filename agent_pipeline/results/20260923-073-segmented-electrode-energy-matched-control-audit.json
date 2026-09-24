@@ -1,0 +1,70 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 3.5214102268218994,
+  "error": null,
+  "finished_utc": "2026-09-24T00:58:50.590418Z",
+  "head_before": "6827b33af8b6696b658db03ade29acf36a4d31d3",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-073-segmented-electrode-energy-matched-control-audit.json",
+  "job_id": "20260923-073-segmented-electrode-energy-matched-control-audit",
+  "log_path": "agent_pipeline/logs/20260923-073-segmented-electrode-energy-matched-control-audit.log",
+  "log_sha256": "0c79acf7686fccf80c976d58e6e7224d31e5775785c234b3ddf05af918df23e3",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_energy_matched_control_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_energy_matched_control_audit.sh",
+  "runner_sha256": "6322177173adbb5db5c99d34218e5b9fddf053ce62e8a4d435d86b5cd8ffe2c8",
+  "schema_version": 1,
+  "started_utc": "2026-09-24T00:58:47.067656Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Reduced-model energy-matched-control audit only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim.",
+    "classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCHED_CONTROL_ESTABLISHED",
+    "energy_match_pass": true,
+    "formal_m3dc1_classification": null,
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "interpretation": "Energy matching alone permits a segmentation-vs-unsegmented comparison at this reduced-model rung; it does not establish native M3D-C1 electrode efficacy.",
+    "matched_control_metrics": {
+      "Jpk_change_pct": -0.13166666666666665,
+      "Jpk_gate_pass": true,
+      "actuator_energy_reduced": 0.1338245376018416,
+      "case": "energy_matched_unsegmented",
+      "integrated_high_J_change_pct": -1.097222222222222,
+      "peak_abs_shear": 13.790656060205064,
+      "reduced_model_only": true,
+      "sustained_control_fraction": 0.9753086419753086,
+      "width_gain_pct": 0.032916666666666664,
+      "width_gate_pass": true
+    },
+    "matched_unsegmented_energy_reduced": 0.1338245376018416,
+    "pipeline_failure": false,
+    "reduced_model_only": true,
+    "relative_energy_mismatch": 2.0740273878777047e-16,
+    "segmented_static_metrics": {
+      "Jpk_change_pct": -0.13043148937705687,
+      "Jpk_gate_pass": true,
+      "actuator_energy_reduced": 0.13382453760184157,
+      "case": "segmented_static",
+      "integrated_high_J_change_pct": -1.0869290781421406,
+      "peak_abs_shear": 9.383543113130342,
+      "reduced_model_only": true,
+      "sustained_control_fraction": 0.9753086419753086,
+      "width_gain_pct": 0.03260787234426422,
+      "width_gate_pass": true
+    },
+    "source_classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_MODEL_AUDITED",
+    "target_segmented_energy_reduced": 0.13382453760184157,
+    "tolerance_fraction_le": 0.01,
+    "unsegmented_command_scale": 2.1782907587224636,
+    "zero_field_control_present": true
+  },
+  "summary_path": "validation_runs/tct_segmented_electrode_energy_matched_control_audit/summary.json",
+  "summary_sha256": "53b95571ad432ff1adee126cd9f8817acbac9471f47b8ce81921657746d23ab0",
+  "timed_out": false
+}

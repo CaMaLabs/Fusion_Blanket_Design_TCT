@@ -1,0 +1,44 @@
+{
+  "claim_boundary": "Reduced-model energy-matched-control audit only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim.",
+  "classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCHED_CONTROL_ESTABLISHED",
+  "energy_match_pass": true,
+  "formal_m3dc1_classification": null,
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "interpretation": "Energy matching alone permits a segmentation-vs-unsegmented comparison at this reduced-model rung; it does not establish native M3D-C1 electrode efficacy.",
+  "matched_control_metrics": {
+    "Jpk_change_pct": -0.13166666666666665,
+    "Jpk_gate_pass": true,
+    "actuator_energy_reduced": 0.1338245376018416,
+    "case": "energy_matched_unsegmented",
+    "integrated_high_J_change_pct": -1.097222222222222,
+    "peak_abs_shear": 13.790656060205064,
+    "reduced_model_only": true,
+    "sustained_control_fraction": 0.9753086419753086,
+    "width_gain_pct": 0.032916666666666664,
+    "width_gate_pass": true
+  },
+  "matched_unsegmented_energy_reduced": 0.1338245376018416,
+  "pipeline_failure": false,
+  "reduced_model_only": true,
+  "relative_energy_mismatch": 2.0740273878777047e-16,
+  "segmented_static_metrics": {
+    "Jpk_change_pct": -0.13043148937705687,
+    "Jpk_gate_pass": true,
+    "actuator_energy_reduced": 0.13382453760184157,
+    "case": "segmented_static",
+    "integrated_high_J_change_pct": -1.0869290781421406,
+    "peak_abs_shear": 9.383543113130342,
+    "reduced_model_only": true,
+    "sustained_control_fraction": 0.9753086419753086,
+    "width_gain_pct": 0.03260787234426422,
+    "width_gate_pass": true
+  },
+  "source_classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_MODEL_AUDITED",
+  "target_segmented_energy_reduced": 0.13382453760184157,
+  "tolerance_fraction_le": 0.01,
+  "unsegmented_command_scale": 2.1782907587224636,
+  "zero_field_control_present": true
+}
