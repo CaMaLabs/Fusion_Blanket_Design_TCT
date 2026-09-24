@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-076-segmented-electrode-bout-handoff-audit",
+  "processed_result_head_before": "1a87a6f5e5e27e02c20e4bc7a5d798ca13e2409d",
+  "processed_result_receipt_blob_sha": "64d9bfdc0b4dc14b261aa7b0a6eb1f2c0894f42c",
+  "processed_result_summary_sha256": "bf329e0a5297958764aab41f649aac9ccef5c1fa214cc0d9e4980cb7d0da9a17",
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_HANDOFF_NOT_YET_IMPLEMENTED",
+  "formal_m3dc1_classification": null,
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Scientific/structural negative, not a pipeline failure: the BOUT++ current-sheet model has the required spatial phi/vorticity substrate but the audited version lacked explicit segmented-electrode potential forcing. A signed spatial electrode potential coupling has now been added without changing eta, nu, or the legacy psi/omega actuator terms. This does not establish efficacy. Runtime zero-equivalence and handoff-equivalence remain mandatory before any efficacy comparison, and the frozen +0.020% width and +0.10% Jpk gates remain unchanged.",
+  "new_job_id": "20260923-077-segmented-electrode-bout-coupling-audit",
+  "timestamp": "2026-09-24T04:51:29Z",
+  "claim_boundary": "BOUT++ coupling implementation/audit only; no native M3D-C1 electrode efficacy, BOUT++ segmented-electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim."
+}
