@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-071-segmented-electrode-reduced-audit-repair",
+  "processed_result_receipt_sha": "a37dd8975fe589adf40871978536c683f1bf0ea1",
+  "processed_result_head_before": "5de78f2fd090ab8f917ed7389618f96e9b52d836",
+  "classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_MODEL_AUDITED",
+  "formal_m3dc1_classification": null,
+  "pipeline_error": null,
+  "interpretation": "Successful reduced-model repair rerun: all five segmented-electrode unit tests pass and the zero-field/falsification cases execute. Frozen +0.020% width and +0.10% Jpk gates remain unchanged. Several reduced cases pass both gates, but no native M3D-C1 electrode claim is supported. The required energy comparison is not yet trustworthy because segmented_static uses 0.1338245376 reduced energy while the case labelled equivalent_energy_unsegmented uses only 0.0260629982; therefore segmentation benefit is not established. Wrong-polarity and misplaced-layer controls also remain non-discriminating in this reduced closure and are not promoted as evidence.",
+  "claim_boundary": "Reduced TCT segmented-electrode model only. No claim of native M3D-C1 electrode physics, experimental validation, reactor-scale performance, precursor efficacy, or demonstrated species separation.",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.020,
+    "Jpk_change_pct_le": 0.10
+  },
+  "new_job_id": "20260923-072-segmented-electrode-energy-match-audit",
+  "processed_utc": "2026-09-24T00:27:26Z"
+}
