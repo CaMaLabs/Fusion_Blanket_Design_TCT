@@ -1,0 +1,57 @@
+job_id=20260923-074-segmented-electrode-energy-matched-advantage-audit
+started_utc=2026-09-24T01:50:57.422452Z
+head_before=aa435d8b41adfa4839178faf24f58bac9e67f272
+{
+  "any_principal_metric_improvement": false,
+  "claim_boundary": "Reduced-model energy-matched segmentation comparison only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim.",
+  "classification": "TCT_SEGMENTED_ELECTRODE_REDUCED_ENERGY_MATCHED_ADVANTAGE_NOT_FOUND",
+  "energy_match_pass": true,
+  "energy_matched_unsegmented_metrics": {
+    "Jpk_change_pct": -0.13166666666666665,
+    "Jpk_gate_pass": true,
+    "actuator_energy_reduced": 0.1338245376018416,
+    "case": "energy_matched_unsegmented",
+    "integrated_high_J_change_pct": -1.097222222222222,
+    "peak_abs_shear": 13.790656060205064,
+    "reduced_model_only": true,
+    "sustained_control_fraction": 0.9753086419753086,
+    "width_gain_pct": 0.032916666666666664,
+    "width_gate_pass": true
+  },
+  "energy_tolerance_fraction_le": 0.01,
+  "formal_m3dc1_classification": null,
+  "frozen_gates": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "frozen_gates_pass_both_cases": true,
+  "interpretation": "No reduced-model energy-matched segmentation advantage passed the fail-closed Pareto comparison. Do not attribute benefit to segmentation from this rung.",
+  "no_principal_metric_degradation": false,
+  "pipeline_failure": false,
+  "reduced_model_only": true,
+  "relative_energy_mismatch": 2.0740273878777047e-16,
+  "segmentation_advantage_deltas": {
+    "Jpk_change_pct": -0.0012351772896097846,
+    "integrated_high_J_change_pct": -0.010293144080081529,
+    "sustained_control_fraction": 0.0,
+    "width_gain_pct": -0.00030879432240244614
+  },
+  "segmentation_advantage_pass": false,
+  "segmented_static_metrics": {
+    "Jpk_change_pct": -0.13043148937705687,
+    "Jpk_gate_pass": true,
+    "actuator_energy_reduced": 0.13382453760184157,
+    "case": "segmented_static",
+    "integrated_high_J_change_pct": -1.0869290781421406,
+    "peak_abs_shear": 9.383543113130342,
+    "reduced_model_only": true,
+    "sustained_control_fraction": 0.9753086419753086,
+    "width_gain_pct": 0.03260787234426422,
+    "width_gate_pass": true
+  },
+  "source_classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCHED_CONTROL_ESTABLISHED",
+  "zero_field_control_present": true
+}
+
+finished_utc=2026-09-24T01:50:57.501061Z
+return_code=0
