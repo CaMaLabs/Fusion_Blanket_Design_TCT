@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-072-segmented-electrode-energy-match-audit",
+  "processed_result_receipt_sha": "3d6a230e06ddfc4406f205874b239e3c5fe03545",
+  "processed_result_head_before": "c2b755eb3838326ad615d305eb0031f093b4c5d6",
+  "classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCH_NOT_ESTABLISHED",
+  "formal_m3dc1_classification": null,
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "Successful reduced-model diagnostic audit. The nominal equivalent-energy unsegmented case is not actually energy matched: segmented energy 0.13382453760184157 versus unsegmented 0.02606299820397704, relative mismatch 0.8052449971355748 > 0.01. No segmentation efficacy inference is permitted. Zero-field control is present. Frozen +0.020% width and +0.10% Jpk gates are unchanged.",
+  "claim_boundary": "Reduced-model energy-accounting audit only. No native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim.",
+  "new_job_id": "20260923-073-segmented-electrode-energy-matched-control-audit",
+  "timestamp_utc": "2026-09-24T00:56:16Z"
+}
