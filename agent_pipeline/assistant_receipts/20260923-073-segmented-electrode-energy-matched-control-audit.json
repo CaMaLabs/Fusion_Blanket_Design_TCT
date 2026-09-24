@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-073-segmented-electrode-energy-matched-control-audit",
+  "processed_result_receipt_sha": "64f4cdb4effc791cac94aace894c9623acd7ee55",
+  "processed_result_head_before": "6827b33af8b6696b658db03ade29acf36a4d31d3",
+  "classification": "TCT_SEGMENTED_ELECTRODE_ENERGY_MATCHED_CONTROL_ESTABLISHED",
+  "formal_m3dc1_classification": null,
+  "pipeline_error": null,
+  "pipeline_failure": false,
+  "interpretation": "The reduced-model unsegmented control was successfully energy matched to segmented_static with relative mismatch 2.0740273878777047e-16, well inside the required 1% tolerance. Zero-field control is present and both compared cases pass the unchanged +0.020% width and +0.10% Jpk gates. The energy-matched unsegmented control is slightly better than segmented_static on width gain, Jpk reduction, integrated high-J reduction, and peak shear while sustained-control fraction is equal, so no segmentation advantage is inferred from job 073 itself. Claim boundary remains reduced-model only; there is no native M3D-C1 electrode efficacy, precursor, experimental, reactor-scale, or species-separation claim.",
+  "new_job_id": "20260923-074-segmented-electrode-energy-matched-advantage-audit",
+  "follow_up_commit": "cbe487574406fee703958800c3a8687b4daa9bbb",
+  "timestamp_utc": "2026-09-24T01:49:29Z"
+}
