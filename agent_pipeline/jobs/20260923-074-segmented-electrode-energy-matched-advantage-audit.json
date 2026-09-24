@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-074-segmented-electrode-energy-matched-advantage-audit",
+  "parent_result_job_id": "20260923-073-segmented-electrode-energy-matched-control-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_energy_matched_advantage_audit.sh",
+  "timeout_seconds": 300,
+  "result_paths": ["validation_runs/tct_segmented_electrode_energy_matched_advantage_audit"],
+  "summary_path": "validation_runs/tct_segmented_electrode_energy_matched_advantage_audit/summary.json",
+  "purpose": "Fail-closed test of whether spatial segmentation provides any reduced-model response advantage over the genuinely energy-matched unsegmented control.",
+  "interpretation_contract": {
+    "reduced_model_only": true,
+    "require_energy_match_fraction_le": 0.01,
+    "require_zero_field_control": true,
+    "require_both_cases_frozen_gates": true,
+    "require_no_principal_metric_degradation": true,
+    "require_at_least_one_principal_metric_improvement": true,
+    "do_not_claim_native_m3dc1_electrode_physics": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "claim_boundary": "Reduced-model energy-matched segmentation comparison only; no native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, or species-separation claim."
+  }
+}
