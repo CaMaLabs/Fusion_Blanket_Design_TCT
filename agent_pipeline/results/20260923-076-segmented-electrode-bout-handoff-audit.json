@@ -1,0 +1,51 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.0320582389831543,
+  "error": null,
+  "finished_utc": "2026-09-24T04:21:26.655293Z",
+  "head_before": "1a87a6f5e5e27e02c20e4bc7a5d798ca13e2409d",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-076-segmented-electrode-bout-handoff-audit.json",
+  "job_id": "20260923-076-segmented-electrode-bout-handoff-audit",
+  "log_path": "agent_pipeline/logs/20260923-076-segmented-electrode-bout-handoff-audit.log",
+  "log_sha256": "7b8995bdb22f182c0734803dddee58b9f671b4fd632cc21511a7667d8702c2a3",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_bout_handoff_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_bout_handoff_audit.sh",
+  "runner_sha256": "47aec4c9e62c3812843ed458fda231334b5e1b8bd615e2a7c514f90c3ddecce4",
+  "schema_version": 1,
+  "started_utc": "2026-09-24T04:21:26.622002Z",
+  "success": true,
+  "summary": {
+    "base_spatial_model_ready": true,
+    "checks": {
+      "current_density_proxy_present": true,
+      "evolves_vorticity": true,
+      "existing_actuator_is_omega_damping": true,
+      "existing_actuator_is_psi_damping": true,
+      "phi_output_present": true,
+      "segmented_electrode_potential_forcing_present": false,
+      "solves_electrostatic_potential_from_vorticity": true,
+      "spatial_actuator_mask_present": true
+    },
+    "claim_boundary": "BOUT++ source-capability/handoff audit only. No native M3D-C1 electrode efficacy, BOUT++ segmented-electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim.",
+    "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_HANDOFF_NOT_YET_IMPLEMENTED",
+    "electrode_handoff_ready": false,
+    "formal_m3dc1_classification": null,
+    "frozen_gates": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "handoff_equivalence_required_for_future_forcing": true,
+    "interpretation": "The existing BOUT++ current-sheet model already evolves vorticity, solves phi spatially, and supports a resolved actuator mask, but its present actuator terms are localized psi/omega damping rather than segmented electrode-potential forcing. A future implementation must add a physically explicit electrode-to-potential/vorticity coupling and prove zero-equivalence plus handoff-equivalence before any efficacy comparison.",
+    "pipeline_failure": false,
+    "zero_equivalence_required_for_future_forcing": true
+  },
+  "summary_path": "validation_runs/tct_segmented_electrode_bout_handoff_audit/summary.json",
+  "summary_sha256": "bf329e0a5297958764aab41f649aac9ccef5c1fa214cc0d9e4980cb7d0da9a17",
+  "timed_out": false
+}

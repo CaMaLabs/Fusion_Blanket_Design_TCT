@@ -1,0 +1,25 @@
+{
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_HANDOFF_NOT_YET_IMPLEMENTED",
+  "formal_m3dc1_classification": null,
+  "pipeline_failure": false,
+  "claim_boundary": "BOUT++ source-capability/handoff audit only. No native M3D-C1 electrode efficacy, BOUT++ segmented-electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim.",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "zero_equivalence_required_for_future_forcing": true,
+  "handoff_equivalence_required_for_future_forcing": true,
+  "checks": {
+    "evolves_vorticity": true,
+    "solves_electrostatic_potential_from_vorticity": true,
+    "spatial_actuator_mask_present": true,
+    "phi_output_present": true,
+    "current_density_proxy_present": true,
+    "existing_actuator_is_psi_damping": true,
+    "existing_actuator_is_omega_damping": true,
+    "segmented_electrode_potential_forcing_present": false
+  },
+  "base_spatial_model_ready": true,
+  "electrode_handoff_ready": false,
+  "interpretation": "The existing BOUT++ current-sheet model already evolves vorticity, solves phi spatially, and supports a resolved actuator mask, but its present actuator terms are localized psi/omega damping rather than segmented electrode-potential forcing. A future implementation must add a physically explicit electrode-to-potential/vorticity coupling and prove zero-equivalence plus handoff-equivalence before any efficacy comparison."
+}
