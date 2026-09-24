@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-076-segmented-electrode-bout-handoff-audit",
+  "parent_result_job_id": "20260923-075-segmented-electrode-spatial-identifiability-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_bout_handoff_audit.sh",
+  "timeout_seconds": 300,
+  "result_paths": ["validation_runs/tct_segmented_electrode_bout_handoff_audit"],
+  "summary_path": "validation_runs/tct_segmented_electrode_bout_handoff_audit/summary.json",
+  "purpose": "Fail-closed audit of the existing spatial BOUT++ current-sheet model for a scientifically defensible segmented-electrode handoff after reduced-model spatial identifiability was not established.",
+  "interpretation_contract": {
+    "bout_capability_audit_only": true,
+    "require_zero_equivalence_before_future_efficacy_claim": true,
+    "require_handoff_equivalence_before_future_efficacy_claim": true,
+    "do_not_claim_native_m3dc1_electrode_physics": true,
+    "do_not_claim_bout_segmented_electrode_efficacy_from_source_presence": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "claim_boundary": "BOUT++ source-capability/handoff audit only; no native M3D-C1 electrode efficacy, BOUT++ segmented-electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim."
+  }
+}
