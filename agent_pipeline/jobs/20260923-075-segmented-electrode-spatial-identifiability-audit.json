@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-075-segmented-electrode-spatial-identifiability-audit",
+  "parent_result_job_id": "20260923-074-segmented-electrode-energy-matched-advantage-audit",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_spatial_identifiability_audit.sh",
+  "timeout_seconds": 300,
+  "result_paths": ["validation_runs/tct_segmented_electrode_spatial_identifiability_audit"],
+  "summary_path": "validation_runs/tct_segmented_electrode_spatial_identifiability_audit/summary.json",
+  "purpose": "Fail-closed structural audit of whether the current reduced response closure can actually identify a benefit from spatially segmented E_r / ExB shear structure.",
+  "interpretation_contract": {
+    "reduced_model_only": true,
+    "require_source_energy_match": true,
+    "require_zero_field_control": true,
+    "do_not_claim_native_m3dc1_electrode_physics": true,
+    "do_not_infer_spatial_segmentation_efficacy_from_scalarized_response": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.020,
+    "frozen_Jpk_gate_pct_le": 0.10,
+    "claim_boundary": "Reduced-model structural identifiability audit only; no native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim."
+  }
+}
