@@ -1,0 +1,34 @@
+job_id=20260923-077-segmented-electrode-bout-coupling-audit
+started_utc=2026-09-24T04:53:34.033660Z
+head_before=213b837d6f84fd3063469ad4aa9bc9e14fe9da81
+{
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_COUPLING_IMPLEMENTED_RUNTIME_EQUIVALENCE_REQUIRED",
+  "formal_m3dc1_classification": null,
+  "pipeline_failure": false,
+  "claim_boundary": "BOUT++ coupling implementation audit only. No BOUT++ segmented-electrode efficacy, native M3D-C1 electrode efficacy, experimental, reactor-scale, precursor, species-separation, or spatial-segmentation efficacy claim.",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "zero_equivalence_required": true,
+  "handoff_equivalence_required": true,
+  "runtime_equivalence_proven": false,
+  "efficacy_testing_permitted": false,
+  "checks": {
+    "signed_spatial_profile_present": true,
+    "electrode_amplitude_option_present": true,
+    "plasma_phi_kept_separate": true,
+    "electrode_phi_explicit": true,
+    "electrode_enters_total_phi": true,
+    "total_phi_drives_psi_bracket": true,
+    "total_phi_drives_omega_bracket": true,
+    "legacy_psi_actuator_preserved": true,
+    "legacy_omega_actuator_preserved": true,
+    "electrode_phi_output_present": true,
+    "electrode_profile_output_present": true
+  },
+  "interpretation": "A signed spatial electrode potential is now explicitly coupled into the BOUT++ electrostatic potential used by the E x B Poisson brackets while the legacy psi/omega actuator terms remain unchanged. This source-level audit does not prove numerical zero-equivalence or handoff-equivalence; both must pass in compiled BOUT++ before any efficacy comparison."
+}
+
+finished_utc=2026-09-24T04:53:34.066842Z
+return_code=0
