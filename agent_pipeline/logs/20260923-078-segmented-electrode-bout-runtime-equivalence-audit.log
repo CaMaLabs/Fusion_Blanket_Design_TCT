@@ -1,0 +1,21 @@
+job_id=20260923-078-segmented-electrode-bout-runtime-equivalence-audit
+started_utc=2026-09-28T20:32:03.468172Z
+head_before=e644977b3bd0533914d98afe0247e5b0cca3644f
+{
+  "schema_version": 1,
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EQUIVALENCE_NOT_ESTABLISHED",
+  "pipeline_failure": false,
+  "zero_equivalence_required": true,
+  "zero_equivalence_pass": false,
+  "handoff_equivalence_required": true,
+  "handoff_equivalence_pass": false,
+  "runtime_evidence_present": false,
+  "frozen_gates": {
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime coupling/equivalence audit only; no segmented-electrode efficacy or native M3D-C1 electrode-efficacy claim."
+}
+
+finished_utc=2026-09-28T20:32:03.535081Z
+return_code=0

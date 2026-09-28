@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EQUIVALENCE_NOT_ESTABLISHED",
+  "pipeline_failure": false,
+  "zero_equivalence_required": true,
+  "zero_equivalence_pass": false,
+  "handoff_equivalence_required": true,
+  "handoff_equivalence_pass": false,
+  "runtime_evidence_present": false,
+  "frozen_gates": {
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime coupling/equivalence audit only; no segmented-electrode efficacy or native M3D-C1 electrode-efficacy claim."
+}

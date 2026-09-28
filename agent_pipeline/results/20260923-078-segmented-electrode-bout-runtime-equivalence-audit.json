@@ -1,0 +1,41 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.06403756141662598,
+  "error": null,
+  "finished_utc": "2026-09-28T20:32:03.535118Z",
+  "head_before": "e644977b3bd0533914d98afe0247e5b0cca3644f",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260923-078-segmented-electrode-bout-runtime-equivalence-audit.json",
+  "job_id": "20260923-078-segmented-electrode-bout-runtime-equivalence-audit",
+  "log_path": "agent_pipeline/logs/20260923-078-segmented-electrode-bout-runtime-equivalence-audit.log",
+  "log_sha256": "9ece676b09a7a2da0d1cbf02e1570dbb932a7297a367cd61a543e09773f141d4",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_bout_runtime_equivalence_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_bout_runtime_equivalence_audit.sh",
+  "runner_sha256": "5bf802232b8bd5c617a1d59c599718f034ea40778f26014b0610d9a7cd50ae08",
+  "schema_version": 1,
+  "started_utc": "2026-09-28T20:32:03.468172Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "BOUT++ compiled-runtime coupling/equivalence audit only; no segmented-electrode efficacy or native M3D-C1 electrode-efficacy claim.",
+    "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EQUIVALENCE_NOT_ESTABLISHED",
+    "frozen_gates": {
+      "jpk_improvement_pct_min": 0.1,
+      "width_gain_pct_min": 0.02
+    },
+    "handoff_equivalence_pass": false,
+    "handoff_equivalence_required": true,
+    "pipeline_failure": false,
+    "runtime_evidence_present": false,
+    "schema_version": 1,
+    "zero_equivalence_pass": false,
+    "zero_equivalence_required": true
+  },
+  "summary_path": "validation_runs/tct_segmented_electrode_bout_runtime_equivalence_audit/summary.json",
+  "summary_sha256": "3fa2ad2e083bee36a9cff21793d025b8ecc59366e6fb20a5f743071ab39e4a80",
+  "timed_out": false
+}
