@@ -1,0 +1,22 @@
+job_id=20260923-079-segmented-electrode-bout-runtime-evidence-probe
+started_utc=2026-09-29T00:37:30.893076Z
+head_before=76f4e28826d0dd978f75de905c8943813d5ee43d
+{
+  "schema_version": 1,
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EVIDENCE_UNAVAILABLE",
+  "pipeline_failure": true,
+  "runtime_executable_found": false,
+  "runtime_executable": null,
+  "zero_equivalence_required": true,
+  "zero_equivalence_pass": false,
+  "handoff_equivalence_required": true,
+  "handoff_equivalence_pass": false,
+  "frozen_gates": {
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime evidence probe only; no segmented-electrode efficacy or native M3D-C1 electrode-efficacy claim."
+}
+
+finished_utc=2026-09-29T00:37:31.012301Z
+return_code=0
