@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "job_id": "20260929-080-fair-mast-precursor-bank-expansion",
+  "kind": "experimental_precursor_bank_generalization",
+  "enabled": true,
+  "parent_result_job_id": "20260929-079-fusion-equilibrium-challenge-diiid-intake",
+  "runner": "tools/tct_mechanism_explorer/run_fair_mast_precursor_bank_expansion.sh",
+  "timeout_seconds": 14400,
+  "result_paths": [
+    "validation_runs/tct_precursor_bank_fair_mast_expansion"
+  ],
+  "summary_path": "validation_runs/tct_precursor_bank_fair_mast_expansion/summary.json",
+  "purpose": "Expand the precursor bank onto genuinely unused FAIR-MAST shots without retuning the established Mirnov trigger; test fresh-shot generalization, a per-shot circular-shift null, and exact 2.75/5.25 ms TCT actuator reachability.",
+  "machine": "MAST",
+  "source": "FAIR-MAST public Level-2 archive",
+  "event_marker": "D-alpha morphology triage independent of trigger timing",
+  "frozen_trigger": {
+    "feature": "centre-column poloidal Mirnov channel 2 RMS",
+    "threshold_robust_sigma": 6.0,
+    "retuning_permitted": false
+  },
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "required_controls": [
+    "genuinely unused shot selection",
+    "fixed trigger threshold",
+    "trigger-independent event labeling",
+    "per-shot circular trigger-train shift null",
+    "per-shot and aggregate reporting"
+  ],
+  "claim_boundary": "Retrospective public MAST precursor-generalization audit only. Machine-generated D-alpha morphology labels are not expert-reviewed ELM truth. No causal TCT suppression, measured TCT actuator efficacy, native M3D-C1 validation, reactor-scale claim, or cross-machine validation is permitted from this job."
+}
