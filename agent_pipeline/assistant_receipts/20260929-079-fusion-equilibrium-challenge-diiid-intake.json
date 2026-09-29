@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "20260929-079-fusion-equilibrium-challenge-diiid-intake",
+  "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_ADAPTER_READY_DATA_FETCH_REQUIRED",
+  "pipeline_failure": false,
+  "pipeline_error": null,
+  "interpretation": "The DIII-D Fusion Equilibrium Challenge adapter executed but could not fetch data because the Ubuntu worker Python environment lacks the optional Hugging Face datasets package. This is an environment/dependency limitation, not a scientific negative result. The released DIII-D corpus remains useful for slow equilibrium/state-antecedent and actuator-response timing, but it does not expose the fast Mirnov/D-alpha channels needed for a direct ELM precursor claim.",
+  "machine": "DIII-D",
+  "shot_ids": "Fusion Equilibrium Challenge row indices; upstream release does not expose original DIII-D shot numbers",
+  "new_job_id": "20260929-080-fair-mast-precursor-bank-expansion",
+  "next_step_rationale": "Prioritize a frozen-trigger fresh-shot FAIR-MAST precursor-bank expansion using already supported zarr/numpy tooling. Do not retune on the new shots. After that rung, return to the DIII-D corpus with an isolated dependency bootstrap and keep it classified as slow equilibrium/state antecedent evidence unless an independent fast event marker is available.",
+  "claim_boundary": "DIII-D adapter/dependency finding only; no DIII-D precursor, ELM-control, causal TCT, segmented-electrode, or native M3D-C1 claim.",
+  "timestamp": "2026-09-29T23:03:00Z"
+}
