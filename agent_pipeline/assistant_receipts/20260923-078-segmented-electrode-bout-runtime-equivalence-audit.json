@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "20260923-078-segmented-electrode-bout-runtime-equivalence-audit",
+  "processed_result_commit_or_receipt": "e644977b3bd0533914d98afe0247e5b0cca3644f / agent_pipeline/results/20260923-078-segmented-electrode-bout-runtime-equivalence-audit.json",
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EQUIVALENCE_NOT_ESTABLISHED",
+  "pipeline_failure": false,
+  "interpretation": "Compiled-runtime evidence was absent, so required zero-equivalence and handoff-equivalence gates both failed closed. This is neutral toward segmented-electrode TCT efficacy and does not support any efficacy or native M3D-C1 electrode claim. Frozen width and Jpk gates remain unchanged.",
+  "quantitative_result": {
+    "runtime_evidence_present": false,
+    "zero_equivalence_pass": false,
+    "handoff_equivalence_pass": false,
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "new_job_id": "20260923-079-segmented-electrode-bout-runtime-evidence-probe",
+  "timestamp_utc": "2026-09-29T00:34:00Z"
+}
