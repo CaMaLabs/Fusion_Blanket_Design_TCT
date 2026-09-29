@@ -1,0 +1,10 @@
+job_id=20260929-080-fair-mast-precursor-bank-expansion
+started_utc=2026-09-29T23:00:57.514578Z
+head_before=adf5f00a36fd5a0b66735a88b83f1d0c96009eb6
+Traceback (most recent call last):
+  File "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/run_fair_mast_precursor_bank_expansion.py", line 25, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+finished_utc=2026-09-29T23:00:57.680344Z
+return_code=1
