@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20260929-081-segmented-electrode-bout-runtime-evidence-probe-repair",
+  "parent_result_job_id": "20260923-079-segmented-electrode-bout-runtime-evidence-probe",
+  "enabled": true,
+  "kind": "validation_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "command": [
+    "python3",
+    "tools/tct_mechanism_explorer/run_segmented_electrode_bout_runtime_evidence_probe_repair.py"
+  ],
+  "declared_summary": "validation_runs/tct_segmented_electrode_bout_runtime_evidence_probe_repair/summary.json",
+  "summary_path": "validation_runs/tct_segmented_electrode_bout_runtime_evidence_probe_repair/summary.json",
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_bout_runtime_evidence_probe_repair"
+  ],
+  "timeout_seconds": 7200,
+  "required_gates": {
+    "zero_equivalence": true,
+    "handoff_equivalence": true,
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime discovery only; no segmented-electrode efficacy, fuel-specific efficacy, or native M3D-C1 electrode-efficacy claim."
+}
