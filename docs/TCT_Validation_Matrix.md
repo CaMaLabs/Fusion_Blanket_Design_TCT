@@ -12,6 +12,17 @@ TCT is treated here as an auxiliary plasma-edge / current-sheet control hypothes
 
 This is not yet a validated reactor claim.
 
+The repository now carries multiple fuel/application tracks. A stability/control result does not automatically validate the particle, nuclear, wall, or energy-conversion assumptions of another track.
+
+Recognized values are:
+
+- `dt_baseline`
+- `pb11_auxiliary`
+- `pb11_primary`
+- `fuel_agnostic_control`
+
+See `docs/PB11_TCT_INTEGRATION.md` for the p-B11/TCT coupling rules.
+
 ## Claim levels
 
 | Level | Label | Meaning | Required support |
@@ -24,6 +35,8 @@ This is not yet a validated reactor claim.
 | L5 | Experimental analog | Bench demo demonstrates related low-energy physics only | Photos/video + measurement notes |
 | L6 | Reactor relevance | Extrapolated reactor benefit | Requires L3/L4 support and uncertainty bounds |
 
+For coupled studies, assign claim level separately to the relevant physics axes. Example: native M3D-C1 MHD at L4 plus surrogate p-B11 particle/energy physics at L2 remains an L2 p-B11 claim.
+
 ## Required result schema
 
 Each validation run should produce a machine-readable summary like:
@@ -34,6 +47,7 @@ Each validation run should produce a machine-readable summary like:
   "baseline_case": "baseline_axisymmetric_001",
   "tool": "boutpp_or_m3dc1_or_proxy",
   "claim_level": "L2",
+  "fuel_track": "fuel_agnostic_control",
   "tct_enabled": true,
   "geometry_description": "structured edge perturbation placeholder",
   "input_files": [],
@@ -44,11 +58,14 @@ Each validation run should produce a machine-readable summary like:
     "edge_heat_flux_peaking_change": null,
     "required_current_or_field": null
   },
+  "pb11_fidelity": null,
   "pass_fail": "inconclusive",
   "failure_modes_observed": [],
   "notes": "Exploratory result; not a reactor validation."
 }
 ```
+
+When `fuel_track` is `pb11_auxiliary` or `pb11_primary`, include a `pb11_fidelity` object describing the modeling level for reactivity, proton slowing/recirculation, radiation, alpha transport/channeling, direct conversion, and boron delivery.
 
 ## Pass / fail definitions
 
@@ -78,6 +95,8 @@ A TCT case should not be called positive unless it satisfies all required criter
 - Result includes baseline and TCT comparison.
 - Claim wording remains limited to the simulated configuration.
 
+For p-B11 coupled work, external MHD validation does not elevate surrogate p-B11 particle/energy physics to L4. The p-B11 axis must independently satisfy its own fidelity requirement.
+
 ## Metrics table
 
 | Metric | Field | Desired result | Hard warning sign |
@@ -90,6 +109,28 @@ A TCT case should not be called positive unless it satisfies all required criter
 | Tolerance sensitivity | `tolerance_sensitivity` | Bounded | Tiny misalignment flips result from helpful to harmful |
 | Failure severity | `failure_modes_observed` | Known and documented | Disruption risk ignored |
 
+### Additional p-B11 metrics
+
+When p-B11 is active, report as many of these as the model supports and mark unavailable quantities explicitly rather than inferring them:
+
+| Metric | Field | Desired interpretation |
+| --- | --- | --- |
+| Gross p-B11 contribution | `pb11_gross_power` | Positive, with provenance |
+| Net p-B11 contribution | `pb11_net_delta` | Positive after all modeled support costs/losses |
+| p-B11 power fraction | `pb11_power_fraction` | Context only; not a standalone success criterion |
+| Proton burnup | `proton_burnup_fraction` | Physically supported, not optimizer-only |
+| Proton loss | `proton_loss_fraction` | Bounded and linked to transport/orbit model |
+| Effective path length | `effective_proton_path_length` | Consistent with the recirculation/loss model |
+| Recirculation power | `recirculation_power` | Included in net balance |
+| Bremsstrahlung | `bremsstrahlung_power` | Included in net balance |
+| Electron loss | `electron_loss_power` | Included in net balance where applicable |
+| Alpha yield | `alpha_yield` | Derived from traceable reaction model |
+| Alpha escape | `alpha_escape_fraction` | Bounded by transport/orbit model |
+| Alpha channeling | `alpha_channeling_power` | Must state whether surrogate or wave-particle modeled |
+| Direct conversion | `direct_conversion_power` | Must include extraction efficiency and geometry assumptions |
+| Boron penalty | `boron_radiation_penalty` | Included in net balance |
+| p-B11 wall load | `wall_heat_load_pb11` | Compatible with engineering limits |
+
 ## Failure modes to document
 
 Every validation report should explicitly check for:
@@ -97,11 +138,20 @@ Every validation report should explicitly check for:
 - degraded confinement,
 - increased edge heat-flux peaking,
 - mode coupling into a worse instability,
-- sensitivity to coil/rib/field alignment,
+- sensitivity to coil/rib/electrode/field alignment,
 - unphysical current density,
 - unmanageable wall loading,
 - overfitting to one toy equilibrium,
 - and claims exceeding the model fidelity.
+
+For p-B11 cases also check:
+
+- recirculation/path-length assumptions dominating the result,
+- radiation/electron losses erasing the p-B11 gain,
+- alpha-channeling or direct-conversion assumptions acting as idealized free energy recovery,
+- boron delivery or impurity loading conflicting with the MHD operating window,
+- TCT electric-field profiles worsening proton or alpha confinement,
+- and positive net results disappearing when a surrogate assumption is replaced by a grounded model.
 
 ## Documentation rules
 
@@ -110,14 +160,20 @@ Use these labels in README files and result summaries:
 - **Implemented** — code exists and runs.
 - **Screened** — simulation proxy produced a reproducible result.
 - **Compared** — result was tested against a baseline.
-- **Externally validated** — result was tested with a recognized external workflow.
+- **Externally validated** — result was tested with a recognized external workflow for the physics actually modeled there.
 - **Speculative** — physically possible idea, but not yet supported by validation.
 - **Rejected / harmful** — tested and performed worse than baseline.
+
+Always state the fuel track and the specific validated physics axis. Avoid shorthand such as “p-B11 externally validated” when only the MHD/control portion was run in an external solver.
 
 ## Current recommended status
 
 Until stronger MHD validation is committed, TCT should be described as:
 
 > Exploratory / hypothesis-level, with repository structure being upgraded toward baseline-comparison validation.
+
+The p-B11 branch should currently be described as:
+
+> Reproducible surrogate/optimization studies with robustness and uncertainty tooling, coupled to a TCT/M3D-C1 handoff, but with p-B11 particle, radiation, recirculation, alpha-channeling, wall-channel, and direct-conversion physics still requiring independent physical validation.
 
 That wording is honest and defensible.
