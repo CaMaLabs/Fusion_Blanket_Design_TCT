@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "job_id": "20260929-079-fusion-equilibrium-challenge-diiid-intake",
+  "kind": "experimental_shot_family_intake",
+  "enabled": true,
+  "parent_result_job_id": "20260923-078-segmented-electrode-bout-runtime-equivalence-audit",
+  "runner": "tools/tct_mechanism_explorer/run_fusion_equilibrium_challenge_tct_intake.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/fusion_equilibrium_challenge_tct_intake"
+  ],
+  "summary_path": "validation_runs/fusion_equilibrium_challenge_tct_intake/summary.json",
+  "source": {
+    "name": "Fusion Equilibrium Challenge",
+    "dataset": "Sophelio/fusion-equilibrium-challenge",
+    "config": "diii_d_train",
+    "license": "CC BY 4.0",
+    "machine": "DIII-D",
+    "identifiers": "dataset row indices; original DIII-D shot numbers are not released"
+  },
+  "diagnostics": [
+    "EFIT psirz 65x65",
+    "PF coil currents and geometry",
+    "plasma current",
+    "Thomson electron temperature/density",
+    "q95",
+    "betaN",
+    "li",
+    "magnetic-axis coordinates",
+    "LCFS/equilibrium scalars",
+    "millisecond timing"
+  ],
+  "claim_boundary": "Experimental observational actuator/equilibrium timing analog only. Do not claim causal TCT validation, ELM control, segmented-electrode equivalence, or native M3D-C1 validation from this dataset.",
+  "declared_summary": "validation_runs/fusion_equilibrium_challenge_tct_intake/summary.json"
+}
