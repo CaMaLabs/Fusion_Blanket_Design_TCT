@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_ADAPTER_READY_DATA_FETCH_REQUIRED",
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "machine": "DIII-D",
+  "dataset_config": "diii_d_train",
+  "shot_identifier_policy": "dataset row index; upstream release does not expose original machine shot numbers",
+  "planned_scope": {
+    "rows": [
+      0,
+      63
+    ],
+    "count": 64
+  },
+  "claim_boundary": "Experimental observational actuator/equilibrium timing analog only; not causal TCT validation and not native M3D-C1.",
+  "tests_planned": [
+    "PF-coil-current to EFIT psi/axis/shape response lag and reachability",
+    "pre-event equilibrium-change timing where an objective event marker can be derived from released signals",
+    "shot-level cross-validation only; never split timesteps across train/test"
+  ],
+  "required_fields": [
+    "efit_times",
+    "efit_psirz",
+    "efit_q95",
+    "efit_beta_n",
+    "efit_li",
+    "efit_r_axis",
+    "efit_z_axis"
+  ],
+  "status": "human_intervention_required",
+  "error": "Python dependencies unavailable: ModuleNotFoundError(\"No module named 'datasets'\")"
+}

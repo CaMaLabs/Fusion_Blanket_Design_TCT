@@ -1,0 +1,58 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.0318751335144043,
+  "error": null,
+  "finished_utc": "2026-09-29T15:23:22.217288Z",
+  "head_before": "c8d1d2728ee9871912664dbff56fc324e889bd8f",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260929-079-fusion-equilibrium-challenge-diiid-intake.json",
+  "job_id": "20260929-079-fusion-equilibrium-challenge-diiid-intake",
+  "log_path": "agent_pipeline/logs/20260929-079-fusion-equilibrium-challenge-diiid-intake.log",
+  "log_sha256": "de3d8870dc9f052e61a78e9ca9fb2b581f32074d49da3fe95cf80332e39a9fda",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/fusion_equilibrium_challenge_tct_intake"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_fusion_equilibrium_challenge_tct_intake.sh",
+  "runner_sha256": "f7896183358467b25b37dabd3573cb426ea5e96867e023debbd47273761a4d40",
+  "schema_version": 1,
+  "started_utc": "2026-09-29T15:23:22.183890Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Experimental observational actuator/equilibrium timing analog only; not causal TCT validation and not native M3D-C1.",
+    "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_ADAPTER_READY_DATA_FETCH_REQUIRED",
+    "dataset_config": "diii_d_train",
+    "error": "Python dependencies unavailable: ModuleNotFoundError(\"No module named 'datasets'\")",
+    "machine": "DIII-D",
+    "planned_scope": {
+      "count": 64,
+      "rows": [
+        0,
+        63
+      ]
+    },
+    "required_fields": [
+      "efit_times",
+      "efit_psirz",
+      "efit_q95",
+      "efit_beta_n",
+      "efit_li",
+      "efit_r_axis",
+      "efit_z_axis"
+    ],
+    "schema_version": 1,
+    "shot_identifier_policy": "dataset row index; upstream release does not expose original machine shot numbers",
+    "source": "Sophelio/fusion-equilibrium-challenge",
+    "status": "human_intervention_required",
+    "tests_planned": [
+      "PF-coil-current to EFIT psi/axis/shape response lag and reachability",
+      "pre-event equilibrium-change timing where an objective event marker can be derived from released signals",
+      "shot-level cross-validation only; never split timesteps across train/test"
+    ]
+  },
+  "summary_path": "validation_runs/fusion_equilibrium_challenge_tct_intake/summary.json",
+  "summary_sha256": "807fb0c250c8c715a826a49e9f8e63f221458c72241c446126bb5416e8973f4f",
+  "timed_out": false
+}
