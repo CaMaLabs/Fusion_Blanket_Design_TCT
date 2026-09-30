@@ -1,0 +1,7 @@
+job_id=20260929-082-fair-mast-precursor-bank-expansion-env-repair
+started_utc=2026-09-30T01:26:12.853552Z
+head_before=e41be909f8edf46e470a857710b7d0678d87b6b0
+No existing Python environment with numpy, scipy, and zarr was found; refusing to install or alter dependencies.
+
+finished_utc=2026-09-30T01:26:13.220533Z
+return_code=2
