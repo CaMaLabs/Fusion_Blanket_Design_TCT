@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "20260930-083-fair-mast-precursor-bank-expansion-pinned-venv",
+  "exact_classification": "FAIR_MAST_PRECURSOR_BANK_PINNED_VENV_DEPENDENCY_GATE_FAILED",
+  "job_class": "experimental_precursor_bank_generalization",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "pipeline_failure": true,
+  "scientific_negative": false,
+  "return_code": 2,
+  "elapsed_seconds": 0.21486496925354004,
+  "shots_analyzed": 0,
+  "events_analyzed": 0,
+  "interpretation": "Pinned .venv-dudson was selected but dependency preflight for numpy/scipy/zarr failed. No FAIR-MAST data were analyzed; neutral toward TCT.",
+  "new_job_id": "20260930-084-fair-mast-pinned-venv-dependency-probe",
+  "timestamp_utc": "2026-09-30T07:14:42Z"
+}
