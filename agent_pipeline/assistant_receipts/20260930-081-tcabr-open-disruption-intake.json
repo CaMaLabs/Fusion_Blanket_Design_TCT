@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20260930-081-tcabr-open-disruption-intake",
+  "processed_result_commit": "1ae72bd4cc57f0d007c347b1513085dedb16faff",
+  "classification": "TCABR_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+  "job_class": "experimental_shot_family_intake",
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Public TCABR corpus access is reproducibly confirmed: 2,189 Ohmic L-mode shots (435 disruptive, 1,754 non-disruptive), 1 us sampling, 20 Mirnov channels plus H-alpha and electrode voltage/current analog channels. This supports proceeding to a frozen-split precursor/reachability audit, but provides no precursor-performance or causal TCT efficacy result by itself.",
+  "machine": "TCABR",
+  "shot_ids": null,
+  "source_record": "Zenodo 21843354",
+  "doi": "10.5281/zenodo.21843354",
+  "evidence_class": "observational_dataset_intake",
+  "quantitative_result": {
+    "total_shots": 2189,
+    "disruptive": 435,
+    "non_disruptive": 1754,
+    "sampling_resolution_us": 1,
+    "data_bytes": 4815231741,
+    "access_status": 200
+  },
+  "tct_mechanism_effect": "neutral",
+  "pb11_fidelity": {
+    "applicable": false,
+    "reason": "TCABR dataset is not a p-B11 validation corpus."
+  },
+  "claim_boundary": "Open TCABR Ohmic L-mode disruption/precursor dataset intake only. Electrode channels are experimental analogs; no causal TCT suppression, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+  "new_job_id": null,
+  "followup_status": "A focused cache/provenance runner was attempted but repository write was blocked by the safety layer; no follow-up job was published.",
+  "processed_utc": "2026-09-30T15:06:31Z"
+}
