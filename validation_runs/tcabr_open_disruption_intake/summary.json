@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "machine": "TCABR",
+  "fuel_track": "fuel_agnostic_control",
+  "source_record": "Zenodo 21843354",
+  "doi": "10.5281/zenodo.21843354",
+  "release": "v1.0.0 (2026-08-09)",
+  "shot_family": {
+    "total": 2189,
+    "non_disruptive": 1754,
+    "disruptive": 435
+  },
+  "sampling_resolution_us": 1.0,
+  "diagnostics": [
+    "IPlasma",
+    "VLoop",
+    "BbMirnovN01-N20",
+    "BobFlux",
+    "CpToroidal",
+    "EletrCurrent",
+    "EletrVoltage",
+    "GasPuffing02",
+    "HardXRay",
+    "HAlfaRef",
+    "IVert01",
+    "IVert02",
+    "VSin"
+  ],
+  "tct_relevance": [
+    "disruption precursor timing",
+    "Mirnov multi-channel precursor generalization",
+    "actuator-latency feasibility",
+    "electrode voltage/current analog timing",
+    "preventative-vs-reactive controller evaluation"
+  ],
+  "claim_boundary": "Open TCABR Ohmic L-mode disruption/precursor dataset. Electrode channels are experimental analogs only; no causal TCT, segmented-electrode efficacy, p-B11 reactivity, alpha transport, or reactor-scale claim.",
+  "pb11_fidelity": {
+    "applicable": false,
+    "reason": "TCABR dataset is not a p-B11 validation corpus."
+  },
+  "access": {
+    "data": {
+      "url": "https://zenodo.org/records/21843354/files/tcabr_data.nc?download=1",
+      "status": 200,
+      "content_length": "4815231741",
+      "content_type": "application/octet-stream"
+    },
+    "tools": {
+      "url": "https://zenodo.org/records/21843354/files/tcabr_tools.py?download=1",
+      "status": 200,
+      "content_length": "26997",
+      "content_type": "application/octet-stream"
+    }
+  },
+  "created_utc": "2026-09-30T15:06:02.362147+00:00",
+  "tools_sha256": "a246381883e9c435e9731cfd14aadacb8578e3da9c77c893845dfe55cf9e8b74",
+  "tools_bytes": 26997,
+  "classification": "TCABR_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+  "next_experiment": "Download/cache tcabr_data.nc once, stratify disruptive/non-disruptive shots, freeze a train/test split, and measure Mirnov/H-alpha/electrode precursor lead distributions with shuffled/circular-shift controls against 2.75 ms and 5.25 ms TCT budgets."
+}

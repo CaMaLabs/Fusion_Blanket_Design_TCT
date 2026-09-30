@@ -1,0 +1,86 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 2.569709062576294,
+  "error": null,
+  "finished_utc": "2026-09-30T15:06:04.889338Z",
+  "head_before": "1ae72bd4cc57f0d007c347b1513085dedb16faff",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260930-081-tcabr-open-disruption-intake.json",
+  "job_id": "20260930-081-tcabr-open-disruption-intake",
+  "log_path": "agent_pipeline/logs/20260930-081-tcabr-open-disruption-intake.log",
+  "log_sha256": "094ce2800ec8508dbca52036bde9a9f9e3272765fe2a70240fb2e61ed5d94d93",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcabr_open_disruption_intake"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tcabr_open_disruption_intake.sh",
+  "runner_sha256": "96bfbb9b4df453e82dc84724bfded96edecd1dfa52bb2814315ea968c6e5db1d",
+  "schema_version": 1,
+  "started_utc": "2026-09-30T15:06:02.318403Z",
+  "success": true,
+  "summary": {
+    "access": {
+      "data": {
+        "content_length": "4815231741",
+        "content_type": "application/octet-stream",
+        "status": 200,
+        "url": "https://zenodo.org/records/21843354/files/tcabr_data.nc?download=1"
+      },
+      "tools": {
+        "content_length": "26997",
+        "content_type": "application/octet-stream",
+        "status": 200,
+        "url": "https://zenodo.org/records/21843354/files/tcabr_tools.py?download=1"
+      }
+    },
+    "claim_boundary": "Open TCABR Ohmic L-mode disruption/precursor dataset. Electrode channels are experimental analogs only; no causal TCT, segmented-electrode efficacy, p-B11 reactivity, alpha transport, or reactor-scale claim.",
+    "classification": "TCABR_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+    "created_utc": "2026-09-30T15:06:02.362147+00:00",
+    "diagnostics": [
+      "IPlasma",
+      "VLoop",
+      "BbMirnovN01-N20",
+      "BobFlux",
+      "CpToroidal",
+      "EletrCurrent",
+      "EletrVoltage",
+      "GasPuffing02",
+      "HardXRay",
+      "HAlfaRef",
+      "IVert01",
+      "IVert02",
+      "VSin"
+    ],
+    "doi": "10.5281/zenodo.21843354",
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "TCABR",
+    "next_experiment": "Download/cache tcabr_data.nc once, stratify disruptive/non-disruptive shots, freeze a train/test split, and measure Mirnov/H-alpha/electrode precursor lead distributions with shuffled/circular-shift controls against 2.75 ms and 5.25 ms TCT budgets.",
+    "pb11_fidelity": {
+      "applicable": false,
+      "reason": "TCABR dataset is not a p-B11 validation corpus."
+    },
+    "release": "v1.0.0 (2026-08-09)",
+    "sampling_resolution_us": 1.0,
+    "schema_version": 1,
+    "shot_family": {
+      "disruptive": 435,
+      "non_disruptive": 1754,
+      "total": 2189
+    },
+    "source_record": "Zenodo 21843354",
+    "tct_relevance": [
+      "disruption precursor timing",
+      "Mirnov multi-channel precursor generalization",
+      "actuator-latency feasibility",
+      "electrode voltage/current analog timing",
+      "preventative-vs-reactive controller evaluation"
+    ],
+    "tools_bytes": 26997,
+    "tools_sha256": "a246381883e9c435e9731cfd14aadacb8578e3da9c77c893845dfe55cf9e8b74"
+  },
+  "summary_path": "validation_runs/tcabr_open_disruption_intake/summary.json",
+  "summary_sha256": "7e313907af5bc65cad96caf3b4c7d2f99b6ea294c7b2e71b8ceae2896eb1a638",
+  "timed_out": false
+}
