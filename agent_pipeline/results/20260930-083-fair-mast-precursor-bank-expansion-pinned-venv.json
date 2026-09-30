@@ -1,0 +1,27 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.21486496925354004,
+  "error": null,
+  "finished_utc": "2026-09-30T06:47:02.007516Z",
+  "head_before": "9530168f634e1b975a9f8cb18739c3db76bb0870",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260930-083-fair-mast-precursor-bank-expansion-pinned-venv.json",
+  "job_id": "20260930-083-fair-mast-precursor-bank-expansion-pinned-venv",
+  "log_path": "agent_pipeline/logs/20260930-083-fair-mast-precursor-bank-expansion-pinned-venv.log",
+  "log_sha256": "684179167dd0dfaa2e77910a361bfa6391458f84efb2310e14dcc553acacf384",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tct_precursor_bank_fair_mast_expansion"
+  ],
+  "return_code": 2,
+  "runner": "tools/tct_mechanism_explorer/run_fair_mast_precursor_bank_expansion_env_repair.sh",
+  "runner_sha256": "61101dece4a8a0610037900f5a69326f25f1bb0c945bcec7dd4838a73b313e3d",
+  "schema_version": 1,
+  "started_utc": "2026-09-30T06:47:01.791418Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/tct_precursor_bank_fair_mast_expansion/summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}

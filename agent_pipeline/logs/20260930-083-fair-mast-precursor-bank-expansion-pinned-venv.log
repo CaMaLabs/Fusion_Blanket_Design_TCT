@@ -1,0 +1,7 @@
+job_id=20260930-083-fair-mast-precursor-bank-expansion-pinned-venv
+started_utc=2026-09-30T06:47:01.791418Z
+head_before=9530168f634e1b975a9f8cb18739c3db76bb0870
+Required analysis dependencies missing from /mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/.venv-dudson/bin/python (numpy, scipy, zarr); refusing to install or alter dependencies.
+
+finished_utc=2026-09-30T06:47:02.007485Z
+return_code=2
