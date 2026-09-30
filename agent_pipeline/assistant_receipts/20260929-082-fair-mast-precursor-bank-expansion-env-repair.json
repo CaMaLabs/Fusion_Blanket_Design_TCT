@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "job_id": "20260929-082-fair-mast-precursor-bank-expansion-env-repair",
+  "processed_result_sha": "e80d65b77569a997b025ce23658967c41a974839",
+  "exact_classification_or_finding": "FAIR_MAST_PRECURSOR_BANK_ENVIRONMENT_REPAIR_NOT_EXECUTED",
+  "fuel_track": "fuel_agnostic_control",
+  "job_class": "experimental_precursor_bank_generalization",
+  "machine": "MAST",
+  "shot_ids": [],
+  "interpretation": "Pipeline/environment failure before scientific analysis. The worker executed the pre-fix environment-search wrapper from head e41be909f8edf46e470a857710b7d0678d87b6b0 and exited with return code 2 after finding no candidate interpreter with numpy, scipy, and zarr. Zero shots/events were analyzed, so this result is neutral toward TCT precursor generalization and 2.75/5.25 ms actuator reachability.",
+  "experimental_evidence_class": "observational-retrospective-planned-but-not-executed",
+  "claim_boundary": "No causal TCT suppression, actuator efficacy, native M3D-C1 validation, reactor-scale claim, or cross-machine validation. No scientific conclusion from this failed run.",
+  "pb11_fidelity_limits": null,
+  "new_job_id": "20260930-083-fair-mast-precursor-bank-expansion-pinned-venv",
+  "timestamp_utc": "2026-09-30T06:45:00Z"
+}
