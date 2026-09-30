@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20260929-080-fair-mast-precursor-bank-expansion",
+  "processed_result_receipt": "agent_pipeline/results/20260929-080-fair-mast-precursor-bank-expansion.json",
+  "processed_result_commit": "adf5f00a36fd5a0b66735a88b83f1d0c96009eb6",
+  "job_class": "experimental_precursor_bank_generalization",
+  "fuel_track": "fuel_agnostic_control",
+  "classification": "PIPELINE_FAILURE_MISSING_NUMPY",
+  "pipeline_failure": true,
+  "machine": "MAST",
+  "shot_ids": [],
+  "quantitative_result": {
+    "elapsed_seconds": 0.16448068618774414,
+    "return_code": 1,
+    "shots_analyzed": 0,
+    "events_analyzed": 0
+  },
+  "interpretation": "The FAIR-MAST precursor-generalization analysis did not start because the bare python3 environment lacked numpy. This is a pipeline/environment failure and is neutral toward the tested precursor-generalization/TCT reachability mechanism. No scientific conclusion is permitted.",
+  "experimental_claim_boundary": "Retrospective public MAST precursor-generalization audit only; no causal TCT suppression or actuator-efficacy claim. No shot-level result was produced.",
+  "new_job_id": "20260929-082-fair-mast-precursor-bank-expansion-env-repair",
+  "timestamp_utc": "2026-09-30T01:23:00Z"
+}
