@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20260930-081-tcabr-open-disruption-intake",
+  "kind": "experimental_shot_family_intake",
+  "enabled": true,
+  "parent_result_job_id": "20260929-080-fair-mast-precursor-bank-expansion",
+  "runner": "tools/tct_mechanism_explorer/run_tcabr_open_disruption_intake.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tcabr_open_disruption_intake"
+  ],
+  "summary_path": "validation_runs/tcabr_open_disruption_intake/summary.json",
+  "machine": "TCABR",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "Zenodo 10.5281/zenodo.21843354",
+  "purpose": "Confirm reproducible public access to the newly released 2,189-shot TCABR disruption corpus and stage it for TCT precursor/controller validation without downloading the 4.8 GB NetCDF until access is verified.",
+  "diagnostics": [
+    "20 Mirnov coils at 1 us",
+    "IPlasma",
+    "VLoop",
+    "HAlfaRef",
+    "EletrCurrent",
+    "EletrVoltage",
+    "GasPuffing02",
+    "HardXRay",
+    "vertical-field currents",
+    "VSin"
+  ],
+  "required_followup": "On access confirmation, queue a stratified frozen-split precursor audit using Mirnov/H-alpha/electrode channels, circular-shift/shuffled-event controls, and exact 2.75/5.25 ms reachability.",
+  "claim_boundary": "Experimental TCABR Ohmic L-mode disruption corpus. Electrode channels are analogs only. No causal TCT suppression or segmented-electrode efficacy claim; no p-B11 physics claim."
+}
