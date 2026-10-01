@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "job_id": "20260930-084-tcabr-precursor-cache-provenance-audit",
+  "kind": "experimental_shot_cache_provenance",
+  "enabled": true,
+  "parent_result_job_id": "20260930-081-tcabr-open-disruption-intake",
+  "runner": "tools/tct_mechanism_explorer/run_tcabr_precursor_cache_audit.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/tcabr_precursor_cache_audit"
+  ],
+  "summary_path": "validation_runs/tcabr_precursor_cache_audit/summary.json",
+  "machine": "TCABR",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "Zenodo 10.5281/zenodo.21843354",
+  "purpose": "Freeze TCABR public-corpus file provenance and cache metadata before any precursor feature evaluation, preserving a clean observational claim boundary and the exact 2.75/5.25 ms TCT reachability budgets for the subsequent analysis.",
+  "diagnostics": [
+    "Mirnov",
+    "H-alpha",
+    "electrode voltage",
+    "electrode current"
+  ],
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "required_controls": [
+    "freeze stratified disruptive/non-disruptive split before feature evaluation",
+    "persist source file names, sizes, checksums, and download provenance",
+    "per-shot circular trigger-train shift null in subsequent precursor audit",
+    "shuffled event timing null in subsequent precursor audit",
+    "no threshold retuning to force reachability"
+  ],
+  "claim_boundary": "Experimental TCABR Ohmic L-mode corpus provenance/cache audit only. Electrode channels remain observational analogs. No causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale claim."
+}
