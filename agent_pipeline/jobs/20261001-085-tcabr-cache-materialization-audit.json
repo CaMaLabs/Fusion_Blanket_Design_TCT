@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "20261001-085-tcabr-cache-materialization-audit",
+  "kind": "experimental_shot_family_cache_materialization",
+  "enabled": true,
+  "parent_result_job_id": "20260930-084-tcabr-precursor-cache-provenance-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcabr_cache_materialization_audit.sh",
+  "timeout_seconds": 21600,
+  "result_paths": [
+    "validation_runs/tcabr_cache_materialization_audit",
+    "validation_runs/tcabr_cache"
+  ],
+  "summary_path": "validation_runs/tcabr_cache_materialization_audit/summary.json",
+  "machine": "TCABR",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "Zenodo 10.5281/zenodo.21843354",
+  "purpose": "Materialize and integrity-check the exact TCABR corpus frozen by job 084 before any precursor feature extraction or train/test split is performed.",
+  "expected_files": [
+    {
+      "name": "tcabr_data.nc",
+      "size": 4815231741,
+      "md5": "0846b3ba681aacf623a1c883f9559e51"
+    },
+    {
+      "name": "tcabr_tools.py",
+      "size": 26997,
+      "md5": "7947a127dd75af53fab0dbcbab6ac64d"
+    }
+  ],
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "required_controls": [
+    "exact byte-size verification",
+    "exact MD5 verification",
+    "no trigger retuning",
+    "no precursor feature evaluation in this job"
+  ],
+  "claim_boundary": "Experimental TCABR corpus materialization/integrity only. No causal TCT suppression, precursor efficacy, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale claim is permitted from this job."
+}
