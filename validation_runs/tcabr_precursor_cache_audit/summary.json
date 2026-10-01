@@ -1,0 +1,44 @@
+{
+  "claim_boundary": "Experimental TCABR Ohmic L-mode corpus provenance/cache audit only. Electrode channels remain observational analogs. No causal TCT suppression, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+  "classification": "TCABR_PRECURSOR_CACHE_PROVENANCE_AUDITED",
+  "file_count": 2,
+  "files": [
+    {
+      "checksum": "md5:0846b3ba681aacf623a1c883f9559e51",
+      "download": "https://zenodo.org/api/records/21843354/files/tcabr_data.nc/content",
+      "key": "tcabr_data.nc",
+      "size": 4815231741
+    },
+    {
+      "checksum": "md5:7947a127dd75af53fab0dbcbab6ac64d",
+      "download": "https://zenodo.org/api/records/21843354/files/tcabr_tools.py/content",
+      "key": "tcabr_tools.py",
+      "size": 26997
+    }
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCABR",
+  "next_analysis": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "diagnostics": [
+      "Mirnov",
+      "H-alpha",
+      "electrode voltage",
+      "electrode current"
+    ],
+    "frozen_split": "stratified disruptive/non-disruptive split; exact split to be persisted before feature evaluation",
+    "null_controls": [
+      "per-shot circular trigger-train shift",
+      "shuffled event timing"
+    ],
+    "retuning_permitted": false
+  },
+  "pipeline_failure": false,
+  "record_id": 21843354,
+  "source": "Zenodo 10.5281/zenodo.21843354",
+  "success": true,
+  "title": "Experimental Plasma Discharge Dataset from the TCABR Tokamak"
+}

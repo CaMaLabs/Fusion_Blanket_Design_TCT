@@ -1,0 +1,70 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.815406322479248,
+  "error": null,
+  "finished_utc": "2026-10-01T05:10:06.956449Z",
+  "head_before": "f7171cbff3884e7a6a013e8773126ca67b04ea8e",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20260930-084-tcabr-precursor-cache-provenance-audit.json",
+  "job_id": "20260930-084-tcabr-precursor-cache-provenance-audit",
+  "log_path": "agent_pipeline/logs/20260930-084-tcabr-precursor-cache-provenance-audit.log",
+  "log_sha256": "43d62293f87799ea76260403c227ca534b9760890fb8db89cc1481a29e0b1643",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcabr_precursor_cache_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tcabr_precursor_cache_audit.sh",
+  "runner_sha256": "4b307c2677bfa0ab4ecc9d3191517238681383af1e67de75f82fac141b332786",
+  "schema_version": 1,
+  "started_utc": "2026-10-01T05:10:06.139990Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Experimental TCABR Ohmic L-mode corpus provenance/cache audit only. Electrode channels remain observational analogs. No causal TCT suppression, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+    "classification": "TCABR_PRECURSOR_CACHE_PROVENANCE_AUDITED",
+    "file_count": 2,
+    "files": [
+      {
+        "checksum": "md5:0846b3ba681aacf623a1c883f9559e51",
+        "download": "https://zenodo.org/api/records/21843354/files/tcabr_data.nc/content",
+        "key": "tcabr_data.nc",
+        "size": 4815231741
+      },
+      {
+        "checksum": "md5:7947a127dd75af53fab0dbcbab6ac64d",
+        "download": "https://zenodo.org/api/records/21843354/files/tcabr_tools.py/content",
+        "key": "tcabr_tools.py",
+        "size": 26997
+      }
+    ],
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "TCABR",
+    "next_analysis": {
+      "actuator_budgets_ms": {
+        "prebiased_fast": 2.75,
+        "prebiased_nominal": 5.25
+      },
+      "diagnostics": [
+        "Mirnov",
+        "H-alpha",
+        "electrode voltage",
+        "electrode current"
+      ],
+      "frozen_split": "stratified disruptive/non-disruptive split; exact split to be persisted before feature evaluation",
+      "null_controls": [
+        "per-shot circular trigger-train shift",
+        "shuffled event timing"
+      ],
+      "retuning_permitted": false
+    },
+    "pipeline_failure": false,
+    "record_id": 21843354,
+    "source": "Zenodo 10.5281/zenodo.21843354",
+    "success": true,
+    "title": "Experimental Plasma Discharge Dataset from the TCABR Tokamak"
+  },
+  "summary_path": "validation_runs/tcabr_precursor_cache_audit/summary.json",
+  "summary_sha256": "4b7b7154850f4a4aac555b9cfd64dec3956c847211eb2dfc91b6bc03af01e1e0",
+  "timed_out": false
+}
