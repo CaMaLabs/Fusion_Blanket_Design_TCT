@@ -36,6 +36,7 @@ JOBS = PIPELINE / "jobs"
 RESULTS = PIPELINE / "results"
 LOGS = PIPELINE / "logs"
 LOCK = REPO / ".git" / "tct-agent-pipeline.lock"
+RUNTIME_WRAPPER = REPO / "tools" / "agent_pipeline" / "run_tct_job.sh"
 
 JOB_ID_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
 RUNNER_RE = re.compile(r"^tools/tct_mechanism_explorer/run_[A-Za-z0-9_.-]+\.sh$")
@@ -161,6 +162,9 @@ def execute_job(job_path: Path, job: dict) -> dict:
     started = now_utc()
     head_before = git("rev-parse", "HEAD").stdout.strip()
 
+    if not RUNTIME_WRAPPER.exists():
+        raise RuntimeError(f"runtime wrapper missing: {RUNTIME_WRAPPER}")
+
     print(f"[tct-worker] running {job_id}: {runner.relative_to(REPO)}", flush=True)
     rc: int | None = None
     error: str | None = None
@@ -171,7 +175,7 @@ def execute_job(job_path: Path, job: dict) -> dict:
         log.flush()
         try:
             p = subprocess.Popen(
-                ["bash", str(runner)],
+                ["bash", str(RUNTIME_WRAPPER), str(runner)],
                 cwd=REPO,
                 text=True,
                 stdout=log,
@@ -212,6 +216,8 @@ def execute_job(job_path: Path, job: dict) -> dict:
         "job_file": str(job_path.relative_to(REPO)),
         "runner": str(runner.relative_to(REPO)),
         "runner_sha256": sha256(runner),
+        "runtime_wrapper": str(RUNTIME_WRAPPER.relative_to(REPO)),
+        "runtime_wrapper_sha256": sha256(RUNTIME_WRAPPER),
         "branch": BRANCH,
         "head_before": head_before,
         "started_utc": started,
