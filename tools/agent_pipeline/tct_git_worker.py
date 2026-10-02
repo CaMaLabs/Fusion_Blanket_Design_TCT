@@ -97,7 +97,13 @@ def ensure_repo_ready() -> None:
 
 def pull_latest() -> None:
     git("fetch", REMOTE, BRANCH)
-    git("merge", "--ff-only", f"{REMOTE}/{BRANCH}")
+    # This branch has two legitimate writers: the research side publishes jobs
+    # and the Ubuntu worker publishes results. If both advance before the next
+    # poll, the local branch can diverge even with a clean working tree. Rebase
+    # local-only worker commits onto the remote head rather than deadlocking on
+    # an ff-only merge. ensure_repo_ready() has already rejected tracked/staged
+    # working-tree edits before we reach this point.
+    git("rebase", f"{REMOTE}/{BRANCH}")
 
 
 def load_jobs() -> list[tuple[Path, dict]]:
