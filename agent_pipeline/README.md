@@ -13,6 +13,21 @@ This directory turns the research branch into a small asynchronous job queue bet
 
 The machine worker intentionally runs one job per invocation so sequential experiments can depend on the interpretation of the previous result.
 
+## Canonical runtime environment
+
+Every queued runner is launched through `tools/agent_pipeline/run_tct_job.sh` before the runner itself starts. This is the pipeline runtime invariant, rather than an optional runner convention.
+
+The bootstrap:
+
+- uses `$REPO/.venv-dudson/bin/python` as the canonical analysis interpreter and exports it as `TCT_PYTHON`;
+- puts that venv first on `PATH`, so bare `python`/`python3` calls do not silently fall back to system Python;
+- activates the established Spack `m3dc1-deps` environment when available, then restores the audit venv to the front of `PATH`;
+- uses `/tmp/tct-$USER` for `TMPDIR` and the OpenMPI temporary-directory base;
+- prints runtime provenance (Python executable/version, venv, temp directory, and Spack environment) at the start of each job log;
+- fails early if the canonical audit venv is missing rather than allowing an ambiguous interpreter fallback.
+
+Runner-specific dependencies should be checked against `$TCT_PYTHON`. A dependency failure is a pipeline/infrastructure failure, not a scientific negative result. Runners may deliberately use another interpreter only when the job requires it and the choice is explicit in the runner/provenance.
+
 ## Job schema
 
 Example:
