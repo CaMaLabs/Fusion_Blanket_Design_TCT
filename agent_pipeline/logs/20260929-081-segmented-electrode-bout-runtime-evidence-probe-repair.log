@@ -1,0 +1,33 @@
+job_id=20260929-081-segmented-electrode-bout-runtime-evidence-probe-repair
+started_utc=2026-10-06T05:12:47.123504Z
+head_before=769e33bfc498f0124664c69c5ace34b45d96726a
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EXECUTABLE_IDENTIFIED",
+  "pipeline_failure": false,
+  "fuel_track": "fuel_agnostic_control",
+  "runtime_executable_found": true,
+  "runtime_executable": "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/validation_models/tct_current_sheet/build-openmpi/tct_current_sheet",
+  "runtime_executable_candidates": [
+    "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/validation_models/tct_current_sheet/build-openmpi/tct_current_sheet",
+    "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/validation_models/tct_current_sheet/build/tct_current_sheet"
+  ],
+  "zero_equivalence_required": true,
+  "zero_equivalence_pass": false,
+  "handoff_equivalence_required": true,
+  "handoff_equivalence_pass": false,
+  "frozen_gates": {
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime discovery only; no segmented-electrode efficacy, fuel-specific efficacy, or native M3D-C1 electrode-efficacy claim."
+}
+
+finished_utc=2026-10-06T05:12:48.540410Z
+return_code=0
