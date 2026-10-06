@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-089-tokamark-source-metadata-fetch-audit",
+  "processed_result_blob_sha": "9495fb2203e5047d66f29a242eee9c0bd4ec747f",
+  "processed_result_head_before": "ce2d6da54bf6eb9298b737038828b6798b7f7e9d",
+  "processed_summary_sha256": "653bbfe4bcc4036a15a63c8d3becea513c8cf999cbdf06a216ff122f5363c816",
+  "classification": "TOKAMARK_MAST_SOURCE_METADATA_FETCH_AUDIT",
+  "job_class": "experimental_source_metadata_fetch",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [],
+  "evidence_class": "observational_source_metadata",
+  "pipeline_failure": true,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 1.066114902496338,
+    "resolved_sections": 0,
+    "http_404_errors": 2,
+    "bulk_download_performed": false
+  },
+  "interpretation": "Pipeline/data-access failure: the runner queried UKAEA-IBM-STFC/tokamark-v1 through the GitHub repository API, but that identifier is the Hugging Face dataset. No source metadata were resolved, so this result is neutral toward the tested TCT precursor/reachability mechanism.",
+  "mechanism_effect": "neutral",
+  "claim_boundary": "No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+  "pb11_fidelity_limits": "Not a p-B11 job; no p-B11 inference.",
+  "frozen_controls": {
+    "prebiased_fast_ms": 2.75,
+    "prebiased_nominal_ms": 5.25,
+    "width_gate_pct_gt": 0.02,
+    "Jpk_gate_pct_le": 0.1,
+    "retuning_permitted": false
+  },
+  "repair": "Use GitHub repository UKAEA-IBM-STFC-Fusion-FMs/tokamark for code/task/split metadata and Hugging Face dataset UKAEA-IBM-STFC/tokamark-v1 for dataset metadata.",
+  "new_job_id": "20261006-090-tokamark-endpoint-metadata-repair",
+  "timestamp": "2026-10-06T15:06:44Z"
+}
