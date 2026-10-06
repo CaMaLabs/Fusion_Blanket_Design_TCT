@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "20261005-086-tokamark-mast-intake-runtime-path-repair",
+  "parent_result_job_id": "20261005-085-tokamark-mast-intake",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_mast_intake.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tokamark_mast_intake"
+  ],
+  "summary_path": "validation_runs/tokamark_mast_intake/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "purpose": "Retry the compact TokaMark MAST intake after job 085 was blocked solely by canonical-runtime path alias validation. Use the repaired runtime wrapper that canonicalizes repo/runner filesystem identities before allow-list enforcement.",
+  "interpretation_contract": {
+    "parent_pipeline_error": "TCT_RUNTIME_ERROR: refusing non-TCT runner due to logical-vs-resolved checkout path alias",
+    "diagnostic_only": true,
+    "do_not_modify_solver_physics": true,
+    "no_bulk_corpus_download": true,
+    "do_not_infer_independent_cross_machine_evidence": true,
+    "do_not_infer_causal_tct_suppression": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Dataset/provenance intake only. TokaMark is a repackaging of FAIR-MAST experimental data; this job does not establish independent cross-machine evidence, causal TCT suppression, actuator efficacy, p-B11 physics, or reactor-scale claims."
+  }
+}
