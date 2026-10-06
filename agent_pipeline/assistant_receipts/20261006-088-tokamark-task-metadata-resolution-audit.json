@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-088-tokamark-task-metadata-resolution-audit",
+  "classification": "TOKAMARK_MAST_TASK_METADATA_RESOLUTION_AUDIT_STAGED",
+  "fuel_track": "fuel_agnostic_control",
+  "job_class": "experimental_metadata_resolution",
+  "interpretation": "Runner completed successfully but staged the metadata requirements rather than resolving them. No individual MAST shots or precursor lead-time statistics were evaluated. This is a successful provenance/staging result, not a pipeline failure and not a scientific efficacy result.",
+  "machine": "MAST",
+  "shot_ids": [],
+  "diagnostic_provenance": "Not yet resolved by this job.",
+  "timing_calibration": "Not yet resolved by this job.",
+  "evidence_class": "observational_metadata_resolution",
+  "pipeline_failure": false,
+  "mechanism_effect": "neutral",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 0.5650055408477783,
+    "prebiased_fast_budget_ms": 2.75,
+    "prebiased_nominal_budget_ms": 5.25,
+    "bulk_download_performed": false
+  },
+  "claim_boundary": "TokaMark repackaged FAIR-MAST MAST metadata/provenance staging only. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+  "pb11_fidelity_limits": "Not applicable; fuel_agnostic_control.",
+  "new_job_id": "20261006-089-tokamark-source-metadata-fetch-audit",
+  "processed_result_head_before": "f46310b6bb61d0d44d8c0dce67e67fa2e82f905b",
+  "result_summary_sha256": "cdcfe252a96a0c76503d5cd3d24e8f8cce3e5882efc35cfc254a12e4339529d3",
+  "result_log_sha256": "93261300da051b289c57708df7db00ea9b94914e61108e5e8d92359a256d3bf3",
+  "timestamp": "2026-10-06T09:17:12-07:00"
+}
