@@ -1,0 +1,50 @@
+job_id=20261006-089-tokamark-source-metadata-fetch-audit
+started_utc=2026-10-06T10:31:50.870331Z
+head_before=ce2d6da54bf6eb9298b737038828b6798b7f7e9d
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-06T10:31:51.913320+00:00",
+  "classification": "TOKAMARK_MAST_SOURCE_METADATA_FETCH_AUDIT",
+  "machine": "MAST",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "evidence_class": "observational_source_metadata",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "network_fetch_attempted": true,
+  "bulk_download_performed": false,
+  "resolved_sections": [],
+  "errors": {
+    "repo": "HTTPError: HTTP Error 404: Not Found",
+    "root": "HTTPError: HTTP Error 404: Not Found"
+  },
+  "required_resolution": [
+    "task identifiers",
+    "smallest public batch/artifact",
+    "MAST shot IDs",
+    "campaign or acquisition ordering",
+    "target/event definition",
+    "diagnostic provenance",
+    "sampling/timing metadata"
+  ],
+  "controls_preserved": [
+    "frozen temporal holdout",
+    "2.75 ms fast reachability budget",
+    "5.25 ms nominal reachability budget",
+    "circular trigger-train shift null",
+    "shuffled-event null",
+    "no trigger retuning"
+  ],
+  "claim_boundary": "Public-source metadata fetch only for TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim."
+}
+
+finished_utc=2026-10-06T10:31:51.937260Z
+return_code=0

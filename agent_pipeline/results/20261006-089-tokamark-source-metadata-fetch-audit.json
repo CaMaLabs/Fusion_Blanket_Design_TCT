@@ -1,0 +1,77 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.066114902496338,
+  "error": null,
+  "finished_utc": "2026-10-06T10:31:51.937313Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1355,
+    "selected_result_files": [
+      "validation_runs/tokamark_source_metadata_fetch_audit/source_metadata.json",
+      "validation_runs/tokamark_source_metadata_fetch_audit/summary.json"
+    ]
+  },
+  "head_before": "ce2d6da54bf6eb9298b737038828b6798b7f7e9d",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261006-089-tokamark-source-metadata-fetch-audit.json",
+  "job_id": "20261006-089-tokamark-source-metadata-fetch-audit",
+  "log_path": "agent_pipeline/logs/20261006-089-tokamark-source-metadata-fetch-audit.log",
+  "log_sha256": "8572a7e543e6b192126915a20f3a842f5b0f6c1e9b600c2f03b961f5f50c01cf",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_source_metadata_fetch_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_source_metadata_fetch_audit.sh",
+  "runner_sha256": "b818506c713c2e0965ac8b63cd41e41fdab3e7834657f3d9a0e1b61719c7483a",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-06T10:31:50.870331Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "claim_boundary": "Public-source metadata fetch only for TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+    "classification": "TOKAMARK_MAST_SOURCE_METADATA_FETCH_AUDIT",
+    "controls_preserved": [
+      "frozen temporal holdout",
+      "2.75 ms fast reachability budget",
+      "5.25 ms nominal reachability budget",
+      "circular trigger-train shift null",
+      "shuffled-event null",
+      "no trigger retuning"
+    ],
+    "created_utc": "2026-10-06T10:31:51.913320+00:00",
+    "errors": {
+      "repo": "HTTPError: HTTP Error 404: Not Found",
+      "root": "HTTPError: HTTP Error 404: Not Found"
+    },
+    "evidence_class": "observational_source_metadata",
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "MAST",
+    "network_fetch_attempted": true,
+    "required_resolution": [
+      "task identifiers",
+      "smallest public batch/artifact",
+      "MAST shot IDs",
+      "campaign or acquisition ordering",
+      "target/event definition",
+      "diagnostic provenance",
+      "sampling/timing metadata"
+    ],
+    "resolved_sections": [],
+    "schema_version": 1,
+    "source": "UKAEA-IBM-STFC/tokamark-v1"
+  },
+  "summary_path": "validation_runs/tokamark_source_metadata_fetch_audit/summary.json",
+  "summary_sha256": "653bbfe4bcc4036a15a63c8d3becea513c8cf999cbdf06a216ff122f5363c816",
+  "timed_out": false
+}

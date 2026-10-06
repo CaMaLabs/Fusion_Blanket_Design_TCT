@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-06T10:31:51.913320+00:00",
+  "classification": "TOKAMARK_MAST_SOURCE_METADATA_FETCH_AUDIT",
+  "machine": "MAST",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "evidence_class": "observational_source_metadata",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "network_fetch_attempted": true,
+  "bulk_download_performed": false,
+  "resolved_sections": [],
+  "errors": {
+    "repo": "HTTPError: HTTP Error 404: Not Found",
+    "root": "HTTPError: HTTP Error 404: Not Found"
+  },
+  "required_resolution": [
+    "task identifiers",
+    "smallest public batch/artifact",
+    "MAST shot IDs",
+    "campaign or acquisition ordering",
+    "target/event definition",
+    "diagnostic provenance",
+    "sampling/timing metadata"
+  ],
+  "controls_preserved": [
+    "frozen temporal holdout",
+    "2.75 ms fast reachability budget",
+    "5.25 ms nominal reachability budget",
+    "circular trigger-train shift null",
+    "shuffled-event null",
+    "no trigger retuning"
+  ],
+  "claim_boundary": "Public-source metadata fetch only for TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim."
+}
