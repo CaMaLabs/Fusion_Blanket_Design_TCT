@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-091-tokamark-canonical-path-metadata-audit",
+  "kind": "experimental_source_metadata_repair",
+  "enabled": true,
+  "parent_result_job_id": "20261006-090-tokamark-endpoint-metadata-repair",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_canonical_path_metadata_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tokamark_canonical_path_metadata_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_canonical_path_metadata_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "source_code_repository": "UKAEA-IBM-STFC-Fusion-FMs/tokamark",
+  "purpose": "Resolve the README-confirmed canonical TokaMark temporal split path and stage exact MAST shot/campaign metadata before any precursor reachability statistics.",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "interpretation_contract": {
+    "no_bulk_download": true,
+    "retuning_permitted": false,
+    "preserve_observational_claim_boundary": true,
+    "do_not_apply_m3dc1_only_gates_to_imported_data": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1
+  }
+}
