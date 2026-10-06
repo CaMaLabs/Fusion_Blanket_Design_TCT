@@ -39,7 +39,9 @@ LOCK = REPO / ".git" / "tct-agent-pipeline.lock"
 RUNTIME_WRAPPER = REPO / "tools" / "agent_pipeline" / "run_tct_job.sh"
 
 JOB_ID_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
-RUNNER_RE = re.compile(r"^tools/tct_mechanism_explorer/run_[A-Za-z0-9_.-]+\.sh$")
+RUNNER_RE = re.compile(r"^tools/tct_mechanism_explorer/run_[A-Za-z0-9_.-]+\\.sh$")
+MAX_ARTIFACT_FILE_BYTES = int(os.environ.get("TCT_PIPELINE_MAX_ARTIFACT_FILE_BYTES", str(95 * 1024 * 1024)))
+MAX_ARTIFACT_TOTAL_BYTES = int(os.environ.get("TCT_PIPELINE_MAX_ARTIFACT_TOTAL_BYTES", str(256 * 1024 * 1024)))
 
 
 def now_utc() -> str:
@@ -104,6 +106,48 @@ def pull_latest() -> None:
     # an ff-only merge. ensure_repo_ready() has already rejected tracked/staged
     # working-tree edits before we reach this point.
     git("rebase", f"{REMOTE}/{BRANCH}")
+
+
+def publish_local_commits() -> None:
+    """Do not silently idle when prior result commits exist only on this host."""
+    ahead_text = git("rev-list", "--count", f"{REMOTE}/{BRANCH}..HEAD").stdout.strip()
+    ahead = int(ahead_text or "0")
+    if ahead == 0:
+        return
+    print(f"[tct-worker] {ahead} local commit(s) are not on {REMOTE}/{BRANCH}; publishing before queue scan", flush=True)
+    git("push", REMOTE, f"HEAD:{BRANCH}")
+    git("fetch", REMOTE, BRANCH)
+
+
+def select_result_artifacts(result_paths: list[Path]) -> tuple[list[Path], list[dict], int]:
+    """Select Git-safe result files while keeping oversized raw artifacts local."""
+    files: list[Path] = []
+    for path in result_paths:
+        if path.is_file():
+            files.append(path)
+        elif path.is_dir():
+            files.extend(sorted(p for p in path.rglob("*") if p.is_file()))
+
+    selected: list[Path] = []
+    omitted: list[dict] = []
+    total = 0
+    seen: set[Path] = set()
+    for path in sorted(files):
+        path = path.resolve()
+        if path in seen:
+            continue
+        seen.add(path)
+        size = path.stat().st_size
+        rel = str(path.relative_to(REPO))
+        if size > MAX_ARTIFACT_FILE_BYTES:
+            omitted.append({"path": rel, "size_bytes": size, "reason": "file_size_limit"})
+            continue
+        if total + size > MAX_ARTIFACT_TOTAL_BYTES:
+            omitted.append({"path": rel, "size_bytes": size, "reason": "total_size_limit"})
+            continue
+        selected.append(path)
+        total += size
+    return selected, omitted, total
 
 
 def load_jobs() -> list[tuple[Path, dict]]:
@@ -216,6 +260,8 @@ def execute_job(job_path: Path, job: dict) -> dict:
         except Exception as exc:
             error = (error + "; " if error else "") + f"summary parse error: {exc}"
 
+    selected_result_files, omitted_result_files, selected_result_bytes = select_result_artifacts(result_paths)
+
     receipt = {
         "schema_version": 1,
         "job_id": job_id,
@@ -239,17 +285,28 @@ def execute_job(job_path: Path, job: dict) -> dict:
         "log_path": str(log_path.relative_to(REPO)),
         "log_sha256": sha256(log_path),
         "result_paths": [str(p.relative_to(REPO)) for p in result_paths],
+        "git_artifact_policy": {
+            "max_file_bytes": MAX_ARTIFACT_FILE_BYTES,
+            "max_total_bytes": MAX_ARTIFACT_TOTAL_BYTES,
+            "selected_result_bytes": selected_result_bytes,
+            "selected_result_files": [str(p.relative_to(REPO)) for p in selected_result_files],
+            "local_only_omitted_count": len(omitted_result_files),
+            "local_only_omitted_files": omitted_result_files[:100],
+        },
         "host": socket.gethostname(),
         "platform": platform.platform(),
         "python": sys.version.split()[0],
     }
     write_json(receipt_path, receipt)
 
-    # Stage only the queue artifacts and declared validation output. This avoids
-    # accidentally committing unrelated local files.
+    # Stage only compact queue artifacts plus Git-safe declared outputs. Large
+    # experimental corpora/checkpoints remain local and are recorded in the
+    # receipt instead of being accidentally packed into multi-gigabyte pushes.
     to_add = [job_path, receipt_path, log_path]
-    to_add.extend(p for p in result_paths if p.exists())
-    rels = [str(p.relative_to(REPO)) for p in to_add]
+    if summary and summary.exists():
+        to_add.append(summary)
+    to_add.extend(selected_result_files)
+    rels = sorted({str(p.relative_to(REPO)) for p in to_add})
     git("add", "-A", "--", *rels)
 
     if git("diff", "--cached", "--quiet", check=False).returncode == 0:
@@ -285,6 +342,7 @@ def main() -> int:
 
         ensure_repo_ready()
         pull_latest()
+        publish_local_commits()
         pending = load_jobs()
         if not pending:
             print("[tct-worker] no pending jobs", flush=True)
