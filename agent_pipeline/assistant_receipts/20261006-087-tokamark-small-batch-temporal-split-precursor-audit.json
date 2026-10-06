@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-087-tokamark-small-batch-temporal-split-precursor-audit",
+  "classification": "TOKAMARK_MAST_SMALL_BATCH_TEMPORAL_SPLIT_PRECURSOR_AUDIT_STAGED",
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Successful prospective staging audit on repackaged FAIR-MAST MAST data. The 2.75 ms and 5.25 ms TCT reachability budgets, frozen temporal holdout, circular-shift null, shuffled-event null, per-shot reporting, aggregate reporting, and no-retuning rule are now fixed. No shot-level precursor statistics were computed yet.",
+  "machine": "MAST",
+  "shot_ids": "Not yet resolved; this staging job did not evaluate individual shots.",
+  "evidence_class": "observational_prospective_split_design",
+  "pipeline_failure": false,
+  "mechanism_effect": "neutral",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "claim_boundary": "Prospective split/staging audit only on TokaMark, a repackaging of FAIR-MAST MAST data. No independent cross-machine evidence, causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale claim.",
+  "pb11_fidelity_limits": "Not a p-B11 job; no p-B11 inference.",
+  "new_job_id": "20261006-088-tokamark-task-metadata-resolution-audit",
+  "timestamp": "2026-10-06T07:17:00Z"
+}
