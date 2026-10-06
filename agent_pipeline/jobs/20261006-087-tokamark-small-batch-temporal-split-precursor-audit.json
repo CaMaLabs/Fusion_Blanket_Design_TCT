@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-087-tokamark-small-batch-temporal-split-precursor-audit",
+  "kind": "experimental_precursor_generalization_staging",
+  "enabled": true,
+  "parent_result_job_id": "20261005-086-tokamark-mast-intake-runtime-path-repair",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_small_batch_temporal_split_precursor_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tokamark_small_batch_temporal_split_precursor_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_small_batch_temporal_split_precursor_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "purpose": "Freeze a small-batch temporal train/test precursor/reachability audit design from TokaMark task metadata before any bulk 565-GB download, reusing the established 2.75 ms and 5.25 ms TCT budgets with no retuning.",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "required_controls": [
+    "frozen temporal holdout",
+    "circular trigger-train shift null",
+    "shuffled-event null",
+    "per-shot reporting",
+    "aggregate reporting"
+  ],
+  "interpretation_contract": {
+    "no_bulk_download": true,
+    "retuning_permitted": false,
+    "do_not_infer_independent_cross_machine_evidence": true,
+    "do_not_infer_causal_tct_suppression": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "TokaMark is repackaged FAIR-MAST MAST data. This job stages a prospective temporal-split observational precursor audit only; no causal TCT, segmented-electrode efficacy, p-B11, or reactor-scale claim."
+  }
+}
