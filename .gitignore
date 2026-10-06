@@ -7,3 +7,6 @@ __pycache__/
 BOUT.restart.*.nc
 
 validation_models/**/build/
+
+# Large experimental corpora stay local; Git stores provenance/checksums only.
+validation_runs/tcabr_cache/
