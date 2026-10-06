@@ -186,8 +186,16 @@ def load_jobs() -> list[tuple[Path, dict]]:
             continue
         if not bool(job.get("enabled", True)):
             continue
-        if (RESULTS / f"{job_id}.json").exists():
-            continue
+        result_path = RESULTS / f"{job_id}.json"
+        if result_path.exists():
+            rel = str(result_path.relative_to(REPO))
+            tracked = git("ls-files", "--error-unmatch", "--", rel, check=False).returncode == 0
+            if tracked:
+                continue
+            print(
+                f"[tct-worker] stale untracked result receipt does not satisfy job {job_id}: {rel}",
+                flush=True,
+            )
         pending.append((path, job))
     return pending
 
