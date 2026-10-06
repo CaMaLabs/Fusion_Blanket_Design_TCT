@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-089-tokamark-source-metadata-fetch-audit",
+  "kind": "experimental_source_metadata_fetch",
+  "enabled": true,
+  "parent_result_job_id": "20261006-088-tokamark-task-metadata-resolution-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_source_metadata_fetch_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tokamark_source_metadata_fetch_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_source_metadata_fetch_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "purpose": "Fetch and preserve public source-controlled TokaMark metadata needed to resolve task IDs, smallest usable public batch/artifact, MAST shot IDs, campaign/time ordering, target/event definition, diagnostic provenance, and timing metadata before shot-level precursor/reachability analysis.",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "interpretation_contract": {
+    "metadata_before_features": true,
+    "no_bulk_download": true,
+    "retuning_permitted": false,
+    "do_not_infer_independent_cross_machine_evidence": true,
+    "do_not_infer_causal_tct_suppression": true,
+    "do_not_loosen_frozen_gates": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "TokaMark is repackaged FAIR-MAST MAST data. This job fetches public source metadata only; no causal TCT, segmented-electrode efficacy, p-B11, or reactor-scale claim."
+  }
+}
