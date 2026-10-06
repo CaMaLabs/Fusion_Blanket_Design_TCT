@@ -1,0 +1,30 @@
+job_id=20261005-087-segmented-electrode-bout-runtime-equivalence-real
+started_utc=2026-10-06T05:16:47.733544Z
+head_before=64de10f0c246507f2fae2db75018a710b524f53a
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EQUIVALENCE_NOT_ESTABLISHED",
+  "pipeline_failure": true,
+  "runtime_executable": "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/validation_models/tct_current_sheet/build-openmpi/tct_current_sheet",
+  "zero_equivalence_required": true,
+  "zero_equivalence_tolerance": 1e-12,
+  "zero_equivalence_pass": false,
+  "handoff_equivalence_required": true,
+  "handoff_equivalence_tolerance": 1e-12,
+  "handoff_equivalence_pass": false,
+  "frozen_gates": {
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime zero/handoff equivalence only; no segmented-electrode efficacy, fuel-specific efficacy, native M3D-C1 electrode efficacy, experimental, or reactor-scale claim.",
+  "error": "TimeoutExpired: Command '['/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/validation_models/tct_current_sheet/build-openmpi/tct_current_sheet', '-d', '/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/validation_runs/tct_segmented_electrode_bout_runtime_equivalence_real/zero_profile_a']' timed out after 600 seconds"
+}
+
+finished_utc=2026-10-06T05:26:49.149252Z
+return_code=2
