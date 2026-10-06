@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20261005-086-tokamark-mast-intake-runtime-path-repair",
+  "processed_result_commit": "691f3ee023bf24634096cac1f718ecaec5dff8bc",
+  "result_receipt": "agent_pipeline/results/20261005-086-tokamark-mast-intake-runtime-path-repair.json",
+  "classification": "TOKAMARK_MAST_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Successful TokaMark MAST intake after runtime-path repair. Public CC BY 4.0 task-ready repackaging of FAIR-MAST confirmed with 11,573 shots, 39 signals, and 14 tasks. This is dataset/provenance intake only and does not constitute independent cross-machine evidence or causal TCT actuator validation.",
+  "machine": "MAST",
+  "shot_ids": "Corpus-level intake; no individual shot IDs evaluated.",
+  "evidence_class": "observational_provenance",
+  "pipeline_failure": false,
+  "mechanism_effect": "neutral",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "claim_boundary": "TokaMark is a task-ready repackaging of FAIR-MAST MAST shots, not an independent machine. No causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale claim.",
+  "pb11_fidelity_limits": "Not a p-B11 job; no p-B11 inference.",
+  "new_job_id": "20261006-087-tokamark-small-batch-temporal-split-precursor-audit",
+  "timestamp": "2026-10-06T05:20:00Z"
+}
