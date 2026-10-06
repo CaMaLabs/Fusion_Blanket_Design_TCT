@@ -7,14 +7,13 @@
   "runner": "tools/tct_mechanism_explorer/run_tcabr_cache_materialization_audit.sh",
   "timeout_seconds": 21600,
   "result_paths": [
-    "validation_runs/tcabr_cache_materialization_audit",
-    "validation_runs/tcabr_cache"
+    "validation_runs/tcabr_cache_materialization_audit"
   ],
   "summary_path": "validation_runs/tcabr_cache_materialization_audit/summary.json",
   "machine": "TCABR",
   "fuel_track": "fuel_agnostic_control",
   "source": "Zenodo 10.5281/zenodo.21843354",
-  "purpose": "Materialize and integrity-check the exact TCABR corpus frozen by job 084 before any precursor feature extraction or train/test split is performed.",
+  "purpose": "Materialize and integrity-check the exact TCABR corpus frozen by job 084 before any precursor feature extraction or train/test split is performed. The multi-gigabyte raw corpus remains local-only; Git carries only compact integrity/provenance outputs.",
   "expected_files": [
     {
       "name": "tcabr_data.nc",
@@ -37,5 +36,8 @@
     "no trigger retuning",
     "no precursor feature evaluation in this job"
   ],
-  "claim_boundary": "Experimental TCABR corpus materialization/integrity only. No causal TCT suppression, precursor efficacy, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale claim is permitted from this job."
+  "claim_boundary": "Experimental TCABR corpus materialization/integrity only. No causal TCT suppression, precursor efficacy, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale claim is permitted from this job.",
+  "local_artifact_paths": [
+    "validation_runs/tcabr_cache"
+  ]
 }
