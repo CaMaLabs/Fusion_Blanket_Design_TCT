@@ -1,0 +1,73 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5648458003997803,
+  "error": null,
+  "finished_utc": "2026-10-06T05:26:52.083542Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1540,
+    "selected_result_files": [
+      "validation_runs/tokamark_small_batch_temporal_split_precursor_audit/summary.json"
+    ]
+  },
+  "head_before": "395ebeff5b37201eacda6b2a6f2ba17a572af326",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261006-087-tokamark-small-batch-temporal-split-precursor-audit.json",
+  "job_id": "20261006-087-tokamark-small-batch-temporal-split-precursor-audit",
+  "log_path": "agent_pipeline/logs/20261006-087-tokamark-small-batch-temporal-split-precursor-audit.log",
+  "log_sha256": "f5b8fd10b1a75bd4ca037667f6b3e1037a434904c61814cb2ebb3d472a88c747",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_small_batch_temporal_split_precursor_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_small_batch_temporal_split_precursor_audit.sh",
+  "runner_sha256": "0e90195bbe6e034e09258da64582a4a9740a52604a4721dfe89c2f580d800f58",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-06T05:26:51.517784Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "archive_size_gb_approx": 565,
+    "bulk_download_performed": false,
+    "claim_boundary": "Prospective split/staging audit only on repackaged FAIR-MAST MAST data. No independent-machine evidence, causal TCT suppression, actuator efficacy, p-B11 physics, or reactor-scale claim.",
+    "classification": "TOKAMARK_MAST_SMALL_BATCH_TEMPORAL_SPLIT_PRECURSOR_AUDIT_STAGED",
+    "created_utc": "2026-10-06T05:26:52.060404+00:00",
+    "design": {
+      "diagnostic_targets": [
+        "Mirnov coils (500 kHz)",
+        "D-alpha (50 kHz)",
+        "soft X-ray (50 kHz)",
+        "magnetics/equilibrium context"
+      ],
+      "required_controls": [
+        "frozen temporal holdout",
+        "circular trigger-train shift null",
+        "shuffled-event null",
+        "per-shot reporting",
+        "aggregate reporting"
+      ],
+      "selection": "smallest available public task batch sufficient to resolve shot IDs, timestamps/campaign ordering, Mirnov-like and event/target metadata before any large transfer",
+      "split": "frozen temporal train/test split using TokaMark task metadata",
+      "trigger_retuning_permitted": false
+    },
+    "evidence_class": "observational_prospective_split_design",
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "MAST",
+    "next_execution_gate": "Resolve machine-readable task metadata and smallest batch URLs/shot IDs; do not download bulk archive until split provenance is frozen.",
+    "schema_version": 1,
+    "source": "UKAEA-IBM-STFC/tokamark-v1"
+  },
+  "summary_path": "validation_runs/tokamark_small_batch_temporal_split_precursor_audit/summary.json",
+  "summary_sha256": "21de33a83a76051ea90856a354d026948c7e179021e0f72a326e8a79191b9e78",
+  "timed_out": false
+}
