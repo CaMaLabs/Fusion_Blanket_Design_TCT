@@ -39,9 +39,25 @@ LOCK = REPO / ".git" / "tct-agent-pipeline.lock"
 RUNTIME_WRAPPER = REPO / "tools" / "agent_pipeline" / "run_tct_job.sh"
 
 JOB_ID_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
-RUNNER_RE = re.compile(r"^tools/tct_mechanism_explorer/run_[A-Za-z0-9_.-]+\\.sh$")
+RUNNER_RE = re.compile(r"^tools/tct_mechanism_explorer/run_[A-Za-z0-9_.-]+\.sh$")
 MAX_ARTIFACT_FILE_BYTES = int(os.environ.get("TCT_PIPELINE_MAX_ARTIFACT_FILE_BYTES", str(95 * 1024 * 1024)))
 MAX_ARTIFACT_TOTAL_BYTES = int(os.environ.get("TCT_PIPELINE_MAX_ARTIFACT_TOTAL_BYTES", str(256 * 1024 * 1024)))
+
+# Fail immediately if runner validation is accidentally broken by escaping or
+# refactoring. These are representative allow/deny cases for the queue contract.
+_RUNNER_VALIDATION_PROBES = {
+    "tools/tct_mechanism_explorer/run_probe.sh": True,
+    "tools/tct_mechanism_explorer/run_probe.py": False,
+    "tools/tct_mechanism_explorer/audit_probe.sh": False,
+    "../tools/tct_mechanism_explorer/run_probe.sh": False,
+}
+for _runner_probe, _expected in _RUNNER_VALIDATION_PROBES.items():
+    _actual = RUNNER_RE.fullmatch(_runner_probe) is not None
+    if _actual != _expected:
+        raise RuntimeError(
+            f"internal runner validator self-check failed for {_runner_probe!r}: "
+            f"expected {_expected}, got {_actual}"
+        )
 
 
 def now_utc() -> str:
