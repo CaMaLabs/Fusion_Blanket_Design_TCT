@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-091-tokamark-canonical-path-metadata-audit",
+  "processed_result_job_id": "20261006-091-tokamark-canonical-path-metadata-audit",
+  "classification": "TOKAMARK_MAST_CANONICAL_PATH_METADATA_AUDIT",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "evidence_class": "observational_source_metadata",
+  "pipeline_failure": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 2.673908233642578,
+    "temporal_split_resolved": true,
+    "resolved_shot_id_count_preview": 1000,
+    "task_path_fetch_errors": 3,
+    "bulk_download_performed": false
+  },
+  "shot_ids": "1000 canonical MAST shot IDs resolved in preview; see validation summary for exact IDs",
+  "diagnostic_provenance": "TokaMark/FAIR-MAST MAST; canonical split src/tokamark/metadata/TokaMark_data_splits.csv",
+  "timing_calibration": "No shot-level diagnostic timing calibration established by 091; 2.75/5.25 ms controller budgets remain frozen.",
+  "interpretation": "Canonical temporal split and real MAST shot IDs resolved successfully. Guessed task-directory raw URLs returned 404 because directories are not raw files; this does not invalidate the successful split resolution. Observational/provenance result only.",
+  "mechanism_effect": "neutral",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "pb11_fidelity_limits": "not_applicable",
+  "new_job_id": "20261006-092-tokamark-group4-task41-metadata-audit",
+  "timestamp_utc": "2026-10-06T22:54:53Z"
+}
