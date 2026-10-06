@@ -59,9 +59,20 @@ if [[ $# -ne 1 ]]; then
 fi
 
 RUNNER="$1"
-if [[ "$RUNNER" != "$REPO"/tools/tct_mechanism_explorer/run_*.sh ]]; then
-  echo "TCT_RUNTIME_ERROR: refusing non-TCT runner: $RUNNER" >&2
-  exit 65
-fi
+REPO_REAL="$(readlink -f "$REPO")"
+RUNNER_REAL="$(readlink -f "$RUNNER")"
 
-exec bash "$RUNNER"
+# The worker checkout may be visible through more than one mount/symlink path
+# (for example /home/ubuntu/... and /mnt/compute-swarm-data/home-ubuntu/...).
+# Authorize against canonical filesystem identities rather than lexical path
+# strings so the same checked-out runner is not rejected because of an alias.
+case "$RUNNER_REAL" in
+  "$REPO_REAL"/tools/tct_mechanism_explorer/run_*.sh)
+    ;;
+  *)
+    echo "TCT_RUNTIME_ERROR: refusing non-TCT runner: $RUNNER (resolved: $RUNNER_REAL; repo: $REPO_REAL)" >&2
+    exit 65
+    ;;
+esac
+
+exec bash "$RUNNER_REAL"
