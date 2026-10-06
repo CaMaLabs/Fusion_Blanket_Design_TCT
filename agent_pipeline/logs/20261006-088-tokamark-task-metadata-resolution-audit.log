@@ -1,0 +1,44 @@
+job_id=20261006-088-tokamark-task-metadata-resolution-audit
+started_utc=2026-10-06T07:19:13.847699Z
+head_before=f46310b6bb61d0d44d8c0dce67e67fa2e82f905b
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-06T07:19:14.367434+00:00",
+  "classification": "TOKAMARK_MAST_TASK_METADATA_RESOLUTION_AUDIT_STAGED",
+  "machine": "MAST",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "evidence_class": "observational_metadata_resolution",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "required_metadata": [
+    "task identifiers",
+    "smallest public batch/artifact",
+    "MAST shot IDs",
+    "campaign or acquisition ordering",
+    "target/event definition",
+    "diagnostic provenance",
+    "sampling/timing metadata"
+  ],
+  "required_controls": [
+    "freeze metadata before feature extraction",
+    "preserve temporal holdout",
+    "no trigger retuning",
+    "circular trigger-train shift null",
+    "shuffled-event null"
+  ],
+  "bulk_download_performed": false,
+  "claim_boundary": "Metadata-resolution audit only on TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+  "next_gate": "Only after shot IDs, task/target semantics, ordering, diagnostics, and timing metadata are resolved may shot-level precursor lead-time and 2.75/5.25 ms reachability statistics be computed."
+}
+
+finished_utc=2026-10-06T07:19:14.413629Z
+return_code=0

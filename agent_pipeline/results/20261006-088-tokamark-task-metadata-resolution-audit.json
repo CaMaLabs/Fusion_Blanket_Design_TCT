@@ -1,0 +1,70 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5650055408477783,
+  "error": null,
+  "finished_utc": "2026-10-06T07:19:14.413669Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1350,
+    "selected_result_files": [
+      "validation_runs/tokamark_task_metadata_resolution_audit/summary.json"
+    ]
+  },
+  "head_before": "f46310b6bb61d0d44d8c0dce67e67fa2e82f905b",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261006-088-tokamark-task-metadata-resolution-audit.json",
+  "job_id": "20261006-088-tokamark-task-metadata-resolution-audit",
+  "log_path": "agent_pipeline/logs/20261006-088-tokamark-task-metadata-resolution-audit.log",
+  "log_sha256": "93261300da051b289c57708df7db00ea9b94914e61108e5e8d92359a256d3bf3",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task_metadata_resolution_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task_metadata_resolution_audit.sh",
+  "runner_sha256": "7da42e1983de0839025cee2a5111a61f74bc00a45a6ff7c2af1a455774d0a201",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-06T07:19:13.847699Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "claim_boundary": "Metadata-resolution audit only on TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+    "classification": "TOKAMARK_MAST_TASK_METADATA_RESOLUTION_AUDIT_STAGED",
+    "created_utc": "2026-10-06T07:19:14.367434+00:00",
+    "evidence_class": "observational_metadata_resolution",
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "MAST",
+    "next_gate": "Only after shot IDs, task/target semantics, ordering, diagnostics, and timing metadata are resolved may shot-level precursor lead-time and 2.75/5.25 ms reachability statistics be computed.",
+    "required_controls": [
+      "freeze metadata before feature extraction",
+      "preserve temporal holdout",
+      "no trigger retuning",
+      "circular trigger-train shift null",
+      "shuffled-event null"
+    ],
+    "required_metadata": [
+      "task identifiers",
+      "smallest public batch/artifact",
+      "MAST shot IDs",
+      "campaign or acquisition ordering",
+      "target/event definition",
+      "diagnostic provenance",
+      "sampling/timing metadata"
+    ],
+    "schema_version": 1,
+    "source": "UKAEA-IBM-STFC/tokamark-v1"
+  },
+  "summary_path": "validation_runs/tokamark_task_metadata_resolution_audit/summary.json",
+  "summary_sha256": "cdcfe252a96a0c76503d5cd3d24e8f8cce3e5882efc35cfc254a12e4339529d3",
+  "timed_out": false
+}
