@@ -1,0 +1,86 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 2.5197324752807617,
+  "error": null,
+  "finished_utc": "2026-10-06T20:52:07.159812Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 29001,
+    "selected_result_files": [
+      "validation_runs/tokamark_endpoint_metadata_repair/fetched_source_metadata.json",
+      "validation_runs/tokamark_endpoint_metadata_repair/summary.json"
+    ]
+  },
+  "head_before": "f6780d521c7c49349c1273b9141aa00cb61e926d",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261006-090-tokamark-endpoint-metadata-repair.json",
+  "job_id": "20261006-090-tokamark-endpoint-metadata-repair",
+  "log_path": "agent_pipeline/logs/20261006-090-tokamark-endpoint-metadata-repair.log",
+  "log_sha256": "93fb51da16842945aa4dea5272d3dd90f21de2c79c0ad48ef5d9000c1b69dbae",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_endpoint_metadata_repair"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_endpoint_metadata_repair.sh",
+  "runner_sha256": "79b31a171aaf92e3217de7910087c4e9af45cf6e667195b545edf1f128ab5c3b",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-06T20:52:04.639195Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "campaign_or_split_preview": [],
+    "claim_boundary": "Endpoint/provenance repair only on TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+    "classification": "TOKAMARK_MAST_ENDPOINT_METADATA_REPAIR_AUDITED",
+    "code_repository": "UKAEA-IBM-STFC-Fusion-FMs/tokamark",
+    "controls_preserved": [
+      "frozen temporal holdout",
+      "2.75 ms fast reachability budget",
+      "5.25 ms nominal reachability budget",
+      "circular trigger-train shift null",
+      "shuffled-event null",
+      "no trigger retuning"
+    ],
+    "created_utc": "2026-10-06T20:52:07.119532+00:00",
+    "dataset": "UKAEA-IBM-STFC/tokamark-v1",
+    "evidence_class": "observational_source_metadata",
+    "fetch_errors": {
+      "TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+      "configs/TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+      "data/TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+      "task_configurations.json": "HTTPError: HTTP Error 404: Not Found",
+      "tasks.json": "HTTPError: HTTP Error 404: Not Found",
+      "tokamark/TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found"
+    },
+    "fetched_files": [
+      "README.md"
+    ],
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "MAST",
+    "next_gate": "If the temporal split and shot identifiers resolve, map the selected smallest task/batch to its diagnostic sampling/timing metadata before any precursor lead-time statistics.",
+    "pipeline_failure": false,
+    "promotion_gate": {
+      "metadata_endpoint_corrected": true,
+      "shot_ids_resolved": false,
+      "temporal_split_resolved": false
+    },
+    "resolved_shot_id_count_preview": 0,
+    "schema_version": 1,
+    "shot_id_preview": [],
+    "temporal_split_columns": [],
+    "temporal_split_file": null
+  },
+  "summary_path": "validation_runs/tokamark_endpoint_metadata_repair/summary.json",
+  "summary_sha256": "f40e1d8c3f5056eeb6ea2f6a71ae979715b369cffbd5d21cce8e7ac75572bcfc",
+  "timed_out": false
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-06T20:52:07.119532+00:00",
+  "classification": "TOKAMARK_MAST_ENDPOINT_METADATA_REPAIR_AUDITED",
+  "machine": "MAST",
+  "fuel_track": "fuel_agnostic_control",
+  "code_repository": "UKAEA-IBM-STFC-Fusion-FMs/tokamark",
+  "dataset": "UKAEA-IBM-STFC/tokamark-v1",
+  "evidence_class": "observational_source_metadata",
+  "pipeline_failure": false,
+  "bulk_download_performed": false,
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "fetched_files": [
+    "README.md"
+  ],
+  "fetch_errors": {
+    "TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+    "tokamark/TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+    "data/TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+    "configs/TokaMark_temporal_data_splits.csv": "HTTPError: HTTP Error 404: Not Found",
+    "task_configurations.json": "HTTPError: HTTP Error 404: Not Found",
+    "tasks.json": "HTTPError: HTTP Error 404: Not Found"
+  },
+  "temporal_split_file": null,
+  "temporal_split_columns": [],
+  "resolved_shot_id_count_preview": 0,
+  "shot_id_preview": [],
+  "campaign_or_split_preview": [],
+  "promotion_gate": {
+    "metadata_endpoint_corrected": true,
+    "temporal_split_resolved": false,
+    "shot_ids_resolved": false
+  },
+  "controls_preserved": [
+    "frozen temporal holdout",
+    "2.75 ms fast reachability budget",
+    "5.25 ms nominal reachability budget",
+    "circular trigger-train shift null",
+    "shuffled-event null",
+    "no trigger retuning"
+  ],
+  "claim_boundary": "Endpoint/provenance repair only on TokaMark repackaged FAIR-MAST MAST data. No precursor efficacy, causal TCT suppression, independent cross-machine validation, segmented-electrode efficacy, p-B11 physics, or reactor-scale claim.",
+  "next_gate": "If the temporal split and shot identifiers resolve, map the selected smallest task/batch to its diagnostic sampling/timing metadata before any precursor lead-time statistics."
+}
