@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job_id": "20261005-087-segmented-electrode-bout-runtime-equivalence-real",
+  "processed_result_commit": "64de10f0c246507f2fae2db75018a710b524f53a",
+  "result_receipt": "agent_pipeline/results/20261005-087-segmented-electrode-bout-runtime-equivalence-real.json",
+  "classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EQUIVALENCE_NOT_ESTABLISHED",
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Pipeline/runtime failure, not a scientific negative result. Compiled BOUT++ timed out after 600 s on the first zero-profile run; zero and handoff equivalence remain unestablished and efficacy was not evaluated.",
+  "pipeline_failure": true,
+  "mechanism_effect": "neutral",
+  "equivalence": {
+    "zero_pass": false,
+    "handoff_pass": false,
+    "tolerance": 1e-12
+  },
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "jpk_change_pct_le": 0.1
+  },
+  "claim_boundary": "BOUT++ compiled-runtime equivalence only; no efficacy or M3D-C1 claim.",
+  "pb11_fidelity_limits": "Not applicable.",
+  "new_job_id": null,
+  "timestamp": "2026-10-06T05:32:03Z"
+}
