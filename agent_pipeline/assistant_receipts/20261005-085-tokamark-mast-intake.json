@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "job_id": "20261005-085-tokamark-mast-intake",
+  "processed_result_commit": "019f7d49866c6a94d43a6bf30a174b3dfd36cda8",
+  "processed_result_receipt": "agent_pipeline/results/20261005-085-tokamark-mast-intake.json",
+  "classification": null,
+  "pipeline_failure": true,
+  "pipeline_error": "TCT_RUNTIME_ERROR: refusing non-TCT runner: /mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/run_tokamark_mast_intake.sh",
+  "interpretation": "Pipeline/runtime path-alias failure, not a scientific or dataset negative result. The canonical runtime correctly selected .venv-dudson and m3dc1-deps, but its lexical allow-list compared the resolved runner mount path against the logical checkout path and rejected the same checked-out runner. The runtime wrapper now canonicalizes both filesystem identities before enforcing the allow-list. No TokaMark access, precursor, actuator, or efficacy conclusion is justified from job 085.",
+  "new_job_id": "20261005-086-tokamark-mast-intake-runtime-path-repair",
+  "frozen_width_gate_pct_gt": 0.02,
+  "frozen_Jpk_gate_pct_le": 0.1,
+  "claim_boundary": "Dataset/provenance intake only. No independent cross-machine evidence, causal TCT suppression, actuator efficacy, p-B11 physics, or reactor-scale claim.",
+  "timestamp": "2026-10-06T05:05:00Z"
+}
