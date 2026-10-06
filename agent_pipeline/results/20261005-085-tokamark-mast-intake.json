@@ -1,0 +1,29 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.7653131484985352,
+  "error": null,
+  "finished_utc": "2026-10-05T15:06:22.332543Z",
+  "head_before": "4692bd8a0d5789b21eabac3ed412d372d3bbfff3",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261005-085-tokamark-mast-intake.json",
+  "job_id": "20261005-085-tokamark-mast-intake",
+  "log_path": "agent_pipeline/logs/20261005-085-tokamark-mast-intake.log",
+  "log_sha256": "7b1eb49ff039c03ee6e817d43f12ba4ff7651e8690ea798ee79dfbeccff29bd1",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_mast_intake"
+  ],
+  "return_code": 65,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_mast_intake.sh",
+  "runner_sha256": "4daebac4bb3afd180a37c1c887bbc59bfe408502a23a66977e695ce95d265200",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "457ce68a1a73f192272873309f577f5e5d162a64a2d6c3855eb8bce52ad83834",
+  "schema_version": 1,
+  "started_utc": "2026-10-05T15:06:21.566112Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/tokamark_mast_intake/summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}

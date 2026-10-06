@@ -1,0 +1,13 @@
+job_id=20261005-085-tokamark-mast-intake
+started_utc=2026-10-05T15:06:21.566112Z
+head_before=4692bd8a0d5789b21eabac3ed412d372d3bbfff3
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+TCT_RUNTIME_ERROR: refusing non-TCT runner: /mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/run_tokamark_mast_intake.sh
+
+finished_utc=2026-10-05T15:06:22.332502Z
+return_code=65
