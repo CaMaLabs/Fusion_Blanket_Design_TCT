@@ -1,0 +1,63 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 2343.854015827179,
+  "error": null,
+  "finished_utc": "2026-10-01T08:04:14.375868Z",
+  "head_before": "bf60588956c4f7a7f5d480340ce90a49f3fc1705",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261001-085-tcabr-cache-materialization-audit.json",
+  "job_id": "20261001-085-tcabr-cache-materialization-audit",
+  "log_path": "agent_pipeline/logs/20261001-085-tcabr-cache-materialization-audit.log",
+  "log_sha256": "3944cad317cedc21d01a8f7920c8e1f4cf682a053e320a2b41551e56bc6ff167",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcabr_cache_materialization_audit",
+    "validation_runs/tcabr_cache"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tcabr_cache_materialization_audit.sh",
+  "runner_sha256": "504d56fa4cb1c802704a40c81f652b9302bacbdc9658aa2533442f9d8d968345",
+  "schema_version": 1,
+  "started_utc": "2026-10-01T07:25:10.520751Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "claim_boundary": "TCABR corpus materialization/integrity only. No precursor timing, causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale inference.",
+    "classification": "TCABR_CACHE_MATERIALIZATION_AUDITED",
+    "evidence_class": "observational_provenance",
+    "files": [
+      {
+        "actual_md5": "0846b3ba681aacf623a1c883f9559e51",
+        "actual_size": 4815231741,
+        "expected_md5": "0846b3ba681aacf623a1c883f9559e51",
+        "expected_size": 4815231741,
+        "md5_match": true,
+        "name": "tcabr_data.nc",
+        "path": "validation_runs/tcabr_cache/tcabr_data.nc",
+        "size_match": true
+      },
+      {
+        "actual_md5": "7947a127dd75af53fab0dbcbab6ac64d",
+        "actual_size": 26997,
+        "expected_md5": "7947a127dd75af53fab0dbcbab6ac64d",
+        "expected_size": 26997,
+        "md5_match": true,
+        "name": "tcabr_tools.py",
+        "path": "validation_runs/tcabr_cache/tcabr_tools.py",
+        "size_match": true
+      }
+    ],
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "TCABR",
+    "materialized": true,
+    "pipeline_failure": false,
+    "source": "Zenodo 10.5281/zenodo.21843354"
+  },
+  "summary_path": "validation_runs/tcabr_cache_materialization_audit/summary.json",
+  "summary_sha256": "c24b573ef9adbfef0d9fceb1d310dde1e3e1a6ff470927eb7f54155141e145b1",
+  "timed_out": false
+}
