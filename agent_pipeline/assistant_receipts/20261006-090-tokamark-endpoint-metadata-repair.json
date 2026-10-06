@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-090-tokamark-endpoint-metadata-repair",
+  "processed_result_job_id": "20261006-090-tokamark-endpoint-metadata-repair",
+  "classification": "TOKAMARK_MAST_ENDPOINT_METADATA_REPAIR_AUDITED",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [],
+  "evidence_class": "observational_source_metadata",
+  "pipeline_failure": true,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 2.52,
+    "fetched_files_count": 1,
+    "fetched_files": [
+      "README.md"
+    ],
+    "http_404_count": 6,
+    "resolved_shot_ids": 0,
+    "temporal_split_resolved": false
+  },
+  "interpretation": "Endpoint repair reached the correct public code repository, but guessed metadata paths still failed. README.md exposed canonical source paths, so this is a source-path/data-access failure rather than a scientific negative. No shot-level precursor inference is permitted.",
+  "mechanism_effect": "neutral",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "pb11_fidelity_limits": "not_applicable",
+  "new_job_id": "20261006-091-tokamark-canonical-path-metadata-audit",
+  "timestamp_utc": "2026-10-06T21:56:00Z"
+}
