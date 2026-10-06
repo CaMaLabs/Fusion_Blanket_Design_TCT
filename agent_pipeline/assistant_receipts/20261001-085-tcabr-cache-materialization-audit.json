@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "20261001-085-tcabr-cache-materialization-audit",
+  "processed_result_commit": "bf60588956c4f7a7f5d480340ce90a49f3fc1705",
+  "result_receipt": "agent_pipeline/results/20261001-085-tcabr-cache-materialization-audit.json",
+  "classification": "TCABR_CACHE_MATERIALIZATION_AUDITED",
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Successful TCABR corpus materialization/integrity audit. Both frozen Zenodo artifacts materialized locally and matched exact expected byte sizes and MD5 digests. This establishes corpus integrity only; no precursor feature, timing, or TCT efficacy test was performed.",
+  "machine": "TCABR",
+  "shot_ids": "Corpus-level integrity audit; no individual shot IDs evaluated.",
+  "evidence_class": "observational_provenance",
+  "pipeline_failure": false,
+  "mechanism_effect": "neutral",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "claim_boundary": "Experimental TCABR corpus materialization/integrity only. No precursor timing, causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, p-B11 physics, or reactor-scale inference.",
+  "pb11_fidelity_limits": "Not a p-B11 job; no p-B11 inference.",
+  "new_job_id": null,
+  "timestamp": "2026-10-06T04:12:43Z"
+}
