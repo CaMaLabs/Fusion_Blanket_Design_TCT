@@ -108,6 +108,15 @@ def pull_latest() -> None:
     git("rebase", f"{REMOTE}/{BRANCH}")
 
 
+def remote_contains_head() -> bool:
+    """Refresh the remote ref and verify whether the local HEAD already landed."""
+    try:
+        git("fetch", REMOTE, BRANCH)
+    except Exception:
+        return False
+    return git("merge-base", "--is-ancestor", "HEAD", f"{REMOTE}/{BRANCH}", check=False).returncode == 0
+
+
 def publish_local_commits() -> None:
     """Do not silently idle when prior result commits exist only on this host."""
     ahead_text = git("rev-list", "--count", f"{REMOTE}/{BRANCH}..HEAD").stdout.strip()
@@ -115,7 +124,17 @@ def publish_local_commits() -> None:
     if ahead == 0:
         return
     print(f"[tct-worker] {ahead} local commit(s) are not on {REMOTE}/{BRANCH}; publishing before queue scan", flush=True)
-    git("push", REMOTE, f"HEAD:{BRANCH}")
+    try:
+        git("push", REMOTE, f"HEAD:{BRANCH}")
+    except Exception:
+        # GitHub/proxies can accept the pack/ref update and then return an
+        # HTTP/RPC error while the client is waiting for the final response.
+        # Verify remote state before treating that ambiguous transport failure
+        # as a failed publication.
+        if remote_contains_head():
+            print("[tct-worker] push transport reported failure, but remote contains local HEAD; treating publication as successful", flush=True)
+            return
+        raise
     git("fetch", REMOTE, BRANCH)
 
 
@@ -324,6 +343,9 @@ def execute_job(job_path: Path, job: dict) -> dict:
             print(f"[tct-worker] pushed result for {job_id}", flush=True)
             return receipt
         except Exception as exc:
+            if remote_contains_head():
+                print(f"[tct-worker] push transport reported failure for {job_id}, but remote contains local HEAD; treating result publication as successful", flush=True)
+                return receipt
             if attempt == 3:
                 raise
             print(f"[tct-worker] push retry {attempt}: {exc}", flush=True)
