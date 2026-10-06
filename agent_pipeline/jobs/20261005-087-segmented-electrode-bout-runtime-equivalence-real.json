@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261005-087-segmented-electrode-bout-runtime-equivalence-real",
+  "parent_result_job_id": "20260929-081-segmented-electrode-bout-runtime-evidence-probe-repair",
+  "enabled": true,
+  "runner": "tools/tct_mechanism_explorer/run_segmented_electrode_bout_runtime_equivalence_real.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/tct_segmented_electrode_bout_runtime_equivalence_real"
+  ],
+  "summary_path": "validation_runs/tct_segmented_electrode_bout_runtime_equivalence_real/summary.json",
+  "purpose": "Use the compiled BOUT++ current-sheet executable identified by job 081 to perform real runtime zero-equivalence and segmented-electrode handoff-equivalence checks before any efficacy comparison.",
+  "required_gates": {
+    "zero_equivalence": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "handoff_equivalence": true,
+    "handoff_equivalence_tolerance": 1e-12,
+    "width_gain_pct_min": 0.02,
+    "jpk_improvement_pct_min": 0.1
+  },
+  "interpretation_contract": {
+    "parent_formal_classification": "TCT_SEGMENTED_ELECTRODE_BOUT_RUNTIME_EXECUTABLE_IDENTIFIED",
+    "do_not_modify_solver_physics": true,
+    "do_not_claim_efficacy_if_either_equivalence_gate_fails": true,
+    "do_not_infer_native_m3dc1_electrode_efficacy": true,
+    "do_not_loosen_frozen_gates": true,
+    "claim_boundary": "BOUT++ compiled-runtime zero/handoff equivalence only; no segmented-electrode efficacy, fuel-specific efficacy, native M3D-C1 electrode efficacy, experimental, or reactor-scale claim."
+  }
+}
