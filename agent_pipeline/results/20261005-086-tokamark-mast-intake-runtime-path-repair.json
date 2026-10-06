@@ -1,0 +1,79 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.8154544830322266,
+  "error": null,
+  "finished_utc": "2026-10-06T05:14:48.196813Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1512,
+    "selected_result_files": [
+      "validation_runs/tokamark_mast_intake/summary.json"
+    ]
+  },
+  "head_before": "691f3ee023bf24634096cac1f718ecaec5dff8bc",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261005-086-tokamark-mast-intake-runtime-path-repair.json",
+  "job_id": "20261005-086-tokamark-mast-intake-runtime-path-repair",
+  "log_path": "agent_pipeline/logs/20261005-086-tokamark-mast-intake-runtime-path-repair.log",
+  "log_sha256": "3c57f3af4b140e13ac91cdde76bd5808acb800dc2a9fb7c97a488d05da884a93",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_mast_intake"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_mast_intake.sh",
+  "runner_sha256": "4daebac4bb3afd180a37c1c887bbc59bfe408502a23a66977e695ce95d265200",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-06T05:14:47.380476Z",
+  "success": true,
+  "summary": {
+    "access_status": "public",
+    "claim_boundary": "TokaMark is a task-ready repackaging of FAIR-MAST MAST shots, not an independent machine. Intake/access evidence only; no causal TCT, segmented-electrode efficacy, p-B11, or reactor-scale claim.",
+    "classification": "TOKAMARK_MAST_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+    "created_utc": "2026-10-06T05:14:48.180380+00:00",
+    "diagnostics": [
+      "Mirnov coils (500 kHz)",
+      "D-alpha and soft X-ray (50 kHz)",
+      "flux/pickup/saddle magnetics",
+      "Thomson scattering",
+      "interferometer",
+      "PF/solenoid/plasma currents",
+      "PF coil voltages",
+      "reference plasma current/density",
+      "NBI power",
+      "gas puffing",
+      "EFIT shape/J_tor/flux map"
+    ],
+    "fuel_track": "fuel_agnostic_control",
+    "license": "CC BY 4.0",
+    "machine": "MAST",
+    "next_experiment": "Use TokaMark task metadata/smallest available batch to define a frozen temporal-split precursor/reachability audit before any bulk 565-GB download; reuse the established 2.75 ms and 5.25 ms TCT budgets without retuning.",
+    "pb11_fidelity": {
+      "applicable": false
+    },
+    "schema_version": 1,
+    "shot_family": {
+      "archive_size_gb_approx": 565,
+      "shots": 11573,
+      "signals": 39,
+      "tasks": 14
+    },
+    "source": "UKAEA-IBM-STFC/tokamark-v1",
+    "tct_relevance": [
+      "frozen multi-shot precursor benchmark",
+      "actuator-to-equilibrium response",
+      "preventative-vs-reactive timing",
+      "MHD/disruption forecasting",
+      "controller generalization across campaigns"
+    ]
+  },
+  "summary_path": "validation_runs/tokamark_mast_intake/summary.json",
+  "summary_sha256": "d3cd3ea379817c07bd25ccb51cfe915c0ecdc90bee1fd55cf08a80288369682e",
+  "timed_out": false
+}

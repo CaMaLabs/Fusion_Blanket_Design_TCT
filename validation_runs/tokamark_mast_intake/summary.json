@@ -1,0 +1,41 @@
+{
+  "access_status": "public",
+  "claim_boundary": "TokaMark is a task-ready repackaging of FAIR-MAST MAST shots, not an independent machine. Intake/access evidence only; no causal TCT, segmented-electrode efficacy, p-B11, or reactor-scale claim.",
+  "classification": "TOKAMARK_MAST_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+  "created_utc": "2026-10-06T05:14:48.180380+00:00",
+  "diagnostics": [
+    "Mirnov coils (500 kHz)",
+    "D-alpha and soft X-ray (50 kHz)",
+    "flux/pickup/saddle magnetics",
+    "Thomson scattering",
+    "interferometer",
+    "PF/solenoid/plasma currents",
+    "PF coil voltages",
+    "reference plasma current/density",
+    "NBI power",
+    "gas puffing",
+    "EFIT shape/J_tor/flux map"
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "license": "CC BY 4.0",
+  "machine": "MAST",
+  "next_experiment": "Use TokaMark task metadata/smallest available batch to define a frozen temporal-split precursor/reachability audit before any bulk 565-GB download; reuse the established 2.75 ms and 5.25 ms TCT budgets without retuning.",
+  "pb11_fidelity": {
+    "applicable": false
+  },
+  "schema_version": 1,
+  "shot_family": {
+    "archive_size_gb_approx": 565,
+    "shots": 11573,
+    "signals": 39,
+    "tasks": 14
+  },
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "tct_relevance": [
+    "frozen multi-shot precursor benchmark",
+    "actuator-to-equilibrium response",
+    "preventative-vs-reactive timing",
+    "MHD/disruption forecasting",
+    "controller generalization across campaigns"
+  ]
+}

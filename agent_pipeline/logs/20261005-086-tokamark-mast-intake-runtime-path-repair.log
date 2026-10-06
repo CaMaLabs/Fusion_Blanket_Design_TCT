@@ -1,0 +1,53 @@
+job_id=20261005-086-tokamark-mast-intake-runtime-path-repair
+started_utc=2026-10-06T05:14:47.380476Z
+head_before=691f3ee023bf24634096cac1f718ecaec5dff8bc
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-06T05:14:48.180380+00:00",
+  "classification": "TOKAMARK_MAST_OPEN_SHOT_FAMILY_ACCESS_CONFIRMED",
+  "machine": "MAST",
+  "fuel_track": "fuel_agnostic_control",
+  "source": "UKAEA-IBM-STFC/tokamark-v1",
+  "access_status": "public",
+  "license": "CC BY 4.0",
+  "shot_family": {
+    "shots": 11573,
+    "signals": 39,
+    "tasks": 14,
+    "archive_size_gb_approx": 565
+  },
+  "diagnostics": [
+    "Mirnov coils (500 kHz)",
+    "D-alpha and soft X-ray (50 kHz)",
+    "flux/pickup/saddle magnetics",
+    "Thomson scattering",
+    "interferometer",
+    "PF/solenoid/plasma currents",
+    "PF coil voltages",
+    "reference plasma current/density",
+    "NBI power",
+    "gas puffing",
+    "EFIT shape/J_tor/flux map"
+  ],
+  "tct_relevance": [
+    "frozen multi-shot precursor benchmark",
+    "actuator-to-equilibrium response",
+    "preventative-vs-reactive timing",
+    "MHD/disruption forecasting",
+    "controller generalization across campaigns"
+  ],
+  "claim_boundary": "TokaMark is a task-ready repackaging of FAIR-MAST MAST shots, not an independent machine. Intake/access evidence only; no causal TCT, segmented-electrode efficacy, p-B11, or reactor-scale claim.",
+  "pb11_fidelity": {
+    "applicable": false
+  },
+  "next_experiment": "Use TokaMark task metadata/smallest available batch to define a frozen temporal-split precursor/reachability audit before any bulk 565-GB download; reuse the established 2.75 ms and 5.25 ms TCT budgets without retuning."
+}
+
+finished_utc=2026-10-06T05:14:48.196774Z
+return_code=0
