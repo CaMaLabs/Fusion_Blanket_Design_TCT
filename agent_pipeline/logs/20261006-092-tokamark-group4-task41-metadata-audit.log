@@ -1,0 +1,121 @@
+job_id=20261006-092-tokamark-group4-task41-metadata-audit
+started_utc=2026-10-07T06:17:59.431514Z
+head_before=c8ff694856dc93d0d86569ccb53cd348e133acd2
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-07T06:18:00.449816+00:00",
+  "classification": "TOKAMARK_MAST_GROUP4_TASK41_METADATA_AUDITED",
+  "machine": "MAST",
+  "fuel_track": "fuel_agnostic_control",
+  "evidence_class": "observational_task_metadata",
+  "pipeline_failure": false,
+  "source_url": "https://raw.githubusercontent.com/UKAEA-IBM-STFC-Fusion-FMs/tokamark/main/src/tokamark/tasks_configs/group_4_mhd_activity/task_4-1.yaml",
+  "task_id": "4-1",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "frozen_tct_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "task_yaml_bytes": 1174,
+  "keyword_hits": {
+    "input_window": [],
+    "forecast_window": [],
+    "stride": [
+      {
+        "line": 39,
+        "text": "stride_window: 0.001"
+      }
+    ],
+    "mag": [
+      {
+        "line": 6,
+        "text": "- [magnetics, flux_loop_flux]"
+      },
+      {
+        "line": 7,
+        "text": "- [magnetics, b_field_pol_probe_ccbv_field]"
+      },
+      {
+        "line": 8,
+        "text": "- [magnetics, b_field_pol_probe_obr_field]"
+      },
+      {
+        "line": 9,
+        "text": "- [magnetics, b_field_pol_probe_obv_field]"
+      },
+      {
+        "line": 10,
+        "text": "- [magnetics, b_field_tor_probe_saddle_voltage]"
+      },
+      {
+        "line": 18,
+        "text": "- [magnetics, b_field_tor_probe_cc_field]"
+      },
+      {
+        "line": 19,
+        "text": "- [magnetics, b_field_pol_probe_omv_voltage]"
+      }
+    ],
+    "mirnov": [],
+    "saddle": [
+      {
+        "line": 10,
+        "text": "- [magnetics, b_field_tor_probe_saddle_voltage]"
+      }
+    ],
+    "plasma_current": [],
+    "density": [],
+    "dalpha": [
+      {
+        "line": 15,
+        "text": "- [spectrometer_visible, filter_spectrometer_dalpha_voltage]"
+      }
+    ],
+    "d-alpha": [],
+    "sxr": [],
+    "soft x": [],
+    "nbi": [
+      {
+        "line": 24,
+        "text": "- [summary, power_nbi]"
+      }
+    ],
+    "gas": [
+      {
+        "line": 25,
+        "text": "- [gas_injection, total_injected]"
+      }
+    ],
+    "pf": [
+      {
+        "line": 11,
+        "text": "- [pf_active, coil_current]"
+      },
+      {
+        "line": 12,
+        "text": "- [pf_active, solenoid_current]"
+      }
+    ],
+    "solenoid": [
+      {
+        "line": 12,
+        "text": "- [pf_active, solenoid_current]"
+      }
+    ],
+    "reference": []
+  },
+  "claim_boundary": "Task metadata/timing provenance only. No causal TCT validation, no independent cross-machine evidence, no segmented-electrode efficacy, no p-B11 inference.",
+  "next_gate": "Parse exact timing-window values and channel names from task 4-1 metadata into a frozen observational precursor-reachability design before shot-level statistics."
+}
+
+finished_utc=2026-10-07T06:18:00.498406Z
+return_code=0

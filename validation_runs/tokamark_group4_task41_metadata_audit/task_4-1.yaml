@@ -1,0 +1,39 @@
+task_name: task_4-1
+task_type: non_markovian
+
+sources_and_signals:
+  input_name: &input_keys
+    - [magnetics, flux_loop_flux] 
+    - [magnetics, b_field_pol_probe_ccbv_field]
+    - [magnetics, b_field_pol_probe_obr_field]
+    - [magnetics, b_field_pol_probe_obv_field]
+    - [magnetics, b_field_tor_probe_saddle_voltage]
+    - [pf_active, coil_current]
+    - [pf_active, solenoid_current]
+    - [summary, ip]
+    - [interferometer, n_e_line]
+    - [spectrometer_visible, filter_spectrometer_dalpha_voltage]
+    - [soft_x_rays, horizontal_cam_lower]
+    - [soft_x_rays, horizontal_cam_upper]
+    - [magnetics, b_field_tor_probe_cc_field]
+    - [magnetics, b_field_pol_probe_omv_voltage]
+
+  actuator_name: &actuator_keys
+    - [pulse_schedule, i_plasma]
+    - [pulse_schedule, n_e_line]
+    - [summary, power_nbi]
+    - [gas_injection, total_injected]
+
+  output_name: &output_keys
+    - [soft_x_rays, horizontal_cam_lower]
+    - [soft_x_rays, horizontal_cam_upper]
+
+task_window_segmenter:
+  input_keys: *input_keys
+  actuator_keys: *actuator_keys
+  output_keys: *output_keys
+  input_length: 0.150
+  output_length: 0.100
+  delta: 0  # This is forecasting
+
+stride_window: 0.001
