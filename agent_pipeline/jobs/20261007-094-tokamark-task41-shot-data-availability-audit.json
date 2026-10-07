@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+  "kind": "experimental_data_availability_audit",
+  "enabled": true,
+  "parent_result_job_id": "20261006-093-tokamark-task41-frozen-reachability-design",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_shot_data_availability_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tokamark_task41_shot_data_availability_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_shot_data_availability_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "purpose": "Audit local availability and provenance of Task-4.1-compatible MAST/TokaMark shot data before executing the frozen observational reachability design.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "no_network_fetch": true,
+    "retuning_permitted": false,
+    "do_not_apply_m3dc1_only_gates_to_imported_data": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1
+  }
+}
