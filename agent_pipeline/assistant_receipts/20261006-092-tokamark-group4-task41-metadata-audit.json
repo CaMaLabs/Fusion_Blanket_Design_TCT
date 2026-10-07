@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-092-tokamark-group4-task41-metadata-audit",
+  "processed_result_job_id": "20261006-092-tokamark-group4-task41-metadata-audit",
+  "classification": "TOKAMARK_MAST_GROUP4_TASK41_METADATA_AUDITED",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": "not_yet_selected_at_task-metadata_stage",
+  "evidence_class": "observational_task_metadata",
+  "pipeline_failure": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 1.066,
+    "input_window_ms": 150,
+    "forecast_window_ms": 100,
+    "forecast_delta_ms": 0,
+    "stride_ms": 1
+  },
+  "interpretation": "Successful metadata/timing provenance milestone. Task 4-1 timing windows and diagnostic/actuator channels are established, but no shot-level precursor statistics or causal TCT efficacy are inferred.",
+  "mechanism_effect": "neutral",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "pb11_fidelity_limits": "not_applicable",
+  "new_job_id": "20261006-093-tokamark-task41-frozen-reachability-design",
+  "timestamp_utc": "2026-10-07T10:23:00Z"
+}
