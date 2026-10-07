@@ -1,0 +1,60 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5649192333221436,
+  "error": null,
+  "finished_utc": "2026-10-07T11:27:04.514266Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1044,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_shot_data_availability_audit/summary.json"
+    ]
+  },
+  "head_before": "8b1cd7d6f87e8f333d724cd926c100f1574e027b",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261007-094-tokamark-task41-shot-data-availability-audit.json",
+  "job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+  "log_path": "agent_pipeline/logs/20261007-094-tokamark-task41-shot-data-availability-audit.log",
+  "log_sha256": "2ee51e971bfd5705fc8bdaae809cebc1b7d0db03e60f2b83ea052037a690e946",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_shot_data_availability_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_shot_data_availability_audit.sh",
+  "runner_sha256": "36757c66666ac7f127e2781197bbc834b65f01e3ec22e96d41fcab8feafafd70",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-07T11:27:03.948449Z",
+  "success": true,
+  "summary": {
+    "candidate_data_roots_present": [
+      "validation_runs/tokamark_mast_intake"
+    ],
+    "canonical_split_present": false,
+    "classification": "TOKAMARK_MAST_TASK41_SHOT_DATA_AVAILABILITY_AUDITED",
+    "created_utc": "2026-10-07T11:27:04.477298+00:00",
+    "evidence_class": "pipeline_data_availability",
+    "fuel_track": "fuel_agnostic_control",
+    "interpretation": "Availability/provenance audit only. No shot-level precursor statistic, causal TCT inference, M3D-C1 gate mapping, or p-B11 inference.",
+    "machine": "MAST",
+    "next_gate": "If local Task-4.1-compatible shot data are present, run the frozen observational reachability design unchanged; otherwise repair/materialize data access only.",
+    "no_network_fetch_performed": true,
+    "parent_result_job_id": "20261006-093-tokamark-task41-frozen-reachability-design",
+    "pipeline_failure": false,
+    "ready_for_frozen_shot_level_reachability": false,
+    "sample_local_file_count": 1,
+    "sample_local_files": [
+      "validation_runs/tokamark_mast_intake/summary.json"
+    ],
+    "schema_version": 1
+  },
+  "summary_path": "validation_runs/tokamark_task41_shot_data_availability_audit/summary.json",
+  "summary_sha256": "8c2d9d53aca318a209db131e23c278d7d6269f483ffa4e729ebb702fab67695d",
+  "timed_out": false
+}
