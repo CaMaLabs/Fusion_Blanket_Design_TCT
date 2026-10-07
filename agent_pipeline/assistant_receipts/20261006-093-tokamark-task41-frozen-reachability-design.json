@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-093-tokamark-task41-frozen-reachability-design",
+  "processed_result_job_id": "20261006-093-tokamark-task41-frozen-reachability-design",
+  "classification": "TOKAMARK_MAST_TASK41_FROZEN_REACHABILITY_DESIGN",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": "not_yet_loaded; design stage",
+  "evidence_class": "prospective_observational_design",
+  "pipeline_failure": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 0.7153761386871338,
+    "input_length_ms": 150,
+    "forecast_length_ms": 100,
+    "forecast_delta_ms": 0,
+    "stride_ms": 1,
+    "prebiased_fast_budget_ms": 2.75,
+    "prebiased_nominal_budget_ms": 5.25
+  },
+  "successful_milestone": "Frozen prospective observational design established before shot-level statistics: canonical split, exact diagnostic set, timing calibration requirement, circular-shift and shuffled-event nulls, no per-shot retuning, and separate 2.75/5.25 ms reachability reporting.",
+  "interpretation": "Supported as a valid prospective design milestone; neutral toward TCT mechanism efficacy because no shot-level data were analyzed.",
+  "mechanism_effect": "neutral",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 inference",
+  "m3dc1_claim_boundary": "M3D-C1-only gates are not mapped to imported MAST/TokaMark observations.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "new_job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+  "timestamp_utc": "2026-10-07T11:26:04Z"
+}
