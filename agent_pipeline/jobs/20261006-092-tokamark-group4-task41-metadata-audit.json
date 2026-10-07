@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-092-tokamark-group4-task41-metadata-audit",
+  "kind": "experimental_task_metadata_audit",
+  "enabled": true,
+  "parent_result_job_id": "20261006-091-tokamark-canonical-path-metadata-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_group4_task41_metadata_audit.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tokamark_group4_task41_metadata_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_group4_task41_metadata_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "source_task": "src/tokamark/tasks_configs/group_4_mhd_activity/task_4-1.yaml",
+  "purpose": "Audit exact Group-4 task-4-1 timing and diagnostic metadata before any observational precursor-reachability calculation.",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "interpretation_contract": {
+    "observational_only": true,
+    "no_bulk_download": true,
+    "retuning_permitted": false,
+    "do_not_apply_m3dc1_only_gates_to_imported_data": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Imported MAST/TokaMark task metadata only; no causal TCT, segmented-electrode, p-B11, or reactor-scale claim."
+  }
+}
