@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "job_id": "20261006-093-tokamark-task41-frozen-reachability-design",
+  "kind": "experimental_precursor_reachability_design",
+  "enabled": true,
+  "parent_result_job_id": "20261006-092-tokamark-group4-task41-metadata-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_frozen_reachability_design.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/tokamark_task41_frozen_reachability_design"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_frozen_reachability_design/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "source_task": "src/tokamark/tasks_configs/group_4_mhd_activity/task_4-1.yaml",
+  "purpose": "Freeze the observational Task-4.1 precursor/reachability design using the canonical temporal split, exact channel/timing contract, 2.75/5.25 ms actuator budgets, and predeclared nulls before any shot-level statistics.",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "interpretation_contract": {
+    "observational_only": true,
+    "retuning_permitted": false,
+    "no_bulk_download": true,
+    "frozen_temporal_holdout": true,
+    "circular_shift_null": true,
+    "shuffled_event_null": true,
+    "per_shot_and_aggregate_reporting": true,
+    "do_not_apply_m3dc1_only_gates_to_imported_data": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Prospective observational MAST/TokaMark reachability design only; no causal TCT validation, no segmented-electrode efficacy, no independent cross-machine claim, no p-B11 inference."
+  }
+}
