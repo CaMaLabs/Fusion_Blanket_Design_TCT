@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "20261007-095-tokamark-task41-remote-shot-access-probe",
+  "kind": "experimental_remote_data_access_probe",
+  "enabled": true,
+  "parent_result_job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_remote_shot_access_probe.sh",
+  "timeout_seconds": 120,
+  "result_paths": [
+    "validation_runs/tokamark_task41_remote_shot_access_probe"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_remote_shot_access_probe/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "purpose": "Bounded anonymous metadata-only remote access probe for one MAST shot after local data absence; do not bulk-download or change frozen observational reachability design.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "read_only_remote_probe": true,
+    "bulk_download_permitted": false,
+    "retuning_permitted": false,
+    "reachability_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "do_not_apply_m3dc1_only_gates_to_imported_data": true,
+    "frozen_width_gate_pct_gt": 0.02,
+    "frozen_Jpk_gate_pct_le": 0.1,
+    "claim_boundary": "Only access/provenance. No causal TCT, p-B11, reactor efficacy, nor native M3D-C1 validation."
+  }
+}
