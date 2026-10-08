@@ -1,0 +1,78 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 2.268300771713257,
+  "error": null,
+  "finished_utc": "2026-10-08T02:11:59.459933Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1676,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_remote_shot_access_probe/summary.json"
+    ]
+  },
+  "head_before": "b22b593bd4c7adda60edbd060e839f91148b67b2",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261007-095-tokamark-task41-remote-shot-access-probe.json",
+  "job_id": "20261007-095-tokamark-task41-remote-shot-access-probe",
+  "log_path": "agent_pipeline/logs/20261007-095-tokamark-task41-remote-shot-access-probe.log",
+  "log_sha256": "5b07a41f958b21bcb3ceb0fc669fc89cda9a89df0f14ccf0414f979ba8a30a44",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_remote_shot_access_probe"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_remote_shot_access_probe.sh",
+  "runner_sha256": "73be5c76a9b84ef14ebb5a110a8f66438f474c394f60b82fb1baf1e3b77f2de9",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-08T02:11:57.190674Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "anonymous_metadata_probe": [
+      {
+        "content_type": "text/plain; charset=utf-8",
+        "error": null,
+        "name": "fair_mast_s3_shot_zgroup",
+        "response_bytes": 24,
+        "status": 206,
+        "url": "https://s3.echo.stfc.ac.uk/mast/level1/shots/21719.zarr/.zgroup"
+      },
+      {
+        "content_type": "text/plain; charset=utf-8",
+        "error": null,
+        "name": "fair_mast_s3_shot_zmetadata",
+        "response_bytes": 4096,
+        "status": 206,
+        "url": "https://s3.echo.stfc.ac.uk/mast/level1/shots/21719.zarr/.zmetadata"
+      }
+    ],
+    "bulk_download_performed": false,
+    "claim_boundary": "Remote dataset metadata accessibility only; no precursor/causal TCT result, no inferred diagnostic time calibration or segment-electrode efficacy; M3D-C1 thresholds remain unmapped.",
+    "classification": "TOKAMARK_MAST_TASK41_REMOTE_SHOT_ACCESS_PROBED",
+    "created_utc": "2026-10-08T02:11:59.428666+00:00",
+    "evidence_class": "pipeline_remote_data_access",
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "MAST",
+    "metadata_endpoint_reachable": true,
+    "next_gate": "If a canonical single-shot endpoint is verified, map diagnostic paths, exact shot ID, timebases and small bounded signal slices before applying the unchanged frozen observational reachability design. A 404 indicates candidate-path failure, not unavailable public data or a TCT negative.",
+    "parent_result_job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+    "pipeline_failure": false,
+    "schema_version": 1,
+    "shot_ids": [
+      21719
+    ],
+    "shot_level_signals_loaded": false
+  },
+  "summary_path": "validation_runs/tokamark_task41_remote_shot_access_probe/summary.json",
+  "summary_sha256": "4a8ec181f6684470de7236c79b0a3b307e3beabcbaebc2de40255a14b1091ae5",
+  "timed_out": false
+}
