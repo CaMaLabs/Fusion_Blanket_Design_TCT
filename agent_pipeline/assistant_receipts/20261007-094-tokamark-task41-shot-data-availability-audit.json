@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+  "processed_result_job_id": "20261007-094-tokamark-task41-shot-data-availability-audit",
+  "processed_result_receipt_sha": "8f70caf3aaee1a17d7ca904ef648a7c5fcaa68e4",
+  "result_head_before": "8b1cd7d6f87e8f333d724cd926c100f1574e027b",
+  "classification": "TOKAMARK_MAST_TASK41_SHOT_DATA_AVAILABILITY_AUDITED",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [],
+  "evidence_class": "pipeline_data_availability",
+  "pipeline_failure": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 0.5649192333221436,
+    "sample_local_file_count": 1,
+    "canonical_split_present": false,
+    "ready_for_frozen_shot_level_reachability": false,
+    "no_network_fetch_performed": true
+  },
+  "successful_milestone": "Audited exact local data availability without network access or detector retuning and determined the frozen observational analysis cannot yet run.",
+  "interpretation": "No locally materialized Task-4.1-compatible MAST shot data. This is a data-access prerequisite, not a scientific negative. Causal TCT efficacy remains unmeasured.",
+  "mechanism_effect": "neutral",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 inference",
+  "m3dc1_claim_boundary": "Native M3D-C1 width and Jpk gates are not mapped to MAST experimental observations.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "new_job_id": "20261007-095-tokamark-task41-remote-shot-access-probe",
+  "timestamp_utc": "2026-10-08T02:09:00Z"
+}
