@@ -1,0 +1,13 @@
+job_id=20261008-096-tokamark-task41-remote-signal-metadata-map
+started_utc=2026-10-09T15:27:10.170556Z
+head_before=6c715344cba2f4219c7f2cd951fea6b754ed316a
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_TASK41_REMOTE_SIGNAL_METADATA_MAPPED", "status": 206, "keys": 2036, "task41_sample_hits": 0, "timebase_verified": false, "waveform_chunks_loaded": false}
+
+finished_utc=2026-10-09T15:27:18.299985Z
+return_code=0
