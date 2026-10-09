@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20261007-095-tokamark-task41-remote-shot-access-probe",
+  "processed_result_receipt": "agent_pipeline/results/20261007-095-tokamark-task41-remote-shot-access-probe.json",
+  "processed_result_sha256": "4a8ec181f6684470de7236c79b0a3b307e3beabcbaebc2de40255a14b1091ae5",
+  "exact_classification": "TOKAMARK_MAST_TASK41_REMOTE_SHOT_ACCESS_PROBED",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "quantitative_result": {
+    "metadata_endpoints_http_206": 2,
+    "waveform_chunks_loaded": 0,
+    "shots_analyzed": 0,
+    "events_analyzed": 0
+  },
+  "successful_milestone": "Verified anonymous access to FAIR-MAST Level-1 Zarr .zgroup and .zmetadata for MAST #21719; recorded before advancing.",
+  "interpretation": "Access/provenance success only; neutral to TCT precursor and 2.75/5.25 ms reachability.",
+  "mechanism_effect": "neutral",
+  "pb11_fidelity": "not_applicable",
+  "claim_boundary": "No inferred event marker, timebase alignment, causal TCT effect or p-B11 result.",
+  "new_job_id": "20261008-096-tokamark-task41-remote-signal-metadata-map",
+  "timestamp_utc": "2026-10-09T15:24:39Z"
+}

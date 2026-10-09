@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "20261008-096-tokamark-task41-remote-signal-metadata-map",
+  "kind": "experimental_remote_signal_metadata_map",
+  "enabled": true,
+  "parent_result_job_id": "20261007-095-tokamark-task41-remote-shot-access-probe",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_remote_signal_metadata_map.sh",
+  "timeout_seconds": 180,
+  "result_paths": [
+    "validation_runs/tokamark_task41_remote_signal_metadata_map"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_remote_signal_metadata_map/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "source": "FAIR-MAST public Level-1 Zarr metadata; TokaMark Task-4.1 canonical task schema",
+  "purpose": "Retry the previously blocked deterministic 096 transition: bounded remote Zarr metadata map for MAST #21719, without waveforms or detector retuning.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "metadata_only": true,
+    "bulk_download_permitted": false,
+    "retuning_permitted": false,
+    "required_timebase_alignment_before_reachability": true,
+    "reachability_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "fuel_fidelity": "No p-B11 validation from MAST.",
+    "claim_boundary": "Remote metadata only. No causal TCT or native M3D-C1 claims; retain frozen scientific gates."
+  }
+}
