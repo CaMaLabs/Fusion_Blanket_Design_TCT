@@ -71,7 +71,7 @@ if status in (200, 206) and sample:
         pass
     if not full:
         keys = sorted(set(re.findall(
-            r'"([^"\\]+/(?:\\.zarray|\\.zattrs|\\.zgroup))"\\s*:',
+            r'"([^"\\]+/(?:\.zarray|\.zattrs|\.zgroup))"\s*:',
             sample.decode("utf-8", errors="replace"),
         )))
 matched = []
@@ -81,7 +81,7 @@ for group, name in requested:
     matched.append({"task41_group": group, "task41_signal": name,
                     "present_in_metadata_sample": bool(matching),
                     "matched_paths": matching[:5]})
-time_keys = [k for k in keys if re.search(r"(^|/)(time|timestamp|t_axis)(/|_|\\.)", k, re.I)]
+time_keys = [k for k in keys if re.search(r"(^|/)(time|timestamp|t_axis)(/|_|\.)", k, re.I)]
 classification = (
     "TOKAMARK_TASK41_REMOTE_SIGNAL_METADATA_MAPPED" if full
     else "TOKAMARK_TASK41_REMOTE_SIGNAL_METADATA_PARTIAL" if status in (200, 206)
