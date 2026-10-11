@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "20261010-097-tokamark-task41-l1-alias-provenance-audit",
+  "kind": "experimental_task41_l1_alias_provenance_audit",
+  "enabled": true,
+  "parent_result_job_id": "20261008-096-tokamark-task41-remote-signal-metadata-map",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_l1_alias_provenance_audit.sh",
+  "timeout_seconds": 240,
+  "result_paths": [
+    "validation_runs/tokamark_task41_l1_alias_provenance_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_l1_alias_provenance_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "source": "FAIR-MAST Level-1/Level-2 Zarr .zmetadata; TokaMark Task-4.1 canonical YAML",
+  "purpose": "Retry exact pending 097 transition after blocked prior write. Resolve Level-1 alias candidates versus canonical Level-2 Task-4.1 signal paths, preserving provenance and timing gates without waveform downloads.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "metadata_only": true,
+    "bulk_download_permitted": false,
+    "retuning_permitted": false,
+    "alias_equivalence_requires_provenance": true,
+    "required_timebase_alignment_before_reachability": true,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "frozen_temporal_holdout": true,
+    "circular_shift_null": true,
+    "shuffled_event_null": true,
+    "pb11_fidelity": "not_applicable",
+    "claim_boundary": "No precursor result, causal TCT or segmented-electrode efficacy, native M3D-C1, reactor-scale or p-B11 inference."
+  }
+}

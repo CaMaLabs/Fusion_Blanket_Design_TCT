@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "job_id": "20261008-096-tokamark-task41-remote-signal-metadata-map",
+  "processed_result_receipt": "agent_pipeline/results/20261008-096-tokamark-task41-remote-signal-metadata-map.json",
+  "processed_result_blob_sha": "e68bc02cd1192d79d7afcc072aed39e157b4603d",
+  "exact_classification": "TOKAMARK_TASK41_REMOTE_SIGNAL_METADATA_MAPPED",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "quantitative_result": {
+    "metadata_bytes": 1268412,
+    "metadata_keys": 2036,
+    "task41_exact_path_matches": 0,
+    "waveform_chunks_loaded": 0,
+    "shots_analyzed": 0,
+    "events_analyzed": 0
+  },
+  "successful_milestone": "FAIR-MAST Level-1 Zarr metadata fully parsed for shot 21719 (HTTP 206, 2,036 entries); recorded before next transition.",
+  "interpretation": "The 18 TokaMark Task-4.1 requested signal names do not directly match Level-1 Zarr paths; this is a metadata namespace issue, not a negative physics result.",
+  "mechanism_effect": "neutral",
+  "pb11_fidelity": "not_applicable",
+  "claim_boundary": "No verified timebase alignment, precursor lead, causal TCT, segmented-electrode efficacy, native M3D-C1 or p-B11 physics.",
+  "new_job_id": "20261010-097-tokamark-task41-l1-alias-provenance-audit",
+  "timestamp_utc": "2026-10-11T14:57:14Z"
+}
