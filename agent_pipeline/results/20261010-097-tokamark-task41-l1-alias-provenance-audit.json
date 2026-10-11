@@ -1,0 +1,540 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 3.069643974304199,
+  "error": null,
+  "finished_utc": "2026-10-11T15:00:43.016826Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 13564,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_l1_alias_provenance_audit/summary.json"
+    ]
+  },
+  "head_before": "d532494d54f8ffa6103c89376f71bcc583bbf94f",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261010-097-tokamark-task41-l1-alias-provenance-audit.json",
+  "job_id": "20261010-097-tokamark-task41-l1-alias-provenance-audit",
+  "log_path": "agent_pipeline/logs/20261010-097-tokamark-task41-l1-alias-provenance-audit.log",
+  "log_sha256": "a54d79cc1be3dbd5effcbc8d2ff09506ade4fe342b9158dda95765c97564f450",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_l1_alias_provenance_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_l1_alias_provenance_audit.sh",
+  "runner_sha256": "e0d38ffe69a0a0d03d325ac7bc3cfe4b6349e555d1621b79846b4642db882ee7",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-11T15:00:39.946334Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "candidate_timebase_arrays_unverified": {
+      "level1": [
+        "abm/time",
+        "ada/time",
+        "adg/time",
+        "aga/time",
+        "ahx/time",
+        "aim/time",
+        "ama/time",
+        "amb/time",
+        "amc/time",
+        "amh/time",
+        "amm/time",
+        "anb/time",
+        "ane/time",
+        "anu/time",
+        "asm/time",
+        "atm/time",
+        "efm/time",
+        "efm/time_",
+        "esm/time",
+        "rba/time",
+        "rbb/time",
+        "rbc/time",
+        "rco/time",
+        "rgb/time",
+        "rgc/time",
+        "xdc/time",
+        "xim/time",
+        "xsx/time"
+      ],
+      "level2": []
+    },
+    "canonical_task_source": "UKAEA-IBM-STFC-Fusion-FMs/tokamark src/tokamark/tasks_configs/group_4_mhd_activity/task_4-1.yaml",
+    "claim_boundary": "Metadata-only provenance candidates, not confirmed signal equivalence. No measured precursors, causal TCT suppression, segmented-electrode efficacy, independent cross-machine validation, native M3D-C1 validation or p-B11 fidelity.",
+    "classification": "TOKAMARK_TASK41_L1_L2_ALIAS_PROVENANCE_AUDITED",
+    "created_utc": "2026-10-11T15:00:42.976952+00:00",
+    "events_analyzed": 0,
+    "exact_path_matches": {
+      "level1": 0,
+      "level2": 0
+    },
+    "frozen_detector_retuned": false,
+    "fuel_track": "fuel_agnostic_control",
+    "level1_alias_search_hints_unverified": {
+      "gas_injection": [
+        "aga/integ_gas"
+      ],
+      "interferometer": [
+        "adg/density_gradient",
+        "ane/density",
+        "atm/interferometer_corr",
+        "atm/n_e_rc",
+        "efm/iteration_error",
+        "xdc/density_t_nelref"
+      ],
+      "magnetics": [
+        "abm/prad_pol",
+        "atm/ane_geometry_factor",
+        "atm/cal_factors_dynamic",
+        "atm/laser_monitor1",
+        "atm/laser_monitor2",
+        "atm/polyname",
+        "efm/bphi_rmag",
+        "efm/bpol_squared",
+        "efm/bvac_rmag",
+        "efm/chisq_magnetic",
+        "efm/diamag_fluxc",
+        "efm/diamag_fluxx",
+        "efm/mag_probe_n",
+        "efm/magnetic_axis_r",
+        "efm/magnetic_axis_z",
+        "efm/magpr_ang",
+        "efm/magpr_c",
+        "efm/magpr_len",
+        "efm/magpr_r",
+        "efm/magpr_x",
+        "efm/magpr_z",
+        "efm/magpri_chisq",
+        "efm/pol_length",
+        "efm/rvtor",
+        "efm/wpol"
+      ],
+      "pf_active": [
+        "amc/efps_current",
+        "amc/p2il_coil_current",
+        "amc/p2il_feed_current",
+        "amc/p2iu_coil_current",
+        "amc/p2iu_feed_current",
+        "amc/p2l_case_current",
+        "amc/p2l_current",
+        "amc/p2ol_coil_current",
+        "amc/p2ol_feed_current",
+        "amc/p2ou_coil_current",
+        "amc/p2ou_feed_current",
+        "amc/p2u_case_current",
+        "amc/p2u_current",
+        "amc/p3l_case_current",
+        "amc/p3l_coil_current",
+        "amc/p3l_current",
+        "amc/p3l_feed_current",
+        "amc/p3u_case_current",
+        "amc/p3u_coil_current",
+        "amc/p3u_current",
+        "amc/p3u_feed_current",
+        "amc/p4l_case_current",
+        "amc/p4l_coil_current",
+        "amc/p4l_current",
+        "amc/p4l_feed_current"
+      ],
+      "pulse_schedule": [
+        "adg/density_gradient",
+        "amc/plasma_current",
+        "ane/density",
+        "atm/laser_pulse_width",
+        "atm/n_e_rc",
+        "atm/plasma_light_fast",
+        "atm/plasma_light_slow",
+        "atm/pulse",
+        "efm/iteration_error",
+        "efm/plasma_area",
+        "efm/plasma_current_c",
+        "efm/plasma_current_rz",
+        "efm/plasma_current_x",
+        "efm/plasma_energy",
+        "efm/plasma_volume",
+        "xdc/density_t_nelref"
+      ],
+      "soft_x_rays": [],
+      "spectrometer_visible": [
+        "abm/channel_status",
+        "abm/channel_type",
+        "ada/dalpha_integrated",
+        "ada/dalpha_inverted",
+        "ada/dalpha_peak_radius",
+        "ada/dalpha_raw_full",
+        "amh/halo_ccl_2",
+        "amh/halo_ccu",
+        "amh/halo_ccu_2",
+        "amh/halo_p2l_1",
+        "amh/halo_p2l_2",
+        "amh/halo_p2l_4",
+        "amh/halo_p2u_1",
+        "amh/halo_p2u_2",
+        "amh/halo_p2u_3",
+        "amh/halo_p2u_4",
+        "amh/halo_p2u_5",
+        "amh/halo_p2u_6",
+        "amh/halo_p3l_4",
+        "amh/halo_p3l_6",
+        "amh/halo_p3u_2",
+        "amh/halo_p3u_3",
+        "amh/halo_p3u_4",
+        "amh/halo_p3u_5",
+        "amh/halo_p3u_6"
+      ],
+      "summary": [
+        "amc/plasma_current",
+        "anb/ss_full_power",
+        "anb/ss_full_power_error",
+        "anb/ss_half_power",
+        "anb/ss_half_power_error",
+        "anb/ss_sum_power",
+        "anb/ss_sum_power_error",
+        "anb/ss_third_power",
+        "anb/ss_third_power_error",
+        "anb/sw_full_power",
+        "anb/sw_full_power_error",
+        "anb/sw_half_power",
+        "anb/sw_half_power_error",
+        "anb/sw_sum_power",
+        "anb/sw_sum_power_error",
+        "anb/sw_third_power",
+        "anb/sw_third_power_error",
+        "anb/tot_sum_power",
+        "anb/tot_sum_power_error",
+        "atm/laser_power_max",
+        "atm/plasma_light_fast",
+        "atm/plasma_light_slow",
+        "efm/cutip",
+        "efm/ip_times",
+        "efm/plasma_area"
+      ]
+    },
+    "license": "TokaMark CC BY 4.0; FAIR-MAST Level-1/Level-2 reuse terms independently unverified",
+    "machine": "MAST",
+    "mechanism_effect": "neutral",
+    "next_gate": "Verify matched Level-2 channel semantics and time coordinates (or document defensible Level-1 aliases) before any bounded waveform retrieval; then frozen observational reachability with circular-shift and shuffled-event nulls.",
+    "parent_result_job_id": "20261008-096-tokamark-task41-remote-signal-metadata-map",
+    "pipeline_failure": false,
+    "ready_for_frozen_reachability": false,
+    "requested_task41_signals": 18,
+    "schema_version": 1,
+    "shot_ids": [
+      21719
+    ],
+    "shots_analyzed": 0,
+    "source": "FAIR-MAST public Level-1/Level-2 Zarr metadata and TokaMark Task-4.1 schema",
+    "source_provenance": {
+      "level1": {
+        "bytes_read": 1268412,
+        "complete_json": true,
+        "content_range": "bytes 0-1268411/1268412",
+        "error": null,
+        "metadata_entries": 2036,
+        "sha256": "4859733e99650d2f8761c15834420cde5f3576cd9dbe6123e6976ecfd69f8d36",
+        "status": 206,
+        "url": "https://s3.echo.stfc.ac.uk/mast/level1/shots/21719.zarr/.zmetadata"
+      },
+      "level2": {
+        "bytes_read": 0,
+        "complete_json": false,
+        "content_range": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "metadata_entries": 0,
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/level2/shots/21719.zarr/.zmetadata"
+      }
+    },
+    "task41_path_checks": [
+      {
+        "canonical_path": "magnetics/flux_loop_flux",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "flux_loop_flux"
+      },
+      {
+        "canonical_path": "magnetics/b_field_pol_probe_ccbv_field",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "b_field_pol_probe_ccbv_field"
+      },
+      {
+        "canonical_path": "magnetics/b_field_pol_probe_obr_field",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "b_field_pol_probe_obr_field"
+      },
+      {
+        "canonical_path": "magnetics/b_field_pol_probe_obv_field",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "b_field_pol_probe_obv_field"
+      },
+      {
+        "canonical_path": "magnetics/b_field_tor_probe_saddle_voltage",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "b_field_tor_probe_saddle_voltage"
+      },
+      {
+        "canonical_path": "pf_active/coil_current",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "pf_active",
+        "task41_signal": "coil_current"
+      },
+      {
+        "canonical_path": "pf_active/solenoid_current",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "pf_active",
+        "task41_signal": "solenoid_current"
+      },
+      {
+        "canonical_path": "summary/ip",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "summary",
+        "task41_signal": "ip"
+      },
+      {
+        "canonical_path": "interferometer/n_e_line",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "interferometer",
+        "task41_signal": "n_e_line"
+      },
+      {
+        "canonical_path": "spectrometer_visible/filter_spectrometer_dalpha_voltage",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "spectrometer_visible",
+        "task41_signal": "filter_spectrometer_dalpha_voltage"
+      },
+      {
+        "canonical_path": "soft_x_rays/horizontal_cam_lower",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "soft_x_rays",
+        "task41_signal": "horizontal_cam_lower"
+      },
+      {
+        "canonical_path": "soft_x_rays/horizontal_cam_upper",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "soft_x_rays",
+        "task41_signal": "horizontal_cam_upper"
+      },
+      {
+        "canonical_path": "magnetics/b_field_tor_probe_cc_field",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "b_field_tor_probe_cc_field"
+      },
+      {
+        "canonical_path": "magnetics/b_field_pol_probe_omv_voltage",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "magnetics",
+        "task41_signal": "b_field_pol_probe_omv_voltage"
+      },
+      {
+        "canonical_path": "pulse_schedule/i_plasma",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "pulse_schedule",
+        "task41_signal": "i_plasma"
+      },
+      {
+        "canonical_path": "pulse_schedule/n_e_line",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "pulse_schedule",
+        "task41_signal": "n_e_line"
+      },
+      {
+        "canonical_path": "summary/power_nbi",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "summary",
+        "task41_signal": "power_nbi"
+      },
+      {
+        "canonical_path": "gas_injection/total_injected",
+        "level1": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "level2": {
+          "attrs_excerpt": {},
+          "exact_path_present": false,
+          "zarray": null
+        },
+        "task41_group": "gas_injection",
+        "task41_signal": "total_injected"
+      }
+    ],
+    "temporal_split": "TokaMark_data_splits.csv; shot 21719 training; no resplitting",
+    "timebase_alignment_verified": false,
+    "waveform_chunks_loaded": 0
+  },
+  "summary_path": "validation_runs/tokamark_task41_l1_alias_provenance_audit/summary.json",
+  "summary_sha256": "d55bd513464c88c8800a25634bcc663976de8f723430267da5f1e9dc73ce029c",
+  "timed_out": false
+}

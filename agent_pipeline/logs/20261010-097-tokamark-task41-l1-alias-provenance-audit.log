@@ -1,0 +1,13 @@
+job_id=20261010-097-tokamark-task41-l1-alias-provenance-audit
+started_utc=2026-10-11T15:00:39.946334Z
+head_before=d532494d54f8ffa6103c89376f71bcc583bbf94f
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_TASK41_L1_L2_ALIAS_PROVENANCE_AUDITED", "level1_exact": 0, "level2_exact": 0, "level1_keys": 2036, "level2_keys": 0, "waveform_chunks_loaded": 0}
+
+finished_utc=2026-10-11T15:00:43.016788Z
+return_code=0
