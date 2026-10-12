@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "20261012-099-tokamark-task41-public-archive-access-reconciliation",
+  "kind": "experimental_task41_public_storage_access_reconciliation",
+  "enabled": true,
+  "parent_result_job_id": "20261011-098-tokamark-task41-canonical-s3-metadata-probe",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_public_archive_access_reconciliation.sh",
+  "timeout_seconds": 240,
+  "result_paths": [
+    "validation_runs/tokamark_task41_public_archive_access_reconciliation"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_public_archive_access_reconciliation/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "source": "TokaMark v1 canonical S3 store and public Hugging Face tar-of-zipped-Zarr archive",
+  "purpose": "Resolve Zarr-v2 vs v3 metadata and public HF archive index/range access after 098's 404s, without downloading a batch or presuming shot-to-batch membership.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "metadata_only": true,
+    "bulk_download_permitted": false,
+    "retuning_permitted": false,
+    "canonical_source_provenance_required": true,
+    "required_timebase_alignment_before_reachability": true,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "frozen_temporal_holdout": true,
+    "circular_shift_null": true,
+    "shuffled_event_null": true,
+    "pb11_fidelity": "not_applicable",
+    "claim_boundary": "A data-access test, not a scientific-negative result or validation of causal TCT, native M3D-C1, independent cross-machine, or p-B11 physics."
+  }
+}

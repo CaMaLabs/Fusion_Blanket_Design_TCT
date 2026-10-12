@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261011-098-tokamark-task41-canonical-s3-metadata-probe",
+  "processed_result_sha": "cc5baee9feac34064a435eaadda07d46f3835195",
+  "exact_classification": "TOKAMARK_TASK41_CANONICAL_S3_METADATA_ACCESS_NOT_ESTABLISHED",
+  "job_class": "experimental_task41_canonical_s3_metadata_probe",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "pipeline_failure": true,
+  "failure_class": "data_access_endpoint_or_storage_format_unresolved",
+  "infrastructure_write_failure": false,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "requested_task41_signals": 18,
+    "canonical_v3_signal_metadata_matches": 0,
+    "canonical_v3_time_metadata_matches": 0,
+    "canonical_v3_root_http_status": 404,
+    "waveform_chunks_loaded": 0,
+    "shots_analyzed": 0,
+    "events_analyzed": 0
+  },
+  "interpretation": "Job 098 ran and returned 404 on the canonical S3 Zarr-v3 metadata URLs. This is a remote-access/format diagnostic failure, not an experimental counterexample to TCT. The upstream public TokaMark Hugging Face dataset card specifies tar archives containing zipped Zarr stores; next reconcile v2 metadata and HF batch access before any waveform retrieval.",
+  "mechanism_effect": "neutral",
+  "claim_boundary": "No precursor timing, actuator reachability, causal TCT, segmented-electrode efficacy, native M3D-C1 equivalence, independent cross-machine validation, or p-B11 inference.",
+  "new_job_id": "20261012-099-tokamark-task41-public-archive-access-reconciliation",
+  "timestamp_utc": "2026-10-12T15:36:00Z"
+}
