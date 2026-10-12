@@ -1,0 +1,13 @@
+job_id=20261011-098-tokamark-task41-canonical-s3-metadata-probe
+started_utc=2026-10-12T05:54:40.563214Z
+head_before=b50ca968ee65be6c542f703142027dd1821d812d
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_TASK41_CANONICAL_S3_METADATA_ACCESS_NOT_ESTABLISHED", "ready_for_bounded_waveform_retrieval": false, "signal_metadata_confirmed_count": 0, "time_metadata_confirmed_count": 0, "waveform_chunks_loaded": 0}
+
+finished_utc=2026-10-12T05:58:03.052316Z
+return_code=3

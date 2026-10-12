@@ -1,0 +1,381 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 202.48820114135742,
+  "error": null,
+  "finished_utc": "2026-10-12T05:58:03.052366Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 12908,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_canonical_s3_metadata_probe/summary.json"
+    ]
+  },
+  "head_before": "b50ca968ee65be6c542f703142027dd1821d812d",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261011-098-tokamark-task41-canonical-s3-metadata-probe.json",
+  "job_id": "20261011-098-tokamark-task41-canonical-s3-metadata-probe",
+  "log_path": "agent_pipeline/logs/20261011-098-tokamark-task41-canonical-s3-metadata-probe.log",
+  "log_sha256": "312917f9109a7fb9004e9fbb6062474c6609107aab7fbc501bad8c985bea361f",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_canonical_s3_metadata_probe"
+  ],
+  "return_code": 3,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_canonical_s3_metadata_probe.sh",
+  "runner_sha256": "5dcf9c8ef554bb2f32dfbcc020d6dc6e81dca5e369bb447894c01f406588e6bf",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-12T05:54:40.563214Z",
+  "success": false,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "canonical_store_root": "s3://mast/tokamark/v1",
+    "claim_boundary": "Canonical TokaMark metadata-access audit only. No waveform/event analysis, precursor performance, causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, independent cross-machine validation, or p-B11 inference.",
+    "classification": "TOKAMARK_TASK41_CANONICAL_S3_METADATA_ACCESS_NOT_ESTABLISHED",
+    "created_utc": "2026-10-12T05:58:03.003621+00:00",
+    "events_analyzed": 0,
+    "evidence_class": "canonical_remote_metadata_access",
+    "fast_required_signal_metadata_present": false,
+    "fast_required_time_metadata_present": false,
+    "frozen_detector_retuned": false,
+    "fuel_track": "fuel_agnostic_control",
+    "https_store_root": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1",
+    "machine": "MAST",
+    "mechanism_effect": "neutral",
+    "next_gate": "If canonical fast diagnostic and time metadata are confirmed, retrieve only bounded waveform slices for the frozen prospective Task-4.1 observational reachability design; otherwise repair canonical data access without changing scientific thresholds.",
+    "parent_result_job_id": "20261010-097-tokamark-task41-l1-alias-provenance-audit",
+    "pipeline_failure": true,
+    "ready_for_bounded_waveform_retrieval": false,
+    "requested_signal_count": 18,
+    "root_metadata": {
+      "bytes_read": 0,
+      "content_length": null,
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "json": null,
+      "path": "/",
+      "sha256": null,
+      "status": null,
+      "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/zarr.json"
+    },
+    "schema_version": 1,
+    "shot_ids": [
+      21719
+    ],
+    "shots_analyzed": 0,
+    "signal_metadata": {
+      "gas_injection/total_injected": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "gas_injection/total_injected",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/gas_injection/total_injected/zarr.json"
+      },
+      "interferometer/n_e_line": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "interferometer/n_e_line",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/interferometer/n_e_line/zarr.json"
+      },
+      "magnetics/b_field_pol_probe_ccbv_field": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/b_field_pol_probe_ccbv_field",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/b_field_pol_probe_ccbv_field/zarr.json"
+      },
+      "magnetics/b_field_pol_probe_obr_field": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/b_field_pol_probe_obr_field",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/b_field_pol_probe_obr_field/zarr.json"
+      },
+      "magnetics/b_field_pol_probe_obv_field": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/b_field_pol_probe_obv_field",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/b_field_pol_probe_obv_field/zarr.json"
+      },
+      "magnetics/b_field_pol_probe_omv_voltage": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/b_field_pol_probe_omv_voltage",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/b_field_pol_probe_omv_voltage/zarr.json"
+      },
+      "magnetics/b_field_tor_probe_cc_field": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/b_field_tor_probe_cc_field",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/b_field_tor_probe_cc_field/zarr.json"
+      },
+      "magnetics/b_field_tor_probe_saddle_voltage": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/b_field_tor_probe_saddle_voltage",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/b_field_tor_probe_saddle_voltage/zarr.json"
+      },
+      "magnetics/flux_loop_flux": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/flux_loop_flux",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/flux_loop_flux/zarr.json"
+      },
+      "pf_active/coil_current": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "pf_active/coil_current",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/pf_active/coil_current/zarr.json"
+      },
+      "pf_active/solenoid_current": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "pf_active/solenoid_current",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/pf_active/solenoid_current/zarr.json"
+      },
+      "pulse_schedule/i_plasma": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "pulse_schedule/i_plasma",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/pulse_schedule/i_plasma/zarr.json"
+      },
+      "pulse_schedule/n_e_line": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "pulse_schedule/n_e_line",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/pulse_schedule/n_e_line/zarr.json"
+      },
+      "soft_x_rays/horizontal_cam_lower": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "soft_x_rays/horizontal_cam_lower",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/soft_x_rays/horizontal_cam_lower/zarr.json"
+      },
+      "soft_x_rays/horizontal_cam_upper": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "soft_x_rays/horizontal_cam_upper",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/soft_x_rays/horizontal_cam_upper/zarr.json"
+      },
+      "spectrometer_visible/filter_spectrometer_dalpha_voltage": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/spectrometer_visible/filter_spectrometer_dalpha_voltage/zarr.json"
+      },
+      "summary/ip": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "summary/ip",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/summary/ip/zarr.json"
+      },
+      "summary/power_nbi": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "summary/power_nbi",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/summary/power_nbi/zarr.json"
+      }
+    },
+    "signal_metadata_confirmed": [],
+    "signal_metadata_confirmed_count": 0,
+    "source": "TokaMark canonical public S3 store",
+    "temporal_split": "TokaMark_data_splits.csv; shot 21719 training; no resplitting",
+    "time_metadata": {
+      "gas_injection/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "gas_injection/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/gas_injection/time/zarr.json"
+      },
+      "interferometer/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "interferometer/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/interferometer/time/zarr.json"
+      },
+      "magnetics/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/time/zarr.json"
+      },
+      "magnetics/time_mirnov": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/time_mirnov",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/time_mirnov/zarr.json"
+      },
+      "magnetics/time_omaha": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/time_omaha",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/time_omaha/zarr.json"
+      },
+      "magnetics/time_saddle": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "magnetics/time_saddle",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/magnetics/time_saddle/zarr.json"
+      },
+      "pf_active/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "pf_active/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/pf_active/time/zarr.json"
+      },
+      "pulse_schedule/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "pulse_schedule/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/pulse_schedule/time/zarr.json"
+      },
+      "soft_x_rays/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "soft_x_rays/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/soft_x_rays/time/zarr.json"
+      },
+      "spectrometer_visible/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "spectrometer_visible/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/spectrometer_visible/time/zarr.json"
+      },
+      "summary/time": {
+        "bytes_read": 0,
+        "content_length": null,
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "json": null,
+        "path": "summary/time",
+        "sha256": null,
+        "status": null,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/summary/time/zarr.json"
+      }
+    },
+    "time_metadata_confirmed": [],
+    "time_metadata_confirmed_count": 0,
+    "upstream_store_constructor": "UKAEA-IBM-STFC-Fusion-FMs/tokamark src/MAST_tools/utils/store_utils.py",
+    "upstream_task": "src/tokamark/tasks_configs/group_4_mhd_activity/task_4-1.yaml",
+    "waveform_chunks_loaded": 0
+  },
+  "summary_path": "validation_runs/tokamark_task41_canonical_s3_metadata_probe/summary.json",
+  "summary_sha256": "8b3dc347e94c5b874a5836d42ed9172af9adb72ecc48ac754d31071904891c40",
+  "timed_out": false
+}
