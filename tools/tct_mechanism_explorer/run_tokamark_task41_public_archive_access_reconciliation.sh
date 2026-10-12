@@ -87,7 +87,7 @@ if listing_body:
                     continue
                 path = item.get("path", "")
                 size = item.get("size")
-                if re.fullmatch(r"batch_\\d{5}\\.tar", path) and isinstance(size, int):
+                if re.fullmatch(r"(?:.*/)?batch_\d{5}\.tar", path) and isinstance(size, int):
                     batches.append({"path": path, "size_bytes": size})
         else:
             listing["error"] = "unexpected_dataset_tree_schema"
@@ -103,7 +103,7 @@ if smallest:
     archive_head, _ = request(archive_url, method="HEAD")
     archive_range, first_bytes = request(archive_url, limit=512, range_header="bytes=0-511")
     if len(first_bytes) == 512 and first_bytes[257:262] == b"ustar":
-        first_tar_member = first_bytes[:100].split(b"\\0", 1)[0].decode("utf-8", errors="replace")
+        first_tar_member = first_bytes[:100].split(bytes([0]), 1)[0].decode("utf-8", errors="replace")
 
 s3_access = any(s3[k]["status"] == 200 for k in (".zgroup", ".zmetadata", "zarr.json"))
 hf_range = bool(archive_range and archive_range["status"] == 206 and archive_range["bytes_read"] == 512)
