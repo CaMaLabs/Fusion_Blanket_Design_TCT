@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "20261011-098-tokamark-task41-canonical-s3-metadata-probe",
+  "kind": "experimental_task41_canonical_s3_metadata_probe",
+  "enabled": true,
+  "parent_result_job_id": "20261010-097-tokamark-task41-l1-alias-provenance-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_canonical_s3_metadata_probe.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tokamark_task41_canonical_s3_metadata_probe"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_canonical_s3_metadata_probe/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "source": "TokaMark canonical public S3 store s3://mast/tokamark/v1",
+  "purpose": "Probe only canonical TokaMark Zarr v3 metadata for Task-4.1 signals and time coordinates on shot 21719 using the upstream public S3 layout; no waveform chunks, threshold changes, or alias guessing.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "metadata_only": true,
+    "bulk_download_permitted": false,
+    "retuning_permitted": false,
+    "canonical_store_provenance_required": true,
+    "required_timebase_alignment_before_reachability": true,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "frozen_temporal_holdout": true,
+    "circular_shift_null": true,
+    "shuffled_event_null": true,
+    "pb11_fidelity": "not_applicable",
+    "claim_boundary": "No precursor result, causal TCT or segmented-electrode efficacy, native M3D-C1, reactor-scale, independent cross-machine, or p-B11 inference."
+  }
+}

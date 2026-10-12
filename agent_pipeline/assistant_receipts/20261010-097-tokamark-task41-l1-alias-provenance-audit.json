@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261010-097-tokamark-task41-l1-alias-provenance-audit",
+  "processed_result_sha": "77feae8b85fcdb47dfd95bb5db33910759c85b7d",
+  "exact_classification": "TOKAMARK_TASK41_L1_L2_ALIAS_PROVENANCE_AUDITED",
+  "job_class": "experimental_task41_l1_alias_provenance_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "pipeline_failure": false,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "level1_metadata_entries": 2036,
+    "level1_exact_task41_paths": 0,
+    "level2_metadata_entries": 0,
+    "level2_http_status": 404,
+    "requested_task41_signals": 18,
+    "waveform_chunks_loaded": 0,
+    "shots_analyzed": 0,
+    "events_analyzed": 0
+  },
+  "interpretation": "Successful metadata/provenance milestone. FAIR-MAST Level-1 metadata for shot 21719 is readable and yields plausible raw aliases, but canonical Task-4.1 paths and timebase equivalence were not established. Upstream TokaMark code identifies the canonical public remote store as s3://mast/tokamark/v1, so the next step is to probe that canonical store rather than infer equivalence from Level-1 names.",
+  "evidence_class": "observational_metadata_provenance",
+  "mechanism_effect": "neutral",
+  "claim_boundary": "No measured precursor lead time, causal TCT suppression, segmented-electrode efficacy, native M3D-C1 validation, independent cross-machine validation, or p-B11 inference.",
+  "new_job_id": "20261011-098-tokamark-task41-canonical-s3-metadata-probe",
+  "timestamp_utc": "2026-10-12T05:52:00Z"
+}
