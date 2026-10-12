@@ -1,0 +1,134 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 21.4034366607666,
+  "error": null,
+  "finished_utc": "2026-10-12T15:38:48.493474Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 3895,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_public_archive_access_reconciliation/summary.json"
+    ]
+  },
+  "head_before": "99b8645090c9dcd99db8e9285accd74fa973d8b0",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261012-099-tokamark-task41-public-archive-access-reconciliation.json",
+  "job_id": "20261012-099-tokamark-task41-public-archive-access-reconciliation",
+  "log_path": "agent_pipeline/logs/20261012-099-tokamark-task41-public-archive-access-reconciliation.log",
+  "log_sha256": "9a1f0d7d754ac90fc307b2d703d9fa56b6bd5757617e6061747b5aab58093454",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_public_archive_access_reconciliation"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_public_archive_access_reconciliation.sh",
+  "runner_sha256": "c74de94cd3d9ae9ad1be205dee4b0e8b4b8e3019a4d0476e6a3bb1b2eedeb188",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-12T15:38:27.088856Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "claim_boundary": "Metadata and access-path audit only. A public archive index is not shot-level diagnostic availability, timebase alignment, precursor timing, actuator reachability, causal TCT suppression, independent cross-machine confirmation, or p-B11 validation.",
+    "classification": "TOKAMARK_TASK41_S3_STORE_METADATA_FORMAT_RESOLVED",
+    "created_utc": "2026-10-12T15:38:48.482151+00:00",
+    "dataset_license": "CC BY 4.0 (check underlying FAIR-MAST redistribution terms)",
+    "dataset_url": "https://huggingface.co/datasets/UKAEA-IBM-STFC/tokamark-v1",
+    "events_analyzed": 0,
+    "evidence_class": "storage_format_and_public_archive_metadata",
+    "frozen_detector_retuned": false,
+    "fuel_track": "fuel_agnostic_control",
+    "hf_512_byte_range_confirmed": false,
+    "hf_archive_512_byte_range_probe": null,
+    "hf_archive_head_probe": null,
+    "hf_batch_count_listed": 0,
+    "hf_dataset_tree_probe": {
+      "body_sha256": "779d5b5676280799fbf9aa900faa0462bcd404c73fbfa0ab37225f5030ac05bb",
+      "bytes_read": 17844,
+      "content_length": "17844",
+      "content_range": null,
+      "content_type": "application/json; charset=utf-8",
+      "error": null,
+      "method": "GET",
+      "range_requested": null,
+      "status": 200,
+      "url": "https://huggingface.co/api/datasets/UKAEA-IBM-STFC/tokamark-v1/tree/main?recursive=true"
+    },
+    "hf_first_tar_member_if_identifiable": null,
+    "hf_smallest_batch": null,
+    "hf_total_listed_batch_bytes": 0,
+    "machine": "MAST",
+    "mechanism_effect": "neutral",
+    "next_gate": "If S3 metadata is accessible, inspect only canonical Task-4.1 diagnostic/time metadata. Otherwise, if the HF archive is accessible, identify shot-to-batch membership and download at most one justified batch only after checking free disk, provenance, and unchanged frozen train/val/test membership. Do not claim shot 21719 is in the smallest batch.",
+    "parent_result_job_id": "20261011-098-tokamark-task41-canonical-s3-metadata-probe",
+    "pb11_fidelity": "not_applicable",
+    "pipeline_failure": false,
+    "previous_098_result": {
+      "classification": "TOKAMARK_TASK41_CANONICAL_S3_METADATA_ACCESS_NOT_ESTABLISHED",
+      "v3_root_http_status": 404,
+      "v3_task41_signal_metadata_matches": 0,
+      "waveform_chunks_loaded": 0
+    },
+    "s3_store_probe": {
+      ".zgroup": {
+        "body_sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
+        "bytes_read": 24,
+        "content_length": "24",
+        "content_range": null,
+        "content_type": "text/plain; charset=utf-8",
+        "error": null,
+        "metadata_format": "zarr_v2",
+        "method": "GET",
+        "range_requested": null,
+        "status": 200,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/.zgroup"
+      },
+      ".zmetadata": {
+        "body_sha256": null,
+        "bytes_read": 32769,
+        "content_length": "95839",
+        "content_range": null,
+        "content_type": "text/plain; charset=utf-8",
+        "error": "metadata_or_range_exceeds_strict_read_cap",
+        "method": "GET",
+        "range_requested": null,
+        "status": 200,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/.zmetadata"
+      },
+      "zarr.json": {
+        "body_sha256": null,
+        "bytes_read": 0,
+        "content_length": null,
+        "content_range": null,
+        "content_type": null,
+        "error": "HTTPError: 404",
+        "method": "GET",
+        "range_requested": null,
+        "status": 404,
+        "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/zarr.json"
+      }
+    },
+    "schema_version": 1,
+    "scientific_negative": false,
+    "shot_ids": [
+      21719
+    ],
+    "shot_to_archive_membership_verified": false,
+    "shots_analyzed": 0,
+    "source": "UKAEA-IBM-STFC TokaMark v1, derived from FAIR-MAST",
+    "temporal_split_unchanged": true,
+    "waveform_chunks_loaded": 0
+  },
+  "summary_path": "validation_runs/tokamark_task41_public_archive_access_reconciliation/summary.json",
+  "summary_sha256": "336c5cd0be5f9e4523a14e6a51b4d118456cd9e5461436d93af32f5b103bc4c9",
+  "timed_out": false
+}

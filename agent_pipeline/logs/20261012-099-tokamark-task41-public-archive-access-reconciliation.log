@@ -1,0 +1,13 @@
+job_id=20261012-099-tokamark-task41-public-archive-access-reconciliation
+started_utc=2026-10-12T15:38:27.088856Z
+head_before=99b8645090c9dcd99db8e9285accd74fa973d8b0
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_TASK41_S3_STORE_METADATA_FORMAT_RESOLVED", "hf_512_byte_range_confirmed": false, "hf_batches_listed": 0, "s3_metadata_access": true, "waveform_chunks_loaded": 0}
+
+finished_utc=2026-10-12T15:38:48.493433Z
+return_code=0
