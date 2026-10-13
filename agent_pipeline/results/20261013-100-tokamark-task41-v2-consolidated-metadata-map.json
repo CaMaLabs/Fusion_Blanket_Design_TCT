@@ -1,0 +1,509 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 3.7782680988311768,
+  "error": null,
+  "finished_utc": "2026-10-13T15:22:07.649452Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 11890,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_v2_consolidated_metadata_map/summary.json"
+    ]
+  },
+  "head_before": "f4a1be9726ac2bc929793be327297dc82e8a648d",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261013-100-tokamark-task41-v2-consolidated-metadata-map.json",
+  "job_id": "20261013-100-tokamark-task41-v2-consolidated-metadata-map",
+  "log_path": "agent_pipeline/logs/20261013-100-tokamark-task41-v2-consolidated-metadata-map.log",
+  "log_sha256": "6f4a40c8a75bfec73e12999cedbaf2e67b07bbd28bb72657c5db4c2a92766227",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_v2_consolidated_metadata_map"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_v2_consolidated_metadata_map.sh",
+  "runner_sha256": "9308d3a46b4bd1ac80e3b92145e9193dd8676583ac6ee8accca3a3e7b78c201b",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-13T15:22:03.868983Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "bulk_download_performed": false,
+    "canonical_zarr_v2_metadata": {
+      "bytes_read": 95839,
+      "content_length": "95839",
+      "error": null,
+      "sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343",
+      "status": 200,
+      "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/.zmetadata"
+    },
+    "claim_boundary": "Metadata presence is not validated waveform availability, synchronized timing, precursor reachability, causal TCT, native M3D-C1, cross-machine confirmation, or p-B11 physics.",
+    "classification": "TOKAMARK_TASK41_V2_SIGNAL_METADATA_MAPPED",
+    "created_utc": "2026-10-13T15:22:07.623224+00:00",
+    "events_analyzed": 0,
+    "exact_signal_metadata_matches": 18,
+    "frozen_detector_retuned": false,
+    "fuel_track": "fuel_agnostic_control",
+    "license": "TokaMark CC BY 4.0; underlying FAIR-MAST redistribution terms require verification",
+    "machine": "MAST",
+    "mechanism_effect": "neutral",
+    "metadata_entry_count": 239,
+    "next_gate": "Verify per-signal time coordinates and units, then a bounded read of one diagnostic waveform only if the frozen Task-4.1 temporal split and provenance are preserved.",
+    "parent_result_job_id": "20261012-099-tokamark-task41-public-archive-access-reconciliation",
+    "pb11_fidelity": "not_applicable",
+    "pipeline_failure": false,
+    "schema_version": 1,
+    "scientific_negative": false,
+    "shot_ids": [
+      21719
+    ],
+    "shots_analyzed": 0,
+    "source": "UKAEA-IBM-STFC TokaMark v1 canonical S3 Zarr-v2 store, derived from FAIR-MAST",
+    "task41_signal_metadata": [
+      {
+        "array_chunks": [
+          8,
+          2704
+        ],
+        "array_shape": [
+          15,
+          2704
+        ],
+        "canonical_candidates": [
+          "magnetics-flux_loop_flux",
+          "magnetics/flux_loop_flux"
+        ],
+        "dimension_names": [
+          "flux_loop_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/flux_loop_flux",
+        "group": "magnetics",
+        "signal": "flux_loop_flux",
+        "timebase_aligned": false,
+        "units": "Wb"
+      },
+      {
+        "array_chunks": [
+          20,
+          1352
+        ],
+        "array_shape": [
+          40,
+          2704
+        ],
+        "canonical_candidates": [
+          "magnetics-b_field_pol_probe_ccbv_field",
+          "magnetics/b_field_pol_probe_ccbv_field"
+        ],
+        "dimension_names": [
+          "b_field_pol_probe_ccbv_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/b_field_pol_probe_ccbv_field",
+        "group": "magnetics",
+        "signal": "b_field_pol_probe_ccbv_field",
+        "timebase_aligned": false,
+        "units": "T"
+      },
+      {
+        "array_chunks": [
+          9,
+          2704
+        ],
+        "array_shape": [
+          18,
+          2704
+        ],
+        "canonical_candidates": [
+          "magnetics-b_field_pol_probe_obr_field",
+          "magnetics/b_field_pol_probe_obr_field"
+        ],
+        "dimension_names": [
+          "b_field_pol_probe_obr_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/b_field_pol_probe_obr_field",
+        "group": "magnetics",
+        "signal": "b_field_pol_probe_obr_field",
+        "timebase_aligned": false,
+        "units": "T"
+      },
+      {
+        "array_chunks": [
+          9,
+          2704
+        ],
+        "array_shape": [
+          18,
+          2704
+        ],
+        "canonical_candidates": [
+          "magnetics-b_field_pol_probe_obv_field",
+          "magnetics/b_field_pol_probe_obv_field"
+        ],
+        "dimension_names": [
+          "b_field_pol_probe_obv_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/b_field_pol_probe_obv_field",
+        "group": "magnetics",
+        "signal": "b_field_pol_probe_obv_field",
+        "timebase_aligned": false,
+        "units": "T"
+      },
+      {
+        "array_chunks": [
+          3,
+          13520
+        ],
+        "array_shape": [
+          12,
+          27040
+        ],
+        "canonical_candidates": [
+          "magnetics-b_field_tor_probe_saddle_voltage",
+          "magnetics/b_field_tor_probe_saddle_voltage"
+        ],
+        "dimension_names": [
+          "b_field_tor_probe_saddle_voltage_channel",
+          "time_saddle"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/b_field_tor_probe_saddle_voltage",
+        "group": "magnetics",
+        "signal": "b_field_tor_probe_saddle_voltage",
+        "timebase_aligned": false,
+        "units": null
+      },
+      {
+        "array_chunks": [
+          10,
+          2164
+        ],
+        "array_shape": [
+          10,
+          2164
+        ],
+        "canonical_candidates": [
+          "pf_active-coil_current",
+          "pf_active/coil_current"
+        ],
+        "dimension_names": [
+          "current_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "pf_active/coil_current",
+        "group": "pf_active",
+        "signal": "coil_current",
+        "timebase_aligned": false,
+        "units": "A"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "pf_active-solenoid_current",
+          "pf_active/solenoid_current"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "pf_active/solenoid_current",
+        "group": "pf_active",
+        "signal": "solenoid_current",
+        "timebase_aligned": false,
+        "units": "A"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "summary-ip",
+          "summary/ip"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "summary/ip",
+        "group": "summary",
+        "signal": "ip",
+        "timebase_aligned": false,
+        "units": "A"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "interferometer-n_e_line",
+          "interferometer/n_e_line"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "interferometer/n_e_line",
+        "group": "interferometer",
+        "signal": "n_e_line",
+        "timebase_aligned": false,
+        "units": "1 / m ** 2"
+      },
+      {
+        "array_chunks": [
+          2,
+          13520
+        ],
+        "array_shape": [
+          3,
+          27040
+        ],
+        "canonical_candidates": [
+          "spectrometer_visible-filter_spectrometer_dalpha_voltage",
+          "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+        ],
+        "dimension_names": [
+          "dalpha_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "spectrometer_visible/filter_spectrometer_dalpha_voltage",
+        "group": "spectrometer_visible",
+        "signal": "filter_spectrometer_dalpha_voltage",
+        "timebase_aligned": false,
+        "units": "V"
+      },
+      {
+        "array_chunks": [
+          5,
+          13520
+        ],
+        "array_shape": [
+          18,
+          27040
+        ],
+        "canonical_candidates": [
+          "soft_x_rays-horizontal_cam_lower",
+          "soft_x_rays/horizontal_cam_lower"
+        ],
+        "dimension_names": [
+          "horizontal_cam_lower_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "soft_x_rays/horizontal_cam_lower",
+        "group": "soft_x_rays",
+        "signal": "horizontal_cam_lower",
+        "timebase_aligned": false,
+        "units": "V"
+      },
+      {
+        "array_chunks": [
+          5,
+          13520
+        ],
+        "array_shape": [
+          18,
+          27040
+        ],
+        "canonical_candidates": [
+          "soft_x_rays-horizontal_cam_upper",
+          "soft_x_rays/horizontal_cam_upper"
+        ],
+        "dimension_names": [
+          "horizontal_cam_upper_channel",
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "soft_x_rays/horizontal_cam_upper",
+        "group": "soft_x_rays",
+        "signal": "horizontal_cam_upper",
+        "timebase_aligned": false,
+        "units": "V"
+      },
+      {
+        "array_chunks": [
+          1,
+          67600
+        ],
+        "array_shape": [
+          3,
+          270400
+        ],
+        "canonical_candidates": [
+          "magnetics-b_field_tor_probe_cc_field",
+          "magnetics/b_field_tor_probe_cc_field"
+        ],
+        "dimension_names": [
+          "b_field_tor_probe_cc_channel",
+          "time_mirnov"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/b_field_tor_probe_cc_field",
+        "group": "magnetics",
+        "signal": "b_field_tor_probe_cc_field",
+        "timebase_aligned": false,
+        "units": "T"
+      },
+      {
+        "array_chunks": [
+          1,
+          67600
+        ],
+        "array_shape": [
+          3,
+          270400
+        ],
+        "canonical_candidates": [
+          "magnetics-b_field_pol_probe_omv_voltage",
+          "magnetics/b_field_pol_probe_omv_voltage"
+        ],
+        "dimension_names": [
+          "b_field_pol_probe_omv_channel",
+          "time_mirnov"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "magnetics/b_field_pol_probe_omv_voltage",
+        "group": "magnetics",
+        "signal": "b_field_pol_probe_omv_voltage",
+        "timebase_aligned": false,
+        "units": "V"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "pulse_schedule-i_plasma",
+          "pulse_schedule/i_plasma"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "pulse_schedule/i_plasma",
+        "group": "pulse_schedule",
+        "signal": "i_plasma",
+        "timebase_aligned": false,
+        "units": "A"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "pulse_schedule-n_e_line",
+          "pulse_schedule/n_e_line"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "pulse_schedule/n_e_line",
+        "group": "pulse_schedule",
+        "signal": "n_e_line",
+        "timebase_aligned": false,
+        "units": "1 / m ** 2"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "summary-power_nbi",
+          "summary/power_nbi"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "summary/power_nbi",
+        "group": "summary",
+        "signal": "power_nbi",
+        "timebase_aligned": false,
+        "units": "W"
+      },
+      {
+        "array_chunks": [
+          2164
+        ],
+        "array_shape": [
+          2164
+        ],
+        "canonical_candidates": [
+          "gas_injection-total_injected",
+          "gas_injection/total_injected"
+        ],
+        "dimension_names": [
+          "time"
+        ],
+        "dtype": "<f8",
+        "exact_zarr_v2_path": "gas_injection/total_injected",
+        "group": "gas_injection",
+        "signal": "total_injected",
+        "timebase_aligned": false,
+        "units": "count"
+      }
+    ],
+    "task41_unique_signals": 18,
+    "task41_yaml_path": "validation_runs/tokamark_group4_task41_metadata_audit/task_4-1.yaml",
+    "task41_yaml_sha256": "3c25c79b386ffc370da8b0fe11aace535d4c51acc7edae15d70f3a564090ef2b",
+    "temporal_split_unchanged": true,
+    "timebase_alignment_verified": false,
+    "timebase_candidate_count": 12,
+    "timebase_candidates_sample": [
+      "equilibrium/time/.zarray",
+      "gas_injection/time/.zarray",
+      "interferometer/time/.zarray",
+      "magnetics/time/.zarray",
+      "magnetics/time_mirnov/.zarray",
+      "magnetics/time_saddle/.zarray",
+      "pf_active/time/.zarray",
+      "pulse_schedule/time/.zarray",
+      "soft_x_rays/time/.zarray",
+      "spectrometer_visible/time/.zarray",
+      "summary/time/.zarray",
+      "thomson_scattering/time/.zarray"
+    ],
+    "waveform_chunks_loaded": 0
+  },
+  "summary_path": "validation_runs/tokamark_task41_v2_consolidated_metadata_map/summary.json",
+  "summary_sha256": "f2ec809b430c879e0954789277f94953c5a3dc911bd6f3d09b272839a277f401",
+  "timed_out": false
+}

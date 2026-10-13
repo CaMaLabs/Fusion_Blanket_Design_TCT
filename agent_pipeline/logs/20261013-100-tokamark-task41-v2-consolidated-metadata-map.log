@@ -1,0 +1,13 @@
+job_id=20261013-100-tokamark-task41-v2-consolidated-metadata-map
+started_utc=2026-10-13T15:22:03.868983Z
+head_before=f4a1be9726ac2bc929793be327297dc82e8a648d
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_TASK41_V2_SIGNAL_METADATA_MAPPED", "exact_signal_metadata_matches": 18, "metadata_entry_count": 239, "timebase_candidate_count": 12, "waveform_chunks_loaded": 0}
+
+finished_utc=2026-10-13T15:22:07.649409Z
+return_code=0
