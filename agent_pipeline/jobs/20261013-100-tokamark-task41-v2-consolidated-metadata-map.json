@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "20261013-100-tokamark-task41-v2-consolidated-metadata-map",
+  "kind": "experimental_task41_v2_consolidated_metadata_map",
+  "enabled": true,
+  "parent_result_job_id": "20261012-099-tokamark-task41-public-archive-access-reconciliation",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_v2_consolidated_metadata_map.sh",
+  "timeout_seconds": 240,
+  "result_paths": [
+    "validation_runs/tokamark_task41_v2_consolidated_metadata_map"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_v2_consolidated_metadata_map/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "source": "TokaMark v1 canonical S3 Zarr-v2 consolidated metadata; Task-4.1 YAML frozen in repository",
+  "purpose": "Bounded, metadata-only read of canonical 95839-byte Zarr-v2 .zmetadata and exact Task-4.1 signal/timebase paths. No waveforms, thresholds, archive download or inferred aliases.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "metadata_only": true,
+    "bulk_download_permitted": false,
+    "retuning_permitted": false,
+    "canonical_source_provenance_required": true,
+    "required_timebase_alignment_before_reachability": true,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "frozen_temporal_holdout": true,
+    "circular_shift_null": true,
+    "shuffled_event_null": true,
+    "pb11_fidelity": "not_applicable",
+    "claim_boundary": "Path and metadata audit only; not a causal TCT, native M3D-C1, cross-machine or p-B11 result."
+  }
+}

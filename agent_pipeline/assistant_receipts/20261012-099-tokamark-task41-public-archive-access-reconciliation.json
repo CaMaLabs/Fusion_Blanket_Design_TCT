@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "20261012-099-tokamark-task41-public-archive-access-reconciliation",
+  "processed_result_sha": "f51d099088eadd24170b8349fac3bce670f0a89d",
+  "exact_classification": "TOKAMARK_TASK41_S3_STORE_METADATA_FORMAT_RESOLVED",
+  "job_class": "experimental_task41_public_storage_access_reconciliation",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "pipeline_failure": false,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "s3_zarr_v2_zgroup_http_status": 200,
+    "s3_zarr_v2_consolidated_metadata_http_status": 200,
+    "s3_consolidated_metadata_content_length_bytes": 95839,
+    "s3_zarr_v3_root_http_status": 404,
+    "hf_dataset_tree_http_status": 200,
+    "waveform_chunks_loaded": 0,
+    "shots_analyzed": 0,
+    "events_analyzed": 0,
+    "execution_seconds": 21.4034366607666
+  },
+  "interpretation": "Successful storage-format/access milestone: the canonical TokaMark shot 21719 store is Zarr v2 and its consolidated metadata endpoint is readable. The 099 runner capped .zmetadata at 32768 bytes, so its 95839-byte contents were not parsed. The original runner's HF batch count of zero is unreliable because of a double-escaped filename regex; do not infer absence of archives.",
+  "evidence_class": "observational_storage_metadata",
+  "mechanism_effect": "neutral",
+  "claim_boundary": "No validated shot-level Task-4.1 signal availability or timebase alignment, precursor timing, actuator feasibility, causal TCT, independent cross-machine or p-B11 physics evidence.",
+  "repaired_runner_branch": "agent/fusion-shot-099-archive-parser-repair",
+  "next_job_id": "20261013-100-tokamark-task41-v2-consolidated-metadata-map",
+  "timestamp_utc": "2026-10-13T15:18:22Z"
+}
