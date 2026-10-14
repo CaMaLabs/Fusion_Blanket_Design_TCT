@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "20261013-100-tokamark-task41-v2-consolidated-metadata-map",
+  "processed_result_commit": "e6e3954101aec0a9a867b9878ab364b0cb5772fe",
+  "classification": "TOKAMARK_TASK41_V2_SIGNAL_METADATA_MAPPED",
+  "job_class": "experimental_task41_v2_consolidated_metadata_map",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "pipeline_failure": false,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "exact_task41_signal_metadata_matches": 18,
+    "unique_task41_signals": 18,
+    "zarr_v2_metadata_entries": 239,
+    "timebase_candidate_paths": 12,
+    "metadata_sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343",
+    "waveform_chunks_loaded": 0,
+    "shots_analyzed": 0,
+    "events_analyzed": 0
+  },
+  "interpretation": "Successful canonical Zarr-v2 consolidated metadata milestone. All 18 Task-4.1 diagnostic array paths have exact metadata matches, including Mirnov, D-alpha, coil currents, plasma current, interferometer density, NBI and radiation. Candidate coordinate paths exist but per-signal time-coordinate shape/unit consistency and numeric time alignment are NOT verified. No waveform or event was analyzed.",
+  "evidence_class": "observational_diagnostic_metadata",
+  "mechanism_effect": "neutral",
+  "pb11_fidelity": "not_applicable",
+  "license": "TokaMark CC BY 4.0; underlying FAIR-MAST CC BY-SA 4.0 except where noted; verify redistribution conditions.",
+  "next_job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+  "claim_boundary": "No verified waveform availability, physical timing alignment, precursor reachability, actuator latency, causal TCT, p-B11 reactivity or direct conversion.",
+  "timestamp_utc": "2026-10-14T15:23:53Z"
+}

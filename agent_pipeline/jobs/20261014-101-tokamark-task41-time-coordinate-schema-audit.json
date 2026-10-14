@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+  "kind": "experimental_task41_time_coordinate_schema_audit",
+  "enabled": true,
+  "parent_result_job_id": "20261013-100-tokamark-task41-v2-consolidated-metadata-map",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_time_coordinate_schema_audit.sh",
+  "timeout_seconds": 240,
+  "result_paths": [
+    "validation_runs/tokamark_task41_time_coordinate_schema_audit"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_time_coordinate_schema_audit/summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "source": "UKAEA-IBM-STFC TokaMark v1 shot 21719 canonical S3 Zarr-v2 .zmetadata, frozen Task-4.1 YAML",
+  "purpose": "Bounded metadata-only per-signal coordinate-path, dimension-length and unit schema audit of all 18 Task-4.1 diagnostics. Do not read waveform/time chunks, infer temporal synchronization, or retune the frozen detector.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "metadata_only": true,
+    "bulk_download_permitted": false,
+    "waveform_read_permitted": false,
+    "retuning_permitted": false,
+    "canonical_source_provenance_required": true,
+    "required_numeric_timebase_alignment_before_reachability": true,
+    "frozen_temporal_holdout": true,
+    "circular_shift_null": true,
+    "shuffled_event_null": true,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "pb11_fidelity": "not_applicable",
+    "claim_boundary": "Metadata coordinate shape/units consistency is not measured waveform readability, time alignment, TCT precursor efficacy or p-B11 evidence."
+  }
+}
