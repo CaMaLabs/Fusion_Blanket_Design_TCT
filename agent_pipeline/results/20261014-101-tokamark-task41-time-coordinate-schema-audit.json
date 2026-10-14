@@ -1,0 +1,499 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 3.522388458251953,
+  "error": null,
+  "finished_utc": "2026-10-14T15:27:10.104994Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 13109,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_time_coordinate_schema_audit/summary.json"
+    ]
+  },
+  "head_before": "1f2af9e6110d78f3ffaf827f54f5051bdbb82357",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261014-101-tokamark-task41-time-coordinate-schema-audit.json",
+  "job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+  "log_path": "agent_pipeline/logs/20261014-101-tokamark-task41-time-coordinate-schema-audit.log",
+  "log_sha256": "a51c13a703be377b9767381ba74057009f241d1864fea765973094971e1ff7db",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_time_coordinate_schema_audit"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_time_coordinate_schema_audit.sh",
+  "runner_sha256": "5926072578305ae50bb89da4aa32c1ac72f14d708a9078a9c93dded03c7fdce1",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-14T15:27:06.581699Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "claim_boundary": "Coordinate metadata consistency does not validate sampled time coordinates, signal chunks, synchronization, precursor reachability, causal TCT, or p-B11 physics.",
+    "classification": "TOKAMARK_TASK41_TIME_COORDINATE_SCHEMA_MAPPED",
+    "created_utc": "2026-10-14T15:27:10.086742+00:00",
+    "events_analyzed": 0,
+    "frozen_detector_retuned": false,
+    "fuel_track": "fuel_agnostic_control",
+    "license": "TokaMark CC BY 4.0; underlying FAIR-MAST CC BY-SA 4.0 except where noted",
+    "machine": "MAST",
+    "mechanism_effect": "neutral",
+    "next_gate": "If all coordinate lengths match, bounded read of one time-coordinate chunk and one relevant diagnostic chunk with explicit unit and monotonicity checks; no frozen-detector retuning.",
+    "numeric_time_alignment_verified": false,
+    "parent_result_job_id": "20261013-100-tokamark-task41-v2-consolidated-metadata-map",
+    "pb11_fidelity": "not_applicable",
+    "pipeline_failure": false,
+    "schema_version": 1,
+    "scientific_negative": false,
+    "shot_ids": [
+      21719
+    ],
+    "shots_analyzed": 0,
+    "source": "UKAEA-IBM-STFC TokaMark v1 canonical Zarr-v2, derived from FAIR-MAST",
+    "source_metadata": {
+      "bytes_read": 95839,
+      "error": null,
+      "http_status": 200,
+      "sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343",
+      "url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/.zmetadata"
+    },
+    "task41_unique_signals": 18,
+    "task41_yaml_sha256": "3c25c79b386ffc370da8b0fe11aace535d4c51acc7edae15d70f3a564090ef2b",
+    "temporal_split_unchanged": true,
+    "time_coordinate_audit": [
+      {
+        "canonical_signal_path": "magnetics/flux_loop_flux",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time",
+        "coordinate_shape": [
+          2704
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "flux_loop_channel",
+          "time"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "flux_loop_flux",
+        "signal_shape": [
+          15,
+          2704
+        ],
+        "signal_time_length": 2704,
+        "signal_units": "Wb",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "magnetics/b_field_pol_probe_ccbv_field",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time",
+        "coordinate_shape": [
+          2704
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "b_field_pol_probe_ccbv_channel",
+          "time"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "b_field_pol_probe_ccbv_field",
+        "signal_shape": [
+          40,
+          2704
+        ],
+        "signal_time_length": 2704,
+        "signal_units": "T",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "magnetics/b_field_pol_probe_obr_field",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time",
+        "coordinate_shape": [
+          2704
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "b_field_pol_probe_obr_channel",
+          "time"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "b_field_pol_probe_obr_field",
+        "signal_shape": [
+          18,
+          2704
+        ],
+        "signal_time_length": 2704,
+        "signal_units": "T",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "magnetics/b_field_pol_probe_obv_field",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time",
+        "coordinate_shape": [
+          2704
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "b_field_pol_probe_obv_channel",
+          "time"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "b_field_pol_probe_obv_field",
+        "signal_shape": [
+          18,
+          2704
+        ],
+        "signal_time_length": 2704,
+        "signal_units": "T",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "magnetics/b_field_tor_probe_saddle_voltage",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time_saddle",
+        "coordinate_shape": [
+          27040
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "b_field_tor_probe_saddle_voltage_channel",
+          "time_saddle"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "b_field_tor_probe_saddle_voltage",
+        "signal_shape": [
+          12,
+          27040
+        ],
+        "signal_time_length": 27040,
+        "signal_units": null,
+        "time_alignment_verified": false,
+        "time_dimension": "time_saddle"
+      },
+      {
+        "canonical_signal_path": "pf_active/coil_current",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "pf_active/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "current_channel",
+          "time"
+        ],
+        "group": "pf_active",
+        "numeric_time_values_read": false,
+        "signal": "coil_current",
+        "signal_shape": [
+          10,
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "A",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "pf_active/solenoid_current",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "pf_active/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "pf_active",
+        "numeric_time_values_read": false,
+        "signal": "solenoid_current",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "A",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "summary/ip",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "summary/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "summary",
+        "numeric_time_values_read": false,
+        "signal": "ip",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "A",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "interferometer/n_e_line",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "interferometer/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "interferometer",
+        "numeric_time_values_read": false,
+        "signal": "n_e_line",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "1 / m ** 2",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "spectrometer_visible/filter_spectrometer_dalpha_voltage",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "spectrometer_visible/time",
+        "coordinate_shape": [
+          27040
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "dalpha_channel",
+          "time"
+        ],
+        "group": "spectrometer_visible",
+        "numeric_time_values_read": false,
+        "signal": "filter_spectrometer_dalpha_voltage",
+        "signal_shape": [
+          3,
+          27040
+        ],
+        "signal_time_length": 27040,
+        "signal_units": "V",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "soft_x_rays/horizontal_cam_lower",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "soft_x_rays/time",
+        "coordinate_shape": [
+          27040
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "horizontal_cam_lower_channel",
+          "time"
+        ],
+        "group": "soft_x_rays",
+        "numeric_time_values_read": false,
+        "signal": "horizontal_cam_lower",
+        "signal_shape": [
+          18,
+          27040
+        ],
+        "signal_time_length": 27040,
+        "signal_units": "V",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "soft_x_rays/horizontal_cam_upper",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "soft_x_rays/time",
+        "coordinate_shape": [
+          27040
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "horizontal_cam_upper_channel",
+          "time"
+        ],
+        "group": "soft_x_rays",
+        "numeric_time_values_read": false,
+        "signal": "horizontal_cam_upper",
+        "signal_shape": [
+          18,
+          27040
+        ],
+        "signal_time_length": 27040,
+        "signal_units": "V",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "magnetics/b_field_tor_probe_cc_field",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time_mirnov",
+        "coordinate_shape": [
+          270400
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "b_field_tor_probe_cc_channel",
+          "time_mirnov"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "b_field_tor_probe_cc_field",
+        "signal_shape": [
+          3,
+          270400
+        ],
+        "signal_time_length": 270400,
+        "signal_units": "T",
+        "time_alignment_verified": false,
+        "time_dimension": "time_mirnov"
+      },
+      {
+        "canonical_signal_path": "magnetics/b_field_pol_probe_omv_voltage",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "magnetics/time_mirnov",
+        "coordinate_shape": [
+          270400
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "b_field_pol_probe_omv_channel",
+          "time_mirnov"
+        ],
+        "group": "magnetics",
+        "numeric_time_values_read": false,
+        "signal": "b_field_pol_probe_omv_voltage",
+        "signal_shape": [
+          3,
+          270400
+        ],
+        "signal_time_length": 270400,
+        "signal_units": "V",
+        "time_alignment_verified": false,
+        "time_dimension": "time_mirnov"
+      },
+      {
+        "canonical_signal_path": "pulse_schedule/i_plasma",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "pulse_schedule/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "pulse_schedule",
+        "numeric_time_values_read": false,
+        "signal": "i_plasma",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "A",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "pulse_schedule/n_e_line",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "pulse_schedule/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "pulse_schedule",
+        "numeric_time_values_read": false,
+        "signal": "n_e_line",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "1 / m ** 2",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "summary/power_nbi",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "summary/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "summary",
+        "numeric_time_values_read": false,
+        "signal": "power_nbi",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "W",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      },
+      {
+        "canonical_signal_path": "gas_injection/total_injected",
+        "coordinate_length_matches_signal": true,
+        "coordinate_path": "gas_injection/time",
+        "coordinate_shape": [
+          2164
+        ],
+        "coordinate_units": "s",
+        "dimension_names": [
+          "time"
+        ],
+        "group": "gas_injection",
+        "numeric_time_values_read": false,
+        "signal": "total_injected",
+        "signal_shape": [
+          2164
+        ],
+        "signal_time_length": 2164,
+        "signal_units": "count",
+        "time_alignment_verified": false,
+        "time_dimension": "time"
+      }
+    ],
+    "time_coordinate_chunks_loaded": 0,
+    "time_coordinate_shape_matches": 18,
+    "time_coordinate_units_known": 18,
+    "waveform_chunks_loaded": 0
+  },
+  "summary_path": "validation_runs/tokamark_task41_time_coordinate_schema_audit/summary.json",
+  "summary_sha256": "d2b7fc4177cef62be2a83ca5df5bd63181916bc1c92da7b6f388640bb09c87ff",
+  "timed_out": false
+}

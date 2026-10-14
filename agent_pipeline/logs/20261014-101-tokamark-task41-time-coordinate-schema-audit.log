@@ -1,0 +1,13 @@
+job_id=20261014-101-tokamark-task41-time-coordinate-schema-audit
+started_utc=2026-10-14T15:27:06.581699Z
+head_before=1f2af9e6110d78f3ffaf827f54f5051bdbb82357
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_TASK41_TIME_COORDINATE_SCHEMA_MAPPED", "coordinate_shape_matches": 18, "coordinate_units_known": 18, "waveform_chunks_loaded": 0}
+
+finished_utc=2026-10-14T15:27:10.104955Z
+return_code=0
