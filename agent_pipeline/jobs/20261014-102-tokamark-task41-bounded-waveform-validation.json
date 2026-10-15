@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "20261014-102-tokamark-task41-bounded-waveform-validation",
+  "enabled": true,
+  "kind": "experimental_task41_bounded_waveform_validation",
+  "parent_result_job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_bounded_validation.sh",
+  "timeout_seconds": 900,
+  "result_paths": [
+    "validation_runs/tokamark_task41_bounded_validation"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_bounded_validation/summary.json",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Read bounded magnetic, D-alpha and coil current numeric chunks and check time monotonicity/overlap in one execution; only run frozen detector if established pipeline implementation is available, otherwise clearly report gate.",
+  "interpretation_contract": {
+    "observational_only": true,
+    "retuning_permitted": false,
+    "required_controls": [
+      "frozen_temporal_holdout",
+      "circular_shift_null",
+      "shuffled_event_null"
+    ],
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "claim_boundary": "No causal TCT claim or precursor reachability without frozen detector and event-aligned controls."
+  }
+}
