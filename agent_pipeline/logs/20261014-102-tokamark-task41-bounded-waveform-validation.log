@@ -1,0 +1,13 @@
+job_id=20261014-102-tokamark-task41-bounded-waveform-validation
+started_utc=2026-10-15T02:12:32.157236Z
+head_before=8372e8656d9b57466111314c8fd8aa9839e7ee1a
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "TOKAMARK_BOUNDED_CHUNK_INCOMPLETE", "errors": [{"error": "No module named 'numcodecs'", "path": "magnetics/time_saddle"}, {"error": "No module named 'numcodecs'", "path": "magnetics/b_field_tor_probe_saddle_voltage"}, {"error": "No module named 'numcodecs'", "path": "spectrometer_visible/time"}, {"error": "No module named 'numcodecs'", "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"}, {"error": "No module named 'numcodecs'", "path": "pf_active/time"}, {"error": "No module named 'numcodecs'", "path": "pf_active/coil_current"}], "valid_pairs": []}
+
+finished_utc=2026-10-15T02:14:59.437108Z
+return_code=0
