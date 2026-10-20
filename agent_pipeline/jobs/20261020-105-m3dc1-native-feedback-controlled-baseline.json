@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261020-105-m3dc1-native-feedback-controlled-baseline",
+  "enabled": true,
+  "kind": "m3dc1_native_state_feedback_control_vs_baseline",
+  "runner": "tools/tct_mechanism_explorer/run_native_feedback_controller_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_feedback"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_feedback/native_feedback_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Run existing real native M3D-C1 segment/restart feedback experiment and compare evolving sheet width and Jpk against no-actuator baseline; report restart capability, command history, physical response, and failure modes. This is physics testing, not diagnostic intake.",
+  "interpretation_contract": {
+    "native_executable_required": true,
+    "matched_baseline_required": true,
+    "claim_boundary": "Only count physically executed native M3D-C1 trajectories as physics evidence; if restart/solver fails, classify as infrastructure unresolved, not TCT failure or success.",
+    "metrics": [
+      "max_width_gain_pct",
+      "mean_width_gain_pct",
+      "max_Jpk_change_pct",
+      "final_width_gain_pct",
+      "final_Jpk_change_pct"
+    ],
+    "do_not_retune_frozen_detector": true,
+    "negative_results_must_be_preserved": true,
+    "compare_control_to_no_actuator": true,
+    "report_control_latency_and_zero_equivalence_if_available": true
+  }
+}
