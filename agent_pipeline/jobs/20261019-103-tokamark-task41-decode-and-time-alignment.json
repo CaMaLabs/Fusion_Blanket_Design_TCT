@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261019-103-tokamark-task41-decode-and-time-alignment",
+  "enabled": true,
+  "kind": "experimental_task41_bounded_decode_repair_and_alignment",
+  "parent_result_job_id": "20261014-102-tokamark-task41-bounded-waveform-validation",
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_decode_alignment_103.sh",
+  "timeout_seconds": 1200,
+  "result_paths": [
+    "validation_runs/tokamark_task41_decode_alignment_103"
+  ],
+  "summary_path": "validation_runs/tokamark_task41_decode_alignment_103/summary.json",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Repair missing numcodecs in canonical venv and rerun bounded numerical magnetic, D-alpha and coil-current chunk decoding with numeric time monotonicity/overlap checks; preserve prior job 102 result and frozen detector.",
+  "interpretation_contract": {
+    "dependency_failure_is_infrastructure": true,
+    "observational_only": true,
+    "retuning_permitted": false,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "claim_boundary": "No precursor lead-time, null-control, or causal TCT claim unless actually computed from calibrated event data."
+  }
+}
