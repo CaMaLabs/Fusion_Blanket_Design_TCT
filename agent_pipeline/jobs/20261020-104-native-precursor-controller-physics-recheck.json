@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "20261020-104-native-precursor-controller-physics-recheck",
+  "enabled": true,
+  "kind": "m3dc1_native_precursor_controller_in_loop_physics_recheck",
+  "runner": "tools/tct_mechanism_explorer/run_native_precursor_controller_in_loop_audit.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_precursor_controller_in_loop"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_precursor_controller_in_loop/precursor_controller_in_loop_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Prioritize an actual native M3D-C1 precursor/controller-in-loop physics recheck over further TokaMark metadata intake. Preserve the original result and test physical-time calibration, no-action/controlled arm comparisons, native zero equivalence, and feasible precursor gates.",
+  "interpretation_contract": {
+    "scientific_outcome_requires_native_simulator_evidence": true,
+    "dependency_or_runtime_failure_is_infrastructure": true,
+    "retuning_permitted": false,
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "claim_boundary": "No causal efficacy unless native controlled vs baseline plasma evolution supports it; a feasibility-only or audit-only result is not validation.",
+    "next_gate": "If native runtime is blocked, record exact blocker; then prioritize a reproducible native baseline/controlled pair with fixed seed and initial conditions."
+  }
+}
