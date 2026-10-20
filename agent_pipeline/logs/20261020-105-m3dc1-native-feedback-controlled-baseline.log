@@ -1,0 +1,25 @@
+job_id=20261020-105-m3dc1-native-feedback-controlled-baseline
+started_utc=2026-10-20T22:29:00.818953Z
+head_before=c7dccc17a0811d3b90d2e8189869a11b0ed05b81
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+Traceback (most recent call last):
+  File "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/native_feedback_controller_audit.py", line 642, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/native_feedback_controller_audit.py", line 475, in main
+    baseline_dir = write_input(
+        "baseline_continuous", 0, 0.0, 0, 0.0, horizon_time,
+        nmax_steps=horizon_steps,
+    )
+  File "/mnt/compute-swarm-data/home-ubuntu/work/openmc/sweep/tools/tct_mechanism_explorer/native_feedback_controller_audit.py", line 263, in write_input
+    export TMPDIR="${TMPDIR:-/tmp/tct-$USER}"
+                     ^^^^^^
+NameError: name 'TMPDIR' is not defined
+
+finished_utc=2026-10-20T22:29:11.455046Z
+return_code=1

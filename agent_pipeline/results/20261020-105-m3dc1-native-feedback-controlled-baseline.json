@@ -1,0 +1,37 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 10.635284423828125,
+  "error": null,
+  "finished_utc": "2026-10-20T22:29:11.455087Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 0,
+    "selected_result_files": []
+  },
+  "head_before": "c7dccc17a0811d3b90d2e8189869a11b0ed05b81",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261020-105-m3dc1-native-feedback-controlled-baseline.json",
+  "job_id": "20261020-105-m3dc1-native-feedback-controlled-baseline",
+  "log_path": "agent_pipeline/logs/20261020-105-m3dc1-native-feedback-controlled-baseline.log",
+  "log_sha256": "f16b8cc4e457bcc8ee52a78d387c62707ecf78482c4a9716682cfca8ae6a4259",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_feedback"
+  ],
+  "return_code": 1,
+  "runner": "tools/tct_mechanism_explorer/run_native_feedback_controller_audit.sh",
+  "runner_sha256": "b6f01c5070688664208797fd059ecb3fa1ec89233980408880c96303efb373ef",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-20T22:29:00.818953Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/m3dc1_tct_native_feedback/native_feedback_summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}
