@@ -1,0 +1,39 @@
+job_id=20261019-103-tokamark-task41-decode-and-time-alignment
+started_utc=2026-10-20T03:31:51.476340Z
+head_before=50cc2e7bff31e4ff6a1e92b96941aafe044afd4f
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+INFRASTRUCTURE: installing pinned numcodecs==0.16.3 into canonical research venv
+Collecting numcodecs==0.16.3
+  Downloading numcodecs-0.16.3.tar.gz (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 7.6 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=1.24 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from numcodecs==0.16.3) (2.5.2)
+Collecting typing_extensions (from numcodecs==0.16.3)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Building wheels for collected packages: numcodecs
+  Building wheel for numcodecs (pyproject.toml): started
+  Building wheel for numcodecs (pyproject.toml): still running...
+  Building wheel for numcodecs (pyproject.toml): finished with status 'done'
+  Created wheel for numcodecs: filename=numcodecs-0.16.3-cp314-cp314-linux_x86_64.whl size=7715439 sha256=fe0f4801b67d067d85c68977342e9fe870733ad1151d51617de11dd15fa7c02c
+  Stored in directory: /mnt/compute-swarm-data/home-ubuntu/.cache/pip/wheels/96/38/61/11fa8ba44fa0ffd4ed17fe04113c95bf4e0f0cc8feba449107
+Successfully built numcodecs
+Installing collected packages: typing_extensions, numcodecs
+
+Successfully installed numcodecs-0.16.3 typing_extensions-4.16.0
+numcodecs 0.16.3
+{"classification": "TOKAMARK_BOUNDED_CHUNK_INCOMPLETE", "errors": [{"error": "first_chunk_time_length_mismatch", "path": "magnetics/b_field_tor_probe_saddle_voltage"}, {"error": "first_chunk_time_length_mismatch", "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"}], "valid_pairs": ["pf_active/coil_current"]}
+{"classification": "TOKAMARK_BOUNDED_CHUNK_INCOMPLETE", "decoded_pairs": ["pf_active/coil_current"], "errors": [{"error": "first_chunk_time_length_mismatch", "path": "magnetics/b_field_tor_probe_saddle_voltage"}, {"error": "first_chunk_time_length_mismatch", "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"}]}
+
+finished_utc=2026-10-20T03:34:45.274716Z
+return_code=0

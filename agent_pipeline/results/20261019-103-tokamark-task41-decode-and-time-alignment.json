@@ -1,0 +1,117 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 173.79728651046753,
+  "error": null,
+  "finished_utc": "2026-10-20T03:34:45.274750Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 2720,
+    "selected_result_files": [
+      "validation_runs/tokamark_task41_decode_alignment_103/summary.json"
+    ]
+  },
+  "head_before": "50cc2e7bff31e4ff6a1e92b96941aafe044afd4f",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261019-103-tokamark-task41-decode-and-time-alignment.json",
+  "job_id": "20261019-103-tokamark-task41-decode-and-time-alignment",
+  "log_path": "agent_pipeline/logs/20261019-103-tokamark-task41-decode-and-time-alignment.log",
+  "log_sha256": "ef8d288bc74608dc81e4c035544d0693d011ca82b433e8a936940f1bbeb62e0a",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tokamark_task41_decode_alignment_103"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tokamark_task41_decode_alignment_103.sh",
+  "runner_sha256": "19aaa8c34a4d223b926be43a6e69bd895ee02a5fde220c17cd2e6e1d8a4c8f28",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-20T03:31:51.476340Z",
+  "success": true,
+  "summary": {
+    "actuator_budgets_ms": {
+      "prebiased_fast": 2.75,
+      "prebiased_nominal": 5.25
+    },
+    "causal_tct_demonstration": false,
+    "chunk_reads": [
+      {
+        "bytes": 95839,
+        "key": ".zmetadata",
+        "sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343"
+      },
+      {
+        "bytes": 68122,
+        "key": "magnetics/time_saddle/0",
+        "sha256": "d5d501fcc824386bab3ffc9993e68798cd170bdc201e9b3d16f2a91d8d0f231c"
+      },
+      {
+        "bytes": 138288,
+        "key": "magnetics/b_field_tor_probe_saddle_voltage/0.0",
+        "sha256": "d30dbd2f98add3984c1bded210b092e15a38e801a880910d00f093daa8c5bf42"
+      },
+      {
+        "bytes": 68122,
+        "key": "spectrometer_visible/time/0",
+        "sha256": "d5d501fcc824386bab3ffc9993e68798cd170bdc201e9b3d16f2a91d8d0f231c"
+      },
+      {
+        "bytes": 40178,
+        "key": "spectrometer_visible/filter_spectrometer_dalpha_voltage/0.0",
+        "sha256": "e3be1f5fd51c465ccc9eb90768b9a35aa5d266e4657d403f07284b0ed51233ae"
+      },
+      {
+        "bytes": 8773,
+        "key": "pf_active/time/0",
+        "sha256": "d172131f1780dfe6880a87d17235dc23ee6942a854c285785d6b87d457fbbe12"
+      },
+      {
+        "bytes": 93342,
+        "key": "pf_active/coil_current/0.0",
+        "sha256": "c513757425291ea7f1e7938e4c405e01f4dcd73e52f8f2ca720db8f910fb12e9"
+      }
+    ],
+    "claim_boundary": "Chunk-level sample access and numeric synchronization checks are not precursor detection, intervention efficacy, or p-B11 physics. No fitted or substituted detector.",
+    "classification": "TOKAMARK_BOUNDED_CHUNK_INCOMPLETE",
+    "created_utc": "2026-10-20T03:33:28.371648+00:00",
+    "errors": [
+      {
+        "error": "first_chunk_time_length_mismatch",
+        "path": "magnetics/b_field_tor_probe_saddle_voltage"
+      },
+      {
+        "error": "first_chunk_time_length_mismatch",
+        "path": "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+      }
+    ],
+    "events_analyzed": 0,
+    "frozen_detector_retuned": false,
+    "fuel_track": "fuel_agnostic_control",
+    "job_id": "20261019-103-tokamark-task41-decode-and-time-alignment",
+    "machine": "MAST",
+    "mechanism_effect": "neutral",
+    "null_controls_executed": false,
+    "numeric_time_alignment_verified": false,
+    "observational_only": true,
+    "observed_lead_times_ms": [],
+    "parent_result_job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+    "pb11_fidelity": "not_applicable",
+    "rerun_of": "20261014-102-tokamark-task41-bounded-waveform-validation",
+    "schema_version": 1,
+    "shot_ids": [
+      21719
+    ],
+    "source": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/",
+    "source_license": "TokaMark CC BY 4.0; FAIR-MAST CC BY-SA 4.0 except where noted",
+    "valid_time_signal_pairs": [
+      "pf_active/coil_current"
+    ]
+  },
+  "summary_path": "validation_runs/tokamark_task41_decode_alignment_103/summary.json",
+  "summary_sha256": "36038ac51e9b9626dd1d8b948f4446768f02f6dfe9e6db42f95fe6b8f0b10605",
+  "timed_out": false
+}
