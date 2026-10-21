@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "job_id": "20261020-106-m3dc1-native-feedback-fstring-repair-rerun",
+  "enabled": true,
+  "kind": "native_m3dc1_control_vs_baseline_repair_rerun",
+  "runner": "tools/tct_mechanism_explorer/run_native_feedback_controller_audit.sh",
+  "timeout_seconds": 7200,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_feedback"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_feedback/native_feedback_summary.json",
+  "purpose": "Fix literal Bash parameter expansion embedded in Python f-string that caused Job 105 NameError before any native M3D-C1 run. Rerun identical native feedback experiment without physics retuning.",
+  "interpretation_contract": {
+    "prior_failure": "Job 105 Python NameError TMPDIR, infrastructure not physics",
+    "native_run_required": true,
+    "matched_control_vs_baseline_required": true,
+    "negative_results_preserved": true
+  }
+}
