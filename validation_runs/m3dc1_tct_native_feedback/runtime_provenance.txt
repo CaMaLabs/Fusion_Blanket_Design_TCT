@@ -1,0 +1,15 @@
+repo=/home/ubuntu/work/openmc/sweep
+source=/home/ubuntu/M3DC1-official
+baseline=/home/ubuntu/m3dc1_runs/TCT_MECHANISM_BASELINE
+executable=/home/ubuntu/M3DC1-official/build-ubuntu-2d/unstructured/m3dc1_2d
+executable_sha256=8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec
+run_root=/tmp/m3dc1_tct_native_feedback_runs
+dt=0.01
+segment_steps=1
+max_segments=40
+horizon_steps=40
+horizon_time=0.4
+icd_source=4
+profile_width=0.2805
+shoulder_width=0.2805
+shoulder_separation=0.561
