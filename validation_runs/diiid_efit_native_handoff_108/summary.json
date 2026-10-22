@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "dataset_config": "diii_d_train",
+  "machine": "DIII-D",
+  "dataset_row": 1,
+  "fuel_track": "fuel_agnostic_control",
+  "classification": "EFIT_SHOT_FRAME_VERIFIED_NATIVE_HANDOFF_NOT_YET_VALIDATED",
+  "native_simulation_executed": false,
+  "matched_tct_control_executed": false,
+  "claim_boundary": "EFIT is an experimental reconstruction, not an M3D-C1 initial state. Do not call template simulations shot-informed.",
+  "efit_frame_index": 179,
+  "efit_time_ms": 3740.0,
+  "psi_min": -0.05433481186628342,
+  "psi_max": 0.7343927621841431,
+  "grid_R_m": [
+    0.8399999737739563,
+    2.5399999618530273
+  ],
+  "grid_Z_m": [
+    -1.600000023841858,
+    1.600000023841858
+  ],
+  "frames": 359,
+  "native_blocker": "Requires a validated DIII-D geometry, equilibrium and profile mapping into a solver-compatible M3D-C1 deck; existing template must not be passed off as shot-derived."
+}

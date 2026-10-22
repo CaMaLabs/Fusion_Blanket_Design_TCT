@@ -1,0 +1,65 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 13.493497133255005,
+  "error": null,
+  "finished_utc": "2026-10-22T22:00:25.903063Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 19510,
+    "selected_result_files": [
+      "validation_runs/diiid_efit_native_handoff_108/shot_0001_efit_frame.npz",
+      "validation_runs/diiid_efit_native_handoff_108/summary.json"
+    ]
+  },
+  "head_before": "699be1044fe3c47945a7f6cdf62d45c319a40e2f",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261022-108-diiid-efit-native-equilibrium-handoff-gate.json",
+  "job_id": "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+  "log_path": "agent_pipeline/logs/20261022-108-diiid-efit-native-equilibrium-handoff-gate.log",
+  "log_sha256": "79157bff06797e73ac049fc64b68819c36408637a99d14c9782989f27ee88ad4",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/diiid_efit_native_handoff_108"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_diiid_efit_native_handoff_108.sh",
+  "runner_sha256": "88903850a3823fdc2d411b964d49a4c288ae2b06a6fa61dbdc5c0a241b21b9e6",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-22T22:00:12.408727Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "EFIT is an experimental reconstruction, not an M3D-C1 initial state. Do not call template simulations shot-informed.",
+    "classification": "EFIT_SHOT_FRAME_VERIFIED_NATIVE_HANDOFF_NOT_YET_VALIDATED",
+    "dataset_config": "diii_d_train",
+    "dataset_row": 1,
+    "efit_frame_index": 179,
+    "efit_time_ms": 3740.0,
+    "frames": 359,
+    "fuel_track": "fuel_agnostic_control",
+    "grid_R_m": [
+      0.8399999737739563,
+      2.5399999618530273
+    ],
+    "grid_Z_m": [
+      -1.600000023841858,
+      1.600000023841858
+    ],
+    "machine": "DIII-D",
+    "matched_tct_control_executed": false,
+    "native_blocker": "Requires a validated DIII-D geometry, equilibrium and profile mapping into a solver-compatible M3D-C1 deck; existing template must not be passed off as shot-derived.",
+    "native_simulation_executed": false,
+    "psi_max": 0.7343927621841431,
+    "psi_min": -0.05433481186628342,
+    "schema_version": 1,
+    "source": "Sophelio/fusion-equilibrium-challenge"
+  },
+  "summary_path": "validation_runs/diiid_efit_native_handoff_108/summary.json",
+  "summary_sha256": "52388451556366e6c27b220ad967294366e774d658d05e851deaa7d5e9bff2a2",
+  "timed_out": false
+}
