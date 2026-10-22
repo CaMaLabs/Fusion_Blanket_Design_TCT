@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "job_id": "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+  "enabled": true,
+  "kind": "shot_derived_native_equilibrium_handoff_fail_closed",
+  "runner": "tools/tct_mechanism_explorer/run_diiid_efit_native_handoff_108.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/diiid_efit_native_handoff_108"
+  ],
+  "summary_path": "validation_runs/diiid_efit_native_handoff_108/summary.json",
+  "purpose": "First concrete shot-derived EFIT frame and geometry for native M3D-C1 initialization; fail closed rather than simulate an unrelated template.",
+  "interpretation_contract": {
+    "native_solver_requires_verified_equilibrium_and_profiles": true,
+    "do_not_claim_simulation_without_native_execution": true,
+    "no_gate_relaxation": true,
+    "fuel_track": "fuel_agnostic_control"
+  }
+}
