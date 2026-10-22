@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261021-107-fusion-equilibrium-final-inputs-metadata-probe",
+  "enabled": true,
+  "kind": "fusion_equilibrium_challenge_existing_adapter_dependency_repair",
+  "runner": "tools/tct_mechanism_explorer/run_fusion_equilibrium_final_inputs_probe_107.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/fusion_equilibrium_challenge_tct_intake"
+  ],
+  "summary_path": "validation_runs/fusion_equilibrium_challenge_tct_intake/summary.json",
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "machine": "DIII-D",
+  "dataset_config": "diii_d_train",
+  "dataset_rows": "0-63",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Retry existing 64-row DIII-D training family adapter after missing datasets dependency. Preserve existing shot family rather than duplicate ingestion. The October final public-test inputs lack EFIT targets and must not be treated as labeled target data.",
+  "interpretation_contract": {
+    "metadata_and_schema_probe_only": true,
+    "license": "CC BY 4.0",
+    "shot_identifiers": "dataset row indices, not physical machine shot IDs",
+    "time_units": "ms",
+    "experimental_analog_only": true,
+    "causal_tct_demonstration": false,
+    "missing_import_or_fetch_is_infrastructure_failure": true,
+    "success_requires_real_rows": true,
+    "prior_adapter": "tools/tct_mechanism_explorer/run_fusion_equilibrium_challenge_tct_intake.py"
+  }
+}
