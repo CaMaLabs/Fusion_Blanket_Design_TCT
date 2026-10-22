@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_ADAPTER_READY_DATA_FETCH_REQUIRED",
+  "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_INGESTED",
   "source": "Sophelio/fusion-equilibrium-challenge",
   "machine": "DIII-D",
   "dataset_config": "diii_d_train",
@@ -27,6 +27,712 @@
     "efit_r_axis",
     "efit_z_axis"
   ],
-  "status": "human_intervention_required",
-  "error": "Python dependencies unavailable: ModuleNotFoundError(\"No module named 'datasets'\")"
+  "status": "adapter_smoke_pass",
+  "rows_observed": [
+    {
+      "dataset_row": 0,
+      "efit_frames": 59,
+      "t_start_ms": 180.0,
+      "t_end_ms": 1680.0,
+      "psi_shape": [
+        59,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 1,
+      "efit_frames": 359,
+      "t_start_ms": 160.0,
+      "t_end_ms": 7340.0,
+      "psi_shape": [
+        359,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 2,
+      "efit_frames": 90,
+      "t_start_ms": 200.0,
+      "t_end_ms": 1980.0,
+      "psi_shape": [
+        90,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 3,
+      "efit_frames": 73,
+      "t_start_ms": 160.0,
+      "t_end_ms": 1720.0,
+      "psi_shape": [
+        73,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 4,
+      "efit_frames": 252,
+      "t_start_ms": 100.0,
+      "t_end_ms": 6040.0,
+      "psi_shape": [
+        252,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 5,
+      "efit_frames": 290,
+      "t_start_ms": 340.0,
+      "t_end_ms": 6140.0,
+      "psi_shape": [
+        290,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 6,
+      "efit_frames": 245,
+      "t_start_ms": 200.0,
+      "t_end_ms": 5080.0,
+      "psi_shape": [
+        245,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 7,
+      "efit_frames": 253,
+      "t_start_ms": 500.0,
+      "t_end_ms": 5600.0,
+      "psi_shape": [
+        253,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 8,
+      "efit_frames": 293,
+      "t_start_ms": 260.0,
+      "t_end_ms": 6100.0,
+      "psi_shape": [
+        293,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 9,
+      "efit_frames": 107,
+      "t_start_ms": 180.0,
+      "t_end_ms": 2320.0,
+      "psi_shape": [
+        107,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 10,
+      "efit_frames": 228,
+      "t_start_ms": 260.0,
+      "t_end_ms": 4800.0,
+      "psi_shape": [
+        228,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 11,
+      "efit_frames": 275,
+      "t_start_ms": 260.0,
+      "t_end_ms": 5740.0,
+      "psi_shape": [
+        275,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 12,
+      "efit_frames": 222,
+      "t_start_ms": 420.0,
+      "t_end_ms": 5060.0,
+      "psi_shape": [
+        222,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 13,
+      "efit_frames": 138,
+      "t_start_ms": 200.0,
+      "t_end_ms": 2940.0,
+      "psi_shape": [
+        138,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 14,
+      "efit_frames": 289,
+      "t_start_ms": 300.0,
+      "t_end_ms": 6100.0,
+      "psi_shape": [
+        289,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 15,
+      "efit_frames": 264,
+      "t_start_ms": 300.0,
+      "t_end_ms": 6880.0,
+      "psi_shape": [
+        264,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 16,
+      "efit_frames": 143,
+      "t_start_ms": 180.0,
+      "t_end_ms": 3020.0,
+      "psi_shape": [
+        143,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 17,
+      "efit_frames": 272,
+      "t_start_ms": 720.0,
+      "t_end_ms": 6600.0,
+      "psi_shape": [
+        272,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 18,
+      "efit_frames": 75,
+      "t_start_ms": 640.0,
+      "t_end_ms": 2240.0,
+      "psi_shape": [
+        75,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 19,
+      "efit_frames": 213,
+      "t_start_ms": 260.0,
+      "t_end_ms": 5100.0,
+      "psi_shape": [
+        213,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 20,
+      "efit_frames": 173,
+      "t_start_ms": 220.0,
+      "t_end_ms": 5100.0,
+      "psi_shape": [
+        173,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 21,
+      "efit_frames": 269,
+      "t_start_ms": 140.0,
+      "t_end_ms": 6280.0,
+      "psi_shape": [
+        269,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 22,
+      "efit_frames": 103,
+      "t_start_ms": 260.0,
+      "t_end_ms": 6100.0,
+      "psi_shape": [
+        103,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 23,
+      "efit_frames": 203,
+      "t_start_ms": 180.0,
+      "t_end_ms": 4240.0,
+      "psi_shape": [
+        203,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 24,
+      "efit_frames": 286,
+      "t_start_ms": 280.0,
+      "t_end_ms": 5980.0,
+      "psi_shape": [
+        286,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 25,
+      "efit_frames": 236,
+      "t_start_ms": 180.0,
+      "t_end_ms": 4960.0,
+      "psi_shape": [
+        236,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 26,
+      "efit_frames": 224,
+      "t_start_ms": 600.0,
+      "t_end_ms": 5100.0,
+      "psi_shape": [
+        224,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 27,
+      "efit_frames": 121,
+      "t_start_ms": 180.0,
+      "t_end_ms": 2720.0,
+      "psi_shape": [
+        121,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 28,
+      "efit_frames": 109,
+      "t_start_ms": 320.0,
+      "t_end_ms": 2640.0,
+      "psi_shape": [
+        109,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 29,
+      "efit_frames": 243,
+      "t_start_ms": 180.0,
+      "t_end_ms": 6160.0,
+      "psi_shape": [
+        243,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 30,
+      "efit_frames": 260,
+      "t_start_ms": 160.0,
+      "t_end_ms": 6300.0,
+      "psi_shape": [
+        260,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 31,
+      "efit_frames": 193,
+      "t_start_ms": 160.0,
+      "t_end_ms": 4000.0,
+      "psi_shape": [
+        193,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 32,
+      "efit_frames": 340,
+      "t_start_ms": 200.0,
+      "t_end_ms": 7100.0,
+      "psi_shape": [
+        340,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 33,
+      "efit_frames": 290,
+      "t_start_ms": 300.0,
+      "t_end_ms": 6100.0,
+      "psi_shape": [
+        290,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 34,
+      "efit_frames": 275,
+      "t_start_ms": 220.0,
+      "t_end_ms": 6820.0,
+      "psi_shape": [
+        275,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 35,
+      "efit_frames": 122,
+      "t_start_ms": 200.0,
+      "t_end_ms": 3720.0,
+      "psi_shape": [
+        122,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 36,
+      "efit_frames": 252,
+      "t_start_ms": 100.0,
+      "t_end_ms": 6120.0,
+      "psi_shape": [
+        252,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 37,
+      "efit_frames": 224,
+      "t_start_ms": 200.0,
+      "t_end_ms": 4700.0,
+      "psi_shape": [
+        224,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 38,
+      "efit_frames": 285,
+      "t_start_ms": 300.0,
+      "t_end_ms": 6000.0,
+      "psi_shape": [
+        285,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 39,
+      "efit_frames": 278,
+      "t_start_ms": 240.0,
+      "t_end_ms": 6000.0,
+      "psi_shape": [
+        278,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 40,
+      "efit_frames": 310,
+      "t_start_ms": 100.0,
+      "t_end_ms": 6360.0,
+      "psi_shape": [
+        310,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 41,
+      "efit_frames": 112,
+      "t_start_ms": 200.0,
+      "t_end_ms": 2420.0,
+      "psi_shape": [
+        112,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 42,
+      "efit_frames": 236,
+      "t_start_ms": 300.0,
+      "t_end_ms": 5020.0,
+      "psi_shape": [
+        236,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 43,
+      "efit_frames": 218,
+      "t_start_ms": 420.0,
+      "t_end_ms": 4760.0,
+      "psi_shape": [
+        218,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 44,
+      "efit_frames": 371,
+      "t_start_ms": 180.0,
+      "t_end_ms": 7600.0,
+      "psi_shape": [
+        371,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 45,
+      "efit_frames": 170,
+      "t_start_ms": 420.0,
+      "t_end_ms": 3860.0,
+      "psi_shape": [
+        170,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 46,
+      "efit_frames": 241,
+      "t_start_ms": 180.0,
+      "t_end_ms": 4980.0,
+      "psi_shape": [
+        241,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 47,
+      "efit_frames": 66,
+      "t_start_ms": 640.0,
+      "t_end_ms": 2020.0,
+      "psi_shape": [
+        66,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 48,
+      "efit_frames": 285,
+      "t_start_ms": 300.0,
+      "t_end_ms": 6020.0,
+      "psi_shape": [
+        285,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 49,
+      "efit_frames": 271,
+      "t_start_ms": 200.0,
+      "t_end_ms": 5600.0,
+      "psi_shape": [
+        271,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 50,
+      "efit_frames": 144,
+      "t_start_ms": 260.0,
+      "t_end_ms": 3500.0,
+      "psi_shape": [
+        144,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 51,
+      "efit_frames": 3,
+      "t_start_ms": 180.0,
+      "t_end_ms": 2540.0,
+      "psi_shape": [
+        3,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 52,
+      "efit_frames": 264,
+      "t_start_ms": 260.0,
+      "t_end_ms": 5520.0,
+      "psi_shape": [
+        264,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 53,
+      "efit_frames": 329,
+      "t_start_ms": 220.0,
+      "t_end_ms": 6900.0,
+      "psi_shape": [
+        329,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 54,
+      "efit_frames": 287,
+      "t_start_ms": 200.0,
+      "t_end_ms": 6100.0,
+      "psi_shape": [
+        287,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 55,
+      "efit_frames": 237,
+      "t_start_ms": 260.0,
+      "t_end_ms": 5100.0,
+      "psi_shape": [
+        237,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 56,
+      "efit_frames": 239,
+      "t_start_ms": 180.0,
+      "t_end_ms": 6160.0,
+      "psi_shape": [
+        239,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 57,
+      "efit_frames": 199,
+      "t_start_ms": 160.0,
+      "t_end_ms": 4120.0,
+      "psi_shape": [
+        199,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 58,
+      "efit_frames": 175,
+      "t_start_ms": 1640.0,
+      "t_end_ms": 5120.0,
+      "psi_shape": [
+        175,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 59,
+      "efit_frames": 276,
+      "t_start_ms": 240.0,
+      "t_end_ms": 6860.0,
+      "psi_shape": [
+        276,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 60,
+      "efit_frames": 225,
+      "t_start_ms": 460.0,
+      "t_end_ms": 5560.0,
+      "psi_shape": [
+        225,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 61,
+      "efit_frames": 244,
+      "t_start_ms": 200.0,
+      "t_end_ms": 5100.0,
+      "psi_shape": [
+        244,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 62,
+      "efit_frames": 160,
+      "t_start_ms": 300.0,
+      "t_end_ms": 3480.0,
+      "psi_shape": [
+        160,
+        65,
+        65
+      ]
+    },
+    {
+      "dataset_row": 63,
+      "efit_frames": 106,
+      "t_start_ms": 280.0,
+      "t_end_ms": 2680.0,
+      "psi_shape": [
+        106,
+        65,
+        65
+      ]
+    }
+  ],
+  "rows_observed_count": 64
 }

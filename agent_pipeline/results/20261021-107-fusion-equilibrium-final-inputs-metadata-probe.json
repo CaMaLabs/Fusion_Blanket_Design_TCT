@@ -1,0 +1,776 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 133.18259167671204,
+  "error": null,
+  "finished_utc": "2026-10-22T05:34:34.195084Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 12691,
+    "selected_result_files": [
+      "validation_runs/fusion_equilibrium_challenge_tct_intake/summary.json"
+    ]
+  },
+  "head_before": "f5adf232e34d8a521014b43e0c6e5feca766dc07",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261021-107-fusion-equilibrium-final-inputs-metadata-probe.json",
+  "job_id": "20261021-107-fusion-equilibrium-final-inputs-metadata-probe",
+  "log_path": "agent_pipeline/logs/20261021-107-fusion-equilibrium-final-inputs-metadata-probe.log",
+  "log_sha256": "0092b0d67c16f0f6f006ce2d8511a6949a7c219e78f308de2ab3c26e1e016e74",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/fusion_equilibrium_challenge_tct_intake"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_fusion_equilibrium_final_inputs_probe_107.sh",
+  "runner_sha256": "bacde27f1a168fd8a0041bf280d2bbcbed9e471560b287cef00c80d905d3602f",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-22T05:32:21.011632Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Experimental observational actuator/equilibrium timing analog only; not causal TCT validation and not native M3D-C1.",
+    "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_INGESTED",
+    "dataset_config": "diii_d_train",
+    "machine": "DIII-D",
+    "planned_scope": {
+      "count": 64,
+      "rows": [
+        0,
+        63
+      ]
+    },
+    "required_fields": [
+      "efit_times",
+      "efit_psirz",
+      "efit_q95",
+      "efit_beta_n",
+      "efit_li",
+      "efit_r_axis",
+      "efit_z_axis"
+    ],
+    "rows_observed": [
+      {
+        "dataset_row": 0,
+        "efit_frames": 59,
+        "psi_shape": [
+          59,
+          65,
+          65
+        ],
+        "t_end_ms": 1680.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 1,
+        "efit_frames": 359,
+        "psi_shape": [
+          359,
+          65,
+          65
+        ],
+        "t_end_ms": 7340.0,
+        "t_start_ms": 160.0
+      },
+      {
+        "dataset_row": 2,
+        "efit_frames": 90,
+        "psi_shape": [
+          90,
+          65,
+          65
+        ],
+        "t_end_ms": 1980.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 3,
+        "efit_frames": 73,
+        "psi_shape": [
+          73,
+          65,
+          65
+        ],
+        "t_end_ms": 1720.0,
+        "t_start_ms": 160.0
+      },
+      {
+        "dataset_row": 4,
+        "efit_frames": 252,
+        "psi_shape": [
+          252,
+          65,
+          65
+        ],
+        "t_end_ms": 6040.0,
+        "t_start_ms": 100.0
+      },
+      {
+        "dataset_row": 5,
+        "efit_frames": 290,
+        "psi_shape": [
+          290,
+          65,
+          65
+        ],
+        "t_end_ms": 6140.0,
+        "t_start_ms": 340.0
+      },
+      {
+        "dataset_row": 6,
+        "efit_frames": 245,
+        "psi_shape": [
+          245,
+          65,
+          65
+        ],
+        "t_end_ms": 5080.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 7,
+        "efit_frames": 253,
+        "psi_shape": [
+          253,
+          65,
+          65
+        ],
+        "t_end_ms": 5600.0,
+        "t_start_ms": 500.0
+      },
+      {
+        "dataset_row": 8,
+        "efit_frames": 293,
+        "psi_shape": [
+          293,
+          65,
+          65
+        ],
+        "t_end_ms": 6100.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 9,
+        "efit_frames": 107,
+        "psi_shape": [
+          107,
+          65,
+          65
+        ],
+        "t_end_ms": 2320.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 10,
+        "efit_frames": 228,
+        "psi_shape": [
+          228,
+          65,
+          65
+        ],
+        "t_end_ms": 4800.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 11,
+        "efit_frames": 275,
+        "psi_shape": [
+          275,
+          65,
+          65
+        ],
+        "t_end_ms": 5740.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 12,
+        "efit_frames": 222,
+        "psi_shape": [
+          222,
+          65,
+          65
+        ],
+        "t_end_ms": 5060.0,
+        "t_start_ms": 420.0
+      },
+      {
+        "dataset_row": 13,
+        "efit_frames": 138,
+        "psi_shape": [
+          138,
+          65,
+          65
+        ],
+        "t_end_ms": 2940.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 14,
+        "efit_frames": 289,
+        "psi_shape": [
+          289,
+          65,
+          65
+        ],
+        "t_end_ms": 6100.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 15,
+        "efit_frames": 264,
+        "psi_shape": [
+          264,
+          65,
+          65
+        ],
+        "t_end_ms": 6880.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 16,
+        "efit_frames": 143,
+        "psi_shape": [
+          143,
+          65,
+          65
+        ],
+        "t_end_ms": 3020.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 17,
+        "efit_frames": 272,
+        "psi_shape": [
+          272,
+          65,
+          65
+        ],
+        "t_end_ms": 6600.0,
+        "t_start_ms": 720.0
+      },
+      {
+        "dataset_row": 18,
+        "efit_frames": 75,
+        "psi_shape": [
+          75,
+          65,
+          65
+        ],
+        "t_end_ms": 2240.0,
+        "t_start_ms": 640.0
+      },
+      {
+        "dataset_row": 19,
+        "efit_frames": 213,
+        "psi_shape": [
+          213,
+          65,
+          65
+        ],
+        "t_end_ms": 5100.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 20,
+        "efit_frames": 173,
+        "psi_shape": [
+          173,
+          65,
+          65
+        ],
+        "t_end_ms": 5100.0,
+        "t_start_ms": 220.0
+      },
+      {
+        "dataset_row": 21,
+        "efit_frames": 269,
+        "psi_shape": [
+          269,
+          65,
+          65
+        ],
+        "t_end_ms": 6280.0,
+        "t_start_ms": 140.0
+      },
+      {
+        "dataset_row": 22,
+        "efit_frames": 103,
+        "psi_shape": [
+          103,
+          65,
+          65
+        ],
+        "t_end_ms": 6100.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 23,
+        "efit_frames": 203,
+        "psi_shape": [
+          203,
+          65,
+          65
+        ],
+        "t_end_ms": 4240.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 24,
+        "efit_frames": 286,
+        "psi_shape": [
+          286,
+          65,
+          65
+        ],
+        "t_end_ms": 5980.0,
+        "t_start_ms": 280.0
+      },
+      {
+        "dataset_row": 25,
+        "efit_frames": 236,
+        "psi_shape": [
+          236,
+          65,
+          65
+        ],
+        "t_end_ms": 4960.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 26,
+        "efit_frames": 224,
+        "psi_shape": [
+          224,
+          65,
+          65
+        ],
+        "t_end_ms": 5100.0,
+        "t_start_ms": 600.0
+      },
+      {
+        "dataset_row": 27,
+        "efit_frames": 121,
+        "psi_shape": [
+          121,
+          65,
+          65
+        ],
+        "t_end_ms": 2720.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 28,
+        "efit_frames": 109,
+        "psi_shape": [
+          109,
+          65,
+          65
+        ],
+        "t_end_ms": 2640.0,
+        "t_start_ms": 320.0
+      },
+      {
+        "dataset_row": 29,
+        "efit_frames": 243,
+        "psi_shape": [
+          243,
+          65,
+          65
+        ],
+        "t_end_ms": 6160.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 30,
+        "efit_frames": 260,
+        "psi_shape": [
+          260,
+          65,
+          65
+        ],
+        "t_end_ms": 6300.0,
+        "t_start_ms": 160.0
+      },
+      {
+        "dataset_row": 31,
+        "efit_frames": 193,
+        "psi_shape": [
+          193,
+          65,
+          65
+        ],
+        "t_end_ms": 4000.0,
+        "t_start_ms": 160.0
+      },
+      {
+        "dataset_row": 32,
+        "efit_frames": 340,
+        "psi_shape": [
+          340,
+          65,
+          65
+        ],
+        "t_end_ms": 7100.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 33,
+        "efit_frames": 290,
+        "psi_shape": [
+          290,
+          65,
+          65
+        ],
+        "t_end_ms": 6100.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 34,
+        "efit_frames": 275,
+        "psi_shape": [
+          275,
+          65,
+          65
+        ],
+        "t_end_ms": 6820.0,
+        "t_start_ms": 220.0
+      },
+      {
+        "dataset_row": 35,
+        "efit_frames": 122,
+        "psi_shape": [
+          122,
+          65,
+          65
+        ],
+        "t_end_ms": 3720.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 36,
+        "efit_frames": 252,
+        "psi_shape": [
+          252,
+          65,
+          65
+        ],
+        "t_end_ms": 6120.0,
+        "t_start_ms": 100.0
+      },
+      {
+        "dataset_row": 37,
+        "efit_frames": 224,
+        "psi_shape": [
+          224,
+          65,
+          65
+        ],
+        "t_end_ms": 4700.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 38,
+        "efit_frames": 285,
+        "psi_shape": [
+          285,
+          65,
+          65
+        ],
+        "t_end_ms": 6000.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 39,
+        "efit_frames": 278,
+        "psi_shape": [
+          278,
+          65,
+          65
+        ],
+        "t_end_ms": 6000.0,
+        "t_start_ms": 240.0
+      },
+      {
+        "dataset_row": 40,
+        "efit_frames": 310,
+        "psi_shape": [
+          310,
+          65,
+          65
+        ],
+        "t_end_ms": 6360.0,
+        "t_start_ms": 100.0
+      },
+      {
+        "dataset_row": 41,
+        "efit_frames": 112,
+        "psi_shape": [
+          112,
+          65,
+          65
+        ],
+        "t_end_ms": 2420.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 42,
+        "efit_frames": 236,
+        "psi_shape": [
+          236,
+          65,
+          65
+        ],
+        "t_end_ms": 5020.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 43,
+        "efit_frames": 218,
+        "psi_shape": [
+          218,
+          65,
+          65
+        ],
+        "t_end_ms": 4760.0,
+        "t_start_ms": 420.0
+      },
+      {
+        "dataset_row": 44,
+        "efit_frames": 371,
+        "psi_shape": [
+          371,
+          65,
+          65
+        ],
+        "t_end_ms": 7600.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 45,
+        "efit_frames": 170,
+        "psi_shape": [
+          170,
+          65,
+          65
+        ],
+        "t_end_ms": 3860.0,
+        "t_start_ms": 420.0
+      },
+      {
+        "dataset_row": 46,
+        "efit_frames": 241,
+        "psi_shape": [
+          241,
+          65,
+          65
+        ],
+        "t_end_ms": 4980.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 47,
+        "efit_frames": 66,
+        "psi_shape": [
+          66,
+          65,
+          65
+        ],
+        "t_end_ms": 2020.0,
+        "t_start_ms": 640.0
+      },
+      {
+        "dataset_row": 48,
+        "efit_frames": 285,
+        "psi_shape": [
+          285,
+          65,
+          65
+        ],
+        "t_end_ms": 6020.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 49,
+        "efit_frames": 271,
+        "psi_shape": [
+          271,
+          65,
+          65
+        ],
+        "t_end_ms": 5600.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 50,
+        "efit_frames": 144,
+        "psi_shape": [
+          144,
+          65,
+          65
+        ],
+        "t_end_ms": 3500.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 51,
+        "efit_frames": 3,
+        "psi_shape": [
+          3,
+          65,
+          65
+        ],
+        "t_end_ms": 2540.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 52,
+        "efit_frames": 264,
+        "psi_shape": [
+          264,
+          65,
+          65
+        ],
+        "t_end_ms": 5520.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 53,
+        "efit_frames": 329,
+        "psi_shape": [
+          329,
+          65,
+          65
+        ],
+        "t_end_ms": 6900.0,
+        "t_start_ms": 220.0
+      },
+      {
+        "dataset_row": 54,
+        "efit_frames": 287,
+        "psi_shape": [
+          287,
+          65,
+          65
+        ],
+        "t_end_ms": 6100.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 55,
+        "efit_frames": 237,
+        "psi_shape": [
+          237,
+          65,
+          65
+        ],
+        "t_end_ms": 5100.0,
+        "t_start_ms": 260.0
+      },
+      {
+        "dataset_row": 56,
+        "efit_frames": 239,
+        "psi_shape": [
+          239,
+          65,
+          65
+        ],
+        "t_end_ms": 6160.0,
+        "t_start_ms": 180.0
+      },
+      {
+        "dataset_row": 57,
+        "efit_frames": 199,
+        "psi_shape": [
+          199,
+          65,
+          65
+        ],
+        "t_end_ms": 4120.0,
+        "t_start_ms": 160.0
+      },
+      {
+        "dataset_row": 58,
+        "efit_frames": 175,
+        "psi_shape": [
+          175,
+          65,
+          65
+        ],
+        "t_end_ms": 5120.0,
+        "t_start_ms": 1640.0
+      },
+      {
+        "dataset_row": 59,
+        "efit_frames": 276,
+        "psi_shape": [
+          276,
+          65,
+          65
+        ],
+        "t_end_ms": 6860.0,
+        "t_start_ms": 240.0
+      },
+      {
+        "dataset_row": 60,
+        "efit_frames": 225,
+        "psi_shape": [
+          225,
+          65,
+          65
+        ],
+        "t_end_ms": 5560.0,
+        "t_start_ms": 460.0
+      },
+      {
+        "dataset_row": 61,
+        "efit_frames": 244,
+        "psi_shape": [
+          244,
+          65,
+          65
+        ],
+        "t_end_ms": 5100.0,
+        "t_start_ms": 200.0
+      },
+      {
+        "dataset_row": 62,
+        "efit_frames": 160,
+        "psi_shape": [
+          160,
+          65,
+          65
+        ],
+        "t_end_ms": 3480.0,
+        "t_start_ms": 300.0
+      },
+      {
+        "dataset_row": 63,
+        "efit_frames": 106,
+        "psi_shape": [
+          106,
+          65,
+          65
+        ],
+        "t_end_ms": 2680.0,
+        "t_start_ms": 280.0
+      }
+    ],
+    "rows_observed_count": 64,
+    "schema_version": 1,
+    "shot_identifier_policy": "dataset row index; upstream release does not expose original machine shot numbers",
+    "source": "Sophelio/fusion-equilibrium-challenge",
+    "status": "adapter_smoke_pass",
+    "tests_planned": [
+      "PF-coil-current to EFIT psi/axis/shape response lag and reachability",
+      "pre-event equilibrium-change timing where an objective event marker can be derived from released signals",
+      "shot-level cross-validation only; never split timesteps across train/test"
+    ]
+  },
+  "summary_path": "validation_runs/fusion_equilibrium_challenge_tct_intake/summary.json",
+  "summary_sha256": "e9880c4874b9e3416a0b6faf0df693fad0a6820c866e0ebd9c04f17a39e7a6e8",
+  "timed_out": false
+}

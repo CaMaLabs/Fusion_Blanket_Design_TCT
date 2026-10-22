@@ -1,0 +1,86 @@
+job_id=20261021-107-fusion-equilibrium-final-inputs-metadata-probe
+started_utc=2026-10-22T05:32:21.011632Z
+head_before=f5adf232e34d8a521014b43e0c6e5feca766dc07
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+Collecting datasets<5,>=3
+  Using cached datasets-4.8.5-py3-none-any.whl.metadata (19 kB)
+Collecting filelock (from datasets<5,>=3)
+  Downloading filelock-4.2.4-py3-none-any.whl.metadata (2.0 kB)
+Requirement already satisfied: numpy>=1.17 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from datasets<5,>=3) (2.5.4)
+Collecting pyarrow>=21.0.0 (from datasets<5,>=3)
+  Using cached pyarrow-26.0.0-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting dill<0.4.2,>=0.3.0 (from datasets<5,>=3)
+  Using cached dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: pandas in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from datasets<5,>=3) (3.0.6)
+Requirement already satisfied: requests>=2.32.2 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from datasets<5,>=3) (2.34.2)
+Collecting httpx<1.0.0 (from datasets<5,>=3)
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: tqdm>=4.66.3 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from datasets<5,>=3) (4.70.1)
+Collecting xxhash (from datasets<5,>=3)
+  Downloading xxhash-4.0.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (17 kB)
+Collecting multiprocess<0.70.20 (from datasets<5,>=3)
+  Using cached multiprocess-0.70.19-py314-none-any.whl.metadata (7.2 kB)
+Collecting fsspec<=2026.2.0,>=2023.1.0 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3)
+  Using cached fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting huggingface-hub<2.0,>=0.25.0 (from datasets<5,>=3)
+  Downloading huggingface_hub-1.33.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: packaging in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from datasets<5,>=3) (26.3)
+Requirement already satisfied: pyyaml>=5.1 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from datasets<5,>=3) (6.0.3)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (3.14.5)
+Collecting anyio (from httpx<1.0.0->datasets<5,>=3)
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: certifi in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from httpx<1.0.0->datasets<5,>=3) (2026.7.22)
+Collecting httpcore==1.* (from httpx<1.0.0->datasets<5,>=3)
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: idna in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from httpx<1.0.0->datasets<5,>=3) (3.20)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets<5,>=3)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from huggingface-hub<2.0,>=0.25.0->datasets<5,>=3) (8.5.0)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface-hub<2.0,>=0.25.0->datasets<5,>=3)
+  Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Requirement already satisfied: typing-extensions>=4.1.0 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from huggingface-hub<2.0,>=0.25.0->datasets<5,>=3) (4.16.0)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (2.7.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (1.8.0)
+Requirement already satisfied: multidict<8.0,>=4.5 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (6.9.1)
+Requirement already satisfied: propcache>=0.2.0 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (0.5.4)
+Requirement already satisfied: yarl<2.0,>=1.25.1 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3) (1.25.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from requests>=2.32.2->datasets<5,>=3) (3.5.2)
+Requirement already satisfied: urllib3<3,>=1.26 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from requests>=2.32.2->datasets<5,>=3) (2.8.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from pandas->datasets<5,>=3) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages (from python-dateutil>=2.8.2->pandas->datasets<5,>=3) (1.17.0)
+Using cached datasets-4.8.5-py3-none-any.whl (528 kB)
+Using cached dill-0.4.1-py3-none-any.whl (120 kB)
+Using cached fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading huggingface_hub-1.33.0-py3-none-any.whl (846 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 13.1 MB/s  0:00:00
+Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 40.6 MB/s  0:00:00
+Using cached multiprocess-0.70.19-py314-none-any.whl (160 kB)
+Downloading filelock-4.2.4-py3-none-any.whl (162 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached pyarrow-26.0.0-cp314-cp314-manylinux_2_28_x86_64.whl (54.0 MB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Downloading xxhash-4.0.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (268 kB)
+Installing collected packages: xxhash, pyarrow, hf-xet, h11, fsspec, filelock, dill, anyio, multiprocess, httpcore, httpx, huggingface-hub, datasets
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2026.9.0
+    Uninstalling fsspec-2026.9.0:
+      Successfully uninstalled fsspec-2026.9.0
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+s3fs 2026.9.0 requires fsspec<2026.9.1,>=2026.9.0, but you have fsspec 2026.2.0 which is incompatible.
+Successfully installed anyio-4.15.1 datasets-4.8.5 dill-0.4.1 filelock-4.2.4 fsspec-2026.2.0 h11-0.16.0 hf-xet-1.7.0 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.33.0 multiprocess-0.70.19 pyarrow-26.0.0 xxhash-4.0.2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+TCT_EXPERIMENTAL_SHOT_FAMILY_INGESTED
+
+finished_utc=2026-10-22T05:34:34.195045Z
+return_code=0
