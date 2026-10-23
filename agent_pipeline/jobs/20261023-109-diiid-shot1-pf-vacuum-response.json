@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261023-109-diiid-shot1-pf-vacuum-response",
+  "enabled": true,
+  "kind": "real_shot_pf_vacuum_physics_counterfactual",
+  "runner": "tools/tct_mechanism_explorer/run_diiid_shot_pf_vacuum_response_109.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/diiid_shot_pf_vacuum_response_109"
+  ],
+  "summary_path": "validation_runs/diiid_shot_pf_vacuum_response_109/summary.json",
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "source_license": "CC BY 4.0",
+  "machine": "DIII-D",
+  "dataset_config": "diii_d_train",
+  "dataset_row": 1,
+  "physical_machine_shot_id": null,
+  "fuel_track": "fuel_agnostic_control",
+  "depends_on": "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+  "purpose": "Use actual DIII-D shot EFIT grid, coil current and conductor geometry in an axisymmetric vacuum Biot-Savart PF perturbation simulation; not M3D-C1 and not causal TCT stabilization.",
+  "interpretation_contract": {
+    "frozen_plasma": true,
+    "no_mhd_or_reactivity_claim": true,
+    "plus_minus_one_percent_perturbation": true,
+    "source_revision_sha_required": true,
+    "fail_closed_on_data_change": true,
+    "negative_control": "sign inversion of delta psi",
+    "no_gate_relaxation": true
+  }
+}
