@@ -1,0 +1,57 @@
+job_id=20261023-109-diiid-shot1-pf-vacuum-response
+started_utc=2026-10-23T15:18:40.862707Z
+head_before=09267784e00494d5738878cff4a13f2f49d6a348
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{
+  "schema_version": 1,
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "source_license": "CC BY 4.0",
+  "machine": "DIII-D",
+  "dataset_config": "diii_d_train",
+  "dataset_row": 1,
+  "physical_machine_shot_id": null,
+  "fuel_track": "fuel_agnostic_control",
+  "pb11_fidelity": "not_applicable",
+  "model": "axisymmetric vacuum Biot-Savart circular filament, 3x3 rectangle quadrature",
+  "coil": "F1A",
+  "coil_current_units": "kA-turn as released, converted to A-turn",
+  "perturbation": "+/- 1% of observed F1A current, frozen plasma",
+  "native_m3dc1_executed": false,
+  "causal_tct_demonstration": false,
+  "classification": "REAL_SHOT_VACUUM_PF_COUNTERFACTUAL_COMPLETED",
+  "claim_boundary": "Vacuum magnetic actuator sensitivity using measured shot coil current and geometry. No plasma self-consistent response, instability dynamics, ELM precursor, or TCT stabilization inference.",
+  "source_revision_sha": "1e280905b85f2a6fdde7e06fca8cf3a1edf447cb",
+  "efit_frame_index": 179,
+  "efit_time_ms": 3740.0,
+  "efit_axis_R_m": 1.7736438512802124,
+  "efit_axis_Z_m": -0.030925704166293144,
+  "grid_orientation": "Z,R",
+  "axis_extremum_distance_m": 0.019480302476789127,
+  "coil_geometry_m": {
+    "R": 0.8608,
+    "Z": 0.1683,
+    "width": 0.0508,
+    "height": 0.32106
+  },
+  "observed_F1A_current_kAturn": -213.94127204266576,
+  "perturbation_current_kAturn": -2.1394127204266575,
+  "measured_efit_psi_span_Wb_per_rad": 0.7887275740504265,
+  "vacuum_delta_psi_max_abs_Wb_per_rad": 0.0010257221934376756,
+  "vacuum_delta_psi_peak_to_peak_Wb_per_rad": 0.0009876757014917429,
+  "vacuum_delta_psi_max_abs_over_measured_span_pct": 0.13004771573665017,
+  "negative_control": "opposite signed perturbation gives exact sign-inverted vacuum response (linearity identity)",
+  "mechanism_interpretation": "Physical PF coil magnetic coupling quantified on a real DIII-D equilibrium grid; plasma response held fixed and not inferred."
+}
+Exception ignored while closing generator <generator object Parquet._generate_tables at 0x769bf8615300>:
+Traceback (most recent call last):
+  File "/home/ubuntu/work/openmc/sweep/.venv-dudson/lib/python3.14/site-packages/datasets/packaged_modules/parquet/parquet.py", line 210, in _generate_tables
+AttributeError: 'NoneType' object has no attribute 'ArrowInvalid'
+
+finished_utc=2026-10-23T15:18:50.398550Z
+return_code=0
