@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "20261025-110-golem-51929-51926-bounded-signal-access",
+  "enabled": true,
+  "kind": "new_untracked_golem_shot_family_bounded_waveform_probe",
+  "runner": "tools/tct_mechanism_explorer/run_golem_51929_51926_signal_probe_110.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/golem_51929_51926_signal_probe_110"
+  ],
+  "summary_path": "validation_runs/golem_51929_51926_signal_probe_110/summary.json",
+  "source": "GOLEM official shot database",
+  "source_access": "https://golem.fjfi.cvut.cz/wiki/Handling/DataAccess/DataProcessing",
+  "machine": "GOLEM",
+  "shot_ids": [
+    51929,
+    51926
+  ],
+  "shot_date": "2026-03-27",
+  "fuel_track": "fuel_agnostic_control",
+  "pb11_fidelity": "not_applicable",
+  "license_access": "Public data-download API; explicit redistribution license not verified, so retain only hashes and derived metadata.",
+  "purpose": "Verify machine-readable plasma current and loop voltage for previously untracked 2026 GOLEM plasma shot 51929 and no-plasma negative control 51926; no scientific inference until raw access, units and timing are verified.",
+  "interpretation_contract": {
+    "no_duplicate_family": true,
+    "do_not_mark_ingested_on_access_failure": true,
+    "no_mirnov_or_dalpha_claim_without_signal": true,
+    "no_tct_causal_claim": true,
+    "no_raw_data_redistribution": true,
+    "no_gate_relaxation": true
+  }
+}
