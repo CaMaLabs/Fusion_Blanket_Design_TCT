@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "job_id": "20261025-111-golem-51929-51926-direct-csv-repair",
+  "enabled": true,
+  "kind": "same_golem_family_direct_csv_endpoint_repair",
+  "runner": "tools/tct_mechanism_explorer/run_golem_51929_51926_direct_csv_111.sh",
+  "timeout_seconds": 600,
+  "result_paths": [
+    "validation_runs/golem_51929_51926_direct_csv_111"
+  ],
+  "summary_path": "validation_runs/golem_51929_51926_direct_csv_111/summary.json",
+  "depends_on": "20261025-110-golem-51929-51926-bounded-signal-access",
+  "machine": "GOLEM",
+  "shot_ids": [
+    51929,
+    51926
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Retry same untracked GOLEM shot family using official direct BasicDiagnostics/Results/Ip.csv and U_loop.csv paths after legacy API 404. No duplicate family ingestion.",
+  "interpretation_contract": {
+    "failed_job_110": "HTTP 404 access/schema failure, not physics failure",
+    "ingestion_requires_numeric_waveforms": true,
+    "no_tct_causal_claim": true,
+    "no_raw_redistribution": true
+  }
+}
