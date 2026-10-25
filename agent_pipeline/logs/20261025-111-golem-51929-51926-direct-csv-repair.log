@@ -1,0 +1,23 @@
+job_id=20261025-111-golem-51929-51926-direct-csv-repair
+started_utc=2026-10-25T15:45:13.455822Z
+head_before=dfe4a5e5d98f390d6d340803a0a679a8c769208e
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "classification": "GOLEM_51929_EXPERIMENTAL_WAVEFORM_ACCESS_VERIFIED",
+  "signals": [
+    "51929/plasma_current",
+    "51929/loop_voltage",
+    "51926/loop_voltage"
+  ],
+  "errors": {
+    "51926/plasma_current": "/shots/51926/Diagnostics/BasicDiagnostics/Results/Ip.csv: HTTPError: HTTP Error 404: Not Found; /shotdir/51926/Diagnostics/BasicDiagnostics/Results/Ip.csv: HTTPError: HTTP Error 404: Not Found"
+  }
+}
+
+finished_utc=2026-10-25T15:45:22.139168Z
+return_code=0

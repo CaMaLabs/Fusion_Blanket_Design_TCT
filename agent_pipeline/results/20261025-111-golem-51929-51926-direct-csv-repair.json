@@ -1,0 +1,111 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 8.682600021362305,
+  "error": null,
+  "finished_utc": "2026-10-25T15:45:22.139215Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 3178,
+    "selected_result_files": [
+      "validation_runs/golem_51929_51926_direct_csv_111/summary.json"
+    ]
+  },
+  "head_before": "dfe4a5e5d98f390d6d340803a0a679a8c769208e",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261025-111-golem-51929-51926-direct-csv-repair.json",
+  "job_id": "20261025-111-golem-51929-51926-direct-csv-repair",
+  "log_path": "agent_pipeline/logs/20261025-111-golem-51929-51926-direct-csv-repair.log",
+  "log_sha256": "7391242b6fb0ef8b4967833c126287f989173279256980797983c04c8a068647",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/golem_51929_51926_direct_csv_111"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_golem_51929_51926_direct_csv_111.sh",
+  "runner_sha256": "f352152ef33482f809da8cdea65f2371541126009635f8afea35530ef2b2c619",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-25T15:45:13.455822Z",
+  "success": true,
+  "summary": {
+    "access_documentation": "https://golem.fjfi.cvut.cz/wiki/Handling/DataMining/Collaborators/index",
+    "claim_boundary": "Observed GOLEM H-fuel discharge and no-plasma control only; no M3D-C1, ELM precursor, actuator causality, or p-B11 inference.",
+    "classification": "GOLEM_51929_EXPERIMENTAL_WAVEFORM_ACCESS_VERIFIED",
+    "endpoint_repair": "20261025-110 legacy utils/data endpoints returned 404 for four requests; use official BasicDiagnostics/Results/Ip.csv and U_loop.csv direct paths",
+    "errors": {
+      "51926/plasma_current": "/shots/51926/Diagnostics/BasicDiagnostics/Results/Ip.csv: HTTPError: HTTP Error 404: Not Found; /shotdir/51926/Diagnostics/BasicDiagnostics/Results/Ip.csv: HTTPError: HTTP Error 404: Not Found"
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "license_access": "Public shot files; explicit redistribution license unverified. Preserve only derived summaries and SHA256, no waveform republishing.",
+    "machine": "GOLEM",
+    "next_step": "Validate source units and clock reference; compare 51926 no-plasma signal only if available; then perform bounded onset/lag null test. No ELM/Mirnov precursor claim.",
+    "pb11_fidelity": "not_applicable",
+    "recorded_utc": "2026-10-25T15:45:14.000503+00:00",
+    "schema_version": 1,
+    "shot_date": "2026-03-27",
+    "shot_ids": [
+      51929,
+      51926
+    ],
+    "shots": {
+      "51926": {
+        "plasma": false
+      },
+      "51929": {
+        "plasma": true,
+        "plasma_end_ms": 32.99,
+        "plasma_start_ms": 3.71
+      }
+    },
+    "signals": {
+      "51926/loop_voltage": {
+        "bytes": 1139907,
+        "raw_waveform_committed": false,
+        "samples": 50000,
+        "sha256": "3d76a543d273729dca17b43be6419f4f854e1e66405735f5893982ed8b069665",
+        "signal_units": "unverified",
+        "time_end_raw": 48.999994900000004,
+        "time_start_raw": -0.9990051200000001,
+        "time_units": "unverified",
+        "url": "https://golem.fjfi.cvut.cz/shots/51926/Diagnostics/BasicDiagnostics/Results/U_loop.csv",
+        "value_max_raw": 10.2695312,
+        "value_min_raw": 0.0
+      },
+      "51929/loop_voltage": {
+        "bytes": 1093400,
+        "raw_waveform_committed": false,
+        "samples": 50000,
+        "sha256": "38468696516ba85909c6ca4f86a8abf16a9bc61189dd2629781583f72eba4eaf",
+        "signal_units": "unverified",
+        "time_end_raw": 48.999007999999996,
+        "time_start_raw": -0.9999919999999999,
+        "time_units": "unverified",
+        "url": "https://golem.fjfi.cvut.cz/shots/51929/Diagnostics/BasicDiagnostics/Results/U_loop.csv",
+        "value_max_raw": 31.1140625,
+        "value_min_raw": -1.859375
+      },
+      "51929/plasma_current": {
+        "bytes": 1508833,
+        "raw_waveform_committed": false,
+        "samples": 50000,
+        "sha256": "826189c07a5e955a1a40e383b541046113f773712c13c892e4df49996f91ac9a",
+        "signal_units": "unverified",
+        "time_end_raw": 48.999007999999996,
+        "time_start_raw": -0.9999919999999999,
+        "time_units": "unverified",
+        "url": "https://golem.fjfi.cvut.cz/shots/51929/Diagnostics/BasicDiagnostics/Results/Ip.csv",
+        "value_max_raw": 7.590128469652543,
+        "value_min_raw": -0.006118376128671344
+      }
+    },
+    "source": "https://golem.fjfi.cvut.cz/shots/51929/"
+  },
+  "summary_path": "validation_runs/golem_51929_51926_direct_csv_111/summary.json",
+  "summary_sha256": "a79114c5c89585f8effe82fe9e18269ada1b2e69aab7eacedf04a37fd9a974f2",
+  "timed_out": false
+}
