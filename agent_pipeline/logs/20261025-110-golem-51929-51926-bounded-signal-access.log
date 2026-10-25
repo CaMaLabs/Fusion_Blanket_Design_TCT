@@ -1,0 +1,22 @@
+job_id=20261025-110-golem-51929-51926-bounded-signal-access
+started_utc=2026-10-25T15:43:12.662355Z
+head_before=d11d309fc58d5104cae8bb5e25d091a6e0f188ed
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "classification": "GOLEM_SHOT_51929_ACCESS_OR_SCHEMA_BLOCKED",
+  "verified_signals": [],
+  "errors": {
+    "51929/plasma_current": "HTTPError: HTTP Error 404: Not Found",
+    "51929/loop_voltage": "HTTPError: HTTP Error 404: Not Found",
+    "51926/plasma_current": "HTTPError: HTTP Error 404: Not Found",
+    "51926/loop_voltage": "HTTPError: HTTP Error 404: Not Found"
+  }
+}
+
+finished_utc=2026-10-25T15:43:15.832848Z
+return_code=0

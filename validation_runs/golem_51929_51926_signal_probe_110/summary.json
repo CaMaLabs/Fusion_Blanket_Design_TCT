@@ -1,0 +1,47 @@
+{
+  "access_conditions": "Public per-shot download interface; explicit waveform redistribution license not independently verified. Record hashes and derived metadata only.",
+  "claim_boundary": "GOLEM observational H-fuel pulse/disruption-control analog; no Mirnov/ELM/precursor assertion, no actuator causal comparison, no native M3D-C1, no p-B11 inference.",
+  "classification": "GOLEM_SHOT_51929_ACCESS_OR_SCHEMA_BLOCKED",
+  "diagnostics_requested": [
+    "plasma_current",
+    "loop_voltage"
+  ],
+  "errors": {
+    "51926/loop_voltage": "HTTPError: HTTP Error 404: Not Found",
+    "51926/plasma_current": "HTTPError: HTTP Error 404: Not Found",
+    "51929/loop_voltage": "HTTPError: HTTP Error 404: Not Found",
+    "51929/plasma_current": "HTTPError: HTTP Error 404: Not Found"
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "GOLEM",
+  "next_justified_test": "Repair only the documented endpoint/schema after examining error; do not claim data ingestion.",
+  "pb11_fidelity": "not_applicable",
+  "recorded_utc": "2026-10-25T15:43:13.291204+00:00",
+  "schema_version": 1,
+  "shot_ids": [
+    51929,
+    51926
+  ],
+  "shot_metadata": {
+    "51926": {
+      "date": "2026-03-27",
+      "plasma_reported": false,
+      "plasma_window_ms": null
+    },
+    "51929": {
+      "date": "2026-03-27",
+      "plasma_reported": true,
+      "plasma_window_ms": [
+        3.71,
+        32.99
+      ]
+    }
+  },
+  "signals": {},
+  "source": "GOLEM tokamak official discharge database",
+  "source_access_documentation": "https://golem.fjfi.cvut.cz/wiki/Handling/DataAccess/DataProcessing",
+  "source_shot_pages": {
+    "51926": "https://golem.fjfi.cvut.cz/shots/51926/",
+    "51929": "https://golem.fjfi.cvut.cz/shots/51929/"
+  }
+}

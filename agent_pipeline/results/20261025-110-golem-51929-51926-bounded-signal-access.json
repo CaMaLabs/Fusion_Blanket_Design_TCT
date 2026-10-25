@@ -1,0 +1,85 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 3.16973876953125,
+  "error": null,
+  "finished_utc": "2026-10-25T15:43:15.832905Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1731,
+    "selected_result_files": [
+      "validation_runs/golem_51929_51926_signal_probe_110/summary.json"
+    ]
+  },
+  "head_before": "d11d309fc58d5104cae8bb5e25d091a6e0f188ed",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261025-110-golem-51929-51926-bounded-signal-access.json",
+  "job_id": "20261025-110-golem-51929-51926-bounded-signal-access",
+  "log_path": "agent_pipeline/logs/20261025-110-golem-51929-51926-bounded-signal-access.log",
+  "log_sha256": "4db7f60e5d6ecd2efa4c6c109345232dac534da7113803b9dcff086beeba8c11",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/golem_51929_51926_signal_probe_110"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_golem_51929_51926_signal_probe_110.sh",
+  "runner_sha256": "344a8ad268115cac0b18473f215bacb77f00bf1d89a55b4dff0af0a73e36b6fb",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-25T15:43:12.662355Z",
+  "success": true,
+  "summary": {
+    "access_conditions": "Public per-shot download interface; explicit waveform redistribution license not independently verified. Record hashes and derived metadata only.",
+    "claim_boundary": "GOLEM observational H-fuel pulse/disruption-control analog; no Mirnov/ELM/precursor assertion, no actuator causal comparison, no native M3D-C1, no p-B11 inference.",
+    "classification": "GOLEM_SHOT_51929_ACCESS_OR_SCHEMA_BLOCKED",
+    "diagnostics_requested": [
+      "plasma_current",
+      "loop_voltage"
+    ],
+    "errors": {
+      "51926/loop_voltage": "HTTPError: HTTP Error 404: Not Found",
+      "51926/plasma_current": "HTTPError: HTTP Error 404: Not Found",
+      "51929/loop_voltage": "HTTPError: HTTP Error 404: Not Found",
+      "51929/plasma_current": "HTTPError: HTTP Error 404: Not Found"
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "machine": "GOLEM",
+    "next_justified_test": "Repair only the documented endpoint/schema after examining error; do not claim data ingestion.",
+    "pb11_fidelity": "not_applicable",
+    "recorded_utc": "2026-10-25T15:43:13.291204+00:00",
+    "schema_version": 1,
+    "shot_ids": [
+      51929,
+      51926
+    ],
+    "shot_metadata": {
+      "51926": {
+        "date": "2026-03-27",
+        "plasma_reported": false,
+        "plasma_window_ms": null
+      },
+      "51929": {
+        "date": "2026-03-27",
+        "plasma_reported": true,
+        "plasma_window_ms": [
+          3.71,
+          32.99
+        ]
+      }
+    },
+    "signals": {},
+    "source": "GOLEM tokamak official discharge database",
+    "source_access_documentation": "https://golem.fjfi.cvut.cz/wiki/Handling/DataAccess/DataProcessing",
+    "source_shot_pages": {
+      "51926": "https://golem.fjfi.cvut.cz/shots/51926/",
+      "51929": "https://golem.fjfi.cvut.cz/shots/51929/"
+    }
+  },
+  "summary_path": "validation_runs/golem_51929_51926_signal_probe_110/summary.json",
+  "summary_sha256": "9da5563dd1a5cf01f22b2d9d3c1269d1a6322f3127208a72c2e011f06e2d16b2",
+  "timed_out": false
+}
