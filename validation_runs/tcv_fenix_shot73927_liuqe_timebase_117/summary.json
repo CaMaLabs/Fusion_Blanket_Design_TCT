@@ -1,0 +1,1518 @@
+{
+  "candidate_time_axes": [],
+  "candidate_time_axes_truncated": false,
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_LIUQE_73927_TIMEBASE_SCHEMA_UNRESOLVED",
+  "clock_reference_verified": false,
+  "diagnostic": "LIUQE equilibrium reconstruction paired with TS_73927.mat",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "field_inventory": [
+    {
+      "field_count": 141,
+      "kind": "struct",
+      "path": "L"
+    },
+    {
+      "field_count": 117,
+      "kind": "struct",
+      "path": "L.P"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.tokamak",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.shot",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Bmerr",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Fferr",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Fterr",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Iaerr",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Iperr",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Ipmeas",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Ipmin",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.Iuerr",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.LYall",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.agerr",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.algoNL",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.argout",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.b0",
+      "type": "float"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.P.bfct",
+      "shape": []
+    },
+    {
+      "field_count": 4,
+      "kind": "struct",
+      "path": "L.P.bfct[0]"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].matlabroot",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].separator",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].sentinel",
+      "type": "str"
+    },
+    {
+      "field_count": 4,
+      "kind": "struct",
+      "path": "L.P.bfct[0].function_handle"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].function_handle.function",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].function_handle.type",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].function_handle.file",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.bfct[0].function_handle.class",
+      "type": "str"
+    },
+    {
+      "field_count": 4,
+      "kind": "struct",
+      "path": "L.P.bfp"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.P.bfp.gNg",
+      "shape": [
+        401,
+        3
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.P.bfp.IgNg",
+      "shape": [
+        401,
+        3
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.P.bfp.fPg",
+      "shape": [
+        3
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.P.bfp.fTg",
+      "shape": [
+        3
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.chimax",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.dasm",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.debug",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.dzerr",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.elomin",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.fdz",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.fetype",
+      "type": "str"
+    },
+    {
+      "dtype": "<U1",
+      "kind": "array",
+      "path": "L.P.gfile",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.gsxe",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.icsint",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.idens",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.idml",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.idoublet",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ifara",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ifield",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ihole",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.iinv",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ilackner",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ilim",
+      "type": "int"
+    },
+    {
+      "dtype": "<U1",
+      "kind": "array",
+      "path": "L.P.infct",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.P.inp",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.interpmethod",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ipm",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ipmi",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ipmo",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ipolarimetry",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ipres",
+      "type": "int"
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.P.iqR",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.isaddl",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.itera",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.itercs",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.iterfrz",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.iterh",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.iterq",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.iters",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.itert",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ivacuum",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ivesm",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.izgrid",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.kalman",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.lasy",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.mdsserver",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nFW",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.naR",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ndom",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nelem",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nolim",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.noq",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.npq",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nr",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nthg",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nthreadscs",
+      "type": "int"
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.P.nu",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.nz",
+      "type": "int"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.P.pq",
+      "shape": [
+        61
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.pql",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.pqu",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.psichco",
+      "type": "float"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.psrc",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.r0",
+      "type": "float"
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.P.raS",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.reff",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.P.ri",
+      "type": "float"
+    },
+    {
+      "field_count": 85,
+      "kind": "struct",
+      "path": "L.G"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Bma",
+      "shape": [
+        38,
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Bms",
+      "shape": [
+        38,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Bmu",
+      "shape": [
+        38,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Bmx",
+      "shape": [
+        38,
+        1820
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Brxa",
+      "shape": [
+        1820,
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Brxu",
+      "shape": [
+        1820,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Ceq",
+      "shape": [
+        13,
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Dda",
+      "shape": [
+        15,
+        19
+      ]
+    },
+    {
+      "dtype": "uint16",
+      "kind": "array",
+      "path": "L.G.Iamax",
+      "shape": [
+        19
+      ]
+    },
+    {
+      "dtype": "int16",
+      "kind": "array",
+      "path": "L.G.Iamin",
+      "shape": [
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Ihig",
+      "shape": [
+        13
+      ]
+    },
+    {
+      "dtype": "int32",
+      "kind": "array",
+      "path": "L.G.Ilow",
+      "shape": [
+        13
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Ipm",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mbc",
+      "shape": [
+        182,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mby",
+      "shape": [
+        182,
+        1638
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mfa",
+      "shape": [
+        38,
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mfu",
+      "shape": [
+        38,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mfx",
+      "shape": [
+        38,
+        1820
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mxa",
+      "shape": [
+        1820,
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Mxu",
+      "shape": [
+        1820,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Rs",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Ru",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "int16",
+      "kind": "array",
+      "path": "L.G.Seq",
+      "shape": [
+        13
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Talim",
+      "shape": [
+        19
+      ]
+    },
+    {
+      "dtype": "int16",
+      "kind": "array",
+      "path": "L.G.Tca",
+      "shape": [
+        32,
+        19
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.G.Tff",
+      "shape": [
+        38,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Tius",
+      "shape": [
+        38,
+        38
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.G.Tivs",
+      "shape": [
+        38,
+        256
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.G.Tmm",
+      "shape": [
+        38,
+        38
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.G.Tnv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Tvu",
+      "shape": [
+        256,
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.Twa",
+      "shape": [
+        830,
+        19
+      ]
+    },
+    {
+      "dtype": "uint16",
+      "kind": "array",
+      "path": "L.G.Vamax",
+      "shape": [
+        19
+      ]
+    },
+    {
+      "dtype": "int16",
+      "kind": "array",
+      "path": "L.G.Vamin",
+      "shape": [
+        19
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.am",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dima",
+      "shape": [
+        19
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dima[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dimc",
+      "shape": [
+        32
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimc[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dimf",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimf[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.diml",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.diml[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dimm",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimm[7]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimn",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dims",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dims[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dimu",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimu[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "L.G.dimv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[0]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[1]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[2]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[3]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[4]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[5]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[6]",
+      "type": "str"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.dimv[7]",
+      "type": "str"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.dv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.dw",
+      "shape": [
+        830
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.dzBmx",
+      "shape": [
+        38,
+        1820
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.dzMfx",
+      "shape": [
+        38,
+        1820
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.hc",
+      "shape": [
+        32
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.hv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.hw",
+      "shape": [
+        830
+      ]
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nW",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.na",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nd",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nf",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nl",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nm",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.ns",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nu",
+      "type": "int"
+    },
+    {
+      "kind": "scalar_or_text",
+      "path": "L.G.nv",
+      "type": "int"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rc",
+      "shape": [
+        32
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rf",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rl",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rlh",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rm",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rw",
+      "shape": [
+        830
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.rx",
+      "shape": [
+        28
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.wc",
+      "shape": [
+        32
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.wv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.ww",
+      "shape": [
+        830
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zc",
+      "shape": [
+        32
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zf",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zl",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zlh",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zm",
+      "shape": [
+        38
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zv",
+      "shape": [
+        256
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zw",
+      "shape": [
+        830
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "L.G.zx",
+      "shape": [
+        65
+      ]
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "L.G.Mtx",
+      "shape": [
+        65,
+        28
+      ]
+    }
+  ],
+  "field_inventory_truncated": true,
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Compare documented TS/LIUQE time origin and trigger reference from primary TCV diagnostic records; numerical overlap alone is not synchronization. Do not infer M3D-C1 handoff or controller authority.",
+  "observational_status": "metadata-only comparison of experimental TS and reconstructed LIUQE candidate axes; not prospective or controller-in-loop",
+  "parent_plot_script_sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+  "parent_result_job_id": "20261026-116-tcv-fenix-shot73927-plot-script-timebase-provenance",
+  "parent_ts_median_step_raw": 0.01699995994567871,
+  "parent_ts_time_max_raw": 2.9673399925231934,
+  "parent_ts_time_min_raw": 0.017340000718832016,
+  "parent_ts_time_points": 178,
+  "raw_data_published": false,
+  "runner_source_sha256": "8da3eff98bdda20831ca952f97126dc40602424f78affdba11ac32e7967334c9",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "timestamp_utc": "2026-10-26T20:17:44.748838+00:00",
+  "timing_calibrated": false,
+  "top_level_variables": [
+    "L",
+    "LX",
+    "LY"
+  ],
+  "verified_member": {
+    "compressed_bytes": 32864020,
+    "crc32_verified": true,
+    "format": "MATLAB_v5",
+    "name": "KER_73927_LIUQE.mat",
+    "sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "uncompressed_bytes": 32880432
+  }
+}
