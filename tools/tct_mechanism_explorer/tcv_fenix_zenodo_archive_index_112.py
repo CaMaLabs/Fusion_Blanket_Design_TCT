@@ -12,7 +12,7 @@ def get_range(spec):
         if resp.status!=206:
             raise RuntimeError("Range request returned HTTP %s; refusing full archive transfer"%resp.status)
         cr=resp.headers.get("Content-Range","")
-        m=re.fullmatch(r"bytes (\\d+)-(\\d+)/(\\d+)",cr)
+        m=re.fullmatch(r"bytes (\d+)-(\d+)/(\d+)",cr)
         if not m: raise RuntimeError("Missing/invalid Content-Range: "+cr)
         length=int(m.group(2))-int(m.group(1))+1
         if length>MAX_BYTES: raise RuntimeError("Range exceeds bounded transfer")
@@ -21,7 +21,7 @@ def get_range(spec):
         return data,(int(m.group(0).split()[1].split("-")[0]),int(m.group(3)))
 try:
     tail,(start,total)=get_range("-65557")
-    ix=tail.rfind(b"PK\\x05\\x06")
+    ix=tail.rfind(b"PK\x05\x06")
     if ix<0 or len(tail)-ix<22: raise RuntimeError("ZIP end-of-central-directory absent")
     sig,disk,cd_disk,disk_n,n,cd_size,cd_offset,comment=struct.unpack_from("<IHHHHIIH",tail,ix)
     if disk or cd_disk or n!=disk_n or n==65535 or cd_offset==0xffffffff:
@@ -42,5 +42,5 @@ try:
     summary.update({"classification":"TCV_FENIX_ARCHIVE_MEMBER_INDEX_VERIFIED" if any(all(x.values()) for x in matches.values()) else "TCV_FENIX_MEMBER_PREREQUISITES_INCOMPLETE","archive_size_bytes":total,"central_directory_entries":len(names),"matched_experimental_and_reconstruction_members":matches,"matching_members":[n for n in names if re.search(r"(TS_|KER_).*(73927|83448|87688|87697)|(?:73927|83448|87688|87697).*(?:TS_|KER_)",n)][:50],"next_step":"Inspect one paired TS/LIUQE MAT member with bounded verified extraction and check units, time and license; no physics job until source gate passes."})
 except Exception as e:
     summary.update({"classification":"TCV_FENIX_ARCHIVE_RANGE_PREFLIGHT_BLOCKED","error":repr(e),"next_step":"Obtain archive index through an approved bounded-access path; do not download 2.4GB or assert shot ingestion."})
-(OUT/"summary.json").write_text(json.dumps(summary,indent=2,sort_keys=True)+"\\n")
+(OUT/"summary.json").write_text(json.dumps(summary,indent=2,sort_keys=True)+"\n")
 print(json.dumps(summary,indent=2))
