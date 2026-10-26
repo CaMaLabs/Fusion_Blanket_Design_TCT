@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-118-tcv-fenix-shot73927-liuqe-targeted-timebase-audit",
+  "processed_result_job_id": "20261026-118-tcv-fenix-shot73927-liuqe-targeted-timebase-audit",
+  "processed_result_receipt_sha": "3b0320034a8c795dfb26edd9d67d9ed8ed75c3bd",
+  "validation_summary_sha": "1620b29cf5a27b931e60947f9a0706f859402ae54fdabc529bc41dadf000091f",
+  "log_sha": "56cd64f3bd8758a214d93265e8e1365e24a38135",
+  "log_sha256": "2172295c79b6c476f9944259f3293eb236081cd3b958c2d65d65238b3b0298cb",
+  "result_head_before": "c89d49035595502793889452067248989c69f6aa",
+  "classification": "TCV_FENIX_LIUQE_73927_TARGETED_TIMEBASE_CANDIDATES_INVENTORIED",
+  "job_class": "bounded_tcv_fenix_liuqe_targeted_timebase_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "LIUQE equilibrium reconstruction paired with TS_73927.mat",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_member": "KER_73927_LIUQE.mat",
+  "source_member_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+  "paired_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+  "source_license": "Source metadata says open archive, and result 114 reported CC-BY-4.0; downstream reuse/license not independently adjudicated; no raw experimental signals republished.",
+  "observational_status": "metadata-only comparison of experimental TS and reconstructed LIUQE candidate axes; not prospective, causal-analog or controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_state": "liuqe_time_candidates_inventoried; numeric_overlap_only; diagnostic_clock_origin_and_synchronization_unverified; native_handoff_and_causal_intervention_unvalidated; prerequisite_blocked",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 12.340911388397217,
+    "receipt_success": true,
+    "liuqe_compressed_bytes": 32864020,
+    "liuqe_uncompressed_bytes": 32880432,
+    "liuqe_crc32_verified": true,
+    "liuqe_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "candidate_time_axes": [
+      {
+        "path": "LX.t",
+        "samples": 321,
+        "raw_min": 0.20000004768371582,
+        "raw_max": 1.7999999523162842,
+        "raw_median_step": 0.005000114440917969,
+        "monotonic_nondecreasing": true,
+        "numeric_overlap_with_ts_raw": true,
+        "units_verified": false,
+        "clock_reference_verified": false
+      },
+      {
+        "path": "LY.t",
+        "samples": 321,
+        "raw_min": 0.20000004768371582,
+        "raw_max": 1.7999999523162842,
+        "raw_median_step": 0.005000114440917969,
+        "monotonic_nondecreasing": true,
+        "numeric_overlap_with_ts_raw": true,
+        "units_verified": false,
+        "clock_reference_verified": false
+      }
+    ],
+    "ts_time_points": 178,
+    "ts_raw_min": 0.017340000718832016,
+    "ts_raw_max": 2.9673399925231934,
+    "ts_raw_median_step": 0.01699995994567871,
+    "clock_reference_verified": false,
+    "timing_calibrated": false,
+    "experimental_waveforms_ingested": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "The targeted traversal corrected the prior 240-field audit coverage limitation and recovered two monotonic 321-sample LIUQE candidate axes (LX.t, LY.t), each numerically spanning 0.2–1.8 with median step 0.005, with verified reconstruction-member CRC and SHA-256. This is a validated metadata/schema milestone only.",
+  "interpretation": "TS and LIUQE numeric time ranges overlap, and the original plotting script labels time in seconds and selects LY.t alongside TS; this does not independently establish shot-trigger origin, shared clock, timing calibration, diagnostic synchronization or causal TCT efficacy. TCT mechanism neutral/unmeasured.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": null,
+  "followup_scope": "Prerequisite-blocked: await verified original TCV shot-trigger and LIUQE/TS diagnostic clock documentation from source intake before publishing a synchronization or native-handoff job. No evidence-supported new science job is enabled on this lineage.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron-loss, alpha transport/channeling, boron delivery, direct conversion, rotation/shear, liquid-lithium, ignition or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 execution, validated shot-to-native equilibrium/profile handoff, zero/handoff equivalence or matched intervention. Frozen +0.020% width and +0.10% Jpk gates unchanged and inapplicable to this TCV metadata audit.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T22:18:04.055Z"
+}
