@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "job_id": "20261025-111-golem-51929-51926-direct-csv-repair",
+  "processed_result_job_id": "20261025-111-golem-51929-51926-direct-csv-repair",
+  "parent_result_job_id": "20261025-110-golem-51929-51926-bounded-signal-access",
+  "processed_result_receipt_sha": "7eb9f06c5cc5fd5fe720326f3c3a5822bd51e55b",
+  "validation_summary_sha": "88176d1a7d2bf979a995d066393b62c7edc8bd80",
+  "validation_summary_sha256": "a79114c5c89585f8effe82fe9e18269ada1b2e69aab7eacedf04a37fd9a974f2",
+  "log_sha256": "7391242b6fb0ef8b4967833c126287f989173279256980797983c04c8a068647",
+  "result_head_before": "dfe4a5e5d98f390d6d340803a0a679a8c769208e",
+  "classification": "GOLEM_51929_EXPERIMENTAL_WAVEFORM_ACCESS_VERIFIED",
+  "job_class": "same_golem_family_direct_csv_endpoint_repair",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "GOLEM",
+  "shot_ids": [
+    51929,
+    51926
+  ],
+  "shot_date": "2026-03-27",
+  "source": "GOLEM official discharge database",
+  "source_shot_pages": {
+    "51926": "https://golem.fjfi.cvut.cz/shots/51926/",
+    "51929": "https://golem.fjfi.cvut.cz/shots/51929/"
+  },
+  "source_access_documentation": "https://golem.fjfi.cvut.cz/wiki/Handling/DataMining/Collaborators/index",
+  "source_license": "Public shot files; explicit redistribution license unverified. No raw waveforms republished; derived summaries and SHA256 only.",
+  "evidence_class": "experimental_waveform_access_and_schema_repair",
+  "observational_status": "GOLEM 51929 H-fuel plasma shot with reported plasma window 3.71–32.99 ms; GOLEM 51926 no-plasma control. Three numeric waveforms retrieved, but signal units, time units, and clock reference are unverified. No calibrated onset/lag null test, ELM/Mirnov precursor identification, causal analog, controller-in-loop actuation, or native M3D-C1 plasma intervention.",
+  "pipeline_failure": false,
+  "scientific_state": "prerequisite_blocked",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 8.682600021362305,
+    "verified_signal_files": 3,
+    "samples_per_signal": 50000,
+    "total_verified_samples": 150000,
+    "shot_51929_reported_plasma_window_ms": [
+      3.71,
+      32.99
+    ],
+    "shot_51926_plasma_reported": false,
+    "verified_signals": [
+      "51929/plasma_current",
+      "51929/loop_voltage",
+      "51926/loop_voltage"
+    ],
+    "missing_signal": "51926/plasma_current",
+    "missing_signal_error": "HTTP 404 at /shots/51926 and /shotdir/51926 BasicDiagnostics/Results/Ip.csv",
+    "raw_time_span_51929": [
+      -0.9999919999999999,
+      48.999007999999996
+    ],
+    "raw_time_span_51926_loop_voltage": [
+      -0.9990051200000001,
+      48.999994900000004
+    ],
+    "time_units": "unverified",
+    "signal_units": "unverified",
+    "raw_waveforms_committed": false
+  },
+  "successful_milestone": "Official BasicDiagnostics/Results direct CSV endpoint repair recovered 51929 plasma-current and loop-voltage plus 51926 loop-voltage waveforms (50,000 samples each) after four legacy endpoint HTTP 404 failures in job 110; provenance hashes and source endpoints preserved without redistributing raw data.",
+  "interpretation": "The access/schema repair succeeded. Waveform availability supports a bounded observational diagnostic preflight only, not TCT stabilization. Missing 51926 plasma-current and unverified source units/timebase block a calibrated matched onset/lag null test. No evidence of TCT precursor/controller authority is established.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "existing_successor_note": "No later job or equivalent successor found on branch; 111 itself is the already-executed repair successor of 110. Reconciliation backlog takes priority over new science.",
+  "new_job_id": null,
+  "backlog_policy": "Backfill exactly one outstanding receipt; do not queue a new experiment in this invocation.",
+  "pb11_fidelity_limits": "not_applicable; GOLEM H-fuel observational analog. No p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition, or net-power evidence.",
+  "m3dc1_claim_boundary": "No native M3D-C1 simulation, normalized-native-M3D-C1 handoff, zero/handoff equivalence, matched controlled-versus-baseline intervention or self-consistent plasma response. M3D-C1-only width/Jpk gates are not mapped to GOLEM waveform access.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T14:47:36Z"
+}
