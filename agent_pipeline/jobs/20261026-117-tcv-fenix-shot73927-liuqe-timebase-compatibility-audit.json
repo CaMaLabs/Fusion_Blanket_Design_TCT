@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-117-tcv-fenix-shot73927-liuqe-timebase-compatibility-audit",
+  "parent_result_job_id": "20261026-116-tcv-fenix-shot73927-plot-script-timebase-provenance",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_liuqe_reconstruction_timebase_compatibility_audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_liuqe_timebase_117.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_liuqe_timebase_117"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_liuqe_timebase_117/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Boundedly CRC-verify and inspect only KER_73927_LIUQE.mat reconstruction metadata; inventory candidate time axes and numerical overlap with already verified Thomson-scattering metadata, without claiming shared clock, calibrated synchronization, source waveform ingestion or solver handoff.",
+  "interpretation_contract": {
+    "max_http_range_bytes": 41943040,
+    "max_expanded_member_bytes": 50331648,
+    "archive_expected_size_bytes": 2444897347,
+    "paired_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "plot_script_sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+    "reconstruction_not_raw_measurement": true,
+    "numerical_overlap_not_clock_calibration": true,
+    "diagnostic_units_unverified": true,
+    "clock_reference_unverified": true,
+    "raw_data_not_republished": true,
+    "not_controller_in_loop": true,
+    "no_native_solver_or_causal_claim": true,
+    "m3dc1_frozen_gates_not_mapped_to_tcv": true,
+    "license_terms_not_independently_audited": true
+  }
+}
