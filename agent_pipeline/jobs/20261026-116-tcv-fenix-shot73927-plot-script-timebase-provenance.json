@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-116-tcv-fenix-shot73927-plot-script-timebase-provenance",
+  "parent_result_job_id": "20261026-115-tcv-fenix-shot73927-ts-schema-timing-audit",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_plot_script_timebase_provenance_audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_plot_timebase_116.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_plot_timebase_116"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_plot_timebase_116/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Boundedly retrieve and CRC-verify only plotting_73927.m from the already indexed FENIX archive; inventory explicit time-axis, units, trigger/clock references in original analysis code against shot 73927 TS metadata. Do not infer absolute calibration from labels, execute MATLAB, republish signals, or run solver.",
+  "interpretation_contract": {
+    "max_http_range_bytes": 8388608,
+    "max_expanded_member_bytes": 25165824,
+    "archive_expected_size_bytes": 2444897347,
+    "parent_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "source_script_excerpts_only": true,
+    "diagnostic_units_unverified": true,
+    "clock_reference_unverified": true,
+    "raw_data_not_republished": true,
+    "not_controller_in_loop": true,
+    "no_native_solver_or_causal_claim": true,
+    "m3dc1_frozen_gates_not_mapped_to_tcv": true,
+    "source_license_terms_not_audited": true
+  }
+}
