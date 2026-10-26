@@ -1,0 +1,95 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 9.783398151397705,
+  "error": null,
+  "finished_utc": "2026-10-26T16:55:50.690476Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1759,
+    "selected_result_files": [
+      "validation_runs/tcv_fenix_shot73927_mat_header_114/summary.json"
+    ]
+  },
+  "head_before": "814b8c55511720bc0f0e30e07addd3539b628926",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit.json",
+  "job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "log_path": "agent_pipeline/logs/20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit.log",
+  "log_sha256": "9f658c9cc940066073e3503b4aef651286cc36811f0fd935eaea9cc64cfee540",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_mat_header_114"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_mat_header_114.sh",
+  "runner_sha256": "08836b11cb646167f8969cddccdbd8c7888fabbcb9f341a98dab52a6d34b2027",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-26T16:55:40.906264Z",
+  "success": true,
+  "summary": {
+    "archive_size_bytes": 2444897347,
+    "causal_tct_demonstration": false,
+    "central_directory_entries": 39,
+    "classification": "TCV_FENIX_MAT_MEMBER_HEADER_VERIFIED",
+    "diagnostic_units_verified": false,
+    "experimental_waveforms_ingested": false,
+    "fuel_track": "fuel_agnostic_control",
+    "license_terms_verified": false,
+    "machine": "TCV",
+    "mat_variable_inventory": [
+      {
+        "name": "TS",
+        "shape": [
+          1,
+          1
+        ],
+        "type": "struct"
+      }
+    ],
+    "native_m3dc1_run": false,
+    "next_step": "Resolve verified variable units/time and source reuse terms before any physical interpretation; no native/causal TCT claim.",
+    "paired_member_metadata": {
+      "LIUQE": {
+        "compressed_bytes": 32864020,
+        "name": "KER_73927_LIUQE.mat",
+        "uncompressed_bytes": 32880432
+      },
+      "TS": {
+        "compressed_bytes": 2991511,
+        "name": "TS_73927.mat",
+        "uncompressed_bytes": 3005422
+      }
+    },
+    "parent_result_job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+    "runner_source_sha256": "08836b11cb646167f8969cddccdbd8c7888fabbcb9f341a98dab52a6d34b2027",
+    "schema_version": 1,
+    "shot_ids": [
+      73927
+    ],
+    "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+    "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+    "timestamp_utc": "2026-10-26T16:55:41.450616+00:00",
+    "timing_calibrated": false,
+    "verified_member": {
+      "compressed_bytes": 2991511,
+      "crc32_verified": true,
+      "format": "MATLAB_v5",
+      "name": "TS_73927.mat",
+      "sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+      "uncompressed_bytes": 3005422
+    },
+    "zenodo_license_metadata": {
+      "id": "cc-by-4.0"
+    },
+    "zenodo_record_id": 19452938
+  },
+  "summary_path": "validation_runs/tcv_fenix_shot73927_mat_header_114/summary.json",
+  "summary_sha256": "cf1e888f42a8f00447802cf632fa57a14a85036ee3d9d5900bbc20c4a82b0008",
+  "timed_out": false
+}

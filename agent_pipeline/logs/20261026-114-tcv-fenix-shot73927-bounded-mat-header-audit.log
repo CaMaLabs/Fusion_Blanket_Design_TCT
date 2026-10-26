@@ -1,0 +1,69 @@
+job_id=20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit
+started_utc=2026-10-26T16:55:40.906264Z
+head_before=814b8c55511720bc0f0e30e07addd3539b628926
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "archive_size_bytes": 2444897347,
+  "causal_tct_demonstration": false,
+  "central_directory_entries": 39,
+  "classification": "TCV_FENIX_MAT_MEMBER_HEADER_VERIFIED",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "license_terms_verified": false,
+  "machine": "TCV",
+  "mat_variable_inventory": [
+    {
+      "name": "TS",
+      "shape": [
+        1,
+        1
+      ],
+      "type": "struct"
+    }
+  ],
+  "native_m3dc1_run": false,
+  "next_step": "Resolve verified variable units/time and source reuse terms before any physical interpretation; no native/causal TCT claim.",
+  "paired_member_metadata": {
+    "LIUQE": {
+      "compressed_bytes": 32864020,
+      "name": "KER_73927_LIUQE.mat",
+      "uncompressed_bytes": 32880432
+    },
+    "TS": {
+      "compressed_bytes": 2991511,
+      "name": "TS_73927.mat",
+      "uncompressed_bytes": 3005422
+    }
+  },
+  "parent_result_job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "runner_source_sha256": "08836b11cb646167f8969cddccdbd8c7888fabbcb9f341a98dab52a6d34b2027",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "timestamp_utc": "2026-10-26T16:55:41.450616+00:00",
+  "timing_calibrated": false,
+  "verified_member": {
+    "compressed_bytes": 2991511,
+    "crc32_verified": true,
+    "format": "MATLAB_v5",
+    "name": "TS_73927.mat",
+    "sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "uncompressed_bytes": 3005422
+  },
+  "zenodo_license_metadata": {
+    "id": "cc-by-4.0"
+  },
+  "zenodo_record_id": 19452938
+}
+
+finished_utc=2026-10-26T16:55:50.690438Z
+return_code=0
