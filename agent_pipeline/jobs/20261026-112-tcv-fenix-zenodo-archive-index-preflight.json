@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-112-tcv-fenix-zenodo-archive-index-preflight",
+  "enabled": true,
+  "kind": "bounded_archive_member_metadata_preflight",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_zenodo_archive_index_112.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_zenodo_archive_index_112"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_zenodo_archive_index_112/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Read ZIP central directory by bounded HTTP Range only to verify published experimental Thomson/LIUQE member presence. Do not ingest or claim native simulation.",
+  "interpretation_contract": {
+    "metadata_only": true,
+    "license_unverified": true,
+    "raw_data_not_republished": true,
+    "no_native_solver_or_causal_claim": true,
+    "blocked_range_is_access_prerequisite_not_physics_failure": true
+  }
+}

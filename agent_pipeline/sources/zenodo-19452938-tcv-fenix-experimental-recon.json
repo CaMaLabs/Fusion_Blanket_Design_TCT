@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_type": "published_mixed_experimental_and_simulation_archive",
+  "discovery_date_utc": "2026-10-26",
+  "machine": "TCV",
+  "machine_type": "tokamak",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "pb11_fidelity": "not_applicable",
+  "source_title": "Data of full-discharge simulations of the TCV tokamak using the Fenix flight simulator",
+  "source_url": "https://zenodo.org/records/19452938",
+  "doi": "10.5281/zenodo.19452938",
+  "published": "2026-04-07",
+  "archive": {
+    "name": "FENIX_data.zip",
+    "url": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+    "size_bytes_reported": 2444897347,
+    "md5_reported": "19392e7bcddf98baeba3c2e064832779"
+  },
+  "published_contents": {
+    "experimental_thomson_scattering_shots": [
+      73927,
+      83448
+    ],
+    "reconstructed_LIUQE_equilibria_shots": [
+      73927,
+      83448,
+      87688,
+      87697
+    ],
+    "reconstructed_ASTRA_kinetics_shots": [
+      73927,
+      83448,
+      87688,
+      87697
+    ],
+    "FENIX_model_simulations": "separate simulated outputs; not raw diagnostics",
+    "controller_examples": "published hybrid/shape controller simulations; not proof of intervention on the plasma"
+  },
+  "diagnostic_units": "not yet verified from member files",
+  "timing": "sampling/time axes unverified until MAT member inspection",
+  "license_access": "Zenodo archive marked open; explicit reuse/redistribution license not displayed in public record inspected; do not republish archive contents",
+  "why_tct_relevant": "Measured Thomson profiles and LIUQE equilibrium reconstructions on identified TCV discharges could support independently checked equilibrium/profile-to-solver handoff, plus shape-controller analog comparison.",
+  "scientific_state": "candidate_source_metadata_only_not_ingested",
+  "missing_prerequisites": [
+    "Confirm bounded remote ZIP member access and exact member names without full 2.4GB download",
+    "Verify experimental TS and LIUQE/ASTRA file formats, clock units, profiles and magnetic equilibrium fields",
+    "Determine actual reuse license and distinguish experimental measurements from reconstructed/simulated quantities",
+    "Validate solver-specific geometry/profile conversion and matched baseline before any TCT physics claims"
+  ],
+  "deduplication": "No TCV/FENIX/shot identifiers found in agent/tct-pulse-train-audit tracked paths on 2026-10-26; other MAST, DIII-D, GOLEM and TCABR families are distinct",
+  "interpretation_boundary": "Archive access or ZIP listing is not waveform ingestion, M3D-C1 readiness, actuator authority, causal TCT evidence or p-B11 validation."
+}
