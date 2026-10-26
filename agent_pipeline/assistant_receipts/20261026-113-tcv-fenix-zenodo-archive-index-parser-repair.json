@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "processed_result_job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "processed_result_receipt_sha": "5c68ac3bd8d59ad8b3570acf8bbbdb8b1fad6393",
+  "validation_summary_sha": "0c541805a4101e317fe154182f06aad8781e9572",
+  "validation_summary_sha256": "0d980443630e858fc8292e047112362603510791b7ae28903d4d5d22d6cca24e",
+  "log_sha256": "8cb6c2c261aaf71b2e24fd54ad3c2416998984b5089d045ee7100ba9bf31ac2d",
+  "result_head_before": "6faa9dc03574e90b1a19b8b5dc83fa0559e7f179",
+  "classification": "TCV_FENIX_ARCHIVE_MEMBER_INDEX_VERIFIED",
+  "job_class": "bounded_archive_member_metadata_preflight_parser_repair",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_license": "Explicit reuse/redistribution terms unverified; no raw archive published.",
+  "observational_status": "Remote ZIP central directory inspected; matched TS/LIUQE/ASTRA names for TCV shots 73927 and 83448. Metadata-only: no signal samples, calibrated clocks or native intervention.",
+  "pipeline_failure": false,
+  "scientific_state": "source_archive_member_index_verified; shot_metadata_prerequisite_advanced; source_units_license_and_native_handoff_unverified",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 2.218130588531494,
+    "receipt_success": true,
+    "archive_size_bytes": 2444897347,
+    "central_directory_entries": 39,
+    "verified_mat_member_names_count": 10,
+    "paired_shots_with_ts_liuqe_astra_members": [
+      73927,
+      83448
+    ],
+    "other_shots_with_liuqe_astra_members": [
+      87688,
+      87697
+    ],
+    "experimental_waveforms_ingested": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "Bounded ZIP Range parsing and JSON serialization repair succeeded; central directory of a 2,444,897,347-byte TCV FENIX archive yielded 39 entries, including paired TS/LIUQE/ASTRA members for two named shots.",
+  "interpretation": "This confirms archive-level member presence only. It neither verifies member bytes/units/diagnostic timing nor demonstrates plasma response, precursor prediction or TCT stabilization. One bounded shot-73927 MAT header/CRC audit is queued; it cannot promote a physics claim.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "followup_scope": "single shot 73927 paired MAT member source gate; <=8MiB compressed/24MiB expanded; local CRC/header/variable metadata only; no raw data publication",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 alpha channeling, direct conversion, rotation, reaction or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 run, handoff/zero equivalence, causal-analog or controller-in-loop comparison; M3D-C1-only gates are not mapped to archive metadata.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T16:55:27.102Z"
+}
