@@ -1,0 +1,59 @@
+job_id=20261026-113-tcv-fenix-zenodo-archive-index-parser-repair
+started_utc=2026-10-26T16:17:19.962520Z
+head_before=6faa9dc03574e90b1a19b8b5dc83fa0559e7f179
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "machine": "TCV",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "classification": "TCV_FENIX_ARCHIVE_MEMBER_INDEX_VERIFIED",
+  "experimental_waveforms_ingested": false,
+  "native_m3dc1_run": false,
+  "causal_tct_demonstration": false,
+  "license": "explicit redistribution terms not yet verified",
+  "timestamp_utc": "2026-10-26T16:17:20.538319+00:00",
+  "runner_source_sha256": "070a134fcb55692c0d7332fea5245582056be364544f03e6a70229909421189d",
+  "archive_size_bytes": 2444897347,
+  "central_directory_entries": 39,
+  "matched_experimental_and_reconstruction_members": {
+    "73927": {
+      "TS_73927.mat": true,
+      "KER_73927_LIUQE.mat": true,
+      "KER_73927_ASTRA.mat": true
+    },
+    "83448": {
+      "TS_83448.mat": true,
+      "KER_83448_LIUQE.mat": true,
+      "KER_83448_ASTRA.mat": true
+    }
+  },
+  "matching_members": [
+    "KER_73927_ASTRA.mat",
+    "KER_73927_LIUQE.mat",
+    "KER_83448_ASTRA.mat",
+    "KER_83448_LIUQE.mat",
+    "KER_87688_ASTRA.mat",
+    "KER_87688_LIUQE.mat",
+    "KER_87697_ASTRA.mat",
+    "KER_87697_LIUQE.mat",
+    "TS_73927.mat",
+    "TS_83448.mat"
+  ],
+  "next_step": "Inspect one paired TS/LIUQE MAT member with bounded verified extraction and check units, time and license; no physics job until source gate passes."
+}
+
+finished_utc=2026-10-26T16:17:22.181439Z
+return_code=0

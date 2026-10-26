@@ -1,0 +1,85 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 2.218130588531494,
+  "error": null,
+  "finished_utc": "2026-10-26T16:17:22.181499Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 1500,
+    "selected_result_files": [
+      "validation_runs/tcv_fenix_zenodo_archive_index_113/summary.json"
+    ]
+  },
+  "head_before": "6faa9dc03574e90b1a19b8b5dc83fa0559e7f179",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261026-113-tcv-fenix-zenodo-archive-index-parser-repair.json",
+  "job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "log_path": "agent_pipeline/logs/20261026-113-tcv-fenix-zenodo-archive-index-parser-repair.log",
+  "log_sha256": "8cb6c2c261aaf71b2e24fd54ad3c2416998984b5089d045ee7100ba9bf31ac2d",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcv_fenix_zenodo_archive_index_113"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_zenodo_archive_index_113.sh",
+  "runner_sha256": "01e072ddcccf25a1fb363226237e24d2166f5cdaf579eba6e6c91e0ff542c11b",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-26T16:17:19.962520Z",
+  "success": true,
+  "summary": {
+    "archive_size_bytes": 2444897347,
+    "causal_tct_demonstration": false,
+    "central_directory_entries": 39,
+    "classification": "TCV_FENIX_ARCHIVE_MEMBER_INDEX_VERIFIED",
+    "experimental_waveforms_ingested": false,
+    "fuel_track": "fuel_agnostic_control",
+    "license": "explicit redistribution terms not yet verified",
+    "machine": "TCV",
+    "matched_experimental_and_reconstruction_members": {
+      "73927": {
+        "KER_73927_ASTRA.mat": true,
+        "KER_73927_LIUQE.mat": true,
+        "TS_73927.mat": true
+      },
+      "83448": {
+        "KER_83448_ASTRA.mat": true,
+        "KER_83448_LIUQE.mat": true,
+        "TS_83448.mat": true
+      }
+    },
+    "matching_members": [
+      "KER_73927_ASTRA.mat",
+      "KER_73927_LIUQE.mat",
+      "KER_83448_ASTRA.mat",
+      "KER_83448_LIUQE.mat",
+      "KER_87688_ASTRA.mat",
+      "KER_87688_LIUQE.mat",
+      "KER_87697_ASTRA.mat",
+      "KER_87697_LIUQE.mat",
+      "TS_73927.mat",
+      "TS_83448.mat"
+    ],
+    "native_m3dc1_run": false,
+    "next_step": "Inspect one paired TS/LIUQE MAT member with bounded verified extraction and check units, time and license; no physics job until source gate passes.",
+    "runner_source_sha256": "070a134fcb55692c0d7332fea5245582056be364544f03e6a70229909421189d",
+    "schema_version": 1,
+    "shot_ids": [
+      73927,
+      83448,
+      87688,
+      87697
+    ],
+    "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+    "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+    "timestamp_utc": "2026-10-26T16:17:20.538319+00:00"
+  },
+  "summary_path": "validation_runs/tcv_fenix_zenodo_archive_index_113/summary.json",
+  "summary_sha256": "0d980443630e858fc8292e047112362603510791b7ae28903d4d5d22d6cca24e",
+  "timed_out": false
+}

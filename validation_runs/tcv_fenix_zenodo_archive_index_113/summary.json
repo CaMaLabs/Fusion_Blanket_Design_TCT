@@ -1,0 +1,47 @@
+{
+  "archive_size_bytes": 2444897347,
+  "causal_tct_demonstration": false,
+  "central_directory_entries": 39,
+  "classification": "TCV_FENIX_ARCHIVE_MEMBER_INDEX_VERIFIED",
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "license": "explicit redistribution terms not yet verified",
+  "machine": "TCV",
+  "matched_experimental_and_reconstruction_members": {
+    "73927": {
+      "KER_73927_ASTRA.mat": true,
+      "KER_73927_LIUQE.mat": true,
+      "TS_73927.mat": true
+    },
+    "83448": {
+      "KER_83448_ASTRA.mat": true,
+      "KER_83448_LIUQE.mat": true,
+      "TS_83448.mat": true
+    }
+  },
+  "matching_members": [
+    "KER_73927_ASTRA.mat",
+    "KER_73927_LIUQE.mat",
+    "KER_83448_ASTRA.mat",
+    "KER_83448_LIUQE.mat",
+    "KER_87688_ASTRA.mat",
+    "KER_87688_LIUQE.mat",
+    "KER_87697_ASTRA.mat",
+    "KER_87697_LIUQE.mat",
+    "TS_73927.mat",
+    "TS_83448.mat"
+  ],
+  "native_m3dc1_run": false,
+  "next_step": "Inspect one paired TS/LIUQE MAT member with bounded verified extraction and check units, time and license; no physics job until source gate passes.",
+  "runner_source_sha256": "070a134fcb55692c0d7332fea5245582056be364544f03e6a70229909421189d",
+  "schema_version": 1,
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "timestamp_utc": "2026-10-26T16:17:20.538319+00:00"
+}
