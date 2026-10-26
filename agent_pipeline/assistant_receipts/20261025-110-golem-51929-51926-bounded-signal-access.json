@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "job_id": "20261025-110-golem-51929-51926-bounded-signal-access",
+  "processed_result_job_id": "20261025-110-golem-51929-51926-bounded-signal-access",
+  "processed_result_receipt_sha": "13e7c861750855361bc51dabac9fa62e6a7d0d92",
+  "validation_summary_sha": "01367a624185b796fb477c7f464f2c2441400118",
+  "result_head_before": "d11d309fc58d5104cae8bb5e25d091a6e0f188ed",
+  "classification": "GOLEM_SHOT_51929_ACCESS_OR_SCHEMA_BLOCKED",
+  "job_class": "new_untracked_golem_shot_family_bounded_waveform_probe",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "GOLEM",
+  "shot_ids": [
+    51929,
+    51926
+  ],
+  "shot_date": "2026-03-27",
+  "source": "GOLEM official shot database",
+  "source_access": "https://golem.fjfi.cvut.cz/wiki/Handling/DataAccess/DataProcessing",
+  "source_license": "Public per-shot download interface; explicit redistribution license not verified; no raw waveform redistribution.",
+  "evidence_class": "experimental_source_access_and_schema_probe",
+  "observational_status": "No waveform samples fetched by job 110; 51929 reported plasma from 3.71 to 32.99 ms, 51926 is no-plasma control. No diagnostic timebase or units calibrated in job 110. No precursor, causal analog, or controller-in-loop analysis.",
+  "pipeline_failure": true,
+  "scientific_state": "source_blocked_repaired_by_existing_successor",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 3.16973876953125,
+    "requested_diagnostic_endpoints": 4,
+    "http_404_endpoints": 4,
+    "verified_signals": 0,
+    "shot_51929_reported_plasma_window_ms": [
+      3.71,
+      32.99
+    ],
+    "shot_51926_reported_plasma": false
+  },
+  "successful_milestone": "Job 110 isolated an access/schema failure across all four requested GOLEM signal endpoints without falsely claiming ingestion; existing job 111 repaired the URL schema and verified three 50,000-sample waveform files.",
+  "existing_successor_job_ids": [
+    "20261025-111-golem-51929-51926-direct-csv-repair"
+  ],
+  "existing_successor_classification": "GOLEM_51929_EXPERIMENTAL_WAVEFORM_ACCESS_VERIFIED",
+  "existing_successor_quantitative_result": {
+    "elapsed_seconds": 8.682600021362305,
+    "verified_signal_files": 3,
+    "samples_per_signal": 50000,
+    "missing_signal": "51926/plasma_current",
+    "units_and_clock_reference": "unverified"
+  },
+  "interpretation": "The four HTTP 404 responses are endpoint/schema access failures, not scientific negative evidence. The existing repair 111 recovered GOLEM 51929 plasma current and loop voltage plus 51926 loop voltage. No new job is justified during acknowledgement reconciliation; source units and clock reference remain unverified.",
+  "mechanism_effect": "neutral",
+  "new_job_id": null,
+  "pb11_fidelity_limits": "not_applicable; GOLEM H-fuel observational analog. No p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotation/shear, liquid-lithium, ignition or net-power evidence.",
+  "m3dc1_claim_boundary": "No native M3D-C1 simulation or normalized-native-M3D-C1 handoff/zero equivalence, no controlled-versus-baseline actuator intervention. M3D-C1-only width/Jpk gates do not apply to GOLEM waveform access.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T13:20:35.937Z"
+}
