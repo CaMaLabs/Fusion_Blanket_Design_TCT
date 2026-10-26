@@ -1,0 +1,1141 @@
+{
+  "archive_size_bytes": 2444897347,
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_TS_73927_NESTED_SCHEMA_INVENTORIED",
+  "diagnostic": "Thomson scattering (TS_73927.mat)",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "field_inventory": [
+    {
+      "field_count": 4,
+      "kind": "struct",
+      "path": "TS"
+    },
+    {
+      "field_count": 22,
+      "kind": "struct",
+      "path": "TS.ne_raw"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.data",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_raw.dim",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.dim[0]",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.dim[1]",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_raw.dimunits",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.t",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.x",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.shot"
+    },
+    {
+      "kind": "text",
+      "length": 2,
+      "path": "TS.ne_raw.gdat_request"
+    },
+    {
+      "field_count": 9,
+      "kind": "struct",
+      "path": "TS.ne_raw.gdat_params"
+    },
+    {
+      "kind": "text",
+      "length": 2,
+      "path": "TS.ne_raw.gdat_params.data_request"
+    },
+    {
+      "kind": "text",
+      "length": 3,
+      "path": "TS.ne_raw.gdat_params.machine"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.gdat_params.doplot"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.gdat_params.liuqe"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.gdat_params.nverbose"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.gdat_params.trialindx"
+    },
+    {
+      "field_count": 7,
+      "kind": "struct",
+      "path": "TS.ne_raw.gdat_params.help"
+    },
+    {
+      "kind": "text",
+      "length": 242,
+      "path": "TS.ne_raw.gdat_params.help.data_request"
+    },
+    {
+      "kind": "text",
+      "length": 48,
+      "path": "TS.ne_raw.gdat_params.help.machine"
+    },
+    {
+      "kind": "text",
+      "length": 120,
+      "path": "TS.ne_raw.gdat_params.help.doplot"
+    },
+    {
+      "kind": "text",
+      "length": 113,
+      "path": "TS.ne_raw.gdat_params.help.liuqe"
+    },
+    {
+      "kind": "text",
+      "length": 82,
+      "path": "TS.ne_raw.gdat_params.help.nverbose"
+    },
+    {
+      "kind": "text",
+      "length": 110,
+      "path": "TS.ne_raw.gdat_params.help.trialindx"
+    },
+    {
+      "kind": "text",
+      "length": 237,
+      "path": "TS.ne_raw.gdat_params.help.time_out"
+    },
+    {
+      "kind": "text",
+      "length": 3,
+      "path": "TS.ne_raw.gdat_params.systems"
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "TS.ne_raw.gdat_params.time_out",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 67,
+      "path": "TS.ne_raw.data_fullpath"
+    },
+    {
+      "dtype": "<U1",
+      "kind": "array",
+      "path": "TS.ne_raw.help",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.status_mds"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.status"
+    },
+    {
+      "field_count": 1,
+      "kind": "struct",
+      "path": "TS.ne_raw.mapping_for"
+    },
+    {
+      "field_count": 7,
+      "kind": "struct",
+      "path": "TS.ne_raw.mapping_for.tcv"
+    },
+    {
+      "kind": "text",
+      "length": 10,
+      "path": "TS.ne_raw.mapping_for.tcv.method"
+    },
+    {
+      "dtype": "<U1",
+      "kind": "array",
+      "path": "TS.ne_raw.mapping_for.tcv.expression",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.mapping_for.tcv.timedim"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.mapping_for.tcv.gdat_timedim"
+    },
+    {
+      "dtype": "float",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.mapping_for.tcv.min"
+    },
+    {
+      "dtype": "float",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_raw.mapping_for.tcv.max"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.error_bar",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_raw.system",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_raw.system[0]"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_raw.system[1]"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_raw.system[2]"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_raw.system[3]"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.r_thomson",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.firrat",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.data_raw",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_raw.error_bar_raw",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 55,
+      "path": "TS.ne_raw.gdat_call"
+    },
+    {
+      "field_count": 27,
+      "kind": "struct",
+      "path": "TS.ne_fit"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.data",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_fit.dim",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.dim[0]",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.dim[1]",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_fit.dimunits",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.t",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.x",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.shot"
+    },
+    {
+      "kind": "text",
+      "length": 6,
+      "path": "TS.ne_fit.gdat_request"
+    },
+    {
+      "field_count": 12,
+      "kind": "struct",
+      "path": "TS.ne_fit.gdat_params"
+    },
+    {
+      "kind": "text",
+      "length": 6,
+      "path": "TS.ne_fit.gdat_params.data_request"
+    },
+    {
+      "kind": "text",
+      "length": 3,
+      "path": "TS.ne_fit.gdat_params.machine"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.gdat_params.doplot"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.gdat_params.liuqe"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.gdat_params.nverbose"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.gdat_params.trialindx"
+    },
+    {
+      "field_count": 10,
+      "kind": "struct",
+      "path": "TS.ne_fit.gdat_params.help"
+    },
+    {
+      "kind": "text",
+      "length": 242,
+      "path": "TS.ne_fit.gdat_params.help.data_request"
+    },
+    {
+      "kind": "text",
+      "length": 48,
+      "path": "TS.ne_fit.gdat_params.help.machine"
+    },
+    {
+      "kind": "text",
+      "length": 120,
+      "path": "TS.ne_fit.gdat_params.help.doplot"
+    },
+    {
+      "kind": "text",
+      "length": 113,
+      "path": "TS.ne_fit.gdat_params.help.liuqe"
+    },
+    {
+      "kind": "text",
+      "length": 82,
+      "path": "TS.ne_fit.gdat_params.help.nverbose"
+    },
+    {
+      "kind": "text",
+      "length": 110,
+      "path": "TS.ne_fit.gdat_params.help.trialindx"
+    },
+    {
+      "kind": "text",
+      "length": 122,
+      "path": "TS.ne_fit.gdat_params.help.zshift"
+    },
+    {
+      "kind": "text",
+      "length": 110,
+      "path": "TS.ne_fit.gdat_params.help.fit"
+    },
+    {
+      "kind": "text",
+      "length": 105,
+      "path": "TS.ne_fit.gdat_params.help.fit_type"
+    },
+    {
+      "kind": "text",
+      "length": 237,
+      "path": "TS.ne_fit.gdat_params.help.time_out"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.gdat_params.zshift"
+    },
+    {
+      "kind": "text",
+      "length": 3,
+      "path": "TS.ne_fit.gdat_params.systems"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.gdat_params.fit"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_fit.gdat_params.fit_type"
+    },
+    {
+      "dtype": "uint8",
+      "kind": "array",
+      "path": "TS.ne_fit.gdat_params.time_out",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 67,
+      "path": "TS.ne_fit.data_fullpath"
+    },
+    {
+      "kind": "text",
+      "length": 147,
+      "path": "TS.ne_fit.help"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.status_mds"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.status"
+    },
+    {
+      "field_count": 1,
+      "kind": "struct",
+      "path": "TS.ne_fit.mapping_for"
+    },
+    {
+      "field_count": 7,
+      "kind": "struct",
+      "path": "TS.ne_fit.mapping_for.tcv"
+    },
+    {
+      "kind": "text",
+      "length": 10,
+      "path": "TS.ne_fit.mapping_for.tcv.method"
+    },
+    {
+      "dtype": "<U1",
+      "kind": "array",
+      "path": "TS.ne_fit.mapping_for.tcv.expression",
+      "shape": [
+        0
+      ]
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.mapping_for.tcv.timedim"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.mapping_for.tcv.gdat_timedim"
+    },
+    {
+      "dtype": "float",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.mapping_for.tcv.min"
+    },
+    {
+      "dtype": "float",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.mapping_for.tcv.max"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.error_bar",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_fit.system",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_fit.system[0]"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_fit.system[1]"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_fit.system[2]"
+    },
+    {
+      "kind": "text",
+      "length": 4,
+      "path": "TS.ne_fit.system[3]"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.r_thomson",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.firrat",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.data_raw",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.error_bar_raw",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "field_count": 2,
+      "kind": "struct",
+      "path": "TS.ne_fit.psiscatvol"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.psiscatvol.data",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.ne_fit.psiscatvol.dim",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.psiscatvol.dim[0]",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.psiscatvol.dim[1]",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "field_count": 2,
+      "kind": "struct",
+      "path": "TS.ne_fit.psi_max"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.psi_max.data",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.psi_max.dim",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.z_thomson",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "field_count": 11,
+      "kind": "struct",
+      "path": "TS.ne_fit.grids_1d"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhopolnorm",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.psi_axis_edge",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.psi",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhotornorm",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhovolnorm",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhopolnorm_equil",
+      "shape": [
+        61,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhotornorm_equil",
+      "shape": [
+        61,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhovolnorm_equil",
+      "shape": [
+        61,
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.rhotor_edge",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.volume_edge",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.grids_1d.b0",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "field_count": 12,
+      "kind": "struct",
+      "path": "TS.ne_fit.fit"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.fit.data",
+      "shape": [
+        200,
+        110
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.fit.x",
+      "shape": [
+        200
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.fit.t",
+      "shape": [
+        110
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 23,
+      "path": "TS.ne_fit.fit.data_fullpath"
+    },
+    {
+      "kind": "text",
+      "length": 23,
+      "path": "TS.ne_fit.fit.help"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.fit.rhotornorm",
+      "shape": [
+        200,
+        110
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 147,
+      "path": "TS.ne_fit.fit.rhotornorm_help"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.fit.rhotornorm_status_mds"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.ne_fit.fit.rhovolnorm",
+      "shape": [
+        200,
+        110
+      ]
+    },
+    {
+      "kind": "text",
+      "length": 16,
+      "path": "TS.ne_fit.fit.rhovolnorm_help"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.ne_fit.fit.rhovolnorm_status_mds"
+    },
+    {
+      "kind": "text",
+      "length": 59,
+      "path": "TS.ne_fit.gdat_call"
+    },
+    {
+      "field_count": 19,
+      "kind": "struct",
+      "path": "TS.te_raw"
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.te_raw.data",
+      "shape": [
+        109,
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.te_raw.dim",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.te_raw.dim[0]",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.te_raw.dim[1]",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "object",
+      "kind": "array",
+      "path": "TS.te_raw.dimunits",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.te_raw.t",
+      "shape": [
+        178
+      ]
+    },
+    {
+      "dtype": "float64",
+      "kind": "array",
+      "path": "TS.te_raw.x",
+      "shape": [
+        109
+      ]
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.te_raw.shot"
+    },
+    {
+      "kind": "text",
+      "length": 2,
+      "path": "TS.te_raw.gdat_request"
+    },
+    {
+      "field_count": 9,
+      "kind": "struct",
+      "path": "TS.te_raw.gdat_params"
+    },
+    {
+      "kind": "text",
+      "length": 2,
+      "path": "TS.te_raw.gdat_params.data_request"
+    },
+    {
+      "kind": "text",
+      "length": 3,
+      "path": "TS.te_raw.gdat_params.machine"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.te_raw.gdat_params.doplot"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.te_raw.gdat_params.liuqe"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.te_raw.gdat_params.nverbose"
+    },
+    {
+      "dtype": "int",
+      "kind": "numeric_scalar",
+      "path": "TS.te_raw.gdat_params.trialindx"
+    },
+    {
+      "field_count": 7,
+      "kind": "struct",
+      "path": "TS.te_raw.gdat_params.help"
+    },
+    {
+      "kind": "text",
+      "length": 242,
+      "path": "TS.te_raw.gdat_params.help.data_request"
+    },
+    {
+      "kind": "text",
+      "length": 48,
+      "path": "TS.te_raw.gdat_params.help.machine"
+    }
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "inventory_truncated": true,
+  "license_terms_verified": false,
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Establish source-documented time units and diagnostic clock reference, then calibrate candidate axes; do not infer time units from numeric ranges.",
+  "observational_status": "metadata-only; no prospective or controller-in-loop intervention",
+  "parent_result_job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "raw_data_published": false,
+  "raw_time_candidates": [
+    {
+      "clock_reference_verified": false,
+      "count": 178,
+      "monotonic_nondecreasing": true,
+      "path": "TS.ne_raw.t",
+      "raw_max": 2.9673399925231934,
+      "raw_median_step": 0.01699995994567871,
+      "raw_min": 0.017340000718832016,
+      "units_verified": false
+    },
+    {
+      "clock_reference_verified": false,
+      "count": 178,
+      "monotonic_nondecreasing": true,
+      "path": "TS.ne_fit.t",
+      "raw_max": 2.9673399925231934,
+      "raw_median_step": 0.01699995994567871,
+      "raw_min": 0.017340000718832016,
+      "units_verified": false
+    },
+    {
+      "clock_reference_verified": false,
+      "count": 110,
+      "monotonic_nondecreasing": true,
+      "path": "TS.ne_fit.fit.t",
+      "raw_max": 1.83433997631073,
+      "raw_median_step": 0.01699995994567871,
+      "raw_min": 0.017340000718832016,
+      "units_verified": false
+    },
+    {
+      "clock_reference_verified": false,
+      "count": 178,
+      "monotonic_nondecreasing": true,
+      "path": "TS.te_raw.t",
+      "raw_max": 2.9673399925231934,
+      "raw_median_step": 0.01699995994567871,
+      "raw_min": 0.017340000718832016,
+      "units_verified": false
+    }
+  ],
+  "runner_source_sha256": "73508e02a9df774500482be286bd5e2fdfc93bea15dbe4b77cd3d2197aaabde6",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "timestamp_utc": "2026-10-26T18:32:32.594256+00:00",
+  "timing_calibrated": false,
+  "unit_label_hints_unverified": [
+    {
+      "path": "TS.ne_raw.units",
+      "text": "m^{-3}"
+    },
+    {
+      "path": "TS.ne_raw.dimunits[0]",
+      "text": "Z [m]"
+    },
+    {
+      "path": "TS.ne_raw.dimunits[1]",
+      "text": "s"
+    },
+    {
+      "path": "TS.ne_raw.label",
+      "text": "ne"
+    },
+    {
+      "path": "TS.ne_raw.mapping_for.tcv.label",
+      "text": "ne"
+    },
+    {
+      "path": "TS.ne_fit.units",
+      "text": "m^{-3}"
+    },
+    {
+      "path": "TS.ne_fit.dimunits[0]",
+      "text": "sqrt(psi_norm)"
+    },
+    {
+      "path": "TS.ne_fit.dimunits[1]",
+      "text": "s"
+    },
+    {
+      "path": "TS.ne_fit.label",
+      "text": "ne"
+    },
+    {
+      "path": "TS.ne_fit.mapping_for.tcv.label",
+      "text": "ne"
+    },
+    {
+      "path": "TS.ne_fit.fit.units",
+      "text": "n_e [m^{-3}]"
+    },
+    {
+      "path": "TS.te_raw.units",
+      "text": "eV"
+    },
+    {
+      "path": "TS.te_raw.dimunits[0]",
+      "text": "Z [m]"
+    },
+    {
+      "path": "TS.te_raw.dimunits[1]",
+      "text": "s"
+    }
+  ],
+  "verified_member": {
+    "compressed_bytes": 2991511,
+    "crc32_verified": true,
+    "format": "MATLAB_v5",
+    "name": "TS_73927.mat",
+    "sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "uncompressed_bytes": 3005422
+  }
+}
