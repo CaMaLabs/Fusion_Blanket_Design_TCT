@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "parent_result_job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_paired_mat_member_source_gate",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_mat_header_114.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_mat_header_114"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_mat_header_114/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Validate one TS/LIUQE shot-73927 MAT member using bounded HTTP byte ranges, ZIP CRC, format header, optional variable inventory and public license metadata. Never download whole 2.4GB archive or republish raw data.",
+  "interpretation_contract": {
+    "source_gate_only": true,
+    "compressed_member_max_bytes": 8388608,
+    "expanded_member_max_bytes": 25165824,
+    "license_terms_not_inferred_from_license_id": true,
+    "raw_data_not_republished": true,
+    "diagnostic_units_and_time_unverified": true,
+    "not_controller_in_loop": true,
+    "no_native_solver_or_causal_claim": true,
+    "m3dc1_frozen_gates_not_mapped_to_tcv": true
+  }
+}
