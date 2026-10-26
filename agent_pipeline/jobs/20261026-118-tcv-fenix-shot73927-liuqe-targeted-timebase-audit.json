@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-118-tcv-fenix-shot73927-liuqe-targeted-timebase-audit",
+  "parent_result_job_id": "20261026-117-tcv-fenix-shot73927-liuqe-timebase-compatibility-audit",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_liuqe_targeted_timebase_audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_liuqe_targeted_timebase_118.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_liuqe_targeted_timebase_118"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_liuqe_targeted_timebase_118/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Correct the evidence-limited schema traversal in result 117: its 240-field cap was exhausted in L.P before top-level LY/LX. CRC/SHA-verify the same bounded LIUQE member, inspect documented LY.t and LX/L time fields directly, and compare raw numeric ranges to previously verified TS timestamps without inferring synchronization.",
+  "interpretation_contract": {
+    "max_http_range_bytes": 41943040,
+    "max_expanded_member_bytes": 50331648,
+    "archive_expected_size_bytes": 2444897347,
+    "liuqe_member_expected_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "paired_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "prior_inventory_truncated": true,
+    "numerical_overlap_not_clock_calibration": true,
+    "diagnostic_units_unverified": true,
+    "clock_reference_unverified": true,
+    "raw_data_not_republished": true,
+    "not_controller_in_loop": true,
+    "no_native_solver_or_causal_claim": true,
+    "m3dc1_frozen_gates_not_mapped_to_tcv": true,
+    "license_terms_not_independently_audited": true
+  }
+}
