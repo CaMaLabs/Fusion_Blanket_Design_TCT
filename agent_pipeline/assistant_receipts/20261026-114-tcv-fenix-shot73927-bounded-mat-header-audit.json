@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "processed_result_job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "processed_result_receipt_sha": "5002f77af6d87f0a3f36927efc704df5eeed7810",
+  "validation_summary_sha": "bb6843816495bc3943f83331410510e92c1d35dc",
+  "validation_summary_sha256": "cf1e888f42a8f00447802cf632fa57a14a85036ee3d9d5900bbc20c4a82b0008",
+  "log_sha256": "9f658c9cc940066073e3503b4aef651286cc36811f0fd935eaea9cc64cfee540",
+  "result_head_before": "814b8c55511720bc0f0e30e07addd3539b628926",
+  "classification": "TCV_FENIX_MAT_MEMBER_HEADER_VERIFIED",
+  "job_class": "bounded_tcv_fenix_paired_mat_member_source_gate",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "Thomson scattering (TS_73927.mat); paired LIUQE member indexed but not decoded",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_license": "Zenodo record metadata identifies cc-by-4.0; actual source reuse terms/attribution conditions not independently audited. No raw data republished.",
+  "observational_status": "Bounded byte-range fetch, ZIP CRC and MATLAB v5 header verified for TCV shot 73927 TS member. Metadata-only. No calibrated diagnostic time axis, native equilibrium handoff, prospective prediction, causal analog or controller-in-loop test.",
+  "pipeline_failure": false,
+  "scientific_state": "bounded_mat_member_integrity_verified; nested_diagnostic_schema_and_timing_calibration_pending; native_handoff_unvalidated",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 9.783398151397705,
+    "receipt_success": true,
+    "archive_size_bytes": 2444897347,
+    "central_directory_entries": 39,
+    "ts_compressed_bytes": 2991511,
+    "ts_uncompressed_bytes": 3005422,
+    "ts_crc32_verified": true,
+    "ts_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "ts_mat_format": "MATLAB_v5",
+    "top_level_variables": [
+      {
+        "name": "TS",
+        "shape": [
+          1,
+          1
+        ],
+        "type": "struct"
+      }
+    ],
+    "paired_liuqe_compressed_bytes": 32864020,
+    "experimental_waveforms_ingested": false,
+    "timing_calibrated": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "A 2,995,111-byte compressed TS_73927.mat member was retrieved by bounded HTTP range, decompressed to 3,005,422 bytes, passed ZIP CRC and SHA-256 integrity checks, and parsed as MATLAB v5 containing a 1x1 TS struct.",
+  "interpretation": "Source/member integrity and diagnostic container presence supported. This is neutral on TCT efficacy. No diagnostic units or clock reference are verified; TS variable inventory is only top-level. The 32,864,020-byte LIUQE member exceeds the existing bounded-member compressed size gate, and was not decoded. Do not map native M3D-C1 thresholds onto this observational metadata.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261026-115-tcv-fenix-shot73927-ts-schema-timing-audit",
+  "followup_scope": "One bounded TCV 73927 TS nested-struct/time-axis metadata audit; reverify SHA against job 114; no assumed units, raw waveform publication or solver/physics changes.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha transport/channeling, conversion, rotation, recirculation, boron delivery, loss or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 execution, handoff/zero equivalence, or matched controller/baseline intervention. Frozen +0.020% width and +0.10% Jpk gates remain unchanged and inapplicable to this TCV source audit.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T18:30:55.377Z"
+}
