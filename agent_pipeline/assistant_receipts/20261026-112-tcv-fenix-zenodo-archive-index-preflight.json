@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-112-tcv-fenix-zenodo-archive-index-preflight",
+  "processed_result_job_id": "20261026-112-tcv-fenix-zenodo-archive-index-preflight",
+  "processed_result_receipt_sha": "39727ab49d1dd8c478fb621539585952783f182f",
+  "validation_summary_sha": "e2c230ae97ae8af4252d71c93b8a43a77dedc50a",
+  "validation_summary_sha256": "99c7eef305f902490c3691e9108bd25ad6e8f44b7b78fb60f13e96d5c7e6314f",
+  "log_sha256": "bf4be2a37d0d418940cf260417af0bd2d3d0caf879186c3acb7d325e4ba9a951",
+  "result_head_before": "ca98453f20ae4f332912b530db3f094be9d1ef11",
+  "classification": "TCV_FENIX_ARCHIVE_RANGE_PREFLIGHT_BLOCKED",
+  "job_class": "bounded_archive_member_metadata_preflight",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_archive_bytes": 2444897347,
+  "source_license": "explicit reuse/redistribution terms unverified; raw archive not republished",
+  "observational_status": "published experimental Thomson/LIUQE candidate source; no archive members validated or waveforms ingested",
+  "pipeline_failure": true,
+  "scientific_state": "pipeline_parser_serialization_failure; source_prerequisite_unverified",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 1.3164544105529785,
+    "receipt_success": false,
+    "summary_parse_error": "Extra data: line 21 column 2 (char 817)",
+    "reported_http_content_range": "bytes 2444831790-2444897346/2444897347",
+    "range_bytes_reported": 65557,
+    "zip_central_directory_inspected": false,
+    "experimental_waveforms_ingested": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "Bounded remote range response and log were captured and published, but no archive index/member verification occurred.",
+  "interpretation": "Runtime rejected a syntactically valid Content-Range header and generated a summary with a trailing literal backslash-n, causing JSON parse failure. Tracked 112 source appears to use a valid regex and newline, so a runtime/source discrepancy cannot be excluded. These are pipeline/provenance failures, not scientific negatives. Replacement uses explicit ASCII-digit parsing, trimmed header, json.dump plus chr(10), and records executed Python source SHA256.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "repair_scope": "new 113 runner, bounded metadata preflight only; original 112 artifacts unchanged",
+  "pb11_fidelity_limits": "not_applicable; TCV published experimental and reconstruction metadata, no p-B11 fidelity or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 simulation, zero/handoff equivalence, plasma response, or controller-in-loop comparison; M3D-C1-only width/Jpk gates not mapped to TCV archive metadata.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T16:15:40.574Z"
+}

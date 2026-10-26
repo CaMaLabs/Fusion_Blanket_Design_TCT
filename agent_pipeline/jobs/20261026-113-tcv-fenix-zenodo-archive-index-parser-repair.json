@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-113-tcv-fenix-zenodo-archive-index-parser-repair",
+  "parent_result_job_id": "20261026-112-tcv-fenix-zenodo-archive-index-preflight",
+  "enabled": true,
+  "kind": "bounded_archive_member_metadata_preflight_parser_repair",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_zenodo_archive_index_113.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_zenodo_archive_index_113"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_zenodo_archive_index_113/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Re-run bounded HTTP Range ZIP central-directory preflight with defensive Content-Range parsing, deterministic JSON newline, and runtime Python source hash; never download 2.4GB archive.",
+  "interpretation_contract": {
+    "metadata_only": true,
+    "license_unverified": true,
+    "raw_data_not_republished": true,
+    "no_native_solver_or_causal_claim": true,
+    "source_access_failure_distinct_from_code_failure": true,
+    "archive_member_validation_required": true
+  }
+}
