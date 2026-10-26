@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+  "processed_result_job_id": "20261014-101-tokamark-task41-time-coordinate-schema-audit",
+  "source_result_receipt_sha": "de1aa5aa68c60173b5fd3aff48e61850621a963a",
+  "source_result_summary_sha256": "d2b7fc4177cef62be2a83ca5df5bd63181916bc1c92da7b6f388640bb09c87ff",
+  "source_log_sha256": "a51c13a703be377b9767381ba74057009f241d1864fea765973094971e1ff7db",
+  "classification": "TOKAMARK_TASK41_TIME_COORDINATE_SCHEMA_MAPPED",
+  "fuel_track": "fuel_agnostic_control",
+  "job_class": "experimental_task41_time_coordinate_schema_audit",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "evidence_class": "observational_metadata_schema",
+  "pipeline_failure": false,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 3.522388458251953,
+    "task41_unique_signals": 18,
+    "time_coordinate_shape_matches": 18,
+    "time_coordinate_units_known": 18,
+    "time_coordinate_chunks_loaded": 0,
+    "waveform_chunks_loaded": 0,
+    "numeric_time_alignment_verified": false,
+    "events_analyzed": 0,
+    "shots_analyzed": 0,
+    "source_metadata_bytes_read": 95839,
+    "source_metadata_http_status": 200
+  },
+  "source_provenance": {
+    "dataset": "UKAEA-IBM-STFC TokaMark v1 canonical Zarr-v2, derived from FAIR-MAST",
+    "source_url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/.zmetadata",
+    "source_metadata_sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343",
+    "license": "TokaMark CC BY 4.0; underlying FAIR-MAST CC BY-SA 4.0 except where noted",
+    "diagnostic_schema": "18 Task-4.1 signals, coordinate shapes and units matched in metadata only",
+    "timing_calibration": "coordinate units declared seconds; no sampled numeric time values read or verified"
+  },
+  "successful_milestone": "All 18 Task-4.1 diagnostic coordinate shapes matched their signal time lengths and all 18 time-coordinate units were declared in canonical MAST shot 21719 metadata.",
+  "interpretation": "Metadata schema mapping succeeded without loading waveform/time chunks; synchronization, precursor reachability, controller-in-loop efficacy, and causal TCT were not established. Subsequent bounded waveform validation already exists as job 102, and decode/time-alignment repair already exists as job 103; no replacement job is justified.",
+  "mechanism_effect": "neutral",
+  "observational_status": "metadata_only; no prospective shot-level statistics or causal analog/controller-in-loop result",
+  "existing_successor_job_ids": [
+    "20261014-102-tokamark-task41-bounded-waveform-validation",
+    "20261019-103-tokamark-task41-decode-and-time-alignment"
+  ],
+  "new_job_id": null,
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "m3dc1_claim_boundary": "Native M3D-C1-only thresholds and zero/handoff equivalence gates are preserved, not mapped to imported MAST metadata. No normalized-native-M3D-C1 validation inferred.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha, rotation, transport, or net-power evidence",
+  "timestamp_utc": "2026-10-26T03:46:55Z"
+}
