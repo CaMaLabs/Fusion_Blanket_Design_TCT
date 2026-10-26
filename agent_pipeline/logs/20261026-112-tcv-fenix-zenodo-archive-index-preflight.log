@@ -1,0 +1,33 @@
+job_id=20261026-112-tcv-fenix-zenodo-archive-index-preflight
+started_utc=2026-10-26T15:12:47.172695Z
+head_before=ca98453f20ae4f332912b530db3f094be9d1ef11
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "schema_version": 1,
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "machine": "TCV",
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "classification": "TCV_FENIX_ARCHIVE_RANGE_PREFLIGHT_BLOCKED",
+  "experimental_waveforms_ingested": false,
+  "native_m3dc1_run": false,
+  "causal_tct_demonstration": false,
+  "license": "explicit redistribution terms not yet verified",
+  "timestamp_utc": "2026-10-26T15:12:47.836788+00:00",
+  "error": "RuntimeError('Missing/invalid Content-Range: bytes 2444831790-2444897346/2444897347')",
+  "next_step": "Obtain archive index through an approved bounded-access path; do not download 2.4GB or assert shot ingestion."
+}
+
+finished_utc=2026-10-26T15:12:48.489938Z
+return_code=0

@@ -1,0 +1,21 @@
+{
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_ARCHIVE_RANGE_PREFLIGHT_BLOCKED",
+  "error": "RuntimeError('Missing/invalid Content-Range: bytes 2444831790-2444897346/2444897347')",
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "license": "explicit redistribution terms not yet verified",
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Obtain archive index through an approved bounded-access path; do not download 2.4GB or assert shot ingestion.",
+  "schema_version": 1,
+  "shot_ids": [
+    73927,
+    83448,
+    87688,
+    87697
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "timestamp_utc": "2026-10-26T15:12:47.836788+00:00"
+}\n

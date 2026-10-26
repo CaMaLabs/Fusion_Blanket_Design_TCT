@@ -1,0 +1,39 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.3164544105529785,
+  "error": "summary parse error: Extra data: line 21 column 2 (char 817)",
+  "finished_utc": "2026-10-26T15:12:48.489974Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 819,
+    "selected_result_files": [
+      "validation_runs/tcv_fenix_zenodo_archive_index_112/summary.json"
+    ]
+  },
+  "head_before": "ca98453f20ae4f332912b530db3f094be9d1ef11",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261026-112-tcv-fenix-zenodo-archive-index-preflight.json",
+  "job_id": "20261026-112-tcv-fenix-zenodo-archive-index-preflight",
+  "log_path": "agent_pipeline/logs/20261026-112-tcv-fenix-zenodo-archive-index-preflight.log",
+  "log_sha256": "bf4be2a37d0d418940cf260417af0bd2d3d0caf879186c3acb7d325e4ba9a951",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcv_fenix_zenodo_archive_index_112"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_zenodo_archive_index_112.sh",
+  "runner_sha256": "bb47a05cd5e25b3475fc79eb416f32642d3ea7e866ad2df977ea346d4ce693ff",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-26T15:12:47.172695Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/tcv_fenix_zenodo_archive_index_112/summary.json",
+  "summary_sha256": "99c7eef305f902490c3691e9108bd25ad6e8f44b7b78fb60f13e96d5c7e6314f",
+  "timed_out": false
+}
