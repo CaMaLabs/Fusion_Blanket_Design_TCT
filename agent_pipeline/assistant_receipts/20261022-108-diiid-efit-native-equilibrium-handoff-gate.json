@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "job_id": "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+  "processed_result_job_id": "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+  "processed_result_receipt_sha": "e03fb118bf0723f7d0071181b8ba5888f1347040",
+  "validation_summary_sha": "5c1167eb4f466920133451fd114ba06ca8235beb",
+  "result_head_before": "699be1044fe3c47945a7f6cdf62d45c319a40e2f",
+  "classification": "EFIT_SHOT_FRAME_VERIFIED_NATIVE_HANDOFF_NOT_YET_VALIDATED",
+  "job_class": "shot_derived_native_equilibrium_handoff_fail_closed",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "DIII-D",
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "dataset_config": "diii_d_train",
+  "dataset_row": 1,
+  "physical_machine_shot_id": null,
+  "shot_identity_note": "Dataset row 1 is an upstream dataset index, not a verified DIII-D physical discharge number.",
+  "evidence_class": "experimental_equilibrium_reconstruction_preflight",
+  "observational_status": "observational EFIT frame/geometry validation only; no calibrated precursor event analysis, no native M3D-C1 shot initialization, no controller-in-loop intervention",
+  "pipeline_failure": false,
+  "scientific_state": "prerequisite_blocked",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 13.493497133255005,
+    "efit_frames": 359,
+    "efit_frame_index": 179,
+    "efit_time_ms": 3740,
+    "psi_min": -0.05433481186628342,
+    "psi_max": 0.7343927621841431,
+    "grid_R_m": [
+      0.8399999737739563,
+      2.5399999618530273
+    ],
+    "grid_Z_m": [
+      -1.600000023841858,
+      1.600000023841858
+    ],
+    "grid_shape_RZ": [
+      65,
+      65
+    ],
+    "native_simulation_executed": false,
+    "matched_tct_control_executed": false
+  },
+  "successful_milestone": "Validated a real DIII-D EFIT reconstruction frame and monotonic time/spatial coordinate arrays; saved a bounded frame artifact and failed closed before native initialization.",
+  "native_blocker": "Requires independently validated DIII-D geometry, equilibrium and plasma profile mapping into a solver-compatible M3D-C1 input deck; an existing solver template is not shot-derived evidence.",
+  "interpretation": "The frame/geometry preflight succeeded. Native M3D-C1 shot initialization and matched TCT intervention were not performed, so TCT stabilization is neutral/unmeasured rather than supported or falsified. The scientific prerequisite remains blocked.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [
+    "20261023-109-diiid-shot1-pf-vacuum-response"
+  ],
+  "existing_successor_findings": {
+    "20261023-109-diiid-shot1-pf-vacuum-response": "REAL_SHOT_VACUUM_PF_COUNTERFACTUAL_COMPLETED: +/-1% F1A current produced a maximum vacuum delta-psi of 0.13004771573665017% of measured EFIT psi span, with frozen plasma. This does not close the native equilibrium/profile handoff gate or establish TCT efficacy."
+  },
+  "new_job_id": null,
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, alpha channeling/transport, radiation loss, conversion, rotation, shear, lithium or net-power inference",
+  "m3dc1_claim_boundary": "Experimental EFIT reconstruction is not a validated native M3D-C1 initial condition. No native solver, zero/handoff equivalence or matched controller-in-loop evidence is supplied by this result.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "log_note": "Runner exited zero. A generator-cleanup AttributeError warning appeared after result generation; no scientific trajectory or native initialization ran.",
+  "timestamp_utc": "2026-10-26T10:51:11Z"
+}
