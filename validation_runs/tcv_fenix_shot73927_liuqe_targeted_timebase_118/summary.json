@@ -1,0 +1,109 @@
+{
+  "candidate_time_axes": [
+    {
+      "candidate_status": "numeric_unverified_timebase",
+      "clock_reference_verified": false,
+      "count": 321,
+      "dtype": "float64",
+      "monotonic_nondecreasing": true,
+      "numeric_overlap_with_ts_raw": true,
+      "path": "LX.t",
+      "raw_max": 1.7999999523162842,
+      "raw_median_step": 0.005000114440917969,
+      "raw_min": 0.20000004768371582,
+      "shape": [
+        321
+      ],
+      "units_verified": false
+    },
+    {
+      "candidate_status": "numeric_unverified_timebase",
+      "clock_reference_verified": false,
+      "count": 321,
+      "dtype": "float64",
+      "monotonic_nondecreasing": true,
+      "numeric_overlap_with_ts_raw": true,
+      "path": "LY.t",
+      "raw_max": 1.7999999523162842,
+      "raw_median_step": 0.005000114440917969,
+      "raw_min": 0.20000004768371582,
+      "shape": [
+        321
+      ],
+      "units_verified": false
+    }
+  ],
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_LIUQE_73927_TARGETED_TIMEBASE_CANDIDATES_INVENTORIED",
+  "clock_reference_verified": false,
+  "diagnostic": "LIUQE equilibrium reconstruction paired with TS_73927.mat",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Use original TCV shot-trigger and LIUQE/TS diagnostic documentation to verify time origin and synchronization. Numeric overlap, monotonicity and source plotting references do not establish clock calibration; no native M3D-C1 handoff or TCT intervention is implied.",
+  "observational_status": "metadata-only comparison of experimental TS and reconstructed LIUQE candidate axes; not prospective or controller-in-loop",
+  "parent_117_candidate_time_axes": 0,
+  "parent_117_field_inventory_truncated": true,
+  "parent_plot_script_sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+  "parent_result_job_id": "20261026-117-tcv-fenix-shot73927-liuqe-timebase-compatibility-audit",
+  "parent_ts_median_step_raw": 0.01699995994567871,
+  "parent_ts_time_max_raw": 2.9673399925231934,
+  "parent_ts_time_min_raw": 0.017340000718832016,
+  "parent_ts_time_points": 178,
+  "raw_data_published": false,
+  "runner_source_sha256": "497c80c408eef669722e29e145fd3d49b52d5bcedef2327c83425565eb15d335",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "target_structures": {
+    "L": {
+      "field_count": 141,
+      "present": true,
+      "selected_field_names": [],
+      "time_named_fields": []
+    },
+    "LX": {
+      "field_count": 14,
+      "present": true,
+      "selected_field_names": [
+        "tokamak",
+        "shot",
+        "t"
+      ],
+      "time_named_fields": [
+        "t"
+      ]
+    },
+    "LY": {
+      "field_count": 124,
+      "present": true,
+      "selected_field_names": [
+        "shot",
+        "t"
+      ],
+      "time_named_fields": [
+        "t"
+      ]
+    }
+  },
+  "timestamp_utc": "2026-10-26T21:24:18.761456+00:00",
+  "timing_calibrated": false,
+  "top_level_variables": [
+    "L",
+    "LX",
+    "LY"
+  ],
+  "verified_member": {
+    "compressed_bytes": 32864020,
+    "crc32_verified": true,
+    "format": "MATLAB_v5",
+    "name": "KER_73927_LIUQE.mat",
+    "sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "uncompressed_bytes": 32880432
+  }
+}
