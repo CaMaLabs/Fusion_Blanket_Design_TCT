@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-117-tcv-fenix-shot73927-liuqe-timebase-compatibility-audit",
+  "processed_result_job_id": "20261026-117-tcv-fenix-shot73927-liuqe-timebase-compatibility-audit",
+  "processed_result_receipt_sha": "08b7b6dd233df615085d085d0b5f15e996f34fb2",
+  "validation_summary_sha": "9af77e7895d78fb41822f9c73493c72f9d4f7c3e",
+  "log_sha": "12385952ad9e1e10e0f9c7ea5a3af04ca60280fb",
+  "log_sha256": "1289e3e737e57a2e3bab131043b6fed80c53130cf99eb28db9db7ec7feeea08c",
+  "result_head_before": "42c8ea6ccb3395fa9121abea1936baf9823dcf0a",
+  "classification": "TCV_FENIX_LIUQE_73927_TIMEBASE_SCHEMA_UNRESOLVED",
+  "job_class": "bounded_tcv_fenix_liuqe_reconstruction_timebase_compatibility_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "LIUQE equilibrium reconstruction paired with TS_73927.mat",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_member": "KER_73927_LIUQE.mat",
+  "source_member_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+  "paired_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+  "source_license": "Zenodo archive metadata reported cc-by-4.0 in result 114; downstream reuse/license not independently audited; no raw signals republished.",
+  "observational_status": "metadata-only comparison of experimental TS and reconstructed LIUQE candidate axes; not prospective or controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_state": "liuqe_member_crc_sha_verified; timebase_schema_unresolved_due_to_bounded_traversal; independent_clock_calibration_missing; no_native_handoff_or_causal_intervention",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 55.527649879455566,
+    "receipt_success": true,
+    "liuqe_compressed_bytes": 32864020,
+    "liuqe_uncompressed_bytes": 32880432,
+    "liuqe_crc32_verified": true,
+    "liuqe_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "matlab_variables": [
+      "L",
+      "LX",
+      "LY"
+    ],
+    "field_inventory_entries": 240,
+    "field_inventory_truncated": true,
+    "candidate_time_axes": 0,
+    "ts_time_points": 178,
+    "ts_raw_min": 0.017340000718832016,
+    "ts_raw_max": 2.9673399925231934,
+    "ts_raw_median_step": 0.01699995994567871,
+    "clock_reference_verified": false,
+    "timing_calibrated": false,
+    "experimental_waveforms_ingested": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "The 32,880,432-byte TCV 73927 LIUQE MATLAB v5 equilibrium-reconstruction member was boundedly retrieved and passed ZIP CRC and SHA-256 verification; L, LX and LY top-level variables were identified. This validates reconstruction-member integrity and provenance, not diagnostic timing.",
+  "interpretation": "No time-axis candidate was reported because the 240-field inventory truncated during traversal of L.P before top-level LY/LX; this is an audit coverage limitation, not evidence that LIUQE lacks a timebase. Original plotting script references LY.t. TCT stabilization is neutral/unmeasured; no clock calibration, self-consistent plasma response, native M3D-C1 handoff or controller-in-loop test.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261026-118-tcv-fenix-shot73927-liuqe-targeted-timebase-audit",
+  "followup_scope": "Single bounded targeted audit of LY.t, LX.t and top-level L time fields in the already verified LIUQE member; compare numerical ranges with TS while explicitly withholding any shared-clock claim.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron-loss, alpha transport/channeling, boron delivery, direct conversion, rotation/shear, liquid-lithium, ignition or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 execution, validated shot-to-native equilibrium/profile handoff, zero/handoff equivalence, or matched intervention. Frozen +0.020% width and +0.10% Jpk gates unchanged and inapplicable to this TCV metadata audit.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T21:23:06.228Z"
+}
