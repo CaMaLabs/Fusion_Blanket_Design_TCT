@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-115-tcv-fenix-shot73927-ts-schema-timing-audit",
+  "processed_result_job_id": "20261026-115-tcv-fenix-shot73927-ts-schema-timing-audit",
+  "processed_result_receipt_sha": "991585b88f551af22a0e4b7cef67b9096c743a0c",
+  "validation_summary_sha": "7617b5f88ec35031855af0ff78eab9d55fc9cfb0",
+  "validation_summary_sha256": "6cf657ba6fe6c166c5147ae6bc60828967769962245a723ac2d1e1a846b29573",
+  "log_sha": "397a6aef6db29fffa6da9c84d1901f159fc8b36b",
+  "log_sha256": "da2d96ac62348df0bd0daffcd8d4ec06a6c62ed8a1564f6b4ec2dac467c7603a",
+  "result_head_before": "ad88407958d19816f8017f5113050145e0d3445b",
+  "classification": "TCV_FENIX_TS_73927_NESTED_SCHEMA_INVENTORIED",
+  "job_class": "bounded_tcv_fenix_ts_nested_schema_timing_metadata_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "Thomson scattering (TS_73927.mat), raw ne/te and ne fitted structures",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_member": "TS_73927.mat",
+  "source_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+  "source_license": "Zenodo source indicates CC BY 4.0; exact downstream reuse terms not independently audited. No raw signals republished.",
+  "observational_status": "Metadata-only experimental TS structure and candidate axes. Not a prospective forecast, causal analog, native M3D-C1 handoff or controller-in-loop intervention.",
+  "pipeline_failure": false,
+  "scientific_state": "nested_ts_schema_inventoried; time_units_labelled_not_calibrated; clock_reference_unverified; native_handoff_unvalidated",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 8.932403802871704,
+    "receipt_success": true,
+    "archive_size_bytes": 2444897347,
+    "ts_compressed_bytes": 2991511,
+    "ts_uncompressed_bytes": 3005422,
+    "ts_crc32_verified": true,
+    "nested_fields_recorded": 160,
+    "field_inventory_truncated": true,
+    "ne_raw_shape": [
+      109,
+      178
+    ],
+    "ne_fit_shape": [
+      109,
+      178
+    ],
+    "te_raw_shape": [
+      109,
+      178
+    ],
+    "ne_fit_profile_fit_shape": [
+      200,
+      110
+    ],
+    "candidate_time_axis_count": 4,
+    "full_time_axis_samples": 178,
+    "fit_time_axis_samples": 110,
+    "full_raw_time_min": 0.017340000718832016,
+    "full_raw_time_max": 2.9673399925231934,
+    "raw_median_time_step": 0.01699995994567871,
+    "time_label_hint": "s (unverified)",
+    "density_unit_label_hint": "m^{-3} (unverified)",
+    "electron_temperature_unit_label_hint": "eV (unverified)",
+    "timing_calibrated": false,
+    "diagnostic_units_verified": false,
+    "experimental_waveforms_ingested": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "The verified 3,005,422-byte TCV shot 73927 TS MATLAB member yielded nested electron-density and temperature structures, 109x178 observational arrays, and monotonic candidate time axes with raw median increment 0.0170. Its integrity remains anchored to the CRC and SHA-256 established in job 114.",
+  "interpretation": "Source-schema provenance and candidate axis identification supported. Label hints 's', 'm^{-3}', and 'eV' are present, but diagnostic timing/clock origin and unit calibration have not been independently established. The 160-field inventory was truncated; no raw waveforms were republished. Neutral toward TCT stabilization and precursor/control authority.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261026-116-tcv-fenix-shot73927-plot-script-timebase-provenance",
+  "followup_scope": "One bounded CRC-verified plotting_73927.m provenance audit for original time/clock/unit references; no MATLAB execution, raw signal publication, or native solver physics changes.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha transport/channeling, conversion, rotation, recirculation, boron delivery, radiation/electron-loss or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 execution or validated shot-to-solver handoff, zero/handoff equivalence, or matched controller/baseline intervention. Frozen +0.020% width and +0.10% Jpk gates remain unchanged and are inapplicable to this TCV source audit.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T19:15:23.387Z"
+}
