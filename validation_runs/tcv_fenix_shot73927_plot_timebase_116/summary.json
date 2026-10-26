@@ -1,0 +1,421 @@
+{
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_73927_PLOTTING_SCRIPT_PROVENANCE_AUDITED",
+  "clock_reference_verified": false,
+  "diagnostic": "TCV 73927 plotting_73927.m provenance for TS and equilibrium timing",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "license_terms_verified": false,
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Manually adjudicate any explicit unit/clock references in verified plotting script against TS label 's' and original TCV diagnostic documentation; do not promote timing calibration from source keyword matches alone.",
+  "observational_status": "metadata-only; no prospective or controller-in-loop intervention",
+  "parent_result_job_id": "20261026-115-tcv-fenix-shot73927-ts-schema-timing-audit",
+  "parent_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+  "parent_ts_raw_median_step": 0.01699995994567871,
+  "parent_ts_time_axis_label": "s (unverified source label)",
+  "parent_ts_time_points": 178,
+  "raw_data_published": false,
+  "runner_source_sha256": "e7d1dc5517f6aca0d2500b3b83d99f3eae3eff74e0be8fbf092050966afc43a9",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_script": {
+    "compressed_bytes": 3004,
+    "crc32_verified": true,
+    "keyword_hit_count": 54,
+    "keyword_hits": [
+      {
+        "excerpt": "t_shot=1.0; % selects time for time dependent plots. Plots in paper at 0.3s, 0.6s, and 1.0s",
+        "line": 22,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "TS=load('TS_73927.mat'); % Thomson scattering data",
+        "line": 29,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "TS=TS.TS;   % unpacking structure...",
+        "line": 30,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.KER.astra=load('KER_73927_ASTRA');     % KER run",
+        "line": 32,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.KER.fge=load('KER_73927_LIUQE.mat');",
+        "line": 33,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.regular.outFENIX.astra.out.PNBINJTOT=datatemp.regular.outFENIX.astra.out.PNBINJTOT/0.65; % artificially setting correct injected power for plot",
+        "line": 35,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.regular.shade.t=datatemp.regular.outFENIX.astra.out.T;",
+        "line": 37,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.regular.shade.value=datatemp.regular.outFENIX.astra.out.ZRD15;",
+        "line": 38,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "t_shot=1.0; % selects time for time dependent plots",
+        "line": 43,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "TS=load('TS_73927.mat'); % Thomson scattering data",
+        "line": 50,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "TS=TS.TS;   % unpacking structure...",
+        "line": 51,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.KER.astra=load('KER_73927_ASTRA');     % KER run",
+        "line": 53,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.KER.fge=load('KER_73927_LIUQE.mat');",
+        "line": 54,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.FXnom.outFENIX.astra.out.PNBINJTOT=datatemp.FXnom.outFENIX.astra.out.PNBINJTOT/0.65; % artificially setting correct injected power for plot",
+        "line": 56,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.FXped.outFENIX.astra.out.PNBINJTOT=datatemp.FXped.outFENIX.astra.out.PNBINJTOT/0.65; % artificially setting correct injected power for plot",
+        "line": 59,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.FXNB.outFENIX.astra.out.PNBINJTOT=datatemp.FXNB.outFENIX.astra.out.PNBINJTOT/0.5; % artificially setting correct injected power for plot",
+        "line": 62,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.FXZ.outFENIX.astra.out.PNBINJTOT=datatemp.FXZ.outFENIX.astra.out.PNBINJTOT/0.65; % artificially setting correct injected power for plot",
+        "line": 65,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.FXnom.shade.t=datatemp.FXnom.outFENIX.astra.out.T;",
+        "line": 67,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "datatemp.FXnom.shade.value=datatemp.FXnom.outFENIX.astra.out.ZRD15;",
+        "line": 68,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "data.astra.(alias{ishot})=datatemp.(alias{ishot}).outFENIX.astra.out;",
+        "line": 77,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "data.astra.(alias{ishot})=datatemp.(alias{ishot}).astra.out;",
+        "line": 82,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "%%% MEQ time traces",
+        "line": 117,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlabel('time [s]','FontSize',axsize)",
+        "line": 126,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "if isfield(data.shade,alias{ishot}) % shade time window if indicated",
+        "line": 133,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlim([t.min t.max])",
+        "line": 141,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlabel('time [s]','FontSize',axsize)",
+        "line": 157,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "if isfield(data.shade,alias{ishot}) % shade time window if indicated",
+        "line": 164,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlim([t.min t.max])",
+        "line": 172,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "[~,id_plot] = min(abs(data.fge.((alias{ishot})).LY.t-t_shot));  % select ne time as close to the requested time",
+        "line": 194,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "[~,id_plot] = min(abs(data.fge.((alias{ishot})).LY.t-t_shot));  % select ne time as close to the requested time",
+        "line": 230,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "%% ASTRA plots",
+        "line": 256,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "[~,idTS] = min(abs(TS.te_raw.t-t_shot));  % select ne time as close to the requested time",
+        "line": 265,
+        "topics": [
+          "time_axis",
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "tTS=TS.te_raw.t(idTS);",
+        "line": 266,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "errorbar(TS.te_fit.grids_1d.rhotornorm(:,idTS),TS.te_raw.data(:,idTS)/1e3,TS.te_raw.error_bar(:,idTS)/1e3,'ko','MarkerFaceColor','k','MarkerSize',2)",
+        "line": 267,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "legtext(end+1)={['TS @ ' num2str(round(tTS,2)) 's']};",
+        "line": 268,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "[~,id_plot] = min(abs(data.astra.((alias{ishot})).T-t_shot));  % select ne time as close to the requested time",
+        "line": 272,
+        "topics": [
+          "time_axis",
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "t_plot=data.astra.((alias{ishot})).T(id_plot);",
+        "line": 273,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "p=plot(data.astra.((alias{ishot})).RHOTOR(:,id_plot),data.astra.((alias{ishot})).(field)(:,id_plot),'color',colours(ishot,:),'linewidth',linew);",
+        "line": 275,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "xlim([0 1])",
+        "line": 282,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "%%% time trace plots",
+        "line": 292,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "p=plot(data.astra.((alias{ishot})).T,data.astra.((alias{ishot})).(field)*1e3,'color',colours(ishot,:),'linewidth',linew);",
+        "line": 301,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "if isfield(data.shade,alias{ishot}) % shade time window if indicated",
+        "line": 304,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlabel('time [s]','FontSize',axsize);ylabel('W_{e} [kJ]','FontSize',axsize)",
+        "line": 310,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlim([t.min t.max])",
+        "line": 313,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "p=plot(data.astra.((alias{ishot})).T(2:end),data.astra.((alias{ishot})).(field)(2:end),'color',colours(ishot,:),'linewidth',linew);",
+        "line": 331,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "if isfield(data.shade,alias{ishot}) % shade time window if indicated",
+        "line": 334,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlabel('time [s]','FontSize',axsize);ylabel('P_{NBI,inj} [MW]','FontSize',axsize)",
+        "line": 340,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlim([t.min t.max])",
+        "line": 343,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "neint=zeros(size(data.astra.((alias{ishot})).T));",
+        "line": 361,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "neint(it)=trapz(data.astra.((alias{ishot})).RHO(:,it),data.astra.((alias{ishot})).VR(:,it).*data.astra.((alias{ishot})).NE(:,it));",
+        "line": 363,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "p=plot(data.astra.((alias{ishot})).T,neint,'color',colours(ishot,:),'linewidth',linew);",
+        "line": 365,
+        "topics": [
+          "diagnostic"
+        ]
+      },
+      {
+        "excerpt": "if isfield(data.shade,alias{ishot}) % shade time window if indicated",
+        "line": 368,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlabel('time [s]','FontSize',axsize);ylabel('electrons in plasma [10^{19}]','FontSize',axsize)",
+        "line": 374,
+        "topics": [
+          "time_axis"
+        ]
+      },
+      {
+        "excerpt": "xlim([t.min t.max])",
+        "line": 377,
+        "topics": [
+          "time_axis"
+        ]
+      }
+    ],
+    "keyword_hits_truncated": false,
+    "line_count": 390,
+    "member": "plotting_73927.m",
+    "sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+    "uncompressed_bytes": 14193
+  },
+  "timestamp_utc": "2026-10-26T19:17:11.495707+00:00",
+  "timing_calibrated": false
+}
