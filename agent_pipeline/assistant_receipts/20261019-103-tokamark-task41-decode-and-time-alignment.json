@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "job_id": "20261019-103-tokamark-task41-decode-and-time-alignment",
+  "processed_result_job_id": "20261019-103-tokamark-task41-decode-and-time-alignment",
+  "source_result_receipt_sha": "4a98ecd49ed2f2558c2ac31068773fffeb60362f",
+  "source_result_summary_sha256": "36038ac51e9b9626dd1d8b948f4446768f02f6dfe9e6db42f95fe6b8f0b10605",
+  "source_log_sha256": "ef8d288bc74608dc81e4c035544d0693d011ca82b433e8a936940f1bbeb62e0a",
+  "classification": "TOKAMARK_BOUNDED_CHUNK_INCOMPLETE",
+  "fuel_track": "fuel_agnostic_control",
+  "job_class": "experimental_task41_bounded_decode_repair_and_alignment",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "evidence_class": "observational_bounded_remote_chunk_numeric_decode_with_incomplete_time_alignment",
+  "pipeline_failure": false,
+  "pipeline_execution_status": "Machine runner completed with return_code=0; pinned numcodecs 0.16.3 installed and numeric decode proceeded. Two first-chunk time/signal length mismatches remain; validation gate incomplete, not a solver crash.",
+  "prerequisite_blocked": true,
+  "scientific_negative": false,
+  "quantitative_result": {
+    "machine_return_code": 0,
+    "elapsed_seconds": 173.79728651046753,
+    "bounded_chunk_objects_read": 7,
+    "bounded_chunk_bytes_read": 512664,
+    "valid_time_signal_pairs": 1,
+    "valid_time_signal_pair_paths": [
+      "pf_active/coil_current"
+    ],
+    "time_signal_mismatch_count": 2,
+    "mismatched_signal_paths": [
+      "magnetics/b_field_tor_probe_saddle_voltage",
+      "spectrometer_visible/filter_spectrometer_dalpha_voltage"
+    ],
+    "numeric_time_alignment_verified": false,
+    "events_analyzed": 0,
+    "null_controls_executed": false,
+    "observed_lead_times_ms": [],
+    "causal_tct_demonstration": false
+  },
+  "source_provenance": {
+    "dataset": "TokaMark v1 MAST Zarr-v2 derived from FAIR-MAST",
+    "source_url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/",
+    "source_license": "TokaMark CC BY 4.0; FAIR-MAST CC BY-SA 4.0 except where noted",
+    "source_metadata_sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343",
+    "diagnostics_attempted": [
+      "magnetics/time_saddle",
+      "magnetics/b_field_tor_probe_saddle_voltage",
+      "spectrometer_visible/time",
+      "spectrometer_visible/filter_spectrometer_dalpha_voltage",
+      "pf_active/time",
+      "pf_active/coil_current"
+    ],
+    "timing_calibration": "Coordinate units declared seconds in prior metadata audit; one PF coil-current/time pair decoded but magnetic and D-alpha first chunks mismatch, so cross-diagnostic numeric synchronization and precursor lead-time calibration are not verified."
+  },
+  "successful_milestone": "Pinned numcodecs==0.16.3 was installed in the canonical research environment; seven bounded source objects were decoded/checked and one valid coil-current/time pair established. Two mismatched diagnostic pairs were identified without changing frozen detector or timing budgets.",
+  "interpretation": "Successful dependency repair and partial bounded decoding, but Task-4.1 magnetic and D-alpha diagnostic time/signal first-chunk lengths remain inconsistent. No precursor event, null-control, or actuator reachability statistics exist. This is an unresolved data-shape/alignment prerequisite and neutral toward TCT efficacy, not evidence of a failed TCT mechanism.",
+  "mechanism_effect": "neutral",
+  "observational_status": "bounded_numeric_chunk_decode_only; no validated cross-diagnostic timing, no prospective precursor event statistics, no causal analog, no controller-in-loop intervention",
+  "existing_direct_successor_job_ids": [],
+  "existing_direct_successor_result_ids": [],
+  "existing_related_science_progression_job_ids": [
+    "20261020-104-native-precursor-controller-physics-recheck",
+    "20261020-105-m3dc1-native-feedback-controlled-baseline",
+    "20261020-106-m3dc1-native-feedback-fstring-repair-rerun"
+  ],
+  "other_existing_later_lineages_reviewed": [
+    "20261021-107-fusion-equilibrium-final-inputs-metadata-probe",
+    "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+    "20261023-109-diiid-shot1-pf-vacuum-response",
+    "20261025-110-golem-51929-51926-bounded-signal-access",
+    "20261025-111-golem-51929-51926-direct-csv-repair"
+  ],
+  "new_job_id": null,
+  "reconciliation_policy": "Backfill only while older acknowledgements are missing; do not create another science job or alter solver physics/thresholds. Job 104+ are separate subsequent physics/source lineages, not proven direct children of 103.",
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "m3dc1_claim_boundary": "Frozen zero/handoff equivalence and normalized-native-M3D-C1 claim boundary remain unchanged; M3D-C1-only width and Jpk gates are not mapped to imported MAST observations.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha transport/channeling, direct conversion, rotation/shear, boron delivery, liquid lithium or net-power inference",
+  "timestamp_utc": "2026-10-26T05:47:05.186Z"
+}
