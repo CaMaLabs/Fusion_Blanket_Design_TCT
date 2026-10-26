@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "job_id": "20261020-105-m3dc1-native-feedback-controlled-baseline",
+  "processed_result_job_id": "20261020-105-m3dc1-native-feedback-controlled-baseline",
+  "processed_result_receipt_sha": "0ffd562e6a44dd7286aa791e9f50db97a21b1351",
+  "source_log_sha": "3000e7ec17e9dda93bc6f37d8729e22b2d3a51b4",
+  "classification": "PIPELINE_EXECUTION_FAILURE_NAMEERROR_TMPDIR",
+  "formal_m3dc1_scientific_classification": null,
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "job_class": "m3dc1_native_state_feedback_control_vs_baseline",
+  "evidence_class": "pipeline_code_failure_before_native_solver_execution",
+  "pipeline_failure": true,
+  "scientific_negative_result": false,
+  "return_code": 1,
+  "elapsed_seconds": 10.635284423828125,
+  "quantitative_result": {
+    "native_trajectories_executed": 0,
+    "controlled_baseline_comparison_completed": false,
+    "zero_equivalence": null,
+    "handoff_equivalence": null,
+    "summary_produced": false,
+    "selected_result_files": 0
+  },
+  "exact_error": "NameError: name 'TMPDIR' is not defined",
+  "error_location": "tools/tct_mechanism_explorer/native_feedback_controller_audit.py:263 in write_input; unescaped Bash ${TMPDIR:-/tmp/tct-$USER} inside Python f-string",
+  "successful_milestone": "Precisely isolated a pre-solver Python template failure; existing repair successor 106 ran 40 native feedback segments and passed zero-source equivalence without physics retuning.",
+  "interpretation": "105 did not execute a native controlled-vs-baseline experiment, so its failure is not evidence for or against TCT. Existing successor 106 repaired the f-string and completed native restart, but separately classified M3DC1_NATIVE_FEEDBACK_CONTROLLER_NO_AUTHORITY_FOUND. Do not promote its large width changes as stabilization: final Jpk rose 267.403% vs no-actuator baseline, and 106 did not establish useful controller authority.",
+  "mechanism_effect": "neutral_for_105; 106_did_not_establish_controller_authority",
+  "existing_successor_job_ids": [
+    "20261020-106-m3dc1-native-feedback-fstring-repair-rerun"
+  ],
+  "existing_successor_relationship": "106 explicitly repairs the 105 NameError and reruns the same experiment. 106 manifest lacks a formal parent_result_job_id; semantic lineage established by its purpose and result.",
+  "existing_successor_result": {
+    "job_id": "20261020-106-m3dc1-native-feedback-fstring-repair-rerun",
+    "result_receipt_sha": "f3714df9e8fabb11044da2eef241df48364381a4",
+    "return_code": 0,
+    "elapsed_seconds": 265.5303587913513,
+    "classification": "M3DC1_NATIVE_FEEDBACK_CONTROLLER_NO_AUTHORITY_FOUND",
+    "restart_segments_completed": 40,
+    "zero_equivalence_pass": true,
+    "zero_equivalence_max_abs_metric_delta": 0,
+    "final_width_gain_pct": 62.971344179654956,
+    "final_Jpk_change_pct": 267.4031582244298
+  },
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha channeling, direct conversion, rotation, boron delivery or net-power inference",
+  "m3dc1_claim_boundary": "105 produced no native physics result. 106 is a normalized-native-M3D-C1 controller audit only; zero-source equivalence is not proof of control authority, reactor-scale stabilization, or imported-shot causal efficacy.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "new_job_id": null,
+  "new_job_created": false,
+  "timestamp_utc": "2026-10-26T08:30:51.988Z"
+}
