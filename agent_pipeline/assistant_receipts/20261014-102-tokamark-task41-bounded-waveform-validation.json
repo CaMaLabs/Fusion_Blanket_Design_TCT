@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "job_id": "20261014-102-tokamark-task41-bounded-waveform-validation",
+  "processed_result_job_id": "20261014-102-tokamark-task41-bounded-waveform-validation",
+  "source_result_receipt_sha": "50d01688911a02f7a147b96ec30f02fbbafa8c90",
+  "source_result_summary_sha256": "19f63f1269f1eba65af9b968738237bd7813f0815e2157b581dc6db5bf7e1173",
+  "source_log_sha256": "367ee4ab7617c0f98695780111c10a4585ada55217721b49f82d732052648955",
+  "classification": "TOKAMARK_BOUNDED_CHUNK_INCOMPLETE",
+  "fuel_track": "fuel_agnostic_control",
+  "job_class": "experimental_task41_bounded_waveform_validation",
+  "machine": "MAST",
+  "shot_ids": [
+    21719
+  ],
+  "evidence_class": "observational_bounded_remote_chunk_access_without_numeric_decode",
+  "pipeline_failure": true,
+  "pipeline_failure_detail": "Machine wrapper returned 0 and published the result, but numeric decoding of six Task-4.1 arrays failed because numcodecs was missing in the canonical research venv. This is a decoding/dependency prerequisite failure, not a scientific negative.",
+  "scientific_negative": false,
+  "quantitative_result": {
+    "machine_return_code": 0,
+    "elapsed_seconds": 147.27905201911926,
+    "bounded_chunk_objects_read": 7,
+    "bounded_chunk_bytes_read": 512664,
+    "numeric_decode_errors": 6,
+    "valid_time_signal_pairs": 0,
+    "numeric_time_alignment_verified": false,
+    "events_analyzed": 0,
+    "null_controls_executed": false,
+    "observed_lead_times_ms": [],
+    "causal_tct_demonstration": false
+  },
+  "source_provenance": {
+    "dataset": "TokaMark v1 MAST Zarr-v2 derived from FAIR-MAST",
+    "source_url": "https://s3.echo.stfc.ac.uk/mast/tokamark/v1/21719.zarr/",
+    "license": "TokaMark CC BY 4.0; FAIR-MAST CC BY-SA 4.0 except where noted",
+    "diagnostics_attempted": [
+      "magnetics/time_saddle",
+      "magnetics/b_field_tor_probe_saddle_voltage",
+      "spectrometer_visible/time",
+      "spectrometer_visible/filter_spectrometer_dalpha_voltage",
+      "pf_active/time",
+      "pf_active/coil_current"
+    ],
+    "timing_calibration": "No numeric time coordinate decoded; time alignment and event lead times unverified.",
+    "source_metadata_sha256": "92e064bb7cd87203518f452f8a142c4ab45e1325d5eace72b022ef78c3f3d343"
+  },
+  "successful_milestone": "Seven bounded canonical MAST shot-21719 Zarr objects were fetched and content-hashed (512,664 bytes), demonstrating bounded remote chunk retrieval without bulk download. The missing numcodecs prerequisite was diagnosed explicitly.",
+  "interpretation": "The bounded fetch succeeded but numerical decoding failed on six arrays due to missing numcodecs. No calibrated time/signal pairs, event statistics, reachability, or TCT efficacy were established. Existing successor 103 already repaired numcodecs and reran the bounded decode; its result found one valid PF coil-current pair but magnetic and D-alpha first-chunk length mismatches, so further precursor interpretation remains blocked. Do not queue a duplicate successor.",
+  "mechanism_effect": "neutral",
+  "observational_status": "bounded_chunk_access_only; no event analysis, no prospective shot-level statistics, no causal analog or controller-in-loop test",
+  "existing_successor_job_ids": [
+    "20261019-103-tokamark-task41-decode-and-time-alignment"
+  ],
+  "existing_successor_result_ids": [
+    "20261019-103-tokamark-task41-decode-and-time-alignment"
+  ],
+  "new_job_id": null,
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "m3dc1_claim_boundary": "M3D-C1-only gates and zero/handoff equivalence remain frozen and unmapped to imported MAST shot data. No normalized-native-M3D-C1 validation inferred.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha transport, channeling, direct conversion, rotation, liquid-lithium or net-power inference",
+  "timestamp_utc": "2026-10-26T05:30:41Z"
+}
