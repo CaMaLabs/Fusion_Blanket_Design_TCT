@@ -134,10 +134,10 @@ try:
     source = data.decode("utf-8", "replace")
     lines = source.splitlines()
     patterns = {
-        "time_unit": re.compile(r"(?i)(time.?unit|\\bseconds?\\b|\\bmilliseconds?\\b|\\bms\\b|\\bsec\\b)"),
-        "time_axis": re.compile(r"(?i)(\\btime\\b|\\bt_?0\\b|\\bt_?start\\b|\\bxlim\\b|\\btimes?\\b)"),
+        "time_unit": re.compile(r"(?i)(time.?unit|\bseconds?\b|\bmilliseconds?\b|\bms\b|\bsec\b)"),
+        "time_axis": re.compile(r"(?i)(\btime\b|\bt_?0\b|\bt_?start\b|\bxlim\b|\btimes?\b)"),
         "clock_origin": re.compile(r"(?i)(trigger|offset|reference.?time|clock|discharge.?start|shot.?start)"),
-        "diagnostic": re.compile(r"(?i)(TS_73927|\\bTS\\b|thomson|ne_fit|te_raw|KER_73927|LIUQE|ASTRA)"),
+        "diagnostic": re.compile(r"(?i)(TS_73927|\bTS\b|thomson|ne_fit|te_raw|KER_73927|LIUQE|ASTRA)"),
     }
     hits = []
     for number, line in enumerate(lines, 1):
