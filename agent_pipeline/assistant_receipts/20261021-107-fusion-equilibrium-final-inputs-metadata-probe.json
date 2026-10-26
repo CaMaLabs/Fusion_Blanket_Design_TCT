@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "job_id": "20261021-107-fusion-equilibrium-final-inputs-metadata-probe",
+  "processed_result_job_id": "20261021-107-fusion-equilibrium-final-inputs-metadata-probe",
+  "processed_result_receipt_sha": "9de9a310cf24854df0232b726c4f761c345a894b",
+  "result_head_before": "f5adf232e34d8a521014b43e0c6e5feca766dc07",
+  "classification": "TCT_EXPERIMENTAL_SHOT_FAMILY_INGESTED",
+  "job_class": "fusion_equilibrium_challenge_existing_adapter_dependency_repair",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "DIII-D",
+  "source": "Sophelio/fusion-equilibrium-challenge",
+  "dataset_config": "diii_d_train",
+  "dataset_rows": "0-63",
+  "physical_machine_shot_ids": "not exposed in upstream release; dataset row indices are not physical discharge numbers",
+  "evidence_class": "experimental_observational_dataset_schema_ingestion",
+  "observational_status": "observational metadata/schema ingestion only; no prospective event test or controller-in-loop intervention",
+  "pipeline_failure": false,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 133.18259167671204,
+    "rows_observed_count": 64,
+    "row_index_range": [
+      0,
+      63
+    ],
+    "efit_psi_spatial_grid": [
+      65,
+      65
+    ],
+    "row_0": {
+      "efit_frames": 59,
+      "t_start_ms": 180,
+      "t_end_ms": 1680
+    },
+    "row_63": {
+      "efit_frames": 106,
+      "t_start_ms": 280,
+      "t_end_ms": 2680
+    },
+    "source_time_units": "ms"
+  },
+  "successful_milestone": "The existing adapter's missing datasets dependency was repaired sufficiently to stream and inspect all 64 planned DIII-D training dataset rows and their EFIT time/grid metadata; result and validation summary agree.",
+  "dependency_warning": "Log shows datasets installation downgraded fsspec to 2026.2.0 while installed s3fs 2026.9.0 requires fsspec >=2026.9.0; this is an environment compatibility warning, not a failure of this completed ingestion.",
+  "interpretation": "64 real experimental dataset rows were ingested at schema/metadata level, not 64 verified machine shot numbers. No precursor lead-time distribution, timing calibration across diagnostic clocks, native M3D-C1 control, or causal segmented-TCT response was measured. Mechanism remains neutral.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [
+    "20261022-108-diiid-efit-native-equilibrium-handoff-gate",
+    "20261023-109-diiid-shot1-pf-vacuum-response"
+  ],
+  "existing_successor_findings": {
+    "20261022-108-diiid-efit-native-equilibrium-handoff-gate": "EFIT_SHOT_FRAME_VERIFIED_NATIVE_HANDOFF_NOT_YET_VALIDATED",
+    "20261023-109-diiid-shot1-pf-vacuum-response": "REAL_SHOT_VACUUM_PF_COUNTERFACTUAL_COMPLETED"
+  },
+  "new_job_id": null,
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha transport, conversion, rotation or net-power inference",
+  "m3dc1_claim_boundary": "Dataset EFIT is an observational equilibrium reconstruction, not a validated M3D-C1 initial state; native solver execution and matched TCT intervention are not established by this result.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T10:40:19.049Z"
+}
