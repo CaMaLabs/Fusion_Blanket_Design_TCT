@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-115-tcv-fenix-shot73927-ts-schema-timing-audit",
+  "parent_result_job_id": "20261026-114-tcv-fenix-shot73927-bounded-mat-header-audit",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_ts_nested_schema_timing_metadata_audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_ts_schema_115.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_ts_schema_115"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_ts_schema_115/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Boundedly re-verify the 3MB TS_73927.mat member against job 114 SHA and inventory nested Thomson-scattering schema, potential raw time axes and unit labels without assuming clock units, interpreting physical dynamics or publishing raw data.",
+  "interpretation_contract": {
+    "max_http_range_bytes": 8388608,
+    "max_expanded_member_bytes": 25165824,
+    "parent_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+    "observational_metadata_only": true,
+    "license_terms_unverified": true,
+    "units_not_inferred_from_values": true,
+    "clock_reference_unverified": true,
+    "raw_data_not_republished": true,
+    "not_controller_in_loop": true,
+    "no_native_solver_or_causal_claim": true,
+    "m3dc1_frozen_gates_not_mapped_to_tcv": true
+  }
+}
