@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "job_id": "20261020-104-native-precursor-controller-physics-recheck",
+  "processed_result_job_id": "20261020-104-native-precursor-controller-physics-recheck",
+  "processed_result_receipt_sha": "3ac4fa68206f9d0d4192a97ad810a05aae759dc8",
+  "classification": "M3DC1_TCT_NATIVE_PRECURSOR_CONTROLLER_TIMESCALE_WINDOW_MISMATCH",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "evidence_class": "native_time_calibration_and_controller_reachability_audit",
+  "pipeline_failure": false,
+  "return_code": 0,
+  "elapsed_seconds": 1.519411325454712,
+  "quantitative_result": {
+    "physical_ms_per_solver_time_unit": 0.00045846250329872786,
+    "precursor_lead_ms": 8.375999999999994,
+    "native_event_characterization_time": 0.14,
+    "native_control_window_start": 0.05,
+    "available_pre_event_native_window_ms": 0.000041261625296885515,
+    "precursor_lead_native_units": 18269.76020881321,
+    "trigger_time_native_units": -18269.620208813212,
+    "required_response_native_units": 6543.610389976083,
+    "controller_boost_executed": false,
+    "zero_equivalence": null,
+    "controlled_and_baseline_arms": null
+  },
+  "successful_milestone": "Live C1.h5 Alfvén normalization verified and physical-time incompatibility exposed without clipping or rescaling trigger times. Mirnov/toroidal precursor retained as authoritative; bounded boost failed closed to NO ACTION.",
+  "interpretation": "Scientifically meaningful negative feasibility finding for the currently normalized native M3D-C1 characterization window: the measured 8.376 ms precursor lead and physical actuator response cannot fit the approximately 0.0000413 ms pre-event window. The supervisor proposed standing bias and bounded boost, but no native boost executed and no controlled-versus-baseline trajectories or zero equivalence were evaluated. This weakens the current-window controller timing claim, not TCT efficacy globally.",
+  "mechanism_effect": "weakened_for_this_native_timescale_window; causal_efficacy_unmeasured",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha, rotation, or power inference",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "m3dc1_claim_boundary": "Normalized native M3D-C1 only. No reactor-scale or experimental stabilization claim. Zero/handoff equivalence not established.",
+  "existing_successor_job_ids": [
+    "20261020-105-m3dc1-native-feedback-controlled-baseline",
+    "20261020-106-m3dc1-native-feedback-fstring-repair-rerun"
+  ],
+  "existing_successor_relationship": "105 independently follows up native control vs baseline after 104; 106 repairs 105. These manifests do not declare parent_result_job_id, so lineage is semantic rather than formally linked.",
+  "existing_successor_outcomes": {
+    "105": "pipeline NameError before native run; return_code 1",
+    "106": "native feedback run completed with classification M3DC1_NATIVE_FEEDBACK_CONTROLLER_NO_AUTHORITY_FOUND; separate outcome, not evidence that 104 boost executed"
+  },
+  "new_job_id": null,
+  "new_job_created": false,
+  "timestamp_utc": "2026-10-26T07:56:08.591Z"
+}
