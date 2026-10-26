@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "job_id": "20261026-116-tcv-fenix-shot73927-plot-script-timebase-provenance",
+  "processed_result_job_id": "20261026-116-tcv-fenix-shot73927-plot-script-timebase-provenance",
+  "processed_result_receipt_sha": "f528be769e02221ba0b37907d2dc638c26181167",
+  "validation_summary_sha": "9cca8dd30b747a1e1946ab0073c9e1a25d69299e",
+  "log_sha": "08fdcf4820d31598e3a18aee5fcbe5864550e43f",
+  "log_sha256": "f25e0a4021c4820df3e8875db8441b418d4dd64b62c8e84d1c9aa8de464d20a1",
+  "result_head_before": "ce3dc1f692d52ec0d6a895219fe0cff4e1594883",
+  "classification": "TCV_FENIX_73927_PLOTTING_SCRIPT_PROVENANCE_AUDITED",
+  "job_class": "bounded_tcv_fenix_plot_script_timebase_provenance_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "TCV shot 73927 plotting_73927.m script references Thomson scattering, LIUQE and ASTRA",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_archive": "FENIX_data.zip",
+  "source_member": "plotting_73927.m",
+  "source_member_sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+  "paired_ts_member_sha256": "fd787e1ed477a67ae21fdae0bef151e112a72a31d59d7a0c98fc820eaebc3851",
+  "source_license": "Zenodo archive metadata reported cc-by-4.0 in result 114; downstream reuse and license terms not independently audited; no raw diagnostic data republished.",
+  "observational_status": "Metadata-only source script inspection for experimental TS and LIUQE/ASTRA reconstruction/simulation comparisons. Not prospective, causal analog, native M3D-C1 handoff or controller-in-loop intervention.",
+  "pipeline_failure": false,
+  "scientific_state": "plot_script_integrity_verified; seconds_label_corrob_for_plotting; trigger_origin_and_cross_diagnostic_clock_unverified; native_handoff_unvalidated",
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 3.3203039169311523,
+    "receipt_success": true,
+    "script_compressed_bytes": 3004,
+    "script_uncompressed_bytes": 14193,
+    "script_crc32_verified": true,
+    "script_line_count": 390,
+    "keyword_hits": 54,
+    "plot_times_seconds_examples": [
+      0.3,
+      0.6,
+      1
+    ],
+    "plot_selected_time_seconds": 1,
+    "ts_raw_time_points": 178,
+    "ts_raw_median_step_numeric": 0.01699995994567871,
+    "ts_time_label": "s (plot-script corroboration; no independent calibration)",
+    "clock_reference_verified": false,
+    "diagnostic_units_verified": false,
+    "timing_calibrated": false,
+    "experimental_waveforms_ingested": false,
+    "native_m3dc1_run": false,
+    "causal_tct_demonstration": false
+  },
+  "successful_milestone": "CRC and SHA-256 verified original 390-line TCV 73927 plotting script. The source explicitly labels time in seconds, selects 0.3, 0.6 and 1.0 s examples, and uses TS.te_raw.t directly against t_shot, supporting the interpretation of a seconds-labelled plotting axis without proving trigger alignment.",
+  "interpretation": "Time-label provenance supported, TCT stabilization neutral/unmeasured. Original plotting script includes presentation-only NBI injected-power rescalings (/0.65 and /0.5); these are not experimental calibration or physical solver inputs. No explicit independently verified shot-trigger clock origin or cross-diagnostic synchronization. Numerical timestamp overlap cannot establish a common clock.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261026-117-tcv-fenix-shot73927-liuqe-timebase-compatibility-audit",
+  "followup_scope": "One bounded CRC-verified KER_73927_LIUQE.mat reconstruction metadata and candidate timebase compatibility audit, comparing numeric ranges to previously verified TS metadata; no claim of calibration, raw data publication, solver handoff, or causal intervention.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha transport/channeling, conversion, rotation, recirculation, boron delivery, radiation/electron-loss, liquid-lithium, ignition or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 execution or validated TCV shot-to-solver handoff, zero/handoff equivalence or matched controller/baseline intervention. Frozen +0.020% width and +0.10% Jpk gates unchanged and inapplicable to this TCV source audit.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "frozen_actuator_budgets_ms": {
+    "prebiased_fast": 2.75,
+    "prebiased_nominal": 5.25
+  },
+  "timestamp_utc": "2026-10-26T20:17:44.038Z"
+}
