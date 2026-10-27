@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "source_id": "hf-yapenge-exl50u-ptefit-gated-equilibrium",
+  "discovery_date_utc": "2026-10-27",
+  "source_type": "gated_experimental_magnetic_diagnostics_and_model_inverted_equilibrium",
+  "machine": "EXL-50U",
+  "machine_type": "spherical_tokamak",
+  "device_config": "EXL-50U-V58.6",
+  "source_title": "EXL-50U PTEFIT Equilibrium Dataset",
+  "source_url": "https://huggingface.co/datasets/Yapenge/EXL50U-PTEFIT",
+  "source_files_url": "https://huggingface.co/datasets/Yapenge/EXL50U-PTEFIT/tree/main",
+  "source_owner": "Yapenge",
+  "reported_shot_count": 354,
+  "verified_publicly_listed_shot_file_examples": [
+    19358,
+    19359,
+    19431,
+    19434,
+    19436,
+    19437,
+    19438,
+    19439,
+    19451,
+    19472
+  ],
+  "documented_example_shot_id": 20701,
+  "shot_id_policy": "Original device discharge identifiers in filename and shot column; dataset card reports 354 shots; full shot inventory and contents are not accessible without gated authorization.",
+  "fuel_track": "pb11_auxiliary",
+  "fuel_track_qualification": "EXL-50U control/equilibrium auxiliary evidence relevant to prospective p-B11 research; no fuel composition or p-B11 operation established for these shots. Never classify as pb11_primary.",
+  "pb11_fidelity": {
+    "magnetic_diagnostics_and_equilibrium": "candidate_reconstruction_only_gated",
+    "p_b11_fuel_and_reactivity": "unverified",
+    "proton_recirculation": "unverified",
+    "radiation_electron_loss": "unverified",
+    "alpha_transport_channeling": "unverified",
+    "boron_delivery": "unverified",
+    "direct_conversion": "unverified",
+    "net_power": "unverified"
+  },
+  "license_access": {
+    "license": "CC BY-NC 4.0",
+    "access": "public_metadata_and_file_listing; dataset file content gated",
+    "requires": "Hugging Face login, acceptance of conditions and sharing contact details; manual approval may be required",
+    "data_download_verified": false,
+    "redistribution": "Non-commercial research with attribution; do not republish raw files without checking terms."
+  },
+  "format": "Parquet, one file per shot, one row with nested time-series arrays",
+  "time_metadata": {
+    "column": "time",
+    "units_reported": "ms",
+    "time_reference": "not independently verified",
+    "synchronization": "time, diag_* and inv_* are documented as aligned at successful inversion slices, not independently validated"
+  },
+  "experimental_input_diagnostics": {
+    "diag_flux": {
+      "channels": 47,
+      "units": "Wb/rad"
+    },
+    "diag_mpt": {
+      "channels": 84,
+      "units": "T"
+    },
+    "diag_mpn": {
+      "channels": 80,
+      "units": "T"
+    },
+    "diag_IP": {
+      "channels": 1,
+      "units": "A"
+    },
+    "diag_eddy_current": {
+      "channels": 1,
+      "units": "A"
+    },
+    "diag_vloops": {
+      "channels": 47,
+      "units": "V"
+    },
+    "diag_CS": {
+      "channels": 1,
+      "units": "A"
+    },
+    "diag_PF": {
+      "channels": 14,
+      "units": "A"
+    },
+    "diag_TF": {
+      "channels": 1,
+      "units": "A"
+    }
+  },
+  "derived_reconstruction": {
+    "method": "PTEFIT RTEqInv TensorRT single-pass recurrent per time slice",
+    "inv_psi": {
+      "shape": "(T,129,129)",
+      "units": "Wb/rad"
+    },
+    "inv_jphi": {
+      "shape": "(T,129,128)",
+      "units": "A/m^2"
+    },
+    "inv_surfs": {
+      "shape": "(T,2,90)",
+      "units": "m"
+    },
+    "other": [
+      "inv_isoflux",
+      "inv_rc",
+      "inv_zc",
+      "inv_kappa",
+      "inv_li",
+      "inv_betap",
+      "inv_betat",
+      "inv_psi_a",
+      "inv_psi_b",
+      "inv_ra",
+      "inv_za",
+      "inv_rx",
+      "inv_zx"
+    ],
+    "skipped_slices": "plasma current below 100 kA",
+    "reconstruction_not_raw_measurement": true
+  },
+  "not_established": [
+    "Mirnov fluctuation channels as distinct from equilibrium magnetic probes",
+    "D-alpha/ELM onset labels",
+    "plasma temperatures or edge kinetic profiles",
+    "p-B11 fuel composition",
+    "raw shot data download or units validation",
+    "native M3D-C1 initialization and self-consistent plasma response"
+  ],
+  "example_public_file": {
+    "name": "exl50u_shot_19358.parquet",
+    "size_reported": "36.2 MB",
+    "download_status": "gated; inaccessible unauthenticated"
+  },
+  "scientific_state": "SOURCE_METADATA_REGISTERED_GATED_NOT_INGESTED",
+  "claim_boundary": "Publicly listed discharge Parquet files and documented diagnostic schema are not ingested experimental waveforms. Inverted equilibrium is reconstructed/model-derived. No native simulation, controller-in-loop, causal TCT, or p-B11 reaction validation.",
+  "missing_prerequisites": [
+    "Human accepts Hugging Face gated dataset terms and receives access to the Parquet files; do not bypass access controls",
+    "Validate actual shot IDs, Parquet column schema, measured-channel units and time origin on one bounded shot after authorized access",
+    "Verify calibration/provenance of magnetic probes and coil-current commands, source file revision/hash, and any accessible actuator timing",
+    "Distinguish raw magnetic inputs from RTEqInv outputs and confirm source license for permitted research use",
+    "Only after data access, ask canonical supervisor to select one small bounded experimental-control analog and check shot-to-native equilibrium/profile readiness"
+  ],
+  "deduplication": {
+    "branch": "agent/tct-pulse-train-audit",
+    "checked_at_head": "43d5cc6c63686208ca93966d6a791bcd72b8d15e",
+    "existing_same_family_paths": [],
+    "outstanding_jobs_without_results": 0,
+    "unacknowledged_results": 0,
+    "canonical_science_supervisor_task": "6aacac6580f881918d8d207c238d0a18",
+    "job_creation": "deferred_access_gated_no_validated_waveforms"
+  },
+  "next_step": "Preserve candidate source; obtain authorized access, then validate one real EXL-50U discharge and diagnostic timing before asking canonical supervisor to queue physics."
+}
