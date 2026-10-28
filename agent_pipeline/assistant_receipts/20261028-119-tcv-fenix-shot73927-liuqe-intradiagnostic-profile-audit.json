@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "job_id": "20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit",
+  "processed_result_job_id": "20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit",
+  "processed_result_receipt_sha": "948fdeb0e3582be978be37f3b52703cc8de5522c",
+  "validation_summary_sha": null,
+  "log_sha256": "439d2d92f6ea073a63d952dbf797008183c1eead04b7153e14127b8be733b332",
+  "classification": "TCV_FENIX_LIUQE_73927_INTRADIAGNOSTIC_RUNNER_SYNTAX_ERROR",
+  "job_class": "bounded_tcv_fenix_liuqe_intradiagnostic_profile_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "LIUQE equilibrium reconstruction",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_member": "KER_73927_LIUQE.mat",
+  "source_member_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+  "observational_status": "No experimental data processed in this job; runner failed at Python parsing before analysis. No prospective, causal analog or controller-in-loop evidence.",
+  "pipeline_failure": true,
+  "scientific_negative_result": false,
+  "scientific_state": "runner_syntax_failure_before_analysis; no scientific inference; repaired_successor_enabled",
+  "quantitative_result": {
+    "elapsed_seconds": 0.5146427154541016,
+    "return_code": 1,
+    "success": false,
+    "summary": null,
+    "selected_result_files": 0,
+    "error": "SyntaxError: unexpected character after line continuation character at Python here-document line 214; literal backslash-n in assignment statement"
+  },
+  "successful_milestone": "No new scientific milestone from 119. Prior 118 LIUQE time-axis schema verification remains preserved and unchanged.",
+  "interpretation": "The failure is a narrow pipeline/runner source-code syntax defect, not a negative TCT mechanism result. TCT efficacy neutral/unmeasured. Independent TCV diagnostic clock synchronization remains unverified.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [
+    "20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair"
+  ],
+  "new_job_id": "20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair",
+  "followup_scope": "One enabled syntax-only replacement runner and job 120; bounded LIUQE-only inventory, no cross-diagnostic timing or native M3D-C1 claims.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha, rotation, conversion or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 execution; frozen +0.020% width and +0.10% Jpk gates, zero/handoff equivalence and native claim boundary unchanged.",
+  "timestamp_utc": "2026-10-28T08:29:11.769Z"
+}
