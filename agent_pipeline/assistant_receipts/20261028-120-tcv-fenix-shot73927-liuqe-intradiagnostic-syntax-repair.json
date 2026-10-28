@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "job_id": "20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair",
+  "processed_result_job_id": "20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair",
+  "processed_result_receipt_path": "agent_pipeline/results/20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair.json",
+  "validation_summary_sha256": "06e123d03a830d510aacb2c5b8a8bb1474941646e64330b7bf366f16720bf7c5",
+  "log_sha256": "7d4ab93e2b67d198871874cc379323a05abfdb7d40852cee18c36d169e7a04e1",
+  "result_head_before": "8fda28871137b66d377274722cd13c26fa3cb1e5",
+  "classification": "TCV_FENIX_LIUQE_73927_INTRADIAGNOSTIC_SCHEMA_INVENTORIED",
+  "job_class": "bounded_tcv_fenix_liuqe_intradiagnostic_profile_audit_syntax_repair",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "LIUQE equilibrium reconstruction",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_member": "KER_73927_LIUQE.mat",
+  "source_member_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+  "observational_status": "LIUQE-only reconstructed-equilibrium schema audit, not prospective, causal-analog or controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_state": "verified_LIUQE_intradiagnostic_schema; geometric_outliers_despite_all_converged_flags; timing_and_native_handoff_unverified",
+  "quantitative_result": {
+    "elapsed_seconds": 54.04455924034119,
+    "return_code": 0,
+    "success": true,
+    "field_count": 279,
+    "L_fields": 141,
+    "LX_fields": 14,
+    "LY_fields": 124,
+    "LIUQE_time_samples": 321,
+    "LIUQE_time_min_raw": 0.20000004768371582,
+    "LIUQE_time_max_raw": 1.7999999523162842,
+    "LIUQE_median_step_raw": 0.005000114440917969,
+    "converged_flag_range": [
+      1,
+      1
+    ],
+    "chih_finite_fraction": 0,
+    "LY_kappa_max_raw": 35918.9189058992,
+    "LY_aminor_max_raw": 168.74648985452916,
+    "LY_rgeom_min_raw": -167.76890854979632,
+    "LY_zgeom_min_raw": -388.2567890187113,
+    "verified_member_crc32": true
+  },
+  "successful_milestone": "Syntax-repaired runner completed successfully and inventoried 279 LIUQE fields (L 141, LX 14, LY 124) from a SHA/CRC-verified source. Reconstructed 61x321 equilibrium-surface arrays and 321-sample diagnostics are available for a bounded numerical-quality audit.",
+  "interpretation": "Schema integrity supported. Some reconstruction geometry fields have extreme numeric values despite all 321 isconverged flags being 1; physical validity and field units are not established. This does not support or weaken causal TCT stabilization, which remains neutral/unmeasured.",
+  "mechanism_effect": "neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261028-121-tcv-fenix-shot73927-liuqe-geometry-quality-mask-audit",
+  "followup_scope": "One enabled, focused LIUQE-only geometric-quality mask audit to quantify surface/frame outliers without changing solver physics or claiming synchronized diagnostics.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, alpha, recirculation, radiation, rotation, conversion, liquid-lithium, ignition or net-power validation",
+  "m3dc1_claim_boundary": "No native M3D-C1 run, zero/handoff equivalence or mapped experimental actuator; frozen +0.020% width and +0.10% Jpk gates remain unchanged and inapplicable to this reconstruction audit.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-28T09:15:03.954Z"
+}
