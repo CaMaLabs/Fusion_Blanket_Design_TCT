@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "job_id": "20261028-123-tcv-fenix-shot73927-liuqe-axis-degeneracy-contingency",
+  "processed_result_job_id": "20261028-123-tcv-fenix-shot73927-liuqe-axis-degeneracy-contingency",
+  "processed_result_receipt_path": "agent_pipeline/results/20261028-123-tcv-fenix-shot73927-liuqe-axis-degeneracy-contingency.json",
+  "processed_result_receipt_sha": "d22b821b9c530c93e824981be7d29bc109220fec",
+  "validation_summary_sha256": "f5c5f9c2125dcde6e7a2589f350e889d48894957c594245ac424d5943b3470e7",
+  "log_sha256": "748ae6fb1847cd94056989f9634a25bf183e9fc08365ec6a5bd6bdc145d4ef3c",
+  "result_head_before": "5cd1614f57fe988a838a8107c996a14c3680b255",
+  "classification": "TCV_FENIX_LIUQE_73927_AXIS_DEGENERACY_CONTINGENCY_AUDITED",
+  "job_class": "bounded_tcv_fenix_liuqe_axis_degeneracy_contingency_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "diagnostic": "LIUQE equilibrium reconstruction (single diagnostic)",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "source_url": "https://zenodo.org/records/19452938",
+  "source_member": "KER_73927_LIUQE.mat",
+  "source_member_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+  "observational_status": "single-diagnostic LIUQE equilibrium reconstruction numerical-quality audit; not experimental precursor timing, prospective or controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result_for_specific_hypothesis": true,
+  "scientific_state": "direct_tiny_radius_cooccurrence_falsified_at_descriptive_cutoffs; near_axis_numerical_quality_problem_persists; diagnostic_units_clock_native_handoff_unverified; prerequisite_blocked",
+  "quantitative_result": {
+    "elapsed_seconds": 44.11746525764465,
+    "return_code": 0,
+    "success": true,
+    "frames": 321,
+    "near_axis_kappa_gt_10_cells": 108,
+    "near_axis_extreme_and_tiny_radius_cells": 0,
+    "near_axis_extreme_and_outside_grid_cells": 55,
+    "extreme_near_axis_surface_distance_to_tiny_radius": {
+      "adjacent_surface": 41,
+      "no_tiny_radius_reference": 0,
+      "same_surface": 0,
+      "three_or_more_surfaces": 61,
+      "two_surfaces": 6
+    },
+    "near_axis_radius_strata": {
+      "near_axis_aminor_0p005_to_0p02": {
+        "cells": 867,
+        "kappa_gt_10_cells": 52,
+        "kappa_gt_10_fraction": 0.05997693194925029,
+        "centroid_outside_grid_cells": 19
+      },
+      "near_axis_aminor_1e_minus_6_to_0p005": {
+        "cells": 112,
+        "kappa_gt_10_cells": 28,
+        "kappa_gt_10_fraction": 0.25,
+        "centroid_outside_grid_cells": 10
+      },
+      "near_axis_aminor_gt_0p02": {
+        "cells": 185,
+        "kappa_gt_10_cells": 28,
+        "kappa_gt_10_fraction": 0.15135135135135136,
+        "centroid_outside_grid_cells": 87
+      },
+      "near_axis_tiny_aminor_le_1e_minus_6": {
+        "cells": 321,
+        "kappa_gt_10_cells": 0,
+        "kappa_gt_10_fraction": 0,
+        "centroid_outside_grid_cells": 0
+      }
+    },
+    "converged_frames": 321,
+    "verified_source_crc32": true
+  },
+  "successful_milestone": "Verified a bounded cellwise contingency: 0 of 108 near-axis kappa>10 cells coincide with aminor<=1e-6; 41 are adjacent to a tiny-radius surface, 6 two surfaces away, and 61 at least three surfaces away. 55 of 108 extreme cells are outside the numerical grid. This narrows the explanation of LIUQE reconstruction outliers without inferring physical plasma instability.",
+  "interpretation": "Direct zero-minor-radius coincidence as the explanation for extreme elongation is weakened at the audited descriptive cutoffs; neighboring-surface conditioning and out-of-grid artifacts remain possible and unproven. The result is a reconstruction numerical-quality audit, not a TCT intervention or a negative TCT stabilization result.",
+  "tested_mechanism_effect": "weakened_direct_tiny_radius_explanation",
+  "tct_mechanism_effect": "neutral_unmeasured",
+  "existing_successor_job_ids": [],
+  "new_job_id": null,
+  "followup_scope": "No new science job: single-diagnostic numerical contingency resolved; further physical/native interpretation requires independent timing/unit calibration, reconstruction quality validation, and shot-to-native handoff. Preserve one-successor-per-lineage and avoid repeated metadata audits.",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition, pB11_net_delta or net-power evidence",
+  "m3dc1_claim_boundary": "No native M3D-C1 run, zero/handoff equivalence, calibrated shot-to-native equilibrium/profile mapping, or causal controller-in-loop demonstration; normalized-native-M3D-C1 claim boundary and frozen +0.020% width and +0.10% Jpk gates unchanged and not mapped to TCV.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-28T11:48:17.502Z"
+}
