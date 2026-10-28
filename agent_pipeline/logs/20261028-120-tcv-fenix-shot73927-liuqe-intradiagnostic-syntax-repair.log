@@ -1,0 +1,3002 @@
+job_id=20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair
+started_utc=2026-10-28T08:29:26.851357Z
+head_before=8fda28871137b66d377274722cd13c26fa3cb1e5
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "candidate_time_axes": [
+    {
+      "candidate_status": "numeric_unverified_timebase",
+      "clock_reference_verified": false,
+      "count": 321,
+      "dtype": "float64",
+      "monotonic_nondecreasing": true,
+      "numeric_overlap_with_ts_raw": true,
+      "path": "LX.t",
+      "raw_max": 1.7999999523162842,
+      "raw_median_step": 0.005000114440917969,
+      "raw_min": 0.20000004768371582,
+      "shape": [
+        321
+      ],
+      "units_verified": false
+    },
+    {
+      "candidate_status": "numeric_unverified_timebase",
+      "clock_reference_verified": false,
+      "count": 321,
+      "dtype": "float64",
+      "monotonic_nondecreasing": true,
+      "numeric_overlap_with_ts_raw": true,
+      "path": "LY.t",
+      "raw_max": 1.7999999523162842,
+      "raw_median_step": 0.005000114440917969,
+      "raw_min": 0.20000004768371582,
+      "shape": [
+        321
+      ],
+      "units_verified": false
+    }
+  ],
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_LIUQE_73927_INTRADIAGNOSTIC_SCHEMA_INVENTORIED",
+  "clock_reference_verified": false,
+  "cross_diagnostic_synchronization_assumed": false,
+  "diagnostic": "LIUQE equilibrium reconstruction paired with TS_73927.mat",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "intradiagnostic_field_count": 279,
+  "intradiagnostic_field_inventory": [
+    {
+      "dtype": "object",
+      "path": "L.P",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "object",
+      "path": "L.G",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.1469999551773071,
+      "finite_min": 0.6140000224113464,
+      "path": "L.rx",
+      "shape": [
+        28
+      ],
+      "size": 28
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.7599999904632568,
+      "finite_min": -0.7599999904632568,
+      "path": "L.zx",
+      "shape": [
+        65
+      ],
+      "size": 65
+    },
+    {
+      "dtype": "float64",
+      "path": "L.drx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.idrx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nrx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.dzx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.idzx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nzx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.dsx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.idsx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.d2x",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nx",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.7599999904632568,
+      "finite_min": -0.7599999904632568,
+      "path": "L.zb",
+      "shape": [
+        182
+      ],
+      "size": 182
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.1469999551773071,
+      "finite_min": 0.6140000224113464,
+      "path": "L.rb",
+      "shape": [
+        182
+      ],
+      "size": 182
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.lxy",
+      "shape": [
+        65,
+        28
+      ],
+      "size": 1820
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.1272592544555664,
+      "finite_min": 0.6337407231330872,
+      "path": "L.ry",
+      "shape": [
+        26
+      ],
+      "size": 26
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.7362499833106995,
+      "finite_min": -0.7362499833106995,
+      "path": "L.zy",
+      "shape": [
+        63
+      ],
+      "size": 63
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nry",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nzy",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.ny",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.5779323680766486,
+      "finite_min": 0.8871073766282549,
+      "path": "L.iry",
+      "shape": [
+        26
+      ],
+      "size": 26
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.1272592544555664,
+      "finite_min": 0.6337407231330872,
+      "path": "L.rry",
+      "shape": [
+        63,
+        26
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.7362499833106995,
+      "finite_min": -0.7362499833106995,
+      "path": "L.zzy",
+      "shape": [
+        63,
+        26
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.5224359923675191,
+      "finite_min": 0.004714182821635364,
+      "path": "L.Tbc",
+      "shape": [
+        182,
+        178
+      ],
+      "size": 32396
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nD",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 5.354078401794809e-06,
+      "finite_min": 3.0100418378942063e-06,
+      "path": "L.cx",
+      "shape": [
+        26
+      ],
+      "size": 26
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.653613377478168,
+      "finite_min": 0.14508092648621612,
+      "path": "L.cq",
+      "shape": [
+        26,
+        63
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9308697317560215,
+      "finite_min": 0.0,
+      "path": "L.cr",
+      "shape": [
+        26,
+        63
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9610379689578568,
+      "finite_min": 0.2118517890690504,
+      "path": "L.cs",
+      "shape": [
+        26,
+        63
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "float64",
+      "path": "L.ci",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.co",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.Oly",
+      "shape": [
+        63,
+        26
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "uint16",
+      "finite_fraction": 1.0,
+      "finite_max": 1745.0,
+      "finite_min": 3.0,
+      "path": "L.kxl",
+      "shape": [
+        128
+      ],
+      "size": 128
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.8434152156728826,
+      "finite_min": 1.5479411052954362e-07,
+      "path": "L.clx",
+      "shape": [
+        4,
+        128
+      ],
+      "size": 512
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.Oasx",
+      "shape": [
+        65,
+        28
+      ],
+      "size": 1820
+    },
+    {
+      "dtype": "float64",
+      "path": "L.FN",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.dimw",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.016666666666666666,
+      "path": "L.pq",
+      "shape": [
+        60
+      ],
+      "size": 60
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.pQ",
+      "shape": [
+        61
+      ],
+      "size": 61
+    },
+    {
+      "dtype": "int64",
+      "path": "L.npq",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.pinit",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nQ",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.noq",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.doq",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 6.086835766330224,
+      "finite_min": 0.0,
+      "path": "L.oq",
+      "shape": [
+        32
+      ],
+      "size": 32
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9997222222222222,
+      "finite_min": 0.0,
+      "path": "L.fq",
+      "shape": [
+        60
+      ],
+      "size": 60
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": -1.0,
+      "path": "L.crq",
+      "shape": [
+        32
+      ],
+      "size": 32
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": -1.0,
+      "path": "L.czq",
+      "shape": [
+        32
+      ],
+      "size": 32
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 50.656763105611816,
+      "finite_min": -50.656763105611816,
+      "path": "L.cdrq",
+      "shape": [
+        32
+      ],
+      "size": 32
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 42.10525047746443,
+      "finite_min": -42.10525047746443,
+      "path": "L.cdzq",
+      "shape": [
+        32
+      ],
+      "size": 32
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nS",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nR",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "object",
+      "path": "L.bfct",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "object",
+      "path": "L.bfp",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.fPg",
+      "shape": [
+        3
+      ],
+      "size": 3
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.fTg",
+      "shape": [
+        3
+      ],
+      "size": 3
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 1.0,
+      "path": "L.TDg",
+      "shape": [
+        3
+      ],
+      "size": 3
+    },
+    {
+      "dtype": "int64",
+      "path": "L.ng",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nq",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nc",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 60.0,
+      "finite_min": 59.0,
+      "path": "L.i95",
+      "shape": [
+        2
+      ],
+      "size": 2
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.5192339311462186,
+      "finite_min": 0.48076606885378126,
+      "path": "L.c95",
+      "shape": [
+        2
+      ],
+      "size": 2
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nn",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2686.0821044142463,
+      "finite_min": -1550.8102260490016,
+      "path": "L.M1q",
+      "shape": [
+        60,
+        60
+      ],
+      "size": 3600
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2.0469810466989506,
+      "finite_min": -2.0469810466989506,
+      "path": "L.M2q",
+      "shape": [
+        32,
+        32
+      ],
+      "size": 1024
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nW",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.ne",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 46.0,
+      "finite_min": 17.0,
+      "path": "L.kew",
+      "shape": [
+        5
+      ],
+      "size": 5
+    },
+    {
+      "dtype": "uint16",
+      "finite_fraction": 1.0,
+      "finite_max": 1636.0,
+      "finite_min": 1324.0,
+      "path": "L.kyw",
+      "shape": [
+        18
+      ],
+      "size": 18
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2.0,
+      "finite_min": -2.0,
+      "path": "L.Tww",
+      "shape": [
+        18,
+        5
+      ],
+      "size": 90
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.00011774274753406644,
+      "finite_min": -1.3881708582630381e-05,
+      "path": "L.Mbe",
+      "shape": [
+        182,
+        57
+      ],
+      "size": 10374
+    },
+    {
+      "dtype": "int64",
+      "path": "L.smalldia",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.Ip0",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.raN",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.liurtemu",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "<U3",
+      "path": "L.code",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.19690205063037725,
+      "finite_min": -0.8288254337706256,
+      "path": "L.Ipa",
+      "shape": [
+        19
+      ],
+      "size": 19
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.018397254370718874,
+      "finite_min": -0.03622257564482173,
+      "path": "L.Ipu",
+      "shape": [
+        38
+      ],
+      "size": 38
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.018397254370718874,
+      "finite_min": -0.03622257564482173,
+      "path": "L.Ips",
+      "shape": [
+        38
+      ],
+      "size": 38
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 38.0,
+      "finite_min": 1.0,
+      "path": "L.kdf",
+      "shape": [
+        38
+      ],
+      "size": 38
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 76.0,
+      "finite_min": 39.0,
+      "path": "L.kdm",
+      "shape": [
+        38
+      ],
+      "size": 38
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 95.0,
+      "finite_min": 77.0,
+      "path": "L.kda",
+      "shape": [
+        19
+      ],
+      "size": 19
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 133.0,
+      "finite_min": 96.0,
+      "path": "L.kdu",
+      "shape": [
+        38
+      ],
+      "size": 38
+    },
+    {
+      "dtype": "int64",
+      "path": "L.kdt",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.kdp",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nd",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.kit",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.kip",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 76.0,
+      "finite_min": 1.0,
+      "path": "L.kdr",
+      "shape": [
+        76
+      ],
+      "size": 76
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 133.0,
+      "finite_min": 77.0,
+      "path": "L.kde",
+      "shape": [
+        57
+      ],
+      "size": 57
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 135.0,
+      "finite_min": 134.0,
+      "path": "L.kdi",
+      "shape": [
+        2
+      ],
+      "size": 2
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nr",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.ni",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "path": "L.Wp",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.Wt",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 132.6291212535848,
+      "finite_min": 0.0,
+      "path": "L.Wr",
+      "shape": [
+        76
+      ],
+      "size": 76
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.005,
+      "finite_min": 0.005,
+      "path": "L.We",
+      "shape": [
+        57
+      ],
+      "size": 57
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0004166666666666667,
+      "finite_min": 0.0,
+      "path": "L.Wi",
+      "shape": [
+        2
+      ],
+      "size": 2
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 132.6291212535848,
+      "finite_min": 0.0,
+      "path": "L.Wd",
+      "shape": [
+        135
+      ],
+      "size": 135
+    },
+    {
+      "dtype": "float64",
+      "path": "L.Wq",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.5022478692117147e-05,
+      "finite_min": -1.9261036868556403e-05,
+      "path": "L.Mry",
+      "shape": [
+        76,
+        1638
+      ],
+      "size": 124488
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0001290568325202912,
+      "finite_min": -5.724412403651513e-05,
+      "path": "L.Mre",
+      "shape": [
+        76,
+        57
+      ],
+      "size": 4332
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.01711669428893729,
+      "finite_min": -0.005724412531602104,
+      "path": "L.Wre",
+      "shape": [
+        76,
+        57
+      ],
+      "size": 4332
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.005,
+      "finite_min": 0.0,
+      "path": "L.Wee",
+      "shape": [
+        57,
+        57
+      ],
+      "size": 3249
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0,
+      "finite_min": 0.0,
+      "path": "L.Mty",
+      "shape": [
+        1638
+      ],
+      "size": 1638
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.1375999450683594,
+      "finite_min": -0.75,
+      "path": "L.bh",
+      "shape": [
+        4
+      ],
+      "size": 4
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nh",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9663999676704407,
+      "finite_min": 0.795199990272522,
+      "path": "L.rh",
+      "shape": [
+        10
+      ],
+      "size": 10
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.5,
+      "finite_min": -0.5,
+      "path": "L.zh",
+      "shape": [
+        10
+      ],
+      "size": 10
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.01164631625899834,
+      "finite_min": 0.0,
+      "path": "L.Tyh",
+      "shape": [
+        1638,
+        10
+      ],
+      "size": 16380
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0000000000000013,
+      "finite_min": 0.999999999999998,
+      "path": "L.Iph",
+      "shape": [
+        10
+      ],
+      "size": 10
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.49995619680504505,
+      "finite_min": -0.4999561968050455,
+      "path": "L.Ipzh",
+      "shape": [
+        10
+      ],
+      "size": 10
+    },
+    {
+      "dtype": "int64",
+      "path": "L.ndz",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.01711669428893729,
+      "finite_min": -0.005724412531602104,
+      "path": "L.Wde",
+      "shape": [
+        135,
+        57
+      ],
+      "size": 7695
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.00041666666666666724,
+      "finite_min": -6.301610880653391e-06,
+      "path": "L.Wdh",
+      "shape": [
+        135,
+        10
+      ],
+      "size": 1350
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 9.752367831695194e-07,
+      "finite_min": 4.0735250521566373e-07,
+      "path": "L.uAhh",
+      "shape": [
+        55
+      ],
+      "size": 55
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 6.301610880653391e-06,
+      "finite_min": -0.00041666666666666724,
+      "path": "L.Ahd",
+      "shape": [
+        10,
+        135
+      ],
+      "size": 1350
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 199.09123979631758,
+      "finite_min": -57.17058524612985,
+      "path": "L.Aed",
+      "shape": [
+        57,
+        135
+      ],
+      "size": 7695
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 3.457908814530168e-05,
+      "finite_min": -1.3696826040158874e-06,
+      "path": "L.Ahe",
+      "shape": [
+        10,
+        57
+      ],
+      "size": 570
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.010969200316638561,
+      "finite_min": -0.010973760763704673,
+      "path": "L.Aeh",
+      "shape": [
+        57,
+        10
+      ],
+      "size": 570
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -2.3123678055059316e-07,
+      "finite_min": -7.159174759565954e-07,
+      "path": "L.Ahh",
+      "shape": [
+        10,
+        10
+      ],
+      "size": 100
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2.3862186916826533e-06,
+      "finite_min": 1.2234343204738827e-07,
+      "path": "L.Mbh",
+      "shape": [
+        182,
+        10
+      ],
+      "size": 1820
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 199.0912397963176,
+      "finite_min": -57.17058524612985,
+      "path": "L.Ae1d",
+      "shape": [
+        57,
+        135
+      ],
+      "size": 7695
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 7.756791802569255e-09,
+      "finite_min": -7.756791913604914e-09,
+      "path": "L.Mdzry",
+      "shape": [
+        76,
+        1638
+      ],
+      "size": 124488
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0001664409129310186,
+      "finite_min": -0.0001664409129310186,
+      "path": "L.dzMbe",
+      "shape": [
+        182,
+        57
+      ],
+      "size": 10374
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 46.47054185829617,
+      "finite_min": -52.08366687634822,
+      "path": "L.Aer",
+      "shape": [
+        57,
+        76
+      ],
+      "size": 4332
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 199.09123979631758,
+      "finite_min": -57.17058524612985,
+      "path": "L.Aee",
+      "shape": [
+        57,
+        57
+      ],
+      "size": 3249
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nj",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "L.kj",
+      "shape": [
+        4
+      ],
+      "size": 4
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nja",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nje",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 50.0,
+      "finite_min": 0.0,
+      "path": "L.Wj",
+      "shape": [
+        4
+      ],
+      "size": 4
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 50.0,
+      "finite_min": 0.0,
+      "path": "L.Wjj",
+      "shape": [
+        4,
+        4
+      ],
+      "size": 16
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 2.0,
+      "finite_min": 1.0,
+      "path": "L.kki",
+      "shape": [
+        2
+      ],
+      "size": 2
+    },
+    {
+      "dtype": "int64",
+      "path": "L.kkq",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 7.0,
+      "finite_min": 4.0,
+      "path": "L.kkj",
+      "shape": [
+        4
+      ],
+      "size": 4
+    },
+    {
+      "dtype": "int64",
+      "path": "L.nk",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 9.54316141682267,
+      "finite_min": -844.4141195487485,
+      "path": "L.TQg",
+      "shape": [
+        61,
+        3
+      ],
+      "size": 183
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 236.42784445107876,
+      "finite_min": -0.5555055415257384,
+      "path": "L.ITQg",
+      "shape": [
+        61,
+        3
+      ],
+      "size": 183
+    },
+    {
+      "dtype": "<U3",
+      "path": "LX.tokamak",
+      "shape": [],
+      "size": 1
+    },
+    {
+      "dtype": "int32",
+      "finite_fraction": 1.0,
+      "finite_max": 73927.0,
+      "finite_min": 73927.0,
+      "path": "LX.shot",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.7999999523162842,
+      "finite_min": 0.20000004768371582,
+      "path": "LX.t",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.18948855996131897,
+      "finite_min": -0.2234784960746765,
+      "path": "LX.Bm",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9251081347465515,
+      "finite_min": -0.7541902661323547,
+      "path": "LX.Ff",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0,
+      "finite_min": 0.0,
+      "path": "LX.Ft",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 10337.7744140625,
+      "finite_min": -11181.73828125,
+      "path": "LX.Ia",
+      "shape": [
+        19,
+        321
+      ],
+      "size": 6099
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -133353.46008931514,
+      "finite_min": -224906.22713702876,
+      "path": "LX.Ip",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 4323.256707349694,
+      "finite_min": -3021.6455639450205,
+      "path": "LX.Iu",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 5.264405727386475,
+      "finite_min": -9.54263973236084,
+      "path": "LX.Uf",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "uint8",
+      "path": "LX.aW",
+      "shape": [
+        0
+      ],
+      "size": 0
+    },
+    {
+      "dtype": "uint8",
+      "path": "LX.aq",
+      "shape": [
+        0
+      ],
+      "size": 0
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -1.2552739381790161,
+      "finite_min": -1.2605220079421997,
+      "path": "LX.rBt",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "LX.ag",
+      "shape": [
+        3,
+        321
+      ],
+      "size": 963
+    },
+    {
+      "dtype": "int32",
+      "finite_fraction": 1.0,
+      "finite_max": 73927.0,
+      "finite_min": 73927.0,
+      "path": "LY.shot",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.7999999523162842,
+      "finite_min": 0.20000004768371582,
+      "path": "LY.t",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.4684766074862137,
+      "finite_min": 5.994168313397823e-06,
+      "path": "LY.aq",
+      "shape": [
+        32,
+        60,
+        321
+      ],
+      "size": 616320
+    },
+    {
+      "dtype": "uint8",
+      "path": "LY.aW",
+      "shape": [
+        0
+      ],
+      "size": 0
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9133887280120799,
+      "finite_min": -0.9293962203676513,
+      "path": "LY.Fx",
+      "shape": [
+        65,
+        28,
+        321
+      ],
+      "size": 584220
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.7359980960293591,
+      "finite_min": 0.6240000128746033,
+      "path": "LY.rB",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.06141965836286545,
+      "finite_min": -0.40411243335441804,
+      "path": "LY.zB",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.6349173804501759,
+      "finite_min": -0.7612329090098622,
+      "path": "LY.FB",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9212083827563671,
+      "finite_min": 0.8787881022186226,
+      "path": "LY.rA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.06991621462847372,
+      "finite_min": 0.006008678735938157,
+      "path": "LY.zA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.465342838897935,
+      "finite_min": -0.9302362186471692,
+      "path": "LY.FA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 1.0,
+      "path": "LY.lB",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "LY.lX",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 13.702514288488166,
+      "finite_min": 9.889356704931256,
+      "path": "LY.dr2FA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 9.076725506937926,
+      "finite_min": 6.490669734147989,
+      "path": "LY.dz2FA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.7164310051201758,
+      "finite_min": -0.09633300403019508,
+      "path": "LY.drzFA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.867601246105919,
+      "finite_max": 0.7537540960948736,
+      "finite_min": 0.619183091634271,
+      "path": "LY.rX",
+      "shape": [
+        2,
+        321
+      ],
+      "size": 642
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.867601246105919,
+      "finite_max": 0.6493457643098348,
+      "finite_min": -0.5085032878995328,
+      "path": "LY.zX",
+      "shape": [
+        2,
+        321
+      ],
+      "size": 642
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.867601246105919,
+      "finite_max": 0.6573609239154727,
+      "finite_min": -0.6846800272326868,
+      "path": "LY.FX",
+      "shape": [
+        2,
+        321
+      ],
+      "size": 642
+    },
+    {
+      "dtype": "int32",
+      "finite_fraction": 1.0,
+      "finite_max": 2.0,
+      "finite_min": 0.0,
+      "path": "LY.nX",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "int8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "LY.Opy",
+      "shape": [
+        63,
+        26,
+        321
+      ],
+      "size": 525798
+    },
+    {
+      "dtype": "int32",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 1.0,
+      "path": "LY.nA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "int32",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 1.0,
+      "path": "LY.nB",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.9626168224299065,
+      "finite_max": 1.0802943992115457,
+      "finite_min": 1.0,
+      "path": "LY.FR",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.867601246105919,
+      "finite_max": 1.8417882096812823,
+      "finite_min": 0.08206776273328667,
+      "path": "LY.dr2FX",
+      "shape": [
+        2,
+        321
+      ],
+      "size": 642
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.867601246105919,
+      "finite_max": -0.06341122000985974,
+      "finite_min": -1.8012573258622664,
+      "path": "LY.dz2FX",
+      "shape": [
+        2,
+        321
+      ],
+      "size": 642
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.867601246105919,
+      "finite_max": 0.9521859402195156,
+      "finite_min": -3.507575375461783,
+      "path": "LY.drzFX",
+      "shape": [
+        2,
+        321
+      ],
+      "size": 642
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 149.37780014976335,
+      "finite_min": -1508.9560073950206,
+      "path": "LY.Iy",
+      "shape": [
+        63,
+        26,
+        321
+      ],
+      "size": 525798
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 10346.409113122094,
+      "finite_min": -11115.851116319007,
+      "path": "LY.Ia",
+      "shape": [
+        19,
+        321
+      ],
+      "size": 6099
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 4326.789931746519,
+      "finite_min": -3018.0377745142246,
+      "path": "LY.Iu",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 674.2408848066196,
+      "finite_min": -774.1405854763274,
+      "path": "LY.Iv",
+      "shape": [
+        256,
+        321
+      ],
+      "size": 82176
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 4326.789899509422,
+      "finite_min": -3018.0379094310265,
+      "path": "LY.Is",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.18808591090763366,
+      "finite_min": -0.2231011290975685,
+      "path": "LY.Bm",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9272423189078991,
+      "finite_min": -0.7531729739752959,
+      "path": "LY.Ff",
+      "shape": [
+        38,
+        321
+      ],
+      "size": 12198
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0372880196496508,
+      "finite_min": 0.0,
+      "path": "LY.ag",
+      "shape": [
+        3,
+        321
+      ],
+      "size": 963
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -120763.42769661025,
+      "finite_min": -200351.95480987537,
+      "path": "LY.rIp",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -1045.947160133682,
+      "finite_min": -9740.004433557904,
+      "path": "LY.zIp",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0,
+      "finite_min": -224130.9407248135,
+      "path": "LY.IpQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.6738101180796408,
+      "finite_min": 0.0,
+      "path": "LY.VpQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 71986.5161238865,
+      "finite_min": -1496622.2318717397,
+      "path": "LY.PpQg",
+      "shape": [
+        61,
+        3,
+        321
+      ],
+      "size": 58743
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.036685461579848,
+      "finite_min": -0.5273688829095295,
+      "path": "LY.TTpQg",
+      "shape": [
+        61,
+        3,
+        321
+      ],
+      "size": 58743
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 71986.5161238865,
+      "finite_min": -1496622.2318717397,
+      "path": "LY.PpQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.036685461579848,
+      "finite_min": -0.5273688829095295,
+      "path": "LY.TTpQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 61704.284747817175,
+      "finite_min": 0.0,
+      "path": "LY.PQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -1.2399367559368204,
+      "finite_min": -1.287981466095295,
+      "path": "LY.TQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -0.7764086877986272,
+      "finite_min": -0.8064927466759876,
+      "path": "LY.iTQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0,
+      "finite_min": -0.4756594806861579,
+      "path": "LY.FtPQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -137765.24497744866,
+      "finite_min": -224130.9407248135,
+      "path": "LY.IpD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -1045.947160133682,
+      "finite_min": -9740.004433557904,
+      "path": "LY.zIpD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -120763.42769661025,
+      "finite_min": -200351.95480987537,
+      "path": "LY.rIpD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 25958.311381484127,
+      "finite_min": 3130.849156557773,
+      "path": "LY.WkD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 16156.188804038853,
+      "finite_min": 7765.924781985579,
+      "path": "LY.WpD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 7906.863954774822,
+      "finite_min": -5305.041781539988,
+      "path": "LY.WtD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1493685.4492410594,
+      "finite_min": 1145932.8087314856,
+      "path": "LY.Wt0D",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 13887.886879612914,
+      "finite_min": 5247.009857780282,
+      "path": "LY.WND",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.6738101180796408,
+      "finite_min": 1.3329813868112668,
+      "path": "LY.VpD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0008437990583600455,
+      "finite_min": -0.0012559436243093068,
+      "path": "LY.FtD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -0.3643879220749095,
+      "finite_min": -0.47535143245761136,
+      "path": "LY.Ft0D",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.3764065249226465,
+      "finite_min": 0.3431517836191504,
+      "path": "LY.bpD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.014626652061096052,
+      "finite_min": 0.001531777570567612,
+      "path": "LY.btD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.6780582266698756,
+      "finite_min": 0.8713075048572478,
+      "path": "LY.liD",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -137765.24497744866,
+      "finite_min": -224130.9407248135,
+      "path": "LY.Ip",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -1.2552739381790161,
+      "finite_min": -1.2605220079421997,
+      "path": "LY.rBt",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 25958.311381484127,
+      "finite_min": 3130.849156557773,
+      "path": "LY.Wk",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 16156.188804038853,
+      "finite_min": 7765.924781985579,
+      "path": "LY.Wp",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 7906.863954774822,
+      "finite_min": -5305.041781539988,
+      "path": "LY.Wt",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1493685.4492410594,
+      "finite_min": 1145932.8087314856,
+      "path": "LY.Wt0",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 13887.886879612914,
+      "finite_min": 5247.009857780282,
+      "path": "LY.WN",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.6738101180796408,
+      "finite_min": 1.3329813868112668,
+      "path": "LY.Vp",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0008437990583600455,
+      "finite_min": -0.0012559436243093068,
+      "path": "LY.Ft",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": -0.3643879220749095,
+      "finite_min": -0.47535143245761136,
+      "path": "LY.Ft0",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.3764065249226465,
+      "finite_min": 0.3431517836191504,
+      "path": "LY.bp",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.014626652061096052,
+      "finite_min": 0.001531777570567612,
+      "path": "LY.bt",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.5916015623069094,
+      "finite_min": -0.4219396640900507,
+      "path": "LY.mu",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.6780582266698756,
+      "finite_min": 0.8713075048572478,
+      "path": "LY.li",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.8325020361322477,
+      "finite_min": 0.9272811177021596,
+      "path": "LY.bpli2",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.1106022771789368,
+      "finite_min": 0.8215693393141903,
+      "path": "LY.qA",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 218.5195553236761,
+      "finite_min": -82.03299342385114,
+      "path": "LY.iqQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 111214.08962131297,
+      "finite_min": -3171094.70961212,
+      "path": "LY.jtorQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 7.551691696066049,
+      "finite_min": 3.877908511706754,
+      "path": "LY.q95",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2.0883405196577662,
+      "finite_min": 1.8748390210757901,
+      "path": "LY.lp",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.8667086853497377,
+      "finite_min": 0.8390382549768219,
+      "path": "LY.rbary",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 68.03408501061973,
+      "finite_min": -167.76890854979632,
+      "path": "LY.rgeom",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 6.623952342639,
+      "finite_min": -388.2567890187113,
+      "path": "LY.zgeom",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 168.74648985452916,
+      "finite_min": 0.0,
+      "path": "LY.aminor",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 32.984091143505594,
+      "finite_min": -24.581866110878764,
+      "path": "LY.epsilon",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 35918.9189058992,
+      "finite_min": 0.00022165081787812096,
+      "path": "LY.kappa",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2052.577338214518,
+      "finite_min": -23537.447912878517,
+      "path": "LY.delta",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 4105.739584330984,
+      "finite_min": -47074.99155559769,
+      "path": "LY.deltal",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 2989.239401339765,
+      "finite_min": -328.87631431320875,
+      "path": "LY.deltau",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 135.18035512254437,
+      "finite_min": 0.8787881022186226,
+      "path": "LY.rrmax",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 9.47943805839327,
+      "finite_min": -19.239923390929103,
+      "path": "LY.zrmax",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9212083827563671,
+      "finite_min": -336.5153984043255,
+      "path": "LY.rrmin",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 59.55124766571733,
+      "finite_min": -19.418561538923687,
+      "path": "LY.zrmin",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 4.210331973412583,
+      "finite_min": -15.13644407617529,
+      "path": "LY.rzmax",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 13.226113836852829,
+      "finite_min": 0.006008678735938157,
+      "path": "LY.zzmax",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 509.8017212151297,
+      "finite_min": -680.3374629382736,
+      "path": "LY.rzmin",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.06991621462847372,
+      "finite_min": -776.5556549309681,
+      "path": "LY.zzmin",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.3840925551370533,
+      "finite_min": 0.9631065841529992,
+      "path": "LY.Q0Q",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 27.057759467573586,
+      "finite_min": -51.222002280840584,
+      "path": "LY.Q1Q",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.915712201185817,
+      "finite_min": 0.9096454913573871,
+      "path": "LY.Q2Q",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 153778.3907167637,
+      "finite_min": -280158.0634204,
+      "path": "LY.Q3Q",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 127362.55530630134,
+      "finite_min": -228635.60950553004,
+      "path": "LY.Q4Q",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 957525543.2157403,
+      "finite_min": -1693793025.816198,
+      "path": "LY.ItQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 19.720403265139705,
+      "finite_min": 0.0,
+      "path": "LY.LpQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.9221227799710789,
+      "finite_min": 0.8390382549768219,
+      "path": "LY.rbQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 72.97688633672253,
+      "finite_min": -160.9847681727095,
+      "path": "LY.Q5Q",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.6652540869921881,
+      "finite_min": 0.0,
+      "path": "LY.VQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.31196875452375283,
+      "finite_min": 0.0,
+      "path": "LY.AQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 113.33017977147578,
+      "finite_min": 0.0,
+      "path": "LY.SlQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.134704074346883,
+      "finite_min": 0.6239013654928498,
+      "path": "LY.rq",
+      "shape": [
+        32,
+        60,
+        321
+      ],
+      "size": 616320
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.45251170879283886,
+      "finite_min": -0.4205875688397667,
+      "path": "LY.zq",
+      "shape": [
+        32,
+        60,
+        321
+      ],
+      "size": 616320
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.6349173804501759,
+      "finite_min": -0.7612329090098622,
+      "path": "LY.FW",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.498658395893321,
+      "finite_min": 0.19800051374541036,
+      "path": "LY.raqmin",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.2930369574751985,
+      "finite_min": 0.8814995533315441,
+      "path": "LY.qmin",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 0.0,
+      "path": "LY.raQ",
+      "shape": [
+        61,
+        321
+      ],
+      "size": 19581
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0008993633754950777,
+      "finite_min": -0.0003492742708121663,
+      "path": "LY.dz",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0008993633754950777,
+      "finite_min": -0.0003492742708121663,
+      "path": "LY.dzg",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "int32",
+      "finite_fraction": 1.0,
+      "finite_max": 61.0,
+      "finite_min": 9.0,
+      "path": "LY.niter",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 0.0,
+      "finite_min": 0.0,
+      "path": "LY.rst",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 1.0,
+      "finite_min": 1.0,
+      "path": "LY.isconverged",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 1.0,
+      "finite_max": 0.5136842479198444,
+      "finite_min": 0.16686764540429888,
+      "path": "LY.chi",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "float64",
+      "finite_fraction": 0.0,
+      "path": "LY.chih",
+      "shape": [
+        321
+      ],
+      "size": 321
+    },
+    {
+      "dtype": "uint8",
+      "finite_fraction": 1.0,
+      "finite_max": 60.0,
+      "finite_min": 8.0,
+      "path": "LY.kit",
+      "shape": [
+        321
+      ],
+      "size": 321
+    }
+  ],
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Use original TCV shot-trigger and LIUQE/TS diagnostic documentation to verify time origin and synchronization. Numeric overlap, monotonicity and source plotting references do not establish clock calibration; no native M3D-C1 handoff or TCT intervention is implied.",
+  "observational_status": "metadata-only comparison of experimental TS and reconstructed LIUQE candidate axes; not prospective or controller-in-loop",
+  "parent_117_candidate_time_axes": 0,
+  "parent_117_field_inventory_truncated": true,
+  "parent_plot_script_sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+  "parent_result_job_id": "20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit",
+  "parent_ts_median_step_raw": 0.01699995994567871,
+  "parent_ts_time_max_raw": 2.9673399925231934,
+  "parent_ts_time_min_raw": 0.017340000718832016,
+  "parent_ts_time_points": 178,
+  "raw_data_published": false,
+  "runner_source_sha256": "f77075d726fcd1d92b874d3e5ece137b2edb63a6cec5f706f36f10427cd847eb",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "target_structures": {
+    "L": {
+      "field_count": 141,
+      "present": true,
+      "selected_field_names": [],
+      "time_named_fields": []
+    },
+    "LX": {
+      "field_count": 14,
+      "present": true,
+      "selected_field_names": [
+        "tokamak",
+        "shot",
+        "t"
+      ],
+      "time_named_fields": [
+        "t"
+      ]
+    },
+    "LY": {
+      "field_count": 124,
+      "present": true,
+      "selected_field_names": [
+        "shot",
+        "t"
+      ],
+      "time_named_fields": [
+        "t"
+      ]
+    }
+  },
+  "timestamp_utc": "2026-10-28T08:29:27.396102+00:00",
+  "timing_calibrated": false,
+  "top_level_variables": [
+    "L",
+    "LX",
+    "LY"
+  ],
+  "verified_member": {
+    "compressed_bytes": 32864020,
+    "crc32_verified": true,
+    "format": "MATLAB_v5",
+    "name": "KER_73927_LIUQE.mat",
+    "sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "uncompressed_bytes": 32880432
+  }
+}
+
+finished_utc=2026-10-28T08:30:20.896794Z
+return_code=0
