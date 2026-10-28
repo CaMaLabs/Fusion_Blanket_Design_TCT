@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261028-123-tcv-fenix-shot73927-liuqe-axis-degeneracy-contingency",
+  "parent_result_job_id": "20261028-122-tcv-fenix-shot73927-liuqe-axis-singularity-isolation",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_liuqe_axis_degeneracy_contingency_audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_liuqe_axis_degeneracy_123.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_liuqe_axis_degeneracy_123"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_liuqe_axis_degeneracy_123/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Directly cross-tabulate LIUQE near-axis extreme kappa with tiny minor radius, grid excursions and within-frame surface-index distance, without treating descriptive cutoffs as physics thresholds or assuming cross-diagnostic synchronization.",
+  "interpretation_contract": {
+    "liuqe_member_expected_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "descriptive_cutoffs_not_physics_gates": true,
+    "clock_reference_unverified": true,
+    "not_controller_in_loop": true,
+    "zero_handoff_equivalence_not_tested": true,
+    "native_m3dc1_gates_unmapped": true,
+    "pb11_fidelity_not_applicable": true,
+    "raw_data_not_republished": true
+  }
+}
