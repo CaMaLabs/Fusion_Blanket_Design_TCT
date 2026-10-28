@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20261028-122-tcv-fenix-shot73927-liuqe-axis-singularity-isolation",
+  "parent_result_job_id": "20261028-121-tcv-fenix-shot73927-liuqe-geometry-quality-mask-audit",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_liuqe_axis_singularity_isolation_audit",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_liuqe_axis_singularity_122.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_liuqe_axis_singularity_122"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_liuqe_axis_singularity_122/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Test whether extreme LIUQE kappa and out-of-grid centroids are concentrated near rho<=0.05 and aminor~0, separately from bulk/edge surfaces, using bounded descriptive counts and per-frame incidence without interpreting arbitrary cutoffs as physical thresholds.",
+  "interpretation_contract": {
+    "liuqe_member_expected_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "reconstruction_not_raw_measurement": true,
+    "rho_and_kappa_cutoffs_descriptive_not_frozen_physics_gates": true,
+    "clock_reference_unverified": true,
+    "not_controller_in_loop": true,
+    "zero_handoff_equivalence_not_tested": true,
+    "native_m3dc1_gates_unmapped": true,
+    "pb11_fidelity_not_applicable": true,
+    "raw_data_not_republished": true
+  }
+}
