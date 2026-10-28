@@ -1,0 +1,381 @@
+{
+  "axis_singularity_isolation": {
+    "convergence_flags_all_true": true,
+    "descriptive_only_no_physics_threshold": true,
+    "edge_rho_ge_0p95": {
+      "aminor": {
+        "count": 855,
+        "finite_count": 855,
+        "median": 0.22576474948709396,
+        "q05": 0.21395881935763073,
+        "q95": 0.24254993511928372
+      },
+      "aminor_le_1e_minus_6_cells": 0,
+      "cells": 855,
+      "centroid_outside_grid_cells": 0,
+      "kappa": {
+        "count": 855,
+        "finite_count": 855,
+        "median": 1.5705090842034417,
+        "q05": 1.455961193516844,
+        "q95": 1.686070682836333
+      },
+      "kappa_gt_10_cells": 0
+    },
+    "frames_with_any_kappa_gt_10": 109,
+    "frames_with_interior_centroid_outside_grid": 5,
+    "frames_with_near_axis_kappa_gt_10": 104,
+    "interior_rho_0p05_to_0p95": {
+      "aminor": {
+        "count": 17241,
+        "finite_count": 17241,
+        "median": 0.09555602624189163,
+        "q05": 0.01836295754252354,
+        "q95": 0.20267472901242667
+      },
+      "aminor_le_1e_minus_6_cells": 0,
+      "cells": 17241,
+      "centroid_outside_grid_cells": 5,
+      "kappa": {
+        "count": 17241,
+        "finite_count": 17241,
+        "median": 1.2885815143173365,
+        "q05": 1.1503301756722475,
+        "q95": 1.457662422045241
+      },
+      "kappa_gt_10_cells": 5
+    },
+    "kappa_gt_10_near_axis_cells": 108,
+    "kappa_gt_10_near_axis_share": 0.9557522123893806,
+    "kappa_gt_10_total_cells": 113,
+    "native_solver_or_causal_intervention": false,
+    "near_axis_rho_le_0p05": {
+      "aminor": {
+        "count": 1485,
+        "finite_count": 1485,
+        "median": 0.008493286327677818,
+        "q05": 0.0,
+        "q95": 0.23847994158631797
+      },
+      "aminor_le_1e_minus_6_cells": 321,
+      "cells": 1485,
+      "centroid_outside_grid_cells": 116,
+      "kappa": {
+        "count": 1485,
+        "finite_count": 1485,
+        "median": 1.2408178817712119,
+        "q05": 0.29594831948604006,
+        "q95": 31.42290166222837
+      },
+      "kappa_gt_10_cells": 108
+    },
+    "shared_diagnostic_clock_verified": false
+  },
+  "causal_tct_demonstration": false,
+  "classification": "TCV_FENIX_LIUQE_73927_AXIS_SINGULARITY_ISOLATION_AUDITED",
+  "clock_reference_verified": false,
+  "diagnostic": "LIUQE equilibrium reconstruction paired with TS_73927.mat",
+  "diagnostic_units_verified": false,
+  "experimental_waveforms_ingested": false,
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "TCV",
+  "native_m3dc1_run": false,
+  "next_step": "Assess whether near-axis geometry degeneracy explains extreme kappa; require verified units and native handoff before any M3D-C1 or causal TCT claim.",
+  "observational_status": "single-diagnostic LIUQE equilibrium reconstruction numerical-quality audit; not experimental precursor timing, prospective or controller-in-loop",
+  "parent_plot_script_sha256": "f895cfa6ebc2ff15ba6ed43f924369cfbecdf168a974f242dd2392a91fa1fce3",
+  "parent_result_job_id": "20261028-121-tcv-fenix-shot73927-liuqe-geometry-quality-mask-audit",
+  "parent_ts_median_step_raw": 0.01699995994567871,
+  "parent_ts_time_max_raw": 2.9673399925231934,
+  "parent_ts_time_min_raw": 0.017340000718832016,
+  "parent_ts_time_points": 178,
+  "quality_audit": {
+    "Ip": {
+      "count": 321,
+      "finite_count": 321,
+      "median": -215726.3221878247,
+      "q05": -221740.31111642395,
+      "q95": -139839.52805014284
+    },
+    "LIUQE_converged_false_frames": 0,
+    "LIUQE_converged_true_frames": 321,
+    "L_grid_r_range_raw": [
+      0.6140000224113464,
+      1.1469999551773071
+    ],
+    "L_grid_z_range_raw": [
+      -0.7599999904632568,
+      0.7599999904632568
+    ],
+    "chi": {
+      "count": 321,
+      "finite_count": 321,
+      "median": 0.22690728870213742,
+      "q05": 0.18172657426481673,
+      "q95": 0.3448616846479074
+    },
+    "chih": {
+      "count": 321,
+      "finite_count": 0,
+      "median": null,
+      "q05": null,
+      "q95": null
+    },
+    "diagnostic_units_calibrated": false,
+    "frames": 321,
+    "frames_with_no_interior_surfaces": 0,
+    "interior_centroid_in_grid_fraction_by_frame": {
+      "count": 321,
+      "finite_count": 321,
+      "median": 1.0,
+      "q05": 1.0,
+      "q95": 1.0
+    },
+    "mask_semantics": "Numerical reconstruction-grid compatibility only, not physical equilibrium validity; rho region bounds are descriptive and not frozen M3D-C1 gates.",
+    "niter": {
+      "count": 321,
+      "finite_count": 321,
+      "median": 16.0,
+      "q05": 10.0,
+      "q95": 53.0
+    },
+    "q95": {
+      "count": 321,
+      "finite_count": 321,
+      "median": 4.147762300906565,
+      "q05": 3.9542815161122418,
+      "q95": 6.725445547966273
+    },
+    "raw_signal_values_published": false,
+    "regions": {
+      "all_surfaces": {
+        "aminor": {
+          "count": 19581,
+          "finite_count": 19581,
+          "median": 0.09345831457863374,
+          "q05": 0.011202006696146904,
+          "q95": 0.21821454109177935
+        },
+        "centroid_inside_L_grid_box_cells": 19460,
+        "delta": {
+          "count": 19581,
+          "finite_count": 19581,
+          "median": 0.042899409989795606,
+          "q05": -0.15349127591325085,
+          "q95": 0.23905113972972844
+        },
+        "finite_delta_cells": 19581,
+        "finite_geometry_cells": 19581,
+        "jtorQ": {
+          "count": 19581,
+          "finite_count": 19581,
+          "median": -1641851.7688343355,
+          "q05": -2704228.0510093053,
+          "q95": -126943.6704513854
+        },
+        "kappa": {
+          "count": 19581,
+          "finite_count": 19581,
+          "median": 1.290628914562117,
+          "q05": 1.1258313918963683,
+          "q95": 1.5368158243086285
+        },
+        "nonnegative_minor_radius_cells": 19581,
+        "positive_kappa_cells": 19581,
+        "rgeom": {
+          "count": 19581,
+          "finite_count": 19581,
+          "median": 0.895413766538671,
+          "q05": 0.877109666835586,
+          "q95": 0.910613767239901
+        },
+        "surface_frame_cells": 19581,
+        "zgeom": {
+          "count": 19581,
+          "finite_count": 19581,
+          "median": 0.02293500390717454,
+          "q05": 0.00959711742192077,
+          "q95": 0.060412059042708494
+        }
+      },
+      "axis_near_rho_le_0p05": {
+        "aminor": {
+          "count": 1485,
+          "finite_count": 1485,
+          "median": 0.008493286327677818,
+          "q05": 0.0,
+          "q95": 0.23847994158631797
+        },
+        "centroid_inside_L_grid_box_cells": 1369,
+        "delta": {
+          "count": 1485,
+          "finite_count": 1485,
+          "median": 0.0,
+          "q05": -3.1916918741801483,
+          "q95": 2.055513333141861
+        },
+        "finite_delta_cells": 1485,
+        "finite_geometry_cells": 1485,
+        "jtorQ": {
+          "count": 1485,
+          "finite_count": 1485,
+          "median": -2594740.3132377486,
+          "q05": -2809497.66478446,
+          "q95": -2346416.3514039805
+        },
+        "kappa": {
+          "count": 1485,
+          "finite_count": 1485,
+          "median": 1.2408178817712119,
+          "q05": 0.29594831948604006,
+          "q95": 31.42290166222837
+        },
+        "nonnegative_minor_radius_cells": 1485,
+        "positive_kappa_cells": 1485,
+        "rgeom": {
+          "count": 1485,
+          "finite_count": 1485,
+          "median": 0.9032308962895113,
+          "q05": 0.8818121854665548,
+          "q95": 0.959126784874197
+        },
+        "surface_frame_cells": 1485,
+        "zgeom": {
+          "count": 1485,
+          "finite_count": 1485,
+          "median": 0.02294226361067541,
+          "q05": -0.32889788323321456,
+          "q95": 0.06710234632751787
+        }
+      },
+      "edge_rho_ge_0p95": {
+        "aminor": {
+          "count": 855,
+          "finite_count": 855,
+          "median": 0.22576474948709396,
+          "q05": 0.21395881935763073,
+          "q95": 0.24254993511928372
+        },
+        "centroid_inside_L_grid_box_cells": 855,
+        "delta": {
+          "count": 855,
+          "finite_count": 855,
+          "median": 0.23940797625273041,
+          "q05": 0.1863909833705354,
+          "q95": 0.4126754300828975
+        },
+        "finite_delta_cells": 855,
+        "finite_geometry_cells": 855,
+        "jtorQ": {
+          "count": 855,
+          "finite_count": 855,
+          "median": -69314.40684698777,
+          "q05": -274515.7613440448,
+          "q95": 18163.4265390255
+        },
+        "kappa": {
+          "count": 855,
+          "finite_count": 855,
+          "median": 1.5705090842034417,
+          "q05": 1.455961193516844,
+          "q95": 1.686070682836333
+        },
+        "nonnegative_minor_radius_cells": 855,
+        "positive_kappa_cells": 855,
+        "rgeom": {
+          "count": 855,
+          "finite_count": 855,
+          "median": 0.8771188901681917,
+          "q05": 0.8673043136063308,
+          "q95": 0.8848509164292149
+        },
+        "surface_frame_cells": 855,
+        "zgeom": {
+          "count": 855,
+          "finite_count": 855,
+          "median": 0.01628989097529704,
+          "q05": -0.005373723380222245,
+          "q95": 0.03967973593830148
+        }
+      },
+      "interior_rho_0p05_to_0p95": {
+        "aminor": {
+          "count": 17241,
+          "finite_count": 17241,
+          "median": 0.09555602624189163,
+          "q05": 0.01836295754252354,
+          "q95": 0.20267472901242667
+        },
+        "centroid_inside_L_grid_box_cells": 17236,
+        "delta": {
+          "count": 17241,
+          "finite_count": 17241,
+          "median": 0.04176331873602738,
+          "q05": -0.04834404862004447,
+          "q95": 0.15650074811560405
+        },
+        "finite_delta_cells": 17241,
+        "finite_geometry_cells": 17241,
+        "jtorQ": {
+          "count": 17241,
+          "finite_count": 17241,
+          "median": -1556867.5362255399,
+          "q05": -2683341.678066623,
+          "q95": -232023.71031893927
+        },
+        "kappa": {
+          "count": 17241,
+          "finite_count": 17241,
+          "median": 1.2885815143173365,
+          "q05": 1.1503301756722475,
+          "q95": 1.457662422045241
+        },
+        "nonnegative_minor_radius_cells": 17241,
+        "positive_kappa_cells": 17241,
+        "rgeom": {
+          "count": 17241,
+          "finite_count": 17241,
+          "median": 0.8954937130207281,
+          "q05": 0.8792707194495599,
+          "q95": 0.9099866877489723
+        },
+        "surface_frame_cells": 17241,
+        "zgeom": {
+          "count": 17241,
+          "finite_count": 17241,
+          "median": 0.023131028920410142,
+          "q05": 0.01111262366202767,
+          "q95": 0.060233355077414716
+        }
+      }
+    },
+    "shared_diagnostic_clock_verified": false,
+    "surfaces_per_frame": 61,
+    "time_numeric_range_raw": [
+      0.20000004768371582,
+      1.7999999523162842
+    ]
+  },
+  "raw_data_published": false,
+  "runner_source_sha256": "04a5b9dc4b9996bed79719bfde862f6c9656c44ca0739c5a9f4e63022d5ec9e7",
+  "schema_version": 1,
+  "shot_ids": [
+    73927
+  ],
+  "source": "https://zenodo.org/records/19452938/files/FENIX_data.zip?download=1",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "timestamp_utc": "2026-10-28T10:38:42.504999+00:00",
+  "timing_calibrated": false,
+  "top_level_variables": [
+    "L",
+    "LX",
+    "LY"
+  ],
+  "verified_member": {
+    "compressed_bytes": 32864020,
+    "crc32_verified": true,
+    "format": "MATLAB_v5",
+    "name": "KER_73927_LIUQE.mat",
+    "sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "uncompressed_bytes": 32880432
+  }
+}
