@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261028-120-tcv-fenix-shot73927-liuqe-intradiagnostic-syntax-repair",
+  "parent_result_job_id": "20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit",
+  "enabled": true,
+  "kind": "bounded_tcv_fenix_liuqe_intradiagnostic_profile_audit_syntax_repair",
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_liuqe_intradiagnostic_profile_120.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_liuqe_intradiagnostic_profile_120"
+  ],
+  "summary_path": "validation_runs/tcv_fenix_shot73927_liuqe_intradiagnostic_profile_120/summary.json",
+  "source_id": "zenodo-19452938-tcv-fenix-experimental-recon",
+  "machine": "TCV",
+  "shot_ids": [
+    73927
+  ],
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Exact syntax-only repair of job 119's Python here-document: replace literal backslash-n embedded between summary assignment statements with a real line break; rerun identical bounded LIUQE-only field inventory without cross-diagnostic synchronization claims.",
+  "repair_of_job_id": "20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit",
+  "repair_reason": "Python SyntaxError line 214; runner did not start scientific analysis; no summary produced",
+  "interpretation_contract": {
+    "verified_member_sha256": "7498fcd8b714c0a4d10292043e49d15e413821e60b6ed66618a82f5b306d37d9",
+    "no_cross_diagnostic_synchronization": true,
+    "no_native_m3dc1_or_causal_claim": true,
+    "frozen_gates_unchanged": true,
+    "source_data_not_republished": true
+  }
+}
