@@ -1,0 +1,37 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.5146427154541016,
+  "error": null,
+  "finished_utc": "2026-10-28T08:27:25.949028Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 0,
+    "selected_result_files": []
+  },
+  "head_before": "c750f6afefe7e60f0952e7fb3665a3e9ddedd94d",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit.json",
+  "job_id": "20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit",
+  "log_path": "agent_pipeline/logs/20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit.log",
+  "log_sha256": "439d2d92f6ea073a63d952dbf797008183c1eead04b7153e14127b8be733b332",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/tcv_fenix_shot73927_liuqe_intradiagnostic_profile_119"
+  ],
+  "return_code": 1,
+  "runner": "tools/tct_mechanism_explorer/run_tcv_fenix_shot73927_liuqe_intradiagnostic_profile_119.sh",
+  "runner_sha256": "2ce5caed5e78f317502c6cb049d142e4f250729211be081560fd99393ef442cb",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-28T08:27:25.433479Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/tcv_fenix_shot73927_liuqe_intradiagnostic_profile_119/summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}

@@ -1,0 +1,16 @@
+job_id=20261028-119-tcv-fenix-shot73927-liuqe-intradiagnostic-profile-audit
+started_utc=2026-10-28T08:27:25.433479Z
+head_before=c750f6afefe7e60f0952e7fb3665a3e9ddedd94d
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+  File "<stdin>", line 214
+    summary["intradiagnostic_field_inventory"] = profile_inventory\n    summary["cross_diagnostic_synchronization_assumed"] = False
+                                                                   ^
+SyntaxError: unexpected character after line continuation character
+
+finished_utc=2026-10-28T08:27:25.949004Z
+return_code=1
