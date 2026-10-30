@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "processed_result_job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "processed_result_receipt_sha": "1c1c24d1067c1e1f2152b976eb3a9d9edb3c45bb",
+  "validation_summary_sha256": "c4e61b347b974db6fa379ca70abc0a50bdf6d3ee188dc9361ccf4611c673bd46",
+  "log_sha256": "e51efd0326954df89d4f7798637c425c4cc6ef3bd15964bf59cd2b79b030fc3d",
+  "result_head_before": "c3053da1681f8160c9c78bd29d0096b2bea8a197",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_AMPLITUDE_LINEARITY_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_AMPLITUDE_LINEARITY_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_current_drive_fine_dt_amplitude_linearity_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Eight normalized-native M3D-C1 open-loop source cases; no imported experimental shot, calibrated source-current integral, equilibrium/profile handoff, or segmented controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result": true,
+  "quantitative_result": {
+    "runtime_seconds": 628.4657232761383,
+    "return_code": 0,
+    "native_case_count": 8,
+    "mesh_elements_per_frame": 1004,
+    "dt": 0.000625,
+    "steps": 48,
+    "amplitudes": [
+      -0.01,
+      -0.005,
+      0,
+      0.005,
+      0.01
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "zero_equivalence_max_abs_field_delta": 0,
+    "zero_equivalence_tolerance": 1e-12,
+    "at_t_0p03": {
+      "negative_double_vs_twice_nominal_relative_l2": 0.45385207762441576,
+      "positive_double_vs_twice_nominal_relative_l2": 0.7984159725268004,
+      "negative_nominal_vs_twice_half_relative_l2": 0.0968252539428475,
+      "positive_nominal_vs_twice_half_relative_l2": 0.07079455906107793,
+      "odd_symmetry_residual_half": 0.3247846592921619,
+      "odd_symmetry_residual_nominal": 0.3435493068973803,
+      "odd_symmetry_residual_double": 0.1104844560018777
+    },
+    "amplitude_linearity_established": false,
+    "temporal_convergence_established": false
+  },
+  "successful_milestone": "Eight fixed-dt=0.000625 normalized-native M3D-C1 cases completed in 628.47 seconds on matched 1004-element meshes. Exact zero-source field equivalence passed (max delta 0). Finite signed-amplitude jphi responses were resolved at t=0.01/0.02/0.03. Quantitative amplitude linearity was not established.",
+  "interpretation": "At t=0.03 doubling command magnitude from 0.005 to 0.01 gives fieldwise relative deviations from twice the nominal response of 45.39% negative and 79.84% positive. These are informative deviations from proportional scaling, not solver/pipeline failures; they weaken a simple linear actuator-response surrogate. The native e[2]-weighted proxy remains uncalibrated, and the fixed-dt result cannot establish temporal convergence or a physical current integral.",
+  "mechanism_effect": "native_signed_current_drive_response_supported; simple_amplitude_linearity_weakened; temporal_convergence_physical_current_conservation_and_causal_segmented_TCT_stabilization_neutral_unvalidated",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+  "followup_scope": "One bounded matched-time native W_sheet/Jpk/high-J/reconnection/energy observable audit at the same fine dt with source-off and same-mode-zero controls, preserving frozen width/Jpk thresholds without treating open-loop comparisons as controller authority.",
+  "handoff_equivalence": "unvalidated; zero-source equivalence is not experimental shot handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or net-power evidence",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 fixed-dt jphi amplitude-response diagnostics only; uncalibrated e[2], no temporal convergence, physical injected current, segmented-electrode authority, calibrated shot handoff, causal TCT stabilization or reactor net power.",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "timestamp_utc": "2026-10-30T15:03:55.326Z"
+}
