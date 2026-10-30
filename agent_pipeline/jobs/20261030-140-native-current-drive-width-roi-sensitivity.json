@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-140-native-current-drive-width-roi-sensitivity",
+  "parent_result_job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_width_roi_sensitivity_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_width_roi_sensitivity_140.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_width_roi_140"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_width_roi_140/width_roi_sensitivity_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 139 resolved native HDF5 current-density-derived W_sheet/Jpk changes but no tested case crossed the frozen +0.020% width gate. Test whether these very small open-loop width responses depend on the arbitrary radial sheet ROI (R half-width 0.20/0.25/0.30), using matched native HDF5 jphi fields at dt=0.000625 and the same baseline, zero-source, signed amplitude, source gate, mesh and executable. No solver physics or controller change.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "605b0788369ab968a02787a0b725a3cd628f8a2dc60ebd0c533709380c6054e3",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "normalized_native_m3dc1_only": true,
+    "dt": 0.000625,
+    "steps": 48,
+    "source_mode": 4,
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "amplitudes": [
+      -0.01,
+      -0.005,
+      0,
+      0.005,
+      0.01
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "radial_roi_half_widths": [
+      0.2,
+      0.25,
+      0.3
+    ],
+    "zero_equivalence_tolerance": 1e-12,
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "solver_physics_and_source_profile_unchanged": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "open_loop_metric_gates_not_controller_in_loop": true,
+    "native_hdf5_roi_width_not_calibrated_physical_width": true,
+    "temporal_convergence_unvalidated": true,
+    "calibrated_physical_current_unvalidated": true,
+    "segmented_electrode_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "net_power_unvalidated": true
+  }
+}
