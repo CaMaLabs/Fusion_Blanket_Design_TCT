@@ -1,0 +1,191 @@
+{
+  "amplitudes": [
+    -0.005,
+    0.0,
+    0.005
+  ],
+  "claim_boundary": "Fieldwise temporal sensitivity of normalized-native M3D-C1 jphi actuator response only. e[2] is an uncalibrated mesh weight. Three dt levels allow empirical difference ratios but do not by themselves establish numerical convergence. No physical current conservation, segmented-electrode authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity or reactor-net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_THREE_LEVEL_FIELDWISE_CONVERGENCE_DIAGNOSTIC_COMPLETE",
+  "dt_sequence": [
+    0.0025,
+    0.00125,
+    0.000625
+  ],
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "e2432a3e82ac3392db272ca299934d7f7ed34c5fd6f78a7fbb6accad347a94ed",
+  "fieldwise_convergence_established": false,
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Three matched dt levels with full jphi fieldwise differences and empirical ratios; ratios are diagnostics, not an automatic convergence gate. All field metrics are normalized-native M3D-C1 and e[2] is an uncalibrated weight.",
+  "job_id": "20261030-135-native-current-drive-three-level-fieldwise-convergence",
+  "machine": "normalized-native-M3D-C1",
+  "matched_frames": [
+    {
+      "coarse_odd_symmetry_residual_e2": 0.6980917241340152,
+      "commands": {
+        "negative": {
+          "coarse_medium_difference_linf": 1.823902130126953e-05,
+          "coarse_medium_difference_weighted_l2": 1.5048313278124822e-05,
+          "coarse_medium_weighted_cosine": 0.9951063045668073,
+          "coarse_weighted_l2": 0.00015224016182217363,
+          "difference_ratio_coarse_medium_to_medium_fine": 0.31059907875613657,
+          "empirical_order_log2_ratio": -1.6868745442217885,
+          "fine_weighted_l2": 0.00013627947740352698,
+          "medium_fine_difference_linf": 4.8488378524780273e-05,
+          "medium_fine_difference_weighted_l2": 4.844931716600434e-05,
+          "medium_fine_relative_difference_to_fine_l2": 0.35551440384926547,
+          "medium_fine_weighted_cosine": 0.9491966996730206,
+          "medium_weighted_l2": 0.0001518998301657547,
+          "signed_e2_proxies": {
+            "coarse": -0.0001053711341544109,
+            "fine": -9.444373293631e-05,
+            "medium": -0.00010634471093041779
+          }
+        },
+        "positive": {
+          "coarse_medium_difference_linf": 0.000246196985244751,
+          "coarse_medium_difference_weighted_l2": 0.0002339697523717609,
+          "coarse_medium_weighted_cosine": 0.28357088622961923,
+          "coarse_weighted_l2": 0.00022616718646700654,
+          "difference_ratio_coarse_medium_to_medium_fine": 52.10712083025943,
+          "empirical_order_log2_ratio": 5.703408635999902,
+          "fine_weighted_l2": 0.0001506135211779576,
+          "medium_fine_difference_linf": 6.288755685091019e-06,
+          "medium_fine_difference_weighted_l2": 4.490168496047299e-06,
+          "medium_fine_relative_difference_to_fine_l2": 0.029812519227552847,
+          "medium_fine_weighted_cosine": 0.9995957689020868,
+          "medium_weighted_l2": 0.00015190386517412285,
+          "signed_e2_proxies": {
+            "coarse": 7.751188562928118e-05,
+            "fine": 0.00010624579452182946,
+            "medium": 0.00010633818647461499
+          }
+        }
+      },
+      "fine_odd_symmetry_residual_e2": 0.15953499521225528,
+      "medium_odd_symmetry_residual_e2": 0.0002093140768046057,
+      "mesh_elements": 1004,
+      "time": 0.01
+    },
+    {
+      "coarse_odd_symmetry_residual_e2": 0.41107336862853766,
+      "commands": {
+        "negative": {
+          "coarse_medium_difference_linf": 0.00014638900756835938,
+          "coarse_medium_difference_weighted_l2": 0.00013727250253646057,
+          "coarse_medium_weighted_cosine": 0.6641336763621057,
+          "coarse_weighted_l2": 0.00014841420582485627,
+          "difference_ratio_coarse_medium_to_medium_fine": 2.568347829517604,
+          "empirical_order_log2_ratio": 1.3608405988537413,
+          "fine_weighted_l2": 0.00016902584074393275,
+          "medium_fine_difference_linf": 6.16312026977539e-05,
+          "medium_fine_difference_weighted_l2": 5.344778497632214e-05,
+          "medium_fine_relative_difference_to_fine_l2": 0.3162107328742317,
+          "medium_fine_weighted_cosine": 0.9546651266675601,
+          "medium_weighted_l2": 0.0001793900850496646,
+          "signed_e2_proxies": {
+            "coarse": -9.866140458404977e-05,
+            "fine": -9.073643143533863e-05,
+            "medium": -9.415621801958678e-05
+          }
+        },
+        "positive": {
+          "coarse_medium_difference_linf": 0.00010377168655395508,
+          "coarse_medium_difference_weighted_l2": 8.425168155269525e-05,
+          "coarse_medium_weighted_cosine": 0.9362828751767667,
+          "coarse_weighted_l2": 0.0002055515474185796,
+          "difference_ratio_coarse_medium_to_medium_fine": 1.8124937771490528,
+          "empirical_order_log2_ratio": 0.8579760419184062,
+          "fine_weighted_l2": 0.000212927384832016,
+          "medium_fine_difference_linf": 4.9173831939697266e-05,
+          "medium_fine_difference_weighted_l2": 4.648384596675319e-05,
+          "medium_fine_relative_difference_to_fine_l2": 0.2183084435260665,
+          "medium_fine_weighted_cosine": 0.9837329398000028,
+          "medium_weighted_l2": 0.00023587790008245026,
+          "signed_e2_proxies": {
+            "coarse": 0.00011603347447639846,
+            "fine": 9.766477741397937e-05,
+            "medium": 8.78845357153525e-05
+          }
+        }
+      },
+      "fine_odd_symmetry_residual_e2": 0.1633205927756568,
+      "medium_odd_symmetry_residual_e2": 0.18496798392895297,
+      "mesh_elements": 1004,
+      "time": 0.02
+    },
+    {
+      "coarse_odd_symmetry_residual_e2": 0.35935382150821993,
+      "commands": {
+        "negative": {
+          "coarse_medium_difference_linf": 0.00016319751739501953,
+          "coarse_medium_difference_weighted_l2": 0.0001426014408312731,
+          "coarse_medium_weighted_cosine": 0.9169266821887913,
+          "coarse_weighted_l2": 0.0001538505712178578,
+          "difference_ratio_coarse_medium_to_medium_fine": 0.828552595254047,
+          "empirical_order_log2_ratio": -0.2713348144547593,
+          "fine_weighted_l2": 0.00012103954462640073,
+          "medium_fine_difference_linf": 0.0002053976058959961,
+          "medium_fine_difference_weighted_l2": 0.00017210909922688652,
+          "medium_fine_relative_difference_to_fine_l2": 1.4219245434053513,
+          "medium_fine_weighted_cosine": 0.8851832164138683,
+          "medium_weighted_l2": 0.00026977801203358174,
+          "signed_e2_proxies": {
+            "coarse": -8.700682954709901e-05,
+            "fine": -7.436040389556192e-05,
+            "medium": -9.700778245508601e-05
+          }
+        },
+        "positive": {
+          "coarse_medium_difference_linf": 6.406567990779877e-05,
+          "coarse_medium_difference_weighted_l2": 6.114046979363218e-05,
+          "coarse_medium_weighted_cosine": 0.9763032585803973,
+          "coarse_weighted_l2": 0.0002638881851391162,
+          "difference_ratio_coarse_medium_to_medium_fine": 0.7305717266105012,
+          "empirical_order_log2_ratio": -0.4529021729258658,
+          "fine_weighted_l2": 0.00021753177902043976,
+          "medium_fine_difference_linf": 8.64565372467041e-05,
+          "medium_fine_difference_weighted_l2": 8.368852443454709e-05,
+          "medium_fine_relative_difference_to_fine_l2": 0.3847186135809772,
+          "medium_fine_weighted_cosine": 0.9739531728932191,
+          "medium_weighted_l2": 0.00027947343756584047,
+          "signed_e2_proxies": {
+            "coarse": 0.00011784989073936351,
+            "fine": 0.00011475032355659852,
+            "medium": 0.000104394612207612
+          }
+        }
+      },
+      "fine_odd_symmetry_residual_e2": 0.3435493068973803,
+      "medium_odd_symmetry_residual_e2": 0.031087086639798554,
+      "mesh_elements": 1004,
+      "time": 0.03
+    }
+  ],
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "mesh_elements": [
+    1004
+  ],
+  "parent_result_job_id": "20261030-134-native-current-drive-fieldwise-convergence-audit",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "timestamp_utc": "2026-10-30T10:53:02.328603+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
