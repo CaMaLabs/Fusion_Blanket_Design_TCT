@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+  "processed_result_job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+  "processed_result_receipt_sha": "379284694fef63ec76b7cc05fee4e4158a5ee2a1",
+  "validation_summary_sha256": "605b0788369ab968a02787a0b725a3cd628f8a2dc60ebd0c533709380c6054e3",
+  "log_sha256": "3c38286980ca20fb3055a6078cb25c06ecf040a002886a0118267a2e0d1cd83b",
+  "result_head_before": "a7c1328a751db9fd3664b06a33a307c95b3e7df9",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_current_drive_fine_dt_native_observables_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Six normalized-native M3D-C1 open-loop source cases with no imported experimental shots, calibrated source current, equilibrium/profile handoff, or segmented controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result": true,
+  "quantitative_result": {
+    "runtime_seconds": 485.7862856388092,
+    "return_code": 0,
+    "native_case_count": 6,
+    "dt": 0.000625,
+    "steps": 48,
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "source_mode": 4,
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "signed_amplitudes": [
+      -0.01,
+      -0.005,
+      0,
+      0.005,
+      0.01
+    ],
+    "zero_equivalence_max_abs_metric_delta": 0,
+    "zero_equivalence_tolerance": 1e-12,
+    "at_t_0p03": {
+      "negative_double_width_gain_pct": 0.0038518667623838754,
+      "negative_nominal_width_gain_pct": 0.003255022866642243,
+      "positive_nominal_width_gain_pct": -0.004623594448468442,
+      "positive_double_width_gain_pct": -0.0048954779806644165,
+      "negative_double_jpk_change_pct": -0.013618607318203238,
+      "positive_double_jpk_change_pct": 0.017919220155544816,
+      "reconnection_flux_deltas_all_zero_at_extraction_precision": true,
+      "magnetic_energy_deltas_all_zero_at_extraction_precision": true
+    },
+    "max_width_gain_pct_across_all_cases_and_times": 0.008095595815995046,
+    "frozen_width_gain_threshold_pct_strictly_greater_than": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "frozen_open_loop_both_gates_passed_any": false,
+    "temporal_convergence_established": false,
+    "controller_in_loop_authority_established": false
+  },
+  "successful_milestone": "Six fixed-dt=0.000625 normalized-native M3D-C1 runs completed in 485.79 seconds with zero-source equivalence exact (max metric delta 0). Native HDF5-derived width, peak-J, high-J, center/shoulder and reconnection/energy diagnostics were extracted at three matched times; finite signed current response was observed.",
+  "interpretation": "All 12 tested signed-amplitude/time comparisons failed the frozen width gain >+0.020% gate. The largest extracted width gain was +0.00810% (positive double at t=0.01), and at t=0.03 the largest was +0.00385% (negative double). All Jpk changes stayed within +0.10%. Reconnection flux and magnetic-energy deltas were zero at extraction precision. This is a scientific negative for the open-loop width gate, not a pipeline failure. The ROI-derived W_sheet remains an uncalibrated diagnostic and temporal convergence is unvalidated.",
+  "mechanism_effect": "signed_native_observable_response_supported; frozen_open_loop_width_gate_weakened_not_met; causal_segmented_TCT_stabilization_unvalidated",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-140-native-current-drive-width-roi-sensitivity",
+  "followup_scope": "One bounded native-HDF5 width ROI sensitivity audit across R half-width 0.20/0.25/0.30, with unchanged source, fine dt, signed amplitudes, frozen thresholds and zero-source control; no new solver physics or controller claim.",
+  "handoff_equivalence": "unvalidated; zero-source equivalence is not shot handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or net-power evidence",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 open-loop fixed-dt current-drive metrics only; no calibrated physical current/width, temporal convergence, segmented-electrode authority, experimental shot handoff, causal TCT stabilization or reactor net power.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-30T15:48:12.009Z"
+}
