@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "parent_result_job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_poloidal_triangle_area_crosscheck",
+  "runner": "tools/tct_mechanism_explorer/run_native_mesh_poloidal_area_crosscheck_144.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_geometry_144"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_geometry_144/native_mesh_poloidal_area_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 143 maps Python HDF5 mesh/elements e[2] to native elm_data(3,i)=d%c, not a validated physical area. Source-guard the native triangle mapping and compare shoelace area with 0.5*(a+b)*c on an existing 2-D native HDF5 baseline, quantifying bias of the e[2] altitude proxy. Reuse saved data; zero new solver runs, no source edits or threshold changes. Report missing HDF5 as data-access blocker, not a scientific failure.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_MESH_ELEMENTS_COLUMN2_WRITER_AUDIT_COMPLETE",
+    "expected_parent_summary_sha256": "7eddb653b10c709b0be7e725b9fa8a3b952f56bc7ecccce774a27713e26f3c96",
+    "normalized_native_m3dc1_only": true,
+    "hdf5_python_e2_native_field": "d%c",
+    "expected_native_2d_area_formula": "0.5*(a+b)*c",
+    "existing_native_hdf5_only": true,
+    "no_solver_execution_or_physics_changes": true,
+    "no_assumption_e2_is_area": true,
+    "analytic_poloidal_area_not_physical_current_quadrature": true,
+    "no_int1_or_toroidal_integration_claim": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "net_power_unvalidated": true
+  }
+}
