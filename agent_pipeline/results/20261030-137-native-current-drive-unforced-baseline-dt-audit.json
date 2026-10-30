@@ -1,0 +1,132 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 289.7979426383972,
+  "error": null,
+  "finished_utc": "2026-10-30T13:01:52.965810Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 4314,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_unforced_dt_137/unforced_baseline_dt_summary.json"
+    ]
+  },
+  "head_before": "a2130e68740f92de6e8059e97481120fce2892b8",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261030-137-native-current-drive-unforced-baseline-dt-audit.json",
+  "job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "log_path": "agent_pipeline/logs/20261030-137-native-current-drive-unforced-baseline-dt-audit.log",
+  "log_sha256": "18abacf1d8487b77d51ec47c10a08afd31eda6403484a441504af771ff7dd725",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_unforced_dt_137"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_unforced_baseline_dt_137.sh",
+  "runner_sha256": "0c48d250c0e2086c61a0db6cf84ddac45bd06d6b4f4facf9ae47726c128b54f3",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-30T12:57:03.166664Z",
+  "success": true,
+  "summary": {
+    "claim_boundary": "Three-level unforced baseline jphi field sensitivity in normalized-native M3D-C1 only. No claim of numerical convergence, physical current conservation, segmented TCT controller authority, calibrated experimental shot handoff, p-B11 fidelity, ignition or reactor net power. e[2] is an uncalibrated mesh weight.",
+    "classification": "M3DC1_NATIVE_UNFORCED_BASELINE_DT_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+    "dt_sequence": [
+      0.0025,
+      0.00125,
+      0.000625
+    ],
+    "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "expected_parent_summary_sha256": "763de278fcb2a2cab22830c15ebc5c03feffb114894241b17e378270add8c89a",
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "interpretation": "Unforced baseline jphi three-level field differences isolate background numerical dt sensitivity from commanded-response differences. The two are not interchangeable; fieldwise agreement or disagreement here alone cannot prove causal TCT stabilization or convergence.",
+    "job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+    "machine": "normalized-native-M3D-C1",
+    "matched_frames": [
+      {
+        "coarse_medium_difference_linf": 0.6391487121582031,
+        "coarse_medium_difference_weighted_l2": 0.8536105686284756,
+        "coarse_medium_relative_to_medium_l2": 0.31320410784277286,
+        "coarse_medium_weighted_cosine": 0.9498085571691238,
+        "coarse_weighted_l2": 2.6302319591126926,
+        "difference_ratio_coarse_medium_to_medium_fine": 2.6134333141860613,
+        "empirical_order_log2_ratio": 1.3859463471606348,
+        "fine_weighted_l2": 2.498363773918691,
+        "medium_fine_difference_linf": 0.6309113502502441,
+        "medium_fine_difference_weighted_l2": 0.32662420119731567,
+        "medium_fine_relative_to_fine_l2": 0.13073524544626447,
+        "medium_fine_weighted_cosine": 0.9959515792849122,
+        "medium_weighted_l2": 2.7254130685188347,
+        "mesh_elements": 1004,
+        "time": 0.01
+      },
+      {
+        "coarse_medium_difference_linf": 0.5933744311332703,
+        "coarse_medium_difference_weighted_l2": 0.31384629054013097,
+        "coarse_medium_relative_to_medium_l2": 0.20261054977515028,
+        "coarse_medium_weighted_cosine": 0.9803021213237415,
+        "coarse_weighted_l2": 1.588519867257878,
+        "difference_ratio_coarse_medium_to_medium_fine": 8.19431952073297,
+        "empirical_order_log2_ratio": 3.034624148857937,
+        "fine_weighted_l2": 1.550242182540117,
+        "medium_fine_difference_linf": 0.08994179964065552,
+        "medium_fine_difference_weighted_l2": 0.03830047019109378,
+        "medium_fine_relative_to_fine_l2": 0.02470612051617467,
+        "medium_fine_weighted_cosine": 0.9996948763478051,
+        "medium_weighted_l2": 1.5490125804822406,
+        "mesh_elements": 1004,
+        "time": 0.02
+      },
+      {
+        "coarse_medium_difference_linf": 0.31793707609176636,
+        "coarse_medium_difference_weighted_l2": 0.1376943924350468,
+        "coarse_medium_relative_to_medium_l2": 0.08642476627617086,
+        "coarse_medium_weighted_cosine": 0.9964133216741365,
+        "coarse_weighted_l2": 1.6155089758203085,
+        "difference_ratio_coarse_medium_to_medium_fine": 2.4797542567941933,
+        "empirical_order_log2_ratio": 1.3101971568739152,
+        "fine_weighted_l2": 1.5882860937936554,
+        "medium_fine_difference_linf": 0.13382691144943237,
+        "medium_fine_difference_weighted_l2": 0.055527434647115806,
+        "medium_fine_relative_to_fine_l2": 0.03496059989701688,
+        "medium_fine_weighted_cosine": 0.9993956003705011,
+        "medium_weighted_l2": 1.593228403939717,
+        "mesh_elements": 1004,
+        "time": 0.03
+      }
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "parent_result_job_id": "20261030-136-native-current-drive-fixed-dt-repeatability",
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_amplitude": 0.0,
+    "source_gate": [
+      0.0,
+      0.04
+    ],
+    "source_mode": 4,
+    "temporal_convergence_established": false,
+    "timestamp_utc": "2026-10-30T12:57:05.237714+00:00",
+    "zero_equivalence": {
+      "max_abs_field_delta": 0.0,
+      "pass": true
+    },
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_unforced_dt_137/unforced_baseline_dt_summary.json",
+  "summary_sha256": "32ae1c43472fa2289d5372458cfed16e875039db75411d1d620a3854f182a451",
+  "timed_out": false
+}

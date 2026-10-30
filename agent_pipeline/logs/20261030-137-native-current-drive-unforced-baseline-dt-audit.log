@@ -1,0 +1,112 @@
+job_id=20261030-137-native-current-drive-unforced-baseline-dt-audit
+started_utc=2026-10-30T12:57:03.166664Z
+head_before=a2130e68740f92de6e8059e97481120fce2892b8
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[unforced-baseline-dt] coarse baseline
+[unforced-baseline-dt] coarse same_mode_zero
+[unforced-baseline-dt] medium baseline
+[unforced-baseline-dt] medium same_mode_zero
+[unforced-baseline-dt] fine baseline
+[unforced-baseline-dt] fine same_mode_zero
+{
+  "claim_boundary": "Three-level unforced baseline jphi field sensitivity in normalized-native M3D-C1 only. No claim of numerical convergence, physical current conservation, segmented TCT controller authority, calibrated experimental shot handoff, p-B11 fidelity, ignition or reactor net power. e[2] is an uncalibrated mesh weight.",
+  "classification": "M3DC1_NATIVE_UNFORCED_BASELINE_DT_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+  "dt_sequence": [
+    0.0025,
+    0.00125,
+    0.000625
+  ],
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "763de278fcb2a2cab22830c15ebc5c03feffb114894241b17e378270add8c89a",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Unforced baseline jphi three-level field differences isolate background numerical dt sensitivity from commanded-response differences. The two are not interchangeable; fieldwise agreement or disagreement here alone cannot prove causal TCT stabilization or convergence.",
+  "job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "machine": "normalized-native-M3D-C1",
+  "matched_frames": [
+    {
+      "coarse_medium_difference_linf": 0.6391487121582031,
+      "coarse_medium_difference_weighted_l2": 0.8536105686284756,
+      "coarse_medium_relative_to_medium_l2": 0.31320410784277286,
+      "coarse_medium_weighted_cosine": 0.9498085571691238,
+      "coarse_weighted_l2": 2.6302319591126926,
+      "difference_ratio_coarse_medium_to_medium_fine": 2.6134333141860613,
+      "empirical_order_log2_ratio": 1.3859463471606348,
+      "fine_weighted_l2": 2.498363773918691,
+      "medium_fine_difference_linf": 0.6309113502502441,
+      "medium_fine_difference_weighted_l2": 0.32662420119731567,
+      "medium_fine_relative_to_fine_l2": 0.13073524544626447,
+      "medium_fine_weighted_cosine": 0.9959515792849122,
+      "medium_weighted_l2": 2.7254130685188347,
+      "mesh_elements": 1004,
+      "time": 0.01
+    },
+    {
+      "coarse_medium_difference_linf": 0.5933744311332703,
+      "coarse_medium_difference_weighted_l2": 0.31384629054013097,
+      "coarse_medium_relative_to_medium_l2": 0.20261054977515028,
+      "coarse_medium_weighted_cosine": 0.9803021213237415,
+      "coarse_weighted_l2": 1.588519867257878,
+      "difference_ratio_coarse_medium_to_medium_fine": 8.19431952073297,
+      "empirical_order_log2_ratio": 3.034624148857937,
+      "fine_weighted_l2": 1.550242182540117,
+      "medium_fine_difference_linf": 0.08994179964065552,
+      "medium_fine_difference_weighted_l2": 0.03830047019109378,
+      "medium_fine_relative_to_fine_l2": 0.02470612051617467,
+      "medium_fine_weighted_cosine": 0.9996948763478051,
+      "medium_weighted_l2": 1.5490125804822406,
+      "mesh_elements": 1004,
+      "time": 0.02
+    },
+    {
+      "coarse_medium_difference_linf": 0.31793707609176636,
+      "coarse_medium_difference_weighted_l2": 0.1376943924350468,
+      "coarse_medium_relative_to_medium_l2": 0.08642476627617086,
+      "coarse_medium_weighted_cosine": 0.9964133216741365,
+      "coarse_weighted_l2": 1.6155089758203085,
+      "difference_ratio_coarse_medium_to_medium_fine": 2.4797542567941933,
+      "empirical_order_log2_ratio": 1.3101971568739152,
+      "fine_weighted_l2": 1.5882860937936554,
+      "medium_fine_difference_linf": 0.13382691144943237,
+      "medium_fine_difference_weighted_l2": 0.055527434647115806,
+      "medium_fine_relative_to_fine_l2": 0.03496059989701688,
+      "medium_fine_weighted_cosine": 0.9993956003705011,
+      "medium_weighted_l2": 1.593228403939717,
+      "mesh_elements": 1004,
+      "time": 0.03
+    }
+  ],
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261030-136-native-current-drive-fixed-dt-repeatability",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_amplitude": 0.0,
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "temporal_convergence_established": false,
+  "timestamp_utc": "2026-10-30T12:57:05.237714+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T13:01:52.965778Z
+return_code=0
