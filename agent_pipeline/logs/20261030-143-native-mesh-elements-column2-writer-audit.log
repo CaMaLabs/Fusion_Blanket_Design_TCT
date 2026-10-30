@@ -1,0 +1,165 @@
+job_id=20261030-143-native-mesh-elements-column2-writer-audit
+started_utc=2026-10-30T19:11:31.741776Z
+head_before=d14458b30f0caa4f40fff22ea93004d722224820
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "calibrated_physical_current_validated": false,
+  "calibrated_physical_width_validated": false,
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Targeted native M3D-C1 mesh/elements writer assignments and HDF5 write-layout provenance only. No independent analytic geometry/physical quadrature check, calibrated current or width, timestep convergence, causal segmented TCT stabilization, experimental shot handoff, p-B11 fidelity, ignition or net-power evidence.",
+  "classification": "M3DC1_NATIVE_MESH_ELEMENTS_COLUMN2_WRITER_AUDIT_COMPLETE",
+  "column_three_direct_assignment_candidates": [
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    }
+  ],
+  "elements_writer_call_lines": [
+    887
+  ],
+  "elm_data_assignment_candidates": [
+    {
+      "line": 861,
+      "text": "     elm_data( 1,i) = d%a"
+    },
+    {
+      "line": 862,
+      "text": "     elm_data( 2,i) = d%b"
+    },
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    },
+    {
+      "line": 864,
+      "text": "     elm_data( 4,i) = atan2(d%sn,d%co)"
+    },
+    {
+      "line": 865,
+      "text": "     elm_data( 5,i) = d%R"
+    },
+    {
+      "line": 866,
+      "text": "     elm_data( 6,i) = d%Z"
+    },
+    {
+      "line": 867,
+      "text": "     elm_data( 7,i) = bound"
+    },
+    {
+      "line": 868,
+      "text": "     elm_data( 8,i) = izone"
+    },
+    {
+      "line": 870,
+      "text": "     elm_data( 9,i) = d%d"
+    },
+    {
+      "line": 871,
+      "text": "     elm_data(10,i) = d%Phi"
+    }
+  ],
+  "expected_parent_summary_sha256": "d415bce33aefbfb985cd6775727cfb051a5de19bee4e95f6c387b1f8d393b6a8",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "hdf5_column_to_physical_geometry_validated": false,
+  "hdf5_output_field_definition_lines": [
+    341
+  ],
+  "hdf5_python_e2_column_one_based": 3,
+  "independent_analytic_geometry_check_passed": false,
+  "interpretation": "Captured exact hashed native mesh/elements writer context and output_field layout context. Candidate elm_data assignments are not a validated HDF5-column-to-physical-area mapping. An independent analytic geometry check remains required before interpreting e[2] or R*e[2] as a physical quadrature or using it for current conservation or calibrated width.",
+  "job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "layout_declaration_candidates": [
+    {
+      "line": 811,
+      "text": "  integer, parameter :: vals_per_elm = 10"
+    },
+    {
+      "line": 814,
+      "text": "  integer, parameter :: vals_per_elm = 8"
+    },
+    {
+      "line": 816,
+      "text": "  real, dimension(vals_per_elm,nelms) :: elm_data"
+    },
+    {
+      "line": 817,
+      "text": "  real, dimension(int_pts_main*int_pts_tor,nelms) :: pts_r, pts_phi, pts_z"
+    },
+    {
+      "line": 861,
+      "text": "     elm_data( 1,i) = d%a"
+    },
+    {
+      "line": 862,
+      "text": "     elm_data( 2,i) = d%b"
+    },
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    },
+    {
+      "line": 864,
+      "text": "     elm_data( 4,i) = atan2(d%sn,d%co)"
+    },
+    {
+      "line": 865,
+      "text": "     elm_data( 5,i) = d%R"
+    },
+    {
+      "line": 866,
+      "text": "     elm_data( 6,i) = d%Z"
+    },
+    {
+      "line": 867,
+      "text": "     elm_data( 7,i) = bound"
+    },
+    {
+      "line": 868,
+      "text": "     elm_data( 8,i) = izone"
+    },
+    {
+      "line": 870,
+      "text": "     elm_data( 9,i) = d%d"
+    },
+    {
+      "line": 871,
+      "text": "     elm_data(10,i) = d%Phi"
+    },
+    {
+      "line": 887,
+      "text": "  call output_field(mesh_group_id, \"elements\", elm_data, vals_per_elm, &"
+    }
+  ],
+  "machine": "normalized-native-M3D-C1",
+  "parent_evidence_counts": {
+    "element_weight_geometry": 14,
+    "int1_definition_or_use": 45,
+    "jphi_writer": 29,
+    "mesh_dataset_writer": 33
+  },
+  "parent_result_job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "physics_solver_runs": 0,
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_lineage_status": "TARGETED_WRITER_CONTEXT_CAPTURED_MAPPING_REQUIRES_REVIEW",
+  "source_sha256": {
+    "unstructured/hdf5_output.f90": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6",
+    "unstructured/output.f90": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+  },
+  "source_writer_trace_only": true,
+  "timestamp_utc": "2026-10-30T19:11:32.245957+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T19:11:32.256950Z
+return_code=0

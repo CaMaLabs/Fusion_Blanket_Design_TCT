@@ -1,0 +1,1013 @@
+{
+  "calibrated_physical_current_validated": false,
+  "calibrated_physical_width_validated": false,
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Targeted native M3D-C1 mesh/elements writer assignments and HDF5 write-layout provenance only. No independent analytic geometry/physical quadrature check, calibrated current or width, timestep convergence, causal segmented TCT stabilization, experimental shot handoff, p-B11 fidelity, ignition or net-power evidence.",
+  "classification": "M3DC1_NATIVE_MESH_ELEMENTS_COLUMN2_WRITER_AUDIT_COMPLETE",
+  "column_three_direct_assignment_candidates": [
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    }
+  ],
+  "elements_writer_call_lines": [
+    887
+  ],
+  "elm_data_assignment_candidates": [
+    {
+      "line": 861,
+      "text": "     elm_data( 1,i) = d%a"
+    },
+    {
+      "line": 862,
+      "text": "     elm_data( 2,i) = d%b"
+    },
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    },
+    {
+      "line": 864,
+      "text": "     elm_data( 4,i) = atan2(d%sn,d%co)"
+    },
+    {
+      "line": 865,
+      "text": "     elm_data( 5,i) = d%R"
+    },
+    {
+      "line": 866,
+      "text": "     elm_data( 6,i) = d%Z"
+    },
+    {
+      "line": 867,
+      "text": "     elm_data( 7,i) = bound"
+    },
+    {
+      "line": 868,
+      "text": "     elm_data( 8,i) = izone"
+    },
+    {
+      "line": 870,
+      "text": "     elm_data( 9,i) = d%d"
+    },
+    {
+      "line": 871,
+      "text": "     elm_data(10,i) = d%Phi"
+    }
+  ],
+  "expected_parent_summary_sha256": "d415bce33aefbfb985cd6775727cfb051a5de19bee4e95f6c387b1f8d393b6a8",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "hdf5_column_to_physical_geometry_validated": false,
+  "hdf5_output_field_definition_lines": [
+    341
+  ],
+  "hdf5_python_e2_column_one_based": 3,
+  "hdf5_write_layout_context": [
+    {
+      "line": 337,
+      "text": ""
+    },
+    {
+      "line": 338,
+      "text": ""
+    },
+    {
+      "line": 339,
+      "text": "  ! output_field"
+    },
+    {
+      "line": 340,
+      "text": "  ! ================="
+    },
+    {
+      "line": 341,
+      "text": "  subroutine output_field(parent_id, name, values, ndofs, nelms, error)"
+    },
+    {
+      "line": 342,
+      "text": "    use hdf5"
+    },
+    {
+      "line": 343,
+      "text": "    use mesh_mod"
+    },
+    {
+      "line": 344,
+      "text": "    "
+    },
+    {
+      "line": 345,
+      "text": "    implicit none"
+    },
+    {
+      "line": 346,
+      "text": "    "
+    },
+    {
+      "line": 347,
+      "text": "    integer(HID_T), intent(in) :: parent_id"
+    },
+    {
+      "line": 348,
+      "text": "    character(LEN=*), intent(in) :: name"
+    },
+    {
+      "line": 349,
+      "text": "    integer, intent(in) :: ndofs, nelms"
+    },
+    {
+      "line": 350,
+      "text": "    real, dimension(ndofs, nelms), intent(in) :: values"
+    },
+    {
+      "line": 351,
+      "text": "    integer, intent(out) :: error"
+    },
+    {
+      "line": 352,
+      "text": "    "
+    },
+    {
+      "line": 353,
+      "text": "    integer, parameter ::  rank = 2"
+    },
+    {
+      "line": 354,
+      "text": "    integer(HID_T) :: filespace, memspace, dset_id, plist_id"
+    },
+    {
+      "line": 355,
+      "text": "    integer(HSIZE_T), dimension(rank) :: local_dims, global_dims"
+    },
+    {
+      "line": 356,
+      "text": "    integer(HSSIZE_T), dimension(rank) :: off"
+    },
+    {
+      "line": 357,
+      "text": ""
+    },
+    {
+      "line": 358,
+      "text": "#ifdef USETAU"
+    },
+    {
+      "line": 359,
+      "text": "    integer :: dummy     ! this is necessary to prevent TAU from"
+    },
+    {
+      "line": 360,
+      "text": "    dummy = 0            ! breaking formatting requirements"
+    },
+    {
+      "line": 361,
+      "text": "#endif"
+    },
+    {
+      "line": 362,
+      "text": "    "
+    },
+    {
+      "line": 363,
+      "text": "    local_dims(1) = ndofs"
+    },
+    {
+      "line": 364,
+      "text": "    local_dims(2) = nelms"
+    },
+    {
+      "line": 365,
+      "text": "    global_dims(1) = ndofs"
+    },
+    {
+      "line": 366,
+      "text": "    global_dims(2) = global_elms"
+    },
+    {
+      "line": 367,
+      "text": "    off(1) = 0"
+    },
+    {
+      "line": 368,
+      "text": "    off(2) = offset_elms"
+    },
+    {
+      "line": 369,
+      "text": ""
+    },
+    {
+      "line": 370,
+      "text": "    ! Create global dataset"
+    },
+    {
+      "line": 371,
+      "text": "    call h5screate_simple_f(rank, global_dims, filespace, error)"
+    },
+    {
+      "line": 372,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 373,
+      "text": "       write(*,*) error,rank,\" after h5screate_simple_f\""
+    },
+    {
+      "line": 374,
+      "text": "       call safestop(101)"
+    },
+    {
+      "line": 375,
+      "text": "    endif"
+    },
+    {
+      "line": 376,
+      "text": "    if(idouble_out.eq.1) then"
+    },
+    {
+      "line": 377,
+      "text": "       call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &"
+    },
+    {
+      "line": 378,
+      "text": "            dset_id, error)"
+    },
+    {
+      "line": 379,
+      "text": "    else"
+    },
+    {
+      "line": 380,
+      "text": "       call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &"
+    },
+    {
+      "line": 381,
+      "text": "            dset_id, error)"
+    },
+    {
+      "line": 382,
+      "text": "    end if"
+    },
+    {
+      "line": 383,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 384,
+      "text": "       write(*,*) error,rank,\" after h5dcreate_f\""
+    },
+    {
+      "line": 385,
+      "text": "       call safestop(101)"
+    },
+    {
+      "line": 386,
+      "text": "    endif"
+    },
+    {
+      "line": 387,
+      "text": "    call h5sclose_f(filespace, error)"
+    },
+    {
+      "line": 388,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 389,
+      "text": "       write(*,*) error,rank,\" after hsclose_f\""
+    },
+    {
+      "line": 390,
+      "text": "       call safestop(101)"
+    },
+    {
+      "line": 391,
+      "text": "    endif"
+    },
+    {
+      "line": 392,
+      "text": "    "
+    },
+    {
+      "line": 393,
+      "text": "    ! Select local hyperslab within dataset"
+    },
+    {
+      "line": 394,
+      "text": "    call h5screate_simple_f(rank, local_dims, memspace, error)"
+    },
+    {
+      "line": 395,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 396,
+      "text": "       write(*,*) error,rank,\" after h5screate_simple_f\""
+    },
+    {
+      "line": 397,
+      "text": "       call safestop(102)"
+    },
+    {
+      "line": 398,
+      "text": "    endif"
+    },
+    {
+      "line": 399,
+      "text": "    call h5dget_space_f(dset_id, filespace, error)"
+    },
+    {
+      "line": 400,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 401,
+      "text": "       write(*,*) error,rank,\" after h5dget_space_f\""
+    },
+    {
+      "line": 402,
+      "text": "       call safestop(102)"
+    },
+    {
+      "line": 403,
+      "text": "    endif"
+    },
+    {
+      "line": 404,
+      "text": "    call h5sselect_hyperslab_f(filespace, H5S_SELECT_SET_F, off, local_dims, &"
+    },
+    {
+      "line": 405,
+      "text": "         error)"
+    },
+    {
+      "line": 406,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 407,
+      "text": "       write(*,*) error,rank,\" after h5sselect_hyperslab_f\""
+    },
+    {
+      "line": 408,
+      "text": "       call safestop(102)"
+    },
+    {
+      "line": 409,
+      "text": "    endif"
+    },
+    {
+      "line": 410,
+      "text": "    call h5pcreate_f(H5P_DATASET_XFER_F, plist_id, error)"
+    },
+    {
+      "line": 411,
+      "text": "    if(error.ne.0) then"
+    },
+    {
+      "line": 412,
+      "text": "       write(*,*) error,rank,\" after h5pcreate_f\""
+    },
+    {
+      "line": 413,
+      "text": "       call safestop(102)"
+    },
+    {
+      "line": 414,
+      "text": "    endif"
+    },
+    {
+      "line": 415,
+      "text": "    call h5pset_dxpl_mpio_f(plist_id, H5FD_MPIO_COLLECTIVE_F, error)"
+    }
+  ],
+  "independent_analytic_geometry_check_passed": false,
+  "interpretation": "Captured exact hashed native mesh/elements writer context and output_field layout context. Candidate elm_data assignments are not a validated HDF5-column-to-physical-area mapping. An independent analytic geometry check remains required before interpreting e[2] or R*e[2] as a physical quadrature or using it for current conservation or calibrated width.",
+  "job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "layout_declaration_candidates": [
+    {
+      "line": 811,
+      "text": "  integer, parameter :: vals_per_elm = 10"
+    },
+    {
+      "line": 814,
+      "text": "  integer, parameter :: vals_per_elm = 8"
+    },
+    {
+      "line": 816,
+      "text": "  real, dimension(vals_per_elm,nelms) :: elm_data"
+    },
+    {
+      "line": 817,
+      "text": "  real, dimension(int_pts_main*int_pts_tor,nelms) :: pts_r, pts_phi, pts_z"
+    },
+    {
+      "line": 861,
+      "text": "     elm_data( 1,i) = d%a"
+    },
+    {
+      "line": 862,
+      "text": "     elm_data( 2,i) = d%b"
+    },
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    },
+    {
+      "line": 864,
+      "text": "     elm_data( 4,i) = atan2(d%sn,d%co)"
+    },
+    {
+      "line": 865,
+      "text": "     elm_data( 5,i) = d%R"
+    },
+    {
+      "line": 866,
+      "text": "     elm_data( 6,i) = d%Z"
+    },
+    {
+      "line": 867,
+      "text": "     elm_data( 7,i) = bound"
+    },
+    {
+      "line": 868,
+      "text": "     elm_data( 8,i) = izone"
+    },
+    {
+      "line": 870,
+      "text": "     elm_data( 9,i) = d%d"
+    },
+    {
+      "line": 871,
+      "text": "     elm_data(10,i) = d%Phi"
+    },
+    {
+      "line": 887,
+      "text": "  call output_field(mesh_group_id, \"elements\", elm_data, vals_per_elm, &"
+    }
+  ],
+  "machine": "normalized-native-M3D-C1",
+  "mesh_writer_context": [
+    {
+      "line": 767,
+      "text": ""
+    },
+    {
+      "line": 768,
+      "text": ""
+    },
+    {
+      "line": 769,
+      "text": "  ! Add timeslice link in main file"
+    },
+    {
+      "line": 770,
+      "text": "  ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    },
+    {
+      "line": 771,
+      "text": ""
+    },
+    {
+      "line": 772,
+      "text": "  ! create a link to the file"
+    },
+    {
+      "line": 773,
+      "text": "  if(myrank.eq.0) print *, 'linking ', time_file_name"
+    },
+    {
+      "line": 774,
+      "text": "  call h5gopen_f(file_id, \"/\", root_id, error)"
+    },
+    {
+      "line": 775,
+      "text": "  call h5lcreate_external_f(time_file_name, \"/\", root_id, time_group_name, &"
+    },
+    {
+      "line": 776,
+      "text": "       error)"
+    },
+    {
+      "line": 777,
+      "text": "  "
+    },
+    {
+      "line": 778,
+      "text": "  ! update number of time slices"
+    },
+    {
+      "line": 779,
+      "text": "  if(equilibrium.eq.0) times_output = times_output + 1"
+    },
+    {
+      "line": 780,
+      "text": "  call update_int_attr(root_id, \"ntime\", times_output, error)"
+    },
+    {
+      "line": 781,
+      "text": ""
+    },
+    {
+      "line": 782,
+      "text": "  ! close root group"
+    },
+    {
+      "line": 783,
+      "text": "  call h5gclose_f(root_id, error)"
+    },
+    {
+      "line": 784,
+      "text": "  "
+    },
+    {
+      "line": 785,
+      "text": "  if(myrank.eq.0 .and. iprint.ge.1) print *, '  End of hdf5_write_time_slice '"
+    },
+    {
+      "line": 786,
+      "text": ""
+    },
+    {
+      "line": 787,
+      "text": "end subroutine hdf5_write_time_slice"
+    },
+    {
+      "line": 788,
+      "text": ""
+    },
+    {
+      "line": 789,
+      "text": ""
+    },
+    {
+      "line": 790,
+      "text": "! output_mesh"
+    },
+    {
+      "line": 791,
+      "text": "! ==========="
+    },
+    {
+      "line": 792,
+      "text": "subroutine output_mesh(time_group_id, nelms, error)"
+    },
+    {
+      "line": 793,
+      "text": "  use hdf5"
+    },
+    {
+      "line": 794,
+      "text": "  use hdf5_output"
+    },
+    {
+      "line": 795,
+      "text": "  use mesh_mod"
+    },
+    {
+      "line": 796,
+      "text": "  use basic"
+    },
+    {
+      "line": 797,
+      "text": "  use boundary_conditions"
+    },
+    {
+      "line": 798,
+      "text": "  use nintegrate"
+    },
+    {
+      "line": 799,
+      "text": "  use m3dc1_nint"
+    },
+    {
+      "line": 800,
+      "text": ""
+    },
+    {
+      "line": 801,
+      "text": "  implicit none"
+    },
+    {
+      "line": 802,
+      "text": ""
+    },
+    {
+      "line": 803,
+      "text": "  integer(HID_T), intent(in) :: time_group_id"
+    },
+    {
+      "line": 804,
+      "text": "  integer, intent(in) :: nelms"
+    },
+    {
+      "line": 805,
+      "text": "  integer, intent(out) :: error"
+    },
+    {
+      "line": 806,
+      "text": ""
+    },
+    {
+      "line": 807,
+      "text": "  type(element_data) :: d"
+    },
+    {
+      "line": 808,
+      "text": "  integer(HID_T) :: mesh_group_id"
+    },
+    {
+      "line": 809,
+      "text": "  integer :: i"
+    },
+    {
+      "line": 810,
+      "text": "#ifdef USE3D"
+    },
+    {
+      "line": 811,
+      "text": "  integer, parameter :: vals_per_elm = 10"
+    },
+    {
+      "line": 812,
+      "text": "  real, allocatable :: phi(:)"
+    },
+    {
+      "line": 813,
+      "text": "#else"
+    },
+    {
+      "line": 814,
+      "text": "  integer, parameter :: vals_per_elm = 8"
+    },
+    {
+      "line": 815,
+      "text": "#endif"
+    },
+    {
+      "line": 816,
+      "text": "  real, dimension(vals_per_elm,nelms) :: elm_data"
+    },
+    {
+      "line": 817,
+      "text": "  real, dimension(int_pts_main*int_pts_tor,nelms) :: pts_r, pts_phi, pts_z"
+    },
+    {
+      "line": 818,
+      "text": "  real :: alx, alz"
+    },
+    {
+      "line": 819,
+      "text": ""
+    },
+    {
+      "line": 820,
+      "text": "  integer :: is_edge(3)"
+    },
+    {
+      "line": 821,
+      "text": "  real :: normal(2,3)"
+    },
+    {
+      "line": 822,
+      "text": "  integer :: idim(3)"
+    },
+    {
+      "line": 823,
+      "text": "  real :: bound"
+    },
+    {
+      "line": 824,
+      "text": "  integer :: izone"
+    },
+    {
+      "line": 825,
+      "text": ""
+    },
+    {
+      "line": 826,
+      "text": "  ! Create the group"
+    },
+    {
+      "line": 827,
+      "text": "  call h5gcreate_f(time_group_id, \"mesh\", mesh_group_id, error) "
+    },
+    {
+      "line": 828,
+      "text": ""
+    },
+    {
+      "line": 829,
+      "text": "  ! Write attributes"
+    },
+    {
+      "line": 830,
+      "text": "  call write_int_attr(mesh_group_id, \"nelms\", global_elms, error)"
+    },
+    {
+      "line": 831,
+      "text": "  call get_bounding_box_size(alx, alz)"
+    },
+    {
+      "line": 832,
+      "text": "  call write_real_attr(mesh_group_id, \"width\", alx, error)"
+    },
+    {
+      "line": 833,
+      "text": "  call write_real_attr(mesh_group_id, \"height\", alz, error)"
+    },
+    {
+      "line": 834,
+      "text": "#ifdef USE3D"
+    },
+    {
+      "line": 835,
+      "text": "  call write_int_attr(mesh_group_id, \"3D\", 1, error)"
+    },
+    {
+      "line": 836,
+      "text": "#else"
+    },
+    {
+      "line": 837,
+      "text": "  call write_int_attr(mesh_group_id, \"3D\", 0, error)"
+    },
+    {
+      "line": 838,
+      "text": "#endif"
+    },
+    {
+      "line": 839,
+      "text": "  call write_int_attr(mesh_group_id, \"nplanes\", nplanes, error)"
+    },
+    {
+      "line": 840,
+      "text": ""
+    },
+    {
+      "line": 841,
+      "text": "  call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)"
+    },
+    {
+      "line": 842,
+      "text": "  call write_int_attr(mesh_group_id, \"ifull_torus\", ifull_torus, error)"
+    },
+    {
+      "line": 843,
+      "text": "  call write_int_attr(mesh_group_id, \"version\", version, error)"
+    },
+    {
+      "line": 844,
+      "text": "  call write_real_attr(mesh_group_id, \"period\", toroidal_period, error)"
+    },
+    {
+      "line": 845,
+      "text": ""
+    },
+    {
+      "line": 846,
+      "text": "  ! Output the mesh data"
+    },
+    {
+      "line": 847,
+      "text": "  do i=1, nelms"
+    },
+    {
+      "line": 848,
+      "text": "     ! Since snap operation is default in adapt, it's safe to call"
+    },
+    {
+      "line": 849,
+      "text": "     ! boundary edge when iadapt != 0"
+    },
+    {
+      "line": 850,
+      "text": "     call boundary_edge(i, is_edge, normal, idim)"
+    },
+    {
+      "line": 851,
+      "text": ""
+    },
+    {
+      "line": 852,
+      "text": "     bound = 0."
+    },
+    {
+      "line": 853,
+      "text": "     if(is_edge(1).ne.0) bound = bound + 1. + boundary_type(is_edge(1))*2**3"
+    },
+    {
+      "line": 854,
+      "text": "     if(is_edge(2).ne.0) bound = bound + 2. + boundary_type(is_edge(2))*2**7"
+    },
+    {
+      "line": 855,
+      "text": "     if(is_edge(3).ne.0) bound = bound + 4. + boundary_type(is_edge(3))*2**11"
+    },
+    {
+      "line": 856,
+      "text": ""
+    },
+    {
+      "line": 857,
+      "text": "     call get_element_data(i, d)"
+    },
+    {
+      "line": 858,
+      "text": ""
+    },
+    {
+      "line": 859,
+      "text": "     call get_zone(i, izone)"
+    },
+    {
+      "line": 860,
+      "text": ""
+    },
+    {
+      "line": 861,
+      "text": "     elm_data( 1,i) = d%a"
+    },
+    {
+      "line": 862,
+      "text": "     elm_data( 2,i) = d%b"
+    },
+    {
+      "line": 863,
+      "text": "     elm_data( 3,i) = d%c"
+    },
+    {
+      "line": 864,
+      "text": "     elm_data( 4,i) = atan2(d%sn,d%co)"
+    },
+    {
+      "line": 865,
+      "text": "     elm_data( 5,i) = d%R"
+    },
+    {
+      "line": 866,
+      "text": "     elm_data( 6,i) = d%Z"
+    },
+    {
+      "line": 867,
+      "text": "     elm_data( 7,i) = bound"
+    },
+    {
+      "line": 868,
+      "text": "     elm_data( 8,i) = izone"
+    },
+    {
+      "line": 869,
+      "text": "#ifdef USE3D"
+    },
+    {
+      "line": 870,
+      "text": "     elm_data( 9,i) = d%d"
+    },
+    {
+      "line": 871,
+      "text": "     elm_data(10,i) = d%Phi"
+    },
+    {
+      "line": 872,
+      "text": "#endif"
+    },
+    {
+      "line": 873,
+      "text": ""
+    },
+    {
+      "line": 874,
+      "text": "     if(iwrite_quad_points.eq.1) then"
+    },
+    {
+      "line": 875,
+      "text": "        call define_element_quadrature(i,int_pts_main,int_pts_tor)"
+    },
+    {
+      "line": 876,
+      "text": "        call local_to_global(d, xi_79, zi_79, eta_79, x_79, phi_79, z_79)"
+    },
+    {
+      "line": 877,
+      "text": ""
+    },
+    {
+      "line": 878,
+      "text": "        if(npoints.ne.int_pts_main*int_pts_tor) then"
+    },
+    {
+      "line": 879,
+      "text": "           print *, 'WARNING: INCONSISTENT NPOINTS IN QUADRATURE'"
+    },
+    {
+      "line": 880,
+      "text": "        else"
+    },
+    {
+      "line": 881,
+      "text": "           pts_r(:,i) = x_79(1:npoints)"
+    },
+    {
+      "line": 882,
+      "text": "           pts_z(:,i) = z_79(1:npoints)"
+    },
+    {
+      "line": 883,
+      "text": "           pts_phi(:,i) = phi_79(1:npoints)"
+    },
+    {
+      "line": 884,
+      "text": "        end if"
+    },
+    {
+      "line": 885,
+      "text": "     end if"
+    },
+    {
+      "line": 886,
+      "text": "  end do"
+    },
+    {
+      "line": 887,
+      "text": "  call output_field(mesh_group_id, \"elements\", elm_data, vals_per_elm, &"
+    },
+    {
+      "line": 888,
+      "text": "       nelms, error)"
+    },
+    {
+      "line": 889,
+      "text": ""
+    },
+    {
+      "line": 890,
+      "text": "  ! Output adjacency info"
+    },
+    {
+      "line": 891,
+      "text": "  if(iwrite_adjacency.eq.1) then"
+    },
+    {
+      "line": 892,
+      "text": "     if(iprint.ge.1 .and. myrank.eq.0) then"
+    },
+    {
+      "line": 893,
+      "text": "        print *, 'Calculating mesh adjacency'"
+    },
+    {
+      "line": 894,
+      "text": "     end if"
+    },
+    {
+      "line": 895,
+      "text": "     call populate_adjacency_matrix()"
+    },
+    {
+      "line": 896,
+      "text": "     call output_field_int(mesh_group_id, \"adjacency\", adjacent, max_adj, &"
+    },
+    {
+      "line": 897,
+      "text": "          nelms, error)"
+    },
+    {
+      "line": 898,
+      "text": "     call clear_adjacency_matrix()"
+    },
+    {
+      "line": 899,
+      "text": "  end if"
+    },
+    {
+      "line": 900,
+      "text": ""
+    },
+    {
+      "line": 901,
+      "text": "  if(iwrite_quad_points.eq.1) then"
+    }
+  ],
+  "parent_evidence_counts": {
+    "element_weight_geometry": 14,
+    "int1_definition_or_use": 45,
+    "jphi_writer": 29,
+    "mesh_dataset_writer": 33
+  },
+  "parent_result_job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "physics_solver_runs": 0,
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_lineage_status": "TARGETED_WRITER_CONTEXT_CAPTURED_MAPPING_REQUIRES_REVIEW",
+  "source_sha256": {
+    "unstructured/hdf5_output.f90": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6",
+    "unstructured/output.f90": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+  },
+  "source_writer_trace_only": true,
+  "timestamp_utc": "2026-10-30T19:11:32.245957+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
