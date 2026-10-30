@@ -1,0 +1,242 @@
+job_id=20261030-138-native-current-drive-fine-dt-amplitude-linearity
+started_utc=2026-10-30T14:00:35.131408Z
+head_before=c3053da1681f8160c9c78bd29d0096b2bea8a197
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[fine-dt-amplitude] baseline
+[fine-dt-amplitude] same_mode_zero
+[fine-dt-amplitude] neg_half
+[fine-dt-amplitude] neg_nominal
+[fine-dt-amplitude] neg_double
+[fine-dt-amplitude] pos_half
+[fine-dt-amplitude] pos_nominal
+[fine-dt-amplitude] pos_double
+{
+  "amplitude_linearity_established": false,
+  "amplitude_magnitudes": [
+    0.0025,
+    0.005,
+    0.01
+  ],
+  "claim_boundary": "Amplitude scaling of normalized-native M3D-C1 jphi responses at one fixed fine dt only. e[2] is uncalibrated; no temporal convergence, physical current conservation, segmented-electrode authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity, ignition or reactor-net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_AMPLITUDE_LINEARITY_DIAGNOSTIC_COMPLETE",
+  "dt": 0.000625,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "32ae1c43472fa2289d5372458cfed16e875039db75411d1d620a3854f182a451",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Compare fixed-dt response fields at three signed amplitudes. Scaling residuals and odd symmetry are diagnostic, not pre-approved linearity gates; baseline dt sensitivity and driven response dt sensitivity remain distinct.",
+  "job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "machine": "normalized-native-M3D-C1",
+  "matched_frames": [
+    {
+      "mesh_elements": 1004,
+      "odd_symmetry": {
+        "double": 0.08918308476827594,
+        "half": 0.20321612518652696,
+        "nominal": 0.15953499521225528
+      },
+      "response": {
+        "neg_double": {
+          "max_abs": 0.00032109394669532776,
+          "signed_e2_proxy": -0.00020073019880975486,
+          "weighted_l2": 0.00028204991173572087
+        },
+        "neg_half": {
+          "max_abs": 8.859299123287201e-05,
+          "signed_e2_proxy": -5.254476970490684e-05,
+          "weighted_l2": 7.32923455541269e-05
+        },
+        "neg_nominal": {
+          "max_abs": 0.0001469794660806656,
+          "signed_e2_proxy": -9.444373293631e-05,
+          "weighted_l2": 0.00013627947740352698
+        },
+        "pos_double": {
+          "max_abs": 0.000357150100171566,
+          "signed_e2_proxy": 0.00021485101373297215,
+          "weighted_l2": 0.00029415459459889934
+        },
+        "pos_half": {
+          "max_abs": 6.633996963500977e-05,
+          "signed_e2_proxy": 4.9951705107979826e-05,
+          "weighted_l2": 6.936558413909392e-05
+        },
+        "pos_nominal": {
+          "max_abs": 0.00018280372023582458,
+          "signed_e2_proxy": 0.00010624579452182946,
+          "weighted_l2": 0.0001506135211779576
+        }
+      },
+      "scaling": {
+        "neg": {
+          "double_over_nominal_norm_ratio": 2.0696433322866654,
+          "double_vs_twice_nominal_relative_l2": 0.1212419059708739,
+          "half_nominal_cosine": 0.9609948326924292,
+          "nominal_double_cosine": 0.9929801409782686,
+          "nominal_over_half_norm_ratio": 1.8593957714572478,
+          "nominal_vs_twice_half_relative_l2": 0.2993784497232469
+        },
+        "pos": {
+          "double_over_nominal_norm_ratio": 1.9530424114534881,
+          "double_vs_twice_nominal_relative_l2": 0.054819522914732306,
+          "half_nominal_cosine": 0.8916258799297121,
+          "nominal_double_cosine": 0.9988149428271037,
+          "nominal_over_half_norm_ratio": 2.1713004085130017,
+          "nominal_vs_twice_half_relative_l2": 0.4537316679866596
+        }
+      },
+      "time": 0.01
+    },
+    {
+      "mesh_elements": 1004,
+      "odd_symmetry": {
+        "double": 0.19955868934420576,
+        "half": 0.2479355794118814,
+        "nominal": 0.1633205927756568
+      },
+      "response": {
+        "neg_double": {
+          "max_abs": 0.00026768073439598083,
+          "signed_e2_proxy": -0.00017842087381800674,
+          "weighted_l2": 0.00026785851492019356
+        },
+        "neg_half": {
+          "max_abs": 8.869171142578125e-05,
+          "signed_e2_proxy": -4.417309377758954e-05,
+          "weighted_l2": 9.245923704477723e-05
+        },
+        "neg_nominal": {
+          "max_abs": 0.0001665353775024414,
+          "signed_e2_proxy": -9.073643143533863e-05,
+          "weighted_l2": 0.00016902584074393275
+        },
+        "pos_double": {
+          "max_abs": 0.00029744580388069153,
+          "signed_e2_proxy": 0.000180609937016918,
+          "weighted_l2": 0.00029072112467152584
+        },
+        "pos_half": {
+          "max_abs": 0.00013619661331176758,
+          "signed_e2_proxy": 5.2695387791800315e-05,
+          "weighted_l2": 0.00011452708955462296
+        },
+        "pos_nominal": {
+          "max_abs": 0.00023931264877319336,
+          "signed_e2_proxy": 9.766477741397937e-05,
+          "weighted_l2": 0.000212927384832016
+        }
+      },
+      "scaling": {
+        "neg": {
+          "double_over_nominal_norm_ratio": 1.5847193171249376,
+          "double_vs_twice_nominal_relative_l2": 0.5606345713757234,
+          "half_nominal_cosine": 0.9947592730215971,
+          "nominal_double_cosine": 0.902682675473034,
+          "nominal_over_half_norm_ratio": 1.8281119999084026,
+          "nominal_vs_twice_half_relative_l2": 0.1425049060078437
+        },
+        "pos": {
+          "double_over_nominal_norm_ratio": 1.3653533804535447,
+          "double_vs_twice_nominal_relative_l2": 0.6256763286554109,
+          "half_nominal_cosine": 0.9901947255959772,
+          "nominal_double_cosine": 0.940125447832931,
+          "nominal_over_half_norm_ratio": 1.8591879498558428,
+          "nominal_vs_twice_half_relative_l2": 0.16380518169911706
+        }
+      },
+      "time": 0.02
+    },
+    {
+      "mesh_elements": 1004,
+      "odd_symmetry": {
+        "double": 0.1104844560018777,
+        "half": 0.3247846592921619,
+        "nominal": 0.3435493068973803
+      },
+      "response": {
+        "neg_double": {
+          "max_abs": 0.00022587180137634277,
+          "signed_e2_proxy": -4.627180285549935e-05,
+          "weighted_l2": 0.0002451578312265377
+        },
+        "neg_half": {
+          "max_abs": 6.628036499023438e-05,
+          "signed_e2_proxy": -3.56022849476415e-05,
+          "weighted_l2": 6.252931251712624e-05
+        },
+        "neg_nominal": {
+          "max_abs": 0.0001271963119506836,
+          "signed_e2_proxy": -7.436040389556192e-05,
+          "weighted_l2": 0.00012103954462640073
+        },
+        "pos_double": {
+          "max_abs": 0.0002875328063964844,
+          "signed_e2_proxy": 7.564768594774894e-05,
+          "weighted_l2": 0.0002808675592676538
+        },
+        "pos_half": {
+          "max_abs": 0.00012671947479248047,
+          "signed_e2_proxy": 6.083371918101782e-05,
+          "weighted_l2": 0.00010654647770179856
+        },
+        "pos_nominal": {
+          "max_abs": 0.00025844573974609375,
+          "signed_e2_proxy": 0.00011475032355659852,
+          "weighted_l2": 0.00021753177902043976
+        }
+      },
+      "scaling": {
+        "neg": {
+          "double_over_nominal_norm_ratio": 2.0254358357282247,
+          "double_vs_twice_nominal_relative_l2": 0.45385207762441576,
+          "half_nominal_cosine": 0.9959966410649783,
+          "nominal_double_cosine": 0.8957791736951024,
+          "nominal_over_half_norm_ratio": 1.9357248585333324,
+          "nominal_vs_twice_half_relative_l2": 0.0968252539428475
+        },
+        "pos": {
+          "double_over_nominal_norm_ratio": 1.2911564486458913,
+          "double_vs_twice_nominal_relative_l2": 0.7984159725268004,
+          "half_nominal_cosine": 0.9976543923705633,
+          "nominal_double_cosine": 0.8915208428598159,
+          "nominal_over_half_norm_ratio": 2.0416609137400674,
+          "nominal_vs_twice_half_relative_l2": 0.07079455906107793
+        }
+      },
+      "time": 0.03
+    }
+  ],
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "steps": 48,
+  "temporal_convergence_established": false,
+  "timestamp_utc": "2026-10-30T14:00:36.375166+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T14:11:03.597999Z
+return_code=0
