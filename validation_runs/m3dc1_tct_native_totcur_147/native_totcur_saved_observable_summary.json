@@ -1,0 +1,264 @@
+{
+  "candidate_dataset": "scalars/toroidal_current",
+  "candidate_negative_minus_zero": -7.003545761108398e-07,
+  "candidate_positive_minus_zero": -4.470348358154297e-08,
+  "candidate_terminal_values": {
+    "baseline": -0.2074846625328064,
+    "full_negative": -0.2074853628873825,
+    "full_positive": -0.20748470723628998,
+    "same_mode_zero": -0.2074846625328064
+  },
+  "candidate_zero_minus_baseline": 0.0,
+  "cases": {
+    "baseline": {
+      "c1_h5_size_bytes": 330664,
+      "c1ke_final_time": 0.03,
+      "c1ke_frame_count": 4,
+      "c1ke_sha256": "684f1237acdc17bf259e094671953301d39e8a1c9d23998f66cdeec4548e1aec",
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/baseline",
+      "native_totcur_dataset_candidates": [
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_p",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_w",
+          "shape": [
+            4
+          ]
+        }
+      ],
+      "native_totcur_exact_datasets": [
+        {
+          "count": 4,
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ],
+          "values": [
+            -0.000743711250834167,
+            -0.15111428499221802,
+            -0.2161557972431183,
+            -0.2074846625328064
+          ]
+        }
+      ],
+      "stdout_current_lines": [
+        "Toroidal current =   -7.4371124946060580E-004",
+        "Toroidal current =  -0.15111429190558673",
+        "Toroidal current =  -0.21615579643407468",
+        "Toroidal current =  -0.20748465896280249"
+      ],
+      "stdout_sha256": "97ed8fe3359f4475e84d29e22a9e08246debda9d74b2a474c79945c77045bb0e"
+    },
+    "full_negative": {
+      "c1_h5_size_bytes": 330664,
+      "c1ke_final_time": 0.03,
+      "c1ke_frame_count": 4,
+      "c1ke_sha256": "70ce2e4fa19d131ee86ea333ce4bd530518811b4c8c85a8f2057f0567745b3c6",
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/full_negative",
+      "native_totcur_dataset_candidates": [
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_p",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_w",
+          "shape": [
+            4
+          ]
+        }
+      ],
+      "native_totcur_exact_datasets": [
+        {
+          "count": 4,
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ],
+          "values": [
+            -0.000743711250834167,
+            -0.15111422538757324,
+            -0.21615689992904663,
+            -0.2074853628873825
+          ]
+        }
+      ],
+      "stdout_current_lines": [
+        "Toroidal current =   -7.4371124946060580E-004",
+        "Toroidal current =  -0.15111422437615973",
+        "Toroidal current =  -0.21615690220074835",
+        "Toroidal current =  -0.20748536497273112"
+      ],
+      "stdout_sha256": "1fc9e2c8cce73839758fc3480d037ed1bd20e4e71eceac57161a1d72a0e53554"
+    },
+    "full_positive": {
+      "c1_h5_size_bytes": 330664,
+      "c1ke_final_time": 0.03,
+      "c1ke_frame_count": 4,
+      "c1ke_sha256": "a389f38aaea98bd746c367fd6cbb0559eaa77c518a608773ec101e2c2b42790c",
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/full_positive",
+      "native_totcur_dataset_candidates": [
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_p",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_w",
+          "shape": [
+            4
+          ]
+        }
+      ],
+      "native_totcur_exact_datasets": [
+        {
+          "count": 4,
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ],
+          "values": [
+            -0.000743711250834167,
+            -0.151114359498024,
+            -0.21615588665008545,
+            -0.20748470723628998
+          ]
+        }
+      ],
+      "stdout_current_lines": [
+        "Toroidal current =   -7.4371124946060580E-004",
+        "Toroidal current =  -0.15111435943493415",
+        "Toroidal current =  -0.21615589070747346",
+        "Toroidal current =  -0.20748470095380708"
+      ],
+      "stdout_sha256": "8ec6dcfb63ec23fe69e8c4c64f8aaa1cb5ff1856ac5441e4eade067cb3c7291f"
+    },
+    "same_mode_zero": {
+      "c1_h5_size_bytes": 330664,
+      "c1ke_final_time": 0.03,
+      "c1ke_frame_count": 4,
+      "c1ke_sha256": "684f1237acdc17bf259e094671953301d39e8a1c9d23998f66cdeec4548e1aec",
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/same_mode_zero",
+      "native_totcur_dataset_candidates": [
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_p",
+          "shape": [
+            4
+          ]
+        },
+        {
+          "dtype": "float32",
+          "path": "scalars/toroidal_current_w",
+          "shape": [
+            4
+          ]
+        }
+      ],
+      "native_totcur_exact_datasets": [
+        {
+          "count": 4,
+          "dtype": "float32",
+          "path": "scalars/toroidal_current",
+          "shape": [
+            4
+          ],
+          "values": [
+            -0.000743711250834167,
+            -0.15111428499221802,
+            -0.2161557972431183,
+            -0.2074846625328064
+          ]
+        }
+      ],
+      "stdout_current_lines": [
+        "Toroidal current =   -7.4371124946060580E-004",
+        "Toroidal current =  -0.15111429190558673",
+        "Toroidal current =  -0.21615579643407468",
+        "Toroidal current =  -0.20748465896280249"
+      ],
+      "stdout_sha256": "f707d5e1bd33a4a4153d419d2d7b5b0352fae69cee564bbac00e63bd96f5497c"
+    }
+  },
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Saved normalized-native 2-D M3D-C1 native totcur availability and time-alignment preflight only; no native int2 parity unless directly matched, no calibrated physical current, controller-in-loop TCT, p-B11, ignition or net power.",
+  "classification": "M3DC1_NATIVE_TOTCUR_SAVED_OBSERVABLE_PRESENT_TIMING_UNVERIFIED",
+  "common_exact_native_totcur_datasets": [
+    "scalars/toroidal_current"
+  ],
+  "diagnostics_source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+  "expected_parent_summary_sha256": "437d17c6fce97bb9e32c181b59c62a5cda99db67cd17e9c51dfa358cd94d4124",
+  "final_c1ke_times": [
+    0.03,
+    0.03,
+    0.03,
+    0.03
+  ],
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "hdf5_diagnostic_terminal_time_alignment_verified": false,
+  "interpretation": "Native totcur uses int2(ri2_79,pst79(:,OP_GS))/tpirzero. Saved HDF5 diagnostic availability does not prove terminal time alignment, operator parity, units or physical current conservation; absence is a prerequisite blocker, not a negative TCT result.",
+  "job_id": "20261030-147-native-totcur-saved-observable",
+  "machine": "normalized-native-M3D-C1",
+  "matched_final_c1ke_time": true,
+  "missing_saved_files": [],
+  "native_int2_parity_validated": false,
+  "parent_result_job_id": "20261030-146-native-current-diagnostic-lineage",
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "physics_solver_runs": 0,
+  "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "schema_version": 1,
+  "shot_handoff_validated": false,
+  "shot_ids": [],
+  "source_mode": 4,
+  "temporal_convergence_validated": false,
+  "timestamp_utc": "2026-10-30T23:01:41.241378+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
