@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "20261029-127-native-current-drive-amplitude-response-audit",
+  "parent_result_job_id": "20261029-126-native-current-drive-inwindow-gate-contrast",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_amplitude_response_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_amplitude_response_127.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_amplitude_response_127"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_amplitude_response_127/native_amplitude_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Test whether normalized-native source-mode observables respond proportionally and with sign symmetry to half/full ±0.0025/±0.005 command amplitudes, retaining same-mode zero and no-actuator controls; identify numerical response versus uncalibrated physical forcing.",
+  "interpretation_contract": {
+    "native_solver_required": true,
+    "dt": 0.01,
+    "steps": 3,
+    "source_mode": 4,
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "amplitudes": [
+      -0.005,
+      -0.0025,
+      0,
+      0.0025,
+      0.005
+    ],
+    "zero_equivalence_tolerance": 1e-12,
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "solver_physics_and_source_profile_unchanged": true,
+    "extracted_metric_precision_unverified": true,
+    "do_not_promote_response_to_calibrated_current_or_control_authority": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "normalized_native_m3dc1_only": true,
+    "pb11_fidelity_unvalidated": true
+  }
+}
