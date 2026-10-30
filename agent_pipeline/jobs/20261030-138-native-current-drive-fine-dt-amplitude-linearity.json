@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "parent_result_job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_fine_dt_amplitude_linearity_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_fine_dt_amplitude_linearity_138.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_amplitude_138"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_amplitude_138/fine_dt_amplitude_linearity_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 137 found decreasing unforced raw jphi timestep differences at matched times (coarse/medium-to-medium/fine ratios 2.61, 8.19, 2.48), while result 135 found nonconvergent baseline-subtracted driven-response fields at t=0.03 (negative ratio 0.829, positive ratio 0.731). At the established repeatable fine timestep 0.000625, test response-field scaling for +/-0.0025, +/-0.005, +/-0.01 with identical source mode/gate and zero baseline, to separate finite-amplitude nonlinearities and numerical response sensitivity without changing solver physics. Do not infer temporal convergence from amplitude scaling.",
+  "interpretation_contract": {
+    "normalized_native_m3dc1_only": true,
+    "parent_classification": "M3DC1_NATIVE_UNFORCED_BASELINE_DT_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "32ae1c43472fa2289d5372458cfed16e875039db75411d1d620a3854f182a451",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "dt": 0.000625,
+    "steps": 48,
+    "source_mode": 4,
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "amplitude_magnitudes": [
+      0.0025,
+      0.005,
+      0.01
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "zero_source_equivalence_required": true,
+    "field_zero_equivalence_tolerance": 1e-12,
+    "matched_mesh_required": true,
+    "solver_physics_unchanged": true,
+    "source_profile_unchanged": true,
+    "uncalibrated_e2_weighting": true,
+    "fixed_dt_amplitude_linearity_not_temporal_convergence": true,
+    "no_physical_current_conservation_claim": true,
+    "shot_handoff_unvalidated": true,
+    "no_causal_segmented_tct_claim": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "pb11_fidelity_unvalidated": true
+  }
+}
