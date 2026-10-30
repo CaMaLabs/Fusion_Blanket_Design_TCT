@@ -1,0 +1,250 @@
+job_id=20261029-125-native-current-drive-gate-polarity-isolation
+started_utc=2026-10-30T01:16:15.236189Z
+head_before=0e35269a531bdc56cef74d626d6bba240ea5c0a3
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[gate-polarity] running baseline
+[gate-polarity] running same_mode_zero
+[gate-polarity] running edge_negative
+[gate-polarity] running edge_positive
+[gate-polarity] running extended_negative
+[gate-polarity] running extended_positive
+{
+  "claim_boundary": "Native normalized M3D-C1 source delivery diagnostic only; not an experimental shot handoff, causal TCT stabilization, dimensional lithium result, p-B11 or reactor-net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_GATE_RESPONSE_DIAGNOSTIC_COMPLETE",
+  "command_amplitudes": [
+    -0.005,
+    0.0,
+    0.005
+  ],
+  "comparisons": {
+    "edge_negative_vs_zero": {
+      "max_abs": {
+        "Jint_high": 5.706584000003678e-05,
+        "Jpk": 0.000280000000000058,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.326800820367069e-05,
+        "center_abs_current": 1.5563854709910174e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 3.087441404020508e-05
+      },
+      "max_relative": {
+        "Jint_high": 0.0001370105970962096,
+        "Jpk": 0.00017867740432785898,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 6.567304834804878e-06,
+        "center_abs_current": 1.4893907724235046e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0003115153584237334
+      }
+    },
+    "edge_polarity_difference": {
+      "max_abs": {
+        "Jint_high": 5.854762000007119e-05,
+        "Jpk": 0.0002900000000001235,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 2.654658288658851e-05,
+        "center_abs_current": 3.1014420619923655e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 6.176654721540276e-05
+      },
+      "max_relative": {
+        "Jint_high": 0.00014058749640159885,
+        "Jpk": 0.000185091811921268,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.3139926084653994e-05,
+        "center_abs_current": 2.9679845220098563e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0005673360541803315
+      }
+    },
+    "edge_positive_vs_zero": {
+      "max_abs": {
+        "Jint_high": 1.481780000034405e-06,
+        "Jpk": 1.0000000000065512e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.327857468291782e-05,
+        "center_abs_current": 1.545056591001348e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 3.089213317519768e-05
+      },
+      "max_relative": {
+        "Jint_high": 3.5576373285630147e-06,
+        "Jpk": 6.381335868892591e-06,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 6.5725349559490115e-06,
+        "center_abs_current": 1.478549544698754e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.00028366895896767686
+      }
+    },
+    "extended_negative_vs_zero": {
+      "max_abs": {
+        "Jint_high": 5.706584000003678e-05,
+        "Jpk": 0.000280000000000058,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.326800820367069e-05,
+        "center_abs_current": 1.5563854709910174e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 3.087441404020508e-05
+      },
+      "max_relative": {
+        "Jint_high": 0.0001370105970962096,
+        "Jpk": 0.00017867740432785898,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 6.567304834804878e-06,
+        "center_abs_current": 1.4893907724235046e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0003115153584237334
+      }
+    },
+    "extended_polarity_difference": {
+      "max_abs": {
+        "Jint_high": 5.854762000007119e-05,
+        "Jpk": 0.0002900000000001235,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 2.654658288658851e-05,
+        "center_abs_current": 3.1014420619923655e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 6.176654721540276e-05
+      },
+      "max_relative": {
+        "Jint_high": 0.00014058749640159885,
+        "Jpk": 0.000185091811921268,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.3139926084653994e-05,
+        "center_abs_current": 2.9679845220098563e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0005673360541803315
+      }
+    },
+    "extended_positive_vs_zero": {
+      "max_abs": {
+        "Jint_high": 1.481780000034405e-06,
+        "Jpk": 1.0000000000065512e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.327857468291782e-05,
+        "center_abs_current": 1.545056591001348e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 3.089213317519768e-05
+      },
+      "max_relative": {
+        "Jint_high": 3.5576373285630147e-06,
+        "Jpk": 6.381335868892591e-06,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 6.5725349559490115e-06,
+        "center_abs_current": 1.478549544698754e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.00028366895896767686
+      }
+    },
+    "negative_gate_window_difference": {
+      "max_abs": {
+        "Jint_high": 0.0,
+        "Jpk": 0.0,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 0.0,
+        "center_abs_current": 0.0,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0
+      },
+      "max_relative": {
+        "Jint_high": 0.0,
+        "Jpk": 0.0,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 0.0,
+        "center_abs_current": 0.0,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0
+      }
+    },
+    "positive_gate_window_difference": {
+      "max_abs": {
+        "Jint_high": 0.0,
+        "Jpk": 0.0,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 0.0,
+        "center_abs_current": 0.0,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0
+      },
+      "max_relative": {
+        "Jint_high": 0.0,
+        "Jpk": 0.0,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 0.0,
+        "center_abs_current": 0.0,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0
+      }
+    },
+    "zero_vs_baseline": {
+      "max_abs": {
+        "Jint_high": 0.0,
+        "Jpk": 0.0,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 0.0,
+        "center_abs_current": 0.0,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0
+      },
+      "max_relative": {
+        "Jint_high": 0.0,
+        "Jpk": 0.0,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 0.0,
+        "center_abs_current": 0.0,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 0.0
+      }
+    }
+  },
+  "dt": 0.01,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "gate_windows": {
+    "edge": [
+      0.0,
+      0.02
+    ],
+    "extended": [
+      0.0,
+      0.03
+    ]
+  },
+  "interpretation": "Two-step matched source-mode polarity/gate diagnostic only. Nonzero observable differences indicate a response, not proof of delivered current-drive forcing, control authority, native handoff equivalence, or frozen-gate stabilization.",
+  "machine": "normalized-native-M3D-C1",
+  "parent_result_job_id": "20261029-124-native-feedback-polarity-counterfactual",
+  "physics_equations_unchanged": true,
+  "run_frames": {
+    "baseline": 3,
+    "edge_negative": 3,
+    "edge_positive": 3,
+    "extended_negative": 3,
+    "extended_positive": 3,
+    "same_mode_zero": 3
+  },
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate_changes_only": true,
+  "source_mode": 4,
+  "source_response_observed": true,
+  "steps": 2,
+  "timestamp_utc": "2026-10-30T01:16:16.289404+00:00",
+  "zero_equivalence": {
+    "max_abs_metric_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T01:16:53.429262Z
+return_code=0
