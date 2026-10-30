@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+  "parent_result_job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_fine_dt_native_observables_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_fine_dt_native_observables_139.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_observables_139"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_observables_139/fine_dt_native_observables_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 138 established exact zero-source equivalence but found amplitude-dependent, nonlinearly scaling normalized-native jphi responses at fixed dt=0.000625. Replace the jphi/e[2] proxy with native W_sheet, Jpk, high-J, reconnection, magnetic energy and center/shoulder observables at matched times for ±0.005 and ±0.01, preserving source mode, gate, solver, executable, baseline and same-mode zero control. Open-loop native metric comparisons do not establish physical current calibration, segmented-controller authority or TCT stabilization.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_AMPLITUDE_LINEARITY_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "c4e61b347b974db6fa379ca70abc0a50bdf6d3ee188dc9361ccf4611c673bd46",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "normalized_native_m3dc1_only": true,
+    "dt": 0.000625,
+    "steps": 48,
+    "source_mode": 4,
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "amplitudes": [
+      -0.01,
+      -0.005,
+      0,
+      0.005,
+      0.01
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "solver_physics_and_source_profile_unchanged": true,
+    "extracted_metric_precision_limited": true,
+    "open_loop_metric_gates_not_controller_in_loop": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "temporal_convergence_unvalidated": true,
+    "calibrated_physical_current_unvalidated": true,
+    "segmented_electrode_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "net_power_unvalidated": true
+  }
+}
