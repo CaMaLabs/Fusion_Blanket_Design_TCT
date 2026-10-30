@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-136-native-current-drive-fixed-dt-repeatability",
+  "processed_result_job_id": "20261030-136-native-current-drive-fixed-dt-repeatability",
+  "processed_result_receipt_sha": "3e1f02dd7bb3ef7ca5f3a7fb946ea3f54d5b0006",
+  "validation_summary_sha256": "763de278fcb2a2cab22830c15ebc5c03feffb114894241b17e378270add8c89a",
+  "log_sha256": "b7ca977e34027731fccaaa19e210244f78b471ac182f08a48e86bffd2625dbc5",
+  "result_head_before": "7a4c6155ebbc5addad4d4c0d61726ec3ef84824d",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FIXED_DT_REPEATABILITY_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FIXED_DT_REPEATABILITY_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_current_drive_fixed_dt_repeatability_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "two independent sets of four matched native M3D-C1 cases at one fixed dt; no experimental shot, calibrated current integral, validated equilibrium/profile handoff or segmented controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "quantitative_result": {
+    "runtime_seconds": 625.398041009903,
+    "return_code": 0,
+    "matched_run_count": 8,
+    "mesh_elements_per_frame": 1004,
+    "dt": 0.000625,
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "zero_equivalence_max_abs_field_delta": 0,
+    "zero_equivalence_tolerance": 1e-12,
+    "fixed_dt_repeatability_max_abs_raw_field_delta": 0,
+    "fixed_dt_repeatability_tolerance": 1e-12,
+    "negative_response_relative_weighted_l2_repeat_difference": [
+      0,
+      0,
+      0
+    ],
+    "positive_response_relative_weighted_l2_repeat_difference": [
+      0,
+      0,
+      0
+    ],
+    "fixed_dt_repeatability_pass": true,
+    "temporal_convergence_established": false
+  },
+  "successful_milestone": "Eight normalized-native M3D-C1 cases completed in 625.40 seconds with exact zero-source equivalence and exactly identical raw jphi fields across independent fixed-dt repeats at t=0.01/0.02/0.03 on a matched 1004-element mesh. Deterministic fixed-dt repeatability is established for this configuration.",
+  "interpretation": "The identical repeated fields exclude run-to-run variability as the explanation for result 135's large three-level timestep differences under the tested configuration. This is a reproducibility result, not proof of timestep convergence. Whether the unforced baseline or the driven response dominates the dt sensitivity remains unresolved.",
+  "mechanism_effect": "fixed_dt_repeatability_supported; numerical_temporal_convergence_neutral_unvalidated; physical_current_conservation_and_causal_segmented_TCT_stabilization_neutral_unvalidated",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "followup_scope": "One three-level unforced native M3D-C1 baseline jphi timestep-sensitivity audit, with same-mode zero equivalence, to isolate background solver dt sensitivity from commanded current-drive response dt sensitivity.",
+  "handoff_equivalence": "unvalidated; same-mode zero-source equivalence is not experimental shot handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or net-power evidence",
+  "m3dc1_claim_boundary": "Fixed-dt field repeatability of normalized-native M3D-C1 jphi only; e[2] uncalibrated. No numerical temporal convergence, physical current conservation, segmented-electrode authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity or reactor-net-power claim.",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "timestamp_utc": "2026-10-30T12:55:57.675Z"
+}
