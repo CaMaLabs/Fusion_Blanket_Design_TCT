@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-133-native-current-drive-third-timestep-refinement",
+  "parent_result_job_id": "20261030-132-native-current-drive-second-timestep-refinement",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_third_timestep_refinement_convergence_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_third_timestep_refinement_133.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_timestep_133"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_timestep_133/timestep_refinement_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Third matched native M3D-C1 timestep refinement and four-level convergence-trend diagnostic. At t=0.03, odd-symmetry residual fell 80.11% -> 57.12% -> 35.94%, but signed response and cancellation remain timestep-sensitive. Test dt=0.00125 against 0.0025, retaining the same source profile, amplitudes, gate, mesh, solver physics, and frozen gates. Compare 0.01/0.005/0.0025/0.00125 summaries at matched physical times, without presuming convergence or physical current conservation.",
+  "interpretation_contract": {
+    "normalized_native_m3dc1_only": true,
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_SECOND_TIMESTEP_REFINEMENT_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "6ea6abaa1a7dff2d6e77e18bf675f04f3fdeab164dc4c186c7ba3637698cf530",
+    "expected_parent_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "source_mode": 4,
+    "amplitudes": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "parent_dt": 0.0025,
+    "refined_dt": 0.00125,
+    "steps": 24,
+    "comparison_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "field_zero_equivalence_tolerance": 1e-12,
+    "mesh_correspondence_required": true,
+    "source_profile_and_solver_physics_unchanged": true,
+    "mesh_weights_uncalibrated": true,
+    "do_not_promote_to_physical_current_conservation": true,
+    "do_not_promote_to_numerical_convergence_without_stable_refinement_trend": true,
+    "shot_handoff_unvalidated": true,
+    "no_causal_segmented_tct_claim": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "pb11_fidelity_unvalidated": true
+  }
+}
