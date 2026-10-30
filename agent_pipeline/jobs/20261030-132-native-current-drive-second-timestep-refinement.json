@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-132-native-current-drive-second-timestep-refinement",
+  "parent_result_job_id": "20261030-131-native-current-drive-timestep-refinement",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_second_timestep_refinement_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_second_timestep_refinement_132.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_timestep_132"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_timestep_132/timestep_refinement_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Second matched native M3D-C1 time-step refinement after result 131 found substantial late-time odd-symmetry sensitivity. Test whether opposing signed jphi lobes, mesh-proxy cancellation and sign asymmetry approach timestep convergence at dt=0.0025 versus 0.005 and the earlier 0.01, preserving mesh, source profile, physical end time, solver physics and frozen gates. No causal TCT or physical current-conservation claim.",
+  "interpretation_contract": {
+    "normalized_native_m3dc1_only": true,
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_TIMESTEP_REFINEMENT_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "781ac20f66d764fe88cf067cededa779bc1180295d7590ede35483e715eec0ac",
+    "expected_parent_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "source_mode": 4,
+    "amplitudes": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "parent_dt": 0.005,
+    "refined_dt": 0.0025,
+    "steps": 12,
+    "comparison_times": [
+      0,
+      0.005,
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03
+    ],
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "field_zero_equivalence_tolerance": 1e-12,
+    "mesh_correspondence_required": true,
+    "source_profile_and_solver_physics_unchanged": true,
+    "mesh_weights_uncalibrated": true,
+    "do_not_promote_to_physical_current_conservation": true,
+    "do_not_promote_to_numerical_convergence_without_stable_refinement_trend": true,
+    "shot_handoff_unvalidated": true,
+    "no_causal_segmented_tct_claim": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "pb11_fidelity_unvalidated": true
+  }
+}
