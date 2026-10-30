@@ -1,0 +1,135 @@
+job_id=20261030-136-native-current-drive-fixed-dt-repeatability
+started_utc=2026-10-30T12:25:47.189669Z
+head_before=7a4c6155ebbc5addad4d4c0d61726ec3ef84824d
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[fixed-dt-repeatability] A baseline
+[fixed-dt-repeatability] A same_mode_zero
+[fixed-dt-repeatability] A full_negative
+[fixed-dt-repeatability] A full_positive
+[fixed-dt-repeatability] B baseline
+[fixed-dt-repeatability] B same_mode_zero
+[fixed-dt-repeatability] B full_negative
+[fixed-dt-repeatability] B full_positive
+{
+  "amplitudes": [
+    -0.005,
+    0.0,
+    0.005
+  ],
+  "claim_boundary": "Two independent matched-case repeats at a single fixed dt test numerical repeatability, not temporal convergence. Normalized-native M3D-C1 jphi only; e[2] uncalibrated. No physical current conservation, segmented-electrode controller-in-loop authority, validated experimental handoff, causal TCT stabilization, p-B11 fidelity, ignition or net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FIXED_DT_REPEATABILITY_DIAGNOSTIC_COMPLETE",
+  "dt": 0.000625,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "75ff8d3ecfc1f2724cc3a32430361f94dacb52b4707a259dcefb4eea442da02b",
+  "fixed_dt_repeatability": {
+    "max_abs_raw_field_delta": 0.0,
+    "pass": true
+  },
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Matched independent fixed-dt repeats isolate run-to-run field variability; passing repeatability cannot establish dt convergence. All jphi and e[2] metrics are normalized-native proxies.",
+  "job_id": "20261030-136-native-current-drive-fixed-dt-repeatability",
+  "machine": "normalized-native-M3D-C1",
+  "matched_frames": [
+    {
+      "mesh_elements": 1004,
+      "raw_field_max_abs_differences": {
+        "baseline": 0.0,
+        "full_negative": 0.0,
+        "full_positive": 0.0,
+        "same_mode_zero": 0.0
+      },
+      "response": {
+        "negative": {
+          "max_abs_difference": 0.0,
+          "relative_weighted_l2_difference": 0.0,
+          "weighted_cosine": 0.9999999999999998
+        },
+        "positive": {
+          "max_abs_difference": 0.0,
+          "relative_weighted_l2_difference": 0.0,
+          "weighted_cosine": 1.0000000000000002
+        }
+      },
+      "time": 0.01
+    },
+    {
+      "mesh_elements": 1004,
+      "raw_field_max_abs_differences": {
+        "baseline": 0.0,
+        "full_negative": 0.0,
+        "full_positive": 0.0,
+        "same_mode_zero": 0.0
+      },
+      "response": {
+        "negative": {
+          "max_abs_difference": 0.0,
+          "relative_weighted_l2_difference": 0.0,
+          "weighted_cosine": 1.0000000000000002
+        },
+        "positive": {
+          "max_abs_difference": 0.0,
+          "relative_weighted_l2_difference": 0.0,
+          "weighted_cosine": 1.0
+        }
+      },
+      "time": 0.02
+    },
+    {
+      "mesh_elements": 1004,
+      "raw_field_max_abs_differences": {
+        "baseline": 0.0,
+        "full_negative": 0.0,
+        "full_positive": 0.0,
+        "same_mode_zero": 0.0
+      },
+      "response": {
+        "negative": {
+          "max_abs_difference": 0.0,
+          "relative_weighted_l2_difference": 0.0,
+          "weighted_cosine": 1.0
+        },
+        "positive": {
+          "max_abs_difference": 0.0,
+          "relative_weighted_l2_difference": 0.0,
+          "weighted_cosine": 1.0
+        }
+      },
+      "time": 0.03
+    }
+  ],
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261030-135-native-current-drive-three-level-fieldwise-convergence",
+  "repeatability_max_abs_field_tolerance": 1e-12,
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "steps": 48,
+  "temporal_convergence_established": false,
+  "timestamp_utc": "2026-10-30T12:25:48.378908+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T12:36:12.588463Z
+return_code=0
