@@ -1,0 +1,66 @@
+{
+  "altitude_sum_not_area": 209.5977759435773,
+  "analytic_poloidal_geometry_crosscheck_passed": true,
+  "area_to_e2_ratio_max": 0.29473988711833954,
+  "area_to_e2_ratio_min": 0.03141111880540848,
+  "calibrated_physical_width_validated": false,
+  "candidate_native_hdf5_paths": [
+    "/tmp/m3dc1_tct_native_width_roi_140/baseline/time_000.h5",
+    "/tmp/m3dc1_tct_native_geometry_weight_130_runs/baseline/time_000.h5"
+  ],
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Native 2-D poloidal triangle geometry and existing HDF5 mesh only; no native int1/3-D toroidal quadrature, calibrated jphi integral, physical sheet width, timestep convergence, controller-in-loop causal TCT, experimental shot handoff, p-B11, ignition or reactor-net-power claim.",
+  "classification": "M3DC1_NATIVE_MESH_POLOIDAL_AREA_CROSSCHECK_COMPLETE",
+  "expected_parent_summary_sha256": "7eddb653b10c709b0be7e725b9fa8a3b952f56bc7ecccce774a27713e26f3c96",
+  "experimental_shot_handoff_validated": false,
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "hdf5_e2_is_area": false,
+  "interpretation": "Source-defined e[2] is the rotated triangle altitude c, not area. Independent shoelace areas on an existing native 2-D mesh are compared with 0.5*(a+b)*c. This replaces the e[2]-as-area proxy with a poloidal area candidate only; native int1/toroidal quadrature and physical current/width remain unvalidated.",
+  "job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "machine": "normalized-native-M3D-C1",
+  "max_shoelace_relative_error": 1.89915457529025e-13,
+  "mean_shoelace_relative_error": 2.025739468164054e-14,
+  "native_mesh_element_count": 1004,
+  "native_mesh_elements_shape": [
+    1004,
+    8
+  ],
+  "native_mesh_source_file": "/tmp/m3dc1_tct_native_width_roi_140/baseline/time_000.h5",
+  "native_source_sha256": {
+    "unstructured/basic_mesh.f90": "faa60b01a8b09f9433cf4315ceb1460c249e4bb5b442cc109e231a9ebbe9c95a",
+    "unstructured/element.f90": "8c7012017be530e057d7c9a03fc934714f58bf095aa3e2310bb34a34550b55a3",
+    "unstructured/hdf5_output.f90": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6",
+    "unstructured/output.f90": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+  },
+  "parent_result_job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "pb11_fidelity_validated": false,
+  "physical_current_quadrature_validated": false,
+  "physics_solver_runs": 0,
+  "poloidal_area_max": 0.12694618345749964,
+  "poloidal_area_min": 0.0031373354594732734,
+  "poloidal_area_total": 28.22795112386777,
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_derived_geometry": {
+    "hdf5_python_e2": "d%c, rotated triangle altitude (length), not element area",
+    "poloidal_triangle_area": "0.5*(a+b)*c",
+    "poloidal_triangle_base": "a+b",
+    "vertices": [
+      "(R,Z)",
+      "(R+(a+b)cos(theta),Z+(a+b)sin(theta))",
+      "(R+b*cos(theta)-c*sin(theta),Z+b*sin(theta)+c*cos(theta))"
+    ]
+  },
+  "source_guided_2d_geometry_only": true,
+  "synthetic_shoelace_max_abs_error": 8.881784197001252e-16,
+  "temporal_convergence_validated": false,
+  "timestamp_utc": "2026-10-30T20:18:10.962107+00:00",
+  "triangle_base_coefficient_of_variation": 0.3621148364131302,
+  "triangle_base_max": 0.5894797742366791,
+  "triangle_base_min": 0.06282223761081696,
+  "zero_equivalence_tolerance": 1e-12
+}
