@@ -1,0 +1,414 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 473.61261010169983,
+  "error": null,
+  "finished_utc": "2026-10-30T15:57:29.115771Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 13757,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_width_roi_140/width_roi_sensitivity_summary.json"
+    ]
+  },
+  "head_before": "2b6c98b6c28f6ba49d37c377b652c793835bd44e",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261030-140-native-current-drive-width-roi-sensitivity.json",
+  "job_id": "20261030-140-native-current-drive-width-roi-sensitivity",
+  "log_path": "agent_pipeline/logs/20261030-140-native-current-drive-width-roi-sensitivity.log",
+  "log_sha256": "fdd6ef95befd4a70df641e19d1c1edcca499ac15fd5aab7e56d56a412ff0a971",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_width_roi_140"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_width_roi_sensitivity_140.sh",
+  "runner_sha256": "3ec94921362d88002879fb3d747a82106ae37e9a3a8c2b263ce120f1552265dc",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-30T15:49:35.502341Z",
+  "success": true,
+  "summary": {
+    "amplitudes": [
+      -0.01,
+      -0.005,
+      0.0,
+      0.005,
+      0.01
+    ],
+    "claim_boundary": "Normalized-native M3D-C1 open-loop source response and ROI-derived HDF5 width diagnostic only. Mesh e[2] weights and ROI definition are not validated physical current/width integrals. No temporal convergence, calibrated source current, segmented controller-in-loop authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity, ignition or reactor net power.",
+    "classification": "M3DC1_NATIVE_CURRENT_DRIVE_WIDTH_ROI_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+    "controller_in_loop_authority_established": false,
+    "dt": 0.000625,
+    "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "expected_parent_summary_sha256": "605b0788369ab968a02787a0b725a3cd628f8a2dc60ebd0c533709380c6054e3",
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "interpretation": "Test sensitivity of small native jphi-derived sheet-width gains to radial ROI selection while holding solver physics, source profile, time grid and frozen thresholds fixed. Open-loop diagnostic crossings are not controller passes.",
+    "job_id": "20261030-140-native-current-drive-width-roi-sensitivity",
+    "machine": "normalized-native-M3D-C1",
+    "matched_frames": [
+      {
+        "roi_comparisons": [
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.011707103437585964,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.00945985978130226,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.006491616598092165,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.004406459220107628,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.00506136488798159,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.011276331669174411,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.002768030249322706,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.005823960435780151,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.2,
+            "roi_elements": 117
+          },
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.011707103437585964,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.0066890002549224725,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.006491616598092165,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.003140896911646429,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.00506136488798159,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.008083389290081122,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.002768030249322706,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.004181332038322161,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.25,
+            "roi_elements": 141
+          },
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.011707103437585964,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.002979790996682219,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.006491616598092165,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.0011791554598961085,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.00506136488798159,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.003246243181265207,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.002768030249322706,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.0016931124489416582,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.3,
+            "roi_elements": 181
+          }
+        ],
+        "time": 0.01
+      },
+      {
+        "roi_comparisons": [
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.00951862964313488,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.008098560110814113,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.009159285403248507,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.004405056650713668,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.015403889749676658,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.007814312353171537,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.013383576578762657,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.004903508118436761,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.2,
+            "roi_elements": 117
+          },
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.00951862964313488,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.007429867445774008,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.009159285403248507,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.003941360620829393,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.015403889749676658,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.007008462759994227,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.013383576578762657,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.004341830523124646,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.25,
+            "roi_elements": 141
+          },
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.00951862964313488,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.010121559482967335,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.009159285403248507,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.005453781067887853,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.015403889749676658,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.00883970792128208,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.013383576578762657,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.005360169057178066,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.3,
+            "roi_elements": 181
+          }
+        ],
+        "time": 0.02
+      },
+      {
+        "roi_comparisons": [
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.013543093782630855,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.003718163784194317,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.008057499960267833,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.0027827694154103355,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.017892263962671073,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.004674503415103004,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.015739040219320266,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.0041203427988412145,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.2,
+            "roi_elements": 117
+          },
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.013543093782630855,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.0038090648305288966,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.008057499960267833,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.003188884951055293,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.017892263962671073,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.004894907079988631,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.015739040219320266,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.004679516688399499,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.25,
+            "roi_elements": 141
+          },
+          {
+            "cases": {
+              "neg_double": {
+                "Jpk_change_pct": -0.013543093782630855,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.005338146478273131,
+                "width_gt_0p020_pct": false
+              },
+              "neg_nominal": {
+                "Jpk_change_pct": -0.008057499960267833,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": 0.002987252229580406,
+                "width_gt_0p020_pct": false
+              },
+              "pos_double": {
+                "Jpk_change_pct": 0.017892263962671073,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.006221030954733919,
+                "width_gt_0p020_pct": false
+              },
+              "pos_nominal": {
+                "Jpk_change_pct": 0.015739040219320266,
+                "Jpk_le_0p10_pct": true,
+                "both_frozen_open_loop_metrics": false,
+                "width_gain_pct": -0.003427048021975576,
+                "width_gt_0p020_pct": false
+              }
+            },
+            "radial_half_width": 0.3,
+            "roi_elements": 181
+          }
+        ],
+        "time": 0.03
+      }
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "open_loop_both_frozen_metrics_any": false,
+    "open_loop_width_gate_crossed_any": false,
+    "parent_result_job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+    "radial_roi_center": 10.0,
+    "radial_roi_half_widths": [
+      0.2,
+      0.25,
+      0.3
+    ],
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_gate": [
+      0.0,
+      0.04
+    ],
+    "source_mode": 4,
+    "steps": 48,
+    "temporal_convergence_established": false,
+    "timestamp_utc": "2026-10-30T15:49:36.734366+00:00",
+    "zero_equivalence": {
+      "max_abs_field_delta": 0.0,
+      "pass": true
+    },
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_width_roi_140/width_roi_sensitivity_summary.json",
+  "summary_sha256": "15c1df24ee75906fc306402a5b22fea153bc11534514efc59580c296aa5decac",
+  "timed_out": false
+}
