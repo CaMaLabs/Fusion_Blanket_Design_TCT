@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "job_id": "20261029-125-native-current-drive-gate-polarity-isolation",
+  "parent_result_job_id": "20261029-124-native-feedback-polarity-counterfactual",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_gate_polarity_isolation",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_gate_polarity_125.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_gate_polarity_125"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_gate_polarity_125/native_gate_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "After Job 124 reproduced Job 106's +267.403% Jpk increase under reversed command polarity, isolate whether a native current-drive command produces measurable sign-sensitive response and whether t_off at a step boundary suppresses it. Compare ±0.005 and zero with exact-boundary versus extended gate, same frozen initial state and solver; no control tuning or stabilization claim.",
+  "interpretation_contract": {
+    "native_solver_required": true,
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "source_profile_and_solver_physics_unchanged": true,
+    "diagnostic_gate_extension_only": true,
+    "do_not_promote_gate_response_to_control_authority": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "normalized_native_m3dc1_only": true,
+    "pb11_fidelity_unvalidated": true
+  }
+}
