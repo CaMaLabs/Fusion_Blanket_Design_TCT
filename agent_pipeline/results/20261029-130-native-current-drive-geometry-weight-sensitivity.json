@@ -1,0 +1,250 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 35.13393950462341,
+  "error": null,
+  "finished_utc": "2026-10-30T05:53:07.139603Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 7707,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_geometry_weight_130/native_geometry_weight_summary.json"
+    ]
+  },
+  "head_before": "7171092106b477ce76791f88a3ab800ab94b95bc",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261029-130-native-current-drive-geometry-weight-sensitivity.json",
+  "job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "log_path": "agent_pipeline/logs/20261029-130-native-current-drive-geometry-weight-sensitivity.log",
+  "log_sha256": "a6a0575f11157e967ded57680b2fb81426eed02e30f9a6515b4c727900ac8dc8",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_geometry_weight_130"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_geometry_weight_130.sh",
+  "runner_sha256": "a440048bef4afedbe4a6c7b066e5df919f42e32abe1eece14dc0b74c8bd6e2ca",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-30T05:52:32.004871Z",
+  "success": true,
+  "summary": {
+    "amplitudes": [
+      -0.005,
+      0.0,
+      0.005
+    ],
+    "claim_boundary": "Both e[2] and R*e[2] are uncalibrated mesh-weighted jphi response proxies. R weighting is an axisymmetric geometry sensitivity, NOT independently validated area/current quadrature. No physical current conservation, injected-current calibration, segmented-electrode authority, shot handoff, causal TCT stabilization, p-B11 fidelity or net-power claim.",
+    "classification": "M3DC1_NATIVE_CURRENT_DRIVE_GEOMETRY_WEIGHT_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+    "dt": 0.01,
+    "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "frames": [
+      {
+        "frame": 0,
+        "mesh_elements": 1004,
+        "odd_symmetry_residual_fraction_e2": 0.0,
+        "time": 0.0,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_proxy": 0.0,
+              "positive_lobe_proxy": 0.0,
+              "signed_proxy": 0.0
+            },
+            "full_positive": {
+              "absolute_proxy": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_proxy": 0.0,
+              "positive_lobe_proxy": 0.0,
+              "signed_proxy": 0.0
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_proxy": 0.0,
+              "positive_lobe_proxy": 0.0,
+              "signed_proxy": 0.0
+            },
+            "full_positive": {
+              "absolute_proxy": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_proxy": 0.0,
+              "positive_lobe_proxy": 0.0,
+              "signed_proxy": 0.0
+            }
+          }
+        }
+      },
+      {
+        "frame": 1,
+        "mesh_elements": 1004,
+        "odd_symmetry_residual_fraction_e2": 0.0004500890034543929,
+        "time": 0.01,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.0040562012224248985,
+              "cancellation_fraction": 0.6985941735672525,
+              "negative_lobe_proxy": 0.0026393819520236983,
+              "positive_lobe_proxy": 0.0014168192704012007,
+              "signed_proxy": -0.0012225626816224973
+            },
+            "full_positive": {
+              "absolute_proxy": 0.004058212172523533,
+              "cancellation_fraction": 0.6992649182182171,
+              "negative_lobe_proxy": 0.001418882701465921,
+              "positive_lobe_proxy": 0.002639329471057612,
+              "signed_proxy": 0.0012204467695916912
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.00040589056784023117,
+              "cancellation_fraction": 0.6943825366743752,
+              "negative_lobe_proxy": 0.00026496890678568005,
+              "positive_lobe_proxy": 0.00014092166105455115,
+              "signed_proxy": -0.0001240472457311289
+            },
+            "full_positive": {
+              "absolute_proxy": 0.0004060799172941712,
+              "cancellation_fraction": 0.6950076173232096,
+              "negative_lobe_proxy": 0.00014111431788071398,
+              "positive_lobe_proxy": 0.0002649655994134572,
+              "signed_proxy": 0.00012385128153274323
+            }
+          }
+        }
+      },
+      {
+        "frame": 2,
+        "mesh_elements": 1004,
+        "odd_symmetry_residual_fraction_e2": 0.708990214153444,
+        "time": 0.02,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.004839103022750607,
+              "cancellation_fraction": 0.8046974378145326,
+              "negative_lobe_proxy": 0.00289209612088662,
+              "positive_lobe_proxy": 0.0019470069018639867,
+              "signed_proxy": -0.0009450892190226334
+            },
+            "full_positive": {
+              "absolute_proxy": 0.004432550292452228,
+              "cancellation_fraction": 0.7281450234963991,
+              "negative_lobe_proxy": 0.001613769718423299,
+              "positive_lobe_proxy": 0.0028187805740289285,
+              "signed_proxy": 0.0012050108556056294
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.0004878000952882022,
+              "cancellation_fraction": 0.8106262701927387,
+              "negative_lobe_proxy": 0.00029008830936663325,
+              "positive_lobe_proxy": 0.00019771178592156897,
+              "signed_proxy": -9.237652344506431e-05
+            },
+            "full_positive": {
+              "absolute_proxy": 0.00044314976944747253,
+              "cancellation_fraction": 0.7257697815773385,
+              "negative_lobe_proxy": 0.00016081235568897,
+              "positive_lobe_proxy": 0.0002823374137585025,
+              "signed_proxy": 0.0001215250580695325
+            }
+          }
+        }
+      },
+      {
+        "frame": 3,
+        "mesh_elements": 1004,
+        "odd_symmetry_residual_fraction_e2": 0.8010518976954425,
+        "time": 0.03,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.005007898132381847,
+              "cancellation_fraction": 0.7868623301347994,
+              "negative_lobe_proxy": 0.0030376349356200016,
+              "positive_lobe_proxy": 0.001970263196761845,
+              "signed_proxy": -0.0010673717388581566
+            },
+            "full_positive": {
+              "absolute_proxy": 0.004026024418233468,
+              "cancellation_fraction": 0.7743323883621659,
+              "negative_lobe_proxy": 0.0015587405516875607,
+              "positive_lobe_proxy": 0.0024672838665459077,
+              "signed_proxy": 0.0009085433148583473
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy": 0.000503237619681735,
+              "cancellation_fraction": 0.7953232479266547,
+              "negative_lobe_proxy": 0.00030311933059965694,
+              "positive_lobe_proxy": 0.00020011828908207804,
+              "signed_proxy": -0.00010300104151757892
+            },
+            "full_positive": {
+              "absolute_proxy": 0.00040249666650648506,
+              "cancellation_fraction": 0.7718152827502042,
+              "negative_lobe_proxy": 0.00015532653923285868,
+              "positive_lobe_proxy": 0.0002471701272736264,
+              "signed_proxy": 9.184358804076767e-05
+            }
+          }
+        }
+      }
+    ],
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "gate_window": [
+      0.0,
+      0.04
+    ],
+    "interpretation": "Independent re-run and per-frame comparison of native jphi response using both e[2] and R*e[2] positive weights tests whether opposing-lobe cancellation is robust to an axisymmetric geometry factor. These are NOT independently validated physical area, volume, toroidal-current or source int1 quadratures.",
+    "job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "machine": "normalized-native-M3D-C1",
+    "mesh_element_attrs": {},
+    "mesh_elements_shape": [
+      1004,
+      8
+    ],
+    "mesh_group_keys": [
+      "adjacency",
+      "elements"
+    ],
+    "observed_time_samples": [
+      0.0,
+      0.01,
+      0.02,
+      0.03
+    ],
+    "parent_result_job_id": "20261029-129-native-current-drive-current-balance-audit",
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_mode": 4,
+    "steps": 3,
+    "timestamp_utc": "2026-10-30T05:52:33.070535+00:00",
+    "zero_equivalence": {
+      "max_abs_field_delta": 0.0,
+      "pass": true
+    },
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_geometry_weight_130/native_geometry_weight_summary.json",
+  "summary_sha256": "9ee23732ec6a4976da647980155fc6228d3de6f687cfbf317aa1202e86ef693e",
+  "timed_out": false
+}
