@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "processed_result_job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "processed_result_receipt_sha": "5ee64fcc95389b9fe853696e0f97c57779431be4",
+  "validation_summary_sha256": "d415bce33aefbfb985cd6775727cfb051a5de19bee4e95f6c387b1f8d393b6a8",
+  "log_sha256": "3095186d60b7ee7a5dce5405edc2941f5f726cc43908d00b3c994af11b067d3b",
+  "result_head_before": "e40696f5068ab915d3b9b1fcf5803853c956543e",
+  "classification": "M3DC1_NATIVE_MESH_HDF5_COLUMN_LINEAGE_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_MESH_HDF5_COLUMN_LINEAGE_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_mesh_hdf5_column_lineage_source_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Source-only normalized-native M3D-C1 provenance audit; no imported shot, new physics solver run, or controller-in-loop experiment.",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "runtime_seconds": 1.065950632095337,
+    "return_code": 0,
+    "native_source_files_scanned": 182,
+    "physics_solver_runs": 0,
+    "source_context_counts": {
+      "mesh_dataset_writer": 33,
+      "element_weight_geometry": 14,
+      "int1_definition_or_use": 45,
+      "jphi_writer": 29
+    },
+    "parent_mesh_elements_shape": [
+      1004,
+      8
+    ],
+    "hdf5_column_to_geometry_mapping_validated": false,
+    "independent_analytic_geometry_check_passed": false,
+    "physical_quadrature_validated": false,
+    "calibrated_physical_current_validated": false,
+    "calibrated_physical_width_validated": false
+  },
+  "successful_milestone": "Completed a hashed native source-lineage trace of the HDF5 mesh writer, candidate element weights, int1 calls and jphi definitions in 1.066 seconds. This improves traceability but does not validate physical geometry or current.",
+  "interpretation": "Source contexts are candidates only: the 33 mesh writer, 14 geometry/weight, 45 int1 and 29 jphi excerpts do not prove the HDF5 third-column e[2] meaning or a physical area/current quadrature. Mechanism assessment is neutral; independent analytic geometry and output-layout checks remain prerequisites.",
+  "mechanism_effect": "source_lineage_traced; physical_quadrature_unvalidated; causal_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "followup_scope": "One bounded source-only trace of exact elm_data assignments and HDF5 output_field column layout for Python e[2]; no solver runs, physics edits, gate changes or physical-current promotion.",
+  "handoff_equivalence": "unvalidated; no imported shots or native equilibrium/profile handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or reactor net-power evidence",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 source-level provenance only. No independent geometry calibration of e[2], R*e[2], int1 or jphi; no temporal convergence, causal segmented controller-in-loop authority, shot handoff or physical sheet-width validation.",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "timestamp_utc": "2026-10-30T19:09:51.764Z"
+}
