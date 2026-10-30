@@ -1,0 +1,125 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.665194034576416,
+  "error": null,
+  "finished_utc": "2026-10-30T22:21:21.288094Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 4019,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_current_lineage_146/native_current_diagnostic_lineage_summary.json"
+    ]
+  },
+  "head_before": "a86ddaf2640f9cedf41b1d4eb5069ed40d9ac1b0",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261030-146-native-current-diagnostic-lineage.json",
+  "job_id": "20261030-146-native-current-diagnostic-lineage",
+  "log_path": "agent_pipeline/logs/20261030-146-native-current-diagnostic-lineage.log",
+  "log_sha256": "e9b592310c9092deed9918abdc57f61f27f0dc47dbadaa77fe9459d160ebcae7",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_current_lineage_146"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_current_diagnostic_lineage_146.sh",
+  "runner_sha256": "2c335d3dd91f94d7c347a4146f4fbbb6249c6c69f78add0a23c2f40888ab18b9",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-30T22:21:20.622091Z",
+  "success": true,
+  "summary": {
+    "calibrated_physical_current_validated": false,
+    "calibrated_physical_width_validated": false,
+    "causal_segmented_controller_authority_validated": false,
+    "claim_boundary": "Native M3D-C1 toroidal-current source callsite and saved 2-D jphi schema only; no int2 parity, physical current calibration, causal segmented TCT, shot handoff, p-B11, ignition or net power.",
+    "classification": "M3DC1_NATIVE_CURRENT_DIAGNOSTIC_LINEAGE_COMPLETE",
+    "diagnostics_source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "expected_parent_summary_sha256": "dbd5b0a8419fd2a5bc56721c562f98d393d4a792a648f9c366a99dd40a9135de",
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "interpretation": "The native totcur expression uses int2 with flux-derived fields, not the saved area*jphi proxy. This maps a prerequisite, not physical-current or controller authority.",
+    "job_id": "20261030-146-native-current-diagnostic-lineage",
+    "machine": "normalized-native-M3D-C1",
+    "native_int2_physical_current_parity_validated": false,
+    "native_totcur_callsites": [
+      {
+        "context": "932:      parea  = parea  + int2(ri_79,mr)/tpirzero\n933: \n934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.",
+        "line": 935
+      }
+    ],
+    "parent_area_signed_t003": {
+      "full_negative": -1.0335808949528071e-05,
+      "full_positive": 8.065002291788639e-06
+    },
+    "parent_cancellation_shift": 0.03523169956936323,
+    "parent_result_job_id": "20261030-145-native-poloidal-area-weighted-jphi-response",
+    "parent_zero_max_abs_field_delta": 0.0,
+    "pb11_fidelity_validated": false,
+    "physics_solver_runs": 0,
+    "saved_hdf5_3d_flag": 0,
+    "saved_hdf5_current_named_datasets": [
+      {
+        "path": "fields/jphi",
+        "shape": [
+          1004,
+          20
+        ]
+      }
+    ],
+    "saved_hdf5_jphi_shape": [
+      1004,
+      20
+    ],
+    "saved_hdf5_mesh_shape": [
+      1004,
+      8
+    ],
+    "saved_native_hdf5_path": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/baseline/time_003.h5",
+    "schema_version": 1,
+    "shot_handoff_validated": false,
+    "shot_ids": [],
+    "targeted_quadrature_definition_candidates": [
+      {
+        "file": "m3dc1_nint.f90",
+        "hits": [],
+        "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+      },
+      {
+        "file": "nintegrate_mod.f90",
+        "hits": [
+          {
+            "context": "506: end function int0\n507: !==============================================\n508: !DEC$ ATTRIBUTES FORCEINLINE :: int1\n509: pure vectype function int1(vari)\n510: \n511:   implicit none\n512: ",
+            "line": 509
+          },
+          {
+            "context": "518:   do k=1, npoints\n519:      int1 = int1 + vari(k)*weight_79(k)\n520:   enddo\n521: end function int1\n522: !==============================================\n523: !DEC$ ATTRIBUTES FORCEINLINE :: int2\n524: pure vectype function int2(vari,varj)",
+            "line": 521
+          },
+          {
+            "context": "521: end function int1\n522: !==============================================\n523: !DEC$ ATTRIBUTES FORCEINLINE :: int2\n524: pure vectype function int2(vari,varj)\n525: \n526:   implicit none\n527: ",
+            "line": 524
+          },
+          {
+            "context": "533:   do k=1, npoints\n534:      int2 = int2 + vari(k)*varj(k)*weight_79(k)\n535:   enddo\n536: end function int2\n537: !==============================================\n538: !DEC$ ATTRIBUTES FORCEINLINE :: int3\n539: pure vectype function int3(vari,varj,vark)",
+            "line": 536
+          }
+        ],
+        "sha256": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+      }
+    ],
+    "temporal_convergence_validated": false,
+    "timestamp_utc": "2026-10-30T22:21:21.146524+00:00",
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_current_lineage_146/native_current_diagnostic_lineage_summary.json",
+  "summary_sha256": "437d17c6fce97bb9e32c181b59c62a5cda99db67cd17e9c51dfa358cd94d4124",
+  "timed_out": false
+}
