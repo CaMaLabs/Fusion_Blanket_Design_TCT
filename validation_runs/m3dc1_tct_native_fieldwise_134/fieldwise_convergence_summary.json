@@ -1,0 +1,129 @@
+{
+  "amplitudes": [
+    -0.005,
+    0.0,
+    0.005
+  ],
+  "claim_boundary": "Fieldwise temporal sensitivity of normalized-native M3D-C1 jphi actuator response only. e[2] is an uncalibrated mesh weight. Two dt levels do not establish numerical convergence. No physical current conservation, segmented-electrode authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity or reactor-net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FIELDWISE_CONVERGENCE_DIAGNOSTIC_COMPLETE",
+  "dt_sequence": [
+    0.0025,
+    0.00125
+  ],
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "50257f670456fcac1733fbcdb0dd74f22b571b23f25cd757924158123860f7d1",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Direct matched-mesh fieldwise response comparison of dt=0.0025 versus dt=0.00125 at three times; descriptive sensitivity only. No numerical convergence gate is passed from two resolutions.",
+  "job_id": "20261030-134-native-current-drive-fieldwise-convergence-audit",
+  "machine": "normalized-native-M3D-C1",
+  "matched_frames": [
+    {
+      "coarse_odd_symmetry_residual_e2": 0.6980917241340152,
+      "commands": {
+        "negative": {
+          "coarse_signed_e2_proxy": -0.0001053711341544109,
+          "coarse_weighted_l2": 0.00015224016182217363,
+          "difference_linf": 1.823902130126953e-05,
+          "difference_weighted_l2": 1.5048313278124822e-05,
+          "fine_signed_e2_proxy": -0.00010634471093041779,
+          "fine_weighted_l2": 0.0001518998301657547,
+          "relative_difference_to_fine_l2": 0.09906734761786068,
+          "weighted_spatial_correlation": 0.9951063045668073
+        },
+        "positive": {
+          "coarse_signed_e2_proxy": 7.751188562928118e-05,
+          "coarse_weighted_l2": 0.00022616718646700654,
+          "difference_linf": 0.000246196985244751,
+          "difference_weighted_l2": 0.0002339697523717609,
+          "fine_signed_e2_proxy": 0.00010633818647461499,
+          "fine_weighted_l2": 0.00015190386517412285,
+          "relative_difference_to_fine_l2": 1.5402488416181404,
+          "weighted_spatial_correlation": 0.28357088622961923
+        }
+      },
+      "fine_odd_symmetry_residual_e2": 0.0002093140768046057,
+      "mesh_elements": 1004,
+      "time": 0.01
+    },
+    {
+      "coarse_odd_symmetry_residual_e2": 0.41107336862853766,
+      "commands": {
+        "negative": {
+          "coarse_signed_e2_proxy": -9.866140458404977e-05,
+          "coarse_weighted_l2": 0.00014841420582485627,
+          "difference_linf": 0.00014638900756835938,
+          "difference_weighted_l2": 0.00013727250253646057,
+          "fine_signed_e2_proxy": -9.415621801958678e-05,
+          "fine_weighted_l2": 0.0001793900850496646,
+          "relative_difference_to_fine_l2": 0.7652178909355906,
+          "weighted_spatial_correlation": 0.6641336763621057
+        },
+        "positive": {
+          "coarse_signed_e2_proxy": 0.00011603347447639846,
+          "coarse_weighted_l2": 0.0002055515474185796,
+          "difference_linf": 0.00010377168655395508,
+          "difference_weighted_l2": 8.425168155269525e-05,
+          "fine_signed_e2_proxy": 8.78845357153525e-05,
+          "fine_weighted_l2": 0.00023587790008245026,
+          "relative_difference_to_fine_l2": 0.35718344755165865,
+          "weighted_spatial_correlation": 0.9362828751767667
+        }
+      },
+      "fine_odd_symmetry_residual_e2": 0.18496798392895297,
+      "mesh_elements": 1004,
+      "time": 0.02
+    },
+    {
+      "coarse_odd_symmetry_residual_e2": 0.35935382150821993,
+      "commands": {
+        "negative": {
+          "coarse_signed_e2_proxy": -8.700682954709901e-05,
+          "coarse_weighted_l2": 0.0001538505712178578,
+          "difference_linf": 0.00016319751739501953,
+          "difference_weighted_l2": 0.0001426014408312731,
+          "fine_signed_e2_proxy": -9.700778245508601e-05,
+          "fine_weighted_l2": 0.00026977801203358174,
+          "relative_difference_to_fine_l2": 0.5285880778657461,
+          "weighted_spatial_correlation": 0.9169266821887913
+        },
+        "positive": {
+          "coarse_signed_e2_proxy": 0.00011784989073936351,
+          "coarse_weighted_l2": 0.0002638881851391162,
+          "difference_linf": 6.406567990779877e-05,
+          "difference_weighted_l2": 6.114046979363218e-05,
+          "fine_signed_e2_proxy": 0.000104394612207612,
+          "fine_weighted_l2": 0.00027947343756584047,
+          "relative_difference_to_fine_l2": 0.218770235647988,
+          "weighted_spatial_correlation": 0.9763032585803973
+        }
+      },
+      "fine_odd_symmetry_residual_e2": 0.031087086639798554,
+      "mesh_elements": 1004,
+      "time": 0.03
+    }
+  ],
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261030-133-native-current-drive-third-timestep-refinement",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "timestamp_utc": "2026-10-30T10:15:45.457616+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
