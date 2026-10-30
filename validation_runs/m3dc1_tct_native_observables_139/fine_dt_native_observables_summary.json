@@ -1,0 +1,279 @@
+{
+  "amplitudes": [
+    -0.01,
+    -0.005,
+    0.0,
+    0.005,
+    0.01
+  ],
+  "claim_boundary": "Fixed-dt normalized-native M3D-C1 native observable changes under open-loop source commands. Extraction precision is limited. Frozen width/Jpk comparisons are diagnostic, not controller-in-loop pass. No temporal convergence, calibrated physical injected current, segmented-electrode authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity, ignition or net power.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE",
+  "controller_in_loop_authority_established": false,
+  "dt": 0.000625,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "c4e61b347b974db6fa379ca70abc0a50bdf6d3ee188dc9361ccf4611c673bd46",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Replace jphi-only spatial-response proxy with extracted native W_sheet/Jpk/high-J/reconnection/energy diagnostics at the same fixed dt and signed amplitudes. Preserve zero control and frozen gates; do not equate an open-loop metric crossing with closed-loop stabilization or physical current calibration.",
+  "job_id": "20261030-139-native-current-drive-fine-dt-native-observables",
+  "machine": "normalized-native-M3D-C1",
+  "matched_frames": [
+    {
+      "cases": {
+        "neg_double": {
+          "Jpk_change_pct": -0.011687535295325374,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": -1.6744113999989096e-05,
+            "Jpk": -0.00011300000000002974,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": -4.076141982201076e-05,
+            "center_abs_current": -1.9751510230037184e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": -6.250363339319748e-05
+          },
+          "width_gain_pct": -0.0066822626804181684
+        },
+        "neg_nominal": {
+          "Jpk_change_pct": -0.006516059500924063,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": -9.02106899997035e-06,
+            "Jpk": -6.299999999992423e-05,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": -1.9075525842904284e-05,
+            "center_abs_current": -4.49945665992324e-06,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": -2.7358133574396232e-05
+          },
+          "width_gain_pct": -0.0031271647309145095
+        },
+        "pos_double": {
+          "Jpk_change_pct": 0.0050680462784990455,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": 7.365437000028674e-06,
+            "Jpk": 4.899999999996574e-05,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": 4.9382671042264015e-05,
+            "center_abs_current": 1.6263327009991002e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": 7.31836582113024e-05
+          },
+          "width_gain_pct": 0.008095595815995046
+        },
+        "pos_nominal": {
+          "Jpk_change_pct": 0.0027925969289707363,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": 4.105520999997392e-06,
+            "Jpk": 2.6999999999999247e-05,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": 2.5504500088091575e-05,
+            "center_abs_current": 1.0214011760045771e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": 3.686299324830167e-05
+          },
+          "width_gain_pct": 0.004181104825729033
+        }
+      },
+      "time": 0.01
+    },
+    {
+      "cases": {
+        "neg_double": {
+          "Jpk_change_pct": -0.010047962273242441,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": -3.0051500000016773e-05,
+            "Jpk": -0.00014999999999987246,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": 4.76336435119018e-05,
+            "center_abs_current": -8.527878972997005e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": 9.412013913600095e-05
+          },
+          "width_gain_pct": 0.007511101215603121
+        },
+        "neg_nominal": {
+          "Jpk_change_pct": -0.009378098121702861,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": -3.1684919999941386e-05,
+            "Jpk": -0.000140000000000029,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": 2.5627538587702503e-05,
+            "center_abs_current": -4.030393995002601e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": 3.454184367199936e-05
+          },
+          "width_gain_pct": 0.004041073116544446
+        },
+        "pos_double": {
+          "Jpk_change_pct": 0.015406875485648326,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": 4.665213999999196e-05,
+            "Jpk": 0.00022999999999995246,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": -4.421488486205938e-05,
+            "center_abs_current": 8.413118912997675e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": -7.812479054049998e-05
+          },
+          "width_gain_pct": -0.006972014965686736
+        },
+        "pos_nominal": {
+          "Jpk_change_pct": 0.013397283030999838,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": 4.369079999999581e-05,
+            "Jpk": 0.00019999999999997797,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": -2.7397770462678217e-05,
+            "center_abs_current": 5.0742781250057156e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": -2.3966978200999633e-05
+          },
+          "width_gain_pct": -0.004320211763259708
+        }
+      },
+      "time": 0.02
+    },
+    {
+      "cases": {
+        "neg_double": {
+          "Jpk_change_pct": -0.013618607318203238,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": -4.372982000000469e-05,
+            "Jpk": -0.00018999999999991246,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": 2.5792088969356364e-05,
+            "center_abs_current": -3.8935410349938415e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": -3.541970332100047e-05
+          },
+          "width_gain_pct": 0.0038518667623838754
+        },
+        "neg_nominal": {
+          "Jpk_change_pct": -0.007884456868425076,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": -3.36539799998814e-05,
+            "Jpk": -0.00010999999999983245,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": 2.1795623928011487e-05,
+            "center_abs_current": -5.146962796998e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": -2.709004254500269e-05
+          },
+          "width_gain_pct": 0.003255022866642243
+        },
+        "pos_double": {
+          "Jpk_change_pct": 0.017919220155544816,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": 5.8961300000048844e-05,
+            "Jpk": 0.0002500000000000835,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": -3.2780106741459036e-05,
+            "center_abs_current": 6.132386942003798e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": 3.954653756299553e-05
+          },
+          "width_gain_pct": -0.0048954779806644165
+        },
+        "pos_nominal": {
+          "Jpk_change_pct": 0.015768913736881985,
+          "frozen_open_loop_metric_comparison": {
+            "Jpk_le_0p10_pct": true,
+            "both": false,
+            "width_gt_0p020_pct": false
+          },
+          "native_metric_deltas": {
+            "Jint_high": 5.937276000012037e-05,
+            "Jpk": 0.000220000000000109,
+            "Reconnected_Flux": 0.0,
+            "W_sheet": -3.095957537724292e-05,
+            "center_abs_current": 8.890841482012135e-05,
+            "magnetic_energy": 0.0,
+            "shoulder_abs_current": 4.4493886836000085e-05
+          },
+          "width_gain_pct": -0.004623594448468442
+        }
+      },
+      "time": 0.03
+    }
+  ],
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "native_observable_response_detected": true,
+  "parent_result_job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "steps": 48,
+  "temporal_convergence_established": false,
+  "timestamp_utc": "2026-10-30T15:04:12.273195+00:00",
+  "zero_equivalence": {
+    "max_abs_metric_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
