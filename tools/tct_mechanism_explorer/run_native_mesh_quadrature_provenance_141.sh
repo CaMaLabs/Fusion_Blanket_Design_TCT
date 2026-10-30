@@ -82,7 +82,7 @@ try:
         report["prerequisite_blocker"] = "NATIVE_SOURCE_ROOT_UNAVAILABLE"
     else:
         patterns = {
-            "int1_quadrature": re.compile(r"\\bint1\\s*\\(", re.I),
+            "int1_quadrature": re.compile(r"\bint1\s*\(", re.I),
             "hdf5_mesh_elements": re.compile(r"(mesh/elements|/elements|h5dwrite|h5dcreate)", re.I),
             "element_weight_or_geometry": re.compile(r"(element.*(weight|area|jacob)|jacob.*element|quadrature)", re.I)
         }
