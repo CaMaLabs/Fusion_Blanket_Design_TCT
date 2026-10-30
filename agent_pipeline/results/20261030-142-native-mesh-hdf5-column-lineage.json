@@ -1,0 +1,813 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.065950632095337,
+  "error": null,
+  "finished_utc": "2026-10-30T18:27:07.511735Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 69271,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_quadrature_142/native_mesh_hdf5_column_lineage_summary.json"
+    ]
+  },
+  "head_before": "e40696f5068ab915d3b9b1fcf5803853c956543e",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261030-142-native-mesh-hdf5-column-lineage.json",
+  "job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "log_path": "agent_pipeline/logs/20261030-142-native-mesh-hdf5-column-lineage.log",
+  "log_sha256": "3095186d60b7ee7a5dce5405edc2941f5f726cc43908d00b3c994af11b067d3b",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_quadrature_142"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_mesh_hdf5_column_lineage_142.sh",
+  "runner_sha256": "ef827acacec7590c83413b44e334dc75e225a4c63eee4c5475011c3c4231f025",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-30T18:27:06.444875Z",
+  "success": true,
+  "summary": {
+    "calibrated_physical_current_validated": false,
+    "calibrated_physical_width_validated": false,
+    "causal_segmented_controller_authority_validated": false,
+    "claim_boundary": "Source-level mesh/elements writer and element-weight lineage candidates only. Neither e[2], R*e[2], int1 nor HDF5 jphi is independently calibrated to physical current/area. No new native solver run, shot handoff, temporal convergence, controller-in-loop, causal TCT stabilization, p-B11 fidelity, ignition or net-power evidence.",
+    "classification": "M3DC1_NATIVE_MESH_HDF5_COLUMN_LINEAGE_DIAGNOSTIC_COMPLETE",
+    "evidence_counts": {
+      "element_weight_geometry": 14,
+      "int1_definition_or_use": 45,
+      "jphi_writer": 29,
+      "mesh_dataset_writer": 33
+    },
+    "expected_parent_summary_sha256": "ad8ed8e97a475090d966f29a1a9de59e1956844e67b99ad6fa84dfb4a63ef7b4",
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "hdf5_column_to_geometry_mapping_validated": false,
+    "independent_analytic_geometry_check_passed": false,
+    "interpretation": "Targeted source context for the mesh/elements writer, e(2) geometry/weight candidates, int1 and jphi is collected with source hashes. Context hits do not prove the HDF5 column schema or a physical quadrature. A column-level mapping and independent analytic geometry comparison are required before physical current or width claims.",
+    "job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+    "machine": "normalized-native-M3D-C1",
+    "native_source_root": "/home/ubuntu/M3DC1-official",
+    "parent_mesh_elements_shape": [
+      1004,
+      8
+    ],
+    "parent_result_job_id": "20261030-141-native-mesh-quadrature-provenance",
+    "parent_source_scan_count": 182,
+    "physical_quadrature_validated": false,
+    "physics_solver_runs": 0,
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_evidence": {
+      "element_weight_geometry": [
+        {
+          "context": "728:       !   z_min = minval(mesh_coord(3, :, itri))\n729:       !   z_max = maxval(mesh_coord(3, :, itri))\n730: \n731:       !   area=tri_area(mesh_coord(1,1,itri),mesh_coord(3,1,itri),mesh_coord(1,2,itri),&\n732:       !      mesh_coord(3,2,itri),mesh_coord(1,3,itri),mesh_coord(3,3,itri))\n733: !#ifdef USE3D\n734:       !   dpar%x = (mesh_coord(:, 1, itri) + mesh_coord(:, 2, itri) + mesh_coord(:, 3, itri) + &\n735:       !      & mesh_coord(:, 4, itri) + mesh_coord(:, 5, itri) + mesh_coord(:, 6, itri))/6.",
+          "file": "unstructured/particle.f90",
+          "line": 731,
+          "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+        },
+        {
+          "context": "791:          z_max = maxval(mesh_coord(3, :, itri))\n792: \n793:          !area=x1*(z2-z3)+x2*(z3-z1)+x3*(z1-z2)\n794:          area=tri_area(mesh_coord(1,1,itri),mesh_coord(3,1,itri),mesh_coord(1,2,itri),&\n795:             mesh_coord(3,2,itri),mesh_coord(1,3,itri),mesh_coord(3,3,itri))\n796:          !hou!npar_local=int(npar*area*mesh_coord(1,1,itri)*0.03/nplanes)\n797: #ifdef USE3D\n798:          dpar%x = (mesh_coord(:, 1, itri) + mesh_coord(:, 2, itri) + mesh_coord(:, 3, itri) + &",
+          "file": "unstructured/particle.f90",
+          "line": 794,
+          "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+        },
+        {
+          "context": "2387:          cycle\n2388:       end if\n2389: #endif\n2390:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n2391:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n2392:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n2393:       if (all(area >= 0.)) then\n2394:          located = .true.",
+          "file": "unstructured/particle.f90",
+          "line": 2390,
+          "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+        },
+        {
+          "context": "2388:       end if\n2389: #endif\n2390:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n2391:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n2392:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n2393:       if (all(area >= 0.)) then\n2394:          located = .true.\n2395:          final_simplex = simplex",
+          "file": "unstructured/particle.f90",
+          "line": 2391,
+          "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+        },
+        {
+          "context": "2389: #endif\n2390:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n2391:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n2392:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n2393:       if (all(area >= 0.)) then\n2394:          located = .true.\n2395:          final_simplex = simplex\n2396:          exit",
+          "file": "unstructured/particle.f90",
+          "line": 2392,
+          "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+        },
+        {
+          "context": "697:          z_min = minval(mesh_coord(3, :, itri))\n698:          z_max = maxval(mesh_coord(3, :, itri))\n699: \n700:          area=tri_area(mesh_coord(1,1,itri),mesh_coord(3,1,itri),mesh_coord(1,2,itri),&\n701:             mesh_coord(3,2,itri),mesh_coord(1,3,itri),mesh_coord(3,3,itri))\n702: #ifdef USE3D\n703:          dpar%x = (mesh_coord(:, 1, itri) + mesh_coord(:, 2, itri) + mesh_coord(:, 3, itri) + &\n704:             & mesh_coord(:, 4, itri) + mesh_coord(:, 5, itri) + mesh_coord(:, 6, itri))/6.",
+          "file": "unstructured/particle_com.f90",
+          "line": 700,
+          "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+        },
+        {
+          "context": "749:          z_max = maxval(mesh_coord(3, :, itri))\n750: \n751:          !area=x1*(z2-z3)+x2*(z3-z1)+x3*(z1-z2)\n752:          area=tri_area(mesh_coord(1,1,itri),mesh_coord(3,1,itri),mesh_coord(1,2,itri),&\n753:             mesh_coord(3,2,itri),mesh_coord(1,3,itri),mesh_coord(3,3,itri))\n754:          !hou!npar_local=int(npar*area*mesh_coord(1,1,itri)*0.03/nplanes)\n755: #ifdef USE3D\n756:          dpar%x = (mesh_coord(:, 1, itri) + mesh_coord(:, 2, itri) + mesh_coord(:, 3, itri) + &",
+          "file": "unstructured/particle_com.f90",
+          "line": 752,
+          "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+        },
+        {
+          "context": "2305:          cycle\n2306:       end if\n2307: #endif\n2308:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n2309:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n2310:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n2311:       if (all(area >= 0.)) then\n2312:          located = .true.",
+          "file": "unstructured/particle_com.f90",
+          "line": 2308,
+          "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+        },
+        {
+          "context": "2306:       end if\n2307: #endif\n2308:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n2309:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n2310:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n2311:       if (all(area >= 0.)) then\n2312:          located = .true.\n2313:          final_simplex = simplex",
+          "file": "unstructured/particle_com.f90",
+          "line": 2309,
+          "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+        },
+        {
+          "context": "2307: #endif\n2308:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n2309:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n2310:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n2311:       if (all(area >= 0.)) then\n2312:          located = .true.\n2313:          final_simplex = simplex\n2314:          exit",
+          "file": "unstructured/particle_com.f90",
+          "line": 2310,
+          "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+        },
+        {
+          "context": "551:          !z_max = maxval(mesh_coord(3, :, itri))\n552: \n553:          !!area=x1*(z2-z3)+x2*(z3-z1)+x3*(z1-z2)\n554:          !area=tri_area(mesh_coord(1,1,itri),mesh_coord(3,1,itri),mesh_coord(1,2,itri),mesh_coord(3,2,itri),mesh_coord(1,3,itri),mesh_coord(3,3,itri))\n555:          !!hou!npar_local=int(npar*area*mesh_coord(1,1,itri)*0.03/nplanes)\n556:          !dpar%x = (mesh_coord(:, 1, itri) + mesh_coord(:, 2, itri) + mesh_coord(:, 3, itri))/3.\n557:          !dpar%v = 0.\n558:          !B0 = 1.",
+          "file": "unstructured/runaway_advection.f90",
+          "line": 554,
+          "source_sha256": "615f978a560a88083cf2b496540446cc934fbd226dc29d09da7dd88364e25fee"
+        },
+        {
+          "context": "1335:          cycle\n1336:       end if\n1337: #endif\n1338:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n1339:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n1340:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n1341:       if (all(area >= 0.)) then\n1342:          located = .true.",
+          "file": "unstructured/runaway_advection.f90",
+          "line": 1338,
+          "source_sha256": "615f978a560a88083cf2b496540446cc934fbd226dc29d09da7dd88364e25fee"
+        },
+        {
+          "context": "1336:       end if\n1337: #endif\n1338:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n1339:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n1340:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n1341:       if (all(area >= 0.)) then\n1342:          located = .true.\n1343:          final_simplex = simplex",
+          "file": "unstructured/runaway_advection.f90",
+          "line": 1339,
+          "source_sha256": "615f978a560a88083cf2b496540446cc934fbd226dc29d09da7dd88364e25fee"
+        },
+        {
+          "context": "1337: #endif\n1338:       area(1) = tri_area(final_position(1), final_position(3), x(1, 2), x(3, 2), x(1, 3), x(3, 3))\n1339:       area(2) = tri_area(x(1, 1), x(3, 1), final_position(1), final_position(3), x(1, 3), x(3, 3))\n1340:       area(3) = tri_area(x(1, 1), x(3, 1), x(1, 2), x(3, 2), final_position(1), final_position(3))\n1341:       if (all(area >= 0.)) then\n1342:          located = .true.\n1343:          final_simplex = simplex\n1344:          exit",
+          "file": "unstructured/runaway_advection.f90",
+          "line": 1340,
+          "source_sha256": "615f978a560a88083cf2b496540446cc934fbd226dc29d09da7dd88364e25fee"
+        }
+      ],
+      "int1_definition_or_use": [
+        {
+          "context": "793:      if(amupar.ne.0.) then\n794:         do i=1, dofs_per_element\n795:            call PVV2(mu79(i,:,:),temp79f)\n796: !           dofs(i) = int1(temp79f)\n797:            dofs(i) = 0.\n798: \n799:            if(ilin.eq.1) then\n800:               call PVS1psipsi(CONJUGATE(ph179),ps179,ps079,temp79c)",
+          "file": "unstructured/auxiliary_fields.f90",
+          "line": 796,
+          "source_sha256": "a0ca3e58b33cad0f9e0927a0960dea9d3ada2a800cc7968ad131c42b8274fc68"
+        },
+        {
+          "context": "113:                      (mu79(i,:,OP_LP)*nu79(j,:,OP_LP) &\n114:                      +mu79(i,:,OP_LP)*nu79(j,:,OP_LP))\n115:              end select\n116:              sum = int1(temp79a)\n117:              call insert(biharmonic_mat, sum, ind(1,i), ind(1,j), MAT_ADD)\n118:           enddo\n119:        enddo\n120:        ",
+          "file": "unstructured/biharmonic.f90",
+          "line": 116,
+          "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+        },
+        {
+          "context": "143:                         +norm79(:,2)*nu79(j,:,OP_LPZ)*mu79(i,:,OP_1) &\n144:                         -norm79(:,1)*mu79(i,:,OP_DR)*nu79(j,:,OP_LP) &\n145:                         -norm79(:,2)*mu79(i,:,OP_DZ)*nu79(j,:,OP_LP))\n146:                    sum = int1(temp79a)\n147:                 end select\n148:                 call insert(biharmonic_mat, sum, ind(1,i), ind(1,j), MAT_ADD)\n149:              enddo\n150:           enddo",
+          "file": "unstructured/biharmonic.f90",
+          "line": 146,
+          "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+        },
+        {
+          "context": "211:           ps179(i,OP_1) = soln(1)\n212:        end do\n213: \n214:        sum = sum + int1((ps079(:,OP_1) - ps179(:,OP_1))**2)\n215:        sum2 = sum2 + int1(ps179(:,OP_1)**2)\n216:     end do\n217: \n218:     print *, 'Error in biharmonic solution = ', sum/sum2, sum2",
+          "file": "unstructured/biharmonic.f90",
+          "line": 214,
+          "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+        },
+        {
+          "context": "212:        end do\n213: \n214:        sum = sum + int1((ps079(:,OP_1) - ps179(:,OP_1))**2)\n215:        sum2 = sum2 + int1(ps179(:,OP_1)**2)\n216:     end do\n217: \n218:     print *, 'Error in biharmonic solution = ', sum/sum2, sum2\n219: ",
+          "file": "unstructured/biharmonic.f90",
+          "line": 215,
+          "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+        },
+        {
+          "context": "845:         call jxb_phi(temp79b)\n846:         call jxb_z(temp79c, temp79e)\n847: \n848:         wall_force_n0_x = wall_force_n0_x + int1(temp79a)*twopi/tpifac\n849:         wall_force_n0_y = wall_force_n0_y + int1(temp79b)*twopi/tpifac\n850:         wall_force_n0_z = wall_force_n0_z + int1(temp79c)*twopi/tpifac\n851: \n852:         wall_force_n0_x_halo = wall_force_n0_x_halo + &",
+          "file": "unstructured/diagnostics.f90",
+          "line": 848,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "846:         call jxb_z(temp79c, temp79e)\n847: \n848:         wall_force_n0_x = wall_force_n0_x + int1(temp79a)*twopi/tpifac\n849:         wall_force_n0_y = wall_force_n0_y + int1(temp79b)*twopi/tpifac\n850:         wall_force_n0_z = wall_force_n0_z + int1(temp79c)*twopi/tpifac\n851: \n852:         wall_force_n0_x_halo = wall_force_n0_x_halo + &\n853:              int1(temp79d)*twopi/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 849,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "847: \n848:         wall_force_n0_x = wall_force_n0_x + int1(temp79a)*twopi/tpifac\n849:         wall_force_n0_y = wall_force_n0_y + int1(temp79b)*twopi/tpifac\n850:         wall_force_n0_z = wall_force_n0_z + int1(temp79c)*twopi/tpifac\n851: \n852:         wall_force_n0_x_halo = wall_force_n0_x_halo + &\n853:              int1(temp79d)*twopi/tpifac\n854:         wall_force_n0_z_halo = wall_force_n0_z_halo + &",
+          "file": "unstructured/diagnostics.f90",
+          "line": 850,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "850:         wall_force_n0_z = wall_force_n0_z + int1(temp79c)*twopi/tpifac\n851: \n852:         wall_force_n0_x_halo = wall_force_n0_x_halo + &\n853:              int1(temp79d)*twopi/tpifac\n854:         wall_force_n0_z_halo = wall_force_n0_z_halo + &\n855:              int1(temp79e)*twopi/tpifac\n856: \n857: #ifdef USE3D",
+          "file": "unstructured/diagnostics.f90",
+          "line": 853,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "852:         wall_force_n0_x_halo = wall_force_n0_x_halo + &\n853:              int1(temp79d)*twopi/tpifac\n854:         wall_force_n0_z_halo = wall_force_n0_z_halo + &\n855:              int1(temp79e)*twopi/tpifac\n856: \n857: #ifdef USE3D\n858:         wall_force_n1_x = wall_force_n1_x &\n859:              + int2(temp79a,co)*twopi/tpifac &",
+          "file": "unstructured/diagnostics.f90",
+          "line": 855,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "928:      ! Calculate Scalars\n929:      ! ~~~~~~~~~~~~~~~~~\n930:      ! extra factor of 1/r comes from delta function in toroidal coordinate)\n931:      area   = area   + int1(ri_79)/tpirzero\n932:      parea  = parea  + int2(ri_79,mr)/tpirzero\n933: \n934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero",
+          "file": "unstructured/diagnostics.f90",
+          "line": 931,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "966:      \n967:      ! enstrophy\n968:      tvor   = tvor &\n969:           -    (int1(pht79(:,OP_LP)) &\n970:           + 2.*int2(ri4_79,cht79(:,OP_DZ)))/tpirzero\n971: \n972:      ! volume\n973:      volume = volume + twopi*int0()/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 969,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "971: \n972:      ! volume\n973:      volume = volume + twopi*int0()/tpifac\n974:      pvol = pvol + twopi*int1(mr)/tpifac\n975:      volpd = volpd + twopi*volume_pd(mr)/tpifac\n976: \n977:      ! particle number\n978:      totden = totden + twopi*int1(nt79(:,OP_1))/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 974,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "975:      volpd = volpd + twopi*volume_pd(mr)/tpifac\n976: \n977:      ! particle number\n978:      totden = totden + twopi*int1(nt79(:,OP_1))/tpifac\n979:      totne = totne + twopi*int1(net79(:,OP_1))/tpifac\n980:      pden = pden + twopi*int2(nt79(:,OP_1),mr)/tpifac\n981:       ! radiation\n982:      totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 978,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "976: \n977:      ! particle number\n978:      totden = totden + twopi*int1(nt79(:,OP_1))/tpifac\n979:      totne = totne + twopi*int1(net79(:,OP_1))/tpifac\n980:      pden = pden + twopi*int2(nt79(:,OP_1),mr)/tpifac\n981:       ! radiation\n982:      totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac\n983:      linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 979,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "979:      totne = totne + twopi*int1(net79(:,OP_1))/tpifac\n980:      pden = pden + twopi*int2(nt79(:,OP_1),mr)/tpifac\n981:       ! radiation\n982:      totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac\n983:      linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac\n984:      bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac\n985:      ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac\n986:      reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 982,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "980:      pden = pden + twopi*int2(nt79(:,OP_1),mr)/tpifac\n981:       ! radiation\n982:      totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac\n983:      linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac\n984:      bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac\n985:      ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac\n986:      reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac\n987:      recprad = recprad + twopi*int1(recprad79(:,OP_1))/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 983,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "981:       ! radiation\n982:      totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac\n983:      linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac\n984:      bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac\n985:      ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac\n986:      reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac\n987:      recprad = recprad + twopi*int1(recprad79(:,OP_1))/tpifac\n988: ",
+          "file": "unstructured/diagnostics.f90",
+          "line": 984,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "982:      totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac\n983:      linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac\n984:      bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac\n985:      ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac\n986:      reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac\n987:      recprad = recprad + twopi*int1(recprad79(:,OP_1))/tpifac\n988: \n989:      if(ikprad.ne.0) then",
+          "file": "unstructured/diagnostics.f90",
+          "line": 985,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "983:      linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac\n984:      bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac\n985:      ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac\n986:      reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac\n987:      recprad = recprad + twopi*int1(recprad79(:,OP_1))/tpifac\n988: \n989:      if(ikprad.ne.0) then\n990:         call eval_ops(itri, kprad_n(0), tm79, rfac)",
+          "file": "unstructured/diagnostics.f90",
+          "line": 986,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "984:      bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac\n985:      ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac\n986:      reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac\n987:      recprad = recprad + twopi*int1(recprad79(:,OP_1))/tpifac\n988: \n989:      if(ikprad.ne.0) then\n990:         call eval_ops(itri, kprad_n(0), tm79, rfac)\n991:         t0 = twopi*int1(tm79(:,OP_1))/tpifac",
+          "file": "unstructured/diagnostics.f90",
+          "line": 987,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "988: \n989:      if(ikprad.ne.0) then\n990:         call eval_ops(itri, kprad_n(0), tm79, rfac)\n991:         t0 = twopi*int1(tm79(:,OP_1))/tpifac\n992:         totkprad0 = totkprad0 + t0\n993:         totkprad = totkprad + t0\n994:         do i=1, kprad_z\n995:            call eval_ops(itri, kprad_n(i), tm79, rfac)",
+          "file": "unstructured/diagnostics.f90",
+          "line": 991,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "993:         totkprad = totkprad + t0\n994:         do i=1, kprad_z\n995:            call eval_ops(itri, kprad_n(i), tm79, rfac)\n996:            totkprad = totkprad + twopi*int1(tm79(:,OP_1))/tpifac\n997:         end do\n998:      end if\n999:      \n1000:      if(irunaway.gt.0) then",
+          "file": "unstructured/diagnostics.f90",
+          "line": 996,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "1011: \n1012:      ! particle source\n1013:      if(idens.eq.1) then        \n1014:         nsource = nsource - twopi*int1(sig79)/tpifac\n1015:      \n1016:         ! Pellet radius and density/temperature at the pellet surface\n1017:         if(ipellet_abl.gt.0) then\n1018:            do ip=1,npellets",
+          "file": "unstructured/diagnostics.f90",
+          "line": 1014,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "1043:      endif\n1044: \n1045:      ! injected power\n1046:      pinj = pinj + twopi*int1(q79)/tpifac\n1047: \n1048:      if(amupar.ne.0.) then\n1049:         call PVS1(pht79,temp79a)\n1050: ",
+          "file": "unstructured/diagnostics.f90",
+          "line": 1046,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "1233:      ! perform volume integral of pellet cloud (without normalization)\n1234:      do ip=1,npellets\n1235:         temp79a  = pellet_distribution(ip, x_79, phi_79, z_79, real(pt79(:,OP_1)), 0, izone)\n1236:         temp(ip) = temp(ip) + twopi*int1(temp79a)/tpifac\n1237:      end do\n1238: \n1239:   end do\n1240: ",
+          "file": "unstructured/diagnostics.f90",
+          "line": 1236,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "3577:      call eval_ops(itri, fin, tm79, rfac)\n3578:      \n3579:      ! integrate\n3580:      my_ans = int1(tm79(:,OP_1))\n3581: \n3582:      hasval = 1\n3583:   else\n3584:      hasval = 0",
+          "file": "unstructured/diagnostics.f90",
+          "line": 3580,
+          "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+        },
+        {
+          "context": "54:     vectype, dimension (npoint_int_elm) :: vec\n55:     real :: value\n56: #ifdef USECOMPLEX\n57:     value = int1(vec*CONJG(vec))\n58: #else\n59:     value = int1(vec**2)\n60: #endif \n61:   end subroutine getElmL2 ",
+          "file": "unstructured/error_estimate.f90",
+          "line": 57,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "56: #ifdef USECOMPLEX\n57:     value = int1(vec*CONJG(vec))\n58: #else\n59:     value = int1(vec**2)\n60: #endif \n61:   end subroutine getElmL2 \n62:   subroutine getElmH1 (vec, value)\n63:     use m3dc1_nint",
+          "file": "unstructured/error_estimate.f90",
+          "line": 59,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "321:           call get_edge_data (edges(iedge), normal(:,1), edge_len(1))\n322:           do ii=1, NUMTERM\n323: #ifdef USECOMPLEX\n324:              edge_error(edges(iedge)+1,ii)=int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)&\n325: *CONJG(edge_jump(1:npoint_int,edges(iedge)+1,ii)))\n326:              !edge_error(edges(iedge)+1,ii)=real(int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)))**2\n327: #else\n328:              edge_error(edges(iedge)+1,ii)=int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)**2)",
+          "file": "unstructured/error_estimate.f90",
+          "line": 324,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "323: #ifdef USECOMPLEX\n324:              edge_error(edges(iedge)+1,ii)=int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)&\n325: *CONJG(edge_jump(1:npoint_int,edges(iedge)+1,ii)))\n326:              !edge_error(edges(iedge)+1,ii)=real(int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)))**2\n327: #else\n328:              edge_error(edges(iedge)+1,ii)=int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)**2)\n329: #endif\n330:           end do",
+          "file": "unstructured/error_estimate.f90",
+          "line": 326,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "325: *CONJG(edge_jump(1:npoint_int,edges(iedge)+1,ii)))\n326:              !edge_error(edges(iedge)+1,ii)=real(int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)))**2\n327: #else\n328:              edge_error(edges(iedge)+1,ii)=int1(edge_jump(1:npoint_int,edges(iedge)+1,ii)**2)\n329: #endif\n330:           end do\n331:           edge_error(edges(iedge)+1,LPUN)=edge_error(edges(iedge)+1,LPUN)* edge_len(1)**3 \n332:           edge_error(edges(iedge)+1,LPPSIN)=edge_error(edges(iedge)+1,LPPSIN)* edge_len(1)**3",
+          "file": "unstructured/error_estimate.f90",
+          "line": 328,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "757:        fn_eval_elm = fn_eval_elm + fn_eval_elm_tmp\n758: \n759: #ifdef USECOMPLEX\n760:        elm_res_U (itri) = int1 (fn_eval_elm) *CONJG (int1 (fn_eval_elm)) * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n761:        !elm_res_U (itri) = real(int1 (fn_eval_elm)) **2* ((d%a+d%b)*d%c)**2\n762: #else\n763:        elm_res_U (itri) = int1 (fn_eval_elm) **2 * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n764: #endif",
+          "file": "unstructured/error_estimate.f90",
+          "line": 760,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "758: \n759: #ifdef USECOMPLEX\n760:        elm_res_U (itri) = int1 (fn_eval_elm) *CONJG (int1 (fn_eval_elm)) * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n761:        !elm_res_U (itri) = real(int1 (fn_eval_elm)) **2* ((d%a+d%b)*d%c)**2\n762: #else\n763:        elm_res_U (itri) = int1 (fn_eval_elm) **2 * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n764: #endif\n765:        if (isplitstep .eq. 0 .or. .true.) then",
+          "file": "unstructured/error_estimate.f90",
+          "line": 761,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "760:        elm_res_U (itri) = int1 (fn_eval_elm) *CONJG (int1 (fn_eval_elm)) * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n761:        !elm_res_U (itri) = real(int1 (fn_eval_elm)) **2* ((d%a+d%b)*d%c)**2\n762: #else\n763:        elm_res_U (itri) = int1 (fn_eval_elm) **2 * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n764: #endif\n765:        if (isplitstep .eq. 0 .or. .true.) then\n766:           fn_eval_elm = 0\n767:           ! eta psi",
+          "file": "unstructured/error_estimate.f90",
+          "line": 763,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "810:             fn_eval_elm = fn_eval_elm + fn_eval_tmp/dt\n811:           end if\n812: #ifdef USECOMPLEX\n813:           elm_res_psi (itri) = int1 (fn_eval_elm) *CONJG(int1 (fn_eval_elm)) * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n814:           !elm_res_psi (itri) = real(int1 (fn_eval_elm))**2 * ((d%a+d%b)*d%c)**2\n815: #else\n816:           elm_res_psi (itri) = int1 (fn_eval_elm) **2 * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n817: #endif",
+          "file": "unstructured/error_estimate.f90",
+          "line": 813,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "811:           end if\n812: #ifdef USECOMPLEX\n813:           elm_res_psi (itri) = int1 (fn_eval_elm) *CONJG(int1 (fn_eval_elm)) * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n814:           !elm_res_psi (itri) = real(int1 (fn_eval_elm))**2 * ((d%a+d%b)*d%c)**2\n815: #else\n816:           elm_res_psi (itri) = int1 (fn_eval_elm) **2 * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n817: #endif\n818:        end if",
+          "file": "unstructured/error_estimate.f90",
+          "line": 814,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "813:           elm_res_psi (itri) = int1 (fn_eval_elm) *CONJG(int1 (fn_eval_elm)) * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n814:           !elm_res_psi (itri) = real(int1 (fn_eval_elm))**2 * ((d%a+d%b)*d%c)**2\n815: #else\n816:           elm_res_psi (itri) = int1 (fn_eval_elm) **2 * ((d%a+d%b)*d%c)**(2-iadapt_useH1)\n817: #endif\n818:        end if\n819:     end do\n820:     buff = max_current",
+          "file": "unstructured/error_estimate.f90",
+          "line": 816,
+          "source_sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+        },
+        {
+          "context": "11140:      temp = 0.\n11141:   else\n11142:      if(linear.eq.1) then\n11143:         temp = int1(pe179) / (gam - 1.)\n11144:      else\n11145: !.......nonlinear: subtract off equilibrium piece\n11146:         temp = int1(pet79) / (gam - 1.)\n11147:      endif",
+          "file": "unstructured/metricterms_new.f90",
+          "line": 11143,
+          "source_sha256": "e50c781eeafba31795f1d46f12018d8f6e24a1f7d1e308442dd492baf1fbbd12"
+        },
+        {
+          "context": "11143:         temp = int1(pe179) / (gam - 1.)\n11144:      else\n11145: !.......nonlinear: subtract off equilibrium piece\n11146:         temp = int1(pet79) / (gam - 1.)\n11147:      endif\n11148:   endif\n11149: \n11150:   energy_pe = temp",
+          "file": "unstructured/metricterms_new.f90",
+          "line": 11146,
+          "source_sha256": "e50c781eeafba31795f1d46f12018d8f6e24a1f7d1e308442dd492baf1fbbd12"
+        },
+        {
+          "context": "11835:                +tet79(:, OP_DP)**2 * ri2_79) \n11836:     ! Heaviside function\n11837:     temp79c = sign(1., temp79b) * 0.5 + 0.5\n11838:     temp = int1(temp79c*temp79a)\n11839:   end if  \n11840: #endif\n11841:   volume_pd = real(temp)\n11842:   return",
+          "file": "unstructured/metricterms_new.f90",
+          "line": 11838,
+          "source_sha256": "e50c781eeafba31795f1d46f12018d8f6e24a1f7d1e308442dd492baf1fbbd12"
+        },
+        {
+          "context": "21680:      temp = 0.\n21681:   else\n21682:      if(linear.eq.1) then\n21683:         temp = int1(pe179) / (gam - 1.)\n21684:      else\n21685: !.......nonlinear: subtract off equilibrium piece\n21686:         temp = int1(pet79) / (gam - 1.)\n21687:      endif",
+          "file": "unstructured/metricterms_new_gpu.f90",
+          "line": 21683,
+          "source_sha256": "1ff9c0c687be9a234fa539b500860664346430cd54d456eae3d2cd9bbe3c9c25"
+        },
+        {
+          "context": "21683:         temp = int1(pe179) / (gam - 1.)\n21684:      else\n21685: !.......nonlinear: subtract off equilibrium piece\n21686:         temp = int1(pet79) / (gam - 1.)\n21687:      endif\n21688:   endif\n21689: \n21690:   energy_pe = temp",
+          "file": "unstructured/metricterms_new_gpu.f90",
+          "line": 21686,
+          "source_sha256": "1ff9c0c687be9a234fa539b500860664346430cd54d456eae3d2cd9bbe3c9c25"
+        },
+        {
+          "context": "22379:                +tet79(:, OP_DP)**2 * ri2_79) \n22380:     ! Heaviside function\n22381:     temp79c = sign(1., temp79b) * 0.5 + 0.5\n22382:     temp = int1(temp79c*temp79a)\n22383:   end if  \n22384: #endif\n22385:   volume_pd = real(temp)\n22386:   return",
+          "file": "unstructured/metricterms_new_gpu.f90",
+          "line": 22382,
+          "source_sha256": "1ff9c0c687be9a234fa539b500860664346430cd54d456eae3d2cd9bbe3c9c25"
+        },
+        {
+          "context": "506: end function int0\n507: !==============================================\n508: !DEC$ ATTRIBUTES FORCEINLINE :: int1\n509: pure vectype function int1(vari)\n510: \n511:   implicit none\n512: \n513:   vectype, dimension(npoints), intent(in) :: vari",
+          "file": "unstructured/nintegrate_mod.f90",
+          "line": 509,
+          "source_sha256": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+        }
+      ],
+      "jphi_writer": [
+        {
+          "context": "19: \n20: contains\n21: \n22:   subroutine basicj_current(x, z, jphi)\n23:     use basic\n24: \n25:     implicit none\n26: ",
+          "file": "unstructured/init_basicj.f90",
+          "line": 22,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "25:     implicit none\n26: \n27:     real, intent(in), dimension(MAX_PTS) :: x, z\n28:     vectype, intent(out), dimension(MAX_PTS) :: jphi\n29:     \n30:     real, dimension(MAX_PTS) :: r2\n31: \n32:     r2 = (x - xmag)**2 + (z - zmag)**2",
+          "file": "unstructured/init_basicj.f90",
+          "line": 28,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "34:     select case(itaylor)\n35:     case(29)\n36:        where(r2.lt.ln**2)\n37:           jphi = basicj_j0*(1.-(r2/ln**2))**basicj_nu\n38:        elsewhere\n39:           jphi = 0.\n40:        end where\n41: ",
+          "file": "unstructured/init_basicj.f90",
+          "line": 37,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "36:        where(r2.lt.ln**2)\n37:           jphi = basicj_j0*(1.-(r2/ln**2))**basicj_nu\n38:        elsewhere\n39:           jphi = 0.\n40:        end where\n41: \n42:     case(31)\n43:        jphi = basicj_j0*(1. + (r2/ln**2)**basicj_nu)**(-(1.+1./basicj_nu))",
+          "file": "unstructured/init_basicj.f90",
+          "line": 39,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "40:        end where\n41: \n42:     case(31)\n43:        jphi = basicj_j0*(1. + (r2/ln**2)**basicj_nu)**(-(1.+1./basicj_nu))\n44:     end select\n45:   end subroutine basicj_current\n46: \n47:   subroutine basicj_vz(x, z, vz)",
+          "file": "unstructured/init_basicj.f90",
+          "line": 43,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "146: \n147:     ibound = BOUNDARY_DIRICHLET\n148: \n149:     ! Define Jphi\n150:     numelms = local_elements()\n151: !!$OMP PARALLEL DO &\n152: !!$OMP& PRIVATE(temp,dofs,dofs_p,imask)\n153:     do itri=1,numelms",
+          "file": "unstructured/init_basicj.f90",
+          "line": 149,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "200:        call destroy_field(p_vec)\n201:     end if\n202: \n203:     ! Create a matrix for solving (dA/dpsi)/(R) = Jphi - R p' (ibasicj_solvep == 0)\n204:     ! or R*(dA/dpsi) = Jphi (ibasicj_solvep == 1)\n205:     call set_matrix_index(dr_matrix, dr_mat_index)\n206:     call create_mat(dr_matrix, 1, 1, icomplex, 1)\n207:        ",
+          "file": "unstructured/init_basicj.f90",
+          "line": 203,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "201:     end if\n202: \n203:     ! Create a matrix for solving (dA/dpsi)/(R) = Jphi - R p' (ibasicj_solvep == 0)\n204:     ! or R*(dA/dpsi) = Jphi (ibasicj_solvep == 1)\n205:     call set_matrix_index(dr_matrix, dr_mat_index)\n206:     call create_mat(dr_matrix, 1, 1, icomplex, 1)\n207:        \n208:     jphi_vec = 0.",
+          "file": "unstructured/init_basicj.f90",
+          "line": 204,
+          "source_sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+        },
+        {
+          "context": "9:   integer, private :: myrank_qp, iprint_qp, itaylor_qp\n10: \n11:   integer, private, parameter :: nint=10000  !  (number of intervals)\n12:   real, private, dimension (0:nint) :: bpsi, btor, bpolor, psi, jphi, jthor, gradpor, equor, pary, vary\n13: \n14: \n15: contains\n16: ",
+          "file": "unstructured/init_basicq.f90",
+          "line": 12,
+          "source_sha256": "eafd565f628633ef9461aa945cc6e14577247321a8659adde5c1e07436bad342"
+        },
+        {
+          "context": "242:     \n243:     !  calculate poloidal and toroidal fields in cell centers\n244:     do j=1,nint-1\n245:        jphi(j) = 4.*((j+.5)*(bpsi(j+1)-bpsi(j))-(j-.5)*(bpsi(j)-bpsi(j-1)))/(dpsi*r0_qp**2) \n246:        jthor(j) =  2*((bpsi(j+1)-bpsi(j))*rzero_qp*qfunc((j+0.5)*dpsi) &\n247:             - (bpsi(j)-bpsi(j-1))*rzero_qp*qfunc((j-0.5)*dpsi))/(dpsi**2*r0_qp**2)\n248:        gradpor(j) =  ppfunc(j*dpsi)\n249:        pary(j) = pfunc(psi(j))",
+          "file": "unstructured/init_basicq.f90",
+          "line": 245,
+          "source_sha256": "eafd565f628633ef9461aa945cc6e14577247321a8659adde5c1e07436bad342"
+        },
+        {
+          "context": "249:        pary(j) = pfunc(psi(j))\n250:        vary(j) = vfunc(psi(j))\n251:        !    error in equilibrium equation\n252:        equor(j) = (jphi(j)*bpolor(j)+jthor(j)*btor(j)+gradpor(j))*sqrt(j*dpsi)\n253:     enddo\n254:     pary(0) =  pfunc(psi(0))\n255:     pary(nint) =  pfunc(psi(nint))\n256:     vary(0) =  vfunc(psi(0))",
+          "file": "unstructured/init_basicq.f90",
+          "line": 252,
+          "source_sha256": "eafd565f628633ef9461aa945cc6e14577247321a8659adde5c1e07436bad342"
+        },
+        {
+          "context": "179: \n180:     ibound = BOUNDARY_DIRICHLET\n181: \n182:     ! Define Jphi\n183:     numelms = local_elements()\n184:     do itri=1,numelms\n185: \n186:        call define_element_quadrature(itri,int_pts_main,int_pts_tor)",
+          "file": "unstructured/init_cyl.f90",
+          "line": 182,
+          "source_sha256": "4c393228cb8128861bc335efeeca21702e72c7befc6a44bf93ca0962e0612a67"
+        },
+        {
+          "context": "228:     vectype, intent(out), dimension(np), optional :: br, bz\n229: \n230:     real :: rmin, rmax, zmin, zmax\n231:     real :: r0, z0, dr, dz, j0, jphi\n232:     real, dimension(1) :: rp, zp\n233:     real, dimension(np,1,6) :: g\n234:     integer, parameter :: n = 200\n235:     integer, parameter :: ipole = 0",
+          "file": "unstructured/init_solovev.f90",
+          "line": 231,
+          "source_sha256": "f09bca60c87d61ad1485127a423795d35eabc9496f89c9009dae09bb466abcdb"
+        },
+        {
+          "context": "247:     do i=1, n\n248:        r0 = (i-1)*dr + rmin\n249:        rp = r0\n250:        jphi = j0*r0\n251:        zmax = elongation*sqrt((2.*ln*rzero)**2-(r0**2-rzero**2)**2)/(2.*r0)\n252:        zmin = -zmax\n253:        dz = (zmax-zmin)/(n-1)\n254:        ",
+          "file": "unstructured/init_solovev.f90",
+          "line": 250,
+          "source_sha256": "f09bca60c87d61ad1485127a423795d35eabc9496f89c9009dae09bb466abcdb"
+        },
+        {
+          "context": "258: \n259:           call gvect(r,z,np,rp,zp,1,g,ipole,ierr)\n260: \n261:           psi = psi - g(:,1,1) * jphi*dr*dz / twopi\n262:           if(present(br)) br = br + (g(:,1,3)/r) * jphi*dr*dz / twopi\n263:           if(present(bz)) bz = bz - (g(:,1,2)/r) * jphi*dr*dz / twopi\n264:        end do\n265:     end do",
+          "file": "unstructured/init_solovev.f90",
+          "line": 261,
+          "source_sha256": "f09bca60c87d61ad1485127a423795d35eabc9496f89c9009dae09bb466abcdb"
+        },
+        {
+          "context": "259:           call gvect(r,z,np,rp,zp,1,g,ipole,ierr)\n260: \n261:           psi = psi - g(:,1,1) * jphi*dr*dz / twopi\n262:           if(present(br)) br = br + (g(:,1,3)/r) * jphi*dr*dz / twopi\n263:           if(present(bz)) bz = bz - (g(:,1,2)/r) * jphi*dr*dz / twopi\n264:        end do\n265:     end do\n266:   end subroutine psi_vac",
+          "file": "unstructured/init_solovev.f90",
+          "line": 262,
+          "source_sha256": "f09bca60c87d61ad1485127a423795d35eabc9496f89c9009dae09bb466abcdb"
+        },
+        {
+          "context": "260: \n261:           psi = psi - g(:,1,1) * jphi*dr*dz / twopi\n262:           if(present(br)) br = br + (g(:,1,3)/r) * jphi*dr*dz / twopi\n263:           if(present(bz)) bz = bz - (g(:,1,2)/r) * jphi*dr*dz / twopi\n264:        end do\n265:     end do\n266:   end subroutine psi_vac\n267: ",
+          "file": "unstructured/init_solovev.f90",
+          "line": 263,
+          "source_sha256": "f09bca60c87d61ad1485127a423795d35eabc9496f89c9009dae09bb466abcdb"
+        },
+        {
+          "context": "1350:      call mark_vector_for_solutiontransfer(field_vec_pre)\n1351: \n1352:   ! Auxiliary Variables\n1353:      call create_field(jphi_field, \"jphi\")\n1354:      call create_field(resistivity_field, \"resistivity\")\n1355:      call create_field(kappa_field, \"kappa\")\n1356:      call create_field(kappar_field, \"kappar\")\n1357:      call create_field(denm_field, \"denm\")",
+          "file": "unstructured/newpar.f90",
+          "line": 1353,
+          "source_sha256": "37484079fbfc3ca041b32f5fd71563509a4c5fb0a266de8a04c84c54ab332a2f"
+        },
+        {
+          "context": "1042:   allocate(dum(coeffs_per_element,nelms))\n1043: \n1044:   ! Create the fields group\n1045:   call h5gcreate_f(time_group_id, \"fields\", group_id, error)\n1046: \n1047:   ! Output the fields\n1048:   ! ~~~~~~~~~~~~~~~~~\n1049: ",
+          "file": "unstructured/output.f90",
+          "line": 1045,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "1303: \n1304:   if(iwrite_aux_vars.eq.1) then \n1305:     call write_field(group_id, \"wall_dist\", wall_dist, nelms, error, .true.)\n1306:     call write_field(group_id, \"jphi\", jphi_field, nelms, error)\n1307:     call write_field(group_id, \"torque_em\", torque_density_em, nelms, error)\n1308:     call write_field(group_id,\"torque_ntv\", torque_density_ntv, nelms, error)\n1309:     call write_field(group_id, \"bdotgradp\", bdotgradp, nelms, error)\n1310:     call write_field(group_id, \"bdotgradt\", bdotgradt, nelms, error)",
+          "file": "unstructured/output.f90",
+          "line": 1306,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "390: \n391:     nelms = local_elements()\n392: \n393:     call h5gopen_f(time_group_id, \"fields\", group_id, error)\n394: \n395:     call h5r_read_field(group_id, \"I\",    bz_field(ilin), nelms, error)\n396: \n397:     call h5r_read_field(group_id, \"phi\",   u_field(ilin), nelms, error)",
+          "file": "unstructured/restart_hdf5.f90",
+          "line": 393,
+          "source_sha256": "d7317c9c58f320195fc048cd82811479cb9feb284f6e7c956b222deaff303afa"
+        },
+        {
+          "context": "521:      temp2(:,1) = intx3(mu79(:,:,OP_DR),temp79c,ri_79) &\n522:           -       intx3(mu79(:,:,OP_DZ),temp79a,ri_79)\n523: \n524:            ! Jphi\n525: !!$      temp(:,:,1,1) = -intxx3(mu79(:,:,OP_1),nu79(:,:,OP_GS),ri2_79)\n526: !!$      temp(:,:,1,2) = 0.\n527: !!$      temp2(:,1) = &\n528: !!$               + intx3(mu79(:,:,OP_DR),temp79c,ri_79) &",
+          "file": "unstructured/rmp.f90",
+          "line": 524,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "988:      ! J = grad(F*) x grad(phi) - del*(psi) grad(phi) + grad_perp(psi') / R^2\n989:      ! F* = R^2 del^2(f)\n990: \n991:      ! ( R Jphi )                               ( -del*(nu)               0              )\n992:      ! ( JR     ) = Jx(nu) . ( psi )   Jx(nu) = ( (1/R^2) d^2/dRdPhi(nu) -(1/R) d/dZ(nu) )\n993:      ! ( JZ     )            ( F*  )            ( (1/R^2) d^2/dZdPhi(nu)  (1/R) d/dR(nu) )\n994: \n995:      ! Find least squares solution to above equation:",
+          "file": "unstructured/rmp.f90",
+          "line": 991,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "993:      ! ( JZ     )            ( F*  )            ( (1/R^2) d^2/dZdPhi(nu)  (1/R) d/dR(nu) )\n994: \n995:      ! Find least squares solution to above equation:\n996:      !            ( R Jphi )\n997:      ! Jx^T(mu) . ( JR     ) = Jx^T(mu) . Jx(nu) . ( psi )\n998:      !            ( JZ     )                       ( F*  )\n999: \n1000: ",
+          "file": "unstructured/rmp.f90",
+          "line": 996,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "1027: \n1028: #endif\n1029: \n1030:      ! Populate Jx^T(mu) . ( R Jphi, JR, JZ )\n1031:      temp2(:,1) = -intx3(mu79(:,:,OP_LP),temp79b,r_79)\n1032:      temp2(:,2) = &\n1033:           -       intx3(mu79(:,:,OP_DZ ),temp79a,ri_79) &\n1034:           +       intx3(mu79(:,:,OP_DR ),temp79c,ri_79)",
+          "file": "unstructured/rmp.f90",
+          "line": 1030,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "1272: end subroutine boundary_fstar\n1273: \n1274: \n1275:   subroutine read_j(n, x, phi, z, jr, jphi, jz)\n1276:     use basic\n1277: \n1278:     implicit none\n1279: ",
+          "file": "unstructured/rmp.f90",
+          "line": 1275,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "1279: \n1280:     integer, intent(in) :: n\n1281:     real, intent(in), dimension(n) :: x, phi, z\n1282:     vectype, intent(out), dimension(n) :: jr, jphi, jz\n1283: \n1284:     real, dimension(n) :: r2, ex\n1285:     real :: b0, x0, z0, s2\n1286: ",
+          "file": "unstructured/rmp.f90",
+          "line": 1282,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "1301:     jz(:) = ex * &\n1302:          (z-z0) * (-2.*x**2*((x-x0)**2 - s2) + (ntor*s2)**2 + 2.*x*(x-x0)*s2) &\n1303:          / (x**2 * s2)\n1304:     jphi(:) = cmplx(0.,ntor)*ex * &\n1305:          (x*((x-x0)**2 - (z-z0)**2) + (x - x0)*s2) &\n1306:          / x**2\n1307: \n1308:     ! This corresponds to",
+          "file": "unstructured/rmp.f90",
+          "line": 1304,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        },
+        {
+          "context": "1312: #else\n1313:     jr(:)   = ex*( (z-z0)/s2       )\n1314:     jz(:)   = ex*(-(x-x0)/s2 + 1./x)\n1315:     jphi(:) = ex*(r2/s2 - 1. - x0/x)/x\n1316: \n1317:     ! This corresponds to\n1318:     !    BR   = -(z-z0)/x * ex\n1319:     !    BZ   =  (r-r0)/x * ex",
+          "file": "unstructured/rmp.f90",
+          "line": 1315,
+          "source_sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+        }
+      ],
+      "mesh_dataset_writer": [
+        {
+          "context": "263:         call adapt_by_field(temporary_field%vec%id,psimin,psibound)\n264:     endif\n265: \n266:     write(mesh_file_name,\"(A7,A)\") 'adapted', 0\n267:     if(iadapt_writevtk .eq. 1) call m3dc1_mesh_write (mesh_file_name,0,ntime)\n268:     if(iadapt_writesmb .eq. 1) call m3dc1_mesh_write (mesh_file_name,1,ntime)\n269: \n270:     call destroy_field(temporary_field)",
+          "file": "unstructured/adapt.f90",
+          "line": 266,
+          "source_sha256": "2911f080f4cc1f5a0269c3fe16ed713e4faf205ad42c0873db86d50df73276c3"
+        },
+        {
+          "context": "264:     endif\n265: \n266:     write(mesh_file_name,\"(A7,A)\") 'adapted', 0\n267:     if(iadapt_writevtk .eq. 1) call m3dc1_mesh_write (mesh_file_name,0,ntime)\n268:     if(iadapt_writesmb .eq. 1) call m3dc1_mesh_write (mesh_file_name,1,ntime)\n269: \n270:     call destroy_field(temporary_field)\n271:     call space(0)",
+          "file": "unstructured/adapt.f90",
+          "line": 267,
+          "source_sha256": "2911f080f4cc1f5a0269c3fe16ed713e4faf205ad42c0873db86d50df73276c3"
+        },
+        {
+          "context": "265: \n266:     write(mesh_file_name,\"(A7,A)\") 'adapted', 0\n267:     if(iadapt_writevtk .eq. 1) call m3dc1_mesh_write (mesh_file_name,0,ntime)\n268:     if(iadapt_writesmb .eq. 1) call m3dc1_mesh_write (mesh_file_name,1,ntime)\n269: \n270:     call destroy_field(temporary_field)\n271:     call space(0)\n272:     call update_nodes_owned()",
+          "file": "unstructured/adapt.f90",
+          "line": 268,
+          "source_sha256": "2911f080f4cc1f5a0269c3fe16ed713e4faf205ad42c0873db86d50df73276c3"
+        },
+        {
+          "context": "432:     vectype :: maxPhi, maxPs\n433:     vectype, dimension(NUMTERM) :: jump_sum\n434: \n435:     write(mesh_file_name,\"(A7,A)\") 'adapted', 0\n436:     write(file_name1, \"(A9,I0,A)\") 'errorJump', ntime,0\n437:     write(file_name2, \"(A8,I0,A)\") 'errorElm', ntime,0\n438:     write(file_name3,\"(A8,I0,A)\") 'errorSum', ntime,0\n439: ",
+          "file": "unstructured/adapt.f90",
+          "line": 435,
+          "source_sha256": "2911f080f4cc1f5a0269c3fe16ed713e4faf205ad42c0873db86d50df73276c3"
+        },
+        {
+          "context": "527:        call set_adapt_p(iadapt_order_p)\n528:        call adapt_by_error_field(sqrt(node_error(1,:)**2+node_error(2,:)**2), adapt_target_error, &\n529: iadapt_max_node, adapt_control);\n530:        if(iadapt_writevtk .eq. 1) call m3dc1_mesh_write (mesh_file_name,0,ntime)\n531:        if(iadapt_writesmb .eq. 1) call m3dc1_mesh_write (mesh_file_name,1,ntime)\n532:        call space(0)\n533:        call update_nodes_owned()\n534:        call tridef",
+          "file": "unstructured/adapt.f90",
+          "line": 530,
+          "source_sha256": "2911f080f4cc1f5a0269c3fe16ed713e4faf205ad42c0873db86d50df73276c3"
+        },
+        {
+          "context": "528:        call adapt_by_error_field(sqrt(node_error(1,:)**2+node_error(2,:)**2), adapt_target_error, &\n529: iadapt_max_node, adapt_control);\n530:        if(iadapt_writevtk .eq. 1) call m3dc1_mesh_write (mesh_file_name,0,ntime)\n531:        if(iadapt_writesmb .eq. 1) call m3dc1_mesh_write (mesh_file_name,1,ntime)\n532:        call space(0)\n533:        call update_nodes_owned()\n534:        call tridef\n535:        call unstraighten_fields()",
+          "file": "unstructured/adapt.f90",
+          "line": 531,
+          "source_sha256": "2911f080f4cc1f5a0269c3fe16ed713e4faf205ad42c0873db86d50df73276c3"
+        },
+        {
+          "context": "196:   call add_group(\"Normalizations\", norm_grp)\n197:   call add_group(\"Boundary Conditions\", bc_grp)\n198:   call add_group(\"Time Step\", time_grp)\n199:   call add_group(\"Mesh\", mesh_grp)\n200:   call add_group(\"Solver\", solver_grp)\n201:   call add_group(\"Mesh Adaptation\", adapt_grp)\n202:   call add_group(\"Numerical Options\", num_grp)\n203:   call add_group(\"Input\", input_grp)",
+          "file": "unstructured/input.f90",
+          "line": 199,
+          "source_sha256": "35e0901613aa996212121b0363307519f676c8b95cf4379c33a8d331100a30a5"
+        },
+        {
+          "context": "325:   ! Adapt the mesh\n326:   ! ~~~~~~~~~~~~~~\n327: #ifdef USESCOREC\n328:   ! iadapt_writevtk=1, write the initial mesh before adaptation\n329:   if (iadapt.gt.0 .and. iadapt_writevtk .eq. 1) then\n330:     write(mesh_file_name,\"(A7,A)\") 'initial', 0\n331:     call m3dc1_mesh_write (mesh_file_name,0,0)\n332:   endif",
+          "file": "unstructured/newpar.f90",
+          "line": 328,
+          "source_sha256": "37484079fbfc3ca041b32f5fd71563509a4c5fb0a266de8a04c84c54ab332a2f"
+        },
+        {
+          "context": "327: #ifdef USESCOREC\n328:   ! iadapt_writevtk=1, write the initial mesh before adaptation\n329:   if (iadapt.gt.0 .and. iadapt_writevtk .eq. 1) then\n330:     write(mesh_file_name,\"(A7,A)\") 'initial', 0\n331:     call m3dc1_mesh_write (mesh_file_name,0,0)\n332:   endif\n333: \n334:   !if (iadapt .eq. 1) then",
+          "file": "unstructured/newpar.f90",
+          "line": 330,
+          "source_sha256": "37484079fbfc3ca041b32f5fd71563509a4c5fb0a266de8a04c84c54ab332a2f"
+        },
+        {
+          "context": "328:   ! iadapt_writevtk=1, write the initial mesh before adaptation\n329:   if (iadapt.gt.0 .and. iadapt_writevtk .eq. 1) then\n330:     write(mesh_file_name,\"(A7,A)\") 'initial', 0\n331:     call m3dc1_mesh_write (mesh_file_name,0,0)\n332:   endif\n333: \n334:   !if (iadapt .eq. 1) then\n335:   if (mod (iadapt, 2) .eq. 1) then",
+          "file": "unstructured/newpar.f90",
+          "line": 331,
+          "source_sha256": "37484079fbfc3ca041b32f5fd71563509a4c5fb0a266de8a04c84c54ab332a2f"
+        },
+        {
+          "context": "450:     ! for now call spr adapt every 10 time steps\n451:     if (ispradapt .eq. 1) then\n452:       if (mod(ntime, isprntime) .eq. 0) then\n453:         write(mesh_file_name,\"(A11,A)\") 'beforeadapt', 0\n454:         call m3dc1_mesh_write (mesh_file_name,0,ntime)\n455:         ! if update_mesh is true\n456:         ! the (2D) part.smb will be updated (overwritten) inside adapt_by_spr\n457:         ! the frequency of update is the same as frequency of output time slices",
+          "file": "unstructured/newpar.f90",
+          "line": 453,
+          "source_sha256": "37484079fbfc3ca041b32f5fd71563509a4c5fb0a266de8a04c84c54ab332a2f"
+        },
+        {
+          "context": "451:     if (ispradapt .eq. 1) then\n452:       if (mod(ntime, isprntime) .eq. 0) then\n453:         write(mesh_file_name,\"(A11,A)\") 'beforeadapt', 0\n454:         call m3dc1_mesh_write (mesh_file_name,0,ntime)\n455:         ! if update_mesh is true\n456:         ! the (2D) part.smb will be updated (overwritten) inside adapt_by_spr\n457:         ! the frequency of update is the same as frequency of output time slices\n458:         update_mesh = .false.",
+          "file": "unstructured/newpar.f90",
+          "line": 454,
+          "source_sha256": "37484079fbfc3ca041b32f5fd71563509a4c5fb0a266de8a04c84c54ab332a2f"
+        },
+        {
+          "context": "824:   integer :: izone\n825: \n826:   ! Create the group\n827:   call h5gcreate_f(time_group_id, \"mesh\", mesh_group_id, error) \n828: \n829:   ! Write attributes\n830:   call write_int_attr(mesh_group_id, \"nelms\", global_elms, error)\n831:   call get_bounding_box_size(alx, alz)",
+          "file": "unstructured/output.f90",
+          "line": 827,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "827:   call h5gcreate_f(time_group_id, \"mesh\", mesh_group_id, error) \n828: \n829:   ! Write attributes\n830:   call write_int_attr(mesh_group_id, \"nelms\", global_elms, error)\n831:   call get_bounding_box_size(alx, alz)\n832:   call write_real_attr(mesh_group_id, \"width\", alx, error)\n833:   call write_real_attr(mesh_group_id, \"height\", alz, error)\n834: #ifdef USE3D",
+          "file": "unstructured/output.f90",
+          "line": 830,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "829:   ! Write attributes\n830:   call write_int_attr(mesh_group_id, \"nelms\", global_elms, error)\n831:   call get_bounding_box_size(alx, alz)\n832:   call write_real_attr(mesh_group_id, \"width\", alx, error)\n833:   call write_real_attr(mesh_group_id, \"height\", alz, error)\n834: #ifdef USE3D\n835:   call write_int_attr(mesh_group_id, \"3D\", 1, error)\n836: #else",
+          "file": "unstructured/output.f90",
+          "line": 832,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "830:   call write_int_attr(mesh_group_id, \"nelms\", global_elms, error)\n831:   call get_bounding_box_size(alx, alz)\n832:   call write_real_attr(mesh_group_id, \"width\", alx, error)\n833:   call write_real_attr(mesh_group_id, \"height\", alz, error)\n834: #ifdef USE3D\n835:   call write_int_attr(mesh_group_id, \"3D\", 1, error)\n836: #else\n837:   call write_int_attr(mesh_group_id, \"3D\", 0, error)",
+          "file": "unstructured/output.f90",
+          "line": 833,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "832:   call write_real_attr(mesh_group_id, \"width\", alx, error)\n833:   call write_real_attr(mesh_group_id, \"height\", alz, error)\n834: #ifdef USE3D\n835:   call write_int_attr(mesh_group_id, \"3D\", 1, error)\n836: #else\n837:   call write_int_attr(mesh_group_id, \"3D\", 0, error)\n838: #endif\n839:   call write_int_attr(mesh_group_id, \"nplanes\", nplanes, error)",
+          "file": "unstructured/output.f90",
+          "line": 835,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "834: #ifdef USE3D\n835:   call write_int_attr(mesh_group_id, \"3D\", 1, error)\n836: #else\n837:   call write_int_attr(mesh_group_id, \"3D\", 0, error)\n838: #endif\n839:   call write_int_attr(mesh_group_id, \"nplanes\", nplanes, error)\n840: \n841:   call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)",
+          "file": "unstructured/output.f90",
+          "line": 837,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "836: #else\n837:   call write_int_attr(mesh_group_id, \"3D\", 0, error)\n838: #endif\n839:   call write_int_attr(mesh_group_id, \"nplanes\", nplanes, error)\n840: \n841:   call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)\n842:   call write_int_attr(mesh_group_id, \"ifull_torus\", ifull_torus, error)\n843:   call write_int_attr(mesh_group_id, \"version\", version, error)",
+          "file": "unstructured/output.f90",
+          "line": 839,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "838: #endif\n839:   call write_int_attr(mesh_group_id, \"nplanes\", nplanes, error)\n840: \n841:   call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)\n842:   call write_int_attr(mesh_group_id, \"ifull_torus\", ifull_torus, error)\n843:   call write_int_attr(mesh_group_id, \"version\", version, error)\n844:   call write_real_attr(mesh_group_id, \"period\", toroidal_period, error)\n845: ",
+          "file": "unstructured/output.f90",
+          "line": 841,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "839:   call write_int_attr(mesh_group_id, \"nplanes\", nplanes, error)\n840: \n841:   call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)\n842:   call write_int_attr(mesh_group_id, \"ifull_torus\", ifull_torus, error)\n843:   call write_int_attr(mesh_group_id, \"version\", version, error)\n844:   call write_real_attr(mesh_group_id, \"period\", toroidal_period, error)\n845: \n846:   ! Output the mesh data",
+          "file": "unstructured/output.f90",
+          "line": 842,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "840: \n841:   call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)\n842:   call write_int_attr(mesh_group_id, \"ifull_torus\", ifull_torus, error)\n843:   call write_int_attr(mesh_group_id, \"version\", version, error)\n844:   call write_real_attr(mesh_group_id, \"period\", toroidal_period, error)\n845: \n846:   ! Output the mesh data\n847:   do i=1, nelms",
+          "file": "unstructured/output.f90",
+          "line": 843,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "841:   call write_int_attr(mesh_group_id, \"nperiods\", nperiods, error)\n842:   call write_int_attr(mesh_group_id, \"ifull_torus\", ifull_torus, error)\n843:   call write_int_attr(mesh_group_id, \"version\", version, error)\n844:   call write_real_attr(mesh_group_id, \"period\", toroidal_period, error)\n845: \n846:   ! Output the mesh data\n847:   do i=1, nelms\n848:      ! Since snap operation is default in adapt, it's safe to call",
+          "file": "unstructured/output.f90",
+          "line": 844,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "884:         end if\n885:      end if\n886:   end do\n887:   call output_field(mesh_group_id, \"elements\", elm_data, vals_per_elm, &\n888:        nelms, error)\n889: \n890:   ! Output adjacency info\n891:   if(iwrite_adjacency.eq.1) then",
+          "file": "unstructured/output.f90",
+          "line": 887,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "917:   do i=1, nplanes\n918:      call m3dc1_plane_getphi(i-1, phi(i))\n919:   end do\n920:   call write_vec_attr(mesh_group_id, \"phi\", phi, nplanes, error)\n921:   deallocate(phi)\n922: #endif\n923: \n924:   ! Close the group",
+          "file": "unstructured/output.f90",
+          "line": 920,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "1394:     call write_field(group_id, \"magnetic_region\", mag_reg, nelms, error,.true.)\n1395: \n1396:     ! mesh zone\n1397:     call write_field(group_id, \"mesh_zone\", mesh_zone, nelms, error, .true.)\n1398: \n1399:     ! electric_field\n1400:     call write_field(group_id, \"E_R\", ef_r, nelms, error)\n1401:     call write_field(group_id, \"E_PHI\", ef_phi, nelms, error)",
+          "file": "unstructured/output.f90",
+          "line": 1397,
+          "source_sha256": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+        },
+        {
+          "context": "77:     call read_int_attr(root_id, \"icomplex\", icomplex_in, error)\n78:     call read_int_attr(root_id, \"3d\", i3d_in, error)\n79: \n80:     call h5gopen_f(time_id, \"mesh\", mesh_id, error)\n81:     call read_int_attr(mesh_id, \"nplanes\", nplanes_in, error)\n82:     call read_real_attr(mesh_id, \"period\", toroidal_period_in, error)\n83: \n84:     if(version_in.ge.34 .and. i3d_in.eq.1) then",
+          "file": "unstructured/restart_hdf5.f90",
+          "line": 80,
+          "source_sha256": "d7317c9c58f320195fc048cd82811479cb9feb284f6e7c956b222deaff303afa"
+        },
+        {
+          "context": "134:     else\n135:        if(myrank.eq.0) print *, 'curved mesh model...'\n136:     endif\n137:     write(name_buff,\"(A,A)\") mesh_model(1:len_trim(mesh_model)),0\n138:     call m3dc1_model_load(name_buff)\n139:     write(name_buff,\"(A,A)\")  mesh_filename(1:len_trim(mesh_filename)),0\n140:     call m3dc1_mesh_load (name_buff)\n141: ",
+          "file": "unstructured/scorec_mesh.f90",
+          "line": 137,
+          "source_sha256": "93e809e8d6855d83ebb3eeec738efca215a20d71c1dd4cb0cd1f8caf01c9722e"
+        },
+        {
+          "context": "136:     endif\n137:     write(name_buff,\"(A,A)\") mesh_model(1:len_trim(mesh_model)),0\n138:     call m3dc1_model_load(name_buff)\n139:     write(name_buff,\"(A,A)\")  mesh_filename(1:len_trim(mesh_filename)),0\n140:     call m3dc1_mesh_load (name_buff)\n141: \n142:     ! set up toroidal angles\n143:     if(iread_planes.eq.1) then",
+          "file": "unstructured/scorec_mesh.f90",
+          "line": 139,
+          "source_sha256": "93e809e8d6855d83ebb3eeec738efca215a20d71c1dd4cb0cd1f8caf01c9722e"
+        },
+        {
+          "context": "194:     ! in serial, it loads the whole mesh\n195:     ! in parallel, it loads N-part distributed mesh.\n196:     ! to get N-part distributed mesh, run split_smb provided as mesh utilities\n197:     write(name_buff,\"(A,A)\")  mesh_model(1:len_trim(mesh_model)),0\n198:     call m3dc1_model_load(name_buff)\n199: #ifdef USECADMODEL\n200:     write(name_buff,\"(A,A)\")  model_info(1:len_trim(model_info)),0\n201:     call m3dc1_modelinfo_load(name_buff)",
+          "file": "unstructured/scorec_mesh.f90",
+          "line": 197,
+          "source_sha256": "93e809e8d6855d83ebb3eeec738efca215a20d71c1dd4cb0cd1f8caf01c9722e"
+        },
+        {
+          "context": "200:     write(name_buff,\"(A,A)\")  model_info(1:len_trim(model_info)),0\n201:     call m3dc1_modelinfo_load(name_buff)\n202: #endif\n203:     write(name_buff,\"(A,A)\")  mesh_filename(1:len_trim(mesh_filename)),0\n204:     call m3dc1_mesh_load (name_buff)\n205: #endif\n206:     call update_nodes_owned\n207: ",
+          "file": "unstructured/scorec_mesh.f90",
+          "line": 203,
+          "source_sha256": "93e809e8d6855d83ebb3eeec738efca215a20d71c1dd4cb0cd1f8caf01c9722e"
+        },
+        {
+          "context": "77: void m3dc1_mesh_load_3d(char* mesh_file, int* num_plane);\n78: \n79: // option 0: vtk file with field; 1:smb file\n80: int m3dc1_mesh_write(char* filename, int *option, int* /*time step*/);\n81: void m3dc1_mesh_verify();\n82: \n83: int m3dc1_mesh_build3d(int* num_field, int* field_id, int* num_dofs_per_value);\n84: ",
+          "file": "m3dc1_scorec/api/m3dc1_scorec.h",
+          "line": 80,
+          "source_sha256": "3d1a235cd0baabf6995d81841e8520afdef83b68481a8359b83fe0e66a8a606d"
+        },
+        {
+          "context": "23: #define m3dc1_mesh_load_3d m3dc1_mesh_load_3d_\n24: #define m3dc1_mesh_build3d m3dc1_mesh_build3d_\n25: #define m3dc1_spr_adapt m3dc1_spr_adapt_\n26: #define m3dc1_mesh_write m3dc1_mesh_write_\n27: #define m3dc1_mesh_verify m3dc1_mesh_verify\n28: #define m3dc1_mesh_getnument m3dc1_mesh_getnument_\n29: #define m3dc1_mesh_getnumghostent m3dc1_mesh_getnumghostent_\n30: #define m3dc1_mesh_getnumownent m3dc1_mesh_getnumownent_",
+          "file": "m3dc1_scorec/api/name_convert.h",
+          "line": 26,
+          "source_sha256": "d37a36d94473d11ae2dac7fa597b8892b56a1f5fa9b455ab36a393827f5c109e"
+        }
+      ]
+    },
+    "source_files_scanned": 182,
+    "source_lineage_status": "CANDIDATES_ONLY_NO_INDEPENDENT_GEOMETRY_CHECK",
+    "timestamp_utc": "2026-10-30T18:27:06.951481+00:00",
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_quadrature_142/native_mesh_hdf5_column_lineage_summary.json",
+  "summary_sha256": "d415bce33aefbfb985cd6775727cfb051a5de19bee4e95f6c387b1f8d393b6a8",
+  "timed_out": false
+}

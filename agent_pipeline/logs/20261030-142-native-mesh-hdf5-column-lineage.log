@@ -1,0 +1,51 @@
+job_id=20261030-142-native-mesh-hdf5-column-lineage
+started_utc=2026-10-30T18:27:06.444875Z
+head_before=e40696f5068ab915d3b9b1fcf5803853c956543e
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "calibrated_physical_current_validated": false,
+  "calibrated_physical_width_validated": false,
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Source-level mesh/elements writer and element-weight lineage candidates only. Neither e[2], R*e[2], int1 nor HDF5 jphi is independently calibrated to physical current/area. No new native solver run, shot handoff, temporal convergence, controller-in-loop, causal TCT stabilization, p-B11 fidelity, ignition or net-power evidence.",
+  "classification": "M3DC1_NATIVE_MESH_HDF5_COLUMN_LINEAGE_DIAGNOSTIC_COMPLETE",
+  "evidence_counts": {
+    "element_weight_geometry": 14,
+    "int1_definition_or_use": 45,
+    "jphi_writer": 29,
+    "mesh_dataset_writer": 33
+  },
+  "expected_parent_summary_sha256": "ad8ed8e97a475090d966f29a1a9de59e1956844e67b99ad6fa84dfb4a63ef7b4",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "hdf5_column_to_geometry_mapping_validated": false,
+  "independent_analytic_geometry_check_passed": false,
+  "interpretation": "Targeted source context for the mesh/elements writer, e(2) geometry/weight candidates, int1 and jphi is collected with source hashes. Context hits do not prove the HDF5 column schema or a physical quadrature. A column-level mapping and independent analytic geometry comparison are required before physical current or width claims.",
+  "job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "machine": "normalized-native-M3D-C1",
+  "native_source_root": "/home/ubuntu/M3DC1-official",
+  "parent_mesh_elements_shape": [
+    1004,
+    8
+  ],
+  "parent_result_job_id": "20261030-141-native-mesh-quadrature-provenance",
+  "parent_source_scan_count": 182,
+  "physical_quadrature_validated": false,
+  "physics_solver_runs": 0,
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_files_scanned": 182,
+  "source_lineage_status": "CANDIDATES_ONLY_NO_INDEPENDENT_GEOMETRY_CHECK",
+  "timestamp_utc": "2026-10-30T18:27:06.951481+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T18:27:07.511701Z
+return_code=0
