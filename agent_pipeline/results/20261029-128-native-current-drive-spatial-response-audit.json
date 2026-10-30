@@ -1,0 +1,248 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 46.85909557342529,
+  "error": null,
+  "finished_utc": "2026-10-30T04:46:40.890239Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 8512,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_spatial_response_128/native_spatial_summary.json"
+    ]
+  },
+  "head_before": "0b1dfee798447d41ae7bca022c32f2ac373729ae",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261029-128-native-current-drive-spatial-response-audit.json",
+  "job_id": "20261029-128-native-current-drive-spatial-response-audit",
+  "log_path": "agent_pipeline/logs/20261029-128-native-current-drive-spatial-response-audit.log",
+  "log_sha256": "d42eb1489228816a1b1be36b2f219204dcc4dbc8580f8fc23732c382e7824771",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_spatial_response_128"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_spatial_response_128.sh",
+  "runner_sha256": "539618ab40779d4c11fcfcbd3a838b7ed3158d6ddebf7e637a789056e9d3ff37",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-30T04:45:54.030392Z",
+  "success": true,
+  "summary": {
+    "amplitudes": [
+      -0.005,
+      -0.0025,
+      0.0,
+      0.0025,
+      0.005
+    ],
+    "claim_boundary": "Field-level normalized-native M3D-C1 diagnostic only. No directly measured injected source, physical current calibration, shot handoff, segmented-electrode authority, p-B11 or causal TCT stabilization.",
+    "classification": "M3DC1_NATIVE_CURRENT_DRIVE_SPATIAL_RESPONSE_DIAGNOSTIC_COMPLETE",
+    "dt": 0.01,
+    "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "field_read_backend": "h5py_native_dataset",
+    "field_response_observed": true,
+    "frame_diagnostics": [
+      {
+        "cases": {
+          "full_negative": {
+            "center_signed_delta_jphi": 0.0,
+            "max_abs_delta_jphi": 0.0,
+            "shoulder_signed_delta_jphi": 0.0,
+            "weighted_abs_delta_jphi": 0.0,
+            "weighted_signed_delta_jphi": 0.0
+          },
+          "full_positive": {
+            "center_signed_delta_jphi": 0.0,
+            "max_abs_delta_jphi": 0.0,
+            "shoulder_signed_delta_jphi": 0.0,
+            "weighted_abs_delta_jphi": 0.0,
+            "weighted_signed_delta_jphi": 0.0
+          },
+          "half_negative": {
+            "center_signed_delta_jphi": 0.0,
+            "max_abs_delta_jphi": 0.0,
+            "shoulder_signed_delta_jphi": 0.0,
+            "weighted_abs_delta_jphi": 0.0,
+            "weighted_signed_delta_jphi": 0.0
+          },
+          "half_positive": {
+            "center_signed_delta_jphi": 0.0,
+            "max_abs_delta_jphi": 0.0,
+            "shoulder_signed_delta_jphi": 0.0,
+            "weighted_abs_delta_jphi": 0.0,
+            "weighted_signed_delta_jphi": 0.0
+          }
+        },
+        "frame": 0,
+        "full_negative_twice_half_residual_fraction": 0.0,
+        "full_odd_symmetry_residual_fraction": 0.0,
+        "full_positive_twice_half_residual_fraction": 0.0,
+        "half_odd_symmetry_residual_fraction": 0.0,
+        "max_abs_zero_vs_baseline_jphi": 0.0,
+        "mesh_elements": 1004,
+        "time": 0.0,
+        "weighted_roi_elements": 141
+      },
+      {
+        "cases": {
+          "full_negative": {
+            "center_signed_delta_jphi": -5.568276239498182e-05,
+            "max_abs_delta_jphi": 0.0001976247876882553,
+            "shoulder_signed_delta_jphi": -8.793824785046652e-06,
+            "weighted_abs_delta_jphi": 0.00022215188714016194,
+            "weighted_signed_delta_jphi": -6.59513666022627e-05
+          },
+          "full_positive": {
+            "center_signed_delta_jphi": 5.564348164627253e-05,
+            "max_abs_delta_jphi": 0.00019762665033340454,
+            "shoulder_signed_delta_jphi": 8.795146827425245e-06,
+            "weighted_abs_delta_jphi": 0.00022214917596589218,
+            "weighted_signed_delta_jphi": 6.591325913113258e-05
+          },
+          "half_negative": {
+            "center_signed_delta_jphi": -2.7838809527280794e-05,
+            "max_abs_delta_jphi": 9.881146252155304e-05,
+            "shoulder_signed_delta_jphi": -4.398151910850294e-06,
+            "weighted_abs_delta_jphi": 0.00011106714860646997,
+            "weighted_signed_delta_jphi": -3.2974728044518945e-05
+          },
+          "half_positive": {
+            "center_signed_delta_jphi": 2.782435012882445e-05,
+            "max_abs_delta_jphi": 9.881332516670227e-05,
+            "shoulder_signed_delta_jphi": 4.396879727132521e-06,
+            "weighted_abs_delta_jphi": 0.00011106861970152886,
+            "weighted_signed_delta_jphi": 3.295816782146734e-05
+          }
+        },
+        "frame": 1,
+        "full_negative_twice_half_residual_fraction": 0.00012500307028414046,
+        "full_odd_symmetry_residual_fraction": 0.00010899583053993721,
+        "full_positive_twice_half_residual_fraction": 0.00012646890848876728,
+        "half_odd_symmetry_residual_fraction": 0.0002653586562361789,
+        "max_abs_zero_vs_baseline_jphi": 0.0,
+        "mesh_elements": 1004,
+        "time": 0.01,
+        "weighted_roi_elements": 141
+      },
+      {
+        "cases": {
+          "full_negative": {
+            "center_signed_delta_jphi": -7.730513908502795e-05,
+            "max_abs_delta_jphi": 0.0002785921096801758,
+            "shoulder_signed_delta_jphi": 7.30130778209704e-06,
+            "weighted_abs_delta_jphi": 0.00022408902540530645,
+            "weighted_signed_delta_jphi": -7.07238310305396e-05
+          },
+          "full_positive": {
+            "center_signed_delta_jphi": 5.4189668953201486e-05,
+            "max_abs_delta_jphi": 0.000257856328971684,
+            "shoulder_signed_delta_jphi": 1.0701841752172418e-05,
+            "weighted_abs_delta_jphi": 0.0002542999021080273,
+            "weighted_signed_delta_jphi": 6.708215500185208e-05
+          },
+          "half_negative": {
+            "center_signed_delta_jphi": -2.8339585923638222e-05,
+            "max_abs_delta_jphi": 0.00013100943760946393,
+            "shoulder_signed_delta_jphi": -6.234209520829433e-06,
+            "weighted_abs_delta_jphi": 0.00012954755229816902,
+            "weighted_signed_delta_jphi": -3.566043965412435e-05
+          },
+          "half_positive": {
+            "center_signed_delta_jphi": 2.715399481870856e-05,
+            "max_abs_delta_jphi": 0.0001289575593546033,
+            "shoulder_signed_delta_jphi": 5.350261688511458e-06,
+            "weighted_abs_delta_jphi": 0.00012723413443181867,
+            "weighted_signed_delta_jphi": 3.359890649523315e-05
+          }
+        },
+        "frame": 2,
+        "full_negative_twice_half_residual_fraction": 0.6415724289966795,
+        "full_odd_symmetry_residual_fraction": 0.6306472270647795,
+        "full_positive_twice_half_residual_fraction": 0.000454213649226281,
+        "half_odd_symmetry_residual_fraction": 0.07064119890023308,
+        "max_abs_zero_vs_baseline_jphi": 0.0,
+        "mesh_elements": 1004,
+        "time": 0.02,
+        "weighted_roi_elements": 141
+      },
+      {
+        "cases": {
+          "full_negative": {
+            "center_signed_delta_jphi": -8.82741144942259e-05,
+            "max_abs_delta_jphi": 0.0002903938293457031,
+            "shoulder_signed_delta_jphi": 1.424401704259884e-05,
+            "weighted_abs_delta_jphi": 0.00022280482659982014,
+            "weighted_signed_delta_jphi": -7.313884204431618e-05
+          },
+          "full_positive": {
+            "center_signed_delta_jphi": 4.735414356178691e-05,
+            "max_abs_delta_jphi": 0.0002239421010017395,
+            "shoulder_signed_delta_jphi": 9.832007570758131e-06,
+            "weighted_abs_delta_jphi": 0.00022262500697381817,
+            "weighted_signed_delta_jphi": 5.8236789853143966e-05
+          },
+          "half_negative": {
+            "center_signed_delta_jphi": -3.18796001905243e-05,
+            "max_abs_delta_jphi": 0.0001367330551147461,
+            "shoulder_signed_delta_jphi": 4.35975946285681e-06,
+            "weighted_abs_delta_jphi": 0.00010523364469318364,
+            "weighted_signed_delta_jphi": -2.726192588234453e-05
+          },
+          "half_positive": {
+            "center_signed_delta_jphi": 3.140571987449159e-05,
+            "max_abs_delta_jphi": 0.00014019012451171875,
+            "shoulder_signed_delta_jphi": -3.969594684127993e-06,
+            "weighted_abs_delta_jphi": 0.00010218696583021806,
+            "weighted_signed_delta_jphi": 2.7233469973835092e-05
+          }
+        },
+        "frame": 3,
+        "full_negative_twice_half_residual_fraction": 0.19156610901086674,
+        "full_odd_symmetry_residual_fraction": 0.7758717908383893,
+        "full_positive_twice_half_residual_fraction": 0.7093995498744134,
+        "half_odd_symmetry_residual_fraction": 0.08608206479170988,
+        "max_abs_zero_vs_baseline_jphi": 0.0,
+        "mesh_elements": 1004,
+        "time": 0.03,
+        "weighted_roi_elements": 141
+      }
+    ],
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "gate_window": [
+      0.0,
+      0.04
+    ],
+    "interpretation": "Matched per-frame native jphi mesh response replaces reliance on aggregate Jpk envelopes. h5dump fallback is precision-limited if h5py is unavailable. Response geometry is not the injected source itself and does not calibrate physical actuator current, validate a segmented-electrode controller, or establish TCT stabilization.",
+    "machine": "normalized-native-M3D-C1",
+    "mesh_correspondence_verified": true,
+    "observed_time_samples": [
+      0.0,
+      0.01,
+      0.02,
+      0.03
+    ],
+    "parent_result_job_id": "20261029-127-native-current-drive-amplitude-response-audit",
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_mode": 4,
+    "steps": 3,
+    "timestamp_utc": "2026-10-30T04:45:55.097496+00:00",
+    "zero_equivalence": {
+      "max_abs_field_delta": 0.0,
+      "pass": true
+    },
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_spatial_response_128/native_spatial_summary.json",
+  "summary_sha256": "4ed15099ca7b30b3e05489d9a461d811433c6224e15b8dabbdcc71175541c3ff",
+  "timed_out": false
+}
