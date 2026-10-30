@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-141-native-mesh-quadrature-provenance",
+  "processed_result_job_id": "20261030-141-native-mesh-quadrature-provenance",
+  "processed_result_receipt_sha": "75355c825d3449aed0adacd58f58e5f42f805803",
+  "validation_summary_sha256": "ad8ed8e97a475090d966f29a1a9de59e1956844e67b99ad6fa84dfb4a63ef7b4",
+  "log_sha256": "cd8f165a811927ce22f825d8919f0200e84444c85399824dd3860688bf44b40d",
+  "result_head_before": "b7634a34c65d919e7280898c0069fdc76253fa74",
+  "classification": "M3DC1_NATIVE_MESH_QUADRATURE_PROVENANCE_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_MESH_QUADRATURE_PROVENANCE_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_mesh_quadrature_source_provenance_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Source-only audit of locally installed normalized-native M3D-C1 code; no experimental shot, no new physics run, no controller-in-loop.",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "runtime_seconds": 0.8653709888458252,
+    "return_code": 0,
+    "native_source_files_scanned": 182,
+    "physics_solver_runs": 0,
+    "source_hit_counts": {
+      "element_weight_or_geometry": 30,
+      "hdf5_mesh_elements": 29,
+      "int1_quadrature": 30
+    },
+    "mesh_elements_shape": [
+      1004,
+      8
+    ],
+    "mesh_element_attrs": {},
+    "parent_roi_comparisons": 36,
+    "parent_roi_sign_flip_groups": 4,
+    "parent_max_width_gain_pct": 0.011276331669174411,
+    "parent_frozen_width_gate_crossings": 0,
+    "parent_max_jpk_increase_pct": 0.017892263962671073,
+    "parent_zero_source_max_abs_field_delta": 0,
+    "physical_quadrature_validated": false,
+    "calibrated_physical_width_validated": false
+  },
+  "successful_milestone": "The bounded source-provenance runner completed successfully, scanning 182 native source files in 0.865 seconds and recording hashed candidate definitions for int1 quadrature, element weights and HDF5 output. This is a traceability milestone, not physical validation.",
+  "interpretation": "Source search yielded 30 element geometry/weight, 29 HDF5, and 30 int1 excerpts but no independently verified mapping from HDF5 e[2] or R*e[2] to physical current/area. Parent experiment 140 had 0/36 frozen width-gate passes and four ROI-dependent sign flips. This result is neutral on causal TCT stabilization and supports only a narrower source-lineage prerequisite audit.",
+  "mechanism_effect": "source_provenance_traced; physical_current_and_width_mapping_unvalidated; causal_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "followup_scope": "One focused source-only HDF5 mesh/elements column lineage and element-weight contextual audit, with no solver runs or physics/threshold changes; independent analytic geometry check remains a subsequent prerequisite.",
+  "handoff_equivalence": "unvalidated; no imported shots or native equilibrium/profile handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or reactor net power evidence",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 source-level provenance only. Neither e[2], R*e[2], int1 nor jphi has independent physical current/area calibration; no temporal convergence, causal segmented controller-in-loop authority, shot handoff, physical sheet-width validation or p-B11 evidence.",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "timestamp_utc": "2026-10-30T18:27:01.202Z"
+}
