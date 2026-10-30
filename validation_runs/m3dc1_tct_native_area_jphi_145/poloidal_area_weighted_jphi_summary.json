@@ -1,0 +1,330 @@
+{
+  "calibrated_physical_width_validated": false,
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Saved normalized-native 2-D M3D-C1 open-loop jphi field with independently crosschecked poloidal triangle area. Area*jphi and R*area*jphi are diagnostics only, not native int1, toroidal current, calibrated injected current, 3-D quadrature, causal segmented TCT, shot handoff, p-B11, ignition or net power.",
+  "classification": "M3DC1_NATIVE_POLOIDAL_AREA_WEIGHTED_JPHI_RESPONSE_DIAGNOSTIC_COMPLETE",
+  "e2_vs_poloidal_area_signed_response_sign_flip_count": 0,
+  "expected_parent_summary_sha256": "3b7224526ad316e172f0fd3a054355f631117609d02f781bf984177c11317501",
+  "frames": [
+    {
+      "cases": {
+        "full_negative": {
+          "max_abs_delta_jphi": 0.0,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            }
+          }
+        },
+        "full_positive": {
+          "max_abs_delta_jphi": 0.0,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.0,
+              "cancellation_fraction": null,
+              "negative_lobe_magnitude": 0.0,
+              "positive_lobe": 0.0,
+              "signed": 0.0
+            }
+          }
+        }
+      },
+      "frame": 0,
+      "mesh_elements": 1004,
+      "poloidal_area_sum": 28.22795112386777,
+      "time": 0.0
+    },
+    {
+      "cases": {
+        "full_negative": {
+          "max_abs_delta_jphi": 0.0001976247876882553,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.000355184017742455,
+              "cancellation_fraction": 0.6801565054408869,
+              "negative_lobe_magnitude": 0.00023439365759437392,
+              "positive_lobe": 0.00012079036014808108,
+              "signed": -0.00011360329744629286
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 3.558511102722879e-05,
+              "cancellation_fraction": 0.6773765890053476,
+              "negative_lobe_magnitude": 2.353285046372838e-05,
+              "positive_lobe": 1.205226056350041e-05,
+              "signed": -1.1480589900227971e-05
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.0040562012224248985,
+              "cancellation_fraction": 0.6985941735672525,
+              "negative_lobe_magnitude": 0.0026393819520236983,
+              "positive_lobe": 0.0014168192704012007,
+              "signed": -0.0012225626816224973
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.00040589056784023117,
+              "cancellation_fraction": 0.6943825366743752,
+              "negative_lobe_magnitude": 0.00026496890678568005,
+              "positive_lobe": 0.00014092166105455115,
+              "signed": -0.0001240472457311289
+            }
+          }
+        },
+        "full_positive": {
+          "max_abs_delta_jphi": 0.00019762665033340454,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.0003552636007114504,
+              "cancellation_fraction": 0.6805063379741334,
+              "negative_lobe_magnitude": 0.0001208795659678269,
+              "positive_lobe": 0.00023438403474362348,
+              "signed": 0.00011350446877579657
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 3.559290792354022e-05,
+              "cancellation_fraction": 0.6777124411581452,
+              "negative_lobe_magnitude": 1.2060878258389767e-05,
+              "positive_lobe": 2.3532029665150454e-05,
+              "signed": 1.1471151406760685e-05
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.004058212172523533,
+              "cancellation_fraction": 0.6992649182182171,
+              "negative_lobe_magnitude": 0.001418882701465921,
+              "positive_lobe": 0.002639329471057612,
+              "signed": 0.0012204467695916912
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.0004060799172941712,
+              "cancellation_fraction": 0.6950076173232096,
+              "negative_lobe_magnitude": 0.00014111431788071398,
+              "positive_lobe": 0.0002649655994134572,
+              "signed": 0.00012385128153274323
+            }
+          }
+        }
+      },
+      "frame": 1,
+      "mesh_elements": 1004,
+      "poloidal_area_sum": 28.22795112386777,
+      "time": 0.01
+    },
+    {
+      "cases": {
+        "full_negative": {
+          "max_abs_delta_jphi": 0.00035858154296875,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.00042648010790211056,
+              "cancellation_fraction": 0.7697760267551288,
+              "negative_lobe_magnitude": 0.0002623330264266179,
+              "positive_lobe": 0.00016414708147549262,
+              "signed": -9.818594495112529e-05
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 4.298539176221313e-05,
+              "cancellation_fraction": 0.7753945706233755,
+              "negative_lobe_magnitude": 2.632007206794371e-05,
+              "positive_lobe": 1.6665319694269413e-05,
+              "signed": -9.654752373674297e-06
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.004839103022750607,
+              "cancellation_fraction": 0.8046974378145326,
+              "negative_lobe_magnitude": 0.00289209612088662,
+              "positive_lobe": 0.0019470069018639867,
+              "signed": -0.0009450892190226334
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.0004878000952882022,
+              "cancellation_fraction": 0.8106262701927387,
+              "negative_lobe_magnitude": 0.00029008830936663325,
+              "positive_lobe": 0.00019771178592156897,
+              "signed": -9.237652344506431e-05
+            }
+          }
+        },
+        "full_positive": {
+          "max_abs_delta_jphi": 0.000257856328971684,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.00039109091228368466,
+              "cancellation_fraction": 0.7211422370400364,
+              "negative_lobe_magnitude": 0.0001410160876851425,
+              "positive_lobe": 0.00025007482459854215,
+              "signed": 0.00010905873691339964
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 3.913114871885012e-05,
+              "cancellation_fraction": 0.7197340455392676,
+              "negative_lobe_magnitude": 1.4082009987008362e-05,
+              "positive_lobe": 2.504913873184176e-05,
+              "signed": 1.09671287448334e-05
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.004432550292452228,
+              "cancellation_fraction": 0.7281450234963991,
+              "negative_lobe_magnitude": 0.001613769718423299,
+              "positive_lobe": 0.0028187805740289285,
+              "signed": 0.0012050108556056294
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.00044314976944747253,
+              "cancellation_fraction": 0.7257697815773385,
+              "negative_lobe_magnitude": 0.00016081235568897,
+              "positive_lobe": 0.0002823374137585025,
+              "signed": 0.0001215250580695325
+            }
+          }
+        }
+      },
+      "frame": 2,
+      "mesh_elements": 1004,
+      "poloidal_area_sum": 28.22795112386777,
+      "time": 0.02
+    },
+    {
+      "cases": {
+        "full_negative": {
+          "max_abs_delta_jphi": 0.00034928321838378906,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.0004428038647997847,
+              "cancellation_fraction": 0.7604600833698435,
+              "negative_lobe_magnitude": 0.00027443653282871813,
+              "positive_lobe": 0.0001683673319710666,
+              "signed": -0.0001060692008576515
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 4.452758442325202e-05,
+              "cancellation_fraction": 0.7678785165778996,
+              "negative_lobe_magnitude": 2.7431696686390045e-05,
+              "positive_lobe": 1.7095887736861975e-05,
+              "signed": -1.0335808949528071e-05
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.005007898132381847,
+              "cancellation_fraction": 0.7868623301347994,
+              "negative_lobe_magnitude": 0.0030376349356200016,
+              "positive_lobe": 0.001970263196761845,
+              "signed": -0.0010673717388581566
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.000503237619681735,
+              "cancellation_fraction": 0.7953232479266547,
+              "negative_lobe_magnitude": 0.00030311933059965694,
+              "positive_lobe": 0.00020011828908207804,
+              "signed": -0.00010300104151757892
+            }
+          }
+        },
+        "full_positive": {
+          "max_abs_delta_jphi": 0.0002239421010017395,
+          "weighting": {
+            "R_times_2d_poloidal_area_diagnostic": {
+              "absolute": 0.00035642824637086256,
+              "cancellation_fraction": 0.7756303979856355,
+              "negative_lobe_magnitude": 0.00013822829129297713,
+              "positive_lobe": 0.0002181999550778854,
+              "signed": 7.997166378490829e-05
+            },
+            "crosschecked_2d_poloidal_area": {
+              "absolute": 3.5647418890816036e-05,
+              "cancellation_fraction": 0.7737563463853914,
+              "negative_lobe_magnitude": 1.3791208299513699e-05,
+              "positive_lobe": 2.185621059130234e-05,
+              "signed": 8.065002291788639e-06
+            },
+            "old_R_e2_proxy": {
+              "absolute": 0.004026024418233468,
+              "cancellation_fraction": 0.7743323883621659,
+              "negative_lobe_magnitude": 0.0015587405516875607,
+              "positive_lobe": 0.0024672838665459077,
+              "signed": 0.0009085433148583473
+            },
+            "old_e2_altitude_proxy": {
+              "absolute": 0.00040249666650648506,
+              "cancellation_fraction": 0.7718152827502042,
+              "negative_lobe_magnitude": 0.00015532653923285868,
+              "positive_lobe": 0.0002471701272736264,
+              "signed": 9.184358804076767e-05
+            }
+          }
+        }
+      },
+      "frame": 3,
+      "mesh_elements": 1004,
+      "poloidal_area_sum": 28.22795112386777,
+      "time": 0.03
+    }
+  ],
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Replace e[2] altitude weighting with independently crosschecked 2-D triangle area on existing signed-command jphi fields. Compare signed lobes and cancellation with the old proxies; neither area nor R*area alone validates native int1/toroidal current.",
+  "job_id": "20261030-145-native-poloidal-area-weighted-jphi-response",
+  "machine": "normalized-native-M3D-C1",
+  "max_e2_vs_area_cancellation_fraction_shift": 0.03523169956936323,
+  "parent_result_job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "pb11_fidelity_validated": false,
+  "physical_current_quadrature_validated": false,
+  "physics_solver_runs": 0,
+  "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_mode": 4,
+  "temporal_convergence_validated": false,
+  "timestamp_utc": "2026-10-30T21:06:43.151159+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
