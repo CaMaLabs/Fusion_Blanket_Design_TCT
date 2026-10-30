@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "job_id": "20261029-128-native-current-drive-spatial-response-audit",
+  "parent_result_job_id": "20261029-127-native-current-drive-amplitude-response-audit",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_spatial_response_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_spatial_response_128.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_spatial_response_128"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_spatial_response_128/native_spatial_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Replace rounded aggregate peak/envelope proxy with matched per-frame spatial jphi response on the native solver mesh for signed half/full current-drive commands; measure source-command sensitivity, odd symmetry, center/shoulder response, and exact field-level zero equivalence without changing solver physics.",
+  "interpretation_contract": {
+    "native_solver_required": true,
+    "dt": 0.01,
+    "steps": 3,
+    "source_mode": 4,
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "amplitudes": [
+      -0.005,
+      -0.0025,
+      0,
+      0.0025,
+      0.005
+    ],
+    "field_zero_equivalence_tolerance": 1e-12,
+    "matched_no_actuator_and_same_mode_zero_required": true,
+    "mesh_correspondence_required": true,
+    "source_profile_and_solver_physics_unchanged": true,
+    "source_current_calibration_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "no_causal_segmented_tct_claim": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "normalized_native_m3dc1_only": true,
+    "pb11_fidelity_unvalidated": true
+  }
+}
