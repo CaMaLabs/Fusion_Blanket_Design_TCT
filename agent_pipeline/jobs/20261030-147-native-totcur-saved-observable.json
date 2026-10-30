@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-147-native-totcur-saved-observable",
+  "parent_result_job_id": "20261030-146-native-current-diagnostic-lineage",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_saved_totcur_observable_access_preflight",
+  "runner": "tools/tct_mechanism_explorer/run_native_totcur_saved_observable_147.sh",
+  "timeout_seconds": 900,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_totcur_147"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_totcur_147/native_totcur_saved_observable_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Replace one unverified area*jphi-to-native-current assumption by testing availability of a source-named native totcur observable in existing matched M3D-C1 saved runs, with C1ke final-time and source provenance. Do not assume saved terminal diagnostic timing, native int2 parity or physical current calibration. Zero solver runs; source/data absence is prerequisite-blocked, not a scientific negative result.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DIAGNOSTIC_LINEAGE_COMPLETE",
+    "expected_parent_summary_sha256": "437d17c6fce97bb9e32c181b59c62a5cda99db67cd17e9c51dfa358cd94d4124",
+    "expected_native_diagnostics_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "normalized_native_m3dc1_only": true,
+    "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "matched_cases": [
+      "baseline",
+      "same_mode_zero",
+      "full_negative",
+      "full_positive"
+    ],
+    "zero_solver_runs": true,
+    "source_hash_required": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "native_int2_parity_unvalidated": true,
+    "native_current_calibration_unvalidated": true,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
