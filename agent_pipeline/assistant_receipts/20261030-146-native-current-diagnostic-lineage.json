@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-146-native-current-diagnostic-lineage",
+  "processed_result_job_id": "20261030-146-native-current-diagnostic-lineage",
+  "processed_result_receipt_sha": "a47b796215580f7e169edc2934e388c7265573b3",
+  "validation_summary_sha256": "437d17c6fce97bb9e32c181b59c62a5cda99db67cd17e9c51dfa358cd94d4124",
+  "log_sha256": "e9b592310c9092deed9918abdc57f61f27f0dc47dbadaa77fe9459d160ebcae7",
+  "result_head_before": "a86ddaf2640f9cedf41b1d4eb5069ed40d9ac1b0",
+  "classification": "M3DC1_NATIVE_CURRENT_DIAGNOSTIC_LINEAGE_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_CURRENT_DIAGNOSTIC_LINEAGE_COMPLETE",
+  "job_class": "bounded_native_m3dc1_current_diagnostic_source_hdf5_lineage_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Source-hashed normalized-native 2-D M3D-C1 source/HDF5 diagnostic lineage only; no new solver runs, experimental shots, shot handoff or controller-in-loop causal intervention.",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "runtime_seconds": 0.665194034576416,
+    "return_code": 0,
+    "physics_solver_runs": 0,
+    "saved_hdf5_jphi_shape": [
+      1004,
+      20
+    ],
+    "saved_hdf5_mesh_shape": [
+      1004,
+      8
+    ],
+    "saved_hdf5_3d_flag": 0,
+    "native_totcur_source_line": 935,
+    "native_int2_source_line": 524,
+    "parent_zero_max_abs_field_delta": 0,
+    "parent_t003_negative_area_signed_delta_jphi": -0.000010335808949528071,
+    "parent_t003_positive_area_signed_delta_jphi": 0.000008065002291788639,
+    "parent_max_cancellation_shift_fraction": 0.03523169956936323,
+    "native_int2_physical_current_parity_validated": false
+  },
+  "successful_milestone": "Native source identifies totcur subtraction at diagnostics.f90:935 as int2(ri2_79,pst79(:,OP_GS))/tpirzero; nintegrate_mod.f90:533-535 defines int2 as the weight_79-weighted product. Saved time_003.h5 contains fields/jphi (1004x20) but no independently verified native totcur diagnostic. This is a reproducible source-provenance milestone, not physical-current parity.",
+  "interpretation": "Native totcur is computed using a flux-derived weighted int2 operator, not by assuming corrected area*jphi is physical current. The signed open-loop jphi response from job 145 remains supported; direct native current parity, calibrated current conservation, temporal convergence and causal segmented TCT stabilization remain unvalidated. Mechanism assessment neutral.",
+  "mechanism_effect": "source_lineage_supported; native_physical_current_parity_unvalidated; causal_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-147-native-totcur-saved-observable",
+  "followup_scope": "One bounded, source-guarded preflight of native totcur saved-observable availability and final-time provenance in existing matched job 130 runs. No solver physics, thresholds or source changes; missing native diagnostic is a prerequisite blocker, not a scientific negative.",
+  "handoff_equivalence": "No imported experimental shot/equilibrium handoff. Parent saved-field zero-source maximum absolute difference was 0.0 <= 1e-12; native totcur parity has not been demonstrated.",
+  "pb11_fidelity_limits": "Not applicable: no validated p-B11 reaction, proton recirculation, radiation/electron losses, alpha channeling/transport, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or reactor net power.",
+  "m3dc1_claim_boundary": "Source-hashed normalized-native 2-D M3D-C1 toroidal-current diagnostic callsite and saved HDF5 jphi schema only; not int2-to-HDF5 parity, physical current conservation, calibrated sheet width, causal segmented-controller stabilization, shot handoff, p-B11 or net power.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-30T23:00:02.557Z"
+}
