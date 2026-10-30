@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-135-native-current-drive-three-level-fieldwise-convergence",
+  "parent_result_job_id": "20261030-134-native-current-drive-fieldwise-convergence-audit",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_current_drive_three_level_fieldwise_convergence_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_current_drive_three_level_fieldwise_135.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_fieldwise_135"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_fieldwise_135/three_level_fieldwise_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 134 found large fieldwise timestep sensitivity despite partial mesh-proxy cancellation: at t=0.01 positive command relative L2 difference 1.540 and weighted cosine 0.284; at t=0.03 negative command relative L2 difference 0.529. Test the same full normalized-native jphi fields at three dt levels (0.0025, 0.00125, 0.000625), matched times and mesh. Compute successive weighted field differences and empirical ratios; do not infer physical current conservation, segmented-electrode authority, causal TCT stabilization or convergence from aggregate symmetry alone.",
+  "interpretation_contract": {
+    "normalized_native_m3dc1_only": true,
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FIELDWISE_CONVERGENCE_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "e2432a3e82ac3392db272ca299934d7f7ed34c5fd6f78a7fbb6accad347a94ed",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "source_mode": 4,
+    "amplitudes": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "dt_sequence": [
+      0.0025,
+      0.00125,
+      0.000625
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "source_gate": [
+      0,
+      0.04
+    ],
+    "zero_source_equivalence_required": true,
+    "field_zero_equivalence_tolerance": 1e-12,
+    "matched_mesh_required": true,
+    "solver_physics_unchanged": true,
+    "source_profile_unchanged": true,
+    "uncalibrated_e2_weighting": true,
+    "empirical_ratio_not_convergence_proof": true,
+    "no_physical_current_conservation_claim": true,
+    "shot_handoff_unvalidated": true,
+    "no_causal_segmented_tct_claim": true,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "pb11_fidelity_unvalidated": true
+  }
+}
