@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-142-native-mesh-hdf5-column-lineage",
+  "parent_result_job_id": "20261030-141-native-mesh-quadrature-provenance",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_mesh_hdf5_column_lineage_source_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_mesh_hdf5_column_lineage_142.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_quadrature_142"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_quadrature_142/native_mesh_hdf5_column_lineage_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 141 scanned 182 native source files but established only unverified search traces for HDF5 mesh/elements e[2] and int1. Trace bounded contextual writer, element-weight, int1 and jphi source lineage with hashes; require subsequent independent geometry validation before physical current/width interpretation. No solver runs or physics edits.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_MESH_QUADRATURE_PROVENANCE_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "ad8ed8e97a475090d966f29a1a9de59e1956844e67b99ad6fa84dfb4a63ef7b4",
+    "normalized_native_m3dc1_only": true,
+    "source_lineage_only": true,
+    "physical_quadrature_not_validated": true,
+    "calibrated_current_and_width_not_validated": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "net_power_unvalidated": true
+  }
+}
