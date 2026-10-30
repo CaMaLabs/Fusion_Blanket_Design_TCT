@@ -1,0 +1,169 @@
+{
+  "amplitudes": [
+    -0.005,
+    0.0,
+    0.005
+  ],
+  "claim_boundary": "Native M3D-C1 mesh-weighted jphi balance proxy, not a calibrated physical current integral or measured injected source. No shot handoff, segmented-electrode authority, causal TCT stabilization or p-B11 fidelity claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_CURRENT_BALANCE_DIAGNOSTIC_COMPLETE",
+  "dt": 0.01,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "field_read_backend": "h5py_native_dataset",
+  "field_response_observed": true,
+  "frames": [
+    {
+      "cases": {
+        "full_negative": {
+          "cancellation_fraction": null,
+          "max_abs_delta_jphi": 0.0,
+          "mesh_weighted_abs_delta_jphi": 0.0,
+          "mesh_weighted_signed_delta_jphi": 0.0,
+          "negative_lobe_magnitude_proxy": 0.0,
+          "negative_lobe_z_centroid": null,
+          "positive_lobe_integral_proxy": 0.0,
+          "positive_lobe_z_centroid": null
+        },
+        "full_positive": {
+          "cancellation_fraction": null,
+          "max_abs_delta_jphi": 0.0,
+          "mesh_weighted_abs_delta_jphi": 0.0,
+          "mesh_weighted_signed_delta_jphi": 0.0,
+          "negative_lobe_magnitude_proxy": 0.0,
+          "negative_lobe_z_centroid": null,
+          "positive_lobe_integral_proxy": 0.0,
+          "positive_lobe_z_centroid": null
+        }
+      },
+      "frame": 0,
+      "max_abs_zero_vs_baseline_jphi": 0.0,
+      "mesh_elements": 1004,
+      "mesh_weight_sum": 209.5977759435773,
+      "odd_symmetry_residual_fraction": 0.0,
+      "positive_weight_elements": 1004,
+      "time": 0.0
+    },
+    {
+      "cases": {
+        "full_negative": {
+          "cancellation_fraction": 0.6943825366743752,
+          "max_abs_delta_jphi": 0.0001976247876882553,
+          "mesh_weighted_abs_delta_jphi": 0.00040589056784023117,
+          "mesh_weighted_signed_delta_jphi": -0.0001240472457311289,
+          "negative_lobe_magnitude_proxy": 0.00026496890678568005,
+          "negative_lobe_z_centroid": 0.5838130738098162,
+          "positive_lobe_integral_proxy": 0.00014092166105455115,
+          "positive_lobe_z_centroid": 0.46282987226275046
+        },
+        "full_positive": {
+          "cancellation_fraction": 0.6950076173232096,
+          "max_abs_delta_jphi": 0.00019762665033340454,
+          "mesh_weighted_abs_delta_jphi": 0.0004060799172941712,
+          "mesh_weighted_signed_delta_jphi": 0.00012385128153274323,
+          "negative_lobe_magnitude_proxy": 0.00014111431788071398,
+          "negative_lobe_z_centroid": 0.46234895458575126,
+          "positive_lobe_integral_proxy": 0.0002649655994134572,
+          "positive_lobe_z_centroid": 0.5838035026231545
+        }
+      },
+      "frame": 1,
+      "max_abs_zero_vs_baseline_jphi": 0.0,
+      "mesh_elements": 1004,
+      "mesh_weight_sum": 209.5977759435773,
+      "odd_symmetry_residual_fraction": 0.0004500890034543929,
+      "positive_weight_elements": 1004,
+      "time": 0.01
+    },
+    {
+      "cases": {
+        "full_negative": {
+          "cancellation_fraction": 0.8106262701927387,
+          "max_abs_delta_jphi": 0.00035858154296875,
+          "mesh_weighted_abs_delta_jphi": 0.0004878000952882022,
+          "mesh_weighted_signed_delta_jphi": -9.237652344506431e-05,
+          "negative_lobe_magnitude_proxy": 0.00029008830936663325,
+          "negative_lobe_z_centroid": 0.7740131199558735,
+          "positive_lobe_integral_proxy": 0.00019771178592156897,
+          "positive_lobe_z_centroid": 0.8237954989402612
+        },
+        "full_positive": {
+          "cancellation_fraction": 0.7257697815773385,
+          "max_abs_delta_jphi": 0.000257856328971684,
+          "mesh_weighted_abs_delta_jphi": 0.00044314976944747253,
+          "mesh_weighted_signed_delta_jphi": 0.0001215250580695325,
+          "negative_lobe_magnitude_proxy": 0.00016081235568897,
+          "negative_lobe_z_centroid": 0.45149199782059674,
+          "positive_lobe_integral_proxy": 0.0002823374137585025,
+          "positive_lobe_z_centroid": 0.5578090336949768
+        }
+      },
+      "frame": 2,
+      "max_abs_zero_vs_baseline_jphi": 0.0,
+      "mesh_elements": 1004,
+      "mesh_weight_sum": 209.5977759435773,
+      "odd_symmetry_residual_fraction": 0.7089902141534441,
+      "positive_weight_elements": 1004,
+      "time": 0.02
+    },
+    {
+      "cases": {
+        "full_negative": {
+          "cancellation_fraction": 0.7953232479266547,
+          "max_abs_delta_jphi": 0.00034928321838378906,
+          "mesh_weighted_abs_delta_jphi": 0.000503237619681735,
+          "mesh_weighted_signed_delta_jphi": -0.00010300104151757892,
+          "negative_lobe_magnitude_proxy": 0.00030311933059965694,
+          "negative_lobe_z_centroid": 0.7646637460185097,
+          "positive_lobe_integral_proxy": 0.00020011828908207804,
+          "positive_lobe_z_centroid": 0.7745675234331724
+        },
+        "full_positive": {
+          "cancellation_fraction": 0.7718152827502042,
+          "max_abs_delta_jphi": 0.0002239421010017395,
+          "mesh_weighted_abs_delta_jphi": 0.00040249666650648506,
+          "mesh_weighted_signed_delta_jphi": 9.184358804076767e-05,
+          "negative_lobe_magnitude_proxy": 0.00015532653923285868,
+          "negative_lobe_z_centroid": 0.4817282051144044,
+          "positive_lobe_integral_proxy": 0.0002471701272736264,
+          "positive_lobe_z_centroid": 0.5649308871016784
+        }
+      },
+      "frame": 3,
+      "max_abs_zero_vs_baseline_jphi": 0.0,
+      "mesh_elements": 1004,
+      "mesh_weight_sum": 209.5977759435773,
+      "odd_symmetry_residual_fraction": 0.8010518976954425,
+      "positive_weight_elements": 1004,
+      "time": 0.03
+    }
+  ],
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "gate_window": [
+    0.0,
+    0.04
+  ],
+  "interpretation": "Full positive-weight native mesh jphi delta balance, signed lobes and vertical centroids test whether the observed response resembles redistribution rather than merely a peak shift. Mesh element weight e[2] is a proxy, not a validated physical area/current quadrature; source-mode 4 subtracts its native int1-weighted mean at injection, but the resulting jphi field need not have zero mesh-weighted integral. No physical actuator calibration.",
+  "job_id": "20261029-129-native-current-drive-current-balance-audit",
+  "machine": "normalized-native-M3D-C1",
+  "observed_time_samples": [
+    0.0,
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261029-128-native-current-drive-spatial-response-audit",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_mode": 4,
+  "steps": 3,
+  "timestamp_utc": "2026-10-30T05:12:10.828869+00:00",
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
