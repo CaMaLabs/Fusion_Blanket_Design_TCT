@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-141-native-mesh-quadrature-provenance",
+  "parent_result_job_id": "20261030-140-native-current-drive-width-roi-sensitivity",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_mesh_quadrature_source_provenance_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_mesh_quadrature_provenance_141.sh",
+  "timeout_seconds": 1800,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_quadrature_141"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_quadrature_141/native_mesh_quadrature_provenance_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Result 140 shows ROI-dependent sign reversals in uncalibrated HDF5 jphi width changes and no frozen width-gate crossing. Trace native mesh element e[2] and int1 quadrature provenance in M3D-C1 source before making physical width/current claims or optimizing an arbitrary ROI. Source-only prerequisite audit; zero new solver runs, no source/physics changes.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_WIDTH_ROI_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "15c1df24ee75906fc306402a5b22fea153bc11534514efc59580c296aa5decac",
+    "normalized_native_m3dc1_only": true,
+    "source_level_audit_only": true,
+    "physical_quadrature_not_proved_by_source_search": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "net_power_unvalidated": true
+  }
+}
