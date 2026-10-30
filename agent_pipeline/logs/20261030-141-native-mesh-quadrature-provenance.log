@@ -1,0 +1,627 @@
+job_id=20261030-141-native-mesh-quadrature-provenance
+started_utc=2026-10-30T17:32:36.355845Z
+head_before=b7634a34c65d919e7280898c0069fdc76253fa74
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "calibrated_physical_width_validated": false,
+  "causal_controller_authority_validated": false,
+  "claim_boundary": "Source-level quadrature and mesh-output provenance only. No independent validation of e[2], R*e[2], int1 or physical current/area; no calibrated sheet width, temporal convergence, shot handoff, segmented controller-in-loop, causal TCT stabilization, p-B11 fidelity, ignition or net power.",
+  "classification": "M3DC1_NATIVE_MESH_QUADRATURE_PROVENANCE_DIAGNOSTIC_COMPLETE",
+  "expected_parent_summary_sha256": "15c1df24ee75906fc306402a5b22fea153bc11534514efc59580c296aa5decac",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "interpretation": "Parent ROI-derived width response changes sign with ROI in some command/time groups and never crosses the frozen width gate. This audit inventories native source definitions for HDF5 element weights and int1 integration; search hits alone do not establish a physical quadrature mapping. A reviewed mapping and independently checked geometry must precede physical current/width claims or additional width optimization.",
+  "job_id": "20261030-141-native-mesh-quadrature-provenance",
+  "machine": "normalized-native-M3D-C1",
+  "native_source_files_scanned": 182,
+  "native_source_root": "/home/ubuntu/M3DC1-official",
+  "parent_result_job_id": "20261030-140-native-current-drive-width-roi-sensitivity",
+  "parent_roi_quantitative_audit": {
+    "comparison_count": 36,
+    "frozen_width_crossings": 0,
+    "max_jpk_increase_pct": 0.017892263962671073,
+    "max_width_gain_pct": 0.011276331669174411,
+    "min_width_gain_pct": -0.00945985978130226,
+    "sign_flip_count": 4,
+    "sign_flip_groups": [
+      {
+        "command": "neg_nominal",
+        "max_pct": 0.0011791554598961085,
+        "min_pct": -0.004406459220107628,
+        "time": 0.01
+      },
+      {
+        "command": "neg_double",
+        "max_pct": 0.002979790996682219,
+        "min_pct": -0.00945985978130226,
+        "time": 0.01
+      },
+      {
+        "command": "pos_nominal",
+        "max_pct": 0.005823960435780151,
+        "min_pct": -0.0016931124489416582,
+        "time": 0.01
+      },
+      {
+        "command": "pos_double",
+        "max_pct": 0.011276331669174411,
+        "min_pct": -0.003246243181265207,
+        "time": 0.01
+      }
+    ],
+    "zero_source_max_abs_field_delta": 0.0
+  },
+  "physical_quadrature_validated": false,
+  "physics_solver_runs": 0,
+  "prior_mesh_metadata": {
+    "mesh_element_attrs": {},
+    "mesh_elements_shape": [
+      1004,
+      8
+    ],
+    "mesh_group_keys": [
+      "adjacency",
+      "elements"
+    ],
+    "source_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "source_summary_sha256": "9ee23732ec6a4976da647980155fc6228d3de6f687cfbf317aa1202e86ef693e"
+  },
+  "quadrature_mapping_evidence_status": "UNVERIFIED_SOURCE_TRACES_ONLY",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_evidence": {
+    "element_weight_or_geometry": [
+      {
+        "excerpt": "! integration quadrature sampling points, and routines for populating",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/m3dc1_nint.F90",
+        "line": 5,
+        "source_sha256": "861a537cf993b805a164f469983fcfbf019c4baad35c0439729f7caa071327ea"
+      },
+      {
+        "excerpt": "! integration quadrature sampling points, and routines for populating",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/m3dc1_nint_acc.F90",
+        "line": 5,
+        "source_sha256": "dfea66d46d0ddd56ce89212c1e7d80c67b51007596316ab1e6eecee6aad4a058"
+      },
+      {
+        "excerpt": "call define_element_quadrature(itri, 12, 5)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/matdef.F90",
+        "line": 102,
+        "source_sha256": "89650e12e2529e5bbe76b8c047026e0795c5f87274937f000f3983db38cd227b"
+      },
+      {
+        "excerpt": "!          call define_boundary_quadrature(itri, iedge, 5, 5, n, idim)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/matdef.F90",
+        "line": 120,
+        "source_sha256": "89650e12e2529e5bbe76b8c047026e0795c5f87274937f000f3983db38cd227b"
+      },
+      {
+        "excerpt": "!$acc routine (define_element_quadrature,define_fields,int0,int1) seq",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/matdef_acc.F90",
+        "line": 125,
+        "source_sha256": "ae6afcee84cb5bf626d405cf3ef55a90005ac54eb8a210fcc820eae3801aa643"
+      },
+      {
+        "excerpt": "call define_element_quadrature(it, 12, 5,weight_79_l, &",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/matdef_acc.F90",
+        "line": 143,
+        "source_sha256": "ae6afcee84cb5bf626d405cf3ef55a90005ac54eb8a210fcc820eae3801aa643"
+      },
+      {
+        "excerpt": "! integration quadratures over interior and surface domains",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 5,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "integer :: npoints        ! number of points in Gaussian quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 13,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! quadrature_implemented",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 204,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! quadrature is implemented",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 207,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "logical function quadrature_implemented(i)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 209,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "quadrature_implemented = (i.eq.12).or.(i.eq.25).or.(i.eq.79)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 213,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "end function quadrature_implemented",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 215,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! extrude_quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 292,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! Extends a 2D npol-point quadrature to 3D",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 294,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! by taking external product with ntor-point 1D quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 295,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "subroutine extrude_quadrature(d, npol, ntor)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 297,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "integer, intent(in) :: npol  ! number of poloidal quadrature points",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 303,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "integer, intent(in) :: ntor  ! number of toroidal quadrature points",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 304,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "print *, \"Error! \", ntor, \"-point line quadrature not defined.\"",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 331,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "end subroutine extrude_quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 356,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! define_boundary_quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 360,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! Defines the quadrature over a part of the boundary of element ielm.",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 362,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "subroutine define_boundary_quadrature(ielm, iedge, npol, ntor, normal, idim)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 367,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "\"-point quadrature not defined for line integration\"",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 421,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "call extrude_quadrature(d%d,npol,ntor)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 427,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "end subroutine define_boundary_quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 431,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "! define_element_quadrature",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 435,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "subroutine define_element_quadrature(ielm, pol_gauss, tor_gauss)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 437,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "print *, \"Error! \", pol_gauss, \"-point triangle quadrature not defined.\"",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 459,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      }
+    ],
+    "hdf5_mesh_elements": [
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 377,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 380,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "write(*,*) error,rank,\" after h5dcreate_f\"",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 384,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 422,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "write(*,*) error,rank,\" h5dwrite_f\"",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 425,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_INTEGER, filespace, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 492,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "write(*,*) error,rank,\" after h5dcreate_f\"",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 495,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_INTEGER, values, global_dims, error, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 533,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "write(*,*) error,rank,\" h5dwrite_f\"",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 536,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 692,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 695,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, local_dims, error, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 730,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_DOUBLE, filespace, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 832,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, H5T_NATIVE_REAL, filespace, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 835,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "write(*,*) error,rank,\" after h5dcreate_f\"",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 839,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, error, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 877,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "write(*,*) error,rank,\" h5dwrite_f\"",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 880,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(parent_id, name, type_id, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 961,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, value, local_dims, error, &",
+        "file": "unstructured/hdf5_output.f90",
+        "line": 997,
+        "source_sha256": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6"
+      },
+      {
+        "excerpt": "call h5dcreate_f(group_id, \"data\", H5T_NATIVE_DOUBLE, filespace, dset_id, ierr)",
+        "file": "unstructured/particle.f90",
+        "line": 3759,
+        "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+      },
+      {
+        "excerpt": "call h5dcreate_f(group_id, \"data\", H5T_NATIVE_REAL, filespace, dset_id, ierr)",
+        "file": "unstructured/particle.f90",
+        "line": 3761,
+        "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+      },
+      {
+        "excerpt": "print *, myrank, ': error', ierr, ' after h5dcreate_f'",
+        "file": "unstructured/particle.f90",
+        "line": 3764,
+        "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, ierr, &",
+        "file": "unstructured/particle.f90",
+        "line": 3857,
+        "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+      },
+      {
+        "excerpt": "print *, myrank, ': error', ierr, ' after h5dwrite_f'",
+        "file": "unstructured/particle.f90",
+        "line": 3860,
+        "source_sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+      },
+      {
+        "excerpt": "call h5dcreate_f(group_id, \"data\", H5T_NATIVE_DOUBLE, filespace, dset_id, ierr)",
+        "file": "unstructured/particle_com.f90",
+        "line": 3716,
+        "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+      },
+      {
+        "excerpt": "call h5dcreate_f(group_id, \"data\", H5T_NATIVE_REAL, filespace, dset_id, ierr)",
+        "file": "unstructured/particle_com.f90",
+        "line": 3718,
+        "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+      },
+      {
+        "excerpt": "print *, myrank, ': error', ierr, ' after h5dcreate_f'",
+        "file": "unstructured/particle_com.f90",
+        "line": 3721,
+        "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+      },
+      {
+        "excerpt": "call h5dwrite_f(dset_id, H5T_NATIVE_DOUBLE, values, global_dims, ierr, &",
+        "file": "unstructured/particle_com.f90",
+        "line": 3819,
+        "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+      },
+      {
+        "excerpt": "print *, myrank, ': error', ierr, ' after h5dwrite_f'",
+        "file": "unstructured/particle_com.f90",
+        "line": 3822,
+        "source_sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+      }
+    ],
+    "int1_quadrature": [
+      {
+        "excerpt": "current = current + int1(psi79(:,OP_LP))",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/matdef.F90",
+        "line": 110,
+        "source_sha256": "89650e12e2529e5bbe76b8c047026e0795c5f87274937f000f3983db38cd227b"
+      },
+      {
+        "excerpt": "current = current + int1(psi79_l(:,OP_LP),weight_79_l)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/matdef_acc.F90",
+        "line": 153,
+        "source_sha256": "ae6afcee84cb5bf626d405cf3ef55a90005ac54eb8a210fcc820eae3801aa643"
+      },
+      {
+        "excerpt": "real function int1(vari)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate.F90",
+        "line": 489,
+        "source_sha256": "8ddee1ae5d4f04b5eaa4bbee23754079e182514fc083c8c95af67e8dee76469a"
+      },
+      {
+        "excerpt": "real function int1(vari,weight_79_l)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_acc/nintegrate_acc.F90",
+        "line": 513,
+        "source_sha256": "07be30a7694f682edc653495ad8632f03e5a739f61e4df5464a1a8b5b380af8b"
+      },
+      {
+        "excerpt": "current = current + int1(psi79(:,OP_LP))",
+        "file": "skeleton/m3dc1_skeleton_big_spec_omp/matdef.F90",
+        "line": 99,
+        "source_sha256": "a59efd5e028de90cfaf5ed292f12e989fa8a353734b8d325ae5b04c6c46fed18"
+      },
+      {
+        "excerpt": "real function int1(vari)",
+        "file": "skeleton/m3dc1_skeleton_big_spec_omp/nintegrate.F90",
+        "line": 489,
+        "source_sha256": "eaff2e901125b7282a4469764846dfc9c6e60791acecdc5f33670e6eb47fd7bf"
+      },
+      {
+        "excerpt": "!           dofs(i) = int1(temp79f)",
+        "file": "unstructured/auxiliary_fields.f90",
+        "line": 796,
+        "source_sha256": "a0ca3e58b33cad0f9e0927a0960dea9d3ada2a800cc7968ad131c42b8274fc68"
+      },
+      {
+        "excerpt": "sum = int1(temp79a)",
+        "file": "unstructured/biharmonic.f90",
+        "line": 116,
+        "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+      },
+      {
+        "excerpt": "sum = int1(temp79a)",
+        "file": "unstructured/biharmonic.f90",
+        "line": 146,
+        "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+      },
+      {
+        "excerpt": "sum = sum + int1((ps079(:,OP_1) - ps179(:,OP_1))**2)",
+        "file": "unstructured/biharmonic.f90",
+        "line": 214,
+        "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+      },
+      {
+        "excerpt": "sum2 = sum2 + int1(ps179(:,OP_1)**2)",
+        "file": "unstructured/biharmonic.f90",
+        "line": 215,
+        "source_sha256": "2a66d46416aa13f2ac98912ddd8fdce82120d5b772282c3f258e9474d8f400c2"
+      },
+      {
+        "excerpt": "wall_force_n0_x = wall_force_n0_x + int1(temp79a)*twopi/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 848,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "wall_force_n0_y = wall_force_n0_y + int1(temp79b)*twopi/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 849,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "wall_force_n0_z = wall_force_n0_z + int1(temp79c)*twopi/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 850,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "int1(temp79d)*twopi/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 853,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "int1(temp79e)*twopi/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 855,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "area   = area   + int1(ri_79)/tpirzero",
+        "file": "unstructured/diagnostics.f90",
+        "line": 931,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "-    (int1(pht79(:,OP_LP)) &",
+        "file": "unstructured/diagnostics.f90",
+        "line": 969,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "pvol = pvol + twopi*int1(mr)/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 974,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "totden = totden + twopi*int1(nt79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 978,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "totne = totne + twopi*int1(net79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 979,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "totrad = totrad + twopi*int1(totrad79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 982,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "linerad = linerad + twopi*int1(linerad79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 983,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "bremrad = bremrad + twopi*int1(bremrad79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 984,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "ionrad = ionrad + twopi*int1(ionrad79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 985,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "reckrad = reckrad + twopi*int1(reckrad79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 986,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "recprad = recprad + twopi*int1(recprad79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 987,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "t0 = twopi*int1(tm79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 991,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "totkprad = totkprad + twopi*int1(tm79(:,OP_1))/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 996,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      {
+        "excerpt": "nsource = nsource - twopi*int1(sig79)/tpifac",
+        "file": "unstructured/diagnostics.f90",
+        "line": 1014,
+        "source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      }
+    ]
+  },
+  "timestamp_utc": "2026-10-30T17:32:36.877410+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T17:32:37.221987Z
+return_code=0
