@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "processed_result_job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "processed_result_receipt_sha": "2e58e831f45d9e5797f830551f35422bb0a72035",
+  "validation_summary_sha256": "3b7224526ad316e172f0fd3a054355f631117609d02f781bf984177c11317501",
+  "log_sha256": "5f916896ee0fb2abba8fdb9686e7ed3a60dbadddabdcf4a1c4c5bf6ac00a8125",
+  "result_head_before": "810ea6ce6541178b6bb091abe22d2bfe9268cc58",
+  "classification": "M3DC1_NATIVE_MESH_POLOIDAL_AREA_CROSSCHECK_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_MESH_POLOIDAL_AREA_CROSSCHECK_COMPLETE",
+  "job_class": "bounded_native_m3dc1_poloidal_triangle_area_crosscheck",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Source-guarded geometric validation on an existing native 2-D M3D-C1 HDF5 mesh; no new solver execution, experimental shot, controller-in-loop experiment or causal intervention.",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "runtime_seconds": 0.9160592555999756,
+    "return_code": 0,
+    "physics_solver_runs": 0,
+    "native_mesh_element_count": 1004,
+    "native_mesh_elements_shape": [
+      1004,
+      8
+    ],
+    "poloidal_area_total": 28.22795112386777,
+    "altitude_sum_not_area": 209.5977759435773,
+    "max_shoelace_relative_error": 1.89915457529025e-13,
+    "mean_shoelace_relative_error": 2.025739468164054e-14,
+    "synthetic_shoelace_max_abs_error": 8.881784197001252e-16,
+    "area_to_e2_ratio_min": 0.03141111880540848,
+    "area_to_e2_ratio_max": 0.29473988711833954,
+    "analytic_poloidal_geometry_crosscheck_passed": true,
+    "hdf5_e2_is_area": false,
+    "native_mesh_source_file": "/tmp/m3dc1_tct_native_width_roi_140/baseline/time_000.h5",
+    "native_source_sha256": {
+      "unstructured/basic_mesh.f90": "faa60b01a8b09f9433cf4315ceb1460c249e4bb5b442cc109e231a9ebbe9c95a",
+      "unstructured/element.f90": "8c7012017be530e057d7c9a03fc934714f58bf095aa3e2310bb34a34550b55a3",
+      "unstructured/hdf5_output.f90": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6",
+      "unstructured/output.f90": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+    }
+  },
+  "successful_milestone": "Source-hashed native M3D-C1 HDF5 element e[2] is triangle altitude c, not area. On 1,004 saved 2-D elements, independent shoelace area agrees with 0.5*(a+b)*c to maximum relative error 1.899e-13. This validates 2-D poloidal geometry only.",
+  "interpretation": "Geometric prerequisite supported: 2-D poloidal triangle area is 0.5*(a+b)*c. The old e[2] and R*e[2] weighting as area/current is weakened. No native int1 or 3-D/toroidal quadrature, calibrated jphi current integral, physical sheet width, timestep convergence, causal segmented-controller authority, or reactor power is established. TCT stabilization mechanism remains neutral.",
+  "mechanism_effect": "2d_poloidal_triangle_geometry_supported; e2_as_area_proxy_weakened; causal_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-145-native-poloidal-area-weighted-jphi-response",
+  "followup_scope": "One source-guarded saved-field audit comparing area-weighted and legacy e2-weighted signed jphi responses and cancellation, using job 130 HDF5; zero new solver runs, no solver physics or thresholds altered. Missing HDF5 must be classified as data-access blocked.",
+  "handoff_equivalence": "unvalidated; no imported experimental shot or equilibrium/profile handoff; zero-equivalence tolerance 1e-12 retained",
+  "pb11_fidelity_limits": "not_applicable; no validated p-B11 reaction, proton recirculation, radiation/electron losses, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or net-power evidence",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 2-D mesh geometry and saved HDF5 provenance only; no physical toroidal current quadrature, calibrated sheet width, temporal convergence, segmented controller-in-loop authority, shot handoff, causal TCT stabilization or reactor net power.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-30T21:06:16.690Z"
+}
