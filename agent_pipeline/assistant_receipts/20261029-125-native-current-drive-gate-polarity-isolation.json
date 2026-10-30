@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "job_id": "20261029-125-native-current-drive-gate-polarity-isolation",
+  "processed_result_job_id": "20261029-125-native-current-drive-gate-polarity-isolation",
+  "processed_result_receipt_sha": "c0ff3984a94dbce6128c351d29f242d334b285f8",
+  "validation_summary_sha256": "f257603ff3eb895bcb21e08e66aaa5378ae3daff4734a70fd4b8bbde530f11e9",
+  "log_sha256": "53b6e26f9d01396a6fb783e2c76770541a86392afbb872cd589266bea3b1d4e4",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_GATE_RESPONSE_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_CURRENT_DRIVE_GATE_RESPONSE_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_current_drive_gate_polarity_isolation",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "normalized-native M3D-C1 source diagnostic; not imported shot or validated causal controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "quantitative_result": {
+    "runtime_seconds": 38.19231915473938,
+    "dt": 0.01,
+    "steps": 2,
+    "run_frames": {
+      "baseline": 3,
+      "edge_negative": 3,
+      "edge_positive": 3,
+      "extended_negative": 3,
+      "extended_positive": 3,
+      "same_mode_zero": 3
+    },
+    "zero_equivalence_max_abs": 0,
+    "zero_equivalence_tolerance": 1e-12,
+    "polarity_max_abs_Jpk": 0.0002900000000001235,
+    "polarity_max_abs_W_sheet": 0.00002654658288658851,
+    "positive_vs_zero_max_abs_Jpk": 0.000010000000000065512,
+    "negative_vs_zero_max_abs_Jpk": 0.000280000000000058,
+    "gate_window_positive_max_abs_Jpk": 0,
+    "gate_window_negative_max_abs_Jpk": 0
+  },
+  "successful_milestone": "Six native normalized M3D-C1 runs succeeded; same-mode-zero exactly matched no-actuator baseline (0 <= 1e-12). ±0.005 commands produced nonzero polarity-sensitive Jpk (max absolute 0.000290) and W_sheet (2.6546583e-5) differences. Both tested gate-window contrasts were exactly zero.",
+  "interpretation": "Source-mode observable polarity sensitivity is supported but neither current-drive forcing nor stabilization authority is established. Gate windows 0.02/0.03 were beyond the two-step 0.01-timestep horizon, so their identical results do not establish true gate insensitivity. Prior native feedback result remains negative (+267.403% Jpk versus <=+0.10% frozen gate).",
+  "mechanism_effect": "neutral_for_TCT_stabilization; weak_native_source_response_observed; prior_feedback_configuration_weakened",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261029-126-native-current-drive-inwindow-gate-contrast",
+  "followup_scope": "Three-step in-window source-gate contrast; no source profile, solver physics or frozen-gate modifications",
+  "handoff_equivalence": "unvalidated; zero-source equivalence alone does not prove shot-to-native handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron-loss, alpha transport/channeling, boron delivery, direct conversion, rotation/shear, lithium or net-power evidence",
+  "m3dc1_claim_boundary": "normalized-native M3D-C1 source diagnostic only; no experimental shot handoff or causal TCT stabilization",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-30T02:18:28.424Z"
+}
