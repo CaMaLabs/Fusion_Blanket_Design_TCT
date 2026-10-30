@@ -1,0 +1,325 @@
+{
+  "amplitudes": [
+    -0.005,
+    -0.0025,
+    0.0,
+    0.0025,
+    0.005
+  ],
+  "claim_boundary": "Normalized-native M3D-C1 command-response diagnostic only; no validated source-current calibration, shot handoff, causal segmented-TCT control, p-B11 or net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_AMPLITUDE_RESPONSE_DIAGNOSTIC_COMPLETE",
+  "dt": 0.01,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "gate_window": [
+    0.0,
+    0.04
+  ],
+  "interpretation": "Matched signed half/full command test over an unchanged three-step native horizon. Ratios are maxima of potentially different frames and are not linearity proof; rounding of extracted observables and absence of a directly measured injected source prevent quantitative actuator calibration. No physical TCT stabilization claim.",
+  "machine": "normalized-native-M3D-C1",
+  "max_abs_delta_vs_zero": {
+    "full_negative": {
+      "Jint_high": 7.126602000007143e-05,
+      "Jpk": 0.0002900000000001235,
+      "Reconnected_Flux": 0.0,
+      "W_sheet": 2.4461037388734397e-05,
+      "center_abs_current": 8.902175504998944e-05,
+      "magnetic_energy": 0.0,
+      "shoulder_abs_current": 3.087441404020508e-05
+    },
+    "full_positive": {
+      "Jint_high": 1.0560899999956241e-05,
+      "Jpk": 4.999999999988347e-05,
+      "Reconnected_Flux": 0.0,
+      "W_sheet": 1.327857468291782e-05,
+      "center_abs_current": 4.8044358289978106e-05,
+      "magnetic_energy": 0.0,
+      "shoulder_abs_current": 3.089213317519768e-05
+    },
+    "half_negative": {
+      "Jint_high": 3.3355140000024264e-05,
+      "Jpk": 0.00012999999999996348,
+      "Reconnected_Flux": 0.0,
+      "W_sheet": 6.624279041744785e-06,
+      "center_abs_current": 3.1952329329953955e-05,
+      "magnetic_energy": 0.0,
+      "shoulder_abs_current": 1.5456601969304762e-05
+    },
+    "half_positive": {
+      "Jint_high": 3.0127319999961877e-05,
+      "Jpk": 0.000140000000000029,
+      "Reconnected_Flux": 0.0,
+      "W_sheet": 6.643136359674173e-06,
+      "center_abs_current": 3.28186940401487e-05,
+      "magnetic_energy": 0.0,
+      "shoulder_abs_current": 1.5458207288598924e-05
+    }
+  },
+  "observed_time_samples": [
+    0.0,
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261029-126-native-current-drive-inwindow-gate-contrast",
+  "run_frames": {
+    "baseline": 4,
+    "full_negative": 4,
+    "full_positive": 4,
+    "half_negative": 4,
+    "half_positive": 4,
+    "same_mode_zero": 4
+  },
+  "scaling_diagnostics": {
+    "Jint_high": {
+      "full_to_half_max_envelope_ratio_negative": 2.136582847501752,
+      "full_to_half_max_envelope_ratio_positive": 0.3505422984842198,
+      "max_abs_full_negative_minus_twice_half": 4.81751600000524e-05,
+      "max_abs_full_odd_symmetry_residual": 6.070512000011519e-05,
+      "max_abs_full_positive_minus_twice_half": 4.969373999996751e-05,
+      "max_abs_half_odd_symmetry_residual": 4.445339999992193e-06
+    },
+    "Jpk": {
+      "full_to_half_max_envelope_ratio_negative": 2.2307692307708074,
+      "full_to_half_max_envelope_ratio_positive": 0.3571428571419508,
+      "max_abs_full_negative_minus_twice_half": 0.000220000000000109,
+      "max_abs_full_odd_symmetry_residual": 0.00026999999999999247,
+      "max_abs_full_positive_minus_twice_half": 0.0002300000000001745,
+      "max_abs_half_odd_symmetry_residual": 2.999999999997449e-05
+    },
+    "Reconnected_Flux": {
+      "full_to_half_max_envelope_ratio_negative": null,
+      "full_to_half_max_envelope_ratio_positive": null,
+      "max_abs_full_negative_minus_twice_half": 0.0,
+      "max_abs_full_odd_symmetry_residual": 0.0,
+      "max_abs_full_positive_minus_twice_half": 0.0,
+      "max_abs_half_odd_symmetry_residual": 0.0
+    },
+    "W_sheet": {
+      "full_to_half_max_envelope_ratio_negative": 3.69263390545389,
+      "full_to_half_max_envelope_ratio_positive": 1.9988412045133899,
+      "max_abs_full_negative_minus_twice_half": 1.5856787922041704e-05,
+      "max_abs_full_odd_symmetry_residual": 3.2138136860204725e-05,
+      "max_abs_full_positive_minus_twice_half": 1.839137372638966e-05,
+      "max_abs_half_odd_symmetry_residual": 1.7474515188187212e-06
+    },
+    "center_abs_current": {
+      "full_to_half_max_envelope_ratio_negative": 2.7860802926356705,
+      "full_to_half_max_envelope_ratio_positive": 1.4639326668880581,
+      "max_abs_full_negative_minus_twice_half": 3.549504836986017e-05,
+      "max_abs_full_odd_symmetry_residual": 4.097739676001133e-05,
+      "max_abs_full_positive_minus_twice_half": 1.7593029790319292e-05,
+      "max_abs_half_odd_symmetry_residual": 8.745400409848614e-06
+    },
+    "magnetic_energy": {
+      "full_to_half_max_envelope_ratio_negative": null,
+      "full_to_half_max_envelope_ratio_positive": null,
+      "max_abs_full_negative_minus_twice_half": 0.0,
+      "max_abs_full_odd_symmetry_residual": 0.0,
+      "max_abs_full_positive_minus_twice_half": 0.0,
+      "max_abs_half_odd_symmetry_residual": 0.0
+    },
+    "shoulder_abs_current": {
+      "full_to_half_max_envelope_ratio_negative": 1.9974903993464102,
+      "full_to_half_max_envelope_ratio_positive": 1.9984292226422609,
+      "max_abs_full_negative_minus_twice_half": 2.7566495939004843e-05,
+      "max_abs_full_odd_symmetry_residual": 2.3000604106010458e-05,
+      "max_abs_full_positive_minus_twice_half": 7.845660588624848e-06,
+      "max_abs_half_odd_symmetry_residual": 3.03308739328656e-06
+    }
+  },
+  "schema_version": 1,
+  "shot_ids": [],
+  "signed_deltas_vs_same_mode_zero": {
+    "full_negative": {
+      "Jint_high": [
+        0.0,
+        0.0,
+        -5.706584000003678e-05,
+        -7.126602000007143e-05
+      ],
+      "Jpk": [
+        0.0,
+        0.0,
+        -0.000280000000000058,
+        -0.0002900000000001235
+      ],
+      "Reconnected_Flux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "W_sheet": [
+        0.0,
+        -1.326800820367069e-05,
+        2.058055873055409e-06,
+        2.4461037388734397e-05
+      ],
+      "center_abs_current": [
+        0.0,
+        -1.5563854709910174e-05,
+        1.2706906729942347e-05,
+        -8.902175504998944e-05
+      ],
+      "magnetic_energy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shoulder_abs_current": [
+        0.0,
+        -3.087441404020508e-05,
+        1.9883838741005522e-05,
+        -6.7261332714271815e-06
+      ]
+    },
+    "full_positive": {
+      "Jint_high": [
+        0.0,
+        0.0,
+        1.481780000034405e-06,
+        1.0560899999956241e-05
+      ],
+      "Jpk": [
+        0.0,
+        0.0,
+        1.0000000000065512e-05,
+        4.999999999988347e-05
+      ],
+      "Reconnected_Flux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "W_sheet": [
+        0.0,
+        1.327857468291782e-05,
+        -4.5047107808393605e-06,
+        7.677099471470328e-06
+      ],
+      "center_abs_current": [
+        0.0,
+        1.545056591001348e-05,
+        6.899239630042686e-06,
+        4.8044358289978106e-05
+      ],
+      "magnetic_energy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shoulder_abs_current": [
+        0.0,
+        3.089213317519768e-05,
+        3.1167653650049365e-06,
+        -1.1102234380520881e-05
+      ]
+    },
+    "half_negative": {
+      "Jint_high": [
+        0.0,
+        0.0,
+        -4.445339999992193e-06,
+        -3.3355140000024264e-05
+      ],
+      "Jpk": [
+        0.0,
+        0.0,
+        -2.999999999997449e-05,
+        -0.00012999999999996348
+      ],
+      "Reconnected_Flux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "W_sheet": [
+        0.0,
+        -6.624279041744785e-06,
+        3.7793804648078577e-06,
+        4.302124733346346e-06
+      ],
+      "center_abs_current": [
+        0.0,
+        -7.67834967008163e-06,
+        -1.1394070819958912e-05,
+        -3.1952329329953955e-05
+      ],
+      "magnetic_energy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shoulder_abs_current": [
+        0.0,
+        -1.5456601969304762e-05,
+        -3.84132859899966e-06,
+        -1.404800497338543e-06
+      ]
+    },
+    "half_positive": {
+      "Jint_high": [
+        0.0,
+        0.0,
+        0.0,
+        3.0127319999961877e-05
+      ],
+      "Jpk": [
+        0.0,
+        0.0,
+        0.0,
+        0.000140000000000029
+      ],
+      "Reconnected_Flux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "W_sheet": [
+        0.0,
+        6.643136359674173e-06,
+        -2.0319289459891365e-06,
+        -5.357137127459666e-06
+      ],
+      "center_abs_current": [
+        0.0,
+        7.5481730399395985e-06,
+        2.6486704101102987e-06,
+        3.28186940401487e-05
+      ],
+      "magnetic_energy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shoulder_abs_current": [
+        0.0,
+        1.5458207288598924e-05,
+        1.5588563360008356e-06,
+        -1.6282868959480168e-06
+      ]
+    }
+  },
+  "source_mode": 4,
+  "source_profile_and_physics_unchanged": true,
+  "source_response_observed": true,
+  "steps": 3,
+  "timestamp_utc": "2026-10-30T02:49:00.018780+00:00",
+  "zero_equivalence": {
+    "max_abs_metric_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
