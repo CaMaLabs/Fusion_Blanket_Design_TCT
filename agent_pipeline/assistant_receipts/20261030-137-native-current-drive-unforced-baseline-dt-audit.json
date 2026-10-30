@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "processed_result_job_id": "20261030-137-native-current-drive-unforced-baseline-dt-audit",
+  "processed_result_receipt_sha": "4effd5d7d1813958b159500db4d8372a5b6900df",
+  "validation_summary_sha256": "32ae1c43472fa2289d5372458cfed16e875039db75411d1d620a3854f182a451",
+  "log_sha256": "18abacf1d8487b77d51ec47c10a08afd31eda6403484a441504af771ff7dd725",
+  "result_head_before": "a2130e68740f92de6e8059e97481120fce2892b8",
+  "classification": "M3DC1_NATIVE_UNFORCED_BASELINE_DT_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_UNFORCED_BASELINE_DT_SENSITIVITY_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_unforced_baseline_dt_sensitivity_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "six unforced normalized-native M3D-C1 simulations, no imported experimental shot, calibrated equilibrium/profile handoff, physical current integral or segmented controller-in-loop",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "quantitative_result": {
+    "runtime_seconds": 289.7979426383972,
+    "return_code": 0,
+    "matched_run_count": 6,
+    "mesh_elements_per_frame": 1004,
+    "dt_sequence": [
+      0.0025,
+      0.00125,
+      0.000625
+    ],
+    "matched_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "zero_equivalence_max_abs_field_delta": 0,
+    "zero_equivalence_tolerance": 1e-12,
+    "coarse_medium_to_medium_fine_weighted_l2_difference_ratios": [
+      2.6134333141860613,
+      8.19431952073297,
+      2.4797542567941933
+    ],
+    "medium_fine_relative_to_fine_weighted_l2_differences": [
+      0.13073524544626447,
+      0.02470612051617467,
+      0.03496059989701688
+    ],
+    "medium_fine_weighted_cosines": [
+      0.9959515792849122,
+      0.9996948763478051,
+      0.9993956003705011
+    ],
+    "temporal_convergence_established": false
+  },
+  "successful_milestone": "Six source-off baseline/same-mode-zero native M3D-C1 cases completed in 289.80 seconds. Exact zero-source equivalence passed. At t=0.01/0.02/0.03, unforced baseline coarse/medium differences exceeded medium/fine differences by factors 2.61/8.19/2.48 respectively on matched 1004-element meshes. Baseline refinement differences shrink over these three levels.",
+  "interpretation": "Unforced raw jphi fields exhibit decreasing differences under timestep refinement, unlike result 135's baseline-subtracted commanded response fields at t=0.03 (negative ratio 0.829; positive ratio 0.731). This isolates an important difference between background baseline and driven-response numerical sensitivity; it does not establish temporal convergence or prove the source drive is physical. A fixed-fine-dt signed amplitude scaling test is warranted.",
+  "mechanism_effect": "unforced_baseline_refinement_trend_supported; driven_response_temporal_convergence_weakened; physical_current_conservation_and_causal_segmented_TCT_stabilization_neutral_unvalidated",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-138-native-current-drive-fine-dt-amplitude-linearity",
+  "followup_scope": "One fixed-fine-dt normalized-native M3D-C1 signed current-drive amplitude scaling diagnostic at +/-0.0025/0.005/0.01, preserving source gate/mode, matched mesh/times and zero-source equivalence.",
+  "handoff_equivalence": "unvalidated; same-mode zero-source equivalence is not experimental shot handoff",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or net-power evidence",
+  "m3dc1_claim_boundary": "Unforced baseline jphi dt sensitivity of normalized-native M3D-C1 only; e[2] uncalibrated. No proof of numerical convergence, physical current conservation, segmented-electrode authority, calibrated shot handoff, causal TCT stabilization, p-B11 fidelity or reactor net power.",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "timestamp_utc": "2026-10-30T13:59:35.818Z"
+}
