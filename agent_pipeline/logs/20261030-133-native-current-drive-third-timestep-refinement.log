@@ -1,0 +1,1981 @@
+job_id=20261030-133-native-current-drive-third-timestep-refinement
+started_utc=2026-10-30T09:04:06.930397Z
+head_before=4b5f23bf19d9a6939151c73af49d6ded01ec1655
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[timestep-refinement] running baseline
+[timestep-refinement] running same_mode_zero
+[timestep-refinement] running full_negative
+[timestep-refinement] running full_positive
+{
+  "amplitudes": [
+    -0.005,
+    0.0,
+    0.005
+  ],
+  "claim_boundary": "Numerical time-step sensitivity of normalized-native M3D-C1 jphi response only. e[2] and R*e[2] are uncalibrated mesh-weighted proxies, not physical current quadrature. No calibrated current conservation, segmented-electrode authority, experimental shot handoff, causal TCT stabilization, p-B11 fidelity or net-power claim.",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_THIRD_TIMESTEP_REFINEMENT_DIAGNOSTIC_COMPLETE",
+  "dt": 0.00125,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "6ea6abaa1a7dff2d6e77e18bf675f04f3fdeab164dc4c186c7ba3637698cf530",
+  "frames": [
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 0,
+        "odd_symmetry_residual_delta_e2": 0.0,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.0,
+              "cancellation_fraction_delta": null,
+              "signed_proxy_delta": 0.0
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.0,
+              "cancellation_fraction_delta": null,
+              "signed_proxy_delta": 0.0
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.0,
+              "cancellation_fraction_delta": null,
+              "signed_proxy_delta": 0.0
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.0,
+              "cancellation_fraction_delta": null,
+              "signed_proxy_delta": 0.0
+            }
+          }
+        }
+      },
+      "frame": 0,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0,
+      "time": 0.0,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0,
+            "cancellation_fraction": null,
+            "negative_lobe_proxy": 0.0,
+            "positive_lobe_proxy": 0.0,
+            "signed_proxy": 0.0
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0,
+            "cancellation_fraction": null,
+            "negative_lobe_proxy": 0.0,
+            "positive_lobe_proxy": 0.0,
+            "signed_proxy": 0.0
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0,
+            "cancellation_fraction": null,
+            "negative_lobe_proxy": 0.0,
+            "positive_lobe_proxy": 0.0,
+            "signed_proxy": 0.0
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0,
+            "cancellation_fraction": null,
+            "negative_lobe_proxy": 0.0,
+            "positive_lobe_proxy": 0.0,
+            "signed_proxy": 0.0
+          }
+        }
+      }
+    },
+    {
+      "frame": 1,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0019931049498747347,
+      "time": 0.00125,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0007057642635520649,
+            "cancellation_fraction": 0.7197773740803238,
+            "negative_lobe_proxy": 0.0004517676893824455,
+            "positive_lobe_proxy": 0.0002539965741696195,
+            "signed_proxy": -0.00019777111521282603
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0007055153690782199,
+            "cancellation_fraction": 0.7202900778693108,
+            "negative_lobe_proxy": 0.00025408786006567326,
+            "positive_lobe_proxy": 0.00045142750901254664,
+            "signed_proxy": 0.00019733964894687336
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 7.059633511377836e-05,
+            "cancellation_fraction": 0.7140731895278442,
+            "negative_lobe_proxy": 4.539086002194223e-05,
+            "positive_lobe_proxy": 2.5205475091836125e-05,
+            "signed_proxy": -2.0185384930106105e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 7.056869734780434e-05,
+            "cancellation_fraction": 0.7144990703867423,
+            "negative_lobe_proxy": 2.5210634326704787e-05,
+            "positive_lobe_proxy": 4.535806302109956e-05,
+            "signed_proxy": 2.014742869439477e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 1,
+        "odd_symmetry_residual_delta_e2": -0.0016827147741549588,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": -2.5077095962800942e-05,
+              "cancellation_fraction_delta": 9.198928249232186e-05,
+              "signed_proxy_delta": 7.299973344167851e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -2.109581900683029e-05,
+              "cancellation_fraction_delta": 0.0034895805080531472,
+              "signed_proxy_delta": -1.0633006687246966e-05
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": -2.5797324847976464e-06,
+              "cancellation_fraction_delta": 2.657777986925236e-05,
+              "signed_proxy_delta": 7.56746782634982e-07
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -2.2154360559866935e-06,
+              "cancellation_fraction_delta": 0.0031271146582243503,
+              "signed_proxy_delta": -1.0586421297142582e-06
+            }
+          }
+        }
+      },
+      "frame": 2,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0005796955340586195,
+      "time": 0.0025,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0012961658180599693,
+            "cancellation_fraction": 0.7137454365865482,
+            "negative_lobe_proxy": 0.0008335995992100827,
+            "positive_lobe_proxy": 0.00046256621884988654,
+            "signed_proxy": -0.0003710333803601961
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0012965404703128554,
+            "cancellation_fraction": 0.7139239404083102,
+            "negative_lobe_proxy": 0.0004628156407322988,
+            "positive_lobe_proxy": 0.0008337248295805567,
+            "signed_proxy": 0.00037090918884825794
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0001295620211104819,
+            "cancellation_fraction": 0.7080182721909359,
+            "negative_lobe_proxy": 8.369588194637742e-05,
+            "positive_lobe_proxy": 4.586613916410448e-05,
+            "signed_proxy": -3.782974278227294e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0001296007376778866,
+            "cancellation_fraction": 0.7082119166142538,
+            "negative_lobe_proxy": 4.58923934127386e-05,
+            "positive_lobe_proxy": 8.370834426514801e-05,
+            "signed_proxy": 3.781595085240941e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 3,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0008118789740413277,
+      "time": 0.00375,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0018150357584518005,
+            "cancellation_fraction": 0.7018810047581647,
+            "negative_lobe_proxy": 0.0011780661975447269,
+            "positive_lobe_proxy": 0.0006369695609070736,
+            "signed_proxy": -0.0005410966366376533
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0018161583615373025,
+            "cancellation_fraction": 0.7024645271153318,
+            "negative_lobe_proxy": 0.0006378934123019285,
+            "positive_lobe_proxy": 0.001178264949235374,
+            "signed_proxy": 0.0005403715369334455
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.00018147441843971554,
+            "cancellation_fraction": 0.6967738027873983,
+            "negative_lobe_proxy": 0.00011825110811727946,
+            "positive_lobe_proxy": 6.322331032243607e-05,
+            "signed_proxy": -5.5027797794843385e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.00018157745458261288,
+            "cancellation_fraction": 0.6972909284645838,
+            "negative_lobe_proxy": 6.330615594707297e-05,
+            "positive_lobe_proxy": 0.00011827129863553991,
+            "signed_proxy": 5.496514268846695e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 2,
+        "odd_symmetry_residual_delta_e2": -0.5134413907340677,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 4.0153846074956426e-05,
+              "cancellation_fraction_delta": 0.0074757223953776375,
+              "signed_proxy_delta": 4.565200939723839e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -0.0002466108559939658,
+              "cancellation_fraction_delta": -0.162642261130036,
+              "signed_proxy_delta": 0.0003350491618596065
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 3.893069636806478e-06,
+              "cancellation_fraction_delta": 0.00744314693207726,
+              "signed_proxy_delta": 4.6875490275739373e-07
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -2.6483853371765475e-05,
+              "cancellation_fraction_delta": -0.16969340402652833,
+              "signed_proxy_delta": 3.4915007857698115e-05
+            }
+          }
+        }
+      },
+      "frame": 4,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0006415923332676742,
+      "time": 0.005,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.002275612825655192,
+            "cancellation_fraction": 0.6975017089222808,
+            "negative_lobe_proxy": 0.0014819909082852136,
+            "positive_lobe_proxy": 0.0007936219173699783,
+            "signed_proxy": -0.0006883689909152355
+          },
+          "full_positive": {
+            "absolute_proxy": 0.002273897113382847,
+            "cancellation_fraction": 0.6963152608417758,
+            "negative_lobe_proxy": 0.0007916746308162689,
+            "positive_lobe_proxy": 0.0014822224825665781,
+            "signed_proxy": 0.0006905478517503091
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0002275385701631381,
+            "cancellation_fraction": 0.6928204399294948,
+            "negative_lobe_proxy": 0.00014871688402246132,
+            "positive_lobe_proxy": 7.882168614067677e-05,
+            "signed_proxy": -6.989519788178453e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0002273836349437743,
+            "cancellation_fraction": 0.6917128979827734,
+            "negative_lobe_proxy": 7.864209654040756e-05,
+            "positive_lobe_proxy": 0.00014874153840336673,
+            "signed_proxy": 7.009944186295917e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 5,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.00037691624300304583,
+      "time": 0.00625,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.002667088518404143,
+            "cancellation_fraction": 0.6991331691900873,
+            "negative_lobe_proxy": 0.0017347634942129517,
+            "positive_lobe_proxy": 0.0009323250241911916,
+            "signed_proxy": -0.00080243847002176
+          },
+          "full_positive": {
+            "absolute_proxy": 0.002667001920229512,
+            "cancellation_fraction": 0.6991486469820936,
+            "negative_lobe_proxy": 0.0009323153920135544,
+            "positive_lobe_proxy": 0.0017346865282159576,
+            "signed_proxy": 0.0008023711362024033
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0002666707447107473,
+            "cancellation_fraction": 0.6949838395761473,
+            "negative_lobe_proxy": 0.00017400481567989443,
+            "positive_lobe_proxy": 9.266592903085287e-05,
+            "signed_proxy": -8.133888664904158e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.00026666301072056267,
+            "cancellation_fraction": 0.695005127730995,
+            "negative_lobe_proxy": 9.266607991348816e-05,
+            "positive_lobe_proxy": 0.0001739969308070745,
+            "signed_proxy": 8.133085089358634e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 3,
+        "odd_symmetry_residual_delta_e2": -0.65296027520258,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 2.6722602454949066e-05,
+              "cancellation_fraction_delta": -0.003331160181446191,
+              "signed_proxy_delta": -1.7994422287789065e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -0.00016353534913098955,
+              "cancellation_fraction_delta": -0.1080981341601901,
+              "signed_proxy_delta": 0.00029243141141670496
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 2.4876449844254793e-06,
+              "cancellation_fraction_delta": -0.003202670656696105,
+              "signed_proxy_delta": -1.7156841674305877e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -1.891109079255759e-05,
+              "cancellation_fraction_delta": -0.11738045792596574,
+              "signed_proxy_delta": 3.163219293108551e-05
+            }
+          }
+        }
+      },
+      "frame": 6,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.00046858067581991117,
+      "time": 0.0075,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.003002534795300369,
+            "cancellation_fraction": 0.697577538821496,
+            "negative_lobe_proxy": 0.001955284378934601,
+            "positive_lobe_proxy": 0.0010472504163657678,
+            "signed_proxy": -0.0009080339625688332
+          },
+          "full_positive": {
+            "absolute_proxy": 0.003000456763780107,
+            "cancellation_fraction": 0.696761386757909,
+            "negative_lobe_proxy": 0.0010453012078192876,
+            "positive_lobe_proxy": 0.0019551555559608196,
+            "signed_proxy": 0.0009098543481415321
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0003002400824270046,
+            "cancellation_fraction": 0.6936535647792577,
+            "negative_lobe_proxy": 0.00019610878069444964,
+            "positive_lobe_proxy": 0.00010413130173255493,
+            "signed_proxy": -9.197747896189471e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0003000494471629068,
+            "cancellation_fraction": 0.6929029034790105,
+            "negative_lobe_proxy": 0.00010395256656322504,
+            "positive_lobe_proxy": 0.00019609688059968176,
+            "signed_proxy": 9.214431403645671e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.00022850086760943514,
+      "time": 0.00875,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0032809358035220397,
+            "cancellation_fraction": 0.7000674595929641,
+            "negative_lobe_proxy": 0.002132497606992402,
+            "positive_lobe_proxy": 0.0011484381965296375,
+            "signed_proxy": -0.000984059410462765
+          },
+          "full_positive": {
+            "absolute_proxy": 0.003280958185030717,
+            "cancellation_fraction": 0.7000264402663446,
+            "negative_lobe_proxy": 0.00114837873946489,
+            "positive_lobe_proxy": 0.002132579445565827,
+            "signed_proxy": 0.0009842007061009372
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.00032810069830826316,
+            "cancellation_fraction": 0.6965509398965697,
+            "negative_lobe_proxy": 0.0002138312734145924,
+            "positive_lobe_proxy": 0.00011426942489367077,
+            "signed_proxy": -9.956184852092162e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.00032810403464745945,
+            "cancellation_fraction": 0.6965108319637818,
+            "negative_lobe_proxy": 0.00011426400707148773,
+            "positive_lobe_proxy": 0.0002138400275759717,
+            "signed_proxy": 9.957602050448397e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 4,
+        "odd_symmetry_residual_delta_e2": -0.6978824100572107,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": -4.257402001590655e-05,
+              "cancellation_fraction_delta": -0.006859230143164141,
+              "signed_proxy_delta": -1.1542256247303343e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -0.00020247935741850992,
+              "cancellation_fraction_delta": -0.08628441316218449,
+              "signed_proxy_delta": 0.00025900331197259137
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": -4.484309960802542e-06,
+              "cancellation_fraction_delta": -0.006579293457573132,
+              "signed_proxy_delta": -9.735767760068846e-07
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -2.3058760603313685e-05,
+              "cancellation_fraction_delta": -0.09592776498878797,
+              "signed_proxy_delta": 2.882630084533379e-05
+            }
+          }
+        }
+      },
+      "frame": 8,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0002093140768046057,
+      "time": 0.01,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.003503314314725003,
+            "cancellation_fraction": 0.6998214427984262,
+            "negative_lobe_proxy": 0.0022774670755713873,
+            "positive_lobe_proxy": 0.0012258472391536157,
+            "signed_proxy": -0.0010516198364177718
+          },
+          "full_positive": {
+            "absolute_proxy": 0.003503577918785209,
+            "cancellation_fraction": 0.6998624154832738,
+            "negative_lobe_proxy": 0.0012260112525374386,
+            "positive_lobe_proxy": 0.0022775666662477705,
+            "signed_proxy": 0.0010515554137103316
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0003503670493280017,
+            "cancellation_fraction": 0.6964762778509417,
+            "negative_lobe_proxy": 0.00022835588012920974,
+            "positive_lobe_proxy": 0.00012201116919879193,
+            "signed_proxy": -0.0001063447109304178
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0003503916303164906,
+            "cancellation_fraction": 0.6965161913868627,
+            "negative_lobe_proxy": 0.00012202672192093781,
+            "positive_lobe_proxy": 0.00022836490839555281,
+            "signed_proxy": 0.00010633818647461499
+          }
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.0002544045571258724,
+      "time": 0.01125,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0036787614301150595,
+            "cancellation_fraction": 0.7032817099615369,
+            "negative_lobe_proxy": 0.0023851586155591254,
+            "positive_lobe_proxy": 0.001293602814555934,
+            "signed_proxy": -0.0010915558010031916
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0036788710943000797,
+            "cancellation_fraction": 0.7035209932280013,
+            "negative_lobe_proxy": 0.001294081523109888,
+            "positive_lobe_proxy": 0.0023847895711901915,
+            "signed_proxy": 0.0010907080480803038
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0003679274670650786,
+            "cancellation_fraction": 0.7002614392642148,
+            "negative_lobe_proxy": 0.00023910475824916416,
+            "positive_lobe_proxy": 0.00012882270881591447,
+            "signed_proxy": -0.00011028204943324969
+          },
+          "full_positive": {
+            "absolute_proxy": 0.00036793485660404013,
+            "cancellation_fraction": 0.7004833598295144,
+            "negative_lobe_proxy": 0.00012886612227619432,
+            "positive_lobe_proxy": 0.0002390687343278458,
+            "signed_proxy": 0.00011020261205165152
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 5,
+        "odd_symmetry_residual_delta_e2": -0.4287054359620511,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": -0.000235595192548144,
+              "cancellation_fraction_delta": -0.032538469844055395,
+              "signed_proxy_delta": -8.115610860016812e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -9.570984213328783e-05,
+              "cancellation_fraction_delta": 0.007953804656773755,
+              "signed_proxy_delta": -5.370952743794606e-05
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": -2.459020696654661e-05,
+              "cancellation_fraction_delta": -0.03408314934955614,
+              "signed_proxy_delta": -8.59585758736513e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": -1.096882277037373e-05,
+              "cancellation_fraction_delta": 0.0006600860028620481,
+              "signed_proxy_delta": -2.770926573972309e-06
+            }
+          }
+        }
+      },
+      "frame": 10,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.000191141014562619,
+      "time": 0.0125,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.003910468439250315,
+            "cancellation_fraction": 0.7718524844531491,
+            "negative_lobe_proxy": 0.0024013160491448233,
+            "positive_lobe_proxy": 0.0015091523901054921,
+            "signed_proxy": -0.0008921636590393311
+          },
+          "full_positive": {
+            "absolute_proxy": 0.003910279469904861,
+            "cancellation_fraction": 0.7717406015313765,
+            "negative_lobe_proxy": 0.0015088607151300844,
+            "positive_lobe_proxy": 0.0024014187547747763,
+            "signed_proxy": 0.0008925580396446917
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.00039227560024205233,
+            "cancellation_fraction": 0.7717692256074175,
+            "negative_lobe_proxy": 0.00024090248213030552,
+            "positive_lobe_proxy": 0.00015137311811174679,
+            "signed_proxy": -8.952936401855873e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0003922556077192947,
+            "cancellation_fraction": 0.7716469831056738,
+            "negative_lobe_proxy": 0.00015134142815143823,
+            "positive_lobe_proxy": 0.0002409141795678565,
+            "signed_proxy": 8.957275141641827e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.00020116652193091626,
+      "time": 0.01375,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0038108154054244253,
+            "cancellation_fraction": 0.7153364068172925,
+            "negative_lobe_proxy": 0.002447807905844279,
+            "positive_lobe_proxy": 0.001363007499580146,
+            "signed_proxy": -0.0010848004062641331
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0038112378462472037,
+            "cancellation_fraction": 0.71518057424708,
+            "negative_lobe_proxy": 0.0013628616357356398,
+            "positive_lobe_proxy": 0.002448376210511564,
+            "signed_proxy": 0.001085514574775924
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0003818448116640979,
+            "cancellation_fraction": 0.7149389423021424,
+            "negative_lobe_proxy": 0.00024534694877675244,
+            "positive_lobe_proxy": 0.00013649786288734544,
+            "signed_proxy": -0.00010884908588940701
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0003818847585230501,
+            "cancellation_fraction": 0.7147770798182449,
+            "negative_lobe_proxy": 0.0001364812362621007,
+            "positive_lobe_proxy": 0.00024540352226094943,
+            "signed_proxy": 0.00010892228599884875
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 6,
+        "odd_symmetry_residual_delta_e2": -0.3209691983957405,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.0002390058468283102,
+              "cancellation_fraction_delta": 0.09631099119472653,
+              "signed_proxy_delta": 0.000317384418623737
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.0005927683005015811,
+              "cancellation_fraction_delta": 0.1610342424409732,
+              "signed_proxy_delta": -0.00043215384852752093
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 2.480778078630243e-05,
+              "cancellation_fraction_delta": 0.09724751023515721,
+              "signed_proxy_delta": 3.203856058315698e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 5.996175152313862e-05,
+              "cancellation_fraction_delta": 0.15752518212612965,
+              "signed_proxy_delta": -4.213763250540243e-05
+            }
+          }
+        }
+      },
+      "frame": 12,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.007776240088519018,
+      "time": 0.015,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0040757772295207375,
+            "cancellation_fraction": 0.7818512102409534,
+            "negative_lobe_proxy": 0.0024824515497340834,
+            "positive_lobe_proxy": 0.0015933256797866545,
+            "signed_proxy": -0.0008891258699474289
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004075604281354849,
+            "cancellation_fraction": 0.7828797439295494,
+            "negative_lobe_proxy": 0.00159535401807263,
+            "positive_lobe_proxy": 0.0024802502632822196,
+            "signed_proxy": 0.0008848962452095898
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004094764094245309,
+            "cancellation_fraction": 0.783555576222772,
+            "negative_lobe_proxy": 0.0002490526474563959,
+            "positive_lobe_proxy": 0.000160423761968135,
+            "signed_proxy": -8.862888548826085e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.00040946747531842443,
+            "cancellation_fraction": 0.7845573226027307,
+            "negative_lobe_proxy": 0.0001606253530643614,
+            "positive_lobe_proxy": 0.00024884212225406303,
+            "signed_proxy": 8.821676918970162e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 13,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.010356459811179766,
+      "time": 0.01625,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004163286451336812,
+            "cancellation_fraction": 0.7956797916022498,
+            "negative_lobe_proxy": 0.00250696500334674,
+            "positive_lobe_proxy": 0.0016563214479900722,
+            "signed_proxy": -0.0008506435553566677
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004166381073297911,
+            "cancellation_fraction": 0.7966302781776495,
+            "negative_lobe_proxy": 0.0016595326567077047,
+            "positive_lobe_proxy": 0.0025068484165902067,
+            "signed_proxy": 0.000847315759882502
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004188755421021839,
+            "cancellation_fraction": 0.7992759456273397,
+            "negative_lobe_proxy": 0.00025147696959524013,
+            "positive_lobe_proxy": 0.00016739857250694382,
+            "signed_proxy": -8.40783970882963e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004191766339884026,
+            "cancellation_fraction": 0.8001530055469468,
+            "negative_lobe_proxy": 0.00016770272177043637,
+            "positive_lobe_proxy": 0.0002514739122179662,
+            "signed_proxy": 8.377119044752981e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 7,
+        "odd_symmetry_residual_delta_e2": -0.2139940945970398,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.00043146977242504263,
+              "cancellation_fraction_delta": 0.110901019442187,
+              "signed_proxy_delta": 0.0003349099528566498
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.000708465105750069,
+              "cancellation_fraction_delta": 0.17974135158461513,
+              "signed_proxy_delta": -0.0004947116496700287
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 4.530160886908089e-05,
+              "cancellation_fraction_delta": 0.11638003079176629,
+              "signed_proxy_delta": 3.542026513365811e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 7.265664682845673e-05,
+              "cancellation_fraction_delta": 0.1822822305080416,
+              "signed_proxy_delta": -5.05128418993578e-05
+            }
+          }
+        }
+      },
+      "frame": 14,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.005727940327197612,
+      "time": 0.0175,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.00422717472246652,
+            "cancellation_fraction": 0.8005941525842291,
+            "negative_lobe_proxy": 0.0025350490400872414,
+            "positive_lobe_proxy": 0.0016921256823792788,
+            "signed_proxy": -0.0008429233577079627
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0042379899947784135,
+            "cancellation_fraction": 0.8028273754039426,
+            "negative_lobe_proxy": 0.001701187192248061,
+            "positive_lobe_proxy": 0.0025368028025303524,
+            "signed_proxy": 0.0008356156102822914
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004253860371453281,
+            "cancellation_fraction": 0.8054379843754705,
+            "negative_lobe_proxy": 0.000254075000975427,
+            "positive_lobe_proxy": 0.00017131103616990106,
+            "signed_proxy": -8.276396480552598e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004264644375846354,
+            "cancellation_fraction": 0.8075877159070121,
+            "negative_lobe_proxy": 0.0001722037205322721,
+            "positive_lobe_proxy": 0.0002542607170523633,
+            "signed_proxy": 8.205699652009119e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 15,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.005670489816945468,
+      "time": 0.01875,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0042362705350161576,
+            "cancellation_fraction": 0.8021606241372825,
+            "negative_lobe_proxy": 0.0025371858268246872,
+            "positive_lobe_proxy": 0.00169908470819147,
+            "signed_proxy": -0.0008381011186332171
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004255080480751508,
+            "cancellation_fraction": 0.8051486175100927,
+            "negative_lobe_proxy": 0.0017129860832356284,
+            "positive_lobe_proxy": 0.002542094397515879,
+            "signed_proxy": 0.0008291083142802508
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004263240375037573,
+            "cancellation_fraction": 0.8080719691202678,
+            "negative_lobe_proxy": 0.0002540737852692753,
+            "positive_lobe_proxy": 0.00017225025223448204,
+            "signed_proxy": -8.182353303479324e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004281891373449085,
+            "cancellation_fraction": 0.8109862527573681,
+            "negative_lobe_proxy": 0.0001736277519833787,
+            "positive_lobe_proxy": 0.0002545613853615298,
+            "signed_proxy": 8.09336333781511e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 8,
+        "odd_symmetry_residual_delta_e2": -0.22610538469958472,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.00024173001989432046,
+              "cancellation_fraction_delta": 0.025357918274612756,
+              "signed_proxy_delta": 2.5833575983077702e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 5.2810816179127244e-05,
+              "cancellation_fraction_delta": 0.06586696362591404,
+              "signed_proxy_delta": -0.0002717439564461954
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 2.551473243433787e-05,
+              "cancellation_fraction_delta": 0.03143150009836104,
+              "signed_proxy_delta": 4.505186564462987e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 5.714267852760188e-06,
+              "cancellation_fraction_delta": 0.06790738882795944,
+              "signed_proxy_delta": -2.8148938761045952e-05
+            }
+          }
+        }
+      },
+      "frame": 16,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.184967983928953,
+      "time": 0.02,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0037193027559795718,
+            "cancellation_fraction": 0.7420658415539291,
+            "negative_lobe_proxy": 0.0023393189911746575,
+            "positive_lobe_proxy": 0.0013799837648049143,
+            "signed_proxy": -0.0009593352263697432
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004344612368766175,
+            "cancellation_fraction": 0.7927700971222161,
+            "negative_lobe_proxy": 0.001722139384772571,
+            "positive_lobe_proxy": 0.002622472983993604,
+            "signed_proxy": 0.000900333599221033
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0003734904977184418,
+            "cancellation_fraction": 0.7479019718178559,
+            "negative_lobe_proxy": 0.0002338233578690143,
+            "positive_lobe_proxy": 0.0001396671398494275,
+            "signed_proxy": -9.415621801958678e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004371508483990152,
+            "cancellation_fraction": 0.7989606195728236,
+            "negative_lobe_proxy": 0.00017463315634183135,
+            "positive_lobe_proxy": 0.00026251769205718384,
+            "signed_proxy": 8.78845357153525e-05
+          }
+        }
+      }
+    },
+    {
+      "frame": 17,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.1304139445500987,
+      "time": 0.02125,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.003947301214384994,
+            "cancellation_fraction": 0.7875417401612625,
+            "negative_lobe_proxy": 0.002392968980726283,
+            "positive_lobe_proxy": 0.0015543322336587118,
+            "signed_proxy": -0.0008386367470675711
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004553045000928634,
+            "cancellation_fraction": 0.7801492606755425,
+            "negative_lobe_proxy": 0.0017760273456484744,
+            "positive_lobe_proxy": 0.00277701765528016,
+            "signed_proxy": 0.0010009903096316857
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.000396901260451455,
+            "cancellation_fraction": 0.7933334977257891,
+            "negative_lobe_proxy": 0.00023946372784859144,
+            "positive_lobe_proxy": 0.0001574375326028636,
+            "signed_proxy": -8.202619524572782e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004579830453675923,
+            "cancellation_fraction": 0.7866015720195341,
+            "negative_lobe_proxy": 0.00018012509172222083,
+            "positive_lobe_proxy": 0.00027785795364537144,
+            "signed_proxy": 9.773286192315063e-05
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 9,
+        "odd_symmetry_residual_delta_e2": -0.12437339135139118,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 9.633001506199196e-05,
+              "cancellation_fraction_delta": -0.02253388292321956,
+              "signed_proxy_delta": -0.00011045261642923777
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.00013012723600044733,
+              "cancellation_fraction_delta": 0.04723574514777773,
+              "signed_proxy_delta": -0.00018366204142180763
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 9.682401160806295e-06,
+              "cancellation_fraction_delta": -0.019193144797059136,
+              "signed_proxy_delta": -9.703427648491677e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 1.3091364972482372e-05,
+              "cancellation_fraction_delta": 0.0483754087923125,
+              "signed_proxy_delta": -1.9071182805037893e-05
+            }
+          }
+        }
+      },
+      "frame": 18,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.1047309511613473,
+      "time": 0.0225,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004090952481114575,
+            "cancellation_fraction": 0.7878308080446845,
+            "negative_lobe_proxy": 0.002479463281680124,
+            "positive_lobe_proxy": 0.0016114891994344512,
+            "signed_proxy": -0.0008679740822456727
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004631302707148353,
+            "cancellation_fraction": 0.7774921154963786,
+            "negative_lobe_proxy": 0.0018004006696424393,
+            "positive_lobe_proxy": 0.002830902037505914,
+            "signed_proxy": 0.0010305013678634746
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.00041137084692378575,
+            "cancellation_fraction": 0.7940838111802477,
+            "negative_lobe_proxy": 0.0002480393819569427,
+            "positive_lobe_proxy": 0.00016333146496684303,
+            "signed_proxy": -8.470791699009967e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004657503725473695,
+            "cancellation_fraction": 0.7841033585221471,
+            "negative_lobe_proxy": 0.00018259821567366682,
+            "positive_lobe_proxy": 0.00028315215687370267,
+            "signed_proxy": 0.00010055394120003586
+          }
+        }
+      }
+    },
+    {
+      "frame": 19,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.08506648447996354,
+      "time": 0.02375,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004212427241909868,
+            "cancellation_fraction": 0.7845148557316648,
+            "negative_lobe_proxy": 0.002560071366926341,
+            "positive_lobe_proxy": 0.0016523558749835278,
+            "signed_proxy": -0.0009077154919428131
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004709648653336862,
+            "cancellation_fraction": 0.7756680906127023,
+            "negative_lobe_proxy": 0.0018265620891952442,
+            "positive_lobe_proxy": 0.0028830865641416184,
+            "signed_proxy": 0.001056524474946374
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.00042356912129471033,
+            "cancellation_fraction": 0.791052733818733,
+            "negative_lobe_proxy": 0.0002560363656140208,
+            "positive_lobe_proxy": 0.00016753275568068957,
+            "signed_proxy": -8.850360993333123e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004735206905673965,
+            "cancellation_fraction": 0.7823828998118224,
+            "negative_lobe_proxy": 0.00018523724550350816,
+            "positive_lobe_proxy": 0.0002882834450638883,
+            "signed_proxy": 0.00010304619956038017
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 10,
+        "odd_symmetry_residual_delta_e2": -0.08831674893101416,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.00012714165575747165,
+              "cancellation_fraction_delta": -0.013423804126216687,
+              "signed_proxy_delta": -8.39084783267989e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.00019810853157110637,
+              "cancellation_fraction_delta": 0.037921984348728066,
+              "signed_proxy_delta": -0.00013012219106008993
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 1.2533057271581585e-05,
+              "cancellation_fraction_delta": -0.01180436992940237,
+              "signed_proxy_delta": -7.616201599469597e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 1.9627419852156006e-05,
+              "cancellation_fraction_delta": 0.038569738466694536,
+              "signed_proxy_delta": -1.3588130353046275e-05
+            }
+          }
+        }
+      },
+      "frame": 20,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.06965912277011826,
+      "time": 0.025,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004330231673769257,
+            "cancellation_fraction": 0.7838079027963495,
+            "negative_lobe_proxy": 0.0026331967703495532,
+            "positive_lobe_proxy": 0.0016970349034197039,
+            "signed_proxy": -0.0009361618669298493
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004797619213441148,
+            "cancellation_fraction": 0.7763832749742395,
+            "negative_lobe_proxy": 0.0018623956585053867,
+            "positive_lobe_proxy": 0.0029352235549357612,
+            "signed_proxy": 0.0010728278964303743
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.000435344426749167,
+            "cancellation_fraction": 0.790539552567792,
+            "negative_lobe_proxy": 0.0002632659325815828,
+            "positive_lobe_proxy": 0.00017207849416758417,
+            "signed_proxy": -9.118743841399862e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.00048227936823557545,
+            "cancellation_fraction": 0.7831485580239741,
+            "negative_lobe_proxy": 0.00018884819589920206,
+            "positive_lobe_proxy": 0.0002934311723363734,
+            "signed_proxy": 0.0001045829764371713
+          }
+        }
+      }
+    },
+    {
+      "frame": 21,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.05726507185552023,
+      "time": 0.02625,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004473526481444921,
+            "cancellation_fraction": 0.7852381355702952,
+            "negative_lobe_proxy": 0.0027171346845878443,
+            "positive_lobe_proxy": 0.0017563917968570761,
+            "signed_proxy": -0.0009607428877307683
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0048900623136954625,
+            "cancellation_fraction": 0.7791660265367479,
+            "negative_lobe_proxy": 0.0019050852112395948,
+            "positive_lobe_proxy": 0.0029849771024558673,
+            "signed_proxy": 0.0010798918912162728
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004497010795565854,
+            "cancellation_fraction": 0.7920273213261774,
+            "negative_lobe_proxy": 0.0002716133088372391,
+            "positive_lobe_proxy": 0.00017808777071934626,
+            "signed_proxy": -9.352553811789288e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0004914939343305142,
+            "cancellation_fraction": 0.7859338261375037,
+            "negative_lobe_proxy": 0.000193140854165878,
+            "positive_lobe_proxy": 0.0002983530801646362,
+            "signed_proxy": 0.00010521222599875817
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 11,
+        "odd_symmetry_residual_delta_e2": -0.10242564871979068,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.00028333815736379317,
+              "cancellation_fraction_delta": -0.009909994798865118,
+              "signed_proxy_delta": -0.00010292728790345905
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.00010419200483037516,
+              "cancellation_fraction_delta": 0.042782173868817885,
+              "signed_proxy_delta": -0.00018644353182980752
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 2.815922344236914e-05,
+              "cancellation_fraction_delta": -0.009174705435917585,
+              "signed_proxy_delta": -9.768864650120903e-06
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 1.0340739752717374e-05,
+              "cancellation_fraction_delta": 0.04307471047893219,
+              "signed_proxy_delta": -1.8983826724509005e-05
+            }
+          }
+        }
+      },
+      "frame": 22,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.04657276510765398,
+      "time": 0.0275,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004629260271722537,
+            "cancellation_fraction": 0.7887357533809516,
+            "negative_lobe_proxy": 0.002803628727715745,
+            "positive_lobe_proxy": 0.0018256315440067922,
+            "signed_proxy": -0.000977997183708953
+          },
+          "full_positive": {
+            "absolute_proxy": 0.004990000988013947,
+            "cancellation_fraction": 0.783265543115822,
+            "negative_lobe_proxy": 0.0019542479170126166,
+            "positive_lobe_proxy": 0.0030357530710013307,
+            "signed_proxy": 0.0010815051539887143
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.000465335413461114,
+            "cancellation_fraction": 0.7955234136734511,
+            "negative_lobe_proxy": 0.0002802428051512479,
+            "positive_lobe_proxy": 0.00018509260830986614,
+            "signed_proxy": -9.515019684138177e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0005014713083395742,
+            "cancellation_fraction": 0.7900072551238346,
+            "negative_lobe_proxy": 0.00019808298591235258,
+            "positive_lobe_proxy": 0.0003033883224272216,
+            "signed_proxy": 0.00010530533651486907
+          }
+        }
+      }
+    },
+    {
+      "frame": 23,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.03803137012514573,
+      "time": 0.02875,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004773190187775834,
+            "cancellation_fraction": 0.7925978916036824,
+            "negative_lobe_proxy": 0.002881579948248578,
+            "positive_lobe_proxy": 0.0018916102395272556,
+            "signed_proxy": -0.0009899697087213228
+          },
+          "full_positive": {
+            "absolute_proxy": 0.005065692052037716,
+            "cancellation_fraction": 0.786975941948936,
+            "negative_lobe_proxy": 0.0019932888871378104,
+            "positive_lobe_proxy": 0.003072403164899906,
+            "signed_proxy": 0.0010791142777620956
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004797268828172007,
+            "cancellation_fraction": 0.7993395506728431,
+            "negative_lobe_proxy": 0.0002879945473388083,
+            "positive_lobe_proxy": 0.00019173233547839245,
+            "signed_proxy": -9.626221186041583e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0005090140610384906,
+            "cancellation_fraction": 0.7936987105586424,
+            "negative_lobe_proxy": 0.00020200190195123404,
+            "positive_lobe_proxy": 0.00030701215908725656,
+            "signed_proxy": 0.00010501025713602249
+          }
+        }
+      }
+    },
+    {
+      "comparison_to_parent_dt00025": {
+        "coarse_frame": 12,
+        "odd_symmetry_residual_delta_e2": -0.32826673486842134,
+        "weighting": {
+          "axisymmetric_r_times_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.0016047802513102782,
+              "cancellation_fraction_delta": 0.0664733250997539,
+              "signed_proxy_delta": -0.00010968966496210984
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 0.0002772842350949019,
+              "cancellation_fraction_delta": 0.03930834147620699,
+              "signed_proxy_delta": -0.0001322978429247727
+            }
+          },
+          "element_e2_proxy": {
+            "full_negative": {
+              "absolute_proxy_delta": 0.00016224815167510535,
+              "cancellation_fraction_delta": 0.06707451920570584,
+              "signed_proxy_delta": -1.0000952907987e-05
+            },
+            "full_positive": {
+              "absolute_proxy_delta": 2.771102673408411e-05,
+              "cancellation_fraction_delta": 0.03918532992864798,
+              "signed_proxy_delta": -1.3455278531751536e-05
+            }
+          }
+        }
+      },
+      "frame": 24,
+      "mesh_elements": 1004,
+      "odd_symmetry_residual_fraction_e2": 0.031087086639798565,
+      "time": 0.03,
+      "weighting": {
+        "axisymmetric_r_times_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.004886339804375058,
+            "cancellation_fraction": 0.7957191710830666,
+            "negative_lobe_proxy": 0.0029422626749913004,
+            "positive_lobe_proxy": 0.0019440771293837574,
+            "signed_proxy": -0.000998185545607543
+          },
+          "full_positive": {
+            "absolute_proxy": 0.005121477387259767,
+            "cancellation_fraction": 0.790397908278717,
+            "negative_lobe_proxy": 0.002024002507093434,
+            "positive_lobe_proxy": 0.0030974748801663324,
+            "signed_proxy": 0.0010734723730728983
+          }
+        },
+        "element_e2_proxy": {
+          "full_negative": {
+            "absolute_proxy": 0.0004910290408912,
+            "cancellation_fraction": 0.8024398266159158,
+            "negative_lobe_proxy": 0.000294018411673143,
+            "positive_lobe_proxy": 0.00019701062921805698,
+            "signed_proxy": -9.7007782455086e-05
+          },
+          "full_positive": {
+            "absolute_proxy": 0.0005145598120465941,
+            "cancellation_fraction": 0.7971186055273223,
+            "negative_lobe_proxy": 0.00020508259991949102,
+            "positive_lobe_proxy": 0.000309477212127103,
+            "signed_proxy": 0.00010439461220761199
+          }
+        }
+      }
+    }
+  ],
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "gate_window": [
+    0.0,
+    0.04
+  ],
+  "interpretation": "Third matched refinement dt=0.00125 native reruns compared at aligned times through t=0.03 with the verified dt=0.0025 parent and archived dt=0.005 and dt=0.01 summaries. Report signed-lobe cancellation and odd-symmetry sensitivity without assuming numerical convergence or physical current conservation. No frozen physics thresholds changed.",
+  "job_id": "20261030-133-native-current-drive-third-timestep-refinement",
+  "machine": "normalized-native-M3D-C1",
+  "observed_time_samples": [
+    0.0,
+    0.00125,
+    0.0025,
+    0.00375,
+    0.005,
+    0.00625,
+    0.0075,
+    0.00875,
+    0.01,
+    0.01125,
+    0.0125,
+    0.01375,
+    0.015,
+    0.01625,
+    0.0175,
+    0.01875,
+    0.02,
+    0.02125,
+    0.0225,
+    0.02375,
+    0.025,
+    0.02625,
+    0.0275,
+    0.02875,
+    0.03
+  ],
+  "parent_dt": 0.0025,
+  "parent_result_job_id": "20261030-132-native-current-drive-second-timestep-refinement",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_mode": 4,
+  "steps": 24,
+  "timestamp_utc": "2026-10-30T09:04:08.014895+00:00",
+  "timestep_convergence_trend": {
+    "aligned_times": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "dt_sequence": [
+      0.01,
+      0.005,
+      0.0025,
+      0.00125
+    ],
+    "metrics_by_time": {
+      "0.01": {
+        "axisymmetric_r_times_e2_proxy:full_negative:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.10882298066328366,
+            0.10073648128894586,
+            0.006859230143164141
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.9256912526651078,
+            0.06809082524422884
+          ],
+          "values": [
+            0.6985941735672525,
+            0.8074171542305362,
+            0.7066806729415903,
+            0.6998214427984262
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_negative:signed_proxy": {
+          "absolute_refinement_differences": [
+            0.0004957584400378524,
+            0.00031327333858582353,
+            1.1542256247303343e-05
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.6319072219161903,
+            0.036844042647891206
+          ],
+          "values": [
+            -0.0012225626816224973,
+            -0.0007268042415846449,
+            -0.0010400775801704685,
+            -0.0010516198364177718
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_positive:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.11287211746799408,
+            0.025990207040752944,
+            0.08628441316218449
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.23026242108129763,
+            3.319881716482271
+          ],
+          "values": [
+            0.6992649182182171,
+            0.8121370356862112,
+            0.7861468286454583,
+            0.6998624154832738
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_positive:signed_proxy": {
+          "absolute_refinement_differences": [
+            0.0004883597159938627,
+            6.046504813991176e-05,
+            0.00025900331197259137
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.12381252212185256,
+            4.283521140564982
+          ],
+          "values": [
+            0.0012204467695916912,
+            0.0007320870535978285,
+            0.0007925521017377403,
+            0.0010515554137103316
+          ]
+        },
+        "element_e2_proxy:full_negative:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.11686418706264123,
+            0.10819115242850164,
+            0.006579293457573132
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.9257853509091651,
+            0.06081175132986103
+          ],
+          "values": [
+            0.6943825366743752,
+            0.8112467237370165,
+            0.7030555713085148,
+            0.6964762778509417
+          ]
+        },
+        "element_e2_proxy:full_negative:signed_proxy": {
+          "absolute_refinement_differences": [
+            5.2267400689265736e-05,
+            3.3591289112547756e-05,
+            9.735767760068846e-07
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.6426814547800245,
+            0.02898301320752864
+          ],
+          "values": [
+            -0.0001240472457311289,
+            -7.177984504186316e-05,
+            -0.00010537113415441092,
+            -0.0001063447109304178
+          ]
+        },
+        "element_e2_proxy:full_positive:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.12123749541855733,
+            0.02380115636611624,
+            0.09592776498878797
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.19631844326662898,
+            4.030382537436394
+          ],
+          "values": [
+            0.6950076173232096,
+            0.8162451127417669,
+            0.7924439563756507,
+            0.6965161913868627
+          ]
+        },
+        "element_e2_proxy:full_positive:signed_proxy": {
+          "absolute_refinement_differences": [
+            5.169223337371374e-05,
+            5.352837470251701e-06,
+            2.882630084533379e-05
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.10355206422506205,
+            5.385237456869453
+          ],
+          "values": [
+            0.00012385128153274323,
+            7.21590481590295e-05,
+            7.75118856292812e-05,
+            0.00010633818647461499
+          ]
+        },
+        "odd_symmetry_residual_fraction_e2": {
+          "absolute_refinement_differences": [
+            0.044415261157543115,
+            0.6532263739730179,
+            0.6978824100572107
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            14.70725054741864,
+            1.0683622674519224
+          ],
+          "values": [
+            0.0004500890034543929,
+            0.044865350160997505,
+            0.6980917241340153,
+            0.0002093140768046057
+          ]
+        }
+      },
+      "0.02": {
+        "axisymmetric_r_times_e2_proxy:full_negative:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.03277141360241853,
+            0.055218100932797776,
+            0.025357918274612756
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            1.684947179963048,
+            0.4592319881749314
+          ],
+          "values": [
+            0.8046974378145326,
+            0.7719260242121141,
+            0.7167079232793163,
+            0.7420658415539291
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_negative:signed_proxy": {
+          "absolute_refinement_differences": [
+            6.268621357027903e-05,
+            2.2606630240091553e-05,
+            2.5833575983077702e-05
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.360631611841521,
+            1.1427433327618792
+          ],
+          "values": [
+            -0.0009450892190226334,
+            -0.0010077754325929125,
+            -0.000985168802352821,
+            -0.0009593352263697432
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_positive:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.07606441123604135,
+            0.07730630123613835,
+            0.06586696362591404
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            1.0163268206499778,
+            0.8520258060816811
+          ],
+          "values": [
+            0.7281450234963991,
+            0.8042094347324404,
+            0.7269031334963021,
+            0.7927700971222161
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_positive:signed_proxy": {
+          "absolute_refinement_differences": [
+            0.00037977969847412306,
+            0.00034684639853572216,
+            0.0002717439564461954
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.9132831479125394,
+            0.7834706013769036
+          ],
+          "values": [
+            0.0012050108556056294,
+            0.0008252311571315063,
+            0.0011720775556672285,
+            0.000900333599221033
+          ]
+        },
+        "element_e2_proxy:full_negative:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.030846027119952435,
+            0.06330977135329141,
+            0.03143150009836104
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            2.052444909909975,
+            0.49647154659526266
+          ],
+          "values": [
+            0.8106262701927387,
+            0.7797802430727863,
+            0.7164704717194949,
+            0.7479019718178559
+          ]
+        },
+        "element_e2_proxy:full_negative:signed_proxy": {
+          "absolute_refinement_differences": [
+            5.4956036485662196e-06,
+            7.89277490419242e-07,
+            4.505186564462987e-06
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.1436197988232214,
+            5.70798815264573
+          ],
+          "values": [
+            -9.237652344506431e-05,
+            -9.787212709363053e-05,
+            -9.866140458404977e-05,
+            -9.415621801958678e-05
+          ]
+        },
+        "element_e2_proxy:full_positive:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.08373326904739287,
+            0.07844981987986721,
+            0.06790738882795944
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.936901434428229,
+            0.8656156117623757
+          ],
+          "values": [
+            0.7257697815773385,
+            0.8095030506247314,
+            0.7310532307448642,
+            0.7989606195728236
+          ]
+        },
+        "element_e2_proxy:full_positive:signed_proxy": {
+          "absolute_refinement_differences": [
+            4.0688296133684646e-05,
+            3.5196712540550603e-05,
+            2.8148938761045952e-05
+          ],
+          "strictly_decreasing_differences": true,
+          "successive_difference_ratios": [
+            0.865032844455049,
+            0.7997604528722727
+          ],
+          "values": [
+            0.0001215250580695325,
+            8.083676193584785e-05,
+            0.00011603347447639846,
+            8.78845357153525e-05
+          ]
+        },
+        "odd_symmetry_residual_fraction_e2": {
+          "absolute_refinement_differences": [
+            0.4802564696249114,
+            0.18233962410000512,
+            0.22610538469958472
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.37967135402135344,
+            1.2400233126266402
+          ],
+          "values": [
+            0.708990214153444,
+            0.2287337445285326,
+            0.4110733686285377,
+            0.184967983928953
+          ]
+        }
+      },
+      "0.03": {
+        "axisymmetric_r_times_e2_proxy:full_negative:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.004616102556452728,
+            0.06223258670793952,
+            0.0664733250997539
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            13.481629999954448,
+            1.0681433733699093
+          ],
+          "values": [
+            0.7868623301347994,
+            0.7914784326912522,
+            0.7292458459833127,
+            0.7957191710830666
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_negative:signed_proxy": {
+          "absolute_refinement_differences": [
+            0.0001013374911631084,
+            7.753836704961503e-05,
+            0.00010968966496210984
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.7651498587508216,
+            1.414650180754025
+          ],
+          "values": [
+            -0.0010673717388581566,
+            -0.0009660342476950482,
+            -0.0008884958806454332,
+            -0.000998185545607543
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_positive:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.036061862515442744,
+            0.012819040955786898,
+            0.03930834147620699
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.35547362397872295,
+            3.06640267487889
+          ],
+          "values": [
+            0.7743323883621659,
+            0.7382705258467231,
+            0.75108956680251,
+            0.790397908278717
+          ]
+        },
+        "axisymmetric_r_times_e2_proxy:full_positive:signed_proxy": {
+          "absolute_refinement_differences": [
+            0.00023727537795815653,
+            0.0005345022790974802,
+            0.0001322978429247727
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            2.252666432130769,
+            0.24751595661698722
+          ],
+          "values": [
+            0.0009085433148583473,
+            0.0006712679369001908,
+            0.001205770215997671,
+            0.0010734723730728983
+          ]
+        },
+        "element_e2_proxy:full_negative:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.004612854058031579,
+            0.06457079457447623,
+            0.06707451920570584
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            13.998013759409986,
+            1.0387748772139052
+          ],
+          "values": [
+            0.7953232479266547,
+            0.7999361019846862,
+            0.73536530741021,
+            0.8024398266159158
+          ]
+        },
+        "element_e2_proxy:full_negative:signed_proxy": {
+          "absolute_refinement_differences": [
+            9.894370696346215e-06,
+            6.0998412741337135e-06,
+            1.0000952907987e-05
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.6164961331382356,
+            1.6395431386708197
+          ],
+          "values": [
+            -0.00010300104151757892,
+            -9.310667082123271e-05,
+            -8.7006829547099e-05,
+            -9.7007782455086e-05
+          ]
+        },
+        "element_e2_proxy:full_positive:cancellation_fraction": {
+          "absolute_refinement_differences": [
+            0.027859125609881574,
+            0.0139771184583517,
+            0.03918532992864798
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.50170700452257,
+            2.803534222408604
+          ],
+          "values": [
+            0.7718152827502042,
+            0.7439561571403226,
+            0.7579332755986743,
+            0.7971186055273223
+          ]
+        },
+        "element_e2_proxy:full_positive:signed_proxy": {
+          "absolute_refinement_differences": [
+            2.6152068367796426e-05,
+            5.215837106639228e-05,
+            1.3455278531751536e-05
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            1.9944262278933138,
+            0.25796968457132874
+          ],
+          "values": [
+            9.184358804076767e-05,
+            6.569151967297125e-05,
+            0.00011784989073936352,
+            0.00010439461220761199
+          ]
+        },
+        "odd_symmetry_residual_fraction_e2": {
+          "absolute_refinement_differences": [
+            0.22981467001376987,
+            0.2118834061734527,
+            0.32826673486842134
+          ],
+          "strictly_decreasing_differences": false,
+          "successive_difference_ratios": [
+            0.9219751122100135,
+            1.5492800535767042
+          ],
+          "values": [
+            0.8010518976954425,
+            0.5712372276816726,
+            0.35935382150821993,
+            0.031087086639798565
+          ]
+        }
+      }
+    },
+    "note": "Differences and ratios are descriptive only. No Richardson extrapolation or numerical-convergence pass is inferred from oscillatory/large differences.",
+    "numerical_convergence_established": false
+  },
+  "zero_equivalence": {
+    "max_abs_field_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-30T09:06:54.437435Z
+return_code=0
