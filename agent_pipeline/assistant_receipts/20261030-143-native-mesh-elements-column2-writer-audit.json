@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "processed_result_job_id": "20261030-143-native-mesh-elements-column2-writer-audit",
+  "processed_result_receipt_sha": "942d03ce74c908c53157dac60694ba0fefd0295f",
+  "validation_summary_sha256": "7eddb653b10c709b0be7e725b9fa8a3b952f56bc7ecccce774a27713e26f3c96",
+  "log_sha256": "e7cf3e7d6a03e19c38fa6104f0636bed1ec8880840b096e63ec529acc231da5b",
+  "result_head_before": "d14458b30f0caa4f40fff22ea93004d722224820",
+  "classification": "M3DC1_NATIVE_MESH_ELEMENTS_COLUMN2_WRITER_AUDIT_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_MESH_ELEMENTS_COLUMN2_WRITER_AUDIT_COMPLETE",
+  "job_class": "bounded_native_m3dc1_mesh_elements_column2_writer_source_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Source-only native M3D-C1 mesh/HDF5 provenance audit; no experimental shot, physics solver run, or controller-in-loop experiment.",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "runtime_seconds": 0.5143890380859375,
+    "return_code": 0,
+    "physics_solver_runs": 0,
+    "hdf5_python_e2_zero_based_index": 2,
+    "native_fortran_column_one_based": 3,
+    "direct_column_assignment_count": 1,
+    "exact_native_assignment": "elm_data(3,i) = d%c",
+    "native_mesh_elements_layout_2d_columns": 8,
+    "native_mesh_elements_layout_3d_columns": 10,
+    "hdf5_column_to_physical_geometry_validated": false,
+    "independent_analytic_geometry_check_passed": false,
+    "calibrated_physical_current_validated": false,
+    "calibrated_physical_width_validated": false,
+    "source_sha256": {
+      "unstructured/hdf5_output.f90": "d1fcc134029e73706dde8397b3aa3c480969ede0a492a1e5284415f618ae0ca6",
+      "unstructured/output.f90": "233048f3c4ac817344b7c5626008c29b0ecb03a36ec3938418b11b8c89d71021"
+    }
+  },
+  "successful_milestone": "Source-hashed M3D-C1 output writer explicitly maps the third HDF5 mesh/elements column (Python e[2]) to d%c, with 8 columns in 2-D and 10 in 3-D; output_field layout was traced. No solver runs. The prior e[2]-as-area interpretation is not validated.",
+  "interpretation": "The native third element column is d%c, not an explicit area or quadrature field. Source context makes the prior e[2]/R*e[2] area-weight proxy suspect, but result 143 alone does not establish the physical dimensions of d%c or an independently checked poloidal area. Signed jphi response from earlier open-loop experiments is not promoted to physical current conservation or causal TCT stabilization. Mechanism assessment: neutral; geometry-weight assumption weakened.",
+  "mechanism_effect": "native_hdf5_e2_to_d_c_source_mapping_supported; e2_area_proxy_weakened; causal_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "followup_scope": "Source-guarded independent shoelace comparison against 0.5*(a+b)*c using a previously generated native 2-D HDF5 baseline; no solver run, physics change, or frozen-gate adjustment. If native HDF5 is missing, report data-access blocker rather than scientific failure.",
+  "handoff_equivalence": "unvalidated; no imported shot or native equilibrium/profile handoff; zero-equivalence tolerance preserved at 1e-12",
+  "pb11_fidelity_limits": "not_applicable; no p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or reactor-net-power evidence",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 source-level HDF5 writer lineage only. No validated physical area/3-D quadrature, calibrated current/width, temporal convergence, segmented controller-in-loop authority, shot handoff, causal TCT stabilization or reactor-net-power evidence.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-30T20:16:48.208Z"
+}
