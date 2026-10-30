@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-145-native-poloidal-area-weighted-jphi-response",
+  "parent_result_job_id": "20261030-144-native-mesh-poloidal-area-crosscheck",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_poloidal_area_weighted_jphi_saved_field_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_poloidal_area_weighted_jphi_145.sh",
+  "timeout_seconds": 900,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_area_jphi_145"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_area_jphi_145/poloidal_area_weighted_jphi_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Re-evaluate the existing normalized-native M3D-C1 signed current-drive jphi response from job 130 using the independently validated 2-D triangle area 0.5*(a+b)*c instead of HDF5 e[2]=d%c altitude. Quantify signed/absolute response, opposing-lobe cancellation, and sensitivity relative to old e2 and R*e2 proxies. Reuse saved HDF5, zero solver runs, no source or threshold changes. Missing data is a source/data-access blocker.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_MESH_POLOIDAL_AREA_CROSSCHECK_COMPLETE",
+    "expected_parent_summary_sha256": "3b7224526ad316e172f0fd3a054355f631117609d02f781bf984177c11317501",
+    "normalized_native_m3dc1_only": true,
+    "existing_native_hdf5_only": true,
+    "existing_saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "zero_solver_runs": true,
+    "source_hashed_geometry_required": true,
+    "e2_is_altitude_not_area": true,
+    "poloidal_area_formula": "0.5*(a+b)*c",
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "not_native_int1_or_3d_toroidal_quadrature": true,
+    "not_calibrated_physical_current_or_width": true,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
