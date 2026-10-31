@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-152-native-ijacobian-runtime-provenance",
+  "parent_result_job_id": "20261030-151-native-int2-weight-jacobian-branch",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_ijacobian_runtime_provenance_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_ijacobian_runtime_provenance_152.sh",
+  "timeout_seconds": 900,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_ijacobian_runtime_152"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_ijacobian_runtime_152/native_ijacobian_runtime_provenance_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Resolve one remaining native int2 prerequisite from result151: distinguish native ijacobian source defaults/assignments from the effective runtime setting for all four saved job130 cases using existing input/output provenance. Read-only; no solver runs. Do not infer effective settings from missing overrides.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_INT2_WEIGHT_JACOBIAN_SOURCE_PATH_AUDIT_COMPLETE",
+    "expected_parent_summary_sha256": "dcf2dd9a7ac59ffbe921c57298faa3fc039ba1a054aa049b5514ed6dfd8d9864",
+    "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "normalized_native_m3dc1_only": true,
+    "zero_solver_runs": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "native_int2_operator_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
