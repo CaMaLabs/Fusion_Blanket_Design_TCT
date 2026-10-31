@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-149-native-int2-quadrature-reconstruction-preflight",
+  "parent_result_job_id": "20261030-148-native-totcur-stdout-hdf5-parity",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_int2_saved_quadrature_reconstruction_preflight",
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_quadrature_reconstruction_preflight_149.sh",
+  "timeout_seconds": 900,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_preflight_149"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_preflight_149/native_int2_reconstruction_preflight_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "After verified C1stdout/HDF5 native totcur value and explicit time-axis parity, inspect exact native int2 source inputs (ri2_79, pst79(:,OP_GS), weight_79) and saved HDF5 schema across four matched job130 cases to determine what native quadrature reconstruction requires. Zero solver calls. Do not equate saved jphi*area with native int2 or claim physical-current conservation.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_TOTCUR_STDOUT_HDF5_VALUE_AND_TIME_AXIS_PARITY_COMPLETE",
+    "expected_parent_summary_sha256": "d7c7369d4eb33f6390bc2abfe3ddec4545ce2f27ac9d9b5c55901f50912c3409",
+    "expected_diagnostics_source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "expected_nintegrate_source_sha256": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00",
+    "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "matched_cases": [
+      "baseline",
+      "same_mode_zero",
+      "full_negative",
+      "full_positive"
+    ],
+    "normalized_native_m3dc1_only": true,
+    "zero_solver_runs": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "native_int2_operator_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
