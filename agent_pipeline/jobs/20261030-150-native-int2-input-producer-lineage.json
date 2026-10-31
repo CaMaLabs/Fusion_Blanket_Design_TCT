@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-150-native-int2-input-producer-lineage",
+  "parent_result_job_id": "20261030-149-native-int2-quadrature-reconstruction-preflight",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_int2_input_producer_source_lineage_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_input_producer_lineage_150.sh",
+  "timeout_seconds": 900,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_lineage_150"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_lineage_150/native_int2_input_producer_lineage_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "After job149 found no directly named ri2_79/pst79/weight_79 arrays in four saved native HDF5 cases, trace the exact source producers and uses of native int2 quadrature inputs and OP_GS. Assess the missing reconstruction prerequisite before instrumenting or comparing native current. No solver calls, physics edits, thresholds changes, independent int2 parity or physical-current claims.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_INT2_RECONSTRUCTION_PREFLIGHT_COMPLETE",
+    "expected_parent_summary_sha256": "9f21d3b44a3e28365a7bb6b13cbd43495143a12a65bc3fe84c2cfe425e3fb01d",
+    "expected_native_source_sha256": {
+      "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+      "nintegrate_mod.f90": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+    },
+    "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "normalized_native_m3dc1_only": true,
+    "zero_solver_runs": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "native_int2_operator_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "temporal_convergence_unvalidated": true,
+    "segmented_electrode_controller_authority_unvalidated": true,
+    "shot_handoff_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
