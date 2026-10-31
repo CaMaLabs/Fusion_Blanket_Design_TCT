@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "source_id": "zenodo-18473625-east-shot22010-edge-probe",
+  "discovery_date_utc": "2026-10-31",
+  "source_type": "open_experimental_edge_electrostatic_probe_numeric_files",
+  "source_title": "EAST tokamak plasma probe data",
+  "source_url": "https://zenodo.org/records/18473625",
+  "doi": "10.5281/zenodo.18473625",
+  "publication_date_reported": "2026-02-03",
+  "machine": "EAST",
+  "machine_type": "superconducting_tokamak",
+  "shot_ids": [
+    22010
+  ],
+  "shot_id_provenance": "22010 is inferred from the published filenames 22010*.txt; original device discharge-ID mapping is not independently verified",
+  "fuel_track": "fuel_agnostic_control",
+  "fuel_qualification": "Zenodo record describes deuterium discharges; not DT or p-B11 reaction evidence",
+  "pb11_fidelity": "not_applicable",
+  "scientific_state": "PUBLIC_EXPERIMENTAL_NUMERIC_FILES_PREVIEW_VERIFIED_METADATA_ONLY_NOT_INGESTED",
+  "diagnostics": {
+    "source_description": "Movable multi-pin electrostatic probe during radial traverses, local plasma parameters and electrostatic fluctuations, analyzed inside last closed flux surface",
+    "published_files": [
+      {
+        "name": "22010dr.txt",
+        "size_reported_mb": 2.2,
+        "md5": "dc9a5379642f63d706022e6f6a22e741",
+        "semantic": "radial displacement candidate; exact meaning and units require readme"
+      },
+      {
+        "name": "22010ne.txt",
+        "size_reported_mb": 3.1,
+        "md5": "d700b087e9bb8d8518ef59994aed0f3b",
+        "semantic": "electron-density candidate; calibration and units unverified"
+      },
+      {
+        "name": "22010Te.txt",
+        "size_reported_mb": 2.2,
+        "md5": "61ecf4a3ccb8f7145feda10d75d08948",
+        "semantic": "electron-temperature candidate; units unverified"
+      },
+      {
+        "name": "22010vf1.txt",
+        "size_reported_mb": 2.6,
+        "md5": "cfd105d96071fd63f176eab1e0504fb9",
+        "semantic": "probe floating-potential candidate channel 1; units unverified"
+      },
+      {
+        "name": "22010vf2.txt",
+        "size_reported_mb": 2.4,
+        "md5": "d5fee03da2d58ed764e5193c4e98d8e",
+        "semantic": "probe floating-potential candidate channel 2; units unverified"
+      },
+      {
+        "name": "22010vf3.txt",
+        "size_reported_mb": 2.6,
+        "md5": "",
+        "semantic": "probe floating-potential candidate channel 3; hash needs independent verification",
+        "md5_status": "not_independently_verified_in_this_run"
+      }
+    ],
+    "additional_readme": "readme - EAST tokamak plasma probe data.docx",
+    "not_present_or_unverified": [
+      "Mirnov/ELM/D-alpha diagnostics",
+      "PF/RMP/electrode commands",
+      "EFIT or full equilibrium",
+      "cross-diagnostic clock and absolute time origin",
+      "plasma current waveform"
+    ]
+  },
+  "access_license": {
+    "access": "Zenodo open dataset with directly readable numeric text previews and listed download links; this run verified public numeric previews for dr, ne, Te and vf1, not local download",
+    "reuse_license": "Copyright, the authors 2026; no permissive redistribution license shown",
+    "redistribution_allowed_verified": false,
+    "source_file_bytes_locally_ingested": false
+  },
+  "timing": {
+    "sample_rate_hz": null,
+    "time_reference": null,
+    "units_verified": false,
+    "channel_alignment_verified": false,
+    "description": "Published plain numeric sequences lack independently verified time coordinate in preview; channel lengths may differ. Do not align by row index until readme/provenance is validated."
+  },
+  "tct_relevance": "Experimental electrostatic fluctuations and radial edge transport may help falsify reduced ExB/shear or segmented-electrode transport analogs after time, units, geometry and calibration are verified; not a native current-sheet or causal TCT test.",
+  "claim_boundary": "Source metadata and publicly readable numeric previews only; no calibrated waveforms ingested, event timing, actuator latency, native M3D-C1 handoff, causal TCT demonstration, or p-B11 fidelity.",
+  "missing_prerequisites": [
+    "Read the accompanying readme to verify per-file units, sampling rates, time origins and whether 22010 is original machine shot number",
+    "Verify channel sample counts and alignment, radial probe position/time trajectory, calibration and measurement uncertainty",
+    "Determine allowed analysis and redistribution terms from copyright holder; do not republish raw files",
+    "Find matched actuator/command and magnetic/equilibrium diagnostics before attempting causal controller comparisons; otherwise use as observational edge-transport analog"
+  ],
+  "deduplication": {
+    "checked_branch": "agent/tct-pulse-train-audit",
+    "checked_head": "2647a241adf721717a41232e00b30d12ea878503",
+    "existing_source_family_paths": [],
+    "existing_east_related_tracked_paths": [],
+    "outstanding_jobs_without_results": 0,
+    "unacknowledged_results": 0,
+    "canonical_science_supervisor_task": "6aacac6580f881918d8d207c238d0a18",
+    "new_science_job": "none; source lacks time/units/actuator prerequisites and supervisor owns successor selection"
+  },
+  "next_step": "Canonical supervisor continues native M3D-C1 scientific lineage; intake may validate EAST 22010 timebase/units on a later source-specific bounded check without creating a competing physics job."
+}
