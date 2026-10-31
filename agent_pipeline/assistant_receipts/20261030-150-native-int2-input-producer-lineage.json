@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "job_id": "20261030-150-native-int2-input-producer-lineage",
+  "processed_result_job_id": "20261030-150-native-int2-input-producer-lineage",
+  "processed_result_receipt_sha": "97d8d41e790c373d8722762368e08705e2f5be96",
+  "validation_summary_sha256": "078ba1d5aba97e93bcec4935643b0b6015dee15d37b0e711b1ebd001bcf0da76",
+  "log_sha256": "2d832129f6676379f5431593043a1a82e58763a7fb8713939f162dd8905778ac",
+  "result_head_before": "684b064532fa31a7b820442f90bb9407a0ea93e2",
+  "classification": "M3DC1_NATIVE_INT2_INPUT_PRODUCER_LINEAGE_AUDIT_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_INT2_INPUT_PRODUCER_LINEAGE_AUDIT_COMPLETE",
+  "job_class": "bounded_native_m3dc1_int2_input_producer_source_lineage_audit",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "observational_status": "Read-only source-level audit of normalized-native M3D-C1 inputs associated with saved job130 cases; zero new solver runs, no imported experimental shots, causal intervention or controller-in-loop.",
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "runtime_seconds": 1.1661169528961182,
+    "return_code": 0,
+    "physics_solver_runs": 0,
+    "source_files_scanned": 115,
+    "source_files_with_hits": 31,
+    "token_hit_counts_capped": {
+      "OP_GS": 45,
+      "pst79": 45,
+      "ri2_79": 45,
+      "weight_79": 42
+    },
+    "direct_native_quadrature_arrays_in_saved_hdf5": false,
+    "saved_coefficients_sufficient_for_exact_int2_reconstruction_verified": false,
+    "native_int2_operator_parity_validated": false,
+    "physical_current_calibrated": false,
+    "parent_stdout_hdf5_value_time_parity_supported": true
+  },
+  "successful_milestone": "Hashed diagnostics.f90 and nintegrate_mod.f90 source matched expected versions. Located native totcur/int2 use and weight_79 assignments and conditional Jacobian transformations, including nintegrate_mod.f90 quadrature scaling and m3dc1_nint.f90 ijacobian-dependent weighting. This establishes source traceability, not the runtime branch or independent current parity.",
+  "interpretation": "Source input lineage is supported; native quadrature inputs remain absent as directly named HDF5 arrays. Token references are capped, so the scan does not prove all producers were found. Runtime Jacobian branch, saved-coefficient sufficiency, independent int2 parity, physical-current calibration/conservation and causal segmented TCT stabilization remain unvalidated. Mechanism effect neutral; no scientific negative result or pipeline failure.",
+  "mechanism_effect": "native_int2_source_lineage_supported; independent_native_current_parity_prerequisite_blocked; causal_segmented_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": "20261030-151-native-int2-weight-jacobian-branch",
+  "followup_scope": "One bounded read-only source and existing-run-input preflight for the conditional weight_79/ijacobian branch. No solver physics changes, gate adjustments, p-B11 promotion or new solver calls.",
+  "handoff_equivalence": "No imported shot handoff. Parent saved native scalar baseline/same-mode zero equivalence and 1e-12 gate preserved; no new equivalence experiment.",
+  "pb11_fidelity_limits": "No validated p-B11 reaction, proton recirculation, radiation/electron losses, alpha channeling/transport, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or reactor net power.",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 source lineage only; not independent int2 reconstruction, physical current conservation/calibration, causal segmented TCT control, experimental shot handoff, p-B11 or net power.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-10-31T03:07:15.692Z"
+}
