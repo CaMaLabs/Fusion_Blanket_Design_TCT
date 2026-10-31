@@ -1,0 +1,209 @@
+job_id=20261030-148-native-totcur-stdout-hdf5-parity
+started_utc=2026-10-31T00:36:25.753194Z
+head_before=bab845307777c36ae06b2044e42425828cb572af
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "all_c1ke_times_parseable": true,
+  "all_explicit_hdf5_time_axes_match_c1ke": true,
+  "all_stdout_hdf5_value_parity": true,
+  "cases": {
+    "baseline": {
+      "c1ke_sha256": "684f1237acdc17bf259e094671953301d39e8a1c9d23998f66cdeec4548e1aec",
+      "c1ke_times": [
+        0.0,
+        0.01,
+        0.02,
+        0.03
+      ],
+      "count_parity": true,
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/baseline",
+      "explicit_hdf5_time_axis_matches_c1ke": [
+        "scalars/time"
+      ],
+      "hdf5_dtype": "float32",
+      "hdf5_scalar_time_candidates": {
+        "scalars/time": [
+          0.0,
+          0.009999999776482582,
+          0.019999999552965164,
+          0.029999999329447746
+        ]
+      },
+      "hdf5_sha256": "a439f51cacb7a36c812cc307435129b4e7ef38419a594b653d95d14666b7d16c",
+      "hdf5_values": [
+        -0.000743711250834167,
+        -0.15111428499221802,
+        -0.2161557972431183,
+        -0.2074846625328064
+      ],
+      "max_abs_stdout_hdf5_error": 6.91336871083692e-09,
+      "max_error_to_tolerance_ratio": 0.2319741602987051,
+      "stdout_hdf5_value_parity": true,
+      "stdout_sha256": "97ed8fe3359f4475e84d29e22a9e08246debda9d74b2a474c79945c77045bb0e",
+      "stdout_values": [
+        -0.0007437112494606058,
+        -0.15111429190558673,
+        -0.21615579643407468,
+        -0.2074846589628025
+      ]
+    },
+    "full_negative": {
+      "c1ke_sha256": "70ce2e4fa19d131ee86ea333ce4bd530518811b4c8c85a8f2057f0567745b3c6",
+      "c1ke_times": [
+        0.0,
+        0.01,
+        0.02,
+        0.03
+      ],
+      "count_parity": true,
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/full_negative",
+      "explicit_hdf5_time_axis_matches_c1ke": [
+        "scalars/time"
+      ],
+      "hdf5_dtype": "float32",
+      "hdf5_scalar_time_candidates": {
+        "scalars/time": [
+          0.0,
+          0.009999999776482582,
+          0.019999999552965164,
+          0.029999999329447746
+        ]
+      },
+      "hdf5_sha256": "c9f8496ec7b298ba0880254bdf4f2ca5e9813663438d8854f3d7c1f42752773f",
+      "hdf5_values": [
+        -0.000743711250834167,
+        -0.15111422538757324,
+        -0.21615689992904663,
+        -0.2074853628873825
+      ],
+      "max_abs_stdout_hdf5_error": 2.2717017156281827e-09,
+      "max_error_to_tolerance_ratio": 0.0762256607413292,
+      "stdout_hdf5_value_parity": true,
+      "stdout_sha256": "1fc9e2c8cce73839758fc3480d037ed1bd20e4e71eceac57161a1d72a0e53554",
+      "stdout_values": [
+        -0.0007437112494606058,
+        -0.15111422437615973,
+        -0.21615690220074835,
+        -0.20748536497273112
+      ]
+    },
+    "full_positive": {
+      "c1ke_sha256": "a389f38aaea98bd746c367fd6cbb0559eaa77c518a608773ec101e2c2b42790c",
+      "c1ke_times": [
+        0.0,
+        0.01,
+        0.02,
+        0.03
+      ],
+      "count_parity": true,
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/full_positive",
+      "explicit_hdf5_time_axis_matches_c1ke": [
+        "scalars/time"
+      ],
+      "hdf5_dtype": "float32",
+      "hdf5_scalar_time_candidates": {
+        "scalars/time": [
+          0.0,
+          0.009999999776482582,
+          0.019999999552965164,
+          0.029999999329447746
+        ]
+      },
+      "hdf5_sha256": "d0525b1b7ffa53dd3d674fc99c5430523af7e1718b0308f6323594ef15a41ab0",
+      "hdf5_values": [
+        -0.000743711250834167,
+        -0.151114359498024,
+        -0.21615588665008545,
+        -0.20748470723628998
+      ],
+      "max_abs_stdout_hdf5_error": 6.282482895025865e-09,
+      "max_error_to_tolerance_ratio": 0.21080514509230852,
+      "stdout_hdf5_value_parity": true,
+      "stdout_sha256": "8ec6dcfb63ec23fe69e8c4c64f8aaa1cb5ff1856ac5441e4eade067cb3c7291f",
+      "stdout_values": [
+        -0.0007437112494606058,
+        -0.15111435943493415,
+        -0.21615589070747346,
+        -0.20748470095380708
+      ]
+    },
+    "same_mode_zero": {
+      "c1ke_sha256": "684f1237acdc17bf259e094671953301d39e8a1c9d23998f66cdeec4548e1aec",
+      "c1ke_times": [
+        0.0,
+        0.01,
+        0.02,
+        0.03
+      ],
+      "count_parity": true,
+      "directory": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/same_mode_zero",
+      "explicit_hdf5_time_axis_matches_c1ke": [
+        "scalars/time"
+      ],
+      "hdf5_dtype": "float32",
+      "hdf5_scalar_time_candidates": {
+        "scalars/time": [
+          0.0,
+          0.009999999776482582,
+          0.019999999552965164,
+          0.029999999329447746
+        ]
+      },
+      "hdf5_sha256": "c28570d91e789abcfd3ca61a7dd39d1e56f68b14ae16ebbf8d39f67a74683dcb",
+      "hdf5_values": [
+        -0.000743711250834167,
+        -0.15111428499221802,
+        -0.2161557972431183,
+        -0.2074846625328064
+      ],
+      "max_abs_stdout_hdf5_error": 6.91336871083692e-09,
+      "max_error_to_tolerance_ratio": 0.2319741602987051,
+      "stdout_hdf5_value_parity": true,
+      "stdout_sha256": "f707d5e1bd33a4a4153d419d2d7b5b0352fae69cee564bbac00e63bd96f5497c",
+      "stdout_values": [
+        -0.0007437112494606058,
+        -0.15111429190558673,
+        -0.21615579643407468,
+        -0.2074846589628025
+      ]
+    }
+  },
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Saved normalized-native 2-D M3D-C1 stdout/HDF5 current diagnostic value parity only. A same-length C1ke time series is not a proven HDF5 diagnostic time axis; no native int2 parity, calibrated current conservation, causal controller or p-B11/net-power claim.",
+  "classification": "M3DC1_NATIVE_TOTCUR_STDOUT_HDF5_VALUE_AND_TIME_AXIS_PARITY_COMPLETE",
+  "diagnostics_source_sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+  "expected_parent_summary_sha256": "953fc7af5e9682f58ce814a967c4a4c76139bc7420271ee9e29525bfd459df6c",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "hdf5_terminal_time_alignment_verified": true,
+  "ignition_or_net_power_validated": false,
+  "interpretation": "This is a value-level cross-check of native saved current against stdout using float32 ULP-aware tolerances. C1ke count agreement alone cannot prove scalar diagnostic time alignment; only explicit HDF5 time-axis matching is marked as such. No native int2 operator parity, physical-unit calibration, conservation, controller-in-loop or p-B11 claims.",
+  "job_id": "20261030-148-native-totcur-stdout-hdf5-parity",
+  "machine": "normalized-native-M3D-C1",
+  "missing_saved_files": [],
+  "native_int2_operator_parity_validated": false,
+  "parent_result_job_id": "20261030-147-native-totcur-saved-observable",
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "physics_solver_runs": 0,
+  "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "schema_version": 1,
+  "shot_handoff_validated": false,
+  "shot_ids": [],
+  "source_mode": 4,
+  "temporal_convergence_validated": false,
+  "timestamp_utc": "2026-10-31T00:36:26.274124+00:00",
+  "zero_equivalence_tolerance": 1e-12,
+  "zero_source_max_abs_native_diagnostic_delta": 0.0
+}
+
+finished_utc=2026-10-31T00:36:26.469585Z
+return_code=0
