@@ -1,0 +1,118 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.7150897979736328,
+  "error": null,
+  "finished_utc": "2026-10-31T04:44:56.699950Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 3307,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_ijacobian_runtime_152/native_ijacobian_runtime_provenance_summary.json"
+    ]
+  },
+  "head_before": "fbb452ae9108519483ef75cec122eb8ac15205ce",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261030-152-native-ijacobian-runtime-provenance.json",
+  "job_id": "20261030-152-native-ijacobian-runtime-provenance",
+  "log_path": "agent_pipeline/logs/20261030-152-native-ijacobian-runtime-provenance.log",
+  "log_sha256": "f39726f26745856dfcaaee69dcca490e547eb6e635c00bed956135299fed8984",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_ijacobian_runtime_152"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_ijacobian_runtime_provenance_152.sh",
+  "runner_sha256": "ffb042f0d491c40043ff3aab9cd8dfbff94b2a3dcaa5592d09e7a3e09558b9a7",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-31T04:44:55.983978Z",
+  "success": true,
+  "summary": {
+    "causal_segmented_controller_authority_validated": false,
+    "claim_boundary": "Saved native run-input/output and source provenance only; no independent int2 parity, physical-current conservation, causal segmented TCT, experimental-shot handoff, p-B11 or net power.",
+    "classification": "M3DC1_NATIVE_IJACOBIAN_RUNTIME_PROVENANCE_AUDIT_COMPLETE",
+    "effective_runtime_values_by_case": {},
+    "expected_native_source_sha256": {
+      "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+      "m3dc1_nint.f90": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693",
+      "nintegrate_mod.f90": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+    },
+    "expected_parent_summary_sha256": "dcf2dd9a7ac59ffbe921c57298faa3fc039ba1a054aa049b5514ed6dfd8d9864",
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "ignition_or_net_power_validated": false,
+    "interpretation": "Native ijacobian declarations, assignments and conditionals were inventoried. An absent input override is not evidence of an executed default. Effective branch is confirmed only for cases with explicit effective/runtime ijacobian output; otherwise native int2 parity remains prerequisite-blocked.",
+    "job_id": "20261030-152-native-ijacobian-runtime-provenance",
+    "machine": "normalized-native-M3D-C1",
+    "native_int2_operator_parity_validated": false,
+    "parent_result_job_id": "20261030-151-native-int2-weight-jacobian-branch",
+    "pb11_fidelity_validated": false,
+    "physical_current_calibrated": false,
+    "physics_solver_runs": 0,
+    "runtime_jacobian_branch_confirmed": false,
+    "saved_case_runtime_evidence": {
+      "baseline": {
+        "directory_present": true,
+        "files_inspected": 8,
+        "ijacobian_matches": []
+      },
+      "full_negative": {
+        "directory_present": true,
+        "files_inspected": 8,
+        "ijacobian_matches": []
+      },
+      "full_positive": {
+        "directory_present": true,
+        "files_inspected": 8,
+        "ijacobian_matches": []
+      },
+      "same_mode_zero": {
+        "directory_present": true,
+        "files_inspected": 8,
+        "ijacobian_matches": []
+      }
+    },
+    "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_files_scanned": 115,
+    "source_ijacobian_evidence": [
+      {
+        "category": "assignment",
+        "code": "integer, parameter :: ijacobian = 1",
+        "file": "M3Dmodules.f90",
+        "line": 8,
+        "sha256": "bdf67e1267f177dd7c1826a23b5a0265f612e40c4347521e0642bb8a8e999011"
+      },
+      {
+        "category": "conditional",
+        "code": "if(ijacobian.eq.1) weight_79 = weight_79/di_79",
+        "file": "m3dc1_nint.f90",
+        "line": 553,
+        "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+      },
+      {
+        "category": "conditional",
+        "code": "if(ijacobian.eq.1) weight_79 = weight_79 * r_79",
+        "file": "m3dc1_nint.f90",
+        "line": 702,
+        "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+      }
+    ],
+    "source_ijacobian_matches": 3,
+    "source_ijacobian_path_traceable": true,
+    "timestamp_utc": "2026-10-31T04:44:56.518294+00:00",
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_ijacobian_runtime_152/native_ijacobian_runtime_provenance_summary.json",
+  "summary_sha256": "600540b606a5aed693e818cf7f106bed2c62f520514228fb3201ebf2dc2bea4c",
+  "timed_out": false
+}

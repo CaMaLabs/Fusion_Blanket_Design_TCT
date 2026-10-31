@@ -1,0 +1,92 @@
+job_id=20261030-152-native-ijacobian-runtime-provenance
+started_utc=2026-10-31T04:44:55.983978Z
+head_before=fbb452ae9108519483ef75cec122eb8ac15205ce
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Saved native run-input/output and source provenance only; no independent int2 parity, physical-current conservation, causal segmented TCT, experimental-shot handoff, p-B11 or net power.",
+  "classification": "M3DC1_NATIVE_IJACOBIAN_RUNTIME_PROVENANCE_AUDIT_COMPLETE",
+  "effective_runtime_values_by_case": {},
+  "expected_native_source_sha256": {
+    "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "m3dc1_nint.f90": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693",
+    "nintegrate_mod.f90": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+  },
+  "expected_parent_summary_sha256": "dcf2dd9a7ac59ffbe921c57298faa3fc039ba1a054aa049b5514ed6dfd8d9864",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "ignition_or_net_power_validated": false,
+  "interpretation": "Native ijacobian declarations, assignments and conditionals were inventoried. An absent input override is not evidence of an executed default. Effective branch is confirmed only for cases with explicit effective/runtime ijacobian output; otherwise native int2 parity remains prerequisite-blocked.",
+  "job_id": "20261030-152-native-ijacobian-runtime-provenance",
+  "machine": "normalized-native-M3D-C1",
+  "native_int2_operator_parity_validated": false,
+  "parent_result_job_id": "20261030-151-native-int2-weight-jacobian-branch",
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "physics_solver_runs": 0,
+  "runtime_jacobian_branch_confirmed": false,
+  "saved_case_runtime_evidence": {
+    "baseline": {
+      "directory_present": true,
+      "files_inspected": 8,
+      "ijacobian_matches": []
+    },
+    "full_negative": {
+      "directory_present": true,
+      "files_inspected": 8,
+      "ijacobian_matches": []
+    },
+    "full_positive": {
+      "directory_present": true,
+      "files_inspected": 8,
+      "ijacobian_matches": []
+    },
+    "same_mode_zero": {
+      "directory_present": true,
+      "files_inspected": 8,
+      "ijacobian_matches": []
+    }
+  },
+  "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_files_scanned": 115,
+  "source_ijacobian_evidence": [
+    {
+      "category": "assignment",
+      "code": "integer, parameter :: ijacobian = 1",
+      "file": "M3Dmodules.f90",
+      "line": 8,
+      "sha256": "bdf67e1267f177dd7c1826a23b5a0265f612e40c4347521e0642bb8a8e999011"
+    },
+    {
+      "category": "conditional",
+      "code": "if(ijacobian.eq.1) weight_79 = weight_79/di_79",
+      "file": "m3dc1_nint.f90",
+      "line": 553,
+      "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+    },
+    {
+      "category": "conditional",
+      "code": "if(ijacobian.eq.1) weight_79 = weight_79 * r_79",
+      "file": "m3dc1_nint.f90",
+      "line": 702,
+      "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+    }
+  ],
+  "source_ijacobian_matches": 3,
+  "source_ijacobian_path_traceable": true,
+  "timestamp_utc": "2026-10-31T04:44:56.518294+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-10-31T04:44:56.699917Z
+return_code=0
