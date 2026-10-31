@@ -1,0 +1,248 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 0.9656984806060791,
+  "error": null,
+  "finished_utc": "2026-10-31T03:08:13.388625Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 6423,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_int2_weight_branch_151/native_int2_weight_jacobian_branch_summary.json"
+    ]
+  },
+  "head_before": "8f76053bd58c839302ee656f1cc48ce2ca09c95c",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261030-151-native-int2-weight-jacobian-branch.json",
+  "job_id": "20261030-151-native-int2-weight-jacobian-branch",
+  "log_path": "agent_pipeline/logs/20261030-151-native-int2-weight-jacobian-branch.log",
+  "log_sha256": "ec370501ba4bf508a1aa9b2323cd499089a4feb62b564bd07309e78777f409aa",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_weight_branch_151"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_weight_jacobian_branch_151.sh",
+  "runner_sha256": "72dffdc30778f6c033bb4e989aa99ec39aefa8ecf85ff951183b4cdbedfca847",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-10-31T03:08:12.422151Z",
+  "success": true,
+  "summary": {
+    "causal_segmented_controller_authority_validated": false,
+    "claim_boundary": "Read-only native source and existing run-input preflight; no independent int2 parity, physical current conservation/calibration, causal TCT, shot handoff, p-B11 or net power.",
+    "classification": "M3DC1_NATIVE_INT2_WEIGHT_JACOBIAN_SOURCE_PATH_AUDIT_COMPLETE",
+    "existing_run_input_evidence": {
+      "baseline": {
+        "directory_present": true,
+        "ijacobian_lines": []
+      },
+      "full_negative": {
+        "directory_present": true,
+        "ijacobian_lines": []
+      },
+      "full_positive": {
+        "directory_present": true,
+        "ijacobian_lines": []
+      },
+      "same_mode_zero": {
+        "directory_present": true,
+        "ijacobian_lines": []
+      }
+    },
+    "expected_native_source_sha256": {
+      "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+      "m3dc1_nint.f90": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693",
+      "nintegrate_mod.f90": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+    },
+    "expected_parent_summary_sha256": "078ba1d5aba97e93bcec4935643b0b6015dee15d37b0e711b1ebd001bcf0da76",
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "ignition_or_net_power_validated": false,
+    "interpretation": "Native int2 weight and conditional Jacobian source path traced. Runtime ijacobian setting is not inferred from source references or missing input overrides; exact quadrature operator parity remains unvalidated.",
+    "job_id": "20261030-151-native-int2-weight-jacobian-branch",
+    "machine": "normalized-native-M3D-C1",
+    "native_int2_operator_parity_validated": false,
+    "parent_result_job_id": "20261030-150-native-int2-input-producer-lineage",
+    "pb11_fidelity_validated": false,
+    "physical_current_calibrated": false,
+    "physics_solver_runs": 0,
+    "runtime_jacobian_branch_confirmed": false,
+    "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_path_evidence": {
+      "diagnostics.f90": [
+        {
+          "code": "totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero",
+          "line": 935
+        }
+      ],
+      "m3dc1_nint.f90": [
+        {
+          "code": "if(ijacobian.eq.1) weight_79 = weight_79/di_79",
+          "line": 553
+        },
+        {
+          "code": "if(ijacobian.eq.1) weight_79 = weight_79 * r_79",
+          "line": 702
+        }
+      ],
+      "nintegrate_mod.f90": [
+        {
+          "code": "real, dimension(MAX_PTS) :: xi_79, zi_79, eta_79, weight_79",
+          "line": 23
+        },
+        {
+          "code": "real, private, dimension(79) :: alpha_79, beta_79, gamma_79, area_weight_79",
+          "line": 30
+        },
+        {
+          "code": "data area_weight_79 &",
+          "line": 171
+        },
+        {
+          "code": "weight_79(1:npol) = weight_79(1:npol)*d",
+          "line": 323
+        },
+        {
+          "code": "weight_79(j:j+npol-1) = weight_79(1:npol)",
+          "line": 348
+        },
+        {
+          "code": "weight_79(j:j+npol-1) = weight_79(j:j+npol-1)*wt(i)",
+          "line": 359
+        },
+        {
+          "code": "si1, eta1, si2, eta2, xi_79, eta_79, weight_79, n1, n2, d%co, d%sn)",
+          "line": 426
+        },
+        {
+          "code": "si1, eta1, si2, eta2, xi_79, eta_79, weight_79, n1, n2, d%co, d%sn)",
+          "line": 430
+        },
+        {
+          "code": "si1, eta1, si2, eta2, xi_79, eta_79, weight_79, n1, n2, d%co, d%sn)",
+          "line": 434
+        },
+        {
+          "code": "d%a, d%b, d%c, xi_79, eta_79, weight_79)",
+          "line": 468
+        },
+        {
+          "code": "d%a, d%b, d%c, xi_79, eta_79, weight_79)",
+          "line": 472
+        },
+        {
+          "code": "alpha_79,beta_79,gamma_79,area_weight_79,  &",
+          "line": 475
+        },
+        {
+          "code": "d%a, d%b, d%c, xi_79, eta_79, weight_79)",
+          "line": 476
+        },
+        {
+          "code": "int0 = int0 + weight_79(k)",
+          "line": 504
+        },
+        {
+          "code": "int1 = int1 + vari(k)*weight_79(k)",
+          "line": 519
+        },
+        {
+          "code": "pure vectype function int2(vari,varj)",
+          "line": 524
+        },
+        {
+          "code": "int2 = int2 + vari(k)*varj(k)*weight_79(k)",
+          "line": 534
+        },
+        {
+          "code": "end function int2",
+          "line": 536
+        },
+        {
+          "code": "int3 = int3 + vari(k)*varj(k)*vark(k)*weight_79(k)",
+          "line": 549
+        },
+        {
+          "code": "int4 = int4 + vari(k)*varj(k)*vark(k)*varl(k)*weight_79(k)",
+          "line": 564
+        },
+        {
+          "code": "int5 = int5 + vari(k)*varj(k)*vark(k)*varl(k)*varm(k)*weight_79(k)",
+          "line": 579
+        },
+        {
+          "code": "intx0 = intx0 + weight_79(k)",
+          "line": 594
+        },
+        {
+          "code": "intx1 = intx1 + vari(:,k)*weight_79(k)",
+          "line": 610
+        },
+        {
+          "code": "intx2 = intx2 + vari(:,k)*varj(k)*weight_79(k)",
+          "line": 627
+        },
+        {
+          "code": "intx3 = intx3 + vari(:,k)*varj(k)*vark(k)*weight_79(k)",
+          "line": 644
+        },
+        {
+          "code": "intx4 = intx4 + vari(:,k)*varj(k)*vark(k)*varl(k)*weight_79(k)",
+          "line": 661
+        },
+        {
+          "code": "intx5 = intx5 + vari(:,k)*varj(k)*vark(k)*varl(k)*varm(k)*weight_79(k)",
+          "line": 678
+        },
+        {
+          "code": "intx6 = intx6 + vari(:,k)*varj(k)*vark(k)*varl(k)*varm(k)*varn(k)*weight_79(k)",
+          "line": 695
+        },
+        {
+          "code": "intx7 = intx7 + vari(:,k)*varj(k)*vark(k)*varl(k)*varm(k)*varn(k)*varo(k)*weight_79(k)",
+          "line": 712
+        },
+        {
+          "code": "intxx0 = intxx0 + weight_79(k)",
+          "line": 727
+        },
+        {
+          "code": "intxx1(i,:) = intxx1(i,:) + vari(i,k)*weight_79(k)",
+          "line": 744
+        },
+        {
+          "code": "intxx2(i,j) = intxx2(i,j) + vari(i,k)*varj(j,k)*weight_79(k)",
+          "line": 763
+        },
+        {
+          "code": "intxx3(i,j) = intxx3(i,j) + vari(i,k)*varj(j,k)*vark(k)*weight_79(k)",
+          "line": 784
+        },
+        {
+          "code": "vari(i,k)*varj(j,k)*vark(k)*varl(k)*weight_79(k)",
+          "line": 806
+        },
+        {
+          "code": "vari(i,k)*varj(j,k)*vark(k)*varl(k)*varm(k)*weight_79(k)",
+          "line": 828
+        }
+      ]
+    },
+    "source_weight_branch_traceable": true,
+    "timestamp_utc": "2026-10-31T03:08:13.352261+00:00",
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_weight_branch_151/native_int2_weight_jacobian_branch_summary.json",
+  "summary_sha256": "dcf2dd9a7ac59ffbe921c57298faa3fc039ba1a054aa049b5514ed6dfd8d9864",
+  "timed_out": false
+}
