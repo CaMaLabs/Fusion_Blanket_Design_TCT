@@ -1,0 +1,4409 @@
+{
+  "cases": {
+    "baseline": {
+      "files": {
+        "C1.h5": {
+          "dataset_count": 113,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "scalars/Ave_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3D",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3H",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PE",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_grav",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_kinetic",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_poynting",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_pressure",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_thermal",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Parallel_viscous_heating",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_convective",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_diffusive",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_source",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Reconnected_Flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_com",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_em",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_gyro",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_parvisc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_sol",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_visc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_M",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/brem_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/circulation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/electron_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/helicity",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/ion_loss",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/line_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/loop_voltage",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/power_injected",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi_lcfs",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psimin",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/radiation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/reck_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/recp_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/runaways",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/temax",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/time",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_w",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_pd",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/zmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_aux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_kprad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_ludefall",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_mvm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_onestep",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_cgm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_hdf5",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_reset",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_smoother",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_b",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_v",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_sources",
+              "shape": [
+                4
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "a439f51cacb7a36c812cc307435129b4e7ef38419a594b653d95d14666b7d16c"
+        },
+        "time_003.h5": {
+          "dataset_count": 33,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "fields/E_PHI",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_R",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_Z",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_par",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/I",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/P",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/Pe",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/V",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradp",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradt",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/chi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/den",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/denm",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta_J",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/jphi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappa",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappar",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/magnetic_region",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/mesh_zone",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ne",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/phi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/psi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/te",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ti",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_em",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_ntv",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc_c",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/wall_dist",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/zeff",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "int32",
+              "path": "mesh/adjacency",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "mesh/elements",
+              "shape": [
+                1004,
+                8
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "1d9db3f46d4510385407b3d94daf3321873f752030c5d82f11d2ad61e9d08807"
+        }
+      },
+      "saved_run_dir": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/baseline"
+    },
+    "full_negative": {
+      "files": {
+        "C1.h5": {
+          "dataset_count": 113,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "scalars/Ave_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3D",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3H",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PE",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_grav",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_kinetic",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_poynting",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_pressure",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_thermal",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Parallel_viscous_heating",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_convective",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_diffusive",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_source",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Reconnected_Flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_com",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_em",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_gyro",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_parvisc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_sol",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_visc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_M",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/brem_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/circulation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/electron_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/helicity",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/ion_loss",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/line_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/loop_voltage",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/power_injected",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi_lcfs",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psimin",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/radiation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/reck_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/recp_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/runaways",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/temax",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/time",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_w",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_pd",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/zmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_aux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_kprad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_ludefall",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_mvm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_onestep",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_cgm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_hdf5",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_reset",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_smoother",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_b",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_v",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_sources",
+              "shape": [
+                4
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "c9f8496ec7b298ba0880254bdf4f2ca5e9813663438d8854f3d7c1f42752773f"
+        },
+        "time_003.h5": {
+          "dataset_count": 34,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "fields/E_PHI",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_R",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_Z",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_par",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/I",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/P",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/Pe",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/V",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradp",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradt",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/cd_source",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/chi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/den",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/denm",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta_J",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/jphi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappa",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappar",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/magnetic_region",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/mesh_zone",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ne",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/phi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/psi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/te",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ti",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_em",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_ntv",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc_c",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/wall_dist",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/zeff",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "int32",
+              "path": "mesh/adjacency",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "mesh/elements",
+              "shape": [
+                1004,
+                8
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "777a0d38342990fdfc43bf061409bb7be242206fd66c1cc94d999d6ed8a480d0"
+        }
+      },
+      "saved_run_dir": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/full_negative"
+    },
+    "full_positive": {
+      "files": {
+        "C1.h5": {
+          "dataset_count": 113,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "scalars/Ave_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3D",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3H",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PE",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_grav",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_kinetic",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_poynting",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_pressure",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_thermal",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Parallel_viscous_heating",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_convective",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_diffusive",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_source",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Reconnected_Flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_com",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_em",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_gyro",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_parvisc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_sol",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_visc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_M",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/brem_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/circulation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/electron_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/helicity",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/ion_loss",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/line_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/loop_voltage",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/power_injected",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi_lcfs",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psimin",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/radiation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/reck_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/recp_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/runaways",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/temax",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/time",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_w",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_pd",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/zmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_aux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_kprad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_ludefall",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_mvm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_onestep",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_cgm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_hdf5",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_reset",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_smoother",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_b",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_v",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_sources",
+              "shape": [
+                4
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "d0525b1b7ffa53dd3d674fc99c5430523af7e1718b0308f6323594ef15a41ab0"
+        },
+        "time_003.h5": {
+          "dataset_count": 34,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "fields/E_PHI",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_R",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_Z",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_par",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/I",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/P",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/Pe",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/V",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradp",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradt",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/cd_source",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/chi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/den",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/denm",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta_J",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/jphi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappa",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappar",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/magnetic_region",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/mesh_zone",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ne",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/phi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/psi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/te",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ti",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_em",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_ntv",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc_c",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/wall_dist",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/zeff",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "int32",
+              "path": "mesh/adjacency",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "mesh/elements",
+              "shape": [
+                1004,
+                8
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "72e83c28d0a900ee8578d2aa04b0d091b921f0233a45097e15e8c0745a644d6f"
+        }
+      },
+      "saved_run_dir": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/full_positive"
+    },
+    "same_mode_zero": {
+      "files": {
+        "C1.h5": {
+          "dataset_count": 113,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "scalars/Ave_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3D",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_K3H",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_KTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MP",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MPV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MT",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTC",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_MTV",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PD",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PE",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_PH",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/E_grav",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_kinetic",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_poynting",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_pressure",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Flux_thermal",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/IP_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_co",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/M_IZ_sn",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Parallel_viscous_heating",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_convective",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_Flux_diffusive",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Particle_source",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Reconnected_Flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_com",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_em",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_gyro",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_parvisc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_sol",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Torque_visc",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_M",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/W_P",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_x_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n0_z_halo",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_x",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/Wall_Force_n1_y",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/angular_momentum_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/area_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/brem_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/circulation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/electron_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/helicity",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/i_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/ion_loss",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_dt",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/kprad_n0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/line_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/loop_voltage",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_i",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/n_control%err_p_old",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/particle_number_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/power_injected",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi0",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psi_lcfs",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/psimin",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/radiation",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/reck_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/recp_rad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/runaways",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/temax",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/time",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_current_w",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/toroidal_flux_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/volume_pd",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/xnull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/zmag",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "scalars/znull2",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_aux",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_kprad",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_ludefall",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_mvm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_onestep",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_cgm",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_hdf5",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_output_reset",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_smoother",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_b",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_n",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_p",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_solve_v",
+              "shape": [
+                4
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "timings/t_sources",
+              "shape": [
+                4
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "c28570d91e789abcfd3ca61a7dd39d1e56f68b14ae16ebbf8d39f67a74683dcb"
+        },
+        "time_003.h5": {
+          "dataset_count": 34,
+          "datasets": [
+            {
+              "dtype": "float32",
+              "path": "fields/E_PHI",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_R",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_Z",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/E_par",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/I",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/P",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/Pe",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/V",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradp",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/bdotgradt",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/cd_source",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/chi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/den",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/denm",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/eta_J",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/jphi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappa",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/kappar",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/magnetic_region",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/mesh_zone",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ne",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/phi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/psi",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/te",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/ti",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_em",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/torque_ntv",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/visc_c",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/wall_dist",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "fields/zeff",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            {
+              "dtype": "int32",
+              "path": "mesh/adjacency",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            {
+              "dtype": "float32",
+              "path": "mesh/elements",
+              "shape": [
+                1004,
+                8
+              ]
+            }
+          ],
+          "native_quadrature_state_named_candidates": {
+            "pst79": [],
+            "ri2_79": [],
+            "weight_79": []
+          },
+          "sha256": "10111a823af9c04f084eab514f18baf7e3e315140151ccdb080ed691343e2abb"
+        }
+      },
+      "saved_run_dir": "/tmp/m3dc1_tct_native_geometry_weight_130_runs/same_mode_zero"
+    }
+  },
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Source and saved-schema preflight for native int2 inputs only; no reconstructed int2, calibrated physical current, causal segmented TCT, shot handoff, p-B11, ignition or net power.",
+  "classification": "M3DC1_NATIVE_INT2_RECONSTRUCTION_PREFLIGHT_COMPLETE",
+  "direct_named_quadrature_inputs_present_in_all_cases": false,
+  "expected_native_source_sha256": {
+    "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "nintegrate_mod.f90": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+  },
+  "expected_parent_summary_sha256": "d7c7369d4eb33f6390bc2abfe3ddec4545ce2f27ac9d9b5c55901f50912c3409",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "ignition_or_net_power_validated": false,
+  "int2_definition": [
+    {
+      "context": "511:   implicit none\n512: \n513:   vectype, dimension(npoints), intent(in) :: vari\n514: \n515:   integer :: k\n516: \n517:   int1 = 0.\n518:   do k=1, npoints\n519:      int1 = int1 + vari(k)*weight_79(k)\n520:   enddo\n521: end function int1\n522: !==============================================\n523: !DEC$ ATTRIBUTES FORCEINLINE :: int2\n524: pure vectype function int2(vari,varj)\n525: \n526:   implicit none\n527: \n528:   vectype, dimension(npoints), intent(in) :: vari, varj\n529: \n530:   integer :: k\n531: \n532:   int2 = 0.\n533:   do k=1, npoints\n534:      int2 = int2 + vari(k)*varj(k)*weight_79(k)\n535:   enddo\n536: end function int2\n537: !==============================================",
+      "line": 524
+    }
+  ],
+  "int2_weight_use": [
+    {
+      "context": "529: \n530:   integer :: k\n531: \n532:   int2 = 0.\n533:   do k=1, npoints\n534:      int2 = int2 + vari(k)*varj(k)*weight_79(k)\n535:   enddo\n536: end function int2\n537: !==============================================\n538: !DEC$ ATTRIBUTES FORCEINLINE :: int3\n539: pure vectype function int3(vari,varj,vark)",
+      "line": 534
+    }
+  ],
+  "interpretation": "Native totcur uses int2(ri2_79,pst79(:,OP_GS)) and weight_79 quadrature. This audit inventories saved datasets and source-hashed callsites; absence of direct named arrays is not proof that native state cannot be reconstructed from coefficients. No operator-level parity or calibrated current is established.",
+  "job_id": "20261030-149-native-int2-quadrature-reconstruction-preflight",
+  "machine": "normalized-native-M3D-C1",
+  "missing_saved_files": [],
+  "native_int2_operator_parity_validated": false,
+  "parent_explicit_hdf5_time_axis_parity": true,
+  "parent_result_job_id": "20261030-148-native-totcur-stdout-hdf5-parity",
+  "parent_stdout_hdf5_value_parity": true,
+  "parent_zero_source_max_abs_native_diagnostic_delta": 0.0,
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "physics_solver_runs": 0,
+  "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "schema_version": 1,
+  "shot_handoff_validated": false,
+  "shot_ids": [],
+  "source_mode": 4,
+  "temporal_convergence_validated": false,
+  "timestamp_utc": "2026-10-31T01:11:19.489309+00:00",
+  "totcur_int2_callsites": [
+    {
+      "context": "932:      parea  = parea  + int2(ri_79,mr)/tpirzero\n933: \n934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.",
+      "line": 935
+    }
+  ],
+  "zero_equivalence_tolerance": 1e-12
+}
