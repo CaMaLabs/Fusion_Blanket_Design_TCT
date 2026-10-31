@@ -1,0 +1,1242 @@
+{
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Source-level input-producer lineage only. No independent int2 parity, current calibration/conservation, causal segmented TCT, experimental shot handoff, p-B11, ignition or net power.",
+  "classification": "M3DC1_NATIVE_INT2_INPUT_PRODUCER_LINEAGE_AUDIT_COMPLETE",
+  "direct_native_quadrature_arrays_in_saved_hdf5": false,
+  "expected_native_source_sha256": {
+    "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "nintegrate_mod.f90": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+  },
+  "expected_parent_summary_sha256": "9f21d3b44a3e28365a7bb6b13cbd43495143a12a65bc3fe84c2cfe425e3fb01d",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "ignition_or_net_power_validated": false,
+  "interpretation": "Trace producers and uses of ri2_79, pst79, weight_79 and OP_GS in native source. Direct named quadrature arrays are absent from the saved HDF5 inventory. Source references do not prove reconstruction from saved coefficients or operator parity. A later reconstruction or instrumented native comparison requires separately verified prerequisites.",
+  "job_id": "20261030-150-native-int2-input-producer-lineage",
+  "machine": "normalized-native-M3D-C1",
+  "native_int2_operator_parity_validated": false,
+  "parent_direct_named_quadrature_inputs_present": false,
+  "parent_result_job_id": "20261030-149-native-int2-quadrature-reconstruction-preflight",
+  "parent_value_time_parity_supported": true,
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "physics_solver_runs": 0,
+  "producer_references": {
+    "OP_GS": [
+      {
+        "assignment_candidate": false,
+        "context": "138: \n139:   ! J.B\n140:   temp79b = -ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS) &\n141:        + ri2_79*(bzt79(:,OP_DZ)*pst79(:,OP_DZ) + bzt79(:,OP_DR)*pst79(:,OP_DR))\n142: #if defined(USE3D) || defined(USECOMPLEX)",
+        "file": "bootstrap.f90",
+        "line": 140
+      },
+      {
+        "assignment_candidate": false,
+        "context": "344: \n345:           temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)* tempDD \n346:           temp = intx4(e(:,:,OP_GS),ri3_79,temp79a,h(:,OP_1))\n347:  \n348:           if(itor.eq.1) then",
+        "file": "bootstrap.f90",
+        "line": 346
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1209:             call calculate_CommonTerm_Lambda_fordtenormdpsit(temp79a,temp79b,temp79c,temp79d,temp79e)\n1210:           endif\n1211:            temp = intx5(e(:,:,OP_GS),ri2_79,temp79a,h(:,OP_1),eta79(:,OP_1))\n1212:    \n1213:            if(itor.eq.1) then",
+        "file": "bootstrap.f90",
+        "line": 1211
+      },
+      {
+        "assignment_candidate": false,
+        "context": "840: \n841:      if(imulti_region.eq.1 .and. izone.eq.ZONE_CONDUCTOR) then\n842:         wallcur = wallcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n843: \n844:         call jxb_r(temp79a, temp79d)",
+        "file": "diagnostics.f90",
+        "line": 842
+      },
+      {
+        "assignment_candidate": false,
+        "context": "933: \n934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D",
+        "file": "diagnostics.f90",
+        "line": 935
+      },
+      {
+        "assignment_candidate": false,
+        "context": "934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.",
+        "file": "diagnostics.f90",
+        "line": 936
+      },
+      {
+        "assignment_candidate": false,
+        "context": "936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n939:      pcur_sn = pcur_sn - int4(ri2_79,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n940: #endif",
+        "file": "diagnostics.f90",
+        "line": 938
+      },
+      {
+        "assignment_candidate": false,
+        "context": "937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n939:      pcur_sn = pcur_sn - int4(ri2_79,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n940: #endif\n941:     ! bootstrap current",
+        "file": "diagnostics.f90",
+        "line": 939
+      },
+      {
+        "assignment_candidate": false,
+        "context": "955:      ! This is used for calculating the vertical \"center\" of the plasma current\n956:      temp79a = z_79\n957:      m_iz   = m_iz   - int4(ri2_79,temp79a,pst79(:,OP_GS),mr)/tpirzero\n958: #ifdef USE3D\n959:      m_iz_co = m_iz_co - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,co)/tpirzero * 2.",
+        "file": "diagnostics.f90",
+        "line": 957
+      },
+      {
+        "assignment_candidate": false,
+        "context": "957:      m_iz   = m_iz   - int4(ri2_79,temp79a,pst79(:,OP_GS),mr)/tpirzero\n958: #ifdef USE3D\n959:      m_iz_co = m_iz_co - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n960:      m_iz_sn = m_iz_sn - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n961: #endif",
+        "file": "diagnostics.f90",
+        "line": 959
+      },
+      {
+        "assignment_candidate": false,
+        "context": "958: #ifdef USE3D\n959:      m_iz_co = m_iz_co - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n960:      m_iz_sn = m_iz_sn - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n961: #endif\n962: ",
+        "file": "diagnostics.f90",
+        "line": 960
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1007: #if defined(USE3D) || defined(USECOMPLEX)\n1008:      helicity = helicity &\n1009:           + twopi*int2(bftx79(:,OP_1),pst79(:,OP_GS))/tpifac\n1010: #endif\n1011: ",
+        "file": "diagnostics.f90",
+        "line": 1009
+      },
+      {
+        "assignment_candidate": false,
+        "context": "86:   !   if(ilin.eq.1) then \n87:   !      o = o - db*ni79(:,OP_1)*ri2_79* &\n88:   !           (bz079(:,OP_1)*bz179(:,OP_DR) + ps079(:,OP_GS)*ps179(:,OP_DR) &\n89:   !           +bz179(:,OP_1)*bz079(:,OP_DR) + ps179(:,OP_GS)*ps079(:,OP_DR))\n90:   !      if(use_external_fields) then ",
+        "file": "electric_field.f90",
+        "line": 88
+      },
+      {
+        "assignment_candidate": false,
+        "context": "87:   !      o = o - db*ni79(:,OP_1)*ri2_79* &\n88:   !           (bz079(:,OP_1)*bz179(:,OP_DR) + ps079(:,OP_GS)*ps179(:,OP_DR) &\n89:   !           +bz179(:,OP_1)*bz079(:,OP_DR) + ps179(:,OP_GS)*ps079(:,OP_DR))\n90:   !      if(use_external_fields) then \n91:   !         o = o - db*ni79(:,OP_1)*ri2_79* &",
+        "file": "electric_field.f90",
+        "line": 89
+      },
+      {
+        "assignment_candidate": false,
+        "context": "90:   !      if(use_external_fields) then \n91:   !         o = o - db*ni79(:,OP_1)*ri2_79* &\n92:   !              (ps079(:,OP_GS)*psx79(:,OP_DR) &\n93:   !              +bzx79(:,OP_1) *bz079(:,OP_DR))\n94:   !      end if",
+        "file": "electric_field.f90",
+        "line": 92
+      },
+      {
+        "assignment_candidate": false,
+        "context": "96: !#if defined(USE3D) || defined(USECOMPLEX)\n97:   !      o = o + db*ni79(:,OP_1)* &\n98:   !           (ri_79*ps079(:,OP_GS)*bfp179(:,OP_DZ) &\n99:   !           +ri_79*ps179(:,OP_GS)*bfp079(:,OP_DZ) &\n100:   !           -ri2_79*bz079(:,OP_1)*bfp179(:,OP_DRP) &",
+        "file": "electric_field.f90",
+        "line": 98
+      },
+      {
+        "assignment_candidate": false,
+        "context": "97:   !      o = o + db*ni79(:,OP_1)* &\n98:   !           (ri_79*ps079(:,OP_GS)*bfp179(:,OP_DZ) &\n99:   !           +ri_79*ps179(:,OP_GS)*bfp079(:,OP_DZ) &\n100:   !           -ri2_79*bz079(:,OP_1)*bfp179(:,OP_DRP) &\n101:   !           -ri2_79*bz179(:,OP_1)*bfp079(:,OP_DRP) &",
+        "file": "electric_field.f90",
+        "line": 99
+      },
+      {
+        "assignment_candidate": false,
+        "context": "104:   !      if(use_external_fields) then \n105:   !         o = o + db*ni79(:,OP_1)* &\n106:   !              (ri_79*ps079(:,OP_GS)*bfpx79(:,OP_DZ) &\n107:   !              -ri2_79*bzx79(:,OP_1)*bfp079(:,OP_DRP) &\n108:   !              -ri3_79*bzx79(:,OP_1)*ps079(:,OP_DZP))",
+        "file": "electric_field.f90",
+        "line": 106
+      },
+      {
+        "assignment_candidate": false,
+        "context": "111:   !   else\n112:   !      o = o - db*ni79(:,OP_1)*ri2_79* &\n113:   !           (bztx79(:,OP_1)*bzt79(:,OP_DR) + pst79(:,OP_GS)*pstx79(:,OP_DR))\n114: !#if defined(USE3D) || defined(USECOMPLEX)\n115:   !      o = o + db*ni79(:,OP_1)* &",
+        "file": "electric_field.f90",
+        "line": 113
+      },
+      {
+        "assignment_candidate": false,
+        "context": "114: !#if defined(USE3D) || defined(USECOMPLEX)\n115:   !      o = o + db*ni79(:,OP_1)* &\n116:   !           (ri_79*pst79(:,OP_GS)*bfptx79(:,OP_DZ) &\n117:   !           -ri2_79*bztx79(:,OP_1)*bfpt79(:,OP_DRP) &\n118:   !           -ri3_79*bztx79(:,OP_1)*pst79(:,OP_DZP))",
+        "file": "electric_field.f90",
+        "line": 116
+      },
+      {
+        "assignment_candidate": false,
+        "context": "218:   !   if(ilin.eq.1) then \n219:   !      o = o - db*ni79(:,OP_1)*ri2_79* &\n220:   !           (bz079(:,OP_1)*bz179(:,OP_DZ) + ps079(:,OP_GS)*ps179(:,OP_DZ) &\n221:   !           +bz179(:,OP_1)*bz079(:,OP_DZ) + ps179(:,OP_GS)*ps079(:,OP_DZ))\n222:   !      if(use_external_fields) then ",
+        "file": "electric_field.f90",
+        "line": 220
+      },
+      {
+        "assignment_candidate": false,
+        "context": "219:   !      o = o - db*ni79(:,OP_1)*ri2_79* &\n220:   !           (bz079(:,OP_1)*bz179(:,OP_DZ) + ps079(:,OP_GS)*ps179(:,OP_DZ) &\n221:   !           +bz179(:,OP_1)*bz079(:,OP_DZ) + ps179(:,OP_GS)*ps079(:,OP_DZ))\n222:   !      if(use_external_fields) then \n223:   !         o = o - db*ni79(:,OP_1)*ri2_79* &",
+        "file": "electric_field.f90",
+        "line": 221
+      },
+      {
+        "assignment_candidate": false,
+        "context": "222:   !      if(use_external_fields) then \n223:   !         o = o - db*ni79(:,OP_1)*ri2_79* &\n224:   !              (ps079(:,OP_GS)*psx79(:,OP_DZ) &\n225:   !              +bzx79(:,OP_1)*bz079(:,OP_DZ))\n226:   !      end if",
+        "file": "electric_field.f90",
+        "line": 224
+      },
+      {
+        "assignment_candidate": false,
+        "context": "227: !#if defined(USE3D) || defined(USECOMPLEX)\n228:   !      o = o - db*ni79(:,OP_1)* &\n229:   !           (ri_79*ps079(:,OP_GS)*bfp179(:,OP_DR) &\n230:   !           +ri_79*ps179(:,OP_GS)*bfp079(:,OP_DR) &\n231:   !           +ri2_79*bz079(:,OP_1)*bfp179(:,OP_DZP) &",
+        "file": "electric_field.f90",
+        "line": 229
+      },
+      {
+        "assignment_candidate": false,
+        "context": "228:   !      o = o - db*ni79(:,OP_1)* &\n229:   !           (ri_79*ps079(:,OP_GS)*bfp179(:,OP_DR) &\n230:   !           +ri_79*ps179(:,OP_GS)*bfp079(:,OP_DR) &\n231:   !           +ri2_79*bz079(:,OP_1)*bfp179(:,OP_DZP) &\n232:   !           +ri2_79*bz179(:,OP_1)*bfp079(:,OP_DZP) &",
+        "file": "electric_field.f90",
+        "line": 230
+      },
+      {
+        "assignment_candidate": false,
+        "context": "235:   !      if(use_external_fields) then\n236:   !         o = o - db*ni79(:,OP_1)* &\n237:   !              (ri_79*ps079(:,OP_GS)*bfpx79(:,OP_DR) &\n238:   !              +ri2_79*bzx79(:,OP_1)*bfp079(:,OP_DZP) &\n239:   !              -ri3_79*bzx79(:,OP_1)*ps079(:,OP_DRP))",
+        "file": "electric_field.f90",
+        "line": 237
+      },
+      {
+        "assignment_candidate": false,
+        "context": "242:   !   else\n243:   !      o = o - db*ni79(:,OP_1)*ri2_79* &\n244:   !           (bztx79(:,OP_1)*bzt79(:,OP_DZ) + pst79(:,OP_GS)*pstx79(:,OP_DZ))\n245: !#if defined(USE3D) || defined(USECOMPLEX)\n246:   !      o = o - db*ni79(:,OP_1)* &",
+        "file": "electric_field.f90",
+        "line": 244
+      },
+      {
+        "assignment_candidate": false,
+        "context": "245: !#if defined(USE3D) || defined(USECOMPLEX)\n246:   !      o = o - db*ni79(:,OP_1)* &\n247:   !           (ri_79*pst79(:,OP_GS)*bfptx79(:,OP_DR) &\n248:   !           +ri2_79*bztx79(:,OP_1)*bfpt79(:,OP_DZP) &\n249:   !           -ri3_79*bztx79(:,OP_1)*pst79(:,OP_DRP))",
+        "file": "electric_field.f90",
+        "line": 247
+      },
+      {
+        "assignment_candidate": false,
+        "context": "280:   if (.not.((kinetic.eq.1).or.((irunaway.ge.1).and.(ra_characteristics.eq.1)))) then\n281:      if(ilin.eq.1) then\n282:         o = o - ri_79*eta79(:,OP_1)*ps179(:,OP_GS)\n283:      else\n284:         o = o - ri_79*eta79(:,OP_1)*pst79(:,OP_GS)",
+        "file": "electric_field.f90",
+        "line": 282
+      },
+      {
+        "assignment_candidate": false,
+        "context": "282:         o = o - ri_79*eta79(:,OP_1)*ps179(:,OP_GS)\n283:      else\n284:         o = o - ri_79*eta79(:,OP_1)*pst79(:,OP_GS)\n285:      end if\n286:   endif",
+        "file": "electric_field.f90",
+        "line": 284
+      },
+      {
+        "assignment_candidate": false,
+        "context": "440:   ! eta J\n441:   ! ~~~~~\n442:   o = o - ri2_79*eta79(:,OP_1)*bztx79(:,OP_1)*pst79(:,OP_GS)\n443:   o = o + ri2_79*temp79b*(bzt79(:,OP_DR)*pstx79(:,OP_DR) + bzt79(:,OP_DZ)*pstx79(:,OP_DZ))\n444: ",
+        "file": "electric_field.f90",
+        "line": 442
+      },
+      {
+        "assignment_candidate": false,
+        "context": "519:   ! ~~~~~\n520:   if(ilin.eq.1) then\n521:      o = - ri_79*eta79(:,OP_1)*ps179(:,OP_GS)\n522:   else\n523:      o = - ri_79*eta79(:,OP_1)*pst79(:,OP_GS)",
+        "file": "electric_field.f90",
+        "line": 521
+      },
+      {
+        "assignment_candidate": false,
+        "context": "521:      o = - ri_79*eta79(:,OP_1)*ps179(:,OP_GS)\n522:   else\n523:      o = - ri_79*eta79(:,OP_1)*pst79(:,OP_GS)\n524:   end if\n525: ",
+        "file": "electric_field.f90",
+        "line": 523
+      },
+      {
+        "assignment_candidate": false,
+        "context": "576:   ! ~~~~~\n577:   if(ilin.eq.1) then\n578:      o = o - ri_79*eta79(:,OP_1)*ps179(:,OP_GS)\n579:   else\n580:      o = o - ri_79*eta79(:,OP_1)*pst79(:,OP_GS)",
+        "file": "electric_field.f90",
+        "line": 578
+      },
+      {
+        "assignment_candidate": false,
+        "context": "578:      o = o - ri_79*eta79(:,OP_1)*ps179(:,OP_GS)\n579:   else\n580:      o = o - ri_79*eta79(:,OP_1)*pst79(:,OP_GS)\n581:   end if\n582: ",
+        "file": "electric_field.f90",
+        "line": 580
+      },
+      {
+        "assignment_candidate": false,
+        "context": "758:   o = ri2_79*bzt79(:,OP_DR)*pst79(:,OP_DR)   &\n759:     + ri2_79*bzt79(:,OP_DZ)*pst79(:,OP_DZ)   &\n760:     - ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS)\n761: \n762:   ! ~~~~~~~~~~~~~~~~~~",
+        "file": "electric_field.f90",
+        "line": 760
+      },
+      {
+        "assignment_candidate": false,
+        "context": "798:   o = ri2_79*bzt79(:,OP_DR)*pst79(:,OP_DR)   &\n799:     + ri2_79*bzt79(:,OP_DZ)*pst79(:,OP_DZ)   &\n800:     - ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS)\n801: \n802:   ! ~~~~~~~~~~~~~~~~~~",
+        "file": "electric_field.f90",
+        "line": 800
+      },
+      {
+        "assignment_candidate": false,
+        "context": "91: !             + 2.*int4(ri4_79,temp79b,f(:,OP_DRRP),h(:,OP_1)) &\n92: !             + 4.*int4(ri4_79,temp79c,f(:,OP_DRZP),h(:,OP_1)) &\n93: !             -    int4(ri4_79,e(:,OP_GS),f(:,OP_GSP),h(:,OP_1))\n94: !        \n95: !        if(itor.eq.1) then",
+        "file": "electrostatic_potential.f90",
+        "line": 93
+      },
+      {
+        "assignment_candidate": false,
+        "context": "107:   else\n108:      if(ihypeta.eq.0) then           \n109:         temp = hypf*int3(ri4_79,e(:,OP_GS),f(:,OP_GSP))\n110:      else\n111:         temp =  hypf* &",
+        "file": "electrostatic_potential.f90",
+        "line": 109
+      },
+      {
+        "assignment_candidate": false,
+        "context": "110:      else\n111:         temp =  hypf* &\n112:              (int4(ri4_79,e(:,OP_GS),f(:,OP_GSP),g(:,OP_1)) &\n113:              +int4(ri4_79,e(:,OP_DR),f(:,OP_GSP),g(:,OP_DR)) &\n114:              +int4(ri4_79,e(:,OP_DZ),f(:,OP_GSP),g(:,OP_DZ)))",
+        "file": "electrostatic_potential.f90",
+        "line": 112
+      },
+      {
+        "assignment_candidate": false,
+        "context": "397: \n398:   if(surface_int) then\n399:      temp79a = ri4_79*e(:,OP_1)*g(:,OP_GS)*h(:,OP_1)\n400:      temp = int3(temp79a,norm79(:,1),f(:,OP_DR)) &\n401:           + int3(temp79a,norm79(:,2),f(:,OP_DZ))",
+        "file": "electrostatic_potential.f90",
+        "line": 399
+      },
+      {
+        "assignment_candidate": false,
+        "context": "402:   else\n403:      temp = &\n404:           - int5(ri4_79,e(:,OP_DZ),f(:,OP_DZ),g(:,OP_GS),h(:,OP_1)) &\n405:           - int5(ri4_79,e(:,OP_DR),f(:,OP_DR),g(:,OP_GS),h(:,OP_1))\n406:   endif",
+        "file": "electrostatic_potential.f90",
+        "line": 404
+      },
+      {
+        "assignment_candidate": false,
+        "context": "403:      temp = &\n404:           - int5(ri4_79,e(:,OP_DZ),f(:,OP_DZ),g(:,OP_GS),h(:,OP_1)) &\n405:           - int5(ri4_79,e(:,OP_DR),f(:,OP_DR),g(:,OP_GS),h(:,OP_1))\n406:   endif\n407: ",
+        "file": "electrostatic_potential.f90",
+        "line": 405
+      },
+      {
+        "assignment_candidate": false,
+        "context": "463: #if defined(USE3D) || defined(USECOMPLEX)\n464:   if(surface_int) then\n465:      temp79a = ri3_79*e(:,OP_1)*f(:,OP_GS)*h(:,OP_1)\n466:      temp = int3(temp79a,norm79(:,2),g(:,OP_DR)) &\n467:           + int3(temp79a,norm79(:,1),g(:,OP_DZ))",
+        "file": "electrostatic_potential.f90",
+        "line": 465
+      },
+      {
+        "assignment_candidate": false,
+        "context": "467:           + int3(temp79a,norm79(:,1),g(:,OP_DZ))\n468:   else\n469:      temp = int5(ri3_79,e(:,OP_DR),g(:,OP_DZ),f(:,OP_GS),h(:,OP_1)) &\n470:           - int5(ri3_79,e(:,OP_DZ),g(:,OP_DR),f(:,OP_GS),h(:,OP_1))\n471:   endif",
+        "file": "electrostatic_potential.f90",
+        "line": 469
+      }
+    ],
+    "pst79": [
+      {
+        "assignment_candidate": false,
+        "context": "777: #else\n778:      dofs = &\n779:           + intx4(mu79(:,:,OP_1),pst79(:,OP_DR),bzt79(:,OP_DZ),ri_79) &\n780:           - intx4(mu79(:,:,OP_1),pst79(:,OP_DZ),bzt79(:,OP_DR),ri_79)\n781: #ifdef USE3D",
+        "file": "auxiliary_fields.f90",
+        "line": 779
+      },
+      {
+        "assignment_candidate": false,
+        "context": "778:      dofs = &\n779:           + intx4(mu79(:,:,OP_1),pst79(:,OP_DR),bzt79(:,OP_DZ),ri_79) &\n780:           - intx4(mu79(:,:,OP_1),pst79(:,OP_DZ),bzt79(:,OP_DR),ri_79)\n781: #ifdef USE3D\n782:      if(numvar.gt.1) then",
+        "file": "auxiliary_fields.f90",
+        "line": 780
+      },
+      {
+        "assignment_candidate": false,
+        "context": "851:            else\n852:               call PVS1      (pht79,temp79b)\n853:               call PVS1psipsi(pht79,pst79,pst79,temp79c)\n854:               call PVS1psib  (pht79,pst79,bzt79,temp79d)\n855:               call PVS1bb    (pht79,bzt79,bzt79,temp79e)",
+        "file": "auxiliary_fields.f90",
+        "line": 853
+      },
+      {
+        "assignment_candidate": false,
+        "context": "852:               call PVS1      (pht79,temp79b)\n853:               call PVS1psipsi(pht79,pst79,pst79,temp79c)\n854:               call PVS1psib  (pht79,pst79,bzt79,temp79d)\n855:               call PVS1bb    (pht79,bzt79,bzt79,temp79e)\n856:               temp79a = temp79b + temp79c + temp79d + temp79e",
+        "file": "auxiliary_fields.f90",
+        "line": 854
+      },
+      {
+        "assignment_candidate": false,
+        "context": "859:               if(numvar.ge.2) then\n860:                  call PVS2      (vzt79,temp79b)\n861:                  call PVS2psipsi(vzt79,pst79,pst79,temp79c)\n862:                  call PVS2psib  (vzt79,pst79,bzt79,temp79d)\n863:                  call PVS2bb    (vzt79,bzt79,bzt79,temp79e)",
+        "file": "auxiliary_fields.f90",
+        "line": 861
+      },
+      {
+        "assignment_candidate": false,
+        "context": "860:                  call PVS2      (vzt79,temp79b)\n861:                  call PVS2psipsi(vzt79,pst79,pst79,temp79c)\n862:                  call PVS2psib  (vzt79,pst79,bzt79,temp79d)\n863:                  call PVS2bb    (vzt79,bzt79,bzt79,temp79e)\n864:                  temp79a = temp79b + temp79c + temp79d + temp79e",
+        "file": "auxiliary_fields.f90",
+        "line": 862
+      },
+      {
+        "assignment_candidate": false,
+        "context": "868:               if(numvar.ge.3) then\n869:                  call PVS3      (cht79,temp79b)\n870:                  call PVS3psipsi(cht79,pst79,pst79,temp79c)\n871:                  call PVS3psib  (cht79,pst79,bzt79,temp79d)\n872:                  call PVS3bb    (cht79,bzt79,bzt79,temp79e)",
+        "file": "auxiliary_fields.f90",
+        "line": 870
+      },
+      {
+        "assignment_candidate": false,
+        "context": "869:                  call PVS3      (cht79,temp79b)\n870:                  call PVS3psipsi(cht79,pst79,pst79,temp79c)\n871:                  call PVS3psib  (cht79,pst79,bzt79,temp79d)\n872:                  call PVS3bb    (cht79,bzt79,bzt79,temp79e)\n873:                  temp79a = temp79b + temp79c + temp79d + temp79e",
+        "file": "auxiliary_fields.f90",
+        "line": 871
+      },
+      {
+        "assignment_candidate": false,
+        "context": "896: #endif\n897:      else\n898:         dofs = intx4(mu79(:,:,OP_1),pt79(:,OP_DZ),pst79(:,OP_DR),ri_79) &\n899:              - intx4(mu79(:,:,OP_1),pt79(:,OP_DR),pst79(:,OP_DZ),ri_79)\n900: #if defined(USECOMPLEX) || defined(USE3D)",
+        "file": "auxiliary_fields.f90",
+        "line": 898
+      },
+      {
+        "assignment_candidate": false,
+        "context": "897:      else\n898:         dofs = intx4(mu79(:,:,OP_1),pt79(:,OP_DZ),pst79(:,OP_DR),ri_79) &\n899:              - intx4(mu79(:,:,OP_1),pt79(:,OP_DR),pst79(:,OP_DZ),ri_79)\n900: #if defined(USECOMPLEX) || defined(USE3D)\n901:         if(numvar.gt.1) then",
+        "file": "auxiliary_fields.f90",
+        "line": 899
+      },
+      {
+        "assignment_candidate": false,
+        "context": "929:      else\n930:         dofs = &\n931:              +intx4(mu79(:,:,OP_1),ri_79,tet79(:,OP_DZ),pst79(:,OP_DR)) &\n932:              -intx4(mu79(:,:,OP_1),ri_79,tet79(:,OP_DR),pst79(:,OP_DZ))\n933: #if defined(USECOMPLEX) || defined(USE3D)",
+        "file": "auxiliary_fields.f90",
+        "line": 931
+      },
+      {
+        "assignment_candidate": false,
+        "context": "930:         dofs = &\n931:              +intx4(mu79(:,:,OP_1),ri_79,tet79(:,OP_DZ),pst79(:,OP_DR)) &\n932:              -intx4(mu79(:,:,OP_1),ri_79,tet79(:,OP_DR),pst79(:,OP_DZ))\n933: #if defined(USECOMPLEX) || defined(USE3D)\n934:         dofs = dofs &",
+        "file": "auxiliary_fields.f90",
+        "line": 932
+      },
+      {
+        "assignment_candidate": false,
+        "context": "955: \n956:      ! magnetic_region\n957:      call magnetic_region(pst79(:,OP_1),pst79(:,OP_DR),pst79(:,OP_DZ),&\n958:           x_79,z_79,mr)\n959:      temp79a = mr",
+        "file": "auxiliary_fields.f90",
+        "line": 957
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1097: \n1098:       \n1099:       dofs = -intx4(mu79(:,:,OP_1),ri_79,pst79(:,OP_DZ),temp79a) &\n1100:              -intx3(mu79(:,:,OP_1),bfpt79(:,OP_DR),temp79a)\n1101:       call vector_insert_block(Jp_BS_r%vec,itri,1,dofs,VEC_ADD)",
+        "file": "auxiliary_fields.f90",
+        "line": 1099
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1106:       \n1107:       \n1108:       dofs =  intx4(mu79(:,:,OP_1),ri_79,pst79(:,OP_DR),temp79a) &\n1109:              -intx3(mu79(:,:,OP_1),bfpt79(:,OP_DZ),temp79a)\n1110:       call vector_insert_block(Jp_BS_z%vec,itri,1,dofs,VEC_ADD)",
+        "file": "auxiliary_fields.f90",
+        "line": 1108
+      },
+      {
+        "assignment_candidate": false,
+        "context": "109: !linearizing in pe\n110: \n111:   tempBB = (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*tet79(:,OP_DZ)/tet79(:,OP_1) &\n112:           + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*tet79(:,OP_DR)/tet79(:,OP_1)\n113: ",
+        "file": "bootstrap.f90",
+        "line": 111
+      },
+      {
+        "assignment_candidate": false,
+        "context": "110: \n111:   tempBB = (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*tet79(:,OP_DZ)/tet79(:,OP_1) &\n112:           + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*tet79(:,OP_DR)/tet79(:,OP_1)\n113: \n114:   tempCC =  (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*tit79(:,OP_DZ)/tit79(:,OP_1) &",
+        "file": "bootstrap.f90",
+        "line": 112
+      },
+      {
+        "assignment_candidate": false,
+        "context": "112:           + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*tet79(:,OP_DR)/tet79(:,OP_1)\n113: \n114:   tempCC =  (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*tit79(:,OP_DZ)/tit79(:,OP_1) &\n115:           + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*tit79(:,OP_DR)/tit79(:,OP_1)\n116: ",
+        "file": "bootstrap.f90",
+        "line": 114
+      },
+      {
+        "assignment_candidate": false,
+        "context": "113: \n114:   tempCC =  (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*tit79(:,OP_DZ)/tit79(:,OP_1) &\n115:           + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*tit79(:,OP_DR)/tit79(:,OP_1)\n116: \n117:   if(ibootstrap_model.eq.1 .or. ibootstrap_model.eq.3)then !Sauter & Angioni (1999) ",
+        "file": "bootstrap.f90",
+        "line": 115
+      },
+      {
+        "assignment_candidate": false,
+        "context": "116: \n117:   if(ibootstrap_model.eq.1 .or. ibootstrap_model.eq.3)then !Sauter & Angioni (1999) \n118:       tempAA = (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*pt79(:,OP_DZ) &\n119:               + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*pt79(:,OP_DR)\n120: ",
+        "file": "bootstrap.f90",
+        "line": 118
+      },
+      {
+        "assignment_candidate": false,
+        "context": "117:   if(ibootstrap_model.eq.1 .or. ibootstrap_model.eq.3)then !Sauter & Angioni (1999) \n118:       tempAA = (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*pt79(:,OP_DZ) &\n119:               + (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*pt79(:,OP_DR)\n120: \n121:       tempDD = jbsl3179(:,OP_1)*(tempAA) + &",
+        "file": "bootstrap.f90",
+        "line": 119
+      },
+      {
+        "assignment_candidate": false,
+        "context": "123:                jbsl3479(:,OP_1)*jbsalpha79(:,OP_1)*(pt79(:,OP_1)-f(:,OP_1))*(tempCC)\n124:   else if (ibootstrap_model.eq.2 .or. ibootstrap_model.eq.4)then !Redl et al (2021) \n125:       tempAA = (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*nt79(:,OP_DZ)/nt79(:,OP_1)*pt79(:,OP_1) &\n126:                +  (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*nt79(:,OP_DR)/nt79(:,OP_1)*pt79(:,OP_1)\n127: ",
+        "file": "bootstrap.f90",
+        "line": 125
+      },
+      {
+        "assignment_candidate": false,
+        "context": "124:   else if (ibootstrap_model.eq.2 .or. ibootstrap_model.eq.4)then !Redl et al (2021) \n125:       tempAA = (pst79(:,OP_DZ)*ri_79 + bfpt79(:,OP_DR))*nt79(:,OP_DZ)/nt79(:,OP_1)*pt79(:,OP_1) &\n126:                +  (pst79(:,OP_DR)*ri_79 - bfpt79(:,OP_DZ))*nt79(:,OP_DR)/nt79(:,OP_1)*pt79(:,OP_1)\n127: \n128:       tempDD = jbsl3179(:,OP_1)*(tempAA) + &",
+        "file": "bootstrap.f90",
+        "line": 126
+      },
+      {
+        "assignment_candidate": false,
+        "context": "131:   end if\n132:  \n133:   iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n134:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n135: ",
+        "file": "bootstrap.f90",
+        "line": 133
+      },
+      {
+        "assignment_candidate": false,
+        "context": "132:  \n133:   iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n134:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n135: \n136:   temp79a=tempDD*jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*ri_79*bzt79(:,OP_1)*bootstrap_alpha",
+        "file": "bootstrap.f90",
+        "line": 134
+      },
+      {
+        "assignment_candidate": false,
+        "context": "138: \n139:   ! J.B\n140:   temp79b = -ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS) &\n141:        + ri2_79*(bzt79(:,OP_DZ)*pst79(:,OP_DZ) + bzt79(:,OP_DR)*pst79(:,OP_DR))\n142: #if defined(USE3D) || defined(USECOMPLEX)",
+        "file": "bootstrap.f90",
+        "line": 140
+      },
+      {
+        "assignment_candidate": false,
+        "context": "139:   ! J.B\n140:   temp79b = -ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS) &\n141:        + ri2_79*(bzt79(:,OP_DZ)*pst79(:,OP_DZ) + bzt79(:,OP_DR)*pst79(:,OP_DR))\n142: #if defined(USE3D) || defined(USECOMPLEX)\n143:   temp79b = temp79b &",
+        "file": "bootstrap.f90",
+        "line": 141
+      },
+      {
+        "assignment_candidate": false,
+        "context": "142: #if defined(USE3D) || defined(USECOMPLEX)\n143:   temp79b = temp79b &\n144:        + ri2_79*(bfpt79(:,OP_DZP)*pst79(:,OP_DZ)  + bfpt79(:,OP_DRP)*pst79(:,OP_DR)) &\n145:        + ri_79 *(bzt79(:,OP_DZ)*  bfpt79(:,OP_DR) - bzt79(:,OP_DR)*  bfpt79(:,OP_DZ)) &\n146:        + ri_79 *(bfpt79(:,OP_DZP)*bfpt79(:,OP_DR) - bfpt79(:,OP_DRP)*bfpt79(:,OP_DZ)) &",
+        "file": "bootstrap.f90",
+        "line": 144
+      },
+      {
+        "assignment_candidate": false,
+        "context": "145:        + ri_79 *(bzt79(:,OP_DZ)*  bfpt79(:,OP_DR) - bzt79(:,OP_DR)*  bfpt79(:,OP_DZ)) &\n146:        + ri_79 *(bfpt79(:,OP_DZP)*bfpt79(:,OP_DR) - bfpt79(:,OP_DRP)*bfpt79(:,OP_DZ)) &\n147:        - ri3_79*(pst79(:,OP_DZ)*  pst79(:,OP_DRP) - pst79(:,OP_DR)*  pst79(:,OP_DZP)) &\n148:        - ri2_79*(bfpt79(:,OP_DZ)* pst79(:,OP_DZP) + bfpt79(:,OP_DR)* pst79(:,OP_DRP))\n149: #endif",
+        "file": "bootstrap.f90",
+        "line": 147
+      },
+      {
+        "assignment_candidate": false,
+        "context": "146:        + ri_79 *(bfpt79(:,OP_DZP)*bfpt79(:,OP_DR) - bfpt79(:,OP_DRP)*bfpt79(:,OP_DZ)) &\n147:        - ri3_79*(pst79(:,OP_DZ)*  pst79(:,OP_DRP) - pst79(:,OP_DR)*  pst79(:,OP_DZP)) &\n148:        - ri2_79*(bfpt79(:,OP_DZ)* pst79(:,OP_DZP) + bfpt79(:,OP_DR)* pst79(:,OP_DRP))\n149: #endif\n150: ",
+        "file": "bootstrap.f90",
+        "line": 148
+      },
+      {
+        "assignment_candidate": false,
+        "context": "221:           end if\n222: \n223:           iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n224:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n225: ",
+        "file": "bootstrap.f90",
+        "line": 223
+      },
+      {
+        "assignment_candidate": false,
+        "context": "222: \n223:           iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n224:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n225: \n226:           temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)* tempDD ",
+        "file": "bootstrap.f90",
+        "line": 224
+      },
+      {
+        "assignment_candidate": false,
+        "context": "306:           end if\n307: \n308:           iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n309:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n310: ",
+        "file": "bootstrap.f90",
+        "line": 308
+      },
+      {
+        "assignment_candidate": false,
+        "context": "307: \n308:           iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n309:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n310: \n311:           temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)* tempDD ",
+        "file": "bootstrap.f90",
+        "line": 309
+      },
+      {
+        "assignment_candidate": false,
+        "context": "340:           end if\n341: \n342:           iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n343:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n344: ",
+        "file": "bootstrap.f90",
+        "line": 342
+      },
+      {
+        "assignment_candidate": false,
+        "context": "341: \n342:           iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n343:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n344: \n345:           temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)* tempDD ",
+        "file": "bootstrap.f90",
+        "line": 343
+      },
+      {
+        "assignment_candidate": false,
+        "context": "420:         end if\n421: \n422:         iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n423:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n424:         ",
+        "file": "bootstrap.f90",
+        "line": 422
+      },
+      {
+        "assignment_candidate": false,
+        "context": "421: \n422:         iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n423:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n424:         \n425:         temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)* tempDD ",
+        "file": "bootstrap.f90",
+        "line": 423
+      },
+      {
+        "assignment_candidate": false,
+        "context": "500:     end if\n501: \n502:     iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n503:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n504: ",
+        "file": "bootstrap.f90",
+        "line": 502
+      },
+      {
+        "assignment_candidate": false,
+        "context": "501: \n502:     iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n503:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n504: \n505:     temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)* tempDD ",
+        "file": "bootstrap.f90",
+        "line": 503
+      },
+      {
+        "assignment_candidate": false,
+        "context": "570:     end if\n571: \n572:     iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n573:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n574: ",
+        "file": "bootstrap.f90",
+        "line": 572
+      },
+      {
+        "assignment_candidate": false,
+        "context": "571: \n572:     iBpsq(:) = 1./((-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR))*(-ri_79*pst79(:,OP_DZ)-bfpt79(:,OP_DR)) &\n573:               + (ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ))*(ri_79*pst79(:,OP_DR)-bfpt79(:,OP_DZ)))\n574: \n575:     temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)*tempDD ",
+        "file": "bootstrap.f90",
+        "line": 573
+      },
+      {
+        "assignment_candidate": false,
+        "context": "606:     if(numvar.eq.1) then\n607:        ! linearizing in psi  \n608:        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bzt79) &\n609:             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bzt79) \n610:        ",
+        "file": "bootstrap.f90",
+        "line": 608
+      },
+      {
+        "assignment_candidate": false,
+        "context": "607:        ! linearizing in psi  \n608:        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bzt79) &\n609:             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bzt79) \n610:        \n611: ",
+        "file": "bootstrap.f90",
+        "line": 609
+      },
+      {
+        "assignment_candidate": false,
+        "context": "621:     else     \n622:         ! linearizing in psi\n623:        temp = bs_b1psifpsib(trial,lin,bfpt79,pst79,bzt79) &\n624:             + bs_b1psifpsib(trial,pst79,bfpt79,lin,bzt79) &\n625:             + bs_b1psifbb(trial,lin,bfpt79,bzt79,bzt79) &",
+        "file": "bootstrap.f90",
+        "line": 623
+      }
+    ],
+    "ri2_79": [
+      {
+        "assignment_candidate": false,
+        "context": "890:         if(numvar.gt.1) then\n891:            dofs = dofs &\n892:                 + intx4(mu79(:,:,OP_1),p179(:,OP_DP),bz079(:,OP_1),ri2_79) &\n893:                 - intx3(mu79(:,:,OP_1),p079(:,OP_DZ),bfp179(:,OP_DZ)) &\n894:                 - intx3(mu79(:,:,OP_1),p079(:,OP_DR),bfp179(:,OP_DR))",
+        "file": "auxiliary_fields.f90",
+        "line": 892
+      },
+      {
+        "assignment_candidate": false,
+        "context": "901:         if(numvar.gt.1) then\n902:            dofs = dofs &\n903:                 + intx4(mu79(:,:,OP_1),pt79(:,OP_DP),bzt79(:,OP_1),ri2_79) &\n904:                 - intx3(mu79(:,:,OP_1),pt79(:,OP_DZ),bfpt79(:,OP_DZ)) &\n905:                 - intx3(mu79(:,:,OP_1),pt79(:,OP_DR),bfpt79(:,OP_DR))",
+        "file": "auxiliary_fields.f90",
+        "line": 903
+      },
+      {
+        "assignment_candidate": false,
+        "context": "920: \n921: #if defined(USECOMPLEX) || defined(USE3D)\n922:         dofs = dofs + intx4(mu79(:,:,OP_1),ri2_79,te179(:,OP_DP),bz079(:,OP_1))\n923:         if(numvar.gt.1) then\n924:            dofs = dofs &",
+        "file": "auxiliary_fields.f90",
+        "line": 922
+      },
+      {
+        "assignment_candidate": false,
+        "context": "933: #if defined(USECOMPLEX) || defined(USE3D)\n934:         dofs = dofs &\n935:              +intx4(mu79(:,:,OP_1),ri2_79,tet79(:,OP_DP),bzt79(:,OP_1))\n936: \n937:         if(numvar.gt.1) then",
+        "file": "auxiliary_fields.f90",
+        "line": 935
+      },
+      {
+        "assignment_candidate": false,
+        "context": "138: \n139:   ! J.B\n140:   temp79b = -ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS) &\n141:        + ri2_79*(bzt79(:,OP_DZ)*pst79(:,OP_DZ) + bzt79(:,OP_DR)*pst79(:,OP_DR))\n142: #if defined(USE3D) || defined(USECOMPLEX)",
+        "file": "bootstrap.f90",
+        "line": 140
+      },
+      {
+        "assignment_candidate": false,
+        "context": "139:   ! J.B\n140:   temp79b = -ri2_79*bzt79(:,OP_1)*pst79(:,OP_GS) &\n141:        + ri2_79*(bzt79(:,OP_DZ)*pst79(:,OP_DZ) + bzt79(:,OP_DR)*pst79(:,OP_DR))\n142: #if defined(USE3D) || defined(USECOMPLEX)\n143:   temp79b = temp79b &",
+        "file": "bootstrap.f90",
+        "line": 141
+      },
+      {
+        "assignment_candidate": false,
+        "context": "142: #if defined(USE3D) || defined(USECOMPLEX)\n143:   temp79b = temp79b &\n144:        + ri2_79*(bfpt79(:,OP_DZP)*pst79(:,OP_DZ)  + bfpt79(:,OP_DRP)*pst79(:,OP_DR)) &\n145:        + ri_79 *(bzt79(:,OP_DZ)*  bfpt79(:,OP_DR) - bzt79(:,OP_DR)*  bfpt79(:,OP_DZ)) &\n146:        + ri_79 *(bfpt79(:,OP_DZP)*bfpt79(:,OP_DR) - bfpt79(:,OP_DRP)*bfpt79(:,OP_DZ)) &",
+        "file": "bootstrap.f90",
+        "line": 144
+      },
+      {
+        "assignment_candidate": false,
+        "context": "146:        + ri_79 *(bfpt79(:,OP_DZP)*bfpt79(:,OP_DR) - bfpt79(:,OP_DRP)*bfpt79(:,OP_DZ)) &\n147:        - ri3_79*(pst79(:,OP_DZ)*  pst79(:,OP_DRP) - pst79(:,OP_DR)*  pst79(:,OP_DZP)) &\n148:        - ri2_79*(bfpt79(:,OP_DZ)* pst79(:,OP_DZP) + bfpt79(:,OP_DR)* pst79(:,OP_DRP))\n149: #endif\n150: ",
+        "file": "bootstrap.f90",
+        "line": 148
+      },
+      {
+        "assignment_candidate": false,
+        "context": "575:     temp79a = jbsfluxavg_iBsq_B79(:,OP_1)*iBpsq(:)*eta79(:,OP_1)*i(:,OP_1)*tempDD \n576: \n577:     temp = intx4(e(:,:,OP_DZ),ri2_79,h(:,OP_DR),temp79a) &\n578:          - intx4(e(:,:,OP_DR),ri2_79,h(:,OP_DZ),temp79a)\n579: #else ",
+        "file": "bootstrap.f90",
+        "line": 577
+      },
+      {
+        "assignment_candidate": false,
+        "context": "576: \n577:     temp = intx4(e(:,:,OP_DZ),ri2_79,h(:,OP_DR),temp79a) &\n578:          - intx4(e(:,:,OP_DR),ri2_79,h(:,OP_DZ),temp79a)\n579: #else \n580:     temp = 0.",
+        "file": "bootstrap.f90",
+        "line": 578
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1030:     temp_delmagTe = tet79(:,OP_DR)*tet79(:,OP_DR)+ tet79(:,OP_DZ)*tet79(:,OP_DZ)\n1031: #if defined(USE3D) || defined(USECOMPLEX)\n1032:         if(itor.eq.1) temp_delmagTe  = temp_delmagTe + tet79(:,OP_DP)*tet79(:,OP_DP)*ri2_79\n1033: #endif\n1034: ",
+        "file": "bootstrap.f90",
+        "line": 1032
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1049:     tempCC=tit79(:,OP_DR)*tet79(:,OP_DR)+ tit79(:,OP_DZ)*tet79(:,OP_DZ)\n1050: #if defined(USE3D) || defined(USECOMPLEX)\n1051:     if(itor.eq.1) tempCC = tempCC + tit79(:,OP_DP)*tet79(:,OP_DP)*ri2_79\n1052: #endif\n1053:     tempCC = tempCC/tit79(:,OP_1)/(temp_delmagTe+chisq)",
+        "file": "bootstrap.f90",
+        "line": 1051
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1059:       tempAA=pt79(:,OP_DR)*tet79(:,OP_DR)+ pt79(:,OP_DZ)*tet79(:,OP_DZ)\n1060: #if defined(USE3D) || defined(USECOMPLEX)\n1061:       if(itor.eq.1) tempAA = tempAA + pt79(:,OP_DP)*tet79(:,OP_DP)*ri2_79\n1062: #endif\n1063:       tempAA = tempAA/(temp_delmagTe+chisq) ",
+        "file": "bootstrap.f90",
+        "line": 1061
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1084:       tempAA=net79(:,OP_DR)*tet79(:,OP_DR)+ net79(:,OP_DZ)*tet79(:,OP_DZ)\n1085: #if defined(USE3D) || defined(USECOMPLEX)\n1086:       if(itor.eq.1) tempAA = tempAA + net79(:,OP_DP)*tet79(:,OP_DP)*ri2_79\n1087: #endif\n1088: ",
+        "file": "bootstrap.f90",
+        "line": 1086
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1209:             call calculate_CommonTerm_Lambda_fordtenormdpsit(temp79a,temp79b,temp79c,temp79d,temp79e)\n1210:           endif\n1211:            temp = intx5(e(:,:,OP_GS),ri2_79,temp79a,h(:,OP_1),eta79(:,OP_1))\n1212:    \n1213:            if(itor.eq.1) then",
+        "file": "bootstrap.f90",
+        "line": 1211
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1255:           endif\n1256:    \n1257:          temp = intx5(e(:,:,OP_DRP),ri2_79,temp79a,h(:,OP_DR),eta79(:,OP_1)) &\n1258:               + intx5(e(:,:,OP_DZP),ri2_79,temp79a,h(:,OP_DZ),eta79(:,OP_1))\n1259: #ifdef USECOMPLEX",
+        "file": "bootstrap.f90",
+        "line": 1257
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1256:    \n1257:          temp = intx5(e(:,:,OP_DRP),ri2_79,temp79a,h(:,OP_DR),eta79(:,OP_1)) &\n1258:               + intx5(e(:,:,OP_DZP),ri2_79,temp79a,h(:,OP_DZ),eta79(:,OP_1))\n1259: #ifdef USECOMPLEX\n1260:          temp = temp - rfac* &",
+        "file": "bootstrap.f90",
+        "line": 1258
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1259: #ifdef USECOMPLEX\n1260:          temp = temp - rfac* &\n1261:                 (intx5(e(:,:,OP_DR),ri2_79,temp79a,h(:,OP_DR),eta79(:,OP_1)) &\n1262:                 +intx5(e(:,:,OP_DZ),ri2_79,temp79a,h(:,OP_DZ),eta79(:,OP_1)))\n1263: #endif",
+        "file": "bootstrap.f90",
+        "line": 1261
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1260:          temp = temp - rfac* &\n1261:                 (intx5(e(:,:,OP_DR),ri2_79,temp79a,h(:,OP_DR),eta79(:,OP_1)) &\n1262:                 +intx5(e(:,:,OP_DZ),ri2_79,temp79a,h(:,OP_DZ),eta79(:,OP_1)))\n1263: #endif\n1264:    ",
+        "file": "bootstrap.f90",
+        "line": 1262
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1298:     endif\n1299:    \n1300:      temp = intx5(e(:,:,OP_DZ),ri2_79,h(:,OP_DZ),temp79a,eta79(:,OP_1)) &\n1301:           + intx5(e(:,:,OP_DR),ri2_79,h(:,OP_DR),temp79a,eta79(:,OP_1))\n1302:    ",
+        "file": "bootstrap.f90",
+        "line": 1300
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1299:    \n1300:      temp = intx5(e(:,:,OP_DZ),ri2_79,h(:,OP_DZ),temp79a,eta79(:,OP_1)) &\n1301:           + intx5(e(:,:,OP_DR),ri2_79,h(:,OP_DR),temp79a,eta79(:,OP_1))\n1302:    \n1303:      bs_b2psi = temp",
+        "file": "bootstrap.f90",
+        "line": 1301
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1704:     temp_delmagTe(i) = tet79(i,OP_DR)*tet79(i,OP_DR)+ tet79(i,OP_DZ)*tet79(i,OP_DZ)\n1705: #if defined(USE3D) || defined(USECOMPLEX)\n1706:     if(itor.eq.1) temp_delmagTe(i) = temp_delmagTe(i) + tet79(i,OP_DP)*tet79(i,OP_DP)*ri2_79(i)\n1707: #endif\n1708: ",
+        "file": "bootstrap.f90",
+        "line": 1706
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1731:     tempCC(i)=tit79(i,OP_DR)*tet79(i,OP_DR)+ tit79(i,OP_DZ)*tet79(i,OP_DZ)\n1732: #if defined(USE3D) || defined(USECOMPLEX)\n1733:     if(itor.eq.1) tempCC(i) = tempCC(i) + tit79(i,OP_DP)*tet79(i,OP_DP)*ri2_79(i)\n1734: #endif \n1735: ",
+        "file": "bootstrap.f90",
+        "line": 1733
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1747: #if defined(USE3D) || defined(USECOMPLEX)\n1748:         if(itor.eq.1) then\n1749:           tempAA_ne(i) = tempAA_ne(i) + net79(i,OP_DP)*tet79(i,OP_DP)*ri2_79(i)\n1750:           tempAA_ni(i) = tempAA_ni(i)+ nt79(i,OP_DP)*tet79(i,OP_DP)*ri2_79(i)\n1751:         endif",
+        "file": "bootstrap.f90",
+        "line": 1749
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1748:         if(itor.eq.1) then\n1749:           tempAA_ne(i) = tempAA_ne(i) + net79(i,OP_DP)*tet79(i,OP_DP)*ri2_79(i)\n1750:           tempAA_ni(i) = tempAA_ni(i)+ nt79(i,OP_DP)*tet79(i,OP_DP)*ri2_79(i)\n1751:         endif\n1752: #endif",
+        "file": "bootstrap.f90",
+        "line": 1750
+      },
+      {
+        "assignment_candidate": false,
+        "context": "840: \n841:      if(imulti_region.eq.1 .and. izone.eq.ZONE_CONDUCTOR) then\n842:         wallcur = wallcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n843: \n844:         call jxb_r(temp79a, temp79d)",
+        "file": "diagnostics.f90",
+        "line": 842
+      },
+      {
+        "assignment_candidate": false,
+        "context": "933: \n934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D",
+        "file": "diagnostics.f90",
+        "line": 935
+      },
+      {
+        "assignment_candidate": false,
+        "context": "934:      ! toroidal current\n935:      totcur = totcur - int2(ri2_79,pst79(:,OP_GS))/tpirzero\n936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.",
+        "file": "diagnostics.f90",
+        "line": 936
+      },
+      {
+        "assignment_candidate": false,
+        "context": "936:      pcur   = pcur   - int3(ri2_79,pst79(:,OP_GS),mr)/tpirzero\n937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n939:      pcur_sn = pcur_sn - int4(ri2_79,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n940: #endif",
+        "file": "diagnostics.f90",
+        "line": 938
+      },
+      {
+        "assignment_candidate": false,
+        "context": "937: #ifdef USE3D\n938:      pcur_co = pcur_co - int4(ri2_79,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n939:      pcur_sn = pcur_sn - int4(ri2_79,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n940: #endif\n941:     ! bootstrap current",
+        "file": "diagnostics.f90",
+        "line": 939
+      },
+      {
+        "assignment_candidate": false,
+        "context": "944:      ! Jp_BS_Phi = intx3(ri_79,bzt79(:,OP_1),temp79a) \n945:       \n946:       jbs = jbs + int3(ri2_79,temp79a,mr) \n947:     elseif (ibootstrap.eq.2)then\n948:       call calculate_CommonTerm_Lambda_fordtedpsit(temp79a,temp79b,temp79c,temp79d,temp79e)",
+        "file": "diagnostics.f90",
+        "line": 946
+      },
+      {
+        "assignment_candidate": false,
+        "context": "947:     elseif (ibootstrap.eq.2)then\n948:       call calculate_CommonTerm_Lambda_fordtedpsit(temp79a,temp79b,temp79c,temp79d,temp79e)\n949:       jbs = jbs + int3(ri2_79,temp79a,mr) \n950:     elseif (ibootstrap.eq.3)then\n951:       call calculate_CommonTerm_Lambda_fordtenormdpsit(temp79a,temp79b,temp79c,temp79d,temp79e)",
+        "file": "diagnostics.f90",
+        "line": 949
+      },
+      {
+        "assignment_candidate": false,
+        "context": "950:     elseif (ibootstrap.eq.3)then\n951:       call calculate_CommonTerm_Lambda_fordtenormdpsit(temp79a,temp79b,temp79c,temp79d,temp79e)\n952:       jbs = jbs + int3(ri2_79,temp79a,mr) \n953:     endif\n954:      ! M_iz = int(dV Z*J)",
+        "file": "diagnostics.f90",
+        "line": 952
+      },
+      {
+        "assignment_candidate": false,
+        "context": "955:      ! This is used for calculating the vertical \"center\" of the plasma current\n956:      temp79a = z_79\n957:      m_iz   = m_iz   - int4(ri2_79,temp79a,pst79(:,OP_GS),mr)/tpirzero\n958: #ifdef USE3D\n959:      m_iz_co = m_iz_co - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,co)/tpirzero * 2.",
+        "file": "diagnostics.f90",
+        "line": 957
+      },
+      {
+        "assignment_candidate": false,
+        "context": "957:      m_iz   = m_iz   - int4(ri2_79,temp79a,pst79(:,OP_GS),mr)/tpirzero\n958: #ifdef USE3D\n959:      m_iz_co = m_iz_co - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n960:      m_iz_sn = m_iz_sn - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n961: #endif",
+        "file": "diagnostics.f90",
+        "line": 959
+      },
+      {
+        "assignment_candidate": false,
+        "context": "958: #ifdef USE3D\n959:      m_iz_co = m_iz_co - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,co)/tpirzero * 2.\n960:      m_iz_sn = m_iz_sn - int5(ri2_79,temp79a,pst79(:,OP_GS),mr,sn)/tpirzero * 2.\n961: #endif\n962: ",
+        "file": "diagnostics.f90",
+        "line": 960
+      },
+      {
+        "assignment_candidate": false,
+        "context": "962: \n963:      ! toroidal flux\n964:      tflux = tflux + int2(ri2_79,bzt79(:,OP_1))/tpirzero\n965:      pflux = pflux + int3(ri2_79,bzt79(:,OP_1),mr)/tpirzero\n966:      ",
+        "file": "diagnostics.f90",
+        "line": 964
+      },
+      {
+        "assignment_candidate": false,
+        "context": "963:      ! toroidal flux\n964:      tflux = tflux + int2(ri2_79,bzt79(:,OP_1))/tpirzero\n965:      pflux = pflux + int3(ri2_79,bzt79(:,OP_1),mr)/tpirzero\n966:      \n967:      ! enstrophy",
+        "file": "diagnostics.f90",
+        "line": 965
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1004: \n1005:      helicity = helicity &\n1006:           + twopi*int3(ri2_79,pstx79(:,OP_1),bztx79(:,OP_1))/tpifac\n1007: #if defined(USE3D) || defined(USECOMPLEX)\n1008:      helicity = helicity &",
+        "file": "diagnostics.f90",
+        "line": 1006
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1105:            if(numvar.ge.3) then\n1106:               nfluxv = nfluxv &\n1107:                    + int4(ri2_79,nt79(:,OP_1),norm79(:,1),cht79(:,OP_DR)) &\n1108:                    + int4(ri2_79,nt79(:,OP_1),norm79(:,2),cht79(:,OP_DZ))\n1109:            endif",
+        "file": "diagnostics.f90",
+        "line": 1107
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1106:               nfluxv = nfluxv &\n1107:                    + int4(ri2_79,nt79(:,OP_1),norm79(:,1),cht79(:,OP_DR)) &\n1108:                    + int4(ri2_79,nt79(:,OP_1),norm79(:,2),cht79(:,OP_DZ))\n1109:            endif\n1110: ",
+        "file": "diagnostics.f90",
+        "line": 1108
+      },
+      {
+        "assignment_candidate": false,
+        "context": "2431:      ! R component: -phi_Z*R + chi_R/R^2\n2432:      dofs = - intx3(mu79(:,:,OP_1),pht79(:,OP_DZ),r_79) &\n2433:             + intx3(mu79(:,:,OP_1),cht79(:,OP_DR),ri2_79)\n2434:      call vector_insert_block(vx_field%vec, itri, 1, dofs, VEC_ADD)\n2435: ",
+        "file": "diagnostics.f90",
+        "line": 2433
+      },
+      {
+        "assignment_candidate": false,
+        "context": "2436:      ! Z component: phi_R*R + chi_Z/R^2\n2437:      dofs =   intx3(mu79(:,:,OP_1),pht79(:,OP_DR),r_79) &\n2438:             + intx3(mu79(:,:,OP_1),cht79(:,OP_DZ),ri2_79)\n2439:      call vector_insert_block(vy_field%vec, itri, 1, dofs, VEC_ADD)\n2440: ",
+        "file": "diagnostics.f90",
+        "line": 2438
+      },
+      {
+        "assignment_candidate": false,
+        "context": "3026:         bh_N = bh_N + int2(bzt79(:,OP_1), bzt79(:,OP_1))\n3027: #else\n3028:         bh_N = bh_N + int3(ri2_79, pst79(:,OP_DR), pst79(:,OP_DR))   &\n3029:                     + int3(ri2_79, pst79(:,OP_DZ), pst79(:,OP_DZ))\n3030: ",
+        "file": "diagnostics.f90",
+        "line": 3028
+      },
+      {
+        "assignment_candidate": false,
+        "context": "3027: #else\n3028:         bh_N = bh_N + int3(ri2_79, pst79(:,OP_DR), pst79(:,OP_DR))   &\n3029:                     + int3(ri2_79, pst79(:,OP_DZ), pst79(:,OP_DZ))\n3030: \n3031:         bh_N = bh_N + int3(ri2_79, bzt79(:,OP_1), bzt79(:,OP_1))",
+        "file": "diagnostics.f90",
+        "line": 3029
+      }
+    ],
+    "weight_79": [
+      {
+        "assignment_candidate": true,
+        "context": "3561:      call global_to_local(d, x, phi, z, xi_79(1), zi_79(1), eta_79(1))\n3562: \n3563:      weight_79 = 1\n3564:      call extrude_quadrature(d%d, 1, 5)\n3565: ",
+        "file": "diagnostics.f90",
+        "line": 3563
+      },
+      {
+        "assignment_candidate": true,
+        "context": "402:     er4_79 = er2_79**2\n403: \n404:     !if(ijacobian.eq.1) weight_79 = weight_79 * r_79\n405: \n406:     call precalculate_terms_error(xi_79,eta_79,npoints)",
+        "file": "error_estimate.f90",
+        "line": 404
+      },
+      {
+        "assignment_candidate": false,
+        "context": "5:        op1(nterm)=prod%op1(i); \\\n6:        op2(nterm)=prod%op2(i); \\\n7:        ssarray(:,nterm)=sscoef*prod%value79(:,i)*weight_79; \\\n8:        ddarray(:,nterm)=ddcoef*prod%value79(:,i)*weight_79; \\\n9:     enddo",
+        "file": "ludef_t_gpu.f90",
+        "line": 7
+      },
+      {
+        "assignment_candidate": false,
+        "context": "6:        op2(nterm)=prod%op2(i); \\\n7:        ssarray(:,nterm)=sscoef*prod%value79(:,i)*weight_79; \\\n8:        ddarray(:,nterm)=ddcoef*prod%value79(:,i)*weight_79; \\\n9:     enddo\n10: ",
+        "file": "ludef_t_gpu.f90",
+        "line": 8
+      },
+      {
+        "assignment_candidate": true,
+        "context": "551:     nu79 = mu79\n552:     ! modify Jabobian\n553:     if(ijacobian.eq.1) weight_79 = weight_79/di_79 \n554:   end subroutine define_physical_basis\n555: #endif",
+        "file": "m3dc1_nint.f90",
+        "line": 553
+      },
+      {
+        "assignment_candidate": true,
+        "context": "700: #endif\n701: \n702:     if(ijacobian.eq.1) weight_79 = weight_79 * r_79\n703: \n704:     ! some field calculations require other field calculation first",
+        "file": "m3dc1_nint.f90",
+        "line": 702
+      },
+      {
+        "assignment_candidate": false,
+        "context": "21:   real, dimension(MAX_PTS) :: x_79, phi_79, z_79\n22: !$OMP THREADPRIVATE(x_79,phi_79,z_79)\n23:   real, dimension(MAX_PTS) :: xi_79, zi_79, eta_79, weight_79\n24: !$OMP THREADPRIVATE(xi_79,zi_79,eta_79,weight_79)\n25:   vectype, dimension(MAX_PTS,2) :: norm79",
+        "file": "nintegrate_mod.f90",
+        "line": 23
+      },
+      {
+        "assignment_candidate": false,
+        "context": "22: !$OMP THREADPRIVATE(x_79,phi_79,z_79)\n23:   real, dimension(MAX_PTS) :: xi_79, zi_79, eta_79, weight_79\n24: !$OMP THREADPRIVATE(xi_79,zi_79,eta_79,weight_79)\n25:   vectype, dimension(MAX_PTS,2) :: norm79\n26: !$OMP THREADPRIVATE(norm79)",
+        "file": "nintegrate_mod.f90",
+        "line": 24
+      },
+      {
+        "assignment_candidate": true,
+        "context": "321:      npoints = npol\n322:      zi_79(1:npol) = 0.\n323:      weight_79(1:npol) = weight_79(1:npol)*d\n324:      return\n325: ",
+        "file": "nintegrate_mod.f90",
+        "line": 323
+      },
+      {
+        "assignment_candidate": true,
+        "context": "346:      xi_79(j:j+npol-1) = xi_79(1:npol)\n347:      eta_79(j:j+npol-1) = eta_79(1:npol)\n348:      weight_79(j:j+npol-1) = weight_79(1:npol)\n349:      if(surface_int) then\n350:         norm79(j:j+npol-1,:) = norm79(1:npol,:)",
+        "file": "nintegrate_mod.f90",
+        "line": 348
+      },
+      {
+        "assignment_candidate": true,
+        "context": "357:   do i=1, ntor\n358:      zi_79(j:j+npol-1) = phi(i)\n359:      weight_79(j:j+npol-1) = weight_79(j:j+npol-1)*wt(i)\n360:      j = j + npol\n361:   end do",
+        "file": "nintegrate_mod.f90",
+        "line": 359
+      },
+      {
+        "assignment_candidate": false,
+        "context": "424:   case(2)\n425:      call edge_to_local(npol, delta_2, line_weight_2, &\n426:      si1, eta1, si2, eta2, xi_79, eta_79, weight_79, n1, n2, d%co, d%sn)\n427: \n428:   case(3)",
+        "file": "nintegrate_mod.f90",
+        "line": 426
+      },
+      {
+        "assignment_candidate": false,
+        "context": "428:   case(3)\n429:      call edge_to_local(npol, delta_3, line_weight_3, &\n430:      si1, eta1, si2, eta2, xi_79, eta_79, weight_79, n1, n2, d%co, d%sn)\n431: \n432:   case(5)",
+        "file": "nintegrate_mod.f90",
+        "line": 430
+      },
+      {
+        "assignment_candidate": false,
+        "context": "432:   case(5)\n433:      call edge_to_local(npol, delta_5, line_weight_5, &\n434:      si1, eta1, si2, eta2, xi_79, eta_79, weight_79, n1, n2, d%co, d%sn)\n435:   case default \n436:      print *, \"Error: \", npol, &",
+        "file": "nintegrate_mod.f90",
+        "line": 434
+      },
+      {
+        "assignment_candidate": false,
+        "context": "466:      call area_to_local(12,                          &\n467:           alpha_12,beta_12,gamma_12,area_weight_12,  &\n468:           d%a, d%b, d%c, xi_79, eta_79, weight_79)\n469:   case(25)\n470:      call area_to_local(25,                          &",
+        "file": "nintegrate_mod.f90",
+        "line": 468
+      },
+      {
+        "assignment_candidate": false,
+        "context": "470:      call area_to_local(25,                          &\n471:           alpha_25,beta_25,gamma_25,area_weight_25,  &\n472:           d%a, d%b, d%c, xi_79, eta_79, weight_79)\n473:   case(79)\n474:      call area_to_local(79,                          &",
+        "file": "nintegrate_mod.f90",
+        "line": 472
+      },
+      {
+        "assignment_candidate": false,
+        "context": "474:      call area_to_local(79,                          &\n475:           alpha_79,beta_79,gamma_79,area_weight_79,  &\n476:           d%a, d%b, d%c, xi_79, eta_79, weight_79)\n477:   case default\n478:      print *, \"Error! \", pol_gauss, \"-point triangle quadrature not defined.\"",
+        "file": "nintegrate_mod.f90",
+        "line": 476
+      },
+      {
+        "assignment_candidate": false,
+        "context": "502:   int0 = 0.\n503:   do k=1, npoints\n504:      int0 = int0 + weight_79(k)\n505:   enddo\n506: end function int0",
+        "file": "nintegrate_mod.f90",
+        "line": 504
+      },
+      {
+        "assignment_candidate": false,
+        "context": "517:   int1 = 0.\n518:   do k=1, npoints\n519:      int1 = int1 + vari(k)*weight_79(k)\n520:   enddo\n521: end function int1",
+        "file": "nintegrate_mod.f90",
+        "line": 519
+      },
+      {
+        "assignment_candidate": false,
+        "context": "532:   int2 = 0.\n533:   do k=1, npoints\n534:      int2 = int2 + vari(k)*varj(k)*weight_79(k)\n535:   enddo\n536: end function int2",
+        "file": "nintegrate_mod.f90",
+        "line": 534
+      },
+      {
+        "assignment_candidate": false,
+        "context": "547:   int3 = 0.\n548:   do k=1, npoints\n549:      int3 = int3 + vari(k)*varj(k)*vark(k)*weight_79(k)\n550:   enddo\n551: end function int3",
+        "file": "nintegrate_mod.f90",
+        "line": 549
+      },
+      {
+        "assignment_candidate": false,
+        "context": "562:   int4 = 0.\n563:   do k=1, npoints\n564:      int4 = int4 + vari(k)*varj(k)*vark(k)*varl(k)*weight_79(k)\n565:   enddo\n566: end function int4",
+        "file": "nintegrate_mod.f90",
+        "line": 564
+      },
+      {
+        "assignment_candidate": false,
+        "context": "577:   int5 = 0.\n578:   do k=1, npoints\n579:      int5 = int5 + vari(k)*varj(k)*vark(k)*varl(k)*varm(k)*weight_79(k)\n580:   enddo\n581: end function int5",
+        "file": "nintegrate_mod.f90",
+        "line": 579
+      },
+      {
+        "assignment_candidate": false,
+        "context": "592:   intx0 = 0.\n593:   do k=1, npoints\n594:      intx0 = intx0 + weight_79(k)\n595:   enddo\n596: end function intx0",
+        "file": "nintegrate_mod.f90",
+        "line": 594
+      },
+      {
+        "assignment_candidate": false,
+        "context": "608:   intx1 = 0.\n609:   do k=1, npoints\n610:      intx1 = intx1 + vari(:,k)*weight_79(k)\n611:   enddo\n612: end function intx1",
+        "file": "nintegrate_mod.f90",
+        "line": 610
+      },
+      {
+        "assignment_candidate": false,
+        "context": "625:   intx2 = 0.\n626:   do k=1, npoints\n627:      intx2 = intx2 + vari(:,k)*varj(k)*weight_79(k)\n628:   enddo\n629: end function intx2",
+        "file": "nintegrate_mod.f90",
+        "line": 627
+      },
+      {
+        "assignment_candidate": false,
+        "context": "642:   intx3 = 0.\n643:   do k=1, npoints\n644:      intx3 = intx3 + vari(:,k)*varj(k)*vark(k)*weight_79(k)\n645:   enddo\n646: end function intx3",
+        "file": "nintegrate_mod.f90",
+        "line": 644
+      },
+      {
+        "assignment_candidate": false,
+        "context": "659:   intx4 = 0.\n660:   do k=1, npoints\n661:      intx4 = intx4 + vari(:,k)*varj(k)*vark(k)*varl(k)*weight_79(k)\n662:   enddo\n663: end function intx4",
+        "file": "nintegrate_mod.f90",
+        "line": 661
+      },
+      {
+        "assignment_candidate": false,
+        "context": "676:   intx5 = 0.\n677:   do k=1, npoints\n678:      intx5 = intx5 + vari(:,k)*varj(k)*vark(k)*varl(k)*varm(k)*weight_79(k)\n679:   enddo\n680: end function intx5",
+        "file": "nintegrate_mod.f90",
+        "line": 678
+      },
+      {
+        "assignment_candidate": false,
+        "context": "693:   intx6 = 0.\n694:   do k=1, npoints\n695:      intx6 = intx6 + vari(:,k)*varj(k)*vark(k)*varl(k)*varm(k)*varn(k)*weight_79(k)\n696:   enddo\n697: end function intx6",
+        "file": "nintegrate_mod.f90",
+        "line": 695
+      },
+      {
+        "assignment_candidate": false,
+        "context": "710:   intx7 = 0.\n711:   do k=1, npoints\n712:      intx7 = intx7 + vari(:,k)*varj(k)*vark(k)*varl(k)*varm(k)*varn(k)*varo(k)*weight_79(k)\n713:   enddo\n714: end function intx7",
+        "file": "nintegrate_mod.f90",
+        "line": 712
+      },
+      {
+        "assignment_candidate": false,
+        "context": "725:   intxx0 = 0.\n726:   do k=1, npoints\n727:      intxx0 = intxx0 + weight_79(k)\n728:   enddo\n729: end function intxx0",
+        "file": "nintegrate_mod.f90",
+        "line": 727
+      },
+      {
+        "assignment_candidate": false,
+        "context": "742:   do k=1, npoints\n743:      do i=1, dofs_per_element\n744:         intxx1(i,:) = intxx1(i,:) + vari(i,k)*weight_79(k)\n745:      end do\n746:   enddo",
+        "file": "nintegrate_mod.f90",
+        "line": 744
+      },
+      {
+        "assignment_candidate": false,
+        "context": "761:      do i=1, dofs_per_element\n762:         do j=1, dofs_per_element\n763:            intxx2(i,j) = intxx2(i,j) + vari(i,k)*varj(j,k)*weight_79(k)\n764:         end do\n765:      end do",
+        "file": "nintegrate_mod.f90",
+        "line": 763
+      },
+      {
+        "assignment_candidate": false,
+        "context": "782:      do i=1, dofs_per_element\n783:         do j=1, dofs_per_element\n784:            intxx3(i,j) = intxx3(i,j) + vari(i,k)*varj(j,k)*vark(k)*weight_79(k)\n785:         end do\n786:      end do",
+        "file": "nintegrate_mod.f90",
+        "line": 784
+      },
+      {
+        "assignment_candidate": false,
+        "context": "804:         do j=1, dofs_per_element\n805:            intxx4(i,j) = intxx4(i,j) + &\n806:                 vari(i,k)*varj(j,k)*vark(k)*varl(k)*weight_79(k)\n807:         end do\n808:      end do",
+        "file": "nintegrate_mod.f90",
+        "line": 806
+      },
+      {
+        "assignment_candidate": false,
+        "context": "826:         do j=1, dofs_per_element\n827:            intxx5(i,j) = intxx5(i,j) + &\n828:                 vari(i,k)*varj(j,k)*vark(k)*varl(k)*varm(k)*weight_79(k)\n829:         end do\n830:      end do",
+        "file": "nintegrate_mod.f90",
+        "line": 828
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1941:              !igrid=pdata(ipart)%x(2)/(twopi/200)+1\n1942:              !ratio=(pdata(ipart)%x(2)-phigrid(igrid))/(phigrid(igrid+1)-phigrid(igrid))\n1943:              !philoss(igrid)=philoss(igrid)+nre179(part_index,OP_1)*weight_79(part_index)*(1-ratio)\n1944:              !if (igrid<200) then\n1945:                  !philoss(igrid+1)=philoss(igrid+1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio",
+        "file": "runaway_advection.f90",
+        "line": 1943
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1943:              !philoss(igrid)=philoss(igrid)+nre179(part_index,OP_1)*weight_79(part_index)*(1-ratio)\n1944:              !if (igrid<200) then\n1945:                  !philoss(igrid+1)=philoss(igrid+1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio\n1946:              !else\n1947:                  !philoss(1)=philoss(1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio",
+        "file": "runaway_advection.f90",
+        "line": 1945
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1945:                  !philoss(igrid+1)=philoss(igrid+1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio\n1946:              !else\n1947:                  !philoss(1)=philoss(1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio\n1948:              !endif\n1949:              !igrid=(pdata(ipart)%x(3)+1.5)/(3./200)+1",
+        "file": "runaway_advection.f90",
+        "line": 1947
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1949:              !igrid=(pdata(ipart)%x(3)+1.5)/(3./200)+1\n1950:              !ratio=(pdata(ipart)%x(3)-zgrid(igrid))/(zgrid(igrid+1)-zgrid(igrid))\n1951:              !zloss(igrid)=zloss(igrid)+nre179(part_index,OP_1)*weight_79(part_index)*(1-ratio)\n1952:              !if (igrid<200) then\n1953:                  !zloss(igrid+1)=zloss(igrid+1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio",
+        "file": "runaway_advection.f90",
+        "line": 1951
+      },
+      {
+        "assignment_candidate": false,
+        "context": "1951:              !zloss(igrid)=zloss(igrid)+nre179(part_index,OP_1)*weight_79(part_index)*(1-ratio)\n1952:              !if (igrid<200) then\n1953:                  !zloss(igrid+1)=zloss(igrid+1)+nre179(part_index,OP_1)*weight_79(part_index)*ratio\n1954:              !endif\n1955:           !endif",
+        "file": "runaway_advection.f90",
+        "line": 1953
+      }
+    ]
+  },
+  "saved_coefficients_sufficient_for_exact_int2_reconstruction_verified": false,
+  "saved_run_origin_job_id": "20261029-130-native-current-drive-geometry-weight-sensitivity",
+  "schema_version": 1,
+  "shot_handoff_validated": false,
+  "shot_ids": [],
+  "source_files_scanned": 115,
+  "source_files_with_hits": [
+    {
+      "file": "auxiliary_fields.f90",
+      "sha256": "a0ca3e58b33cad0f9e0927a0960dea9d3ada2a800cc7968ad131c42b8274fc68"
+    },
+    {
+      "file": "bootstrap.f90",
+      "sha256": "7c6d28c09a89c26065a8d004c8fb2e2de2460cf0dafb9af561a49bd919f162c6"
+    },
+    {
+      "file": "diagnostics.f90",
+      "sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+    },
+    {
+      "file": "electric_field.f90",
+      "sha256": "b371942dc3ce84d846ce5056ee61e9d45db64b9d1e1bbdf97c0074be1e8f14ce"
+    },
+    {
+      "file": "electrostatic_potential.f90",
+      "sha256": "7e08c82c1164d9e9d85c0f7dd96ec24b73055c6bc6ea232da3b7cc6c0ee54b8e"
+    },
+    {
+      "file": "error_estimate.f90",
+      "sha256": "d16db5e5f2bea0f2e8e2a2196c193f65aaeb1365fb1265dfc8f2096ac4540625"
+    },
+    {
+      "file": "gradshafranov.f90",
+      "sha256": "0bb8c93f8c550c0cee9d48b62c0674de8c9a2e77554c77be3b94703460e29d0b"
+    },
+    {
+      "file": "gyroviscosity.f90",
+      "sha256": "b0f76cfaeb406f6c74a555b7a5fe489c70e6781ac6d7bce6a437cd345032c9e8"
+    },
+    {
+      "file": "harned_mikic.f90",
+      "sha256": "9867a0fb14d21c387352cbdc03469039da135691f53101f6c87a4a2e211356b7"
+    },
+    {
+      "file": "init_basicj.f90",
+      "sha256": "fe476d75b630d499b0e5135ac478e3cb88675daaf9d82d7a12a3fce1c30def5d"
+    },
+    {
+      "file": "init_common.f90",
+      "sha256": "c6e1d5482a020112680d6a6a87cf8df4dac9f7bf0a3213abfe0058664884f840"
+    },
+    {
+      "file": "init_conds.f90",
+      "sha256": "65982bae81018839230ba51c673b5bbe826713b361a5c5d462d50199c4ac7c32"
+    },
+    {
+      "file": "init_cyl.f90",
+      "sha256": "4c393228cb8128861bc335efeeca21702e72c7befc6a44bf93ca0962e0612a67"
+    },
+    {
+      "file": "init_vmec.f90",
+      "sha256": "aefc927c382c32ed8bc4fd044d95be1ed09f9c6659d04a6e5dc518513305c277"
+    },
+    {
+      "file": "ludef_t.f90",
+      "sha256": "6fbe0a73d185059d1ab7afb9e078a3a62b751af5d0dc97af33602c755810d89a"
+    },
+    {
+      "file": "ludef_t_gpu.f90",
+      "sha256": "4ef63971d791f5bdf8bd63e8a2d3b0714a8e20d325363425195d182746c89f22"
+    },
+    {
+      "file": "m3dc1_nint.f90",
+      "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+    },
+    {
+      "file": "metricterms_new.f90",
+      "sha256": "e50c781eeafba31795f1d46f12018d8f6e24a1f7d1e308442dd492baf1fbbd12"
+    },
+    {
+      "file": "metricterms_new_gpu.f90",
+      "sha256": "1ff9c0c687be9a234fa539b500860664346430cd54d456eae3d2cd9bbe3c9c25"
+    },
+    {
+      "file": "newvar.f90",
+      "sha256": "954820f3fcafc10fc74315717dce61d7e8b5673ffeb836ea273153b0c6c71b90"
+    },
+    {
+      "file": "nintegrate_mod.f90",
+      "sha256": "fd4be567e954d9df18e7ed83d3f622816a48c939832a4b7df700be3746471d00"
+    },
+    {
+      "file": "parallel_heat_flux.f90",
+      "sha256": "d315935580b6559f792203f1711f59e9db67eec0cfcc7cd44b8ad99eeab23ab4"
+    },
+    {
+      "file": "particle.f90",
+      "sha256": "037a30faae467dd9e1d8069b02047b7bde3108a72ebf2f44d23889f524ea1b64"
+    },
+    {
+      "file": "particle_com.f90",
+      "sha256": "951dc86370493cc90adbb47eb45022d6cc0095737fb7690afc66af69bbffe31f"
+    },
+    {
+      "file": "rmp.f90",
+      "sha256": "557750107e1d3c455c32cc5d923f897dca326d337973c0878096978e93f4649b"
+    },
+    {
+      "file": "runaway.f90",
+      "sha256": "4661783e539f981234b5c755264c5b08b4b44866c2b298c133423ee2d56a1c61"
+    },
+    {
+      "file": "runaway_advection.f90",
+      "sha256": "615f978a560a88083cf2b496540446cc934fbd226dc29d09da7dd88364e25fee"
+    },
+    {
+      "file": "temperature_plots.f90",
+      "sha256": "0b54132f0c4d510b601336df9ed365159c112af7960b32b64cc98b87fab27bad"
+    },
+    {
+      "file": "transport.f90",
+      "sha256": "993e314c58dcb63dadaffcaf7bebfdc91863575ce731830dc86c2b746a45b674"
+    },
+    {
+      "file": "two_fluid.f90",
+      "sha256": "569d559cd242dfe4bada3db5b5cef6b1e89fef820bc07bb9d7226f9240ab2a20"
+    },
+    {
+      "file": "wall.f90",
+      "sha256": "d20999dfeccb545531eadf534f00f861479bba2914a2146d772da64962f62eec"
+    }
+  ],
+  "source_files_with_hits_count": 31,
+  "source_mode": 4,
+  "temporal_convergence_validated": false,
+  "timestamp_utc": "2026-10-31T01:51:37.086958+00:00",
+  "token_hit_counts_capped": {
+    "OP_GS": 45,
+    "pst79": 45,
+    "ri2_79": 45,
+    "weight_79": 42
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
