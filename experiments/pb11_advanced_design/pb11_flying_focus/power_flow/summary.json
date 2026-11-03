@@ -1,0 +1,31 @@
+{
+  "classification": "HYBRID_ALPHA_LOOP_CONDITIONAL_WINDOW_IDENTIFIED",
+  "target_proton_lab_keV": 638.0,
+  "current_Te_keV": 16.67,
+  "current_Ti_keV": 55.358,
+  "repo_DT_alpha_to_pB11_alpha_power_ratio": 1.153375427999846,
+  "repo_DT_alpha_assist_fraction": 0.85,
+  "selected_boron_rich_result": {
+    "fB": 1.0,
+    "electron_drag_fraction_current": 0.8960991364896062,
+    "threshold_Te_keV_with_repo_DT_assist": {
+      "0.6": 112.07000000000136,
+      "0.75": 78.17000000000087,
+      "0.9": 62.17000000000065
+    },
+    "threshold_Te_keV_pB11_only": {
+      "0.6": "not_reached_500",
+      "0.75": "not_reached_500",
+      "0.9": 294.97000000000395
+    }
+  },
+  "interpretation": "At current Te the fast-proton loop does not close. Because ~90% of classical drag is electronic in the boron-rich case, a localized higher electron velocity scale plus efficient alpha-to-fast-proton channeling can create a conditional hybrid closure window. This is not yet an ignition prediction.",
+  "guardrails": [
+    "Electron-tail removal that suppresses bremsstrahlung is NOT assumed to suppress fast-proton drag.",
+    "The electron-drag reduction represented by higher Maxwellian-equivalent Te must be replaced by an actual non-Maxwellian distribution calculation.",
+    "DT alpha assist diverts DT alpha self-heating and therefore is not free power.",
+    "Direct conversion and alpha channeling compete for the same p-B11 alpha energy; this audit conserves that partition.",
+    "Bremsstrahlung uses a simple free-free threshold screen and does not include relativistic/Gaunt/opacity corrections.",
+    "No claim of p-B11 ignition or reactor net power is made."
+  ]
+}

@@ -1,0 +1,4 @@
+evidence,value,use_in_ignition_bridge,not_used_as
+OpenMC be_outer_kill 55cm attenuation,0.99971,blanket neutron/photon attenuation only,proton stopping suppression
+Liquid-wall proxy wall-load relief,18.12%,engineering/wall loss context,core Coulomb-drag multiplier
+FAIR-MAST TCT best policy proxy loss reduction,51.5%,confinement/control context,validated ignition multiplier

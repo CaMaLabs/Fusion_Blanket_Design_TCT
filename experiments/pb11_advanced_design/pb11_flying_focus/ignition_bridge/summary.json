@@ -1,0 +1,45 @@
+{
+  "classification": "CONDITIONAL_IGNITION_ASSISTANCE_CANDIDATE",
+  "optimized_ff_target_keV": 600.0,
+  "optimized_packet_mean_sigma_barn": 1.0809306953676316,
+  "model": "updated 2026 p-11B cross-section sigma*v exposure + FF phase-energy accounting",
+  "architecture_credit": {
+    "topology": "be_outer_kill / be_outer_killer",
+    "li_current": 0.1,
+    "openmc_55cm_attenuation": 0.99971,
+    "openmc_55cm_tbr": 2.2155,
+    "liquid_wall_load_relief_fraction": 0.1812023162411085,
+    "liquid_wall_temperature_relief_fraction": 0.2625001750076439,
+    "liquid_wall_front_heat_relief_fraction": 0.1657681940700808,
+    "fair_mast_tct_proxy_loss_reduction": 0.515,
+    "boundary": "These are kept as separate neutronics/wall/confinement credits and are not multiplied into proton stopping."
+  },
+  "relative_sigma_v_exposure_vs_one_shot_600keV": {
+    "1_keV_loss_per_encounter": 1.0606055537751486,
+    "2_keV_loss_per_encounter": 1.0840699692869253,
+    "5_keV_loss_per_encounter": 1.2600407030135845,
+    "10_keV_loss_per_encounter": 1.8448817255969243,
+    "20_keV_loss_per_encounter": 3.4549941484583515,
+    "35_keV_loss_per_encounter": 5.779829299845752,
+    "50_keV_loss_per_encounter": 7.9123552605083125
+  },
+  "peer_reviewed_nmpd_bound": {
+    "source": "Liu et al., Plasma Phys. Control. Fusion 68 (2026) 065045, DOI 10.1088/1361-6587/ae72c9",
+    "optimistic_fusion_power_enhancement_fraction": 0.25,
+    "optimistic_ignition_tauE_reduction_factor": 10.0,
+    "all_species_recirculating_power_burden_vs_pp_only": "2-3x"
+  },
+  "selected_energy_boundaries_at_85pct_usable_incremental_fusion": [
+    {"loss_keV": 1.0, "phase_recovery": 0.8, "collision_burden": 3.0, "required_ff_useful_efficiency": 0.6497869161723457},
+    {"loss_keV": 2.0, "phase_recovery": 1.0, "collision_burden": 3.0, "required_ff_useful_efficiency": 0.4357773548579514},
+    {"loss_keV": 5.0, "phase_recovery": 1.0, "collision_burden": 2.0, "required_ff_useful_efficiency": 0.7658817321437104},
+    {"loss_keV": 10.0, "phase_recovery": 1.0, "collision_burden": 1.0, "required_ff_useful_efficiency": 0.7502405816941193}
+  ],
+  "cross_section_source": "Wang et al., Revisiting p-11B Fusion: Updated Cross-sections, Reactivity, and Energy Balance, arXiv:2601.00241 (2026)",
+  "guardrails": [
+    "The 23.033% baseline burnup remains a repository surrogate anchor, not a measured burn fraction.",
+    "OpenMC does not transport protons; blanket attenuation is not proton stopping suppression.",
+    "The missing decisive input is physical boron density/areal density/path length and the corresponding hot-plasma stopping/straggling per encounter.",
+    "FF has not yet been demonstrated to sustain the required low-energy non-Maxwellian distribution at reactor scale."
+  ]
+}
