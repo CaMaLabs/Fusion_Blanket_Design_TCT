@@ -1,0 +1,120 @@
+ Writing kprad_n_13
+ Writing kprad_particle_source_13
+ Writing kprad_n_14
+ Writing kprad_particle_source_14
+ Writing kprad_n_15
+ Writing kprad_particle_source_15
+ Writing kprad_n_16
+ Writing kprad_particle_source_16
+ Writing kprad_n_17
+ Writing kprad_particle_source_17
+ Writing kprad_n_18
+ Writing kprad_particle_source_18
+ Writing kprad_sigma_e
+ Writing kprad_sigma_i
+ Writing kprad_rad
+ Writing kprad_brem
+ Writing kprad_ion
+ Writing kprad_reck
+ Writing kprad_recp
+ Writing eta
+ Writing visc
+ Writing visc_c
+ Writing kappa
+ Writing kappar
+ Writing denm
+ Writing wall_dist
+ Writing jphi
+ Writing torque_em
+ Writing torque_ntv
+ Writing bdotgradp
+ Writing bdotgradt
+ Writing zeff
+ Writing kprad_totden
+ Writing rad_source
+ Writing linerad_source
+ Writing bremrad_source
+ Writing ionrad_source
+ Writing reckrad_source
+ Writing recprad_source
+ Writing magnetic_region
+ Writing mesh_zone
+ Writing E_R
+ Writing E_PHI
+ Writing E_Z
+ Writing E_par
+ Writing eta_J
+   Done writing fields            0
+  Writing wall regions
+ linking time_001.h5        
+   End of hdf5_write_time_slice 
+OUTPUT: hdf5_write_time_slice    5  9.31340000E-02  1.03030000E-01
+   writing timings
+OUTPUT: hdf5_write_timings       5  1.52200000E-03  1.04552000E-01    0
+   flushing data to file
+OUTPUT: hdf5_flush               5  6.95000000E-04  6.95000000E-04    0
+ Done time loop.
+   finalizing output...
+   deleting matrices...
+   unloading mesh...
+ destroy field  1
+ destroy field  2
+ destroy field  3
+ destroy field  4
+ destroy field  5
+ destroy field  6
+ destroy field  7
+ destroy field  8
+ destroy field  9
+ destroy field 10
+ destroy field 11
+ destroy field 12
+ destroy field 13
+ destroy field 14
+ destroy field 15
+ destroy field 16
+ destroy field 17
+ destroy field 18
+ destroy field 19
+ destroy field 20
+ destroy field 21
+ destroy field 22
+ destroy field 23
+ destroy field 24
+ destroy field 25
+ destroy field 26
+ destroy field 27
+ destroy field 28
+ destroy field 29
+ destroy field 30
+ destroy field 31
+ destroy field 32
+ destroy field 33
+ destroy field 34
+ destroy field 202
+ destroy field 203
+ destroy field 204
+ destroy field 205
+ destroy field 206
+ destroy field 207
+ destroy field 208
+ destroy field 209
+ destroy field 210
+ destroy field 211
+ destroy field 212
+ destroy field 213
+ destroy field 214
+ destroy field 215
+ destroy field 216
+ destroy field 217
+ destroy field 218
+ destroy field 219
+ destroy field 220
+
+* [M3D-C1 INFO] run time: 21.5921 (sec)
+   finalizing PETSC...
+ ==============================================================
+ END DATE: 2026 08 20   TIME: 06:42:45.3
+
+   finalizing MPI...
+ Stopped at           0

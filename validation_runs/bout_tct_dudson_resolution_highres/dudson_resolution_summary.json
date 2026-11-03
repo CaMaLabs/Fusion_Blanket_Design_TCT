@@ -1,0 +1,76 @@
+{
+  "claim_boundary": "Global fixed-grid BOUT++ resolution falsification only. This is not adaptive mesh refinement, not a formal reconnection-rate measurement, and not M3D-C1/topology-changing validation.",
+  "effects_by_grid": [
+    {
+      "controlled_peak_sheet_fwhm_cells": 12.0,
+      "integrated_J_reduction_fraction": 0.6850300080488881,
+      "magnetic_energy_final_change_fraction": -0.9508163458993804,
+      "min_peak_sheet_fwhm_cells": 12.0,
+      "nx": 256,
+      "nz": 256,
+      "peak_J_reduction_fraction": 0.14320633173612995,
+      "psi_span_rate_proxy_change_fraction": 6.877475944613876,
+      "uncontrolled_peak_sheet_fwhm_cells": 12.0
+    },
+    {
+      "controlled_peak_sheet_fwhm_cells": 18.0,
+      "integrated_J_reduction_fraction": 0.6854429357087666,
+      "magnetic_energy_final_change_fraction": -0.9508433962135425,
+      "min_peak_sheet_fwhm_cells": 18.0,
+      "nx": 384,
+      "nz": 384,
+      "peak_J_reduction_fraction": 0.14332749962823677,
+      "psi_span_rate_proxy_change_fraction": 5.871414021762056,
+      "uncontrolled_peak_sheet_fwhm_cells": 18.0
+    },
+    {
+      "controlled_peak_sheet_fwhm_cells": 24.0,
+      "integrated_J_reduction_fraction": 0.6855924599716687,
+      "magnetic_energy_final_change_fraction": -0.9508571237402103,
+      "min_peak_sheet_fwhm_cells": 24.0,
+      "nx": 512,
+      "nz": 512,
+      "peak_J_reduction_fraction": 0.14336391448782237,
+      "psi_span_rate_proxy_change_fraction": 5.449936909266846,
+      "uncontrolled_peak_sheet_fwhm_cells": 24.0
+    }
+  ],
+  "finest_pair_convergence": {
+    "finest_pair": [
+      384,
+      512
+    ],
+    "integrated_J_effect_relative_difference": 0.00021809496403787083,
+    "peak_J_effect_relative_difference": 0.00025400296661614024,
+    "psi_span_rate_effect_relative_difference": 0.07178460093821172
+  },
+  "frozen_physics": {
+    "controls": [
+      0.0,
+      0.8
+    ],
+    "eta": 0.00075,
+    "island_seed": 0.006,
+    "nu": 0.001,
+    "omega_seed": 0.01,
+    "psi_amp": 0.08,
+    "sheet_width_normalized_x": 0.055
+  },
+  "generated_utc": "2026-08-19T20:19:53.163026+00:00",
+  "git_commit": "95f19a164fa69ab5ff52734316eddd7b25e73e05",
+  "m3dc1_handoff_observables": [
+    "current-sheet width/thickness versus time",
+    "peak and integrated current density",
+    "magnetic topology / island evolution",
+    "reconnection rate from a topology-aware flux diagnostic",
+    "magnetic-energy release",
+    "controlled-versus-uncontrolled event timing"
+  ],
+  "resolution_gate": {
+    "effect_converged": true,
+    "effect_convergence_tolerance": 0.1,
+    "finest_sheet_resolved": true,
+    "min_sheet_cells_heuristic": 8.0
+  },
+  "status": "FIXED_GRID_EFFECT_CONVERGED_AT_CONFIGURED_GATE"
+}

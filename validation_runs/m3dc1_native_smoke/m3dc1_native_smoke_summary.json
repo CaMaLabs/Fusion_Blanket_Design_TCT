@@ -1,0 +1,19 @@
+{
+  "status": "NATIVE_M3DC1_EXECUTION_PASS_REFERENCE_REGRESSION_UNRESOLVED",
+  "official_commit": "e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b",
+  "reference_commit": "8964f6bfebc3be3e2a351123d5da4e9339461132",
+  "current_48_rank_run": "/home/ubuntu/m3dc1_runs/KPRAD_2D_48rank_official",
+  "current_48_rank_return_code": "return_code=0",
+  "current_48_rank_compare": "Files differ at time 0\nemagp  (base) =  0.11787\nemagp  (new) =  2.8222e+24\nFractional difference =  2.3943327394587255e+25\nTolerance =  0.001",
+  "singlepart_diagnostic_run": "/home/ubuntu/m3dc1_runs/KPRAD_2D_1rank_singlepart_with_geqdsk_diagnostic",
+  "singlepart_diagnostic_compare_rc": 0,
+  "reference_c1ke_last_changed": "8964f6bf",
+  "checked_in_mesh_introduced": "62d5cbc7",
+  "provenance_explanation": "The bundled C1ke matches current source when using the stored single-part analytic-2K0.smb. The later checked-in 48-part mesh triggers zero volume and huge magnetic energies at t=0 under current zone classification.",
+  "historical_split_smb": {
+    "source": "/home/ubuntu/M3DC1-reference-era/m3dc1_scorec/test/create_smb/split_smb.cc",
+    "make_model_compiled": true,
+    "split_smb_compiled": true,
+    "split_mesh_status": "make_model_rc=0\nsplit_smb_rc=134"
+  }
+}

@@ -1,0 +1,34 @@
+e17c0b7ee06e6f19955d8baf65e8dd6452f5bd4b
+ M unstructured/CMakeLists.txt
+?? build-ubuntu-2d/
+
+Local patch:
+diff --git a/unstructured/CMakeLists.txt b/unstructured/CMakeLists.txt
+index ac86dd2a..f2e67415 100644
+--- a/unstructured/CMakeLists.txt
++++ b/unstructured/CMakeLists.txt
+@@ -54,6 +54,7 @@ set(SOURCES
+     read_gyro.f90
+     read_neo.f90
+     region.f90
++    signal_handler.f90
+     radiation.f90
+     element.f90
+     field.f90
+
+Binary:
+-rwxrwxr-x 1 ubuntu ubuntu 3.3M Aug 19 21:05 build-ubuntu-2d/unstructured/m3dc1_2d
+build-ubuntu-2d/unstructured/m3dc1_2d: ELF 64-bit LSB pie executable, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=9baadfcf2d5cd1bcbab2cbd4c4561cb2e1e43520, for GNU/Linux 3.2.0, not stripped
+
+Spack loaded:
+==> In environment m3dc1-deps (9 root specs)
+[+] fftw+mpi
+[+] gsl
+[+] hdf5+fortran+mpi
+[+] netcdf-c+mpi
+[+] netcdf-fortran
+[+] openmpi
+[+] petsc+complex+fortran+hdf5+mpi+mumps+superlu-dist
+[+] pumi+shared
+[+] zoltan+fortran+mpi+parmetis
+

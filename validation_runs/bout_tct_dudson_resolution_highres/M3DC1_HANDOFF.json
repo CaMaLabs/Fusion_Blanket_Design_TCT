@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "Global fixed-grid BOUT++ resolution falsification only. This is not adaptive mesh refinement, not a formal reconnection-rate measurement, and not M3D-C1/topology-changing validation.",
+  "finest_grid": {
+    "controlled_peak_sheet_fwhm_cells": 24.0,
+    "integrated_J_reduction_fraction": 0.6855924599716687,
+    "magnetic_energy_final_change_fraction": -0.9508571237402103,
+    "min_peak_sheet_fwhm_cells": 24.0,
+    "nx": 512,
+    "nz": 512,
+    "peak_J_reduction_fraction": 0.14336391448782237,
+    "psi_span_rate_proxy_change_fraction": 5.449936909266846,
+    "uncontrolled_peak_sheet_fwhm_cells": 24.0
+  },
+  "git_commit": "95f19a164fa69ab5ff52734316eddd7b25e73e05",
+  "observables": [
+    "current-sheet width/thickness versus time",
+    "peak and integrated current density",
+    "magnetic topology / island evolution",
+    "reconnection rate from a topology-aware flux diagnostic",
+    "magnetic-energy release",
+    "controlled-versus-uncontrolled event timing"
+  ],
+  "source": "bout_tct_dudson_resolution_audit",
+  "status": "FIXED_GRID_EFFECT_CONVERGED_AT_CONFIGURED_GATE"
+}
