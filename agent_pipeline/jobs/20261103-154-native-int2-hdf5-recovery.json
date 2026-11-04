@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261103-154-native-int2-hdf5-recovery",
+  "parent_result_job_id": "20261103-153-native-int2-attested-replay",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_replay_hdf5_diagnostic_recovery",
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_hdf5_recovery_154.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_hdf5_recovery_154"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_hdf5_recovery_154/native_int2_hdf5_recovery_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Repair job153 HDF5 diagnostic-path KeyError by inspecting actual saved frame/C1.h5 datasets; reuse all four already completed native solver runs without rerunning physics or changing source; preserve missing current diagnostics as null and zero equivalence tolerance.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_INT2_ATTESTED_REPLAY_PIPELINE_BLOCKED",
+    "parent_solver_runs": 4,
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "normalized_native_m3dc1_only": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "independent_int2_operator_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "causal_controller_authority_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
