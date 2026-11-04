@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "20261103-154-native-int2-hdf5-recovery",
+  "processed_result_job_id": "20261103-154-native-int2-hdf5-recovery",
+  "processed_result_receipt_sha": "0321380dc314976dc84645f13ea11202a81a1c9f",
+  "validation_summary_sha256": "e65233cc2e8f8f275d691c5660029abbb63bdafb504d0c9c632f4d9a32a72d99",
+  "log_sha256": "2837165e948475036656d2ee698414f75de4b3f32e835b01e1f43fb528dcb68f",
+  "classification": "M3DC1_NATIVE_INT2_HDF5_RECOVERY_DIAGNOSTIC_COMPLETE",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_INT2_HDF5_RECOVERY_DIAGNOSTIC_COMPLETE",
+  "job_class": "bounded_native_m3dc1_replay_hdf5_diagnostic_recovery",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "pipeline_failure": false,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "return_code": 0,
+    "elapsed_seconds": 0.7652146816253662,
+    "physics_solver_runs": 0,
+    "reused_parent_solver_runs": 4,
+    "frames_recovered": 4,
+    "time_grid": [
+      0,
+      0.01,
+      0.02,
+      0.03
+    ],
+    "max_abs_jphi_zero_delta": 0,
+    "zero_equivalence_pass": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "native_toroidal_current_at_t_003": {
+      "baseline": -0.2074846625328064,
+      "same_mode_zero": -0.2074846625328064,
+      "full_negative": -0.2074853628873825,
+      "full_positive": -0.20748470723628998
+    },
+    "signed_current_delta_at_t_003": {
+      "full_negative": -7.003545761108398e-7,
+      "full_positive": -4.470348358154297e-8
+    }
+  },
+  "successful_milestone": "Recovered all four attested native M3D-C1 HDF5 jphi frames and toroidal-current scalar time series without additional solver runs; baseline versus same-mode-zero jphi max absolute difference was exactly zero across four frames, satisfying the preserved 1e-12 gate.",
+  "interpretation": "Job153's postprocessing HDF5 KeyError was repaired by using actual /fields/jphi frame paths and /scalars/toroidal_current in C1.h5. The zero-command replay is equivalent on recovered jphi. Nonzero command current changes are small and not independently calibrated, and the response is not proof of TCT authority or stabilization. Independent int2 quadrature parity and physical-current conservation remain unvalidated.",
+  "mechanism_effect": "native_zero_case_equivalence_supported; independent_int2_parity_unvalidated; causal_segmented_TCT_stabilization_neutral",
+  "existing_successor_job_ids": [],
+  "new_job_id": null,
+  "followup_scope": "Do not repeat source-only audits or replay four solver cases. After acknowledgement, independently reconstruct the native int2 quadrature/current integral from pinned mesh and jphi with Jacobian/weight parity and compare to recovered native current scalars; only publish a successor if no equivalent work exists and the necessary mesh/weights are available.",
+  "handoff_equivalence": "Four-case saved native jphi baseline/same-mode-zero zero equivalence passed at 1e-12. No experimental shot handoff was evaluated.",
+  "pb11_fidelity_limits": "No p-B11 reaction, proton recirculation, radiation/electron loss, alpha transport/channeling, boron delivery, direct conversion, rotating plasma, rotation/shear, liquid lithium, ignition margin or reactor net power validation.",
+  "m3dc1_claim_boundary": "Normalized-native M3D-C1 HDF5 diagnostic recovery and zero-case replay equivalence only; not independent int2 quadrature parity, calibrated physical current, causal controller-in-loop stabilization, experimental shot handoff, p-B11 or net power.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-11-04T03:18:53Z"
+}
