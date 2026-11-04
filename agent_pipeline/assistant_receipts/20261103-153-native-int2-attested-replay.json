@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "job_id": "20261103-153-native-int2-attested-replay",
+  "processed_result_job_id": "20261103-153-native-int2-attested-replay",
+  "processed_result_receipt_sha": "5ef924e3aed010d64f18723b2c34a0a1fa50b202",
+  "validation_summary_sha256": "9ea4385312c2a3e89b1d581e1a1c927d18c5f2e6f5a625a202eaa7460fcb4a9b",
+  "log_sha256": "83290596e5a77fc0f3c96a818d35e1500028fec0c201df96c028a67c18347de8",
+  "classification": "M3DC1_NATIVE_INT2_ATTESTED_REPLAY_PIPELINE_BLOCKED",
+  "formal_m3dc1_scientific_classification": "M3DC1_NATIVE_INT2_ATTESTED_REPLAY_PIPELINE_BLOCKED",
+  "job_class": "bounded_native_m3dc1_int2_attested_four_case_replay_diagnostic",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "pipeline_failure": true,
+  "scientific_negative_result": false,
+  "scientific_prerequisite_unvalidated": true,
+  "quantitative_result": {
+    "return_code": 1,
+    "elapsed_seconds": 37.338682413101196,
+    "physics_solver_runs": 4,
+    "time_grid_points_per_case": 4,
+    "native_cases": 4,
+    "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "zero_equivalence_evaluated": false
+  },
+  "successful_milestone": "Four actual native M3D-C1 solver cases executed with executable hash matching pinned job130 binary; all four returned time grids [0,0.01,0.02,0.03].",
+  "interpretation": "HDF5 dataset access raised KeyError after the four solver cases completed; this is a postprocessing/data-access pipeline failure, not a negative physical result. No zero-case equivalence or int2 parity was measured. The exact missing HDF5 component was not identified by the original exception; successor154 inventories saved datasets and recovers available jphi/current diagnostics without rerunning the solver.",
+  "mechanism_effect": "neutral_pipeline_blocked",
+  "existing_successor_job_ids": [
+    "20261103-154-native-int2-hdf5-recovery"
+  ],
+  "new_job_id": "20261103-154-native-int2-hdf5-recovery",
+  "followup_scope": "Read-only recovery of already completed four-case HDF5 diagnostics; no physics modifications or new solver runs.",
+  "handoff_equivalence": "Not evaluated due to pipeline KeyError; preserve tolerance 1e-12.",
+  "pb11_fidelity_limits": "No p-B11 reaction, radiation, alpha transport, direct conversion, rotation/shear, ignition or reactor-net-power evidence.",
+  "m3dc1_claim_boundary": "Normalized-native-M3D-C1 four-case replay and binary hash only; no independently reconstructed int2 quadrature, physical-current calibration, causal segmented TCT control or shot handoff.",
+  "frozen_gates_preserved": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "timestamp_utc": "2026-11-04T02:39:15.161Z"
+}
