@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261103-153-native-int2-attested-replay",
+  "parent_result_job_id": "20261030-152-native-ijacobian-runtime-provenance",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_int2_attested_four_case_replay_diagnostic",
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_attested_replay_153.sh",
+  "timeout_seconds": 3600,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_attested_replay_153"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_attested_replay_153/native_int2_attested_replay_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Replace read-only source scanning with four actual native M3D-C1 replay cases; pin executable and source hashes, check zero-mode jphi equivalence and record native current scalars. This is an attested diagnostic, not independent int2 quadrature parity. Do not claim physical current conservation or causal TCT.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_IJACOBIAN_RUNTIME_PROVENANCE_AUDIT_COMPLETE",
+    "expected_parent_summary_sha256": "600540b606a5aed693e818cf7f106bed2c62f520514228fb3201ebf2dc2bea4c",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "normalized_native_m3dc1_only": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "native_int2_operator_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "causal_segmented_electrode_authority_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
