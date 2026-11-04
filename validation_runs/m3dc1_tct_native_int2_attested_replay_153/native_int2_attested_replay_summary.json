@@ -1,0 +1,56 @@
+{
+  "causal_segmented_controller_authority_validated": false,
+  "claim_boundary": "Native replay and HDF5 current scalar evidence only; no independently instrumented int2 quadrature, physical-current calibration, causal TCT, shot handoff, p-B11 or net power.",
+  "classification": "M3DC1_NATIVE_INT2_ATTESTED_REPLAY_PIPELINE_BLOCKED",
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_source_sha256": {
+    "M3Dmodules.f90": "bdf67e1267f177dd7c1826a23b5a0265f612e40c4347521e0642bb8a8e999011",
+    "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+    "m3dc1_nint.f90": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+  },
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "ignition_or_net_power_validated": false,
+  "job_id": "20261103-153-native-int2-attested-replay",
+  "machine": "normalized-native-M3D-C1",
+  "native_int2_operator_parity_validated": false,
+  "parent_result_job_id": "20261030-152-native-ijacobian-runtime-provenance",
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "physics_solver_runs": 4,
+  "pipeline_error": "KeyError: 'Unable to synchronously open object (component not found)'",
+  "schema_version": 1,
+  "shot_ids": [],
+  "time_grids": {
+    "baseline": [
+      0.0,
+      0.01,
+      0.02,
+      0.03
+    ],
+    "full_negative": [
+      0.0,
+      0.01,
+      0.02,
+      0.03
+    ],
+    "full_positive": [
+      0.0,
+      0.01,
+      0.02,
+      0.03
+    ],
+    "same_mode_zero": [
+      0.0,
+      0.01,
+      0.02,
+      0.03
+    ]
+  },
+  "timestamp_utc": "2026-11-04T01:14:37.166136+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
