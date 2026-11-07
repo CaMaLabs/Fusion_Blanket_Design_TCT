@@ -1,0 +1,13 @@
+job_id=20261106-155-native-int2-quadrature-prerequisite
+started_utc=2026-11-07T02:26:36.450800Z
+head_before=5aa835de7906403167be9e8184f048a84c06a2dd
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+{"classification": "M3DC1_NATIVE_INT2_QUADRATURE_INPUT_AUDIT_COMPLETE", "job_id": "20261106-155-native-int2-quadrature-prerequisite", "parity_status": "NOT_EVALUATED_UNTIL_NATIVE_WEIGHT_AND_GEOMETRY_MAPPING_ATTESTED", "prerequisite_blocker": null, "zero_equivalence": {"max_abs_jphi_delta": 0.0, "pass": true}}
+
+finished_utc=2026-11-07T02:26:40.025503Z
+return_code=0

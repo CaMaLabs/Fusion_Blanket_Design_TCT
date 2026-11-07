@@ -1,0 +1,794 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 3.573765754699707,
+  "error": null,
+  "finished_utc": "2026-11-07T02:26:40.025539Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 22915,
+    "selected_result_files": [
+      "validation_runs/m3dc1_tct_native_int2_quadrature_prerequisite_155/native_int2_quadrature_prerequisite_summary.json"
+    ]
+  },
+  "head_before": "5aa835de7906403167be9e8184f048a84c06a2dd",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261106-155-native-int2-quadrature-prerequisite.json",
+  "job_id": "20261106-155-native-int2-quadrature-prerequisite",
+  "log_path": "agent_pipeline/logs/20261106-155-native-int2-quadrature-prerequisite.log",
+  "log_sha256": "63931bef1e30ac2ff99ccf5199d61264b146e1e1fccd2fb58155a2556c6c1a84",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_quadrature_prerequisite_155"
+  ],
+  "return_code": 0,
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_quadrature_prerequisite_155.sh",
+  "runner_sha256": "669c5c94461fd7e74da9e35f6d45ec81021415f35dbca7485d0f3d4b0a60154c",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-11-07T02:26:36.450800Z",
+  "success": true,
+  "summary": {
+    "causal_segmented_controller_authority_validated": false,
+    "claim_boundary": "HDF5 mesh/field/current input availability and attested source only; not independent int2 quadrature parity, calibrated current, causal TCT, p-B11 or net power.",
+    "classification": "M3DC1_NATIVE_INT2_QUADRATURE_INPUT_AUDIT_COMPLETE",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "expected_source_sha256": {
+      "M3Dmodules.f90": "bdf67e1267f177dd7c1826a23b5a0265f612e40c4347521e0642bb8a8e999011",
+      "diagnostics.f90": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655",
+      "m3dc1_nint.f90": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+    },
+    "frames": {
+      "baseline": [
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "30c8d922674eec6a139dd9bf71cbc070351176b8da4c1dc887f2b310d4ab4cc6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "5d35fba5609d8b029950f768eb9e934a948557314e922dc8e790d8127e8b4714",
+          "frame": 0
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "869d412caf13c9d6fff8ea4d75a3046099e5e05fcc5984b0c28d7247aa8e35d2",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "d001e0262dadd1e7fcee5fc1b6ec569ded859479926b950a7f95da933ea2b3d0",
+          "frame": 1
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "0103a15cbf33004b7041069b77ec449f5673e96366649561e592fc21368b944a",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "0aa74ac62a45f65aaeb3b78ecfaf3d869aa4a0aca7c8b4af4579e083452af284",
+          "frame": 2
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "b9cd05b1e67c6bfda2ab3dccd73f732c44fa738ab0ec837dcb6217323e415580",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "afe3dd3ec3858be4ba9077b2804b619e557e09043c3ecf4ce8abfd66c2bdd464",
+          "frame": 3
+        }
+      ],
+      "full_negative": [
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "30c8d922674eec6a139dd9bf71cbc070351176b8da4c1dc887f2b310d4ab4cc6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "43e30c0c59642bf258b09710958a3bc8501f3dba93a700021375150aaf0f068b",
+          "frame": 0
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "219192043794a334da495302c70c3278e5e6dacb719e172c8ab3dc5174ac492f",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "541ff1f3418ed61303f1ac7956fb8903a04bb811c2e26c9059abfafc06021de8",
+          "frame": 1
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "dca657908c2c857eaa0e488ed9849c0ded79106ae79e2b45ff9fdd409b9bb231",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "65de26762219b5fe9b95034bf41079b5475fc6531ed7ce2bb7843627ae3fd4c8",
+          "frame": 2
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "92f00b33aa59de2583de6f1d380058f69fe9c567a965e6bdce0090f0c2e8894e",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "d5f7971c78079952d20baaad8e3e4282f5a0940ff0233525b64361af32687042",
+          "frame": 3
+        }
+      ],
+      "full_positive": [
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "30c8d922674eec6a139dd9bf71cbc070351176b8da4c1dc887f2b310d4ab4cc6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "0d7a0c0884baefcd763b58e0c1039c5c6c08b33e57616c50e3181be2acfad781",
+          "frame": 0
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "6d016885f9592d7b487e8267f5e83557d4a9573124e6441553cb49e0e354c71c",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "9c6be261ab57f8819e25a7179ab66bf77f32a37aa065b63c97bb1ff1b951fda0",
+          "frame": 1
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "0101cc123ed1d125c06cf0208764ecacb1202931417b27837b54c26e7a7a06d8",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "f4b0c66c1faad09608188eec76e9d978f6152edf6cb7491816b89667300e6376",
+          "frame": 2
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "12e47ee5ccb201abecb6668c291df26a30661e0cdc1fe557294ad5f22ccbe694",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "07b07ed31097f2a81b13281df690d28bfc96433d2f1c373b5e9a42765e0a8f66",
+          "frame": 3
+        }
+      ],
+      "same_mode_zero": [
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "30c8d922674eec6a139dd9bf71cbc070351176b8da4c1dc887f2b310d4ab4cc6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "a50f1cf311a4058d7859383db7e3cf19e66c9b3aca8955fd3844a3ea1fbab520",
+          "frame": 0
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "869d412caf13c9d6fff8ea4d75a3046099e5e05fcc5984b0c28d7247aa8e35d2",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "2d6cc62926b37e4448330694e02b58b545124d2c3bc1c9f517e377ed4d9a9eb2",
+          "frame": 1
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "0103a15cbf33004b7041069b77ec449f5673e96366649561e592fc21368b944a",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "1e7370dc4db27fee1175a2899d0ebe3a8fcdc94e86391ec899618100eda2ea0f",
+          "frame": 2
+        },
+        {
+          "datasets": {
+            "/fields/jphi": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "b9cd05b1e67c6bfda2ab3dccd73f732c44fa738ab0ec837dcb6217323e415580",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/fields/mesh_zone": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "1181c05bb9d16cdcf783c104dabb6d69439dbb1503f9dbc347ad3d76717b5bd6",
+              "shape": [
+                1004,
+                20
+              ]
+            },
+            "/mesh/adjacency": {
+              "attrs": {},
+              "dtype": "int32",
+              "sha256": "cc5c2e42136e1ae21a14817308d6e7e73eb23ce5d873f092ede35c798144f8d9",
+              "shape": [
+                1004,
+                3
+              ]
+            },
+            "/mesh/elements": {
+              "attrs": {},
+              "dtype": "float32",
+              "sha256": "c6429cea01d2c28ab03ed1c6ae372b76ef3201d9a28ba9d3d7061b0deeaacd3c",
+              "shape": [
+                1004,
+                8
+              ]
+            },
+            "/scalars/toroidal_current": null
+          },
+          "file_sha256": "ec714fcb73c78bf66e7125812e54cd530c2146595c631a40eb3cb7c610b304e7",
+          "frame": 3
+        }
+      ]
+    },
+    "frozen_gates_preserved": {
+      "Jpk_change_pct_le": 0.1,
+      "width_gain_pct_gt": 0.02
+    },
+    "fuel_track": "fuel_agnostic_control",
+    "ignition_or_net_power_validated": false,
+    "independent_int2_operator_parity_validated": false,
+    "interpretation": "Four attested replay frames inspected; HDF5 dataset shapes, hashes and attributes recorded. No unverified triangle-area proxy is promoted to native int2 parity.",
+    "job_id": "20261106-155-native-int2-quadrature-prerequisite",
+    "machine": "normalized-native-M3D-C1",
+    "parent_receipt_sha256": "654a026d12546685f7fa75b20ba8701d2c36e6af1969529e03ee78d2f923194e",
+    "parent_result_job_id": "20261103-154-native-int2-hdf5-recovery",
+    "parity_status": "NOT_EVALUATED_UNTIL_NATIVE_WEIGHT_AND_GEOMETRY_MAPPING_ATTESTED",
+    "pb11_fidelity_validated": false,
+    "physical_current_calibrated": false,
+    "physics_solver_runs": 0,
+    "required_for_independent_parity": [
+      "verified physical mesh coordinates and element mapping",
+      "native basis evaluation at int2 quadrature points",
+      "native quadrature weights and Jacobian determinant including ijacobian=1 behavior",
+      "toroidal-current diagnostic normalization and integration domain"
+    ],
+    "schema_version": 1,
+    "shot_ids": [],
+    "source_attestation": {
+      "M3Dmodules.f90": {
+        "exists": true,
+        "matches_pin": true,
+        "sha256": "bdf67e1267f177dd7c1826a23b5a0265f612e40c4347521e0642bb8a8e999011"
+      },
+      "diagnostics.f90": {
+        "exists": true,
+        "matches_pin": true,
+        "sha256": "0ff2dd130798bdc0dc6fce3b026851eebe2e933abfc7293e84dd5c10f2426655"
+      },
+      "m3dc1_nint.f90": {
+        "exists": true,
+        "matches_pin": true,
+        "sha256": "15556646264a010de8a416cedc07258b539e013ef6f507ca5e9b60d437e47693"
+      }
+    },
+    "timestamp_utc": "2026-11-07T02:26:39.848015+00:00",
+    "zero_equivalence": {
+      "max_abs_jphi_delta": 0.0,
+      "pass": true
+    },
+    "zero_equivalence_tolerance": 1e-12
+  },
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_quadrature_prerequisite_155/native_int2_quadrature_prerequisite_summary.json",
+  "summary_sha256": "f5dbe340ca1d755840f9acb2f957a576bd3cc4961163547d7c3d2eda1ee647f6",
+  "timed_out": false
+}
