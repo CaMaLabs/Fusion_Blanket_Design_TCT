@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "20261106-155-native-int2-quadrature-prerequisite",
+  "parent_result_job_id": "20261103-154-native-int2-hdf5-recovery",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_int2_quadrature_input_audit",
+  "runner": "tools/tct_mechanism_explorer/run_native_int2_quadrature_prerequisite_155.sh",
+  "timeout_seconds": 300,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_int2_quadrature_prerequisite_155"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_int2_quadrature_prerequisite_155/native_int2_quadrature_prerequisite_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Break supervisor queue-empty deadlock: inspect four saved attested native HDF5 mesh/field datasets and quadrature prerequisites, preserve zero equivalence and frozen gates, identify exact missing geometry/weights before any independent int2 parity claim; no native solver rerun.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_INT2_HDF5_RECOVERY_DIAGNOSTIC_COMPLETE",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "normalized_native_m3dc1_only": true,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct": 0.02,
+    "frozen_jpk_increase_max_pct": 0.1,
+    "independent_int2_operator_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "causal_controller_authority_unvalidated": true,
+    "pb11_fidelity_unvalidated": true,
+    "ignition_and_net_power_unvalidated": true
+  }
+}
