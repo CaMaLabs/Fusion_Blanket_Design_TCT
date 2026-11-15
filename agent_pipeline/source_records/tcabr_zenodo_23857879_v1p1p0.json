@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "record_id": "tcabr-zenodo-23857879-v1p1p0",
+  "machine": "TCABR",
+  "source": "Experimental Plasma Discharge Dataset from the TCABR Tokamak",
+  "source_url": "https://zenodo.org/records/23857879",
+  "doi": "10.5281/zenodo.23857879",
+  "source_created": "2026-11-01",
+  "source_modified": "2026-11-02",
+  "version": "1.1.0",
+  "existing_family_version": {
+    "record": "https://zenodo.org/records/21843354",
+    "version": "1.0.0",
+    "local_cache": "validation_runs/tcabr_cache/tcabr_data.nc",
+    "integrity_verified": true
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "new_family": false,
+  "version_update": true,
+  "metadata_only": true,
+  "discharges_reported": 2173,
+  "disruptive_reported": 489,
+  "non_disruptive_reported": 1684,
+  "sampling_resolution_us": 1,
+  "diagnostics_reported": [
+    "IPlasma (Rogowski)",
+    "VLoop",
+    "BbMirnovN01-N24",
+    "H-alpha when available",
+    "electrode/other channels not independently checked in v1.1.0"
+  ],
+  "format_reported": "tcabr_data.nc (NetCDF), hierarchical by shot ID",
+  "version_manifest_reported": "tcabr_manifest.csv",
+  "shot_ids": "Individual shot IDs require manifest inspection; not inferred from aggregate counts",
+  "license": "Not independently verified for this record; check Zenodo Rights before downloading/reuse",
+  "access": "Record indexed and dataset described as available; direct file URLs, byte counts, checksums, and downloads not independently verified this run",
+  "provenance": "Zenodo publisher metadata and dataset abstract, accessed 2026-11-15",
+  "tct_relevance": [
+    "Mirnov instability and disruption precursor timing",
+    "plasma-current quench 80%-20% event labeling",
+    "cross-version signal-channel and shot-label comparison"
+  ],
+  "missing_prerequisites": [
+    "Verify v1.1.0 Zenodo file download URLs, license, byte sizes and checksums",
+    "Fetch tcabr_manifest.csv and identify added/removed shot IDs versus v1.0.0",
+    "Verify per-shot time coordinates, channel units and Mirnov N23/N24 mapping",
+    "Do not replace verified v1.0.0 cache without explicit checksum and version pinning"
+  ],
+  "scientific_status": "source_version_metadata_registered_not_waveform_ingested",
+  "existing_science_successor": "20261113-156-native-signed-current-redistribution-ab",
+  "new_validation_job_queued": false,
+  "reason_no_job": "Existing outstanding native M3D-C1 science successor Job156; canonical supervisor must acknowledge result before further science successor",
+  "claim_boundary": "Dataset-version discovery only. No new waveforms materialized, no precursor metrics, no causal TCT stabilization or native solver handoff; no p-B11 inference.",
+  "pb11_fidelity": {
+    "applicable": false,
+    "validated": false
+  }
+}
