@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "job_id": "20261113-156-native-signed-current-redistribution-ab",
+  "processed_result_job_id": "20261113-156-native-signed-current-redistribution-ab",
+  "classification": "M3DC1_NATIVE_SIGNED_AB_COMPLETE",
+  "fuel_track": "fuel_agnostic_control",
+  "physics_solver_runs": 4,
+  "zero_equivalence": {
+    "max_abs_metric_delta": 0.0,
+    "pass": true
+  },
+  "scientific_negative_result": true,
+  "causal_TCT_stabilization_validated": false,
+  "pb11_fidelity_validated": false,
+  "claim_boundary": "Native open-loop current redistribution only. No frozen-gate crossing, causal TCT stabilization, L-H transition reproduction or p-B11 validation.",
+  "new_job_id": "20261121-157-native-edge-observables-replay"
+}
