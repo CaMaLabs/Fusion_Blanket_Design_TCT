@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "record_id": "prl-2026-de-lucca-lh-transition-rw25-wy15",
+  "record_type": "theory_literature_reference",
+  "title": "Theory for the Power Threshold of the L-H Transition in Tokamaks",
+  "authors": "B. De Lucca et al.",
+  "journal": "Physical Review Letters",
+  "publication_year": 2026,
+  "doi": "10.1103/rw25-wy15",
+  "primary_publication_url": "https://doi.org/10.1103/rw25-wy15",
+  "news_url": "https://phys.org/news/2026-11-theory-fusion-plasmas-state-energy.html",
+  "news_date": "2026-11-20",
+  "research_institution": "EPFL Swiss Plasma Center",
+  "machine": "tokamak theory compared with existing tokamak measurements; TCV pictured but no specific TCV shots identified",
+  "shot_ids": [],
+  "fuel_track": "fuel_agnostic_control",
+  "new_experimental_shot_family": false,
+  "raw_shot_data_available_from_article": false,
+  "source_type": "theory and simulation, with comparison to existing experiments",
+  "reported_mechanism": [
+    "turbulence-driven edge sheared flows suppress turbulence and improve energy confinement",
+    "magnetic field direction and collisionality alter L-H heating threshold",
+    "threshold density dependence can have a minimum"
+  ],
+  "reported_predictions": {
+    "ITER_minimum_LH_heating_power_MW": 43,
+    "ITER_planned_heating_capacity_MW": 73,
+    "SPARC_minimum_LH_heating_power_MW": 26,
+    "SPARC_planned_heating_capacity_MW": 25
+  },
+  "tct_relevance": [
+    "Treat edge ExB shear and turbulence suppression as separate confinement observables from current-sheet width",
+    "Test whether segmented actuation modifies edge flow shear and L-H access threshold under controlled density, collisionality and field polarity",
+    "Do not infer L-H access or TCT causal control from native current redistribution alone"
+  ],
+  "missing_prerequisites": [
+    "Read primary PRL full text and equations before implementation",
+    "Verify equations, normalization, regime applicability and prediction uncertainties",
+    "Locate original experimental shot IDs, waveforms and licenses before any shot ingestion",
+    "Validate native solver edge turbulence, shear and power balance observables before testing L-H threshold"
+  ],
+  "scientific_status": "literature_reference_registered_not_experimental_waveform_ingested",
+  "new_validation_job_queued": false,
+  "reason_no_job": "Job 156 result lacks assistant acknowledgement; canonical supervisor owns science successor; theory is not a shot ingestion",
+  "pb11_fidelity": {
+    "applicable": false,
+    "validated": false
+  },
+  "claim_boundary": "Published theory and model predictions only; no raw experimental shot ingestion, causal TCT stabilization, L-H transition reproduction, or p-B11 fidelity validated."
+}
