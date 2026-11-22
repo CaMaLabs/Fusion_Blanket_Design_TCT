@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261122-158-native-observables-temporal-convergence",
+  "parent_result_job_id": "20261121-157-native-edge-observables-replay",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_observables_two_level_temporal_convergence",
+  "runner": "tools/tct_mechanism_explorer/run_native_observables_temporal_convergence_158.sh",
+  "timeout_seconds": 10800,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_temporal_convergence_158"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_temporal_convergence_158/native_temporal_convergence_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Six native half-dt (0.0003125, 96 steps) matched current-drive cases against attested job157 coarse-dt native observable summary. Test two-level temporal consistency of width and Jpk response with zero-equivalence and frozen gates; no source-physics changes, no physical current calibration or causal controller claims.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE",
+    "expected_parent_summary_sha256": "130428a1245a2e87068456fef7df721b32ef4c7a8c20d41c9ac4712d1fc3b9e0",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct_exclusive": 0.02,
+    "frozen_jpk_increase_max_pct_inclusive": 0.1,
+    "two_level_relative_effect_change_max": 0.25,
+    "normalized_native_m3dc1_only": true,
+    "independent_int2_parity_unvalidated": true,
+    "physical_current_calibration_unvalidated": true,
+    "causal_controller_authority_unvalidated": true,
+    "pb11_fidelity_unvalidated": true
+  }
+}
