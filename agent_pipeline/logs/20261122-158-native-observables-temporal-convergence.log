@@ -1,0 +1,62 @@
+job_id=20261122-158-native-observables-temporal-convergence
+started_utc=2026-11-22T21:19:51.272610Z
+head_before=fd2ca612b2a5017bbc0590c978339b8779eff5f2
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[native-temporal-convergence] baseline
+[native-temporal-convergence] same_mode_zero
+[native-temporal-convergence] neg_nominal
+[native-temporal-convergence] neg_double
+[native-temporal-convergence] pos_nominal
+[native-temporal-convergence] pos_double
+{
+  "claim_boundary": "Two-level temporal consistency of native open-loop normalized M3D-C1 observables only. Not continuum convergence proof, calibrated physical current, independent int2 parity, segmented closed-loop TCT authority, p-B11 fidelity, ignition or net power.",
+  "classification": "M3DC1_NATIVE_OBSERVABLES_TEMPORAL_CONVERGENCE_PIPELINE_BLOCKED",
+  "controller_in_loop_authority_established": false,
+  "convergence_rule": {
+    "effect_absolute_floor": 1e-12,
+    "effect_relative_change_max": 0.25,
+    "requires_all_nontrivial_W_sheet_and_Jpk_effects": true
+  },
+  "dt_coarse": 0.000625,
+  "dt_fine": 0.0003125,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "130428a1245a2e87068456fef7df721b32ef4c7a8c20d41c9ac4712d1fc3b9e0",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "ignition_or_net_power_validated": false,
+  "independent_int2_parity_validated": false,
+  "job_id": "20261122-158-native-observables-temporal-convergence",
+  "machine": "normalized-native-M3D-C1",
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "parent_result_job_id": "20261121-157-native-edge-observables-replay",
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "pipeline_error": "RuntimeError: TIME_GRID_OR_FRAME_COUNT_MISMATCH:baseline",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "steps_fine": 96,
+  "temporal_convergence_established": false,
+  "timestamp_utc": "2026-11-22T21:19:52.525152+00:00",
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-11-22T21:35:59.035212Z
+return_code=1
