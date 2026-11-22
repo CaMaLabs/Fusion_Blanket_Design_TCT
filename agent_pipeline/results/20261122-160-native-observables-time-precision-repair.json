@@ -1,0 +1,37 @@
+{
+  "branch": "agent/tct-pulse-train-audit",
+  "elapsed_seconds": 1.2662408351898193,
+  "error": null,
+  "finished_utc": "2026-11-22T23:24:07.513322Z",
+  "git_artifact_policy": {
+    "local_only_omitted_count": 0,
+    "local_only_omitted_files": [],
+    "max_file_bytes": 99614720,
+    "max_total_bytes": 268435456,
+    "selected_result_bytes": 0,
+    "selected_result_files": []
+  },
+  "head_before": "f0ed3f5be735cbb5b5fd5964443d98574b9f7b1a",
+  "host": "ubuntu",
+  "job_file": "agent_pipeline/jobs/20261122-160-native-observables-time-precision-repair.json",
+  "job_id": "20261122-160-native-observables-time-precision-repair",
+  "log_path": "agent_pipeline/logs/20261122-160-native-observables-time-precision-repair.log",
+  "log_sha256": "a71940037aa91551a54c145aa45f3d87d366708f1c947e99f965762159683339",
+  "platform": "Linux-7.0.0-14-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_temporal_convergence_160"
+  ],
+  "return_code": 1,
+  "runner": "tools/tct_mechanism_explorer/run_native_observables_time_precision_repair_160.sh",
+  "runner_sha256": "6229943a897bc0955513df16110a888a6a68ee09207fab988938a80a83fc76eb",
+  "runtime_wrapper": "tools/agent_pipeline/run_tct_job.sh",
+  "runtime_wrapper_sha256": "494e9bf2fe9d3c693545d715f909a662a0c7718735aee544bed3f45bf5c336d8",
+  "schema_version": 1,
+  "started_utc": "2026-11-22T23:24:06.246184Z",
+  "success": false,
+  "summary": null,
+  "summary_path": "validation_runs/m3dc1_tct_native_temporal_convergence_160/native_temporal_convergence_precision_summary.json",
+  "summary_sha256": null,
+  "timed_out": false
+}

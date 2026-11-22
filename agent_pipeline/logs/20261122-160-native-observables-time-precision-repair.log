@@ -1,0 +1,16 @@
+job_id=20261122-160-native-observables-time-precision-repair
+started_utc=2026-11-22T23:24:06.246184Z
+head_before=f0ed3f5be735cbb5b5fd5964443d98574b9f7b1a
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+  File "<stdin>", line 23
+    report["repaired_result_job_id"]="20261122-159-native-observables-time-grid-repair"\n    prior=repo/"validation_runs/m3dc1_tct_native_temporal_convergence_159/native_temporal_convergence_repair_summary.json"\n    if not prior.is_file() or pta.sha256_file(prior)!="974002f291c64241dcf8539fd17d83940e06aee7b492eff350e5346d4e4d4434":\n        raise RuntimeError("REPAIR_PARENT_SUMMARY_MISSING_OR_CHANGED")
+                                                                                        ^
+SyntaxError: unexpected character after line continuation character
+
+finished_utc=2026-11-22T23:24:07.513289Z
+return_code=1
