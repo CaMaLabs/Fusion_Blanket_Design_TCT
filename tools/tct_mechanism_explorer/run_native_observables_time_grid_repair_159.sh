@@ -23,9 +23,12 @@ try:
     if not parent_path.is_file() or pta.sha256_file(parent_path)!=report["expected_parent_summary_sha256"]:
         raise RuntimeError("PARENT_SUMMARY_MISSING_OR_CHANGED")
     coarse=json.loads(parent_path.read_text())
+    blocked_path=repo/"validation_runs/m3dc1_tct_native_temporal_convergence_158/native_temporal_convergence_summary.json"
+    if not blocked_path.is_file() or pta.sha256_file(blocked_path)!="b7e0fd02e623846db9c41dd75ae0c0d4a9f84b635b5b2a3baaf6f7602ccd50fc":
+        raise RuntimeError("BLOCKED_PARENT_SUMMARY_MISSING_OR_CHANGED")
     report["repaired_result_job_id"]="20261122-158-native-observables-temporal-convergence"
     report["time_grid_tolerance"]=report["dt_fine"]/1000.0
-    if coarse.get("job_id")!=parent or coarse.get("classification")!="M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE" or coarse.get("zero_equivalence",{}).get("pass") is not True:
+    if coarse.get("job_id")!="20261121-157-native-edge-observables-replay" or coarse.get("classification")!="M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE" or coarse.get("zero_equivalence",{}).get("pass") is not True:
         raise RuntimeError("PARENT_CLASSIFICATION_OR_ZERO_GATE_INVALID")
     pta.install_operator()
     native.install_current_redistribution_operator()
