@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "20261122-158-native-observables-temporal-convergence",
+  "processed_result_job_id": "20261122-158-native-observables-temporal-convergence",
+  "classification": "M3DC1_NATIVE_OBSERVABLES_TEMPORAL_CONVERGENCE_PIPELINE_BLOCKED",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "return_code": 1,
+  "physics_solver_runs_completed": 6,
+  "elapsed_seconds": 967.7617647647858,
+  "source_result_summary_sha256": "b7e0fd02e623846db9c41dd75ae0c0d4a9f84b635b5b2a3baaf6f7602ccd50fc",
+  "source_log_sha256": "718b9a76b5498cfa006aa8c01b3575d64a8e2bd83770a58eeffac643b8b87a87",
+  "pipeline_error": "RuntimeError: TIME_GRID_OR_FRAME_COUNT_MISMATCH:baseline",
+  "scientific_finding": "No valid coarse-vs-fine temporal-consistency comparison was produced. Six native cases executed with attested executable SHA, but postprocessing rejected the baseline output grid before metric comparison. This is an extraction/pipeline gate failure, not a scientific negative or solver failure. The exact count/drift was not recorded in job158.",
+  "mechanism_assessment": "neutral; untested due to postprocessing gate",
+  "zero_equivalence": "not evaluated in result158",
+  "frozen_gates": {
+    "width_gain_pct_gt": 0.02,
+    "Jpk_change_pct_le": 0.1
+  },
+  "physical_current_calibrated": false,
+  "independent_int2_parity_validated": false,
+  "controller_in_loop_authority_established": false,
+  "pb11_fidelity_validated": false,
+  "ignition_or_net_power_validated": false,
+  "claim_boundary": "Normalized-native M3D-C1 open-loop temporal-convergence diagnostic remains unresolved. No closed-loop TCT stabilization, experimental shot handoff, p-B11 fidelity, ignition or net-power conclusion.",
+  "new_job_id": "20261122-159-native-observables-time-grid-repair",
+  "successor_status": "One enabled repair successor queued; bounded C1ke time-printing drift and exact frame/time diagnostics, unchanged physics and thresholds.",
+  "processed_utc": "2026-11-22T22:24:35Z"
+}
