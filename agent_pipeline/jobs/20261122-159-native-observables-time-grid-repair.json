@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "20261122-159-native-observables-time-grid-repair",
+  "parent_result_job_id": "20261122-158-native-observables-temporal-convergence",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_temporal_convergence_time_grid_repair",
+  "runner": "tools/tct_mechanism_explorer/run_native_observables_time_grid_repair_159.sh",
+  "timeout_seconds": 10800,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_temporal_convergence_159"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_temporal_convergence_159/native_temporal_convergence_repair_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Repair result158 pipeline-only TIME_GRID_OR_FRAME_COUNT_MISMATCH: attest both parent summaries, rerun identical six native cases, record exact observed frame count/time drift and allow only bounded 0.1%-of-dt C1ke time-printing discrepancy. No solver/source physics or frozen-gate changes.",
+  "interpretation_contract": {
+    "blocked_parent_classification": "M3DC1_NATIVE_OBSERVABLES_TEMPORAL_CONVERGENCE_PIPELINE_BLOCKED",
+    "blocked_parent_summary_sha256": "b7e0fd02e623846db9c41dd75ae0c0d4a9f84b635b5b2a3baaf6f7602ccd50fc",
+    "reference_result_job_id": "20261121-157-native-edge-observables-replay",
+    "reference_summary_sha256": "130428a1245a2e87068456fef7df721b32ef4c7a8c20d41c9ac4712d1fc3b9e0",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "zero_equivalence_tolerance": 1e-12,
+    "maximum_time_grid_drift_fraction_of_dt": 0.001,
+    "frozen_width_gain_min_pct_exclusive": 0.02,
+    "frozen_jpk_increase_max_pct_inclusive": 0.1,
+    "normalized_native_m3dc1_only": true,
+    "causal_controller_authority_unvalidated": true,
+    "pb11_fidelity_unvalidated": true
+  }
+}
