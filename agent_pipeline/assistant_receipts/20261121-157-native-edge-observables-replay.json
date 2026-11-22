@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "20261121-157-native-edge-observables-replay",
+  "processed_result_job_id": "20261121-157-native-edge-observables-replay",
+  "classification": "M3DC1_NATIVE_CURRENT_DRIVE_FINE_DT_NATIVE_OBSERVABLES_DIAGNOSTIC_COMPLETE",
+  "fuel_track": "fuel_agnostic_control",
+  "machine": "normalized-native-M3D-C1",
+  "shot_ids": [],
+  "physics_solver_runs": 6,
+  "return_code": 0,
+  "zero_equivalence": {
+    "max_abs_metric_delta": 0,
+    "pass": true,
+    "tolerance": 1e-12
+  },
+  "dt": 0.000625,
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "max_observed_width_gain_pct": 0.008095595815995046,
+  "frozen_width_gain_min_pct_exclusive": 0.02,
+  "frozen_jpk_increase_max_pct_inclusive": 0.1,
+  "frozen_open_loop_gate_crossing": false,
+  "native_observable_response_detected": true,
+  "temporal_convergence_established": false,
+  "controller_in_loop_authority_established": false,
+  "physical_current_calibrated": false,
+  "independent_int2_parity_validated": false,
+  "pb11_fidelity_validated": false,
+  "ignition_or_net_power_validated": false,
+  "scientific_interpretation": "Native open-loop signed current-drive produces measurable W_sheet/Jpk/high-J and spatial current changes, but no tested case exceeds the frozen +0.020% width threshold. Reconnected_Flux and magnetic_energy deltas are zero in extracted matched frames. Supports native observable responsiveness, weakens stabilization-by-this-open-loop-drive hypothesis, does not establish temporal convergence or causal segmented TCT controller authority.",
+  "claim_boundary": "Fixed-dt normalized-native M3D-C1 diagnostics only; not physical current calibration, experimental shot handoff, independent int2 parity, closed-loop TCT stabilization, p-B11 fidelity, ignition or net power.",
+  "new_job_id": null,
+  "successor_status": "No successor created; prioritize temporal-convergence and physical-current calibration prerequisites before interpreting mechanism.",
+  "processed_utc": "2026-11-22T03:24:07Z"
+}
