@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "20261122-160-native-observables-time-precision-repair",
+  "parent_result_job_id": "20261122-159-native-observables-time-grid-repair",
+  "enabled": true,
+  "kind": "bounded_native_m3dc1_temporal_convergence_time_precision_repair",
+  "runner": "tools/tct_mechanism_explorer/run_native_observables_time_precision_repair_160.sh",
+  "timeout_seconds": 10800,
+  "result_paths": [
+    "validation_runs/m3dc1_tct_native_temporal_convergence_160"
+  ],
+  "summary_path": "validation_runs/m3dc1_tct_native_temporal_convergence_160/native_temporal_convergence_precision_summary.json",
+  "fuel_track": "fuel_agnostic_control",
+  "purpose": "Repeat the identical six native half-dt simulations with a 2e-6 extracted timestamp formatting tolerance, grounded in observed 5e-7 drift in result159. Preserve frame-count, monotonicity, zero equivalence, frozen physics and width/Jpk gates.",
+  "interpretation_contract": {
+    "parent_classification": "M3DC1_NATIVE_OBSERVABLES_TEMPORAL_CONVERGENCE_PIPELINE_BLOCKED",
+    "parent_summary_sha256": "974002f291c64241dcf8539fd17d83940e06aee7b492eff350e5346d4e4d4434",
+    "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+    "time_grid_tolerance": 0.000002,
+    "observed_parent_grid_drift": 5.000000000005e-7,
+    "zero_equivalence_tolerance": 1e-12,
+    "frozen_width_gain_min_pct_exclusive": 0.02,
+    "frozen_jpk_increase_max_pct_inclusive": 0.1,
+    "physical_current_calibration_unvalidated": true,
+    "causal_controller_authority_unvalidated": true,
+    "pb11_fidelity_unvalidated": true
+  }
+}
