@@ -18,7 +18,9 @@ from steered_replay import Flyby, HALF_PATCH, ROOT, report_frame
 METERS_PER_UNIT = .10
 SECONDS_PER_UNIT = .004078528423054922
 STAND_OFF = .42
-LEVELS = (((64, 52, 52), 120), ((96, 80, 80), 120), ((96, 80, 80), 240))
+MESHES = ((64, 52, 52), (96, 80, 80), (96, 80, 80))
+STATIONARY_STEPS = (240, 240, 480)
+ROTATING_STEPS = (120, 120, 240)
 FRAMES = 12
 
 
@@ -80,7 +82,8 @@ class SettledPass(Flyby):
 def run_case(spec):
     track, sheet_speed, level = spec
     path = SettledPass(track, sheet_speed)
-    shape, steps = LEVELS[level]
+    shape = MESHES[level]
+    steps = (STATIONARY_STEPS if sheet_speed == 0. else ROTATING_STEPS)[level]
     grid = mhd.Grid(shape, "xpoint", "sphere")
     assert (steps % FRAMES) == 0
     dt = path.duration / steps
@@ -92,7 +95,7 @@ def run_case(spec):
         sample = sampler(current)
         center, velocity = path.at(time)
         report = report_frame(current, sample, sample(PEAK_POINTS), center, velocity, time)
-        if level == len(LEVELS) - 1 and (time == 0 or np.isclose(time, path.duration / 2)
+        if level == len(MESHES) - 1 and (time == 0 or np.isclose(time, path.duration / 2)
                                          or np.isclose(time, path.duration)):
             total = gr.physical(current_state[1])
             topology, _ = mhd.field_line_map(gr, total, topology_guesses)
@@ -147,7 +150,7 @@ def main():
     fit_speed = json.loads((orbit_runs / "shot_flow.json").read_text())["flow_at_orbit_m_s"]
     with ProcessPoolExecutor(max_workers=args.jobs) as pool:
         work = ((track, sheet_speed, level) for sheet_speed, level in product(
-            (0., fit_speed), range(len(LEVELS))
+            (0., fit_speed), range(len(MESHES))
         ))
         records = list(pool.map(run_case, work))
 

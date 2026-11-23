@@ -24,6 +24,7 @@ PROFILES = {
     "normal_priority": ((4., 1., 2.), 1.8, .65, .85),
     "toroidal_priority": ((2., 4., 2.), 1.8, .65, .85),
 }
+DEFAULT_PROFILE = "toroidal_priority"
 SUPPLEMENTAL_CAPACITIES = (.00010, .00020, .00025, .00030, .00040)
 REPLAY_FIELD_GRID = (144, 15, 48)
 
@@ -133,7 +134,7 @@ def save_track(records, group, path, field_grid):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("group", choices=("screen", "installed", "supplemental", "replay"))
-    parser.add_argument("--profile", choices=PROFILES, default="toroidal_priority")
+    parser.add_argument("--profile", choices=PROFILES, default=DEFAULT_PROFILE)
     parser.add_argument("--jobs", type=int, default=6)
     args = parser.parse_args()
     global MODEL, CASE
@@ -153,9 +154,12 @@ def main():
                    start_s=START, displacement_m=DISTANCE, max_settled_error_m=.0005,
                    max_settled_speed_m_s=.02, summaries=summary, trajectories=rows)
     path = ROOT / "runs"
-    (path / f"targeted_approach_{args.group}.json").write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n")
+    label = args.group
+    if args.group != "screen" and args.profile != DEFAULT_PROFILE:
+        label = f"{label}_{args.profile}"
+    (path / f"targeted_approach_{label}.json").write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n")
     if args.group != "screen":
-        save_track(records, args.group, path, field_grid)
+        save_track(records, label, path, field_grid)
 
 
 if __name__ == "__main__":

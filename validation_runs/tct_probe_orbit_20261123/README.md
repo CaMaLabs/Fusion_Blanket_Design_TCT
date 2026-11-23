@@ -32,7 +32,17 @@ The new controller uses angular-momentum feedback, the exact modeled drag as fee
 
 In the controller screen at 200 ms, the selected weights and gains passed all four cases at half the imposed drag and missed all four at full drag. A separate replay-input sweep verified all four forward launch phases at half drag using 1,152 steps per lap and a coarser coil map. Its largest post-settle normal error was 0.122 mm. [Controller screen](orbit/runs/targeted_approach_screen.json) · [Replay inputs](orbit/runs/targeted_approach_replay.json)
 
+All 144 runs with the selected controller completed three laps inside the modeled corridor. The table shows eight launch-phase and direction combinations per cell. The pass counts agreed at 576 and 1,152 steps per lap. At the finer step, the worst settled position error for the 200 ms move was 0.128 mm at half drag and 2.471 mm at full drag. [Installed coil runs](orbit/runs/targeted_approach_installed.json) · [Normal-force priority comparison](orbit/runs/targeted_approach_installed_normal_priority.json)
+
+| Imposed drag | 50 ms move | 100 ms move | 200 ms move |
+| --- | ---: | ---: | ---: |
+| Zero | 0/8 | 8/8 | 8/8 |
+| Half | 8/8 | 8/8 | 8/8 |
+| Full | 0/8 | 0/8 | 0/8 |
+
 At the displaced orbit, a linear program estimates the greatest toroidal force that can be produced while balancing radial centripetal acceleration and gravity at the target. For the imposed full drag it leaves a worst-phase shortfall of 0.000364 T/m forward and 0.000347 T/m in reverse over 144 phases. The force balance assumes instantaneous currents at every phase. The dynamic supplement is a virtual bidirectional tangential actuator with the same 100 Hz first-order lag. A real winding would need to deliver a phase-dependent force with compatible radial and vertical components. [Exact-trim calculation](orbit/runs/supplemental_authority.json)
+
+For the 200 ms move at full imposed drag, ±0.00010 T/m of virtual authority passed 0/8 cases at each time step. ±0.00020 T/m passed 8/8 at each time step, with 0.126 mm worst settled position error and 0.00531 m/s worst settled normal speed. This is the lowest tested capacity that passed. The dynamic gate permits finite position and speed error, which accounts for the lower authority requirement than the exact circular trim calculation. At the modeled moment-to-mass ratio, ±0.00020 T/m corresponds to ±0.95 m/s² of tangential acceleration. [Supplemental actuator runs](orbit/runs/targeted_approach_supplemental.json)
 
 ## Plasma-frame pass
 
@@ -52,6 +62,7 @@ python3 orbit/reachable_approach.py --comparison
 python3 orbit/coil_authority.py
 python3 orbit/targeted_approach.py screen
 python3 orbit/targeted_approach.py installed
+python3 orbit/targeted_approach.py installed --profile normal_priority
 python3 orbit/supplemental_authority.py
 python3 orbit/targeted_approach.py supplemental
 python3 orbit/targeted_approach.py replay
