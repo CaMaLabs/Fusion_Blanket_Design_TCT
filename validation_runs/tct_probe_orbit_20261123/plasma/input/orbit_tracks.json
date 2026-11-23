@@ -1,0 +1,148 @@
+{
+  "radius_m": 2.2,
+  "field_grid": [
+    216,
+    19,
+    64
+  ],
+  "cases": {
+    "forward": {
+      "archived_case": {
+        "mode": "guided_1.6kA_I",
+        "kappa_Am2_kg": 4761.9047619047615,
+        "gravity": true,
+        "phase_deg": 90,
+        "launch": [
+          0.005,
+          0.001,
+          1.0025
+        ],
+        "reference_height_m": -0.0051640142737476085,
+        "cutoff_hz": 100,
+        "steps_per_lap": 576,
+        "outcome": "completed",
+        "laps": 3.0011259033724067,
+        "elapsed_s": 0.4835156192835295,
+        "direction": 1,
+        "radial_peak_m": 0.005122605691956217,
+        "vertical_peak_m": 0.014678708595191624,
+        "initial_toroidal_speed_m_s": 86.02980379310085,
+        "final_toroidal_speed_m_s": 85.55759773647891,
+        "peak_current_A": 1600.0,
+        "peak_slew_A_s": 2010619.2982974672,
+        "kick_time_s": 0.16107865627953324,
+        "bare_kappa_Am2_kg": 5000,
+        "load": "same_area",
+        "error": "fast_high_kick",
+        "added_mass_fraction": 0.05,
+        "drag_at_nominal_speed_T_m": 0.0004001923232802012,
+        "kick_m_s": [
+          0.1,
+          0.0,
+          0.1
+        ],
+        "controller": "momentum",
+        "corridor_margin_m": 0.010321291404808378
+      },
+      "refined_case": {
+        "mode": "guided_1.6kA_I",
+        "kappa_Am2_kg": 4761.9047619047615,
+        "gravity": true,
+        "phase_deg": 90,
+        "launch": [
+          0.005,
+          0.001,
+          1.0025
+        ],
+        "reference_height_m": -0.0051640142737476085,
+        "cutoff_hz": 100,
+        "steps_per_lap": 2304,
+        "outcome": "completed",
+        "laps": 3.0002584758888338,
+        "elapsed_s": 0.4833757940610646,
+        "direction": 1,
+        "radial_peak_m": 0.005127259307978083,
+        "vertical_peak_m": 0.014675161621287831,
+        "initial_toroidal_speed_m_s": 86.02980379310085,
+        "final_toroidal_speed_m_s": 85.55718477159634,
+        "peak_current_A": 1600.0,
+        "peak_slew_A_s": 2010619.298297466,
+        "kick_time_s": 0.16107865627953324
+      },
+      "reference_field_R_phi_Z_T": [
+        0.01298370179955958,
+        -1.4617331746347433,
+        0.39413182900866156
+      ]
+    },
+    "reverse": {
+      "archived_case": {
+        "mode": "guided_1.6kA_I",
+        "kappa_Am2_kg": 4761.9047619047615,
+        "gravity": true,
+        "phase_deg": 270,
+        "launch": [
+          0.005,
+          0.001,
+          1.0025
+        ],
+        "reference_height_m": -0.0051640142737476085,
+        "cutoff_hz": 100,
+        "steps_per_lap": 576,
+        "outcome": "completed",
+        "laps": 3.0011528286550964,
+        "elapsed_s": 0.4835156192835295,
+        "direction": -1,
+        "radial_peak_m": 0.005,
+        "vertical_peak_m": 0.014675186475442543,
+        "initial_toroidal_speed_m_s": -86.02980379310085,
+        "final_toroidal_speed_m_s": -85.5525677181857,
+        "peak_current_A": 1600.0,
+        "peak_slew_A_s": 2010619.2982974676,
+        "kick_time_s": 0.16107865627953324,
+        "bare_kappa_Am2_kg": 5000,
+        "load": "same_area",
+        "error": "fast_high_kick",
+        "added_mass_fraction": 0.05,
+        "drag_at_nominal_speed_T_m": 0.0004001923232802012,
+        "kick_m_s": [
+          0.1,
+          0.0,
+          0.1
+        ],
+        "controller": "momentum",
+        "corridor_margin_m": 0.010324813524557459
+      },
+      "refined_case": {
+        "mode": "guided_1.6kA_I",
+        "kappa_Am2_kg": 4761.9047619047615,
+        "gravity": true,
+        "phase_deg": 270,
+        "launch": [
+          0.005,
+          0.001,
+          1.0025
+        ],
+        "reference_height_m": -0.0051640142737476085,
+        "cutoff_hz": 100,
+        "steps_per_lap": 2304,
+        "outcome": "completed",
+        "laps": 3.000286363502,
+        "elapsed_s": 0.4833757940610646,
+        "direction": -1,
+        "radial_peak_m": 0.005,
+        "vertical_peak_m": 0.014671028877080692,
+        "initial_toroidal_speed_m_s": -86.02980379310085,
+        "final_toroidal_speed_m_s": -85.55255379306908,
+        "peak_current_A": 1600.0,
+        "peak_slew_A_s": 2010619.2982974676,
+        "kick_time_s": 0.16107865627953324
+      },
+      "reference_field_R_phi_Z_T": [
+        0.01298370179955958,
+        -1.4617331746347433,
+        0.39413182900866156
+      ]
+    }
+  }
+}

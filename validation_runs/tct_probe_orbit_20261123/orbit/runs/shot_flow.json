@@ -1,0 +1,46 @@
+{
+  "source": "https://m3dc1.pppl.gov/Papers/lyons_PPCF_17.pdf",
+  "profile": "Experimental E\u00d7B toroidal rotation fit, not total ion flow",
+  "geometry": {
+    "shot": 158103,
+    "time_ms": 3796,
+    "reference_R_m": 1.69550002,
+    "reference_Bphi_T": -1.8977622,
+    "magnetic_axis_RZ_m": [
+      1.73854887,
+      0.0128069012
+    ],
+    "header": "  EFITD    06/25/2013    #158103  3796ms           3 129 129",
+    "file_sha256": "1a5db6deb2494e9805f08c1dae5ee27fd2d6e87f8a73641df46b9fcbc087a51e"
+  },
+  "radius_m": 2.2,
+  "height_m": -0.0051640142737476085,
+  "flux_at_orbit": 0.8009514683399472,
+  "flow_at_orbit_m_s": 64768.609434710525,
+  "probe_speed_m_s": 85.81526562902829,
+  "reference_component_relative_speed_m_s": [
+    64682.7941690815,
+    64854.42470033955
+  ],
+  "corridor_flux_range": [
+    0.7280855848595078,
+    0.8797854377783109
+  ],
+  "corridor_fit_speed_m_s": [
+    44290.61734886799,
+    79979.55927505252
+  ],
+  "zero_rotation_radius_at_trim_height_m": 2.2394746628458466,
+  "zero_rotation_outside_corridor_m": 0.01447466284584644,
+  "abs_fit_speed_below_300_m_s_radius_range": [
+    2.2394309121387357,
+    2.2395182707021624
+  ],
+  "abs_fit_speed_below_300_m_s_radial_width_m": 8.735856342667603e-05,
+  "previous_patch_m": 0.21,
+  "component_based_patch_transit_s": [
+    3.238021167719965e-06,
+    3.246612993419205e-06
+  ],
+  "previous_smallest_replay_step_s": 6.372700661023317e-06
+}
