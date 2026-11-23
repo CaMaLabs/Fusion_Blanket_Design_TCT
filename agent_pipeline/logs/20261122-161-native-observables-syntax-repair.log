@@ -1,0 +1,530 @@
+job_id=20261122-161-native-observables-syntax-repair
+started_utc=2026-11-22T23:56:10.677627Z
+head_before=353c82826af9a5eeb5eb832566c5759a0afc727b
+TCT_RUNTIME repo=/home/ubuntu/work/openmc/sweep
+TCT_RUNTIME python=/home/ubuntu/work/openmc/sweep/.venv-dudson/bin/python
+TCT_RUNTIME python_version=3.14.4
+TCT_RUNTIME venv=/home/ubuntu/work/openmc/sweep/.venv-dudson
+TCT_RUNTIME tmpdir=/tmp/tct-ubuntu
+TCT_RUNTIME spack_env=m3dc1-deps
+[native-temporal-convergence] baseline
+[native-temporal-convergence] same_mode_zero
+[native-temporal-convergence] neg_nominal
+[native-temporal-convergence] neg_double
+[native-temporal-convergence] pos_nominal
+[native-temporal-convergence] pos_double
+{
+  "claim_boundary": "Two-level temporal consistency of native open-loop normalized M3D-C1 observables only. Not continuum convergence proof, calibrated physical current, independent int2 parity, segmented closed-loop TCT authority, p-B11 fidelity, ignition or net power.",
+  "classification": "M3DC1_NATIVE_OBSERVABLES_TWO_LEVEL_TEMPORAL_CONSISTENCY_DIAGNOSTIC_COMPLETE",
+  "comparisons": [
+    {
+      "case": "neg_nominal",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": -0.006516059500924063,
+          "consistent": true,
+          "fine": -0.005258230677551196,
+          "meaningful": true,
+          "relative_change": 0.1930351960712591
+        },
+        "width_gain_pct": {
+          "coarse": -0.0031271647309145095,
+          "consistent": false,
+          "fine": 0.000708549707943759,
+          "meaningful": true,
+          "relative_change": 1.2265789521540653
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": -7.242932999973473e-06,
+        "Jpk": -5.100000000002325e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 4.141688579539782e-06,
+        "center_abs_current": -7.367474640029847e-06,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": -1.6658883500095256e-07
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.01
+    },
+    {
+      "case": "neg_double",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": -0.011687535295325374,
+          "consistent": false,
+          "fine": -0.017218127904917606,
+          "meaningful": true,
+          "relative_change": 0.32120754591517814
+        },
+        "width_gain_pct": {
+          "coarse": -0.0066822626804181684,
+          "consistent": true,
+          "fine": -0.006522416502974917,
+          "meaningful": true,
+          "relative_change": 0.023920965859613293
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": -2.3279715999996453e-05,
+        "Jpk": -0.00016700000000002824,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": -3.812550854020991e-05,
+        "center_abs_current": -9.722485600049957e-06,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": -5.337618524070206e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.01
+    },
+    {
+      "case": "pos_nominal",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": 0.0027925969289707363,
+          "consistent": false,
+          "fine": 0.00969164085666254,
+          "meaningful": true,
+          "relative_change": 0.7118550955124425
+        },
+        "width_gain_pct": {
+          "coarse": 0.004181104825729033,
+          "consistent": false,
+          "fine": 0.002804952989409936,
+          "meaningful": true,
+          "relative_change": 0.3291359326488893
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": 1.361458699999929e-05,
+        "Jpk": 9.40000000000385e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 1.639580347312375e-05,
+        "center_abs_current": 2.491129849957474e-06,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 2.1781911011799215e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.01
+    },
+    {
+      "case": "pos_double",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": 0.0050680462784990455,
+          "consistent": false,
+          "fine": 0.020929820147885494,
+          "meaningful": true,
+          "relative_change": 0.7578552399070155
+        },
+        "width_gain_pct": {
+          "coarse": 0.008095595815995046,
+          "consistent": false,
+          "fine": 0.0034289316115933993,
+          "meaningful": true,
+          "relative_change": 0.5764448115333755
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": 3.0289564000002267e-05,
+        "Jpk": 0.00020299999999995322,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 2.004314833037313e-05,
+        "center_abs_current": 2.1387401479944224e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 3.6901560088800633e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.01
+    },
+    {
+      "case": "neg_nominal",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": -0.009378098121702861,
+          "consistent": false,
+          "fine": -0.003341955578718659,
+          "meaningful": true,
+          "relative_change": 0.6436425024190479
+        },
+        "width_gain_pct": {
+          "coarse": 0.004041073116544446,
+          "consistent": false,
+          "fine": 0.0012909555080021524,
+          "meaningful": true,
+          "relative_change": 0.6805414129437829
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": -1.853289999997898e-05,
+        "Jpk": -4.999999999988347e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 8.227330751120476e-06,
+        "center_abs_current": -1.7164341170050612e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": -4.037079225999163e-06
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.02
+    },
+    {
+      "case": "neg_double",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": -0.010047962273242441,
+          "consistent": false,
+          "fine": -0.027404035745558306,
+          "meaningful": true,
+          "relative_change": 0.63334005375938
+        },
+        "width_gain_pct": {
+          "coarse": 0.007511101215603121,
+          "consistent": true,
+          "fine": 0.008778792004587416,
+          "meaningful": true,
+          "relative_change": 0.14440378452090613
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": -9.205217999996851e-05,
+        "Jpk": -0.00041000000000002146,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 5.594772629213818e-05,
+        "center_abs_current": -9.656288531001422e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 1.482968657899944e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.02
+    },
+    {
+      "case": "pos_nominal",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": 0.013397283030999838,
+          "consistent": true,
+          "fine": 0.01269943119916949,
+          "meaningful": true,
+          "relative_change": 0.052089056431486494
+        },
+        "width_gain_pct": {
+          "coarse": -0.004320211763259708,
+          "consistent": true,
+          "fine": -0.004408807431363976,
+          "meaningful": true,
+          "relative_change": 0.020095154865237164
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": 4.06514199999819e-05,
+        "Jpk": 0.0001900000000001345,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": -2.809757325561435e-05,
+        "center_abs_current": 4.79601411099706e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": -1.132583190899955e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.02
+    },
+    {
+      "case": "pos_double",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": 0.015406875485648326,
+          "consistent": false,
+          "fine": 0.0320827735557763,
+          "meaningful": true,
+          "relative_change": 0.5197773204095562
+        },
+        "width_gain_pct": {
+          "coarse": -0.006972014965686736,
+          "consistent": true,
+          "fine": -0.008979753409267644,
+          "meaningful": true,
+          "relative_change": 0.22358503091062631
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": 0.00011028623999997933,
+        "Jpk": 0.00048000000000003595,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": -5.722846442313134e-05,
+        "center_abs_current": 0.00010223758171001851,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 7.320467364999028e-06
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.02
+    },
+    {
+      "case": "neg_nominal",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": -0.007884456868425076,
+          "consistent": false,
+          "fine": -0.0035725768997253056,
+          "meaningful": true,
+          "relative_change": 0.5468835762127862
+        },
+        "width_gain_pct": {
+          "coarse": 0.003255022866642243,
+          "consistent": false,
+          "fine": 0.000544818864602588,
+          "meaningful": true,
+          "relative_change": 0.8326221083771979
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": -1.697529999999947e-05,
+        "Jpk": -5.0000000000105516e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 3.6803864010837017e-06,
+        "center_abs_current": -5.735006579965507e-06,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": -6.366611247997367e-06
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.03
+    },
+    {
+      "case": "neg_double",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": -0.013618607318203238,
+          "consistent": false,
+          "fine": -0.020006430638423632,
+          "meaningful": true,
+          "relative_change": 0.31928850456473584
+        },
+        "width_gain_pct": {
+          "coarse": 0.0038518667623838754,
+          "consistent": false,
+          "fine": 0.006706554597185707,
+          "meaningful": true,
+          "relative_change": 0.42565639232993846
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": -7.927704000010305e-05,
+        "Jpk": -0.000280000000000058,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": 4.530443775219162e-05,
+        "center_abs_current": -8.755083284994747e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": -5.096930600800159e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.03
+    },
+    {
+      "case": "pos_nominal",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": 0.015768913736881985,
+          "consistent": false,
+          "fine": 0.0035725768997094402,
+          "meaningful": true,
+          "relative_change": 0.7734417881078566
+        },
+        "width_gain_pct": {
+          "coarse": -0.004623594448468442,
+          "consistent": false,
+          "fine": -0.002245188901069736,
+          "meaningful": true,
+          "relative_change": 0.5144061776842362
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": 1.6901700000016007e-05,
+        "Jpk": 4.999999999988347e-05,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": -1.5166807238564672e-05,
+        "center_abs_current": 2.9185573440115853e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 1.5389718090001725e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.03
+    },
+    {
+      "case": "pos_double",
+      "effect": {
+        "Jpk_change_pct": {
+          "coarse": 0.017919220155544816,
+          "consistent": false,
+          "fine": 0.007859669179367115,
+          "meaningful": true,
+          "relative_change": 0.5613833017763853
+        },
+        "width_gain_pct": {
+          "coarse": -0.0048954779806644165,
+          "consistent": true,
+          "fine": -0.005496807772225382,
+          "meaningful": true,
+          "relative_change": 0.10939618347205131
+        }
+      },
+      "fine_native_metric_deltas": {
+        "Jint_high": 3.5395579999986104e-05,
+        "Jpk": 0.00010999999999983245,
+        "Reconnected_Flux": 0.0,
+        "W_sheet": -3.713229825297315e-05,
+        "center_abs_current": 5.833770003005334e-05,
+        "magnetic_energy": 0.0,
+        "shoulder_abs_current": 1.943754802199993e-05
+      },
+      "frozen_open_loop_metric_comparison": {
+        "Jpk_le_0p10_pct": true,
+        "both": false,
+        "width_gt_0p020_pct": false
+      },
+      "time": 0.03
+    }
+  ],
+  "controller_in_loop_authority_established": false,
+  "convergence_rule": {
+    "effect_absolute_floor": 1e-12,
+    "effect_relative_change_max": 0.25,
+    "requires_all_nontrivial_W_sheet_and_Jpk_effects": true
+  },
+  "dt_coarse": 0.000625,
+  "dt_fine": 0.0003125,
+  "executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_executable_sha256": "8282c940fe1692b3c40ed6d7ba4b56e96f7197ac0ea2b11cef109969dcb5f0ec",
+  "expected_parent_summary_sha256": "130428a1245a2e87068456fef7df721b32ef4c7a8c20d41c9ac4712d1fc3b9e0",
+  "frozen_gates_preserved": {
+    "Jpk_change_pct_le": 0.1,
+    "width_gain_pct_gt": 0.02
+  },
+  "fuel_track": "fuel_agnostic_control",
+  "ignition_or_net_power_validated": false,
+  "independent_int2_parity_validated": false,
+  "interpretation": "Two-level fixed-output-time comparison; 25% relative-effect criterion is diagnostic and does not prove asymptotic convergence. No open-loop metric crossing implies controller authority.",
+  "job_id": "20261122-161-native-observables-syntax-repair",
+  "machine": "normalized-native-M3D-C1",
+  "matched_times": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "observed_parent_max_abs_grid_delta": 5.000000000005e-07,
+  "parent_result_job_id": "20261122-160-native-observables-time-precision-repair",
+  "pb11_fidelity_validated": false,
+  "physical_current_calibrated": false,
+  "repaired_result_job_id": "20261122-160-native-observables-time-precision-repair",
+  "schema_version": 1,
+  "shot_ids": [],
+  "source_gate": [
+    0.0,
+    0.04
+  ],
+  "source_mode": 4,
+  "steps_fine": 96,
+  "temporal_convergence_established": false,
+  "time_grid_diagnostics": {
+    "baseline": {
+      "expected_count": 97,
+      "first_time": 0.0,
+      "last_time": 0.03,
+      "max_abs_grid_delta": 5.000000000005e-07,
+      "observed_count": 97,
+      "strictly_increasing": true
+    },
+    "neg_double": {
+      "expected_count": 97,
+      "first_time": 0.0,
+      "last_time": 0.03,
+      "max_abs_grid_delta": 5.000000000005e-07,
+      "observed_count": 97,
+      "strictly_increasing": true
+    },
+    "neg_nominal": {
+      "expected_count": 97,
+      "first_time": 0.0,
+      "last_time": 0.03,
+      "max_abs_grid_delta": 5.000000000005e-07,
+      "observed_count": 97,
+      "strictly_increasing": true
+    },
+    "pos_double": {
+      "expected_count": 97,
+      "first_time": 0.0,
+      "last_time": 0.03,
+      "max_abs_grid_delta": 5.000000000005e-07,
+      "observed_count": 97,
+      "strictly_increasing": true
+    },
+    "pos_nominal": {
+      "expected_count": 97,
+      "first_time": 0.0,
+      "last_time": 0.03,
+      "max_abs_grid_delta": 5.000000000005e-07,
+      "observed_count": 97,
+      "strictly_increasing": true
+    },
+    "same_mode_zero": {
+      "expected_count": 97,
+      "first_time": 0.0,
+      "last_time": 0.03,
+      "max_abs_grid_delta": 5.000000000005e-07,
+      "observed_count": 97,
+      "strictly_increasing": true
+    }
+  },
+  "time_grid_tolerance": 2e-06,
+  "time_tolerance_basis": "2e-6 bounded extraction timestamp precision, greater than measured 5e-7; no solver time-step changes",
+  "timestamp_utc": "2026-11-22T23:56:11.910459+00:00",
+  "zero_equivalence": {
+    "max_abs_metric_delta": 0.0,
+    "pass": true
+  },
+  "zero_equivalence_tolerance": 1e-12
+}
+
+finished_utc=2026-11-23T00:12:30.492041Z
+return_code=0
