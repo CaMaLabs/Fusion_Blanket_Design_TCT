@@ -1,6 +1,6 @@
 # Probe orbit, current-sheet replay, and reachable approach
 
-This directory contains the completed orbit and local plasma experiments and the follow-on test of coil-limited cross-sheet steering. The four archives preserve the original scripts, inputs, raw output and receipts. The extracted sources and summaries support inspection and reproduction from this branch.
+This directory contains the completed orbit and local plasma experiments and the follow-on tests of coil-limited cross-sheet steering. The four archives preserve the original scripts, inputs, raw output and receipts. The extracted sources and summaries support inspection and reproduction from this branch.
 
 ## Shot rotation
 
@@ -26,6 +26,20 @@ The ideal linearized tangential I-coil authority at the reference orbit spans 0.
 
 Run outputs are in [the drag comparison](orbit/runs/reachable_approach_comparison.json) and [the coil authority calculation](orbit/runs/coil_authority.json).
 
+## Bounded approach and supplemental force
+
+The new controller uses angular-momentum feedback, the exact modeled drag as feedforward, and bounded least-squares allocation across the 12 independent I-coils. Its highest-weight objective is the toroidal force. The first sweep tested three weight and gain settings. The main sweep covers three maneuver durations, four launch phases, both directions and two integration steps under zero, half and full imposed drag. The 1.6 kA channel limit comes from the triple-mode supply specification. The 100 Hz response, moment-to-mass ratio and quadratic drag are assumptions. [I-coil power supply specification](https://fusion.gat.com/pubs-ext/SOFT04/A24803.pdf)
+
+In the controller screen at 200 ms, the selected weights and gains passed all four cases at half the imposed drag and missed all four at full drag. A separate replay-input sweep verified all four forward launch phases at half drag using 1,152 steps per lap and a coarser coil map. Its largest post-settle normal error was 0.122 mm. [Controller screen](orbit/runs/targeted_approach_screen.json) · [Replay inputs](orbit/runs/targeted_approach_replay.json)
+
+At the displaced orbit, a linear program estimates the greatest toroidal force that can be produced while balancing radial centripetal acceleration and gravity at the target. For the imposed full drag it leaves a worst-phase shortfall of 0.000364 T/m forward and 0.000347 T/m in reverse over 144 phases. The force balance assumes instantaneous currents at every phase. The dynamic supplement is a virtual bidirectional tangential actuator with the same 100 Hz first-order lag. A real winding would need to deliver a phase-dependent force with compatible radial and vertical components. [Exact-trim calculation](orbit/runs/supplemental_authority.json)
+
+## Plasma-frame pass
+
+The follow-on local resistive MHD replay takes a computed trajectory that passed the 200 ms inward-move test at half assumed drag. It compares that trajectory with a matched no-core run on each of two grids and two fine-grid time steps. The sheet is either stationary in the vessel frame or assigned the fitted toroidal E×B velocity from the archived shot near the orbit. The transit time changes with relative speed. The 0.10 m length unit and 4.079 ms time unit stay fixed, and the commanded stand-off is 42 mm. The rotation fit measures a plasma-flow component. The sheet pattern speed, stand-off and transport remain model assumptions. The replay uses the spherical momentum-penalty mask with the probe self-field disabled.
+
+The acceptance test requires above +0.020% FWHM across the full station set and at most +0.100% peak sampled sheet current after mesh, time-step and diagnostic allowances. The replay also follows the seeded X-line and O-line at entry, midpoint and exit. A continuation check tracks persistence of those lines. A census of new axes, a reconnection rate and energy deposited at the wall require additional diagnostics.
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.
@@ -36,6 +50,12 @@ python3 orbit/shot_flow.py
 python3 orbit/reachable_approach.py
 python3 orbit/reachable_approach.py --comparison
 python3 orbit/coil_authority.py
+python3 orbit/targeted_approach.py screen
+python3 orbit/targeted_approach.py installed
+python3 orbit/supplemental_authority.py
+python3 orbit/targeted_approach.py supplemental
+python3 orbit/targeted_approach.py replay
+python3 plasma/settled_pass.py replay
 unzip -j archive/TCT_steered_current_sheet_replay.zip input/orbit_tracks.npz input/archive_mesh_hold.json -d plasma/input
 ```
 

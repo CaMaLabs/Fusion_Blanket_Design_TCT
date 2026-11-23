@@ -83,7 +83,8 @@ def observe(grid, state, t, mode):
     )
 
 
-def integrate(grid, dt, mode, state, start, end, *, include_start=True, model=None, inspect=None):
+def integrate(grid, dt, mode, state, start, end, *, include_start=True, model=None, inspect=None,
+              cadence=CADENCE):
     def probe_model(current_grid, t, core, field):
         return prescribed_body(current_grid, t, mode)
 
@@ -91,7 +92,7 @@ def integrate(grid, dt, mode, state, start, end, *, include_start=True, model=No
         probe_model = model
     if inspect is None:
         inspect = observe
-    steps_per_output = round(CADENCE/dt)
+    steps_per_output = round(cadence/dt)
     records = []
     for step in range(start, end+1):
         t = step * dt

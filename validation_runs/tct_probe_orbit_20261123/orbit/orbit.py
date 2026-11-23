@@ -96,7 +96,8 @@ def guided_currents(local, state, desired_height, desired_speed, gravity, limit,
 def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
                cutoff_hz, steps_per_lap=288, laps=3, traces=False, balanced_height=None,
                drag_per_moment=0., compensate_drag=False, direction=1, kick_at_lap_one_m_s=None,
-               guide_weights=TOROIDAL_WEIGHT, hold_angular_momentum=False, reference_at=None):
+               guide_weights=TOROIDAL_WEIGHT, hold_angular_momentum=False, reference_at=None,
+               control_policy=None, supplemental_toroidal_gradient=0.):
     """Advance a free point dipole using time scaled by sqrt(moment / mass)."""
     if direction not in (-1, 1):
         raise ValueError("Direction must be +1 or -1")
@@ -113,6 +114,10 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
         limit = OPTIMISTIC_LIMIT
     else:
         limit = I_LIMIT
+    if supplemental_toroidal_gradient:
+        if control_policy is None:
+            raise ValueError("Supplemental force requires a control policy")
+        limit = np.append(limit, 1.)
     dt = TWO_PI * RADIUS / (steps_per_lap * speed)
     dt_real = dt / np.sqrt(kappa)
     half_decay = 0. if cutoff_hz is None else np.exp(-TWO_PI * cutoff_hz * dt_real / 2)
@@ -131,6 +136,11 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
             return propulsion(response[1], limit, direction)
         drag = drag_at(current_state[4]) if compensate_drag else 0.
         reference = reference_at(elapsed_s) if reference_at is not None else None
+        if supplemental_toroidal_gradient:
+            base, gradients = response
+            response = base, np.column_stack((gradients, [0., supplemental_toroidal_gradient, 0.]))
+        if control_policy is not None:
+            return control_policy(response, current_state, reference, gravity, drag, limit)
         return guided_currents(response, current_state, height, desired_speed, gravity, limit,
                                drag=drag, weights=guide_weights, hold_angular_momentum=hold_angular_momentum,
                                reference=reference)
@@ -139,14 +149,17 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
         radius, _, _, vr, vt, vz = v
         if local is None:
             local = field_map.local(v[:3])
-        ar, at, az = field_map.force(local, current)
+        ar, at, az = field_map.force(local, current[:len(I_LIMIT)])
+        if supplemental_toroidal_gradient:
+            at += supplemental_toroidal_gradient * current[-1]
         return np.array([vr, vt / radius, vz, ar + vt**2 / radius,
                          at - vr * vt / radius - drag_at(vt), az - gravity])
 
     current = target(field_map.local(state[:3]), state, 0.)
     radial_peak, vertical_peak = abs(d_r), abs(state[2] - field_map.height)
-    peak_current = np.abs(current).max()
+    peak_current = np.abs(current[:len(I_LIMIT)]).max()
     peak_slew = 0.
+    peak_supplemental = abs(supplemental_toroidal_gradient * current[-1])
     visited = [(0., *state)] if traces else []
     cause = "time_limit"
     elapsed = 0.
@@ -160,7 +173,8 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
         midpoint = field_map.local(predictor[:3])
         command = target(midpoint, predictor, (step + .5) * dt_real)
         if cutoff_hz is not None:
-            peak_slew = max(peak_slew, float(TWO_PI * cutoff_hz * np.abs(command - current).max()))
+            current_change = command[:len(I_LIMIT)] - current[:len(I_LIMIT)]
+            peak_slew = max(peak_slew, float(TWO_PI * cutoff_hz * np.abs(current_change).max()))
         middle = command + (current - command) * half_decay
         end = command + (current - command) * decay
         k1 = prior if cutoff_hz is not None else motion(state, command, local)
@@ -176,7 +190,9 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
             kick_time = elapsed
         radial_peak = max(radial_peak, abs(state[0] - RADIUS))
         vertical_peak = max(vertical_peak, abs(state[2] - field_map.height))
-        peak_current = max(peak_current, np.abs(current).max())
+        peak_current = max(peak_current, np.abs(current[:len(I_LIMIT)]).max())
+        if supplemental_toroidal_gradient:
+            peak_supplemental = max(peak_supplemental, abs(supplemental_toroidal_gradient * current[-1]))
         if traces:
             visited.append((elapsed, *state))
         if radial_peak > HALF_WIDTH or vertical_peak > HALF_WIDTH:
@@ -194,4 +210,6 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
                   final_toroidal_speed_m_s=float(state[4] * np.sqrt(kappa)),
                   peak_current_A=float(peak_current), peak_slew_A_s=peak_slew if cutoff_hz is not None else None,
                   kick_time_s=kick_time)
+    if supplemental_toroidal_gradient:
+        result["peak_supplemental_T_m"] = float(peak_supplemental)
     return result, np.array(visited)

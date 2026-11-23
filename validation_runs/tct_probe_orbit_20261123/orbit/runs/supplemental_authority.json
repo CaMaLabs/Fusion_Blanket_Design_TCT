@@ -1,0 +1,2040 @@
+{
+  "target_RZ_m": [
+    2.1979171454864996,
+    -0.005095399764832709
+  ],
+  "phase_samples": 144,
+  "drag_magnitude_T_m": 0.0004001923232802012,
+  "circular_speed_m_s": 85.70463586729569,
+  "assumptions": "Instantaneous linear vacuum response, independent 1.6 kA I-coil channels. Exact transverse force for a circular orbit at the target. No current dynamics.",
+  "summary": {
+    "1": {
+      "trim_feasible_phases": 144,
+      "most_needed_T_m": 0.0003643951897548174,
+      "mean_needed_T_m": 0.00026833448513114224
+    },
+    "-1": {
+      "trim_feasible_phases": 144,
+      "most_needed_T_m": 0.0003465099307092002,
+      "mean_needed_T_m": 0.0002658442301924315
+    }
+  },
+  "phases": [
+    {
+      "phase_deg": 0.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00038122131215542624,
+      "tangential_with_transverse_trim_T_m": 0.00021243303257217878,
+      "supplemental_deficit_T_m": 0.00018775929070802245
+    },
+    {
+      "phase_deg": 0.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00038122131215542624,
+      "tangential_with_transverse_trim_T_m": 0.000253708191284975,
+      "supplemental_deficit_T_m": 0.00014648413199522622
+    },
+    {
+      "phase_deg": 2.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.000348476543527546,
+      "tangential_with_transverse_trim_T_m": 0.00018499002608855116,
+      "supplemental_deficit_T_m": 0.00021520229719165006
+    },
+    {
+      "phase_deg": 2.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.000348476543527546,
+      "tangential_with_transverse_trim_T_m": 0.00022411717687900897,
+      "supplemental_deficit_T_m": 0.00017607514640119226
+    },
+    {
+      "phase_deg": 5.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003421967114034783,
+      "tangential_with_transverse_trim_T_m": 0.00011651665555792952,
+      "supplemental_deficit_T_m": 0.00028367566772227173
+    },
+    {
+      "phase_deg": 5.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003421967114034783,
+      "tangential_with_transverse_trim_T_m": 0.00015015184828592496,
+      "supplemental_deficit_T_m": 0.00025004047499427626
+    },
+    {
+      "phase_deg": 7.499999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003199063434890887,
+      "tangential_with_transverse_trim_T_m": 4.9699605287751364e-05,
+      "supplemental_deficit_T_m": 0.0003504927179924499
+    },
+    {
+      "phase_deg": 7.499999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003199063434890887,
+      "tangential_with_transverse_trim_T_m": 7.806824258091304e-05,
+      "supplemental_deficit_T_m": 0.0003221240806992882
+    },
+    {
+      "phase_deg": 10.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00027968703092141976,
+      "tangential_with_transverse_trim_T_m": 0.00010919948089338816,
+      "supplemental_deficit_T_m": 0.0002909928423868131
+    },
+    {
+      "phase_deg": 10.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00027968703092141976,
+      "tangential_with_transverse_trim_T_m": 0.0001316804423670965,
+      "supplemental_deficit_T_m": 0.00026851188091310475
+    },
+    {
+      "phase_deg": 12.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003094909251357905,
+      "tangential_with_transverse_trim_T_m": 0.00015469563573724474,
+      "supplemental_deficit_T_m": 0.0002454966875429565
+    },
+    {
+      "phase_deg": 12.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003094909251357905,
+      "tangential_with_transverse_trim_T_m": 0.0001698600981473212,
+      "supplemental_deficit_T_m": 0.00023033222513288003
+    },
+    {
+      "phase_deg": 14.999999999999998,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003144641003152238,
+      "tangential_with_transverse_trim_T_m": 0.0001774537214942569,
+      "supplemental_deficit_T_m": 0.00022273860178594434
+    },
+    {
+      "phase_deg": 14.999999999999998,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003144641003152238,
+      "tangential_with_transverse_trim_T_m": 0.00018919274925258787,
+      "supplemental_deficit_T_m": 0.00021099957402761336
+    },
+    {
+      "phase_deg": 17.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002962896889942553,
+      "tangential_with_transverse_trim_T_m": 0.00018694104358472089,
+      "supplemental_deficit_T_m": 0.00021325127969548034
+    },
+    {
+      "phase_deg": 17.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002962896889942553,
+      "tangential_with_transverse_trim_T_m": 0.00019435624958110472,
+      "supplemental_deficit_T_m": 0.0002058360736990965
+    },
+    {
+      "phase_deg": 20.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002689299039756319,
+      "tangential_with_transverse_trim_T_m": 0.0001540987566450423,
+      "supplemental_deficit_T_m": 0.0002460935666351589
+    },
+    {
+      "phase_deg": 20.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002689299039756319,
+      "tangential_with_transverse_trim_T_m": 0.00011532791187198874,
+      "supplemental_deficit_T_m": 0.00028486441140821247
+    },
+    {
+      "phase_deg": 22.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00024188815858140744,
+      "tangential_with_transverse_trim_T_m": 0.00010957468468269993,
+      "supplemental_deficit_T_m": 0.0002906176385975013
+    },
+    {
+      "phase_deg": 22.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00024188815858140744,
+      "tangential_with_transverse_trim_T_m": 8.257824635120775e-05,
+      "supplemental_deficit_T_m": 0.0003176140769289935
+    },
+    {
+      "phase_deg": 25.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022003560401323902,
+      "tangential_with_transverse_trim_T_m": 9.15049308321367e-05,
+      "supplemental_deficit_T_m": 0.00030868739244806453
+    },
+    {
+      "phase_deg": 25.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022003560401323902,
+      "tangential_with_transverse_trim_T_m": 7.054680503073272e-05,
+      "supplemental_deficit_T_m": 0.0003296455182494685
+    },
+    {
+      "phase_deg": 27.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020536121087698654,
+      "tangential_with_transverse_trim_T_m": 8.405795838117122e-05,
+      "supplemental_deficit_T_m": 0.00031613436489903
+    },
+    {
+      "phase_deg": 27.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020536121087698654,
+      "tangential_with_transverse_trim_T_m": 6.644613800569862e-05,
+      "supplemental_deficit_T_m": 0.0003337461852745026
+    },
+    {
+      "phase_deg": 29.999999999999996,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019851231540488068,
+      "tangential_with_transverse_trim_T_m": 8.314022478305904e-05,
+      "supplemental_deficit_T_m": 0.0003170520984971422
+    },
+    {
+      "phase_deg": 29.999999999999996,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019851231540488068,
+      "tangential_with_transverse_trim_T_m": 6.727974512674602e-05,
+      "supplemental_deficit_T_m": 0.0003329125781534552
+    },
+    {
+      "phase_deg": 32.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0001997162473032088,
+      "tangential_with_transverse_trim_T_m": 8.75339295647232e-05,
+      "supplemental_deficit_T_m": 0.000312658393715478
+    },
+    {
+      "phase_deg": 32.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0001997162473032088,
+      "tangential_with_transverse_trim_T_m": 7.225839067020526e-05,
+      "supplemental_deficit_T_m": 0.00032793393260999594
+    },
+    {
+      "phase_deg": 35.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.000209222595356836,
+      "tangential_with_transverse_trim_T_m": 9.749593049838959e-05,
+      "supplemental_deficit_T_m": 0.0003026963927818116
+    },
+    {
+      "phase_deg": 35.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.000209222595356836,
+      "tangential_with_transverse_trim_T_m": 8.176175442459274e-05,
+      "supplemental_deficit_T_m": 0.0003184305688556085
+    },
+    {
+      "phase_deg": 37.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002274263410529427,
+      "tangential_with_transverse_trim_T_m": 0.00011464206811631709,
+      "supplemental_deficit_T_m": 0.00028555025516388414
+    },
+    {
+      "phase_deg": 37.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002274263410529427,
+      "tangential_with_transverse_trim_T_m": 9.730466238017424e-05,
+      "supplemental_deficit_T_m": 0.000302887660900027
+    },
+    {
+      "phase_deg": 40.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00025471500483167106,
+      "tangential_with_transverse_trim_T_m": 0.00014278790387390827,
+      "supplemental_deficit_T_m": 0.00025740441940629293
+    },
+    {
+      "phase_deg": 40.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00025471500483167106,
+      "tangential_with_transverse_trim_T_m": 0.0001223086748624174,
+      "supplemental_deficit_T_m": 0.0002778836484177838
+    },
+    {
+      "phase_deg": 42.49999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002909354021489016,
+      "tangential_with_transverse_trim_T_m": 0.00018827472069164392,
+      "supplemental_deficit_T_m": 0.0002119176025885573
+    },
+    {
+      "phase_deg": 42.49999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002909354021489016,
+      "tangential_with_transverse_trim_T_m": 0.00016465836535206637,
+      "supplemental_deficit_T_m": 0.00023553395792813486
+    },
+    {
+      "phase_deg": 45.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003342149977749232,
+      "tangential_with_transverse_trim_T_m": 0.00019059080876002152,
+      "supplemental_deficit_T_m": 0.0002096015145201797
+    },
+    {
+      "phase_deg": 45.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003342149977749232,
+      "tangential_with_transverse_trim_T_m": 0.00020186740670162165,
+      "supplemental_deficit_T_m": 0.00019832491657857958
+    },
+    {
+      "phase_deg": 47.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003787897070343207,
+      "tangential_with_transverse_trim_T_m": 0.00018813970436347717,
+      "supplemental_deficit_T_m": 0.00021205261891672406
+    },
+    {
+      "phase_deg": 47.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003787897070343207,
+      "tangential_with_transverse_trim_T_m": 0.0002004136062627877,
+      "supplemental_deficit_T_m": 0.00019977871701741353
+    },
+    {
+      "phase_deg": 50.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0004118904896267848,
+      "tangential_with_transverse_trim_T_m": 0.0001801662831922943,
+      "supplemental_deficit_T_m": 0.00022002604008790694
+    },
+    {
+      "phase_deg": 50.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0004118904896267848,
+      "tangential_with_transverse_trim_T_m": 0.00019352057979119452,
+      "supplemental_deficit_T_m": 0.0002066717434890067
+    },
+    {
+      "phase_deg": 52.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00041157616740519244,
+      "tangential_with_transverse_trim_T_m": 0.0001608841712614834,
+      "supplemental_deficit_T_m": 0.00023930815201871782
+    },
+    {
+      "phase_deg": 52.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00041157616740519244,
+      "tangential_with_transverse_trim_T_m": 0.0001755561593921486,
+      "supplemental_deficit_T_m": 0.00022463616388805263
+    },
+    {
+      "phase_deg": 55.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003510741549493012,
+      "tangential_with_transverse_trim_T_m": 0.00012333973376152586,
+      "supplemental_deficit_T_m": 0.00027685258951867537
+    },
+    {
+      "phase_deg": 55.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003510741549493012,
+      "tangential_with_transverse_trim_T_m": 0.00013953024977784762,
+      "supplemental_deficit_T_m": 0.0002606620735023536
+    },
+    {
+      "phase_deg": 57.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00031613404746845775,
+      "tangential_with_transverse_trim_T_m": 6.652853758032446e-05,
+      "supplemental_deficit_T_m": 0.0003336637856998768
+    },
+    {
+      "phase_deg": 57.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00031613404746845775,
+      "tangential_with_transverse_trim_T_m": 8.401929188225077e-05,
+      "supplemental_deficit_T_m": 0.0003161730313979504
+    },
+    {
+      "phase_deg": 59.99999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003264108440756817,
+      "tangential_with_transverse_trim_T_m": 3.579713352538386e-05,
+      "supplemental_deficit_T_m": 0.0003643951897548174
+    },
+    {
+      "phase_deg": 59.99999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003264108440756817,
+      "tangential_with_transverse_trim_T_m": 5.368239257100105e-05,
+      "supplemental_deficit_T_m": 0.0003465099307092002
+    },
+    {
+      "phase_deg": 62.49999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.00030356073507680154,
+      "tangential_with_transverse_trim_T_m": 6.563735846987924e-05,
+      "supplemental_deficit_T_m": 0.000334554964810322
+    },
+    {
+      "phase_deg": 62.49999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.00030356073507680154,
+      "tangential_with_transverse_trim_T_m": 8.268795553558828e-05,
+      "supplemental_deficit_T_m": 0.00031750436774461295
+    },
+    {
+      "phase_deg": 65.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00033162667939480193,
+      "tangential_with_transverse_trim_T_m": 0.00011980324068662209,
+      "supplemental_deficit_T_m": 0.00028038908259357914
+    },
+    {
+      "phase_deg": 65.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00033162667939480193,
+      "tangential_with_transverse_trim_T_m": 0.0001352403235033193,
+      "supplemental_deficit_T_m": 0.0002649519997768819
+    },
+    {
+      "phase_deg": 67.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003963938326559001,
+      "tangential_with_transverse_trim_T_m": 0.00015588605479170735,
+      "supplemental_deficit_T_m": 0.0002443062684884939
+    },
+    {
+      "phase_deg": 67.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003963938326559001,
+      "tangential_with_transverse_trim_T_m": 0.0001696544953913014,
+      "supplemental_deficit_T_m": 0.00023053782788889983
+    },
+    {
+      "phase_deg": 70.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0004005215753131351,
+      "tangential_with_transverse_trim_T_m": 0.0001748690699262991,
+      "supplemental_deficit_T_m": 0.00022532325335390213
+    },
+    {
+      "phase_deg": 70.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0004005215753131351,
+      "tangential_with_transverse_trim_T_m": 0.00018729142884610272,
+      "supplemental_deficit_T_m": 0.0002129008944340985
+    },
+    {
+      "phase_deg": 72.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003704068929947367,
+      "tangential_with_transverse_trim_T_m": 0.00018326796904013747,
+      "supplemental_deficit_T_m": 0.00021692435424006375
+    },
+    {
+      "phase_deg": 72.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003704068929947367,
+      "tangential_with_transverse_trim_T_m": 0.0001946443737214702,
+      "supplemental_deficit_T_m": 0.00020554794955873103
+    },
+    {
+      "phase_deg": 75.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032806105348084653,
+      "tangential_with_transverse_trim_T_m": 0.00018647434212037638,
+      "supplemental_deficit_T_m": 0.00021371798115982484
+    },
+    {
+      "phase_deg": 75.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032806105348084653,
+      "tangential_with_transverse_trim_T_m": 0.0001969088569266563,
+      "supplemental_deficit_T_m": 0.00020328346635354493
+    },
+    {
+      "phase_deg": 77.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002864498319502313,
+      "tangential_with_transverse_trim_T_m": 0.0001855018488963485,
+      "supplemental_deficit_T_m": 0.00021469047438385272
+    },
+    {
+      "phase_deg": 77.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002864498319502313,
+      "tangential_with_transverse_trim_T_m": 0.0001622008633759168,
+      "supplemental_deficit_T_m": 0.00023799145990428442
+    },
+    {
+      "phase_deg": 80.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00025151731523581546,
+      "tangential_with_transverse_trim_T_m": 0.00014141769679704814,
+      "supplemental_deficit_T_m": 0.0002587746264831531
+    },
+    {
+      "phase_deg": 80.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00025151731523581546,
+      "tangential_with_transverse_trim_T_m": 0.00012113453312398172,
+      "supplemental_deficit_T_m": 0.0002790577901562195
+    },
+    {
+      "phase_deg": 82.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002252691889386758,
+      "tangential_with_transverse_trim_T_m": 0.00011396013353818317,
+      "supplemental_deficit_T_m": 0.0002862321897420181
+    },
+    {
+      "phase_deg": 82.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002252691889386758,
+      "tangential_with_transverse_trim_T_m": 9.671956073347607e-05,
+      "supplemental_deficit_T_m": 0.00030347276254672514
+    },
+    {
+      "phase_deg": 84.99999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020795318170462707,
+      "tangential_with_transverse_trim_T_m": 9.719971041409528e-05,
+      "supplemental_deficit_T_m": 0.00030299261286610593
+    },
+    {
+      "phase_deg": 84.99999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020795318170462707,
+      "tangential_with_transverse_trim_T_m": 8.150518337337859e-05,
+      "supplemental_deficit_T_m": 0.0003186871399068226
+    },
+    {
+      "phase_deg": 87.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019925190457182284,
+      "tangential_with_transverse_trim_T_m": 8.751133182841839e-05,
+      "supplemental_deficit_T_m": 0.00031268099145178284
+    },
+    {
+      "phase_deg": 87.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019925190457182284,
+      "tangential_with_transverse_trim_T_m": 7.223249613372958e-05,
+      "supplemental_deficit_T_m": 0.00032795982714647166
+    },
+    {
+      "phase_deg": 90.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019882803527039006,
+      "tangential_with_transverse_trim_T_m": 8.337254271624162e-05,
+      "supplemental_deficit_T_m": 0.0003168197805639596
+    },
+    {
+      "phase_deg": 90.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019882803527039006,
+      "tangential_with_transverse_trim_T_m": 6.74647076813856e-05,
+      "supplemental_deficit_T_m": 0.00033272761559881563
+    },
+    {
+      "phase_deg": 92.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020648674861162942,
+      "tangential_with_transverse_trim_T_m": 8.46048115895055e-05,
+      "supplemental_deficit_T_m": 0.0003155875116906957
+    },
+    {
+      "phase_deg": 92.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020648674861162942,
+      "tangential_with_transverse_trim_T_m": 6.688417936514648e-05,
+      "supplemental_deficit_T_m": 0.0003333081439150547
+    },
+    {
+      "phase_deg": 95.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022206145771001942,
+      "tangential_with_transverse_trim_T_m": 9.255523446717247e-05,
+      "supplemental_deficit_T_m": 0.00030763708881302874
+    },
+    {
+      "phase_deg": 95.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022206145771001942,
+      "tangential_with_transverse_trim_T_m": 7.137768292594849e-05,
+      "supplemental_deficit_T_m": 0.0003288146403542527
+    },
+    {
+      "phase_deg": 97.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00024498111297612245,
+      "tangential_with_transverse_trim_T_m": 0.00011164023958572667,
+      "supplemental_deficit_T_m": 0.00028855208369447455
+    },
+    {
+      "phase_deg": 97.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00024498111297612245,
+      "tangential_with_transverse_trim_T_m": 8.418061258163524e-05,
+      "supplemental_deficit_T_m": 0.000316011710698566
+    },
+    {
+      "phase_deg": 100.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00027335787890277207,
+      "tangential_with_transverse_trim_T_m": 0.00015823512641083604,
+      "supplemental_deficit_T_m": 0.00024195719686936518
+    },
+    {
+      "phase_deg": 100.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00027335787890277207,
+      "tangential_with_transverse_trim_T_m": 0.00011836973694566209,
+      "supplemental_deficit_T_m": 0.0002818225863345391
+    },
+    {
+      "phase_deg": 102.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003024463936197908,
+      "tangential_with_transverse_trim_T_m": 0.00019106543018359033,
+      "supplemental_deficit_T_m": 0.0002091268930966109
+    },
+    {
+      "phase_deg": 102.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003024463936197908,
+      "tangential_with_transverse_trim_T_m": 0.0001991911526107852,
+      "supplemental_deficit_T_m": 0.00020100117066941601
+    },
+    {
+      "phase_deg": 105.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032285388555101084,
+      "tangential_with_transverse_trim_T_m": 0.00018239391284454592,
+      "supplemental_deficit_T_m": 0.0002177984104356553
+    },
+    {
+      "phase_deg": 105.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032285388555101084,
+      "tangential_with_transverse_trim_T_m": 0.0001948246213369722,
+      "supplemental_deficit_T_m": 0.00020536770194322902
+    },
+    {
+      "phase_deg": 107.49999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032058078676984686,
+      "tangential_with_transverse_trim_T_m": 0.00015957181838344273,
+      "supplemental_deficit_T_m": 0.0002406205048967585
+    },
+    {
+      "phase_deg": 107.49999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032058078676984686,
+      "tangential_with_transverse_trim_T_m": 0.00017544246409322475,
+      "supplemental_deficit_T_m": 0.00022474985918697647
+    },
+    {
+      "phase_deg": 110.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00029058502657320083,
+      "tangential_with_transverse_trim_T_m": 0.00011051479499697243,
+      "supplemental_deficit_T_m": 0.0002896775282832288
+    },
+    {
+      "phase_deg": 110.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00029058502657320083,
+      "tangential_with_transverse_trim_T_m": 0.00013508579944239858,
+      "supplemental_deficit_T_m": 0.00026510652383780265
+    },
+    {
+      "phase_deg": 112.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003254074935423416,
+      "tangential_with_transverse_trim_T_m": 4.749129050253602e-05,
+      "supplemental_deficit_T_m": 0.0003527010327776652
+    },
+    {
+      "phase_deg": 112.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003254074935423416,
+      "tangential_with_transverse_trim_T_m": 7.65175373639239e-05,
+      "supplemental_deficit_T_m": 0.0003236747859162773
+    },
+    {
+      "phase_deg": 115.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003416582361457762,
+      "tangential_with_transverse_trim_T_m": 0.00011858074446067207,
+      "supplemental_deficit_T_m": 0.00028161157881952917
+    },
+    {
+      "phase_deg": 115.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003416582361457762,
+      "tangential_with_transverse_trim_T_m": 0.00015254473138557456,
+      "supplemental_deficit_T_m": 0.00024764759189462666
+    },
+    {
+      "phase_deg": 117.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003442793595625528,
+      "tangential_with_transverse_trim_T_m": 0.00018713484678032046,
+      "supplemental_deficit_T_m": 0.00021305747649988076
+    },
+    {
+      "phase_deg": 117.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003442793595625528,
+      "tangential_with_transverse_trim_T_m": 0.00022640979298735306,
+      "supplemental_deficit_T_m": 0.00017378253029284816
+    },
+    {
+      "phase_deg": 119.99999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003812213121550411,
+      "tangential_with_transverse_trim_T_m": 0.00021243303257202436,
+      "supplemental_deficit_T_m": 0.00018775929070817687
+    },
+    {
+      "phase_deg": 119.99999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003812213121550411,
+      "tangential_with_transverse_trim_T_m": 0.0002537081912847883,
+      "supplemental_deficit_T_m": 0.00014648413199541292
+    },
+    {
+      "phase_deg": 122.49999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003484765435274862,
+      "tangential_with_transverse_trim_T_m": 0.00018499002608880484,
+      "supplemental_deficit_T_m": 0.0002152022971913964
+    },
+    {
+      "phase_deg": 122.49999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003484765435274862,
+      "tangential_with_transverse_trim_T_m": 0.00022411717687919892,
+      "supplemental_deficit_T_m": 0.0001760751464010023
+    },
+    {
+      "phase_deg": 124.99999999999999,
+      "direction": 1,
+      "tangential_only_T_m": 0.00034219671140348973,
+      "tangential_with_transverse_trim_T_m": 0.00011651665555866609,
+      "supplemental_deficit_T_m": 0.0002836756677215351
+    },
+    {
+      "phase_deg": 124.99999999999999,
+      "direction": -1,
+      "tangential_only_T_m": 0.00034219671140348973,
+      "tangential_with_transverse_trim_T_m": 0.00015015184828667203,
+      "supplemental_deficit_T_m": 0.0002500404749935292
+    },
+    {
+      "phase_deg": 127.50000000000001,
+      "direction": 1,
+      "tangential_only_T_m": 0.00031990634348853304,
+      "tangential_with_transverse_trim_T_m": 4.9699605287983993e-05,
+      "supplemental_deficit_T_m": 0.0003504927179922172
+    },
+    {
+      "phase_deg": 127.50000000000001,
+      "direction": -1,
+      "tangential_only_T_m": 0.00031990634348853304,
+      "tangential_with_transverse_trim_T_m": 7.806824258107499e-05,
+      "supplemental_deficit_T_m": 0.0003221240806991262
+    },
+    {
+      "phase_deg": 130.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00027968703092020735,
+      "tangential_with_transverse_trim_T_m": 0.00010919948089170778,
+      "supplemental_deficit_T_m": 0.00029099284238849344
+    },
+    {
+      "phase_deg": 130.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00027968703092020735,
+      "tangential_with_transverse_trim_T_m": 0.00013168044236565248,
+      "supplemental_deficit_T_m": 0.00026851188091454875
+    },
+    {
+      "phase_deg": 132.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003094909251346448,
+      "tangential_with_transverse_trim_T_m": 0.0001546956357364943,
+      "supplemental_deficit_T_m": 0.0002454966875437069
+    },
+    {
+      "phase_deg": 132.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003094909251346448,
+      "tangential_with_transverse_trim_T_m": 0.00016986009814653227,
+      "supplemental_deficit_T_m": 0.00023033222513366895
+    },
+    {
+      "phase_deg": 135.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003144641003151242,
+      "tangential_with_transverse_trim_T_m": 0.00017745372149398836,
+      "supplemental_deficit_T_m": 0.00022273860178621287
+    },
+    {
+      "phase_deg": 135.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003144641003151242,
+      "tangential_with_transverse_trim_T_m": 0.0001891927492523133,
+      "supplemental_deficit_T_m": 0.00021099957402788793
+    },
+    {
+      "phase_deg": 137.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00029628968899477495,
+      "tangential_with_transverse_trim_T_m": 0.00018694104358502273,
+      "supplemental_deficit_T_m": 0.0002132512796951785
+    },
+    {
+      "phase_deg": 137.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00029628968899477495,
+      "tangential_with_transverse_trim_T_m": 0.00019435624958124805,
+      "supplemental_deficit_T_m": 0.00020583607369895318
+    },
+    {
+      "phase_deg": 140.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002689299039761347,
+      "tangential_with_transverse_trim_T_m": 0.00015409875664614374,
+      "supplemental_deficit_T_m": 0.00024609356663405745
+    },
+    {
+      "phase_deg": 140.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002689299039761347,
+      "tangential_with_transverse_trim_T_m": 0.00011532791187278071,
+      "supplemental_deficit_T_m": 0.0002848644114074205
+    },
+    {
+      "phase_deg": 142.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002418881585818196,
+      "tangential_with_transverse_trim_T_m": 0.00010957468468282951,
+      "supplemental_deficit_T_m": 0.0002906176385973717
+    },
+    {
+      "phase_deg": 142.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002418881585818196,
+      "tangential_with_transverse_trim_T_m": 8.257824635123396e-05,
+      "supplemental_deficit_T_m": 0.00031761407692896724
+    },
+    {
+      "phase_deg": 145.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002200356040135373,
+      "tangential_with_transverse_trim_T_m": 9.150493083199347e-05,
+      "supplemental_deficit_T_m": 0.00030868739244820775
+    },
+    {
+      "phase_deg": 145.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002200356040135373,
+      "tangential_with_transverse_trim_T_m": 7.054680503060298e-05,
+      "supplemental_deficit_T_m": 0.00032964551824959823
+    },
+    {
+      "phase_deg": 147.49999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020536121087614948,
+      "tangential_with_transverse_trim_T_m": 8.405795838105122e-05,
+      "supplemental_deficit_T_m": 0.00031613436489915
+    },
+    {
+      "phase_deg": 147.49999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020536121087614948,
+      "tangential_with_transverse_trim_T_m": 6.644613800574814e-05,
+      "supplemental_deficit_T_m": 0.0003337461852744531
+    },
+    {
+      "phase_deg": 150.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0001985123154030917,
+      "tangential_with_transverse_trim_T_m": 8.314022478266842e-05,
+      "supplemental_deficit_T_m": 0.0003170520984975328
+    },
+    {
+      "phase_deg": 150.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0001985123154030917,
+      "tangential_with_transverse_trim_T_m": 6.727974512653081e-05,
+      "supplemental_deficit_T_m": 0.00033291257815367043
+    },
+    {
+      "phase_deg": 152.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019971624730252257,
+      "tangential_with_transverse_trim_T_m": 8.753392956453421e-05,
+      "supplemental_deficit_T_m": 0.000312658393715667
+    },
+    {
+      "phase_deg": 152.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019971624730252257,
+      "tangential_with_transverse_trim_T_m": 7.22583906700725e-05,
+      "supplemental_deficit_T_m": 0.00032793393261012875
+    },
+    {
+      "phase_deg": 155.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.000209222595356127,
+      "tangential_with_transverse_trim_T_m": 9.749593049849014e-05,
+      "supplemental_deficit_T_m": 0.0003026963927817111
+    },
+    {
+      "phase_deg": 155.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.000209222595356127,
+      "tangential_with_transverse_trim_T_m": 8.176175442476689e-05,
+      "supplemental_deficit_T_m": 0.00031843056885543435
+    },
+    {
+      "phase_deg": 157.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002274263410537462,
+      "tangential_with_transverse_trim_T_m": 0.00011464206811622062,
+      "supplemental_deficit_T_m": 0.00028555025516398063
+    },
+    {
+      "phase_deg": 157.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002274263410537462,
+      "tangential_with_transverse_trim_T_m": 9.73046623799863e-05,
+      "supplemental_deficit_T_m": 0.00030288766090021493
+    },
+    {
+      "phase_deg": 160.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00025471500483154985,
+      "tangential_with_transverse_trim_T_m": 0.00014278790387399644,
+      "supplemental_deficit_T_m": 0.0002574044194062048
+    },
+    {
+      "phase_deg": 160.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00025471500483154985,
+      "tangential_with_transverse_trim_T_m": 0.0001223086748625321,
+      "supplemental_deficit_T_m": 0.0002778836484176691
+    },
+    {
+      "phase_deg": 162.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00029093540214817124,
+      "tangential_with_transverse_trim_T_m": 0.000188274720690989,
+      "supplemental_deficit_T_m": 0.00021191760258921222
+    },
+    {
+      "phase_deg": 162.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00029093540214817124,
+      "tangential_with_transverse_trim_T_m": 0.000164658365351799,
+      "supplemental_deficit_T_m": 0.00023553395792840222
+    },
+    {
+      "phase_deg": 165.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00033421499777591804,
+      "tangential_with_transverse_trim_T_m": 0.0001905908087603224,
+      "supplemental_deficit_T_m": 0.00020960151451987884
+    },
+    {
+      "phase_deg": 165.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00033421499777591804,
+      "tangential_with_transverse_trim_T_m": 0.0002018674067018426,
+      "supplemental_deficit_T_m": 0.00019832491657835862
+    },
+    {
+      "phase_deg": 167.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00037878970703346973,
+      "tangential_with_transverse_trim_T_m": 0.00018813970436361014,
+      "supplemental_deficit_T_m": 0.00021205261891659108
+    },
+    {
+      "phase_deg": 167.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00037878970703346973,
+      "tangential_with_transverse_trim_T_m": 0.00020041360626300815,
+      "supplemental_deficit_T_m": 0.00019977871701719308
+    },
+    {
+      "phase_deg": 169.99999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.0004118904896267888,
+      "tangential_with_transverse_trim_T_m": 0.00018016628319155495,
+      "supplemental_deficit_T_m": 0.00022002604008864628
+    },
+    {
+      "phase_deg": 169.99999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.0004118904896267888,
+      "tangential_with_transverse_trim_T_m": 0.0001935205797903756,
+      "supplemental_deficit_T_m": 0.00020667174348982563
+    },
+    {
+      "phase_deg": 172.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0004115761674047447,
+      "tangential_with_transverse_trim_T_m": 0.00016088417126109832,
+      "supplemental_deficit_T_m": 0.0002393081520191029
+    },
+    {
+      "phase_deg": 172.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0004115761674047447,
+      "tangential_with_transverse_trim_T_m": 0.00017555615939170006,
+      "supplemental_deficit_T_m": 0.00022463616388850117
+    },
+    {
+      "phase_deg": 175.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003510741549490237,
+      "tangential_with_transverse_trim_T_m": 0.00012333973376175018,
+      "supplemental_deficit_T_m": 0.00027685258951845105
+    },
+    {
+      "phase_deg": 175.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003510741549490237,
+      "tangential_with_transverse_trim_T_m": 0.0001395302497780348,
+      "supplemental_deficit_T_m": 0.0002606620735021664
+    },
+    {
+      "phase_deg": 177.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003161340474676376,
+      "tangential_with_transverse_trim_T_m": 6.652853758069197e-05,
+      "supplemental_deficit_T_m": 0.00033366378569950924
+    },
+    {
+      "phase_deg": 177.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003161340474676376,
+      "tangential_with_transverse_trim_T_m": 8.40192918826026e-05,
+      "supplemental_deficit_T_m": 0.0003161730313975986
+    },
+    {
+      "phase_deg": 180.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032641084407557497,
+      "tangential_with_transverse_trim_T_m": 3.579713352571911e-05,
+      "supplemental_deficit_T_m": 0.0003643951897544821
+    },
+    {
+      "phase_deg": 180.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032641084407557497,
+      "tangential_with_transverse_trim_T_m": 5.368239257131801e-05,
+      "supplemental_deficit_T_m": 0.0003465099307088832
+    },
+    {
+      "phase_deg": 182.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00030356073507595234,
+      "tangential_with_transverse_trim_T_m": 6.563735846964299e-05,
+      "supplemental_deficit_T_m": 0.00033455496481055825
+    },
+    {
+      "phase_deg": 182.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00030356073507595234,
+      "tangential_with_transverse_trim_T_m": 8.268795553534038e-05,
+      "supplemental_deficit_T_m": 0.00031750436774486085
+    },
+    {
+      "phase_deg": 185.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00033162667939419017,
+      "tangential_with_transverse_trim_T_m": 0.00011980324068694903,
+      "supplemental_deficit_T_m": 0.0002803890825932522
+    },
+    {
+      "phase_deg": 185.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00033162667939419017,
+      "tangential_with_transverse_trim_T_m": 0.00013524032350359526,
+      "supplemental_deficit_T_m": 0.00026495199977660594
+    },
+    {
+      "phase_deg": 187.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003963938326545176,
+      "tangential_with_transverse_trim_T_m": 0.0001558860547913283,
+      "supplemental_deficit_T_m": 0.0002443062684888729
+    },
+    {
+      "phase_deg": 187.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003963938326545176,
+      "tangential_with_transverse_trim_T_m": 0.00016965449539086395,
+      "supplemental_deficit_T_m": 0.00023053782788933728
+    },
+    {
+      "phase_deg": 190.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00040052157531278145,
+      "tangential_with_transverse_trim_T_m": 0.0001748690699251685,
+      "supplemental_deficit_T_m": 0.00022532325335503274
+    },
+    {
+      "phase_deg": 190.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00040052157531278145,
+      "tangential_with_transverse_trim_T_m": 0.0001872914288449497,
+      "supplemental_deficit_T_m": 0.00021290089443525153
+    },
+    {
+      "phase_deg": 192.49999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003704068929944358,
+      "tangential_with_transverse_trim_T_m": 0.00018326796903986002,
+      "supplemental_deficit_T_m": 0.0002169243542403412
+    },
+    {
+      "phase_deg": 192.49999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003704068929944358,
+      "tangential_with_transverse_trim_T_m": 0.00019464437372111566,
+      "supplemental_deficit_T_m": 0.00020554794955908557
+    },
+    {
+      "phase_deg": 195.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003280610534804128,
+      "tangential_with_transverse_trim_T_m": 0.0001864743421202887,
+      "supplemental_deficit_T_m": 0.00021371798115991253
+    },
+    {
+      "phase_deg": 195.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003280610534804128,
+      "tangential_with_transverse_trim_T_m": 0.00019690885692654744,
+      "supplemental_deficit_T_m": 0.00020328346635365379
+    },
+    {
+      "phase_deg": 197.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00028644983195033494,
+      "tangential_with_transverse_trim_T_m": 0.0001855018488963098,
+      "supplemental_deficit_T_m": 0.00021469047438389143
+    },
+    {
+      "phase_deg": 197.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00028644983195033494,
+      "tangential_with_transverse_trim_T_m": 0.00016220086337566446,
+      "supplemental_deficit_T_m": 0.00023799145990453677
+    },
+    {
+      "phase_deg": 200.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002515173152355534,
+      "tangential_with_transverse_trim_T_m": 0.00014141769679660614,
+      "supplemental_deficit_T_m": 0.00025877462648359506
+    },
+    {
+      "phase_deg": 200.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002515173152355534,
+      "tangential_with_transverse_trim_T_m": 0.00012113453312357123,
+      "supplemental_deficit_T_m": 0.00027905779015663
+    },
+    {
+      "phase_deg": 202.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022526918893876974,
+      "tangential_with_transverse_trim_T_m": 0.0001139601335381984,
+      "supplemental_deficit_T_m": 0.0002862321897420028
+    },
+    {
+      "phase_deg": 202.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022526918893876974,
+      "tangential_with_transverse_trim_T_m": 9.671956073343068e-05,
+      "supplemental_deficit_T_m": 0.00030347276254677057
+    },
+    {
+      "phase_deg": 205.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020795318170411666,
+      "tangential_with_transverse_trim_T_m": 9.719971041391766e-05,
+      "supplemental_deficit_T_m": 0.0003029926128662836
+    },
+    {
+      "phase_deg": 205.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020795318170411666,
+      "tangential_with_transverse_trim_T_m": 8.150518337322459e-05,
+      "supplemental_deficit_T_m": 0.00031868713990697664
+    },
+    {
+      "phase_deg": 207.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019925190457120774,
+      "tangential_with_transverse_trim_T_m": 8.751133182815699e-05,
+      "supplemental_deficit_T_m": 0.00031268099145204424
+    },
+    {
+      "phase_deg": 207.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019925190457120774,
+      "tangential_with_transverse_trim_T_m": 7.223249613351603e-05,
+      "supplemental_deficit_T_m": 0.0003279598271466852
+    },
+    {
+      "phase_deg": 210.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.000198828035269756,
+      "tangential_with_transverse_trim_T_m": 8.337254271590606e-05,
+      "supplemental_deficit_T_m": 0.00031681978056429514
+    },
+    {
+      "phase_deg": 210.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.000198828035269756,
+      "tangential_with_transverse_trim_T_m": 6.746470768109023e-05,
+      "supplemental_deficit_T_m": 0.00033272761559911097
+    },
+    {
+      "phase_deg": 212.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020648674861033168,
+      "tangential_with_transverse_trim_T_m": 8.460481158920946e-05,
+      "supplemental_deficit_T_m": 0.00031558751169099176
+    },
+    {
+      "phase_deg": 212.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020648674861033168,
+      "tangential_with_transverse_trim_T_m": 6.688417936497245e-05,
+      "supplemental_deficit_T_m": 0.0003333081439152288
+    },
+    {
+      "phase_deg": 214.99999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022206145770932242,
+      "tangential_with_transverse_trim_T_m": 9.255523446686085e-05,
+      "supplemental_deficit_T_m": 0.0003076370888133404
+    },
+    {
+      "phase_deg": 214.99999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022206145770932242,
+      "tangential_with_transverse_trim_T_m": 7.137768292569195e-05,
+      "supplemental_deficit_T_m": 0.0003288146403545093
+    },
+    {
+      "phase_deg": 217.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00024498111297618534,
+      "tangential_with_transverse_trim_T_m": 0.00011164023958537607,
+      "supplemental_deficit_T_m": 0.00028855208369482513
+    },
+    {
+      "phase_deg": 217.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00024498111297618534,
+      "tangential_with_transverse_trim_T_m": 8.41806125812909e-05,
+      "supplemental_deficit_T_m": 0.0003160117106989103
+    },
+    {
+      "phase_deg": 220.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002733578789022573,
+      "tangential_with_transverse_trim_T_m": 0.0001582351264101111,
+      "supplemental_deficit_T_m": 0.00024195719687009014
+    },
+    {
+      "phase_deg": 220.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002733578789022573,
+      "tangential_with_transverse_trim_T_m": 0.00011836973694509402,
+      "supplemental_deficit_T_m": 0.0002818225863351072
+    },
+    {
+      "phase_deg": 222.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00030244639362023157,
+      "tangential_with_transverse_trim_T_m": 0.00019106543018373388,
+      "supplemental_deficit_T_m": 0.00020912689309646735
+    },
+    {
+      "phase_deg": 222.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00030244639362023157,
+      "tangential_with_transverse_trim_T_m": 0.00019919115261091816,
+      "supplemental_deficit_T_m": 0.00020100117066928306
+    },
+    {
+      "phase_deg": 225.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003228538855506745,
+      "tangential_with_transverse_trim_T_m": 0.00018239391284415458,
+      "supplemental_deficit_T_m": 0.00021779841043604664
+    },
+    {
+      "phase_deg": 225.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003228538855506745,
+      "tangential_with_transverse_trim_T_m": 0.00019482462133646464,
+      "supplemental_deficit_T_m": 0.0002053677019437366
+    },
+    {
+      "phase_deg": 227.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003205807867695644,
+      "tangential_with_transverse_trim_T_m": 0.00015957181838256344,
+      "supplemental_deficit_T_m": 0.0002406205048976378
+    },
+    {
+      "phase_deg": 227.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003205807867695644,
+      "tangential_with_transverse_trim_T_m": 0.00017544246409229302,
+      "supplemental_deficit_T_m": 0.0002247498591879082
+    },
+    {
+      "phase_deg": 230.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002905850265723109,
+      "tangential_with_transverse_trim_T_m": 0.0001105147949959861,
+      "supplemental_deficit_T_m": 0.0002896775282842151
+    },
+    {
+      "phase_deg": 230.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002905850265723109,
+      "tangential_with_transverse_trim_T_m": 0.00013508579944141512,
+      "supplemental_deficit_T_m": 0.00026510652383878613
+    },
+    {
+      "phase_deg": 232.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032540749354204675,
+      "tangential_with_transverse_trim_T_m": 4.749129050266883e-05,
+      "supplemental_deficit_T_m": 0.0003527010327775324
+    },
+    {
+      "phase_deg": 232.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032540749354204675,
+      "tangential_with_transverse_trim_T_m": 7.651753736403929e-05,
+      "supplemental_deficit_T_m": 0.00032367478591616193
+    },
+    {
+      "phase_deg": 235.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00034165823614556355,
+      "tangential_with_transverse_trim_T_m": 0.00011858074446071495,
+      "supplemental_deficit_T_m": 0.0002816115788194863
+    },
+    {
+      "phase_deg": 235.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00034165823614556355,
+      "tangential_with_transverse_trim_T_m": 0.00015254473138561018,
+      "supplemental_deficit_T_m": 0.00024764759189459105
+    },
+    {
+      "phase_deg": 237.49999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003442793595620914,
+      "tangential_with_transverse_trim_T_m": 0.0001871348467801687,
+      "supplemental_deficit_T_m": 0.00021305747650003252
+    },
+    {
+      "phase_deg": 237.49999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003442793595620914,
+      "tangential_with_transverse_trim_T_m": 0.00022640979298713235,
+      "supplemental_deficit_T_m": 0.00017378253029306888
+    },
+    {
+      "phase_deg": 239.99999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003812213121555902,
+      "tangential_with_transverse_trim_T_m": 0.00021243303257229698,
+      "supplemental_deficit_T_m": 0.00018775929070790424
+    },
+    {
+      "phase_deg": 239.99999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003812213121555902,
+      "tangential_with_transverse_trim_T_m": 0.000253708191285113,
+      "supplemental_deficit_T_m": 0.0001464841319950882
+    },
+    {
+      "phase_deg": 242.49999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.00034847654352749673,
+      "tangential_with_transverse_trim_T_m": 0.00018499002608842447,
+      "supplemental_deficit_T_m": 0.00021520229719177675
+    },
+    {
+      "phase_deg": 242.49999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.00034847654352749673,
+      "tangential_with_transverse_trim_T_m": 0.00022411717687888553,
+      "supplemental_deficit_T_m": 0.0001760751464013157
+    },
+    {
+      "phase_deg": 244.99999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.00034219671140310896,
+      "tangential_with_transverse_trim_T_m": 0.00011651665555821792,
+      "supplemental_deficit_T_m": 0.00028367566772198333
+    },
+    {
+      "phase_deg": 244.99999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.00034219671140310896,
+      "tangential_with_transverse_trim_T_m": 0.00015015184828616495,
+      "supplemental_deficit_T_m": 0.0002500404749940363
+    },
+    {
+      "phase_deg": 247.49999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003199063434893323,
+      "tangential_with_transverse_trim_T_m": 4.969960528792357e-05,
+      "supplemental_deficit_T_m": 0.00035049271799227766
+    },
+    {
+      "phase_deg": 247.49999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003199063434893323,
+      "tangential_with_transverse_trim_T_m": 7.806824258112618e-05,
+      "supplemental_deficit_T_m": 0.00032212408069907505
+    },
+    {
+      "phase_deg": 249.99999999999997,
+      "direction": 1,
+      "tangential_only_T_m": 0.000279687030920791,
+      "tangential_with_transverse_trim_T_m": 0.00010919948089310096,
+      "supplemental_deficit_T_m": 0.0002909928423871003
+    },
+    {
+      "phase_deg": 249.99999999999997,
+      "direction": -1,
+      "tangential_only_T_m": 0.000279687030920791,
+      "tangential_with_transverse_trim_T_m": 0.00013168044236674674,
+      "supplemental_deficit_T_m": 0.0002685118809134545
+    },
+    {
+      "phase_deg": 252.50000000000003,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003094909251348961,
+      "tangential_with_transverse_trim_T_m": 0.00015469563573707826,
+      "supplemental_deficit_T_m": 0.00024549668754312296
+    },
+    {
+      "phase_deg": 252.50000000000003,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003094909251348961,
+      "tangential_with_transverse_trim_T_m": 0.00016986009814711135,
+      "supplemental_deficit_T_m": 0.00023033222513308988
+    },
+    {
+      "phase_deg": 255.00000000000003,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003144641003146965,
+      "tangential_with_transverse_trim_T_m": 0.0001774537214940158,
+      "supplemental_deficit_T_m": 0.00022273860178618544
+    },
+    {
+      "phase_deg": 255.00000000000003,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003144641003146965,
+      "tangential_with_transverse_trim_T_m": 0.00018919274925231956,
+      "supplemental_deficit_T_m": 0.00021099957402788167
+    },
+    {
+      "phase_deg": 257.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00029628968899460663,
+      "tangential_with_transverse_trim_T_m": 0.0001869410435845066,
+      "supplemental_deficit_T_m": 0.00021325127969569463
+    },
+    {
+      "phase_deg": 257.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00029628968899460663,
+      "tangential_with_transverse_trim_T_m": 0.0001943562495808535,
+      "supplemental_deficit_T_m": 0.00020583607369934772
+    },
+    {
+      "phase_deg": 260.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002689299039755864,
+      "tangential_with_transverse_trim_T_m": 0.00015409875664555787,
+      "supplemental_deficit_T_m": 0.00024609356663464336
+    },
+    {
+      "phase_deg": 260.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002689299039755864,
+      "tangential_with_transverse_trim_T_m": 0.00011532791187242622,
+      "supplemental_deficit_T_m": 0.000284864411407775
+    },
+    {
+      "phase_deg": 262.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00024188815858089337,
+      "tangential_with_transverse_trim_T_m": 0.00010957468468229472,
+      "supplemental_deficit_T_m": 0.0002906176385979065
+    },
+    {
+      "phase_deg": 262.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00024188815858089337,
+      "tangential_with_transverse_trim_T_m": 8.25782463509575e-05,
+      "supplemental_deficit_T_m": 0.0003176140769292437
+    },
+    {
+      "phase_deg": 265.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022003560401276587,
+      "tangential_with_transverse_trim_T_m": 9.150493083191203e-05,
+      "supplemental_deficit_T_m": 0.0003086873924482892
+    },
+    {
+      "phase_deg": 265.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022003560401276587,
+      "tangential_with_transverse_trim_T_m": 7.054680503062529e-05,
+      "supplemental_deficit_T_m": 0.00032964551824957595
+    },
+    {
+      "phase_deg": 267.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020536121087614832,
+      "tangential_with_transverse_trim_T_m": 8.405795838104617e-05,
+      "supplemental_deficit_T_m": 0.0003161343648991551
+    },
+    {
+      "phase_deg": 267.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020536121087614832,
+      "tangential_with_transverse_trim_T_m": 6.644613800574608e-05,
+      "supplemental_deficit_T_m": 0.0003337461852744552
+    },
+    {
+      "phase_deg": 270.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019851231540420747,
+      "tangential_with_transverse_trim_T_m": 8.314022478276537e-05,
+      "supplemental_deficit_T_m": 0.00031705209849743586
+    },
+    {
+      "phase_deg": 270.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019851231540420747,
+      "tangential_with_transverse_trim_T_m": 6.727974512650466e-05,
+      "supplemental_deficit_T_m": 0.00033291257815369656
+    },
+    {
+      "phase_deg": 272.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0001997162473027837,
+      "tangential_with_transverse_trim_T_m": 8.753392956450919e-05,
+      "supplemental_deficit_T_m": 0.00031265839371569205
+    },
+    {
+      "phase_deg": 272.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0001997162473027837,
+      "tangential_with_transverse_trim_T_m": 7.225839067002916e-05,
+      "supplemental_deficit_T_m": 0.00032793393261017206
+    },
+    {
+      "phase_deg": 275.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020922259535604258,
+      "tangential_with_transverse_trim_T_m": 9.749593049851576e-05,
+      "supplemental_deficit_T_m": 0.00030269639278168546
+    },
+    {
+      "phase_deg": 275.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020922259535604258,
+      "tangential_with_transverse_trim_T_m": 8.176175442479297e-05,
+      "supplemental_deficit_T_m": 0.0003184305688554083
+    },
+    {
+      "phase_deg": 277.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022742634105347631,
+      "tangential_with_transverse_trim_T_m": 0.0001146420681161505,
+      "supplemental_deficit_T_m": 0.0002855502551640507
+    },
+    {
+      "phase_deg": 277.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022742634105347631,
+      "tangential_with_transverse_trim_T_m": 9.730466237997353e-05,
+      "supplemental_deficit_T_m": 0.0003028876609002277
+    },
+    {
+      "phase_deg": 280.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00025471500483162,
+      "tangential_with_transverse_trim_T_m": 0.00014278790387408117,
+      "supplemental_deficit_T_m": 0.00025740441940612005
+    },
+    {
+      "phase_deg": 280.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00025471500483162,
+      "tangential_with_transverse_trim_T_m": 0.00012230867486257572,
+      "supplemental_deficit_T_m": 0.0002778836484176255
+    },
+    {
+      "phase_deg": 282.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002909354021489867,
+      "tangential_with_transverse_trim_T_m": 0.0001882747206910995,
+      "supplemental_deficit_T_m": 0.00021191760258910172
+    },
+    {
+      "phase_deg": 282.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002909354021489867,
+      "tangential_with_transverse_trim_T_m": 0.00016465836535161063,
+      "supplemental_deficit_T_m": 0.0002355339579285906
+    },
+    {
+      "phase_deg": 285.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00033421499777566157,
+      "tangential_with_transverse_trim_T_m": 0.0001905908087604332,
+      "supplemental_deficit_T_m": 0.00020960151451976803
+    },
+    {
+      "phase_deg": 285.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00033421499777566157,
+      "tangential_with_transverse_trim_T_m": 0.0002018674067020088,
+      "supplemental_deficit_T_m": 0.00019832491657819243
+    },
+    {
+      "phase_deg": 287.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003787897070330379,
+      "tangential_with_transverse_trim_T_m": 0.0001881397043631736,
+      "supplemental_deficit_T_m": 0.00021205261891702764
+    },
+    {
+      "phase_deg": 287.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003787897070330379,
+      "tangential_with_transverse_trim_T_m": 0.0002004136062625615,
+      "supplemental_deficit_T_m": 0.00019977871701763972
+    },
+    {
+      "phase_deg": 290.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00041189048962622036,
+      "tangential_with_transverse_trim_T_m": 0.00018016628319154231,
+      "supplemental_deficit_T_m": 0.0002200260400886589
+    },
+    {
+      "phase_deg": 290.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00041189048962622036,
+      "tangential_with_transverse_trim_T_m": 0.00019352057979034898,
+      "supplemental_deficit_T_m": 0.00020667174348985224
+    },
+    {
+      "phase_deg": 292.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00041157616740419557,
+      "tangential_with_transverse_trim_T_m": 0.00016088417126100386,
+      "supplemental_deficit_T_m": 0.00023930815201919737
+    },
+    {
+      "phase_deg": 292.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00041157616740419557,
+      "tangential_with_transverse_trim_T_m": 0.00017555615939161072,
+      "supplemental_deficit_T_m": 0.0002246361638885905
+    },
+    {
+      "phase_deg": 294.99999999999994,
+      "direction": 1,
+      "tangential_only_T_m": 0.00035107415494961243,
+      "tangential_with_transverse_trim_T_m": 0.0001233397337611156,
+      "supplemental_deficit_T_m": 0.00027685258951908563
+    },
+    {
+      "phase_deg": 294.99999999999994,
+      "direction": -1,
+      "tangential_only_T_m": 0.00035107415494961243,
+      "tangential_with_transverse_trim_T_m": 0.0001395302497773413,
+      "supplemental_deficit_T_m": 0.00026066207350285993
+    },
+    {
+      "phase_deg": 297.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00031613404746793153,
+      "tangential_with_transverse_trim_T_m": 6.652853758086182e-05,
+      "supplemental_deficit_T_m": 0.0003336637856993394
+    },
+    {
+      "phase_deg": 297.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00031613404746793153,
+      "tangential_with_transverse_trim_T_m": 8.40192918827664e-05,
+      "supplemental_deficit_T_m": 0.00031617303139743483
+    },
+    {
+      "phase_deg": 300.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032641084407555784,
+      "tangential_with_transverse_trim_T_m": 3.5797133525766185e-05,
+      "supplemental_deficit_T_m": 0.00036439518975443503
+    },
+    {
+      "phase_deg": 300.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032641084407555784,
+      "tangential_with_transverse_trim_T_m": 5.368239257134894e-05,
+      "supplemental_deficit_T_m": 0.00034650993070885227
+    },
+    {
+      "phase_deg": 302.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003035607350761357,
+      "tangential_with_transverse_trim_T_m": 6.563735847015861e-05,
+      "supplemental_deficit_T_m": 0.0003345549648100426
+    },
+    {
+      "phase_deg": 302.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003035607350761357,
+      "tangential_with_transverse_trim_T_m": 8.268795553584563e-05,
+      "supplemental_deficit_T_m": 0.0003175043677443556
+    },
+    {
+      "phase_deg": 305.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003316266793946602,
+      "tangential_with_transverse_trim_T_m": 0.00011980324068628494,
+      "supplemental_deficit_T_m": 0.0002803890825939163
+    },
+    {
+      "phase_deg": 305.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003316266793946602,
+      "tangential_with_transverse_trim_T_m": 0.00013524032350300554,
+      "supplemental_deficit_T_m": 0.0002649519997771957
+    },
+    {
+      "phase_deg": 307.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00039639383265516756,
+      "tangential_with_transverse_trim_T_m": 0.00015588605479195146,
+      "supplemental_deficit_T_m": 0.00024430626848824977
+    },
+    {
+      "phase_deg": 307.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00039639383265516756,
+      "tangential_with_transverse_trim_T_m": 0.00016965449539151247,
+      "supplemental_deficit_T_m": 0.00023053782788868876
+    },
+    {
+      "phase_deg": 310.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0004005215753126324,
+      "tangential_with_transverse_trim_T_m": 0.00017486906992501808,
+      "supplemental_deficit_T_m": 0.00022532325335518314
+    },
+    {
+      "phase_deg": 310.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0004005215753126324,
+      "tangential_with_transverse_trim_T_m": 0.00018729142884484304,
+      "supplemental_deficit_T_m": 0.0002129008944353582
+    },
+    {
+      "phase_deg": 312.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003704068929935566,
+      "tangential_with_transverse_trim_T_m": 0.0001832679690397453,
+      "supplemental_deficit_T_m": 0.00021692435424045594
+    },
+    {
+      "phase_deg": 312.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003704068929935566,
+      "tangential_with_transverse_trim_T_m": 0.00019464437372102386,
+      "supplemental_deficit_T_m": 0.00020554794955917737
+    },
+    {
+      "phase_deg": 315.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032806105347957877,
+      "tangential_with_transverse_trim_T_m": 0.00018647434211954288,
+      "supplemental_deficit_T_m": 0.00021371798116065835
+    },
+    {
+      "phase_deg": 315.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032806105347957877,
+      "tangential_with_transverse_trim_T_m": 0.00019690885692581487,
+      "supplemental_deficit_T_m": 0.00020328346635438635
+    },
+    {
+      "phase_deg": 317.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002864498319511835,
+      "tangential_with_transverse_trim_T_m": 0.00018550184889705863,
+      "supplemental_deficit_T_m": 0.0002146904743831426
+    },
+    {
+      "phase_deg": 317.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002864498319511835,
+      "tangential_with_transverse_trim_T_m": 0.0001622008633761187,
+      "supplemental_deficit_T_m": 0.00023799145990408251
+    },
+    {
+      "phase_deg": 320.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00025151731523505137,
+      "tangential_with_transverse_trim_T_m": 0.00014141769679656453,
+      "supplemental_deficit_T_m": 0.0002587746264836367
+    },
+    {
+      "phase_deg": 320.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00025151731523505137,
+      "tangential_with_transverse_trim_T_m": 0.00012113453312358996,
+      "supplemental_deficit_T_m": 0.00027905779015661124
+    },
+    {
+      "phase_deg": 322.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00022526918893838629,
+      "tangential_with_transverse_trim_T_m": 0.00011396013353779757,
+      "supplemental_deficit_T_m": 0.0002862321897424036
+    },
+    {
+      "phase_deg": 322.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00022526918893838629,
+      "tangential_with_transverse_trim_T_m": 9.671956073310424e-05,
+      "supplemental_deficit_T_m": 0.00030347276254709697
+    },
+    {
+      "phase_deg": 325.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00020795318170435412,
+      "tangential_with_transverse_trim_T_m": 9.719971041397052e-05,
+      "supplemental_deficit_T_m": 0.0003029926128662307
+    },
+    {
+      "phase_deg": 325.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00020795318170435412,
+      "tangential_with_transverse_trim_T_m": 8.150518337326957e-05,
+      "supplemental_deficit_T_m": 0.00031868713990693164
+    },
+    {
+      "phase_deg": 327.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019925190457186566,
+      "tangential_with_transverse_trim_T_m": 8.751133182836666e-05,
+      "supplemental_deficit_T_m": 0.00031268099145183455
+    },
+    {
+      "phase_deg": 327.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019925190457186566,
+      "tangential_with_transverse_trim_T_m": 7.223249613364248e-05,
+      "supplemental_deficit_T_m": 0.0003279598271465588
+    },
+    {
+      "phase_deg": 330.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00019882803527003295,
+      "tangential_with_transverse_trim_T_m": 8.337254271607691e-05,
+      "supplemental_deficit_T_m": 0.0003168197805641243
+    },
+    {
+      "phase_deg": 330.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00019882803527003295,
+      "tangential_with_transverse_trim_T_m": 6.746470768123894e-05,
+      "supplemental_deficit_T_m": 0.00033272761559896227
+    },
+    {
+      "phase_deg": 332.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002064867486107231,
+      "tangential_with_transverse_trim_T_m": 8.460481158930458e-05,
+      "supplemental_deficit_T_m": 0.00031558751169089667
+    },
+    {
+      "phase_deg": 332.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002064867486107231,
+      "tangential_with_transverse_trim_T_m": 6.688417936506277e-05,
+      "supplemental_deficit_T_m": 0.0003333081439151385
+    },
+    {
+      "phase_deg": 335.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002220614577091346,
+      "tangential_with_transverse_trim_T_m": 9.25552344668547e-05,
+      "supplemental_deficit_T_m": 0.0003076370888133465
+    },
+    {
+      "phase_deg": 335.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002220614577091346,
+      "tangential_with_transverse_trim_T_m": 7.137768292575318e-05,
+      "supplemental_deficit_T_m": 0.00032881464035444804
+    },
+    {
+      "phase_deg": 337.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002449811129751368,
+      "tangential_with_transverse_trim_T_m": 0.00011164023958535405,
+      "supplemental_deficit_T_m": 0.0002885520836948472
+    },
+    {
+      "phase_deg": 337.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002449811129751368,
+      "tangential_with_transverse_trim_T_m": 8.418061258132251e-05,
+      "supplemental_deficit_T_m": 0.0003160117106988787
+    },
+    {
+      "phase_deg": 339.99999999999994,
+      "direction": 1,
+      "tangential_only_T_m": 0.00027335787890257247,
+      "tangential_with_transverse_trim_T_m": 0.00015823512641045915,
+      "supplemental_deficit_T_m": 0.00024195719686974208
+    },
+    {
+      "phase_deg": 339.99999999999994,
+      "direction": -1,
+      "tangential_only_T_m": 0.00027335787890257247,
+      "tangential_with_transverse_trim_T_m": 0.00011836973694525149,
+      "supplemental_deficit_T_m": 0.0002818225863349497
+    },
+    {
+      "phase_deg": 342.49999999999994,
+      "direction": 1,
+      "tangential_only_T_m": 0.00030244639361979734,
+      "tangential_with_transverse_trim_T_m": 0.0001910654301834294,
+      "supplemental_deficit_T_m": 0.00020912689309677182
+    },
+    {
+      "phase_deg": 342.49999999999994,
+      "direction": -1,
+      "tangential_only_T_m": 0.00030244639361979734,
+      "tangential_with_transverse_trim_T_m": 0.00019919115261059458,
+      "supplemental_deficit_T_m": 0.00020100117066960664
+    },
+    {
+      "phase_deg": 345.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003228538855507113,
+      "tangential_with_transverse_trim_T_m": 0.0001823939128442318,
+      "supplemental_deficit_T_m": 0.00021779841043596942
+    },
+    {
+      "phase_deg": 345.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003228538855507113,
+      "tangential_with_transverse_trim_T_m": 0.00019482462133660214,
+      "supplemental_deficit_T_m": 0.00020536770194359909
+    },
+    {
+      "phase_deg": 347.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032058078676895413,
+      "tangential_with_transverse_trim_T_m": 0.00015957181838273968,
+      "supplemental_deficit_T_m": 0.00024062050489746155
+    },
+    {
+      "phase_deg": 347.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032058078676895413,
+      "tangential_with_transverse_trim_T_m": 0.00017544246409247598,
+      "supplemental_deficit_T_m": 0.00022474985918772525
+    },
+    {
+      "phase_deg": 350.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.0002905850265728189,
+      "tangential_with_transverse_trim_T_m": 0.00011051479499616938,
+      "supplemental_deficit_T_m": 0.0002896775282840319
+    },
+    {
+      "phase_deg": 350.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.0002905850265728189,
+      "tangential_with_transverse_trim_T_m": 0.0001350857994417172,
+      "supplemental_deficit_T_m": 0.000265106523838484
+    },
+    {
+      "phase_deg": 352.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.00032540749354158086,
+      "tangential_with_transverse_trim_T_m": 4.7491290502461106e-05,
+      "supplemental_deficit_T_m": 0.0003527010327777401
+    },
+    {
+      "phase_deg": 352.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.00032540749354158086,
+      "tangential_with_transverse_trim_T_m": 7.651753736378857e-05,
+      "supplemental_deficit_T_m": 0.00032367478591641266
+    },
+    {
+      "phase_deg": 355.0,
+      "direction": 1,
+      "tangential_only_T_m": 0.00034165823614556247,
+      "tangential_with_transverse_trim_T_m": 0.00011858074446048659,
+      "supplemental_deficit_T_m": 0.0002816115788197146
+    },
+    {
+      "phase_deg": 355.0,
+      "direction": -1,
+      "tangential_only_T_m": 0.00034165823614556247,
+      "tangential_with_transverse_trim_T_m": 0.00015254473138536415,
+      "supplemental_deficit_T_m": 0.0002476475918948371
+    },
+    {
+      "phase_deg": 357.5,
+      "direction": 1,
+      "tangential_only_T_m": 0.0003442793595626457,
+      "tangential_with_transverse_trim_T_m": 0.00018713484678053855,
+      "supplemental_deficit_T_m": 0.00021305747649966267
+    },
+    {
+      "phase_deg": 357.5,
+      "direction": -1,
+      "tangential_only_T_m": 0.0003442793595626457,
+      "tangential_with_transverse_trim_T_m": 0.0002264097929875513,
+      "supplemental_deficit_T_m": 0.00017378253029264992
+    }
+  ]
+}

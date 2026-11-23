@@ -18,17 +18,17 @@ MODEL = None
 INPUT = None
 
 
-def reference_path(duration, direction):
-    kappa = INPUT["kappa_Am2_kg"]
-    center = np.array([RADIUS, INPUT["reference_height_m"]])
-    field = MODEL.field(*center)
+def reference_path(model, case, duration, direction):
+    kappa = case["kappa_Am2_kg"]
+    center = np.array([RADIUS, case["reference_height_m"]])
+    field = model.field(*center)
     normal = np.array([field[2], -field[0]])
     normal *= np.sign(normal[0]) / np.linalg.norm(normal)
     shift = -DISTANCE * normal
 
     def momentum(position):
         radius, height = position
-        circular_speed = np.sqrt(-radius * MODEL.ambient(radius, height)[1][0])
+        circular_speed = np.sqrt(-radius * model.ambient(radius, height)[1][0])
         return direction * radius * circular_speed
 
     initial_momentum = momentum(center)
@@ -49,7 +49,7 @@ def reference_path(duration, direction):
 
 def simulate(spec):
     treatment, duration, direction, phase, steps = spec
-    at, center, normal = reference_path(duration, direction)
+    at, center, normal = reference_path(MODEL, INPUT, duration, direction)
     drag = 0. if treatment == "no_drag" else INPUT["drag_at_nominal_speed_T_m"]
     row, trace = trajectory(
         MODEL, INPUT["mode"], INPUT["kappa_Am2_kg"], True, phase, (0., 0., 1.), 100,
@@ -58,9 +58,15 @@ def simulate(spec):
         guide_weights=CONTROLLERS["momentum"],
         hold_angular_momentum=True, reference_at=at,
     )
+    measure_tracking(row, trace, at, center, normal, duration)
+    row.update(treatment=treatment, drag_at_nominal_speed_T_m=drag)
+    return row, trace
+
+
+def measure_tracking(row, trace, at, center, normal, duration):
     time = trace[:, 0]
     position = (trace[:, [1, 3]] - center) @ normal
-    speed = (trace[:, [4, 6]] @ normal) * np.sqrt(INPUT["kappa_Am2_kg"])
+    speed = (trace[:, [4, 6]] @ normal) * np.sqrt(row["kappa_Am2_kg"])
     target = np.array([(at(t)[0] - center) @ normal for t in time])
     settled = time >= START + duration + .05
     error = abs(position - target)
@@ -68,12 +74,10 @@ def simulate(spec):
     settled_speed = float(abs(speed[settled]).max()) if settled.any() else None
     passed = (row["outcome"] == "completed" and settled_error is not None
               and settled_error <= .0005 and settled_speed <= .02)
-    row.update(treatment=treatment, drag_at_nominal_speed_T_m=drag,
-               duration_s=duration, tracking_pass=passed, settled_error_m=settled_error,
+    row.update(duration_s=duration, tracking_pass=passed, settled_error_m=settled_error,
                settled_speed_m_s=settled_speed, final_normal_displacement_m=float(position[-1]),
                worst_normal_error_m=float(error.max()),
                corridor_margin_m=HALF_WIDTH-max(row["radial_peak_m"], row["vertical_peak_m"]))
-    return row, trace
 
 
 def main():
