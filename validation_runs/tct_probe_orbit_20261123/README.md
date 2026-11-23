@@ -14,6 +14,18 @@ The steering target moves 2.084 mm inward along the flux normal with a quintic p
 
 All 48 original load-feedback runs completed three laps inside the corridor. Zero met the tracking gate at either integration resolution. The 24 finer cases ended 7.34–8.25 mm inward and had worst settling errors of 5.30–6.23 mm. This isolates the need to improve trajectory tracking before reusing a commanded path in the MHD model.
 
+The 96 comparison runs also completed three laps inside the corridor. Neither removing the imposed drag nor feeding its exact modeled value to the controller met both tracking limits. The table shows the finest time step, with four starting angles and two directions at each duration.
+
+| Load treatment | Tracking passes across 50, 100 and 200 ms | Worst post-settle position error across starting phases at 200 ms |
+| --- | ---: | ---: |
+| Imposed drag, feedback only | 0/24 | 5.85 mm |
+| Imposed drag, exact feedforward | 0/24 | 5.04 mm |
+| No drag | 0/24 | 1.02 mm |
+
+The ideal linearized tangential I-coil authority at the reference orbit spans 0.000197 to 0.000410 T/m, with mean 0.000293 T/m. It covers the imposed nominal drag of 0.000400 T/m at 6 of 144 sampled angles, even when all available I-coil current is assigned to the tangential direction. This comparison uses the assumed load and the modeled vacuum coil response. The no-drag result also isolates a tracking error in the current controller. The current-sheet replay of a shot-calibrated, within-tolerance approach remains pending.
+
+Run outputs are in [the drag comparison](orbit/runs/reachable_approach_comparison.json) and [the coil authority calculation](orbit/runs/coil_authority.json).
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.
@@ -23,6 +35,7 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 python3 orbit/shot_flow.py
 python3 orbit/reachable_approach.py
 python3 orbit/reachable_approach.py --comparison
+python3 orbit/coil_authority.py
 unzip -j archive/TCT_steered_current_sheet_replay.zip input/orbit_tracks.npz input/archive_mesh_hold.json -d plasma/input
 ```
 

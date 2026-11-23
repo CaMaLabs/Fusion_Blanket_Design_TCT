@@ -1,0 +1,12 @@
+{
+  "reference_height_m": -0.0051640142737476085,
+  "phase_samples": 144,
+  "imposed_drag_T_m": 0.0004001923232802012,
+  "ideal_available_T_m": {
+    "min": 0.00019720808047319038,
+    "mean": 0.0002929289971621678,
+    "max": 0.0004099866159934096
+  },
+  "fraction_of_phases_at_or_above_drag": 0.041666666666666664,
+  "assumption": "Linear vacuum-field response, all available I-coil authority used tangentially."
+}
