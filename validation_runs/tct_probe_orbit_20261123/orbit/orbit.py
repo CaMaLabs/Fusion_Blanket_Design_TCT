@@ -101,6 +101,8 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
     """Advance a free point dipole using time scaled by sqrt(moment / mass)."""
     if direction not in (-1, 1):
         raise ValueError("Direction must be +1 or -1")
+    if not np.isfinite(supplemental_toroidal_gradient) or supplemental_toroidal_gradient < 0.:
+        raise ValueError("Supplemental gradient capacity must be finite and nonnegative")
     height, speed = field_map.height, field_map.balance_speed
     if balanced_height is not None:
         height = balanced_height
@@ -115,8 +117,8 @@ def trajectory(field_map, mode, kappa, has_gravity, phase_deg, launch,
     else:
         limit = I_LIMIT
     if supplemental_toroidal_gradient:
-        if control_policy is None:
-            raise ValueError("Supplemental force requires a control policy")
+        if control_policy is None or mode in ("ambient", "fixed_plane_5kA_IC", "drive_1.6kA_I"):
+            raise ValueError("Supplemental force requires a guided mode and a control policy")
         limit = np.append(limit, 1.)
     dt = TWO_PI * RADIUS / (steps_per_lap * speed)
     dt_real = dt / np.sqrt(kappa)

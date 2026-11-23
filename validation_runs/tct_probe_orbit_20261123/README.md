@@ -50,6 +50,13 @@ The follow-on local resistive MHD replay takes a computed trajectory that passed
 
 The acceptance test requires above +0.020% FWHM across the full station set and at most +0.100% peak sampled sheet current after mesh, time-step and diagnostic allowances. The replay also follows the seeded X-line and O-line at entry, midpoint and exit. A continuation check tracks persistence of those lines. A census of new axes, a reconnection rate and energy deposited at the wall require additional diagnostics.
 
+| Sheet pattern assumption | Time across the patch | Frames passing both gates | Finest-run behavior |
+| --- | ---: | ---: | --- |
+| Stationary in vessel frame | 2.450 ms | 0/13 | Every post-entry frame exceeded the peak-current cap and had fewer than 36 valid FWHM stations. The guide field changed sign in the domain by midpoint, so the one-turn field-line map could not classify the original lines there or at exit. |
+| Follows the fitted toroidal E×B component | 3.247 µs | 0/13 | The mean FWHM narrowed by 0.404% at exit across all 36 stations. The original elliptic and hyperbolic field lines were tracked at all three topology samples. |
+
+The first stationary fine-grid time step overflowed. The stationary comparison in the receipt uses the stable 240- and 480-step integrations on the fine mesh. Both replays are local sensitivity tests at one stand-off and one reachable trajectory. The supplemental actuator result establishes a force target for steering. The replay leaves the widening and breakup goals unmet. [Matched plasma replay](plasma/runs/settled_pass_replay.json)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.
