@@ -73,6 +73,8 @@ The slip and self-field replay uses prescribed pattern speeds as sensitivity inp
 
 The denser field-only follow-up measured a nominal span of 1.429 ms across 15 consecutive passing samples with the virtual sphere exclusion removed. A shaped pulse remained above the width gate at all 24 samples in the 2.450 ms field-off interval on the extended refined run. The final mean width increased by 0.2451%, peak sampled current fell by 0.0207%, and the original island persisted in the periodic model. [Time-resolved field-only sweep](plasma/README.md#time-resolved-field-only-sweeps)
 
+The same pulse retained all 24 field-off passes at initial guide-velocity jumps of ±25 m/s across 50 mm. At −55, +55, −85 and +85 m/s it passed 20, 7, 14 and 0 samples respectively after refinement. The effect depends on the magnitude and direction of the initial shear in the local model. [Guide-flow shear sweep](plasma/README.md#initial-guide-flow-shear)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.

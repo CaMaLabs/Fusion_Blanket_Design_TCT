@@ -125,3 +125,35 @@ python3 plasma/field_window.py --cache /tmp/tct-field-window --refine --cases lo
 ```
 
 [Coarse screen](runs/field_window_screen.json) · [Nominal and pulsed refinement](runs/field_window_refined.json) · [Half-amplitude refinement](runs/field_window_half_strength_refined.json) · [Extended field-off screen](runs/field_window_long_decay_screen.json) · [Extended field-off refinement](runs/field_window_long_decay_refined.json)
+
+## Initial guide-flow shear
+
+The follow-up initializes the existing periodic slab with a divergence-free guide-direction velocity proportional to `sin(2y)`, where `y` is the normalized sheet-normal coordinate. The mean velocity and the velocity at the sheet center are zero. The signed control parameter is the guide velocity at +25 mm minus the guide velocity at −25 mm. The MHD solver evolves this initial flow with its existing viscosity and magnetic coupling. Each driven pulse is paired with an unforced case with the identical initial flow, numerical grid and time step.
+
+The prescribed moving field, nominal amplitude, 42 mm stand-off and 0.30625 ms pulse edges are inherited from the extended field-off study. Shutoff occurs at 2.45 ms and the unforced continuation ends at 4.90 ms. The established unmasked mean width and local peak-current gates still apply. These initial guide shears represent a controlled sensitivity test in the local model. DIII-D bulk-flow and pattern-speed calibration remain open.
+
+Use a positive sign when the initial guide velocity increases toward the field source. The two sides of the velocity profile are resolved on both meshes. With the field off throughout, the coarse guide-shear controls gave the same sampled sheet widths and peak currents as the zero-shear control to within numerical roundoff. The seeded island and its associated saddle are checked at four times in each refined run.
+
+| Initial jump across 50 mm | Passing samples after shutoff | Final mean width change | Final peak-current change |
+| ---: | ---: | ---: | ---: |
+| −85 m/s | 14/24 | −0.573% | +0.199% |
+| −55 m/s | 20/24 | +0.0418% | +0.0779% |
+| −25 m/s | 24/24 | +0.159% | +0.0456% |
+| 0 m/s | 24/24 | +0.245% | −0.0207% |
+| +25 m/s | 24/24 | +0.0572% | +0.00900% |
+| +55 m/s | 7/24 | −0.264% | +0.560% |
+| +85 m/s | 0/24 | +1.327% | +2.182% |
+
+These are the unmasked disk results after resolution and time-step allowances, measured against the matched unforced controls. The limits are above +0.020% mean width and at most +0.100% peak-current increase. At −55 m/s, the width cleared its gate at all 24 field-off samples. Four late current excursions broke the passing interval before the final two samples recovered. At +85 m/s, the finest grid gave +3.065% mean width and +1.175% peak current at the end. The adjusted peak exceeded the current limit at every field-off sample. The original elliptic axis and hyperbolic field line persisted in all seven modeled cases at the four topology checkpoints.
+
+`field_window.py` defaults to zero initial flow. The zero-shear case in this sweep reproduced the prior refined extended run exactly.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/field_window.py --cases long_decay --shear-m-s 0 25 -25 85 -85 --cache /tmp/tct-guide-shear --output plasma/runs/field_guide_shear_screen.json
+python3 plasma/field_window.py --refine --cases long_decay --shear-m-s 0 25 -25 85 -85 --cache /tmp/tct-guide-shear --output plasma/runs/field_guide_shear_refined.json
+python3 plasma/field_window.py --cases long_decay --shear-m-s 55 -55 --cache /tmp/tct-guide-shear --output plasma/runs/field_guide_shear_intermediate_screen.json
+python3 plasma/field_window.py --refine --cases long_decay --shear-m-s 55 -55 --cache /tmp/tct-guide-shear --output plasma/runs/field_guide_shear_intermediate_refined.json
+```
+
+[Coarse sweep](runs/field_guide_shear_screen.json) · [Coarse ±55 m/s runs](runs/field_guide_shear_intermediate_screen.json) · [Refined sweep](runs/field_guide_shear_refined.json) · [Refined ±55 m/s runs](runs/field_guide_shear_intermediate_refined.json)

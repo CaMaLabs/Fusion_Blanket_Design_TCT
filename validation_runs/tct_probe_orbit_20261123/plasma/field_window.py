@@ -13,7 +13,7 @@ import numpy as np
 from analyze import PEAK, WIDTH, delta
 from measure import sampler, verify
 from run import PEAK_POINTS, PEAK_Y, angle_grid, integrate, radii, x_grid, z_grid
-from settled_pass import SECONDS_PER_UNIT, SettledPass
+from settled_pass import METERS_PER_UNIT, SECONDS_PER_UNIT, SettledPass
 from slip_sweep import MAX_EXPOSURE_S, SOURCE_STRENGTH, assess, core_and_field
 from source import sweep_mhd as mhd
 from steered_replay import ROOT, report_frame
@@ -21,6 +21,7 @@ from steered_replay import ROOT, report_frame
 INTERVALS = 24
 MESHES = ((64, 52, 52), (80, 64, 64), (80, 64, 64))
 DIAGNOSTICS = ("legacy_annulus", "unmasked_disk")
+SHEAR_HALF_WIDTH = .25
 disk = radii <= .75
 DISK_POINTS = np.stack(np.broadcast_arrays(
     x_grid[disk, None], PEAK_Y[None, :], z_grid[disk, None] + .17,
@@ -61,18 +62,33 @@ def envelope(time_s, active_s, drive):
     return progress**2 * (3 - 2 * progress)
 
 
-def simulate(track, drive, level, applied):
+def guide_velocity_amplitude(shear_m_s):
+    """Normalized sinusoid amplitude for a signed velocity jump across the sheet."""
+    return shear_m_s * SECONDS_PER_UNIT / (2 * METERS_PER_UNIT * np.sin(2 * SHEAR_HALF_WIDTH))
+
+
+def simulate(track, drive, level, applied, shear_m_s=0.):
     speeds = {"sheet_speed": 0.} if drive.relative_m_s is None else {"relative_speed": drive.relative_m_s}
     path = SettledPass(track, **speeds, max_exposure_s=MAX_EXPOSURE_S)
     active_s = path.duration * SECONDS_PER_UNIT
     cadence = path.duration / INTERVALS
     tail_frames = round(drive.coast_s / (cadence * SECONDS_PER_UNIT))
     np.testing.assert_allclose(tail_frames * cadence * SECONDS_PER_UNIT, drive.coast_s, atol=1e-12)
-    interval_steps = int(np.ceil(cadence / .0025)) * (2 if level == 2 else 1)
+    velocity_amplitude = guide_velocity_amplitude(shear_m_s)
+    max_step = .0025
+    if velocity_amplitude:
+        # Keep the step small for advection at the finest retained axial wavenumber.
+        axial_wavenumber = 2 * ((MESHES[-1][2] - 1) // 3)
+        max_step = min(max_step, .45 / (axial_wavenumber * abs(velocity_amplitude)))
+    interval_steps = int(np.ceil(cadence / max_step)) * (2 if level == 2 else 1)
     dt = cadence / interval_steps
     shape = MESHES[level]
     grid = mhd.Grid(shape, "xpoint", "sphere")
     initial = np.array(mhd.initial_state(grid))
+    if velocity_amplitude:
+        flow = np.zeros((3, *shape))
+        flow[2] = velocity_amplitude * np.sin(2 * grid.y)
+        initial[0] = grid.transform(flow)
 
     def model(gr, t, core, field):
         at = min(t, path.duration)
@@ -119,23 +135,29 @@ def baseline_name(drive):
     return f"baseline_{drive.relative_m_s}_{drive.coast_s}"
 
 
-def compute(track, names, levels, cache, jobs):
+def shear_name(name, shear_m_s):
+    return f"{name}_shear_{shear_m_s:+.17g}" if shear_m_s else name
+
+
+def compute(track, names, shears, levels, cache, jobs):
     specs = {}
     for name in names:
         drive = CASES[name]
-        specs[baseline_name(drive)] = Drive(relative_m_s=drive.relative_m_s, coast_s=drive.coast_s), False
-        specs[name] = drive, True
+        baseline = Drive(relative_m_s=drive.relative_m_s, coast_s=drive.coast_s)
+        for shear in shears:
+            specs[shear_name(baseline_name(drive), shear)] = baseline, False, shear
+            specs[shear_name(name, shear)] = drive, True, shear
     completed = {}
     futures = {}
     with ProcessPoolExecutor(max_workers=jobs) as pool:
-        for name, (drive, applied) in specs.items():
+        for name, (drive, applied, shear) in specs.items():
             for index in levels:
                 key = name, index
                 file = cache / f"{name}_{index}.json"
                 if file.exists():
                     completed[key] = json.loads(file.read_text())
                 else:
-                    futures[pool.submit(simulate, track, drive, index, applied)] = key, file
+                    futures[pool.submit(simulate, track, drive, index, applied, shear)] = key, file
         for future in as_completed(futures):
             key, file = futures[future]
             value = future.result()
@@ -183,13 +205,14 @@ def sweep(args, cache):
     orbit = ROOT.parent / "orbit" / "runs"
     track = json.loads((orbit / "targeted_approach_replay_track.json").read_text())
     levels = (0, 1, 2) if args.refine else (0,)
-    records = compute(track, args.cases, levels, cache, args.jobs)
+    records = compute(track, args.cases, args.shear_m_s, levels, cache, args.jobs)
     benchmarks = [verify(MESHES[level]) for level in levels]
     floors = [row["max_false_width_gain_pct"] for row in benchmarks]
     result = {}
-    for name in args.cases:
-        treatments = [records[name, level] for level in levels]
-        baselines = [records[baseline_name(CASES[name]), level] for level in levels]
+    for name, shear in ((name, shear) for name in args.cases for shear in args.shear_m_s):
+        key_name = shear_name(name, shear)
+        treatments = [records[key_name, level] for level in levels]
+        baselines = [records[shear_name(baseline_name(CASES[name]), shear), level] for level in levels]
         reference = treatments[0]
         diagnostics = {}
         for key in DIAGNOSTICS:
@@ -199,13 +222,16 @@ def sweep(args, cache):
             for index, frame in enumerate(frames):
                 frame["fine_station_widths"] = station_summary(frame, paired, index)
             diagnostics[key] = dict(frames=frames, windows=windows(frames))
-            print(name, key, sum(f["passes_gate"] for f in frames), "/", len(frames)-1, flush=True)
-        result[name] = dict(
+            print(key_name, key, sum(f["passes_gate"] for f in frames), "/", len(frames)-1, flush=True)
+        result[key_name] = dict(
             drive=asdict(CASES[name]), geometry=reference["geometry"], active_s=reference["active_s"],
             sample_spacing_s=reference["sample_spacing_s"],
             numerics=[{k: row[k] for k in ("mesh", "steps", "step_s")} for row in treatments],
             diagnostics=diagnostics,
         )
+        if shear:
+            result[key_name]["initial_guide_velocity_jump_m_s"] = shear
+            result[key_name]["initial_velocity_jump_span_m"] = 2 * SHEAR_HALF_WIDTH * METERS_PER_UNIT
     payload = dict(
         stage="refined" if args.refine else "single-grid screen", baseline_track=track["case"],
         nominal_field_potential_coefficient=SOURCE_STRENGTH, normalized_source_width=mhd.SOURCE_WIDTH,
@@ -218,10 +244,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cases", nargs="+", choices=CASES, default=SCREEN_CASES)
     parser.add_argument("--refine", action="store_true")
+    parser.add_argument("--shear-m-s", nargs="+", type=float, default=(0.,),
+                        help="Signed initial guide velocity jump across 50 mm at the sheet")
     parser.add_argument("--jobs", type=int, default=6)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--cache", type=Path, help="Scratch directory for this run and its refinements")
     args = parser.parse_args()
+    if not np.isfinite(args.shear_m_s).all():
+        parser.error("--shear-m-s must be finite")
     if args.cache is not None:
         args.cache.mkdir(parents=True, exist_ok=True)
         sweep(args, args.cache)
