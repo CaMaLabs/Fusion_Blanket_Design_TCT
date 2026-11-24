@@ -1,0 +1,2502 @@
+{
+  "stage": "single-grid screen",
+  "baseline_track": {
+    "mode": "guided_1.6kA_I",
+    "kappa_Am2_kg": 4761.9047619047615,
+    "gravity": true,
+    "phase_deg": 180,
+    "launch": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "reference_height_m": -0.0051640142737476085,
+    "cutoff_hz": 100,
+    "steps_per_lap": 1152,
+    "outcome": "completed",
+    "laps": 3.0000546498923746,
+    "elapsed_s": 0.4833757940610646,
+    "direction": 1,
+    "radial_peak_m": 0.0022010747604150893,
+    "vertical_peak_m": 0.012344439987668234,
+    "initial_toroidal_speed_m_s": 85.81526562902829,
+    "final_toroidal_speed_m_s": 85.69629377421695,
+    "peak_current_A": 1600.0,
+    "peak_slew_A_s": 2010619.2982974676,
+    "kick_time_s": null,
+    "duration_s": 0.2,
+    "tracking_pass": true,
+    "settled_error_m": 0.00011794071751804452,
+    "settled_speed_m_s": 0.005256417703020485,
+    "final_normal_displacement_m": -0.00218946836899563,
+    "worst_normal_error_m": 0.00011794071751804452,
+    "corridor_margin_m": 0.012655560012331767,
+    "profile": "toroidal_priority",
+    "drag_fraction": 0.5,
+    "drag_at_nominal_speed_T_m": 0.0002000961616401006,
+    "supplemental_capacity_T_m": 0.0
+  },
+  "nominal_field_potential_coefficient": 0.09,
+  "normalized_source_width": 0.19,
+  "width_pct_gate_exclusive": 0.02,
+  "peak_pct_gate_inclusive": 0.1,
+  "benchmarks": [
+    {
+      "known_width": 0.4760976068178251,
+      "recovered_width": 0.47609884733620295,
+      "max_false_width_gain_pct": 0.0006016566308497673,
+      "recovered_0p02pct_gains": [
+        0.01997135241258441,
+        0.01997131537416763,
+        0.019971219695325004
+      ]
+    }
+  ],
+  "cases": {
+    "long_decay": {
+      "drive": {
+        "scale": 1.0,
+        "relative_m_s": null,
+        "rise_s": 0.00030625,
+        "fall_s": 0.00030625,
+        "coast_s": 0.00245
+      },
+      "geometry": {
+        "sheet_speed_m_s": 0.0,
+        "midpoint_relative_toroidal_speed_m_s": 85.70024749158394,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.20996549931214226,
+        "transit_s": 0.002449999999999952,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.34877500000000006,
+          0.351225
+        ]
+      },
+      "active_s": 0.002449999999999952,
+      "sample_spacing_s": 0.00010208333333333133,
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 528,
+          "step_s": 9.280303030302849e-06
+        }
+      ],
+      "diagnostics": {
+        "legacy_annulus": {
+          "frames": [
+            {
+              "time_since_entry_s": 0.0,
+              "fwhm_pct": [
+                0.0
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0
+              ],
+              "adjusted_width_pct": -0.0006016566308497673,
+              "adjusted_peak_pct": 0.0,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": 0.0,
+                "minimum_width_change_pct": 0.0,
+                "maximum_width_change_pct": 0.0
+              }
+            },
+            {
+              "time_since_entry_s": 0.00010208333333333133,
+              "fwhm_pct": [
+                -5.6240646684191375e-05
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -2.7744971298204746e-05
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                5.476140652049821e-07
+              ],
+              "adjusted_width_pct": -0.0006578972775339587,
+              "adjusted_peak_pct": 5.476140652049821e-07,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.801948590340885e-08,
+                "minimum_width_change_pct": -0.0007297912081871694,
+                "maximum_width_change_pct": 4.081379720854983e-05
+              }
+            },
+            {
+              "time_since_entry_s": 0.00020416666666666267,
+              "fwhm_pct": [
+                -0.0008974485754764672
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0003017239995295462
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                8.554514385750167e-06
+              ],
+              "adjusted_width_pct": -0.0014991052063262345,
+              "adjusted_peak_pct": 8.554514385750167e-06,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -3.202231091403718e-07,
+                "minimum_width_change_pct": -0.010782480852455922,
+                "maximum_width_change_pct": 0.0007706833521359258
+              }
+            },
+            {
+              "time_since_entry_s": 0.000306249999999994,
+              "fwhm_pct": [
+                -0.003368473973119901
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                -0.0005747260523603082
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                3.9780891381013816e-05
+              ],
+              "adjusted_width_pct": -0.003970130603969668,
+              "adjusted_peak_pct": 3.9780891381013816e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.4453581276274718e-06,
+                "minimum_width_change_pct": -0.04435777395208618,
+                "maximum_width_change_pct": 0.0037313476774825105
+              }
+            },
+            {
+              "time_since_entry_s": 0.00040833333333332533,
+              "fwhm_pct": [
+                -0.004157357561040964
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                -0.002031620238140963
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.00010926498126284656
+              ],
+              "adjusted_width_pct": -0.004759014191890731,
+              "adjusted_peak_pct": 0.00010926498126284656,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -2.3873950372177433e-06,
+                "minimum_width_change_pct": -0.07955546198855634,
+                "maximum_width_change_pct": 0.01081450491902114
+              }
+            },
+            {
+              "time_since_entry_s": 0.0005104166666666566,
+              "fwhm_pct": [
+                0.001606880392834853
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.0009132861659377767
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.00022872503271376132
+              ],
+              "adjusted_width_pct": 0.0010052237619850857,
+              "adjusted_peak_pct": 0.00022872503271376132,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 1,
+                "median_width_change_pct": -2.6462644908686883e-06,
+                "minimum_width_change_pct": -0.009944543739359712,
+                "maximum_width_change_pct": 0.0209755804154943
+              }
+            },
+            {
+              "time_since_entry_s": 0.000612499999999988,
+              "fwhm_pct": [
+                0.002726318741519407
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.001581723426991033
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.0004124483211187524
+              ],
+              "adjusted_width_pct": 0.0021246621106696395,
+              "adjusted_peak_pct": 0.0004124483211187524,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 2,
+                "median_width_change_pct": -1.938216559471684e-06,
+                "minimum_width_change_pct": -0.008758591362179047,
+                "maximum_width_change_pct": 0.030707194840773333
+              }
+            },
+            {
+              "time_since_entry_s": 0.0007145833333333194,
+              "fwhm_pct": [
+                0.02650057119555349
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.013598609137854822
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0006691624763410786
+              ],
+              "adjusted_width_pct": 0.025898914564703723,
+              "adjusted_peak_pct": 0.0006691624763410786,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": 5.1536394929385665e-06,
+                "minimum_width_change_pct": -0.009237162082009753,
+                "maximum_width_change_pct": 0.482073708797226
+              }
+            },
+            {
+              "time_since_entry_s": 0.0008166666666666507,
+              "fwhm_pct": [
+                0.036830922285013834
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.018823882926244373
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0009802350300347484
+              ],
+              "adjusted_width_pct": 0.03622926565416407,
+              "adjusted_peak_pct": 0.0009802350300347484,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 6,
+                "median_width_change_pct": 1.7598713220046136e-05,
+                "minimum_width_change_pct": -0.02873110846111082,
+                "maximum_width_change_pct": 0.5628842734123785
+              }
+            },
+            {
+              "time_since_entry_s": 0.000918749999999982,
+              "fwhm_pct": [
+                0.05689415257053021
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.028916931994693584
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.0012802174518489196
+              ],
+              "adjusted_width_pct": 0.05629249593968044,
+              "adjusted_peak_pct": 0.0012802174518489196,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 8,
+                "median_width_change_pct": 6.598649715527927e-06,
+                "minimum_width_change_pct": -0.04185482553221709,
+                "maximum_width_change_pct": 0.6032216542333879
+              }
+            },
+            {
+              "time_since_entry_s": 0.0010208333333333133,
+              "fwhm_pct": [
+                0.07249507578357406
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.03661660520453136
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.001470025318806023
+              ],
+              "adjusted_width_pct": 0.07189341915272429,
+              "adjusted_peak_pct": 0.001470025318806023,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 11,
+                "median_width_change_pct": 0.0007788497435323727,
+                "minimum_width_change_pct": -0.0319665221380494,
+                "maximum_width_change_pct": 0.6978591710075532
+              }
+            },
+            {
+              "time_since_entry_s": 0.0011229166666666447,
+              "fwhm_pct": [
+                0.07904485730219069
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03991424559353085
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0015375169184039805
+              ],
+              "adjusted_width_pct": 0.07844320067134092,
+              "adjusted_peak_pct": 0.0015375169184039805,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 12,
+                "median_width_change_pct": 0.0034478811337113058,
+                "minimum_width_change_pct": -0.268686414123509,
+                "maximum_width_change_pct": 0.8171731176537911
+              }
+            },
+            {
+              "time_since_entry_s": 0.001224999999999976,
+              "fwhm_pct": [
+                0.09206255665623608
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0462722545323091
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.001931838569424471
+              ],
+              "adjusted_width_pct": 0.09146090002538632,
+              "adjusted_peak_pct": 0.001931838569424471,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 15,
+                "median_width_change_pct": 0.0034055169937485807,
+                "minimum_width_change_pct": -0.19334747720508583,
+                "maximum_width_change_pct": 0.919932733214579
+              }
+            },
+            {
+              "time_since_entry_s": 0.0013270833333333075,
+              "fwhm_pct": [
+                0.10009489642719416
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05011902994747075
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0022305610892781047
+              ],
+              "adjusted_width_pct": 0.09949323979634439,
+              "adjusted_peak_pct": 0.0022305610892781047,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.004795185012829162,
+                "minimum_width_change_pct": -0.1396532937492312,
+                "maximum_width_change_pct": 1.0057202187020664
+              }
+            },
+            {
+              "time_since_entry_s": 0.0014291666666666387,
+              "fwhm_pct": [
+                0.12153849951459517
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.06068651849508999
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.00236230435162188
+              ],
+              "adjusted_width_pct": 0.1209368428837454,
+              "adjusted_peak_pct": 0.00236230435162188,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.012611485397728828,
+                "minimum_width_change_pct": -0.09519302066486324,
+                "maximum_width_change_pct": 1.0733965584272198
+              }
+            },
+            {
+              "time_since_entry_s": 0.0015312499999999701,
+              "fwhm_pct": [
+                0.12864252746398464
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.06406000933349976
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.002328462209688631
+              ],
+              "adjusted_width_pct": 0.12804087083313487,
+              "adjusted_peak_pct": 0.002328462209688631,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.024611367685423158,
+                "minimum_width_change_pct": -0.12494719496071172,
+                "maximum_width_change_pct": 1.1218327985359045
+              }
+            },
+            {
+              "time_since_entry_s": 0.0016333333333333013,
+              "fwhm_pct": [
+                0.1558396854648869
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.0775316417124694
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.002209371989780884
+              ],
+              "adjusted_width_pct": 0.15523802883403715,
+              "adjusted_peak_pct": 0.002209371989780884,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.04451072108411225,
+                "minimum_width_change_pct": -0.059778626458328876,
+                "maximum_width_change_pct": 1.1501954898063937
+              }
+            },
+            {
+              "time_since_entry_s": 0.0017354166666666327,
+              "fwhm_pct": [
+                0.16642859439461866
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.08268421765726952
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.002110471822613924
+              ],
+              "adjusted_width_pct": 0.1658269377637689,
+              "adjusted_peak_pct": 0.002110471822613924,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.06129106868127954,
+                "minimum_width_change_pct": -0.10901001770960983,
+                "maximum_width_change_pct": 1.1585906788626588
+              }
+            },
+            {
+              "time_since_entry_s": 0.001837499999999964,
+              "fwhm_pct": [
+                0.19984483012791543
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.09931197464123631
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.002100367527968494
+              ],
+              "adjusted_width_pct": 0.19924317349706566,
+              "adjusted_peak_pct": 0.002100367527968494,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.0935072631237821,
+                "minimum_width_change_pct": -0.044247510944750434,
+                "maximum_width_change_pct": 1.1481435844039822
+              }
+            },
+            {
+              "time_since_entry_s": 0.0019395833333332954,
+              "fwhm_pct": [
+                0.21456037665397165
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.10664718094686165
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.002192621636121217
+              ],
+              "adjusted_width_pct": 0.21395872002312188,
+              "adjusted_peak_pct": 0.002192621636121217,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.11622064272872601,
+                "minimum_width_change_pct": -0.04787831567528711,
+                "maximum_width_change_pct": 1.1203318844143828
+              }
+            },
+            {
+              "time_since_entry_s": 0.0020416666666666266,
+              "fwhm_pct": [
+                0.19666551437524937
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.09746615095755917
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0023672266924679164
+              ],
+              "adjusted_width_pct": 0.1960638577443996,
+              "adjusted_peak_pct": 0.0023672266924679164,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.1424944737231204,
+                "minimum_width_change_pct": -0.5650963233156725,
+                "maximum_width_change_pct": 1.0771272992970538
+              }
+            },
+            {
+              "time_since_entry_s": 0.0021437499999999578,
+              "fwhm_pct": [
+                0.188505746812484
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.10461732809403657
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0025966310901681666
+              ],
+              "adjusted_width_pct": 0.18790409018163423,
+              "adjusted_peak_pct": 0.0025966310901681666,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.15698460782577195,
+                "minimum_width_change_pct": -0.5492468887353996,
+                "maximum_width_change_pct": 1.0212953618516485
+              }
+            },
+            {
+              "time_since_entry_s": 0.0022458333333332894,
+              "fwhm_pct": [
+                0.1870623472856714
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.10030541232535217
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.0028562780071128557
+              ],
+              "adjusted_width_pct": 0.18646069065482163,
+              "adjusted_peak_pct": 0.0028562780071128557,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.1593943667687836,
+                "minimum_width_change_pct": -0.5664336469702436,
+                "maximum_width_change_pct": 0.9555791907712274
+              }
+            },
+            {
+              "time_since_entry_s": 0.0023479166666666206,
+              "fwhm_pct": [
+                0.20227953646450025
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09996396125078189
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0031186701346275214
+              ],
+              "adjusted_width_pct": 0.2016778798336505,
+              "adjusted_peak_pct": 0.0031186701346275214,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.16843528144513398,
+                "minimum_width_change_pct": -0.6001640653366946,
+                "maximum_width_change_pct": 0.9301107912765172
+              }
+            },
+            {
+              "time_since_entry_s": 0.002449999999999952,
+              "fwhm_pct": [
+                0.21560435203602513
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.10671340560879372
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003355891360690144
+              ],
+              "adjusted_width_pct": 0.21500269540517536,
+              "adjusted_peak_pct": 0.003355891360690144,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.1563220353782646,
+                "minimum_width_change_pct": -0.6359160933697594,
+                "maximum_width_change_pct": 1.0043989390597474
+              }
+            },
+            {
+              "time_since_entry_s": 0.0025520833333332834,
+              "fwhm_pct": [
+                0.2277903589378738
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1128958601354979
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003549739319841372
+              ],
+              "adjusted_width_pct": 0.22718870230702404,
+              "adjusted_peak_pct": 0.003549739319841372,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.17096560997161836,
+                "minimum_width_change_pct": -0.6692872841520647,
+                "maximum_width_change_pct": 1.0941601931130807
+              }
+            },
+            {
+              "time_since_entry_s": 0.002654166666666615,
+              "fwhm_pct": [
+                0.2388924594438846
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.11851060897480892
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0036889847566001777
+              ],
+              "adjusted_width_pct": 0.23829080281303483,
+              "adjusted_peak_pct": 0.0036889847566001777,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.2027680831016565,
+                "minimum_width_change_pct": -0.6996770306009426,
+                "maximum_width_change_pct": 1.1794052331443705
+              }
+            },
+            {
+              "time_since_entry_s": 0.0027562499999999462,
+              "fwhm_pct": [
+                0.24884038381971507
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12357099963948848
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003763170840276331
+              ],
+              "adjusted_width_pct": 0.2482387271888653,
+              "adjusted_peak_pct": 0.003763170840276331,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.23488604830858018,
+                "minimum_width_change_pct": -0.7263071005024435,
+                "maximum_width_change_pct": 1.2579215085899875
+              }
+            },
+            {
+              "time_since_entry_s": 0.0028583333333332774,
+              "fwhm_pct": [
+                0.2575260253132816
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12809581515915713
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0037619194148685864
+              ],
+              "adjusted_width_pct": 0.25692436868243185,
+              "adjusted_peak_pct": 0.0037619194148685864,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.265649700813575,
+                "minimum_width_change_pct": -0.748391462718645,
+                "maximum_width_change_pct": 1.3269691179612852
+              }
+            },
+            {
+              "time_since_entry_s": 0.0029604166666666086,
+              "fwhm_pct": [
+                0.26499079785042845
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13209148300878937
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003674823490973367
+              ],
+              "adjusted_width_pct": 0.2643891412195787,
+              "adjusted_peak_pct": 0.003674823490973367,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.294903898817267,
+                "minimum_width_change_pct": -0.765693616129326,
+                "maximum_width_change_pct": 1.3835318019297826
+              }
+            },
+            {
+              "time_since_entry_s": 0.0030624999999999403,
+              "fwhm_pct": [
+                0.2711742481986912
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1355310650317465
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0034913966274308095
+              ],
+              "adjusted_width_pct": 0.2705725915678414,
+              "adjusted_peak_pct": 0.0034913966274308095,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.32195237531063015,
+                "minimum_width_change_pct": -0.7777600843379529,
+                "maximum_width_change_pct": 1.4262653859647756
+              }
+            },
+            {
+              "time_since_entry_s": 0.0031645833333332715,
+              "fwhm_pct": [
+                0.27612231178790747
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13840476670190505
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0032011183484392802
+              ],
+              "adjusted_width_pct": 0.2755206551570577,
+              "adjusted_peak_pct": 0.0032011183484392802,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.3110033717059091,
+                "minimum_width_change_pct": -0.7844293025937032,
+                "maximum_width_change_pct": 1.4534509990084654
+              }
+            },
+            {
+              "time_since_entry_s": 0.0032666666666666027,
+              "fwhm_pct": [
+                0.27988072911757644
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14072227449122288
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0027935997846340044
+              ],
+              "adjusted_width_pct": 0.2792790724867267,
+              "adjusted_peak_pct": 0.0027935997846340044,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.2973578103444341,
+                "minimum_width_change_pct": -0.7856873553788724,
+                "maximum_width_change_pct": 1.464059784904581
+              }
+            },
+            {
+              "time_since_entry_s": 0.0033687499999999343,
+              "fwhm_pct": [
+                0.2825087625153655
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14247829110667354
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0022588662494715805
+              ],
+              "adjusted_width_pct": 0.28190710588451573,
+              "adjusted_peak_pct": 0.0022588662494715805,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.2673220757982042,
+                "minimum_width_change_pct": -0.7816019976783606,
+                "maximum_width_change_pct": 1.4587799140880486
+              }
+            },
+            {
+              "time_since_entry_s": 0.0034708333333332655,
+              "fwhm_pct": [
+                0.28413317981796915
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1437390862528698
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0015877181265944174
+              ],
+              "adjusted_width_pct": 0.2835315231871194,
+              "adjusted_peak_pct": 0.0015877181265944174,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.2629068877842755,
+                "minimum_width_change_pct": -0.7726562736330655,
+                "maximum_width_change_pct": 1.4374298491101722
+              }
+            },
+            {
+              "time_since_entry_s": 0.0035729166666665967,
+              "fwhm_pct": [
+                0.2848256348233935
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14462418249776565
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0007720973416391885
+              ],
+              "adjusted_width_pct": 0.28422397819254375,
+              "adjusted_peak_pct": 0.0007720973416391885,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.23757004249642666,
+                "minimum_width_change_pct": -0.7589842496005694,
+                "maximum_width_change_pct": 1.4018399980147755
+              }
+            },
+            {
+              "time_since_entry_s": 0.003674999999999928,
+              "fwhm_pct": [
+                0.284770008722357
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14521781307008652
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.00019463445294354287
+              ],
+              "adjusted_width_pct": 0.28416835209150726,
+              "adjusted_peak_pct": -0.00019463445294354287,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.24812673108406402,
+                "minimum_width_change_pct": -0.7411501377427188,
+                "maximum_width_change_pct": 1.3532012257249093
+              }
+            },
+            {
+              "time_since_entry_s": 0.0037770833333332595,
+              "fwhm_pct": [
+                0.28388410439850187
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14544042775974653
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.001317596645800112
+              ],
+              "adjusted_width_pct": 0.2832824477676521,
+              "adjusted_peak_pct": -0.001317596645800112,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.2877499722538479,
+                "minimum_width_change_pct": -0.7198235315530765,
+                "maximum_width_change_pct": 1.2932077296839983
+              }
+            },
+            {
+              "time_since_entry_s": 0.0038791666666665907,
+              "fwhm_pct": [
+                0.28263331840001626
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14528500075288164
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.0026005256259620246
+              ],
+              "adjusted_width_pct": 0.2820316617691665,
+              "adjusted_peak_pct": -0.0026005256259620246,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.3146814116205987,
+                "minimum_width_change_pct": -0.6949606394595742,
+                "maximum_width_change_pct": 1.2248752037909316
+              }
+            },
+            {
+              "time_since_entry_s": 0.003981249999999922,
+              "fwhm_pct": [
+                0.2806027432223024
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.144620553581154
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.004046137646629422
+              ],
+              "adjusted_width_pct": 0.2800010865914526,
+              "adjusted_peak_pct": -0.004046137646629422,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3279094760200163,
+                "minimum_width_change_pct": -0.6683030958763991,
+                "maximum_width_change_pct": 1.1500421709306208
+              }
+            },
+            {
+              "time_since_entry_s": 0.004083333333333253,
+              "fwhm_pct": [
+                0.27823464390357433
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14354758696244474
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.00565662683952306
+              ],
+              "adjusted_width_pct": 0.27763298727272456,
+              "adjusted_peak_pct": -0.00565662683952306,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3268465615068661,
+                "minimum_width_change_pct": -0.6390138513610921,
+                "maximum_width_change_pct": 1.182900202190651
+              }
+            },
+            {
+              "time_since_entry_s": 0.004185416666666585,
+              "fwhm_pct": [
+                0.27557069342651896
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14224804561357995
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.0074341243889386455
+              ],
+              "adjusted_width_pct": 0.2749690367956692,
+              "adjusted_peak_pct": -0.0074341243889386455,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3421732735338079,
+                "minimum_width_change_pct": -0.6181385385713112,
+                "maximum_width_change_pct": 1.203854877212307
+              }
+            },
+            {
+              "time_since_entry_s": 0.0042874999999999155,
+              "fwhm_pct": [
+                0.27221231238152566
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14085711525644307
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.009380888982013502
+              ],
+              "adjusted_width_pct": 0.2716106557506759,
+              "adjusted_peak_pct": -0.009380888982013502,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3470636444519837,
+                "minimum_width_change_pct": -0.6216609701339304,
+                "maximum_width_change_pct": 1.2118179486362957
+              }
+            },
+            {
+              "time_since_entry_s": 0.004389583333333248,
+              "fwhm_pct": [
+                0.2687754362904693
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1392068088289511
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.01149899247302466
+              ],
+              "adjusted_width_pct": 0.2681737796596195,
+              "adjusted_peak_pct": -0.01149899247302466,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.345227136948123,
+                "minimum_width_change_pct": -0.6223076618006695,
+                "maximum_width_change_pct": 1.2073113374517108
+              }
+            },
+            {
+              "time_since_entry_s": 0.004491666666666579,
+              "fwhm_pct": [
+                0.2649278273563427
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13693728008870032
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.013789322483848121
+              ],
+              "adjusted_width_pct": 0.2643261707254929,
+              "adjusted_peak_pct": -0.013789322483848121,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.3165552481959044,
+                "minimum_width_change_pct": -0.6201685409010005,
+                "maximum_width_change_pct": 1.1900216291553134
+              }
+            },
+            {
+              "time_since_entry_s": 0.00459374999999991,
+              "fwhm_pct": [
+                0.2605677988205324
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13429831223019661
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.016249844552673753
+              ],
+              "adjusted_width_pct": 0.2599661421896826,
+              "adjusted_peak_pct": -0.016249844552673753,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.2892326705672965,
+                "minimum_width_change_pct": -0.6161735896143661,
+                "maximum_width_change_pct": 1.160786801911784
+              }
+            },
+            {
+              "time_since_entry_s": 0.004695833333333241,
+              "fwhm_pct": [
+                0.25606707886887126
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1315800997501615
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.018873232298988185
+              ],
+              "adjusted_width_pct": 0.2554654222380215,
+              "adjusted_peak_pct": -0.018873232298988185,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.29310998199011395,
+                "minimum_width_change_pct": -0.6097032040738415,
+                "maximum_width_change_pct": 1.1214494373007033
+              }
+            },
+            {
+              "time_since_entry_s": 0.004797916666666573,
+              "fwhm_pct": [
+                0.2512728621210991
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12880241688004723
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.02164415195845537
+              ],
+              "adjusted_width_pct": 0.25067120549024935,
+              "adjusted_peak_pct": -0.02164415195845537,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.29942943363890917,
+                "minimum_width_change_pct": -0.6005948824629792,
+                "maximum_width_change_pct": 1.072956112574075
+              }
+            },
+            {
+              "time_since_entry_s": 0.004899999999999904,
+              "fwhm_pct": [
+                0.24606597325740331
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12567261368978677
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.02137065001486249
+              ],
+              "adjusted_width_pct": 0.24546431662655355,
+              "adjusted_peak_pct": -0.02137065001486249,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.28965295406845337,
+                "minimum_width_change_pct": -0.5896364380785224,
+                "maximum_width_change_pct": 1.0163662560714215
+              }
+            }
+          ],
+          "windows": [
+            {
+              "first_s": 0.0011229166666666447,
+              "last_s": 0.0013270833333333075,
+              "sampled_span_s": 0.00020416666666666283,
+              "count": 3,
+              "min_adjusted_width_pct": 0.07844320067134092,
+              "max_adjusted_peak_pct": 0.0022305610892781047,
+              "reaches_last_sample": false
+            },
+            {
+              "first_s": 0.0022458333333332894,
+              "last_s": 0.004899999999999904,
+              "sampled_span_s": 0.002654166666666615,
+              "count": 27,
+              "min_adjusted_width_pct": 0.18646069065482163,
+              "max_adjusted_peak_pct": 0.003763170840276331,
+              "reaches_last_sample": true
+            }
+          ]
+        },
+        "unmasked_disk": {
+          "frames": [
+            {
+              "time_since_entry_s": 0.0,
+              "fwhm_pct": [
+                0.0
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0
+              ],
+              "adjusted_width_pct": -0.0006016566308497673,
+              "adjusted_peak_pct": 0.0,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": 0.0,
+                "minimum_width_change_pct": 0.0,
+                "maximum_width_change_pct": 0.0
+              }
+            },
+            {
+              "time_since_entry_s": 0.00010208333333333133,
+              "fwhm_pct": [
+                -5.6240646684191375e-05
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -2.7744971298204746e-05
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                5.476140652049821e-07
+              ],
+              "adjusted_width_pct": -0.0006578972775339587,
+              "adjusted_peak_pct": 5.476140652049821e-07,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.801948590340885e-08,
+                "minimum_width_change_pct": -0.0007297912081871694,
+                "maximum_width_change_pct": 4.081379720854983e-05
+              }
+            },
+            {
+              "time_since_entry_s": 0.00020416666666666267,
+              "fwhm_pct": [
+                -0.0008974485754764672
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.00044196446375988074
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                8.554514385750167e-06
+              ],
+              "adjusted_width_pct": -0.0014991052063262345,
+              "adjusted_peak_pct": 8.554514385750167e-06,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -3.202231091403718e-07,
+                "minimum_width_change_pct": -0.010782480852455922,
+                "maximum_width_change_pct": 0.0007706833521359258
+              }
+            },
+            {
+              "time_since_entry_s": 0.000306249999999994,
+              "fwhm_pct": [
+                -0.0037495826941014165
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0018370586509330877
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                3.9780891381013816e-05
+              ],
+              "adjusted_width_pct": -0.004351239324951184,
+              "adjusted_peak_pct": 3.9780891381013816e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.4453581276274718e-06,
+                "minimum_width_change_pct": -0.04435777395208618,
+                "maximum_width_change_pct": 0.01772413457168387
+              }
+            },
+            {
+              "time_since_entry_s": 0.00040833333333332533,
+              "fwhm_pct": [
+                -0.007989915473327613
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0039015173483925025
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00010926498126284656
+              ],
+              "adjusted_width_pct": -0.00859157210417738,
+              "adjusted_peak_pct": 0.00010926498126284656,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 1,
+                "median_width_change_pct": -3.0561197239542537e-06,
+                "minimum_width_change_pct": -0.12191167072308495,
+                "maximum_width_change_pct": 0.08786948561221308
+              }
+            },
+            {
+              "time_since_entry_s": 0.0005104166666666566,
+              "fwhm_pct": [
+                -0.01071453854224469
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.005197310758608964
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00022872503271376132
+              ],
+              "adjusted_width_pct": -0.011316195173094457,
+              "adjusted_peak_pct": 0.00022872503271376132,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 2,
+                "median_width_change_pct": -5.043607831378694e-06,
+                "minimum_width_change_pct": -0.21531166460626583,
+                "maximum_width_change_pct": 0.21247654054143972
+              }
+            },
+            {
+              "time_since_entry_s": 0.000612499999999988,
+              "fwhm_pct": [
+                -0.008331464998057037
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.003927646686363584
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0004124483211187524
+              ],
+              "adjusted_width_pct": -0.008933121628906804,
+              "adjusted_peak_pct": 0.0004124483211187524,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": -1.938216559471684e-06,
+                "minimum_width_change_pct": -0.33302002993211843,
+                "maximum_width_change_pct": 0.3578209550811007
+              }
+            },
+            {
+              "time_since_entry_s": 0.0007145833333333194,
+              "fwhm_pct": [
+                0.0016499196410446615
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0011743179523238112
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0006691624763410786
+              ],
+              "adjusted_width_pct": 0.0010482630101948942,
+              "adjusted_peak_pct": 0.0006691624763410786,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 5,
+                "median_width_change_pct": 9.375984877380006e-07,
+                "minimum_width_change_pct": -0.45798092495356046,
+                "maximum_width_change_pct": 0.482073708797226
+              }
+            },
+            {
+              "time_since_entry_s": 0.0008166666666666507,
+              "fwhm_pct": [
+                0.01892727860870469
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.009957302168062121
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0009802350300347484
+              ],
+              "adjusted_width_pct": 0.018325621977854922,
+              "adjusted_peak_pct": 0.0009802350300347484,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 7,
+                "median_width_change_pct": -4.544333798151001e-07,
+                "minimum_width_change_pct": -0.5061785599476676,
+                "maximum_width_change_pct": 0.5628842734123785
+              }
+            },
+            {
+              "time_since_entry_s": 0.000918749999999982,
+              "fwhm_pct": [
+                0.04027254788365742
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.020691773971970306
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0012802174518489196
+              ],
+              "adjusted_width_pct": 0.03967089125280765,
+              "adjusted_peak_pct": 0.0012802174518489196,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 8,
+                "median_width_change_pct": -3.4720942732047178e-06,
+                "minimum_width_change_pct": -0.46345300698056313,
+                "maximum_width_change_pct": 0.6032216542333879
+              }
+            },
+            {
+              "time_since_entry_s": 0.0010208333333333133,
+              "fwhm_pct": [
+                0.06134483945405833
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.031180353543658335
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.001470025318806023
+              ],
+              "adjusted_width_pct": 0.060743182823208564,
+              "adjusted_peak_pct": 0.001470025318806023,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 12,
+                "median_width_change_pct": 0.0007788497435323727,
+                "minimum_width_change_pct": -0.36747027242599595,
+                "maximum_width_change_pct": 0.6978591710075532
+              }
+            },
+            {
+              "time_since_entry_s": 0.0011229166666666447,
+              "fwhm_pct": [
+                0.07904485730219069
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03991424559353085
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0015375169184039805
+              ],
+              "adjusted_width_pct": 0.07844320067134092,
+              "adjusted_peak_pct": 0.0015375169184039805,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 12,
+                "median_width_change_pct": 0.0034478811337113058,
+                "minimum_width_change_pct": -0.268686414123509,
+                "maximum_width_change_pct": 0.8171731176537911
+              }
+            },
+            {
+              "time_since_entry_s": 0.001224999999999976,
+              "fwhm_pct": [
+                0.09206255665623608
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0462722545323091
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.001931838569424471
+              ],
+              "adjusted_width_pct": 0.09146090002538632,
+              "adjusted_peak_pct": 0.001931838569424471,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 15,
+                "median_width_change_pct": 0.0034055169937485807,
+                "minimum_width_change_pct": -0.19334747720508583,
+                "maximum_width_change_pct": 0.919932733214579
+              }
+            },
+            {
+              "time_since_entry_s": 0.0013270833333333075,
+              "fwhm_pct": [
+                0.10009489642719416
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05011902994747075
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0022305610892781047
+              ],
+              "adjusted_width_pct": 0.09949323979634439,
+              "adjusted_peak_pct": 0.0022305610892781047,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.004795185012829162,
+                "minimum_width_change_pct": -0.1396532937492312,
+                "maximum_width_change_pct": 1.0057202187020664
+              }
+            },
+            {
+              "time_since_entry_s": 0.0014291666666666387,
+              "fwhm_pct": [
+                0.10327650876280625
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05150155729971573
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00236230435162188
+              ],
+              "adjusted_width_pct": 0.10267485213195648,
+              "adjusted_peak_pct": 0.00236230435162188,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.009633101638950592,
+                "minimum_width_change_pct": -0.2115473354623587,
+                "maximum_width_change_pct": 1.0733965584272198
+              }
+            },
+            {
+              "time_since_entry_s": 0.0015312499999999701,
+              "fwhm_pct": [
+                0.10280436454290776
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0509924981490828
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002328462209688631
+              ],
+              "adjusted_width_pct": 0.10220270791205799,
+              "adjusted_peak_pct": 0.002328462209688631,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.022600834385866353,
+                "minimum_width_change_pct": -0.3720011166438608,
+                "maximum_width_change_pct": 1.1218327985359045
+              }
+            },
+            {
+              "time_since_entry_s": 0.0016333333333333013,
+              "fwhm_pct": [
+                0.10170927192831858
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05013355001084463
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002209371989780884
+              ],
+              "adjusted_width_pct": 0.10110761529746881,
+              "adjusted_peak_pct": 0.002209371989780884,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.0296519956958452,
+                "minimum_width_change_pct": -0.5335239400134029,
+                "maximum_width_change_pct": 1.1501954898063937
+              }
+            },
+            {
+              "time_since_entry_s": 0.0017354166666666327,
+              "fwhm_pct": [
+                0.10417105798750104
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05107535584265577
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002110471822613924
+              ],
+              "adjusted_width_pct": 0.10356940135665127,
+              "adjusted_peak_pct": 0.002110471822613924,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.04282584756289953,
+                "minimum_width_change_pct": -0.6356183533400728,
+                "maximum_width_change_pct": 1.1585906788626588
+              }
+            },
+            {
+              "time_since_entry_s": 0.001837499999999964,
+              "fwhm_pct": [
+                0.11316639143525986
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05537602417216014
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002100367527968494
+              ],
+              "adjusted_width_pct": 0.1125647348044101,
+              "adjusted_peak_pct": 0.002100367527968494,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.05393257665359252,
+                "minimum_width_change_pct": -0.6519895496895134,
+                "maximum_width_change_pct": 1.1481435844039822
+              }
+            },
+            {
+              "time_since_entry_s": 0.0019395833333332954,
+              "fwhm_pct": [
+                0.1288202818297668
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.06308311101523856
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002192621636121217
+              ],
+              "adjusted_width_pct": 0.12821862519891702,
+              "adjusted_peak_pct": 0.002192621636121217,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.06467803575233022,
+                "minimum_width_change_pct": -0.6107856618897123,
+                "maximum_width_change_pct": 1.1203318844143828
+              }
+            },
+            {
+              "time_since_entry_s": 0.0020416666666666266,
+              "fwhm_pct": [
+                0.14856482159004702
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.07292731492709592
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0023672266924679164
+              ],
+              "adjusted_width_pct": 0.14796316495919726,
+              "adjusted_peak_pct": 0.0023672266924679164,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.07512897358128434,
+                "minimum_width_change_pct": -0.5650963233156725,
+                "maximum_width_change_pct": 1.0771272992970538
+              }
+            },
+            {
+              "time_since_entry_s": 0.0021437499999999578,
+              "fwhm_pct": [
+                0.16891754860450803
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.08314733047714018
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0025966310901681666
+              ],
+              "adjusted_width_pct": 0.16831589197365826,
+              "adjusted_peak_pct": 0.0025966310901681666,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.12583539323269832,
+                "minimum_width_change_pct": -0.5492468887353996,
+                "maximum_width_change_pct": 1.0212953618516485
+              }
+            },
+            {
+              "time_since_entry_s": 0.0022458333333332894,
+              "fwhm_pct": [
+                0.1870623472856714
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09229337368970025
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0028562780071128557
+              ],
+              "adjusted_width_pct": 0.18646069065482163,
+              "adjusted_peak_pct": 0.0028562780071128557,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.1593943667687836,
+                "minimum_width_change_pct": -0.5664336469702436,
+                "maximum_width_change_pct": 0.9555791907712274
+              }
+            },
+            {
+              "time_since_entry_s": 0.0023479166666666206,
+              "fwhm_pct": [
+                0.20227953646450025
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09996396125078189
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0031186701346275214
+              ],
+              "adjusted_width_pct": 0.2016778798336505,
+              "adjusted_peak_pct": 0.0031186701346275214,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.16843528144513398,
+                "minimum_width_change_pct": -0.6001640653366946,
+                "maximum_width_change_pct": 0.9301107912765172
+              }
+            },
+            {
+              "time_since_entry_s": 0.002449999999999952,
+              "fwhm_pct": [
+                0.21560435203602513
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.10671340560879372
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003355891360690144
+              ],
+              "adjusted_width_pct": 0.21500269540517536,
+              "adjusted_peak_pct": 0.003355891360690144,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.1563220353782646,
+                "minimum_width_change_pct": -0.6359160933697594,
+                "maximum_width_change_pct": 1.0043989390597474
+              }
+            },
+            {
+              "time_since_entry_s": 0.0025520833333332834,
+              "fwhm_pct": [
+                0.2277903589378738
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1128958601354979
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003549739319841372
+              ],
+              "adjusted_width_pct": 0.22718870230702404,
+              "adjusted_peak_pct": 0.003549739319841372,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.17096560997161836,
+                "minimum_width_change_pct": -0.6692872841520647,
+                "maximum_width_change_pct": 1.0941601931130807
+              }
+            },
+            {
+              "time_since_entry_s": 0.002654166666666615,
+              "fwhm_pct": [
+                0.2388924594438846
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.11851060897480892
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0036889847566001777
+              ],
+              "adjusted_width_pct": 0.23829080281303483,
+              "adjusted_peak_pct": 0.0036889847566001777,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.2027680831016565,
+                "minimum_width_change_pct": -0.6996770306009426,
+                "maximum_width_change_pct": 1.1794052331443705
+              }
+            },
+            {
+              "time_since_entry_s": 0.0027562499999999462,
+              "fwhm_pct": [
+                0.24884038381971507
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12357099963948848
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003763170840276331
+              ],
+              "adjusted_width_pct": 0.2482387271888653,
+              "adjusted_peak_pct": 0.003763170840276331,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.23488604830858018,
+                "minimum_width_change_pct": -0.7263071005024435,
+                "maximum_width_change_pct": 1.2579215085899875
+              }
+            },
+            {
+              "time_since_entry_s": 0.0028583333333332774,
+              "fwhm_pct": [
+                0.2575260253132816
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12809581515915713
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0037619194148685864
+              ],
+              "adjusted_width_pct": 0.25692436868243185,
+              "adjusted_peak_pct": 0.0037619194148685864,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.265649700813575,
+                "minimum_width_change_pct": -0.748391462718645,
+                "maximum_width_change_pct": 1.3269691179612852
+              }
+            },
+            {
+              "time_since_entry_s": 0.0029604166666666086,
+              "fwhm_pct": [
+                0.26499079785042845
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13209148300878937
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003674823490973367
+              ],
+              "adjusted_width_pct": 0.2643891412195787,
+              "adjusted_peak_pct": 0.003674823490973367,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.294903898817267,
+                "minimum_width_change_pct": -0.765693616129326,
+                "maximum_width_change_pct": 1.3835318019297826
+              }
+            },
+            {
+              "time_since_entry_s": 0.0030624999999999403,
+              "fwhm_pct": [
+                0.2711742481986912
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1355310650317465
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0034913966274308095
+              ],
+              "adjusted_width_pct": 0.2705725915678414,
+              "adjusted_peak_pct": 0.0034913966274308095,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.32195237531063015,
+                "minimum_width_change_pct": -0.7777600843379529,
+                "maximum_width_change_pct": 1.4262653859647756
+              }
+            },
+            {
+              "time_since_entry_s": 0.0031645833333332715,
+              "fwhm_pct": [
+                0.27612231178790747
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13840476670190505
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0032011183484392802
+              ],
+              "adjusted_width_pct": 0.2755206551570577,
+              "adjusted_peak_pct": 0.0032011183484392802,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.3110033717059091,
+                "minimum_width_change_pct": -0.7844293025937032,
+                "maximum_width_change_pct": 1.4534509990084654
+              }
+            },
+            {
+              "time_since_entry_s": 0.0032666666666666027,
+              "fwhm_pct": [
+                0.27988072911757644
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14072227449122288
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0027935997846340044
+              ],
+              "adjusted_width_pct": 0.2792790724867267,
+              "adjusted_peak_pct": 0.0027935997846340044,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.2973578103444341,
+                "minimum_width_change_pct": -0.7856873553788724,
+                "maximum_width_change_pct": 1.464059784904581
+              }
+            },
+            {
+              "time_since_entry_s": 0.0033687499999999343,
+              "fwhm_pct": [
+                0.2825087625153655
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14247829110667354
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0022588662494715805
+              ],
+              "adjusted_width_pct": 0.28190710588451573,
+              "adjusted_peak_pct": 0.0022588662494715805,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.2673220757982042,
+                "minimum_width_change_pct": -0.7816019976783606,
+                "maximum_width_change_pct": 1.4587799140880486
+              }
+            },
+            {
+              "time_since_entry_s": 0.0034708333333332655,
+              "fwhm_pct": [
+                0.28413317981796915
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1437390862528698
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0015877181265944174
+              ],
+              "adjusted_width_pct": 0.2835315231871194,
+              "adjusted_peak_pct": 0.0015877181265944174,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.2629068877842755,
+                "minimum_width_change_pct": -0.7726562736330655,
+                "maximum_width_change_pct": 1.4374298491101722
+              }
+            },
+            {
+              "time_since_entry_s": 0.0035729166666665967,
+              "fwhm_pct": [
+                0.2848256348233935
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14462418249776565
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0007720973416391885
+              ],
+              "adjusted_width_pct": 0.28422397819254375,
+              "adjusted_peak_pct": 0.0007720973416391885,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.23757004249642666,
+                "minimum_width_change_pct": -0.7589842496005694,
+                "maximum_width_change_pct": 1.4018399980147755
+              }
+            },
+            {
+              "time_since_entry_s": 0.003674999999999928,
+              "fwhm_pct": [
+                0.284770008722357
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14521781307008652
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.00019463445294354287
+              ],
+              "adjusted_width_pct": 0.28416835209150726,
+              "adjusted_peak_pct": -0.00019463445294354287,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.24812673108406402,
+                "minimum_width_change_pct": -0.7411501377427188,
+                "maximum_width_change_pct": 1.3532012257249093
+              }
+            },
+            {
+              "time_since_entry_s": 0.0037770833333332595,
+              "fwhm_pct": [
+                0.28388410439850187
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14544042775974653
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.001317596645800112
+              ],
+              "adjusted_width_pct": 0.2832824477676521,
+              "adjusted_peak_pct": -0.001317596645800112,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.2877499722538479,
+                "minimum_width_change_pct": -0.7198235315530765,
+                "maximum_width_change_pct": 1.2932077296839983
+              }
+            },
+            {
+              "time_since_entry_s": 0.0038791666666665907,
+              "fwhm_pct": [
+                0.28263331840001626
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14528500075288164
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.0026005256259620246
+              ],
+              "adjusted_width_pct": 0.2820316617691665,
+              "adjusted_peak_pct": -0.0026005256259620246,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.3146814116205987,
+                "minimum_width_change_pct": -0.6949606394595742,
+                "maximum_width_change_pct": 1.2248752037909316
+              }
+            },
+            {
+              "time_since_entry_s": 0.003981249999999922,
+              "fwhm_pct": [
+                0.2806027432223024
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.144620553581154
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.004046137646629422
+              ],
+              "adjusted_width_pct": 0.2800010865914526,
+              "adjusted_peak_pct": -0.004046137646629422,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3279094760200163,
+                "minimum_width_change_pct": -0.6683030958763991,
+                "maximum_width_change_pct": 1.1500421709306208
+              }
+            },
+            {
+              "time_since_entry_s": 0.004083333333333253,
+              "fwhm_pct": [
+                0.27823464390357433
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14354758696244474
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.00565662683952306
+              ],
+              "adjusted_width_pct": 0.27763298727272456,
+              "adjusted_peak_pct": -0.00565662683952306,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3268465615068661,
+                "minimum_width_change_pct": -0.6390138513610921,
+                "maximum_width_change_pct": 1.182900202190651
+              }
+            },
+            {
+              "time_since_entry_s": 0.004185416666666585,
+              "fwhm_pct": [
+                0.27557069342651896
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14224804561357995
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.0074341243889386455
+              ],
+              "adjusted_width_pct": 0.2749690367956692,
+              "adjusted_peak_pct": -0.0074341243889386455,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3421732735338079,
+                "minimum_width_change_pct": -0.6181385385713112,
+                "maximum_width_change_pct": 1.203854877212307
+              }
+            },
+            {
+              "time_since_entry_s": 0.0042874999999999155,
+              "fwhm_pct": [
+                0.27221231238152566
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.14085711525644307
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.009380888982013502
+              ],
+              "adjusted_width_pct": 0.2716106557506759,
+              "adjusted_peak_pct": -0.009380888982013502,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.3470636444519837,
+                "minimum_width_change_pct": -0.6216609701339304,
+                "maximum_width_change_pct": 1.2118179486362957
+              }
+            },
+            {
+              "time_since_entry_s": 0.004389583333333248,
+              "fwhm_pct": [
+                0.2687754362904693
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1392068088289511
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.01149899247302466
+              ],
+              "adjusted_width_pct": 0.2681737796596195,
+              "adjusted_peak_pct": -0.01149899247302466,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.345227136948123,
+                "minimum_width_change_pct": -0.6223076618006695,
+                "maximum_width_change_pct": 1.2073113374517108
+              }
+            },
+            {
+              "time_since_entry_s": 0.004491666666666579,
+              "fwhm_pct": [
+                0.2649278273563427
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13693728008870032
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.013789322483848121
+              ],
+              "adjusted_width_pct": 0.2643261707254929,
+              "adjusted_peak_pct": -0.013789322483848121,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.3165552481959044,
+                "minimum_width_change_pct": -0.6201685409010005,
+                "maximum_width_change_pct": 1.1900216291553134
+              }
+            },
+            {
+              "time_since_entry_s": 0.00459374999999991,
+              "fwhm_pct": [
+                0.2605677988205324
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13429831223019661
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.016249844552673753
+              ],
+              "adjusted_width_pct": 0.2599661421896826,
+              "adjusted_peak_pct": -0.016249844552673753,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 26,
+                "median_width_change_pct": 0.2892326705672965,
+                "minimum_width_change_pct": -0.6161735896143661,
+                "maximum_width_change_pct": 1.160786801911784
+              }
+            },
+            {
+              "time_since_entry_s": 0.004695833333333241,
+              "fwhm_pct": [
+                0.25606707886887126
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1315800997501615
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.018873232298988185
+              ],
+              "adjusted_width_pct": 0.2554654222380215,
+              "adjusted_peak_pct": -0.018873232298988185,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.29310998199011395,
+                "minimum_width_change_pct": -0.6097032040738415,
+                "maximum_width_change_pct": 1.1214494373007033
+              }
+            },
+            {
+              "time_since_entry_s": 0.004797916666666573,
+              "fwhm_pct": [
+                0.2512728621210991
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12880241688004723
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.02164415195845537
+              ],
+              "adjusted_width_pct": 0.25067120549024935,
+              "adjusted_peak_pct": -0.02164415195845537,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.29942943363890917,
+                "minimum_width_change_pct": -0.6005948824629792,
+                "maximum_width_change_pct": 1.072956112574075
+              }
+            },
+            {
+              "time_since_entry_s": 0.004899999999999904,
+              "fwhm_pct": [
+                0.24606597325740331
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12567261368978677
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                -0.02137065001486249
+              ],
+              "adjusted_width_pct": 0.24546431662655355,
+              "adjusted_peak_pct": -0.02137065001486249,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 25,
+                "median_width_change_pct": 0.28965295406845337,
+                "minimum_width_change_pct": -0.5896364380785224,
+                "maximum_width_change_pct": 1.0163662560714215
+              }
+            }
+          ],
+          "windows": [
+            {
+              "first_s": 0.000918749999999982,
+              "last_s": 0.004899999999999904,
+              "sampled_span_s": 0.003981249999999922,
+              "count": 40,
+              "min_adjusted_width_pct": 0.03967089125280765,
+              "max_adjusted_peak_pct": 0.003763170840276331,
+              "reaches_last_sample": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

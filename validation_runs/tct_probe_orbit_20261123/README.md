@@ -71,6 +71,8 @@ python3 orbit/mode_pattern_speed.py magnetic_diagnostics.npz --mode 1 --max-mode
 
 The slip and self-field replay uses prescribed pattern speeds as sensitivity inputs. In the stationary-pattern model the moving local field alone cleared the refined width and peak-current gates at two of eight post-entry samples. The solid core and the core with the field missed the refined gate, including in the near-comoving startup comparison. [Slip and self-field replay](plasma/README.md#relative-speed-and-self-field-sweep)
 
+The denser field-only follow-up measured a nominal span of 1.429 ms across 15 consecutive passing samples with the virtual sphere exclusion removed. A shaped pulse remained above the width gate at all 24 samples in the 2.450 ms field-off interval on the extended refined run. The final mean width increased by 0.2451%, peak sampled current fell by 0.0207%, and the original island persisted in the periodic model. [Time-resolved field-only sweep](plasma/README.md#time-resolved-field-only-sweeps)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.

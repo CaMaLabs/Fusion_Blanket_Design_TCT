@@ -96,3 +96,32 @@ python3 plasma/slip_sweep.py --refine --cases near_comoving --ramp-s .0006125 --
 ```
 
 Use the same scratch `--cache` path across commands to reuse completed runs for identical inputs.
+
+## Time-resolved field-only sweeps
+
+The field-only follow-up uses the same local MHD model, orbit segment, 42 mm offset, physical units and width/current thresholds. It samples 24 post-entry times across the driven interval, three times the earlier cadence. A ported copy of the original annulus comparison retains the virtual sphere exclusion. The primary field-only comparison keeps all available current profiles and samples the peak over the local disk, including the center. The disk reaches 75 mm in the sheet plane and spans ±40 mm in the nominal normal direction. The peak uses the induced plasma current density in the sampled volume. The width metric remains the mean FWHM of the 36 fixed profile stations. The result also records the number of individual profiles that broaden by more than the mean-width gate.
+
+The screen varies field amplitude by factors of 0.5 and 1.5, tests 40 m/s and 130 m/s relative speeds and reverses the nominal relative direction. It also tests a 0.6125 ms smooth entry and a pulse with 0.30625 ms rise and fall intervals. The latter reaches zero at patch exit and is followed by an unforced continuation. Refined comparisons use the same 64 × 52 × 52 and 80 × 64 × 64 meshes as the prior slip study, with two time steps on the finer mesh. Consecutive passing samples give the observed span and a flag when the final sample still passes.
+
+The drive is a prescribed moving field in a periodic slab. The reference fluid is at rest in the assumed sheet frame and the model holds the earlier calibration assumptions. Field generation by hardware, the actual DIII-D pattern speed and independent bulk flow remain open.
+
+The unmasked nominal case passed at 15 consecutive samples from 1.021 through 2.450 ms, a sampled span of 1.429 ms. Its adjusted width gain at the last sample was +0.2001% and its peak-current increase was +0.00388%. The same refined test at half amplitude passed at 14 consecutive samples and ended with +0.0966% width and +0.00192% peak current. The wider peak-sampling region retained the passes. Under the legacy comparison, the nominal gap between the two passing groups came from incomplete profile coverage under the virtual sphere exclusion.
+
+The shaped pulse reached zero at 2.450 ms. In the initial refined run it remained above the width gate throughout the sampled 0.6125 ms field-off interval. At 3.0625 ms, it gave +0.2706% adjusted width and +0.00349% adjusted peak current. Twenty-three of 36 individual profiles exceeded +0.020% width at the finest setting. The original elliptic and hyperbolic field lines remained trackable.
+
+The extended refined run passed at 40 consecutive samples from 0.919 through 4.900 ms. All 24 samples strictly after shutoff passed, and the latest sample was 2.450 ms after shutoff. At that sample, the mean width was +0.2451% and peak current was −0.0207% relative to the matched control, after the numerical allowances. Twenty-five of 36 stations individually exceeded +0.020% width on the finest run. Individual widths ranged from −0.547% to +0.996%. The seeded island and X-line persisted through the final topology check. The short and long pulse histories matched bit for bit over their shared interval at all three resolutions.
+
+The coarse screen gave a qualifying interval at each tested strength, speed and turn-on setting. At 40 m/s the last passing sample was at 1.838 ms and the final mean width fell to −0.0528%. The other screened speeds passed through their final samples. Fine confirmation covered nominal amplitude, half amplitude, and the shaped pulse with both observation lengths.
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/field_window.py --cache /tmp/tct-field-window --output plasma/runs/field_window_screen.json
+python3 plasma/field_window.py --cache /tmp/tct-field-window --refine --cases nominal pulse_and_decay --output plasma/runs/field_window_refined.json
+python3 plasma/field_window.py --cache /tmp/tct-field-window --refine --cases half_strength --output plasma/runs/field_window_half_strength_refined.json
+python3 plasma/field_window.py --cache /tmp/tct-field-window --cases long_decay --output plasma/runs/field_window_long_decay_screen.json
+python3 plasma/field_window.py --cache /tmp/tct-field-window --refine --cases long_decay --output plasma/runs/field_window_long_decay_refined.json
+```
+
+[Coarse screen](runs/field_window_screen.json) · [Nominal and pulsed refinement](runs/field_window_refined.json) · [Half-amplitude refinement](runs/field_window_half_strength_refined.json) · [Extended field-off screen](runs/field_window_long_decay_screen.json) · [Extended field-off refinement](runs/field_window_long_decay_refined.json)

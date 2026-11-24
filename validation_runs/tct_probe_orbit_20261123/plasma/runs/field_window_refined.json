@@ -1,0 +1,4345 @@
+{
+  "stage": "refined",
+  "baseline_track": {
+    "mode": "guided_1.6kA_I",
+    "kappa_Am2_kg": 4761.9047619047615,
+    "gravity": true,
+    "phase_deg": 180,
+    "launch": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "reference_height_m": -0.0051640142737476085,
+    "cutoff_hz": 100,
+    "steps_per_lap": 1152,
+    "outcome": "completed",
+    "laps": 3.0000546498923746,
+    "elapsed_s": 0.4833757940610646,
+    "direction": 1,
+    "radial_peak_m": 0.0022010747604150893,
+    "vertical_peak_m": 0.012344439987668234,
+    "initial_toroidal_speed_m_s": 85.81526562902829,
+    "final_toroidal_speed_m_s": 85.69629377421695,
+    "peak_current_A": 1600.0,
+    "peak_slew_A_s": 2010619.2982974676,
+    "kick_time_s": null,
+    "duration_s": 0.2,
+    "tracking_pass": true,
+    "settled_error_m": 0.00011794071751804452,
+    "settled_speed_m_s": 0.005256417703020485,
+    "final_normal_displacement_m": -0.00218946836899563,
+    "worst_normal_error_m": 0.00011794071751804452,
+    "corridor_margin_m": 0.012655560012331767,
+    "profile": "toroidal_priority",
+    "drag_fraction": 0.5,
+    "drag_at_nominal_speed_T_m": 0.0002000961616401006,
+    "supplemental_capacity_T_m": 0.0
+  },
+  "nominal_field_potential_coefficient": 0.09,
+  "normalized_source_width": 0.19,
+  "width_pct_gate_exclusive": 0.02,
+  "peak_pct_gate_inclusive": 0.1,
+  "benchmarks": [
+    {
+      "known_width": 0.4760976068178251,
+      "recovered_width": 0.47609884733620295,
+      "max_false_width_gain_pct": 0.0006016566308497673,
+      "recovered_0p02pct_gains": [
+        0.01997135241258441,
+        0.01997131537416763,
+        0.019971219695325004
+      ]
+    },
+    {
+      "known_width": 0.4760976068178251,
+      "recovered_width": 0.47609879486384293,
+      "max_false_width_gain_pct": 0.00011017644281352545,
+      "recovered_0p02pct_gains": [
+        0.019971795025397476,
+        0.019971864946888296,
+        0.01997180686272859
+      ]
+    },
+    {
+      "known_width": 0.4760976068178251,
+      "recovered_width": 0.47609879486384293,
+      "max_false_width_gain_pct": 0.00011017644281352545,
+      "recovered_0p02pct_gains": [
+        0.019971795025397476,
+        0.019971864946888296,
+        0.01997180686272859
+      ]
+    }
+  ],
+  "cases": {
+    "nominal": {
+      "drive": {
+        "scale": 1.0,
+        "relative_m_s": null,
+        "rise_s": 0.0,
+        "fall_s": 0.0,
+        "coast_s": 0.0
+      },
+      "geometry": {
+        "sheet_speed_m_s": 0.0,
+        "midpoint_relative_toroidal_speed_m_s": 85.70024749158394,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.20996549931214226,
+        "transit_s": 0.002449999999999952,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.34877500000000006,
+          0.351225
+        ]
+      },
+      "active_s": 0.002449999999999952,
+      "sample_spacing_s": 0.00010208333333333133,
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 264,
+          "step_s": 9.280303030302849e-06
+        },
+        {
+          "mesh": [
+            80,
+            64,
+            64
+          ],
+          "steps": 264,
+          "step_s": 9.280303030302849e-06
+        },
+        {
+          "mesh": [
+            80,
+            64,
+            64
+          ],
+          "steps": 528,
+          "step_s": 4.6401515151514245e-06
+        }
+      ],
+      "diagnostics": {
+        "legacy_annulus": {
+          "frames": [
+            {
+              "time_since_entry_s": 0.0,
+              "fwhm_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "adjusted_width_pct": -0.0006016566308497673,
+              "adjusted_peak_pct": 0.0,
+              "passes_gate": false,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0006541273929130398,
+                      -0.00026051872444354807
+                    ],
+                    "return_error": 0.0,
+                    "trace": 7.21377758633812,
+                    "determinant": 0.9999757816891393
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.1415926528838725,
+                      -7.853673267277372e-11
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.3150918469010415,
+                    "determinant": 1.0000000180383584
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      4.440892098500626e-16,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.175751770269965,
+                    "determinant": 0.999983178779755
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.315091862574615,
+                    "determinant": 1.0000000180288762
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": 0.0,
+                "minimum_width_change_pct": 0.0,
+                "maximum_width_change_pct": 0.0
+              }
+            },
+            {
+              "time_since_entry_s": 0.00010208333333333133,
+              "fwhm_pct": [
+                -0.001071806917074536,
+                -0.0010712392820688699,
+                -0.0010721992027340477
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0005293161663644241,
+                -0.0005292226448738724,
+                -0.0005296924711961637
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                1.0916103798663812e-05,
+                1.091622541249393e-05,
+                1.0922099780152905e-05
+              ],
+              "adjusted_width_pct": -0.0016753833892546588,
+              "adjusted_peak_pct": 1.0928095761641998e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -4.420371790825328e-07,
+                "minimum_width_change_pct": -0.01388474997562339,
+                "maximum_width_change_pct": 0.0007223434764780379
+              }
+            },
+            {
+              "time_since_entry_s": 0.00020416666666666267,
+              "fwhm_pct": [
+                -0.004826275322988849,
+                -0.0048219227490542416,
+                -0.004822793711112272
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.001328129039623871,
+                -0.001329355350565553,
+                -0.0013306247642952407
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                4.7506320832724214e-05,
+                4.7506847988820766e-05,
+                4.751986246720463e-05
+              ],
+              "adjusted_width_pct": -0.005429673877954677,
+              "adjusted_peak_pct": 4.753340410168505e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.5783500950661278e-06,
+                "minimum_width_change_pct": -0.060460536340189996,
+                "maximum_width_change_pct": 0.003676273310793121
+              }
+            },
+            {
+              "time_since_entry_s": 0.000306249999999994,
+              "fwhm_pct": [
+                -0.007809671918534988,
+                -0.007808603884795762,
+                -0.007811631029408517
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                -0.0010973508718481462,
+                -0.0010985987737854863,
+                -0.0010998003462825423
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.00011618522286482857,
+                0.00011618464037521647,
+                0.0001162067221338603
+              ],
+              "adjusted_width_pct": -0.008417382838610266,
+              "adjusted_peak_pct": 0.00011622938638211622,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -4.081752202900191e-06,
+                "minimum_width_change_pct": -0.1020375294678244,
+                "maximum_width_change_pct": 0.009840478744038705
+              }
+            },
+            {
+              "time_since_entry_s": 0.00040833333333332533,
+              "fwhm_pct": [
+                -0.005926253801580295,
+                -0.005919096607942542,
+                -0.005921949378207003
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                -0.0028997075865455635,
+                -0.002896560224807665,
+                -0.002897957461089895
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.00022495626470497854,
+                0.00022493661142597432,
+                0.000224971779605454
+              ],
+              "adjusted_width_pct": -0.006533615972958984,
+              "adjusted_peak_pct": 0.0002250266010639379,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -3.260084052714163e-06,
+                "minimum_width_change_pct": -0.11670920299635679,
+                "maximum_width_change_pct": 0.01869969464838306
+              }
+            },
+            {
+              "time_since_entry_s": 0.0005104166666666566,
+              "fwhm_pct": [
+                0.0024299440098740632,
+                0.002451589520680031,
+                0.0024516021575937685
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.0013429536652065366,
+                0.0013567477423093166,
+                0.0013567487227916786
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.00038513996027944586,
+                0.0003850128624360849,
+                0.0003850650952319512
+              ],
+              "adjusted_width_pct": 0.001828287379024296,
+              "adjusted_peak_pct": 0.00038524442587117846,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 2,
+                "median_width_change_pct": -4.829377431292414e-06,
+                "minimum_width_change_pct": -0.013117989481137293,
+                "maximum_width_change_pct": 0.03162472088718005
+              }
+            },
+            {
+              "time_since_entry_s": 0.000612499999999988,
+              "fwhm_pct": [
+                0.0038035304633199374,
+                0.003834098691224419,
+                0.003834137761193901
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.0021356285449636303,
+                0.002155287267591177,
+                0.0021552557009751894
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.0006113961592113526,
+                0.0006109015043387345,
+                0.0006109610354521067
+              ],
+              "adjusted_width_pct": 0.00320187383247017,
+              "adjusted_peak_pct": 0.000611515221438097,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 3,
+                "median_width_change_pct": -4.502858236277163e-06,
+                "minimum_width_change_pct": -0.012762536242760802,
+                "maximum_width_change_pct": 0.044560584726838215
+              }
+            },
+            {
+              "time_since_entry_s": 0.0007145833333333194,
+              "fwhm_pct": [
+                0.01972016018909617,
+                0.019652171034834076,
+                0.01965294953678587
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.010369325546788488,
+                0.010328982809326703,
+                0.010329251758167679
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0009127550907983562,
+                0.0009114406056331958,
+                0.000911461230135302
+              ],
+              "adjusted_width_pct": 0.018982525249722215,
+              "adjusted_peak_pct": 0.0009127963398025685,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": 1.5202446801421132e-06,
+                "minimum_width_change_pct": -0.005889433658679,
+                "maximum_width_change_pct": 0.46233869350906787
+              }
+            },
+            {
+              "time_since_entry_s": 0.0008166666666666507,
+              "fwhm_pct": [
+                0.02989893267086874,
+                0.029815352576711973,
+                0.029815352287632102
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.015572301712629688,
+                0.015527616476518347,
+                0.015527394812941964
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0012707852719229251,
+                0.0012683888852560443,
+                0.001268286061817392
+              ],
+              "adjusted_width_pct": 0.029130115273545698,
+              "adjusted_peak_pct": 0.0012707852719229251,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 7,
+                "median_width_change_pct": 1.954941303283775e-06,
+                "minimum_width_change_pct": -0.02167871281476552,
+                "maximum_width_change_pct": 0.5514937704525158
+              }
+            },
+            {
+              "time_since_entry_s": 0.000918749999999982,
+              "fwhm_pct": [
+                0.03738907533299418,
+                0.03725259713924789,
+                0.037252749431915255
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.019521341313999407,
+                0.01944432910891969,
+                0.019444088177067442
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.0016201146051164628,
+                0.0016173744456393635,
+                0.0016170746728327856
+              ],
+              "adjusted_width_pct": 0.03651446231465183,
+              "adjusted_peak_pct": 0.0016201146051164628,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 9,
+                "median_width_change_pct": 0.00015797055655797365,
+                "minimum_width_change_pct": -0.2850241300037859,
+                "maximum_width_change_pct": 0.6010073644429514
+              }
+            },
+            {
+              "time_since_entry_s": 0.0010208333333333133,
+              "fwhm_pct": [
+                0.05223126081932428,
+                0.05214589110396073,
+                0.05214482090707406
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.026990006041627268,
+                0.026958114623187868,
+                0.026957162895091535
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.0018615917561470852,
+                0.0018602885901053412,
+                0.0018597984851265181
+              ],
+              "adjusted_width_pct": 0.05145672436397408,
+              "adjusted_peak_pct": 0.0018615917561470852,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 10,
+                "median_width_change_pct": 0.0007439288086330542,
+                "minimum_width_change_pct": -0.1849205039182178,
+                "maximum_width_change_pct": 0.6236737116527502
+              }
+            },
+            {
+              "time_since_entry_s": 0.0011229166666666447,
+              "fwhm_pct": [
+                0.05014508000704687,
+                0.05012399701542769,
+                0.05012062658467098
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.026020917681357503,
+                0.02602940582701052,
+                0.02602718598758713
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0019138957823017222,
+                0.0019146809969949885,
+                0.0019140945218820704
+              ],
+              "adjusted_width_pct": 0.04949451653144532,
+              "adjusted_peak_pct": 0.0019154662116882548,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 11,
+                "median_width_change_pct": 0.0034106848334936046,
+                "minimum_width_change_pct": -0.4744737961925649,
+                "maximum_width_change_pct": 0.630713910307179
+              }
+            },
+            {
+              "time_since_entry_s": 0.001224999999999976,
+              "fwhm_pct": [
+                0.062210382107252826,
+                0.06224234761411651,
+                0.06223779564402676
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.032014672689628654,
+                0.03206852380324143,
+                0.032065653194668364
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002104200921504429,
+                0.002091498014733517,
+                0.0020913394041421896
+              ],
+              "adjusted_width_pct": 0.06159962153622356,
+              "adjusted_peak_pct": 0.002104200921504429,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00017421455517174778,
+                      0.00426351863691532
+                    ],
+                    "return_error": 6.280369834735101e-16,
+                    "trace": 7.172615501622957,
+                    "determinant": 0.9998129015488852
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.141592574170396,
+                      -3.3907510132991092e-09
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": -1.288504211972909,
+                    "determinant": 1.000000018744546
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.077462904569674,
+                    "determinant": 0.9999846002918167
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2885041976038476,
+                    "determinant": 1.000000019688969
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 14,
+                "median_width_change_pct": 0.0025902854072779036,
+                "minimum_width_change_pct": -0.4391199336451601,
+                "maximum_width_change_pct": 0.6954982807487076
+              }
+            },
+            {
+              "time_since_entry_s": 0.0013270833333333075,
+              "fwhm_pct": [
+                0.06982044428629486,
+                0.06989948682158964,
+                0.06989394744443267
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03574581929981502,
+                0.035835091826497134,
+                0.035831716977741124
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002423668442852467,
+                0.0024135415787940318,
+                0.002413289564051624
+              ],
+              "adjusted_width_pct": 0.06920770890113115,
+              "adjusted_peak_pct": 0.002423668442852467,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.004794179059830483,
+                "minimum_width_change_pct": -0.427541998390768,
+                "maximum_width_change_pct": 0.8206372601269107
+              }
+            },
+            {
+              "time_since_entry_s": 0.0014291666666666387,
+              "fwhm_pct": [
+                0.08960211028141707,
+                0.08973899429058907,
+                0.08973573360706588
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.045584522005870376,
+                0.04571046075962926,
+                0.04570826468528466
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.002577230003231179,
+                0.0025746375506896513,
+                0.0025743944169098754
+              ],
+              "adjusted_width_pct": 0.08899393228352093,
+              "adjusted_peak_pct": 0.002577230003231179,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.01239200942545482,
+                "minimum_width_change_pct": -0.4256755823322744,
+                "maximum_width_change_pct": 0.9379718091365952
+              }
+            },
+            {
+              "time_since_entry_s": 0.0015312499999999701,
+              "fwhm_pct": [
+                0.09735853376504622,
+                0.09756503245161863,
+                0.09756080288680913
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.049278309845046664,
+                0.0494336825453523,
+                0.04943116697404548
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.002566288381244952,
+                0.0025727100226635713,
+                0.002572587749649635
+              ],
+              "adjusted_width_pct": 0.09674841800457745,
+              "adjusted_peak_pct": 0.0025791316640821904,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 18,
+                "median_width_change_pct": 0.022407858358575172,
+                "minimum_width_change_pct": -0.42206498571626394,
+                "maximum_width_change_pct": 1.0434770567466556
+              }
+            },
+            {
+              "time_since_entry_s": 0.0016333333333333013,
+              "fwhm_pct": [
+                0.123770139929813,
+                0.12406454902424979,
+                0.12406101919828494
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.06234297846030579,
+                0.06253605850106148,
+                0.06253416890444896
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.002471189791397599,
+                0.002484657910395427,
+                0.00248469029149323
+              ],
+              "adjusted_width_pct": 0.12316142364703353,
+              "adjusted_peak_pct": 0.0024981907915888613,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.03732733125596521,
+                "minimum_width_change_pct": -0.4110049043361652,
+                "maximum_width_change_pct": 1.1335752668921506
+              }
+            },
+            {
+              "time_since_entry_s": 0.0017354166666666327,
+              "fwhm_pct": [
+                0.13595220820550313,
+                0.13629631629714645,
+                0.13629198371367668
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.06818947840949718,
+                0.06839334966697308,
+                0.0683913717842044
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0023973719546876993,
+                0.002414405968154121,
+                0.0024145363198835312
+              ],
+              "adjusted_width_pct": 0.13534188640771383,
+              "adjusted_peak_pct": 0.002431700685079363,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.04226207586462971,
+                "minimum_width_change_pct": -0.3906277714265105,
+                "maximum_width_change_pct": 1.2056689294545953
+              }
+            },
+            {
+              "time_since_entry_s": 0.001837499999999964,
+              "fwhm_pct": [
+                0.1694145040131989,
+                0.16976100998411514,
+                0.16975662441194306
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.08473412495966226,
+                0.08492965032076416,
+                0.08492801443769071
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.00241341703970388,
+                0.002430925108432014,
+                0.0024310694677787126
+              ],
+              "adjusted_width_pct": 0.16880407623800497,
+              "adjusted_peak_pct": 0.002448721895853545,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.06955863289910269,
+                "minimum_width_change_pct": -0.3608542753280153,
+                "maximum_width_change_pct": 1.257574616579693
+              }
+            },
+            {
+              "time_since_entry_s": 0.0019395833333332954,
+              "fwhm_pct": [
+                0.18647922024026542,
+                0.18674137918925915,
+                0.1867365292896439
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.09306745891870527,
+                0.09321287782169119,
+                0.0932111933269919
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.0025328411387137706,
+                0.0025487583491745625,
+                0.002548862646722938
+              ],
+              "adjusted_width_pct": 0.18586786381018516,
+              "adjusted_peak_pct": 0.0025648841547321055,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.10291113686734521,
+                "minimum_width_change_pct": -0.3222165685292433,
+                "maximum_width_change_pct": 1.288300676953047
+              }
+            },
+            {
+              "time_since_entry_s": 0.0020416666666666266,
+              "fwhm_pct": [
+                0.17277019636536828,
+                0.1729681106891423,
+                0.17295984534146935
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.085764406953448,
+                0.08586221492843382,
+                0.08585877339859493
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.002735577644785714,
+                0.002748584991785208,
+                0.0027486320981484624
+              ],
+              "adjusted_width_pct": 0.1721520090391726,
+              "adjusted_peak_pct": 0.002761686551511211,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.11411152224822807,
+                "minimum_width_change_pct": -0.5626660675758122,
+                "maximum_width_change_pct": 1.2977268293512978
+              }
+            },
+            {
+              "time_since_entry_s": 0.0021437499999999578,
+              "fwhm_pct": [
+                0.16845055997045666,
+                0.16859595965159624,
+                0.1685862141916683
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.09401499801113822,
+                0.09409077767781326,
+                0.09408745643115779
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.00299401542971367,
+                0.0030031050664458547,
+                0.003003095310316617
+              ],
+              "adjusted_width_pct": 0.16782941241975102,
+              "adjusted_peak_pct": 0.0030121947031780394,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.12595086035797065,
+                "minimum_width_change_pct": -0.5464320270476719,
+                "maximum_width_change_pct": 1.286912973147336
+              }
+            },
+            {
+              "time_since_entry_s": 0.0022458333333332894,
+              "fwhm_pct": [
+                0.1704805872829951,
+                0.17056678487865629,
+                0.17055767456854998
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09142066278247096,
+                0.09149246824460278,
+                0.09148829968579353
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.00328436748922023,
+                0.003288564157322149,
+                0.003288500890685775
+              ],
+              "adjusted_width_pct": 0.1698607100319327,
+              "adjusted_peak_pct": 0.003292760825424068,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.12190023303149111,
+                "minimum_width_change_pct": -0.5640859659970521,
+                "maximum_width_change_pct": 1.2574315729028784
+              }
+            },
+            {
+              "time_since_entry_s": 0.0023479166666666206,
+              "fwhm_pct": [
+                0.18741549924616852,
+                0.187446386058987,
+                0.18743731312722556
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09231893713697037,
+                0.09239122109201414,
+                0.09238683847285767
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0035870774513169223,
+                0.003585278544160353,
+                0.0035851646176254803
+              ],
+              "adjusted_width_pct": 0.18679569675179586,
+              "adjusted_peak_pct": 0.0035870774513169223,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.11189355212116725,
+                "minimum_width_change_pct": -0.6032561700506589,
+                "maximum_width_change_pct": 1.2115643732311998
+              }
+            },
+            {
+              "time_since_entry_s": 0.002449999999999952,
+              "fwhm_pct": [
+                0.20082701010222248,
+                0.20078598548871618,
+                0.20077779846285893
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09897678222956507,
+                0.09906135907884472,
+                0.09905724507526248
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0038848758491694113,
+                0.0038757165988556608,
+                0.00387555490615199
+              ],
+              "adjusted_width_pct": 0.2001269301926456,
+              "adjusted_peak_pct": 0.0038848758491694113,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.0008940891120601258,
+                      -0.00034281704704874905
+                    ],
+                    "return_error": 0.0,
+                    "trace": 7.018336367933474,
+                    "determinant": 1.00000828148733
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.1415925174354706,
+                      -1.2847466424048548e-08
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": -1.2647200353935757,
+                    "determinant": 1.0000000208093924
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 6.982569669222392,
+                    "determinant": 0.9999868520608166
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2647200057867032,
+                    "determinant": 1.0000000210670614
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.1337725072887208,
+                "minimum_width_change_pct": -0.6506736481324937,
+                "maximum_width_change_pct": 1.151785179144671
+              }
+            }
+          ],
+          "windows": [
+            {
+              "first_s": 0.0011229166666666447,
+              "last_s": 0.0013270833333333075,
+              "sampled_span_s": 0.00020416666666666283,
+              "count": 3,
+              "min_adjusted_width_pct": 0.04949451653144532,
+              "max_adjusted_peak_pct": 0.002423668442852467,
+              "reaches_last_sample": false
+            },
+            {
+              "first_s": 0.0022458333333332894,
+              "last_s": 0.002449999999999952,
+              "sampled_span_s": 0.00020416666666666283,
+              "count": 3,
+              "min_adjusted_width_pct": 0.1698607100319327,
+              "max_adjusted_peak_pct": 0.0038848758491694113,
+              "reaches_last_sample": true
+            }
+          ]
+        },
+        "unmasked_disk": {
+          "frames": [
+            {
+              "time_since_entry_s": 0.0,
+              "fwhm_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "adjusted_width_pct": -0.0006016566308497673,
+              "adjusted_peak_pct": 0.0,
+              "passes_gate": false,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0006541273929130398,
+                      -0.00026051872444354807
+                    ],
+                    "return_error": 0.0,
+                    "trace": 7.21377758633812,
+                    "determinant": 0.9999757816891393
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.1415926528838725,
+                      -7.853673267277372e-11
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.3150918469010415,
+                    "determinant": 1.0000000180383584
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      4.440892098500626e-16,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.175751770269965,
+                    "determinant": 0.999983178779755
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.315091862574615,
+                    "determinant": 1.0000000180288762
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": 0.0,
+                "minimum_width_change_pct": 0.0,
+                "maximum_width_change_pct": 0.0
+              }
+            },
+            {
+              "time_since_entry_s": 0.00010208333333333133,
+              "fwhm_pct": [
+                -0.001071806917074536,
+                -0.0010712392820688699,
+                -0.0010721992027340477
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0005293161663644241,
+                -0.0005292226448738724,
+                -0.0005296924711961637
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                1.0916103798663812e-05,
+                1.091622541249393e-05,
+                1.0922099780152905e-05
+              ],
+              "adjusted_width_pct": -0.0016753833892546588,
+              "adjusted_peak_pct": 1.0928095761641998e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -4.420371790825328e-07,
+                "minimum_width_change_pct": -0.01388474997562339,
+                "maximum_width_change_pct": 0.0007223434764780379
+              }
+            },
+            {
+              "time_since_entry_s": 0.00020416666666666267,
+              "fwhm_pct": [
+                -0.004826275322988849,
+                -0.0048219227490542416,
+                -0.004822793711112272
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.00238393548653848,
+                -0.002382538866219086,
+                -0.002382949421075864
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                4.7506320832724214e-05,
+                4.7506847988820766e-05,
+                4.751986246720463e-05
+              ],
+              "adjusted_width_pct": -0.005429673877954677,
+              "adjusted_peak_pct": 4.753340410168505e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.5783500950661278e-06,
+                "minimum_width_change_pct": -0.060460536340189996,
+                "maximum_width_change_pct": 0.003676273310793121
+              }
+            },
+            {
+              "time_since_entry_s": 0.000306249999999994,
+              "fwhm_pct": [
+                -0.011351242985335741,
+                -0.011338460018806007,
+                -0.011337131294519853
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.005597155350256511,
+                -0.005592779180862983,
+                -0.005592065264536927
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00011618522286482857,
+                0.00011618464037521647,
+                0.0001162067221338603
+              ],
+              "adjusted_width_pct": -0.011952899616185508,
+              "adjusted_peak_pct": 0.00011622938638211622,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -4.910965695215097e-06,
+                "minimum_width_change_pct": -0.13148860219269753,
+                "maximum_width_change_pct": 0.009840478744038705
+              }
+            },
+            {
+              "time_since_entry_s": 0.00040833333333332533,
+              "fwhm_pct": [
+                -0.01915452135058393,
+                -0.019136012846088235,
+                -0.019130320756510777
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.009440263758664358,
+                -0.00943564099553651,
+                -0.009432696817324171
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00022495626470497854,
+                0.00022493661142597432,
+                0.000224971779605454
+              ],
+              "adjusted_width_pct": -0.019756177981433698,
+              "adjusted_peak_pct": 0.0002250266010639379,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 1,
+                "median_width_change_pct": -4.962117078344264e-06,
+                "minimum_width_change_pct": -0.21256581213294767,
+                "maximum_width_change_pct": 0.05689898616851874
+              }
+            },
+            {
+              "time_since_entry_s": 0.0005104166666666566,
+              "fwhm_pct": [
+                -0.02522357394256769,
+                -0.02521586563121181,
+                -0.025204976882620134
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.012408372875472029,
+                -0.012413914186037989,
+                -0.012408292508958585
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00038513996027944586,
+                0.0003850128624360849,
+                0.0003850650952319512
+              ],
+              "adjusted_width_pct": -0.025825230573417457,
+              "adjusted_peak_pct": 0.00038524442587117846,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 3,
+                "median_width_change_pct": -8.842517495999402e-06,
+                "minimum_width_change_pct": -0.3403083942421947,
+                "maximum_width_change_pct": 0.18204852816510186
+              }
+            },
+            {
+              "time_since_entry_s": 0.000612499999999988,
+              "fwhm_pct": [
+                -0.02595022301847827,
+                -0.025981584859935403,
+                -0.02596706267774529
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.012676602587158303,
+                -0.012708397086913514,
+                -0.012700871416260195
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0006113961592113526,
+                0.0006109015043387345,
+                0.0006109610354521067
+              ],
+              "adjusted_width_pct": -0.026614603332242304,
+              "adjusted_peak_pct": 0.000611515221438097,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": -1.421882738217306e-05,
+                "minimum_width_change_pct": -0.4328453754223749,
+                "maximum_width_change_pct": 0.3314361932751808
+              }
+            },
+            {
+              "time_since_entry_s": 0.0007145833333333194,
+              "fwhm_pct": [
+                -0.018837238755731178,
+                -0.01893194298319134,
+                -0.01891762435376476
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.008975480915007772,
+                -0.009045982547695175,
+                -0.009038577136111225
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0009127550907983562,
+                0.0009114406056331958,
+                0.000911461230135302
+              ],
+              "adjusted_width_pct": -0.01962830384150127,
+              "adjusted_peak_pct": 0.0009127963398025685,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": -2.7143169711862924e-06,
+                "minimum_width_change_pct": -0.5434403048135694,
+                "maximum_width_change_pct": 0.46233869350906787
+              }
+            },
+            {
+              "time_since_entry_s": 0.0008166666666666507,
+              "fwhm_pct": [
+                -0.0042007062209248325,
+                -0.004345342386058437,
+                -0.0043354876355761185
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0014585117863563646,
+                -0.001556421118076301,
+                -0.0015514447286535393
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0012707852719229251,
+                0.0012683888852560443,
+                0.001268286061817392
+              ],
+              "adjusted_width_pct": -0.005091635182041809,
+              "adjusted_peak_pct": 0.0012707852719229251,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 8,
+                "median_width_change_pct": -3.9040737698226025e-06,
+                "minimum_width_change_pct": -0.6154771074694199,
+                "maximum_width_change_pct": 0.5514937704525158
+              }
+            },
+            {
+              "time_since_entry_s": 0.000918749999999982,
+              "fwhm_pct": [
+                0.01481800044047521,
+                0.014678954980285042,
+                0.014682588033343436
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.008230352027038812,
+                0.00814163275522084,
+                0.008143246497671619
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0016201146051164628,
+                0.0016173744456393635,
+                0.0016170746728327856
+              ],
+              "adjusted_width_pct": 0.013938252889245106,
+              "adjusted_peak_pct": 0.0016201146051164628,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 9,
+                "median_width_change_pct": 3.0548040430566914e-06,
+                "minimum_width_change_pct": -0.6005500977723233,
+                "maximum_width_change_pct": 0.6010073644429514
+              }
+            },
+            {
+              "time_since_entry_s": 0.0010208333333333133,
+              "fwhm_pct": [
+                0.03393609184536572,
+                0.033850720506412024,
+                0.03384963807444574
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.01789455022351838,
+                0.017849776088207925,
+                0.01784882571322921
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0018615917561470852,
+                0.0018602885901053412,
+                0.0018597984851265181
+              ],
+              "adjusted_width_pct": 0.033161527672675994,
+              "adjusted_peak_pct": 0.0018615917561470852,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 10,
+                "median_width_change_pct": 0.00018559491438141507,
+                "minimum_width_change_pct": -0.5367049893269749,
+                "maximum_width_change_pct": 0.6236737116527502
+              }
+            },
+            {
+              "time_since_entry_s": 0.0011229166666666447,
+              "fwhm_pct": [
+                0.05014508000704687,
+                0.05012399701542769,
+                0.05012062658467098
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.026020917681357503,
+                0.02602940582701052,
+                0.02602718598758713
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0019138957823017222,
+                0.0019146809969949885,
+                0.0019140945218820704
+              ],
+              "adjusted_width_pct": 0.04949451653144532,
+              "adjusted_peak_pct": 0.0019154662116882548,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 11,
+                "median_width_change_pct": 0.0034106848334936046,
+                "minimum_width_change_pct": -0.4744737961925649,
+                "maximum_width_change_pct": 0.630713910307179
+              }
+            },
+            {
+              "time_since_entry_s": 0.001224999999999976,
+              "fwhm_pct": [
+                0.062210382107252826,
+                0.06224234761411651,
+                0.06223779564402676
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.032014672689628654,
+                0.03206852380324143,
+                0.032065653194668364
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002104200921504429,
+                0.002091498014733517,
+                0.0020913394041421896
+              ],
+              "adjusted_width_pct": 0.06159962153622356,
+              "adjusted_peak_pct": 0.002104200921504429,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00017421455517174778,
+                      0.00426351863691532
+                    ],
+                    "return_error": 6.280369834735101e-16,
+                    "trace": 7.172615501622957,
+                    "determinant": 0.9998129015488852
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.141592574170396,
+                      -3.3907510132991092e-09
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": -1.288504211972909,
+                    "determinant": 1.000000018744546
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.077462904569674,
+                    "determinant": 0.9999846002918167
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2885041976038476,
+                    "determinant": 1.000000019688969
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 14,
+                "median_width_change_pct": 0.0025902854072779036,
+                "minimum_width_change_pct": -0.4391199336451601,
+                "maximum_width_change_pct": 0.6954982807487076
+              }
+            },
+            {
+              "time_since_entry_s": 0.0013270833333333075,
+              "fwhm_pct": [
+                0.06982044428629486,
+                0.06989948682158964,
+                0.06989394744443267
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03574581929981502,
+                0.035835091826497134,
+                0.035831716977741124
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002423668442852467,
+                0.0024135415787940318,
+                0.002413289564051624
+              ],
+              "adjusted_width_pct": 0.06920770890113115,
+              "adjusted_peak_pct": 0.002423668442852467,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.004794179059830483,
+                "minimum_width_change_pct": -0.427541998390768,
+                "maximum_width_change_pct": 0.8206372601269107
+              }
+            },
+            {
+              "time_since_entry_s": 0.0014291666666666387,
+              "fwhm_pct": [
+                0.07312370916980893,
+                0.07325894700909164,
+                0.07325365961203811
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03724171998451542,
+                0.037361478072939214,
+                0.037358310678858864
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002577230003231179,
+                0.0025746375506896513,
+                0.0025743944169098754
+              ],
+              "adjusted_width_pct": 0.07251147774485212,
+              "adjusted_peak_pct": 0.002577230003231179,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.009506924156055252,
+                "minimum_width_change_pct": -0.4256755823322744,
+                "maximum_width_change_pct": 0.9379718091365952
+              }
+            },
+            {
+              "time_since_entry_s": 0.0015312499999999701,
+              "fwhm_pct": [
+                0.07326745062246065,
+                0.07347585593353578,
+                0.0734735062248193
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03703514141875086,
+                0.037185115358773224,
+                0.0371836593066277
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002566288381244952,
+                0.0025727100226635713,
+                0.002572587749649635
+              ],
+              "adjusted_width_pct": 0.07266109457417791,
+              "adjusted_peak_pct": 0.0025791316640821904,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 18,
+                "median_width_change_pct": 0.020856285333326063,
+                "minimum_width_change_pct": -0.42206498571626394,
+                "maximum_width_change_pct": 1.0434770567466556
+              }
+            },
+            {
+              "time_since_entry_s": 0.0016333333333333013,
+              "fwhm_pct": [
+                0.07321983411068267,
+                0.0735067710137427,
+                0.0735092146076477
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.036638335503602626,
+                0.0368152133097599,
+                0.03681656176108827
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002471189791397599,
+                0.002484657910395427,
+                0.00248469029149323
+              ],
+              "adjusted_width_pct": 0.0726181774798329,
+              "adjusted_peak_pct": 0.0024981907915888613,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.02801428117843452,
+                "minimum_width_change_pct": -0.5327167532869548,
+                "maximum_width_change_pct": 1.1335752668921506
+              }
+            },
+            {
+              "time_since_entry_s": 0.0017354166666666327,
+              "fwhm_pct": [
+                0.07709666488324718,
+                0.07743125565202735,
+                0.07743716911505771
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.038196723958594525,
+                0.03838237608684292,
+                0.03838585499313929
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0023973719546876993,
+                0.002414405968154121,
+                0.0024145363198835312
+              ],
+              "adjusted_width_pct": 0.07649500825239741,
+              "adjusted_peak_pct": 0.002431700685079363,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.034918868141442516,
+                "minimum_width_change_pct": -0.6346539364867954,
+                "maximum_width_change_pct": 1.2056689294545953
+              }
+            },
+            {
+              "time_since_entry_s": 0.001837499999999964,
+              "fwhm_pct": [
+                0.08782756297904815,
+                0.08814438570092786,
+                0.08814999748079089
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.04323479348540271,
+                0.04339548165532836,
+                0.04339904419703444
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00241341703970388,
+                0.002430925108432014,
+                0.0024310694677787126
+              ],
+              "adjusted_width_pct": 0.08722590634819838,
+              "adjusted_peak_pct": 0.002448721895853545,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.036782657515710415,
+                "minimum_width_change_pct": -0.6507416061362403,
+                "maximum_width_change_pct": 1.257574616579693
+              }
+            },
+            {
+              "time_since_entry_s": 0.0019395833333332954,
+              "fwhm_pct": [
+                0.1054369737069738,
+                0.1056862781487311,
+                0.10568814867260024
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05177309604673663,
+                0.051887803597905346,
+                0.0518895550180698
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0025328411387137706,
+                0.0025487583491745625,
+                0.002548862646722938
+              ],
+              "adjusted_width_pct": 0.10483531707612403,
+              "adjusted_peak_pct": 0.0025648841547321055,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.04865206606546879,
+                "minimum_width_change_pct": -0.6089699284373862,
+                "maximum_width_change_pct": 1.288300676953047
+              }
+            },
+            {
+              "time_since_entry_s": 0.0020416666666666266,
+              "fwhm_pct": [
+                0.12733102483359904,
+                0.12750995993200398,
+                0.12750684594291517
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.06252788759320005,
+                0.06260421433064156,
+                0.06260341403980796
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002735577644785714,
+                0.002748584991785208,
+                0.0027486320981484624
+              ],
+              "adjusted_width_pct": 0.12672314022457165,
+              "adjusted_peak_pct": 0.002761686551511211,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.051221999433548326,
+                "minimum_width_change_pct": -0.5626660675758122,
+                "maximum_width_change_pct": 1.2977268293512978
+              }
+            },
+            {
+              "time_since_entry_s": 0.0021437499999999578,
+              "fwhm_pct": [
+                0.1499767553566178,
+                0.1501056207409146,
+                0.15009846965283735
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0737245130155495,
+                0.07378476207957618,
+                0.07378179045685052
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00299401542971367,
+                0.0030031050664458547,
+                0.003003095310316617
+              ],
+              "adjusted_width_pct": 0.14936079654961354,
+              "adjusted_peak_pct": 0.0030121947031780394,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.09540066999383923,
+                "minimum_width_change_pct": -0.5464320270476719,
+                "maximum_width_change_pct": 1.286912973147336
+              }
+            },
+            {
+              "time_since_entry_s": 0.0022458333333332894,
+              "fwhm_pct": [
+                0.1704805872829951,
+                0.17056678487865629,
+                0.17055767456854998
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.08391126999520715,
+                0.08397355899429915,
+                0.08396938889219108
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00328436748922023,
+                0.003288564157322149,
+                0.003288500890685775
+              ],
+              "adjusted_width_pct": 0.1698607100319327,
+              "adjusted_peak_pct": 0.003292760825424068,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.12190023303149111,
+                "minimum_width_change_pct": -0.5640859659970521,
+                "maximum_width_change_pct": 1.2574315729028784
+              }
+            },
+            {
+              "time_since_entry_s": 0.0023479166666666206,
+              "fwhm_pct": [
+                0.18741549924616852,
+                0.187446386058987,
+                0.18743731312722556
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09231893713697037,
+                0.09239122109201414,
+                0.09238683847285767
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0035870774513169223,
+                0.003585278544160353,
+                0.0035851646176254803
+              ],
+              "adjusted_width_pct": 0.18679569675179586,
+              "adjusted_peak_pct": 0.0035870774513169223,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.11189355212116725,
+                "minimum_width_change_pct": -0.6032561700506589,
+                "maximum_width_change_pct": 1.2115643732311998
+              }
+            },
+            {
+              "time_since_entry_s": 0.002449999999999952,
+              "fwhm_pct": [
+                0.20082701010222248,
+                0.20078598548871618,
+                0.20077779846285893
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09897678222956507,
+                0.09906135907884472,
+                0.09905724507526248
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0038848758491694113,
+                0.0038757165988556608,
+                0.00387555490615199
+              ],
+              "adjusted_width_pct": 0.2001269301926456,
+              "adjusted_peak_pct": 0.0038848758491694113,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.0008940891120601258,
+                      -0.00034281704704874905
+                    ],
+                    "return_error": 0.0,
+                    "trace": 7.018336367933474,
+                    "determinant": 1.00000828148733
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.1415925174354706,
+                      -1.2847466424048548e-08
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": -1.2647200353935757,
+                    "determinant": 1.0000000208093924
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 6.982569669222392,
+                    "determinant": 0.9999868520608166
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2647200057867032,
+                    "determinant": 1.0000000210670614
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.1337725072887208,
+                "minimum_width_change_pct": -0.6506736481324937,
+                "maximum_width_change_pct": 1.151785179144671
+              }
+            }
+          ],
+          "windows": [
+            {
+              "first_s": 0.0010208333333333133,
+              "last_s": 0.002449999999999952,
+              "sampled_span_s": 0.001429166666666639,
+              "count": 15,
+              "min_adjusted_width_pct": 0.033161527672675994,
+              "max_adjusted_peak_pct": 0.0038848758491694113,
+              "reaches_last_sample": true
+            }
+          ]
+        }
+      }
+    },
+    "pulse_and_decay": {
+      "drive": {
+        "scale": 1.0,
+        "relative_m_s": null,
+        "rise_s": 0.00030625,
+        "fall_s": 0.00030625,
+        "coast_s": 0.0006125
+      },
+      "geometry": {
+        "sheet_speed_m_s": 0.0,
+        "midpoint_relative_toroidal_speed_m_s": 85.70024749158394,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.20996549931214226,
+        "transit_s": 0.002449999999999952,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.34877500000000006,
+          0.351225
+        ]
+      },
+      "active_s": 0.002449999999999952,
+      "sample_spacing_s": 0.00010208333333333133,
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 330,
+          "step_s": 9.280303030302849e-06
+        },
+        {
+          "mesh": [
+            80,
+            64,
+            64
+          ],
+          "steps": 330,
+          "step_s": 9.280303030302849e-06
+        },
+        {
+          "mesh": [
+            80,
+            64,
+            64
+          ],
+          "steps": 660,
+          "step_s": 4.6401515151514245e-06
+        }
+      ],
+      "diagnostics": {
+        "legacy_annulus": {
+          "frames": [
+            {
+              "time_since_entry_s": 0.0,
+              "fwhm_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "adjusted_width_pct": -0.0006016566308497673,
+              "adjusted_peak_pct": 0.0,
+              "passes_gate": false,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      4.440892098500626e-16,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.175751770269965,
+                    "determinant": 0.999983178779755
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.315091862574615,
+                    "determinant": 1.0000000180288762
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      4.440892098500626e-16,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.175751770269965,
+                    "determinant": 0.999983178779755
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.315091862574615,
+                    "determinant": 1.0000000180288762
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": 0.0,
+                "minimum_width_change_pct": 0.0,
+                "maximum_width_change_pct": 0.0
+              }
+            },
+            {
+              "time_since_entry_s": 0.00010208333333333133,
+              "fwhm_pct": [
+                -5.6240646684191375e-05,
+                -5.621370222641531e-05,
+                -5.707403800681021e-05
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -2.7744971298204746e-05,
+                -2.7738326568993443e-05,
+                -2.8161274212568088e-05
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                5.476140652049821e-07,
+                5.476206821342089e-07,
+                5.556308746434979e-07
+              ],
+              "adjusted_width_pct": -0.0006596179490947485,
+              "adjusted_peak_pct": 5.636476840820137e-07,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.836310548064546e-08,
+                "minimum_width_change_pct": -0.0007397917924922837,
+                "maximum_width_change_pct": 4.089853036237656e-05
+              }
+            },
+            {
+              "time_since_entry_s": 0.00020416666666666267,
+              "fwhm_pct": [
+                -0.0008974485754764672,
+                -0.0008963102386183586,
+                -0.0008990277103104738
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0003017239995295462,
+                -0.0003018194626447368,
+                -0.0003031714503998195
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                8.554514385750167e-06,
+                8.554611286015756e-06,
+                8.584100763542324e-06
+              ],
+              "adjusted_width_pct": -0.001504540149710465,
+              "adjusted_peak_pct": 8.61368714133448e-06,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -3.1954295320879567e-07,
+                "minimum_width_change_pct": -0.010775687071362672,
+                "maximum_width_change_pct": 0.0007637647068792219
+              }
+            },
+            {
+              "time_since_entry_s": 0.000306249999999994,
+              "fwhm_pct": [
+                -0.003368473973119901,
+                -0.003365435205859857,
+                -0.003369902533634228
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                -0.0005747260523603082,
+                -0.0005743430699922669,
+                -0.000575624902532379
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                3.9780891381013816e-05,
+                3.977967693025164e-05,
+                3.983021135134379e-05
+              ],
+              "adjusted_width_pct": -0.003979065259518411,
+              "adjusted_peak_pct": 3.988196022319812e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.4454100361049882e-06,
+                "minimum_width_change_pct": -0.04435630201322649,
+                "maximum_width_change_pct": 0.0037257555110636886
+              }
+            },
+            {
+              "time_since_entry_s": 0.00040833333333332533,
+              "fwhm_pct": [
+                -0.004157357561040964,
+                -0.004146290924189611,
+                -0.0041493591713903655
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                -0.002031620238140963,
+                -0.002025997220611586,
+                -0.002027487009415019
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.00010926498126284656,
+                0.00010924443678561602,
+                0.00010930963039168518
+              ],
+              "adjusted_width_pct": -0.004765150686292241,
+              "adjusted_peak_pct": 0.00010939536847498488,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -2.382996983074648e-06,
+                "minimum_width_change_pct": -0.07953210019018275,
+                "maximum_width_change_pct": 0.010890484635384112
+              }
+            },
+            {
+              "time_since_entry_s": 0.0005104166666666566,
+              "fwhm_pct": [
+                0.001606880392834853,
+                0.0016338391069403713,
+                0.001634024478813778
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.0009132861659377767,
+                0.0009294076432908582,
+                0.0009295135305675828
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.00022872503271376132,
+                0.0002285968131454652,
+                0.0002286812817109407
+              ],
+              "adjusted_width_pct": 0.0010052237619850857,
+              "adjusted_peak_pct": 0.00022889396984471233,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 1,
+                "median_width_change_pct": -2.6498330973900863e-06,
+                "minimum_width_change_pct": -0.009948696153150305,
+                "maximum_width_change_pct": 0.021087887619675172
+              }
+            },
+            {
+              "time_since_entry_s": 0.000612499999999988,
+              "fwhm_pct": [
+                0.002726318741519407,
+                0.0027591683628092056,
+                0.002759458545908977
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.001581723426991033,
+                0.0016009875996259026,
+                0.001601109061133421
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.0004124483211187524,
+                0.00041195244426806,
+                0.0004120471863711117
+              ],
+              "adjusted_width_pct": 0.0021246621106696395,
+              "adjusted_peak_pct": 0.00041263780532485583,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 2,
+                "median_width_change_pct": -1.8792830847047526e-06,
+                "minimum_width_change_pct": -0.008797184293973803,
+                "maximum_width_change_pct": 0.030606673409572238
+              }
+            },
+            {
+              "time_since_entry_s": 0.0007145833333333194,
+              "fwhm_pct": [
+                0.02650057119555349,
+                0.026439460912230928,
+                0.02643827332569071
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.013598609137854822,
+                0.013566097977002478,
+                0.013565403475435112
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0006691624763410786,
+                0.00066784721715063,
+                0.0006679069199488907
+              ],
+              "adjusted_width_pct": 0.02577431882497816,
+              "adjusted_peak_pct": 0.0006692818819376001,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": 5.120311252770904e-06,
+                "minimum_width_change_pct": -0.009128248480538836,
+                "maximum_width_change_pct": 0.48251155025582637
+              }
+            },
+            {
+              "time_since_entry_s": 0.0008166666666666507,
+              "fwhm_pct": [
+                0.036830922285013834,
+                0.03675829973499578,
+                0.036756634897172624
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.018823882926244373,
+                0.018788581190642972,
+                0.01878760537252777
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0009802350300347484,
+                0.0009778394217008213,
+                0.000977780550748264
+              ],
+              "adjusted_width_pct": 0.03608069087848165,
+              "adjusted_peak_pct": 0.0009802350300347484,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 6,
+                "median_width_change_pct": 1.7365624938037172e-05,
+                "minimum_width_change_pct": -0.028296591459575637,
+                "maximum_width_change_pct": 0.5645824707214864
+              }
+            },
+            {
+              "time_since_entry_s": 0.000918749999999982,
+              "fwhm_pct": [
+                0.05689415257053021,
+                0.05673082480621705,
+                0.05672694586393856
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.028916931994693584,
+                0.02883397595550008,
+                0.028831809409624043
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.0012802174518489196,
+                0.0012774800605797054,
+                0.0012772302327102025
+              ],
+              "adjusted_width_pct": 0.055958082526497144,
+              "adjusted_peak_pct": 0.0012802174518489196,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 8,
+                "median_width_change_pct": 7.743258678694076e-06,
+                "minimum_width_change_pct": -0.04064454483176938,
+                "maximum_width_change_pct": 0.6059200070168691
+              }
+            },
+            {
+              "time_since_entry_s": 0.0010208333333333133,
+              "fwhm_pct": [
+                0.07249507578357406,
+                0.07240165547803823,
+                0.07239697905299103
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.03661660520453136,
+                0.03659092165193556,
+                0.03658837541982152
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.001470025318806023,
+                0.0014687245811551009,
+                0.001468291659945109
+              ],
+              "adjusted_width_pct": 0.07169722569155823,
+              "adjusted_peak_pct": 0.001470025318806023,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 11,
+                "median_width_change_pct": 0.0007805404315996967,
+                "minimum_width_change_pct": -0.02991002031145218,
+                "maximum_width_change_pct": 0.695803620854174
+              }
+            },
+            {
+              "time_since_entry_s": 0.0011229166666666447,
+              "fwhm_pct": [
+                0.07904485730219069,
+                0.07899871207881493,
+                0.07899071810022473
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03991424559353085,
+                0.03992300622503997,
+                0.03991867438111196
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0015375169184039805,
+                0.0015277719793260758,
+                0.001527750077379153
+              ],
+              "adjusted_width_pct": 0.07833492226740901,
+              "adjusted_peak_pct": 0.0015375169184039805,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 12,
+                "median_width_change_pct": 0.0034095259240585207,
+                "minimum_width_change_pct": -0.2675456342115967,
+                "maximum_width_change_pct": 0.8159216074398179
+              }
+            },
+            {
+              "time_since_entry_s": 0.001224999999999976,
+              "fwhm_pct": [
+                0.09206255665623608,
+                0.09209721216345557,
+                0.09208863063505657
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0462722545323091,
+                0.04634069301687749,
+                0.046336108899502904
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.001931838569424471,
+                0.0019190964228865681,
+                0.0019189574247180374
+              ],
+              "adjusted_width_pct": 0.09144373696858832,
+              "adjusted_peak_pct": 0.001931838569424471,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00017489096284251104,
+                      0.004262143156213316
+                    ],
+                    "return_error": 6.280369834735101e-16,
+                    "trace": 7.172726936281125,
+                    "determinant": 0.9998129861292171
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.141592595711403,
+                      -1.922180636881876e-09
+                    ],
+                    "return_error": 2.220446049250313e-16,
+                    "trace": -1.288504171540807,
+                    "determinant": 1.0000000200381296
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.077462904569674,
+                    "determinant": 0.9999846002918167
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2885041976038476,
+                    "determinant": 1.000000019688969
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 15,
+                "median_width_change_pct": 0.003008320839648082,
+                "minimum_width_change_pct": -0.19146358727912816,
+                "maximum_width_change_pct": 0.9194761281710262
+              }
+            },
+            {
+              "time_since_entry_s": 0.0013270833333333075,
+              "fwhm_pct": [
+                0.10009489642719416,
+                0.10020004799573545,
+                0.10019130459240078
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05011902994747075,
+                0.05023038556506432,
+                0.050225800896086525
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0022305610892781047,
+                0.0022203878894178075,
+                0.0022201574142677316
+              ],
+              "adjusted_width_pct": 0.09947575298967504,
+              "adjusted_peak_pct": 0.0022305610892781047,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.004871954045337912,
+                "minimum_width_change_pct": -0.13714518139218423,
+                "maximum_width_change_pct": 1.0059349092601977
+              }
+            },
+            {
+              "time_since_entry_s": 0.0014291666666666387,
+              "fwhm_pct": [
+                0.12153849951459517,
+                0.12171532787486061,
+                0.12170977816976514
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.06068651849508999,
+                0.060834961396438736,
+                0.06083205817726256
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.00236230435162188,
+                0.002359644611082956,
+                0.0023594250508907066
+              ],
+              "adjusted_width_pct": 0.12092574347355445,
+              "adjusted_peak_pct": 0.00236230435162188,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.012399398005902285,
+                "minimum_width_change_pct": -0.09218640600556771,
+                "maximum_width_change_pct": 1.0740784132983183
+              }
+            },
+            {
+              "time_since_entry_s": 0.0015312499999999701,
+              "fwhm_pct": [
+                0.12864252746398464,
+                0.12888715243319915,
+                0.1288818308881723
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.06406000933349976,
+                0.06422969878532303,
+                0.06422703119721707
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.002328462209688631,
+                0.0023347772265758238,
+                0.0023346806242940943
+              ],
+              "adjusted_width_pct": 0.12803022774308115,
+              "adjusted_peak_pct": 0.0023410922434630166,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.02425947682592744,
+                "minimum_width_change_pct": -0.12496106921402461,
+                "maximum_width_change_pct": 1.1227523228403147
+              }
+            },
+            {
+              "time_since_entry_s": 0.0016333333333333013,
+              "fwhm_pct": [
+                0.1558396854648869,
+                0.15615771015984325,
+                0.1561542895762713
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.0775316417124694,
+                0.07772649775199536,
+                0.0777249461747509
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.002209371989780884,
+                0.0022226839861527736,
+                0.0022227441449196306
+              ],
+              "adjusted_width_pct": 0.15523118766689326,
+              "adjusted_peak_pct": 0.0022361163000583772,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.04426207724786968,
+                "minimum_width_change_pct": -0.05977472233745784,
+                "maximum_width_change_pct": 1.151101928987841
+              }
+            },
+            {
+              "time_since_entry_s": 0.0017354166666666327,
+              "fwhm_pct": [
+                0.16642859439461866,
+                0.16676892612894623,
+                0.16676590038855466
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.08268421765726952,
+                0.08287519150014244,
+                0.08287395161488131
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.002110471822613924,
+                0.0021273001020505333,
+                0.0021274602926224517
+              ],
+              "adjusted_width_pct": 0.16582088628298575,
+              "adjusted_peak_pct": 0.0021444487626309794,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.0630901112729898,
+                "minimum_width_change_pct": -0.10912121720572099,
+                "maximum_width_change_pct": 1.1592611929104102
+              }
+            },
+            {
+              "time_since_entry_s": 0.001837499999999964,
+              "fwhm_pct": [
+                0.19984483012791543,
+                0.20015389317191712,
+                0.20015192838294116
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.09931197464123631,
+                0.09948150004859269,
+                0.09948093253551171
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.002100367527968494,
+                0.002117616367880437,
+                0.002117792509537253
+              ],
+              "adjusted_width_pct": 0.19923924391911374,
+              "adjusted_peak_pct": 0.0021352174911060118,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.09345287024677962,
+                "minimum_width_change_pct": -0.04483096171870038,
+                "maximum_width_change_pct": 1.1483857133533615
+              }
+            },
+            {
+              "time_since_entry_s": 0.0019395833333332954,
+              "fwhm_pct": [
+                0.21456037665397165,
+                0.21475800086316887,
+                0.21475632334959638
+              ],
+              "fwhm_stations": 30,
+              "integral_width_pct": [
+                0.10664718094686165,
+                0.10676004042970977,
+                0.10675959253474421
+              ],
+              "integral_width_stations": 30,
+              "peak_current_pct": [
+                0.002192621636121217,
+                0.002208198852615695,
+                0.0022083366547631655
+              ],
+              "adjusted_width_pct": 0.2139553649959769,
+              "adjusted_peak_pct": 0.002224051673405114,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.11632864356987405,
+                "minimum_width_change_pct": -0.04878537952892614,
+                "maximum_width_change_pct": 1.1200325673502487
+              }
+            },
+            {
+              "time_since_entry_s": 0.0020416666666666266,
+              "fwhm_pct": [
+                0.19666551437524937,
+                0.19678868194545895,
+                0.19678380411425334
+              ],
+              "fwhm_stations": 32,
+              "integral_width_pct": [
+                0.09746615095755917,
+                0.09753302812023357,
+                0.09753085137618189
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0023672266924679164,
+                0.0023797418435833606,
+                0.0023798238136585326
+              ],
+              "adjusted_width_pct": 0.19605410208198837,
+              "adjusted_peak_pct": 0.0023924209348491488,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.1428666356531827,
+                "minimum_width_change_pct": -0.5625606200210465,
+                "maximum_width_change_pct": 1.0762095234544633
+              }
+            },
+            {
+              "time_since_entry_s": 0.0021437499999999578,
+              "fwhm_pct": [
+                0.188505746812484,
+                0.18858360124753837,
+                0.18857720831431113
+              ],
+              "fwhm_stations": 34,
+              "integral_width_pct": [
+                0.10461732809403657,
+                0.10466728630362798,
+                0.10466533026287639
+              ],
+              "integral_width_stations": 32,
+              "peak_current_pct": [
+                0.0025966310901681666,
+                0.002604937380357164,
+                0.0026049633011338003
+              ],
+              "adjusted_width_pct": 0.18789130431517975,
+              "adjusted_peak_pct": 0.002613295512099434,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.15717973215725323,
+                "minimum_width_change_pct": -0.5463067158988699,
+                "maximum_width_change_pct": 1.0197123009458409
+              }
+            },
+            {
+              "time_since_entry_s": 0.0022458333333332894,
+              "fwhm_pct": [
+                0.1870623472856714,
+                0.18710034211635307,
+                0.18709538499495082
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.10030541232535217,
+                0.10035883130239398,
+                0.10035657603642001
+              ],
+              "integral_width_stations": 34,
+              "peak_current_pct": [
+                0.0028562780071128557,
+                0.0028591710022896066,
+                0.0028591328759874912
+              ],
+              "adjusted_width_pct": 0.18645077641201713,
+              "adjusted_peak_pct": 0.0028620639974663575,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.1590263655155688,
+                "minimum_width_change_pct": -0.563367940112458,
+                "maximum_width_change_pct": 0.9533505869917747
+              }
+            },
+            {
+              "time_since_entry_s": 0.0023479166666666206,
+              "fwhm_pct": [
+                0.20227953646450025,
+                0.20228327223459353,
+                0.20228001272100116
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09996396125078189,
+                0.1000184229974499,
+                0.10001688809111453
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0031186701346275214,
+                0.00311471607363778,
+                0.0031146109419566415
+              ],
+              "adjusted_width_pct": 0.20167136080646575,
+              "adjusted_peak_pct": 0.0031186701346275214,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.16658448192644615,
+                "minimum_width_change_pct": -0.5971705347301182,
+                "maximum_width_change_pct": 0.9294178972204747
+              }
+            },
+            {
+              "time_since_entry_s": 0.002449999999999952,
+              "fwhm_pct": [
+                0.21560435203602513,
+                0.21556722849573884,
+                0.21556475779858086
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.10671340560879372,
+                0.10677701976202769,
+                0.10677591871954828
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003355891360690144,
+                0.0033433104021707294,
+                0.0033431519178561686
+              ],
+              "adjusted_width_pct": 0.21492350693028683,
+              "adjusted_peak_pct": 0.003355891360690144,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00024663570776617405,
+                      -8.807386921239058e-05
+                    ],
+                    "return_error": 0.0,
+                    "trace": 6.9827668879665055,
+                    "determinant": 1.0000076942682716
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.141592553603502,
+                      -8.936447359886301e-09
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.264719987361997,
+                    "determinant": 1.0000000170005519
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 6.982569669222392,
+                    "determinant": 0.9999868520608166
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2647200057867032,
+                    "determinant": 1.0000000210670614
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.1545977184084779,
+                "minimum_width_change_pct": -0.6330205045560033,
+                "maximum_width_change_pct": 0.9985631371459691
+              }
+            },
+            {
+              "time_since_entry_s": 0.0025520833333332834,
+              "fwhm_pct": [
+                0.2277903589378738,
+                0.22772609175512049,
+                0.22772340842656114
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1128958601354979,
+                0.11297272549535275,
+                0.112971615882973
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003549739319841372,
+                0.003526325143066167,
+                0.003526123205488396
+              ],
+              "adjusted_width_pct": 0.2270548012843987,
+              "adjusted_peak_pct": 0.003549739319841372,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.17154063951405618,
+                "minimum_width_change_pct": -0.6664290526591343,
+                "maximum_width_change_pct": 1.0884898759692563
+              }
+            },
+            {
+              "time_since_entry_s": 0.002654166666666615,
+              "fwhm_pct": [
+                0.2388924594438846,
+                0.23881657355040442,
+                0.23881375414873673
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.11851060897480892,
+                0.11860352886907677,
+                0.11860248038169097
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0036889847566001777,
+                0.003652082506788723,
+                0.0036518375366112465
+              ],
+              "adjusted_width_pct": 0.2381333922227391,
+              "adjusted_peak_pct": 0.0036889847566001777,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.20348698286594136,
+                "minimum_width_change_pct": -0.6967192735950034,
+                "maximum_width_change_pct": 1.1739079316647638
+              }
+            },
+            {
+              "time_since_entry_s": 0.0027562499999999462,
+              "fwhm_pct": [
+                0.24884038381971507,
+                0.24876745567017355,
+                0.24876466412944165
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12357099963948848,
+                0.12368319376576675,
+                0.1236822690409145
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003763170840276331,
+                0.0037097518212680924,
+                0.0037094643609680844
+              ],
+              "adjusted_width_pct": 0.24808728780831846,
+              "adjusted_peak_pct": 0.003763170840276331,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.2357908403047171,
+                "minimum_width_change_pct": -0.7230275777310502,
+                "maximum_width_change_pct": 1.2524937350388177
+              }
+            },
+            {
+              "time_since_entry_s": 0.0028583333333332774,
+              "fwhm_pct": [
+                0.2575260253132816,
+                0.2574727899622875,
+                0.25747020269522025
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12809581515915713,
+                0.12823219993782775,
+                0.1282314473387114
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0037619194148685864,
+                0.003688779592359026,
+                0.0036884505267620327
+              ],
+              "adjusted_width_pct": 0.2568127234463091,
+              "adjusted_peak_pct": 0.0037619194148685864,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.26677324623672893,
+                "minimum_width_change_pct": -0.744517197972272,
+                "maximum_width_change_pct": 1.3213323430732782
+              }
+            },
+            {
+              "time_since_entry_s": 0.0029604166666666086,
+              "fwhm_pct": [
+                0.26499079785042845,
+                0.2649743309975694,
+                0.2649721647773884
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13209148300878937,
+                0.13225814251833778,
+                0.1322575840488449
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003674823490973367,
+                0.0035789027466925916,
+                0.003578533421499941
+              ],
+              "adjusted_width_pct": 0.26435187507349855,
+              "adjusted_peak_pct": 0.003674823490973367,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.2962823828698391,
+                "minimum_width_change_pct": -0.7609170805235266,
+                "maximum_width_change_pct": 1.377352180358149
+              }
+            },
+            {
+              "time_since_entry_s": 0.0030624999999999403,
+              "fwhm_pct": [
+                0.2711742481986912,
+                0.2712081875913208,
+                0.271206600096785
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1355310650317465,
+                0.13573234550783297,
+                0.13573197492167122
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0034913966274308095,
+                0.0033701733323399097,
+                0.0033697654893138917
+              ],
+              "adjusted_width_pct": 0.27056941657876976,
+              "adjusted_peak_pct": 0.0034913966274308095,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00021236650977751736,
+                      -0.0001011690329533188
+                    ],
+                    "return_error": 0.0,
+                    "trace": 6.936165549350724,
+                    "determinant": 1.0000103340542816
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.1415925718676005,
+                      -1.189926046585299e-08
+                    ],
+                    "return_error": 2.220446049250313e-16,
+                    "trace": -1.254436430014107,
+                    "determinant": 1.0000000154109945
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 6.935945478443671,
+                    "determinant": 0.9999882984780254
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2544364815323412,
+                    "determinant": 1.000000021798976
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.3236111844944878,
+                "minimum_width_change_pct": -0.7716837933339438,
+                "maximum_width_change_pct": 1.4190897727357932
+              }
+            }
+          ],
+          "windows": [
+            {
+              "first_s": 0.0011229166666666447,
+              "last_s": 0.0013270833333333075,
+              "sampled_span_s": 0.00020416666666666283,
+              "count": 3,
+              "min_adjusted_width_pct": 0.07833492226740901,
+              "max_adjusted_peak_pct": 0.0022305610892781047,
+              "reaches_last_sample": false
+            },
+            {
+              "first_s": 0.0022458333333332894,
+              "last_s": 0.0030624999999999403,
+              "sampled_span_s": 0.0008166666666666509,
+              "count": 9,
+              "min_adjusted_width_pct": 0.18645077641201713,
+              "max_adjusted_peak_pct": 0.003763170840276331,
+              "reaches_last_sample": true
+            }
+          ]
+        },
+        "unmasked_disk": {
+          "frames": [
+            {
+              "time_since_entry_s": 0.0,
+              "fwhm_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "adjusted_width_pct": -0.0006016566308497673,
+              "adjusted_peak_pct": 0.0,
+              "passes_gate": false,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      4.440892098500626e-16,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.175751770269965,
+                    "determinant": 0.999983178779755
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.315091862574615,
+                    "determinant": 1.0000000180288762
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      4.440892098500626e-16,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.175751770269965,
+                    "determinant": 0.999983178779755
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.315091862574615,
+                    "determinant": 1.0000000180288762
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": 0.0,
+                "minimum_width_change_pct": 0.0,
+                "maximum_width_change_pct": 0.0
+              }
+            },
+            {
+              "time_since_entry_s": 0.00010208333333333133,
+              "fwhm_pct": [
+                -5.6240646684191375e-05,
+                -5.621370222641531e-05,
+                -5.707403800681021e-05
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -2.7744971298204746e-05,
+                -2.7738326568993443e-05,
+                -2.8161274212568088e-05
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                5.476140652049821e-07,
+                5.476206821342089e-07,
+                5.556308746434979e-07
+              ],
+              "adjusted_width_pct": -0.0006596179490947485,
+              "adjusted_peak_pct": 5.636476840820137e-07,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.836310548064546e-08,
+                "minimum_width_change_pct": -0.0007397917924922837,
+                "maximum_width_change_pct": 4.089853036237656e-05
+              }
+            },
+            {
+              "time_since_entry_s": 0.00020416666666666267,
+              "fwhm_pct": [
+                -0.0008974485754764672,
+                -0.0008963102386183586,
+                -0.0008990277103104738
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.00044196446375988074,
+                -0.00044148179605407734,
+                -0.0004428090900288062
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                8.554514385750167e-06,
+                8.554611286015756e-06,
+                8.584100763542324e-06
+              ],
+              "adjusted_width_pct": -0.001504540149710465,
+              "adjusted_peak_pct": 8.61368714133448e-06,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -3.1954295320879567e-07,
+                "minimum_width_change_pct": -0.010775687071362672,
+                "maximum_width_change_pct": 0.0007637647068792219
+              }
+            },
+            {
+              "time_since_entry_s": 0.000306249999999994,
+              "fwhm_pct": [
+                -0.0037495826941014165,
+                -0.003742445717636045,
+                -0.003744411000050629
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0018370586509330877,
+                -0.0018339534739397756,
+                -0.0018348745999596794
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                3.9780891381013816e-05,
+                3.977967693025164e-05,
+                3.983021135134379e-05
+              ],
+              "adjusted_width_pct": -0.004355169889780353,
+              "adjusted_peak_pct": 3.988196022319812e-05,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 0,
+                "median_width_change_pct": -1.4454100361049882e-06,
+                "minimum_width_change_pct": -0.04435630201322649,
+                "maximum_width_change_pct": 0.017772853886444118
+              }
+            },
+            {
+              "time_since_entry_s": 0.00040833333333332533,
+              "fwhm_pct": [
+                -0.007989915473327613,
+                -0.007976914921259404,
+                -0.00797487594181856
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.0039015173483925025,
+                -0.0038970020924011806,
+                -0.0038959030550178575
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00010926498126284656,
+                0.00010924443678561602,
+                0.00010930963039168518
+              ],
+              "adjusted_width_pct": -0.00859157210417738,
+              "adjusted_peak_pct": 0.00010939536847498488,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 1,
+                "median_width_change_pct": -3.0517396221174664e-06,
+                "minimum_width_change_pct": -0.12177671607009888,
+                "maximum_width_change_pct": 0.08770048928321561
+              }
+            },
+            {
+              "time_since_entry_s": 0.0005104166666666566,
+              "fwhm_pct": [
+                -0.01071453854224469,
+                -0.010713650742866232,
+                -0.010706741507748863
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.005197310758608964,
+                -0.005202655882197149,
+                -0.005199080435092096
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00022872503271376132,
+                0.0002285968131454652,
+                0.0002286812817109407
+              ],
+              "adjusted_width_pct": -0.011316195173094457,
+              "adjusted_peak_pct": 0.00022889396984471233,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 2,
+                "median_width_change_pct": -5.0568919607307805e-06,
+                "minimum_width_change_pct": -0.2152156575308095,
+                "maximum_width_change_pct": 0.21194852502735007
+              }
+            },
+            {
+              "time_since_entry_s": 0.000612499999999988,
+              "fwhm_pct": [
+                -0.008331464998057037,
+                -0.008378133560948964,
+                -0.008367879875881279
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                -0.003927646686363584,
+                -0.003963444925048076,
+                -0.003958145327431772
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0004124483211187524,
+                0.00041195244426806,
+                0.0004120471863711117
+              ],
+              "adjusted_width_pct": -0.009026458754690658,
+              "adjusted_peak_pct": 0.00041263780532485583,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 4,
+                "median_width_change_pct": -1.8792830847047526e-06,
+                "minimum_width_change_pct": -0.3326739093677089,
+                "maximum_width_change_pct": 0.357375297362017
+              }
+            },
+            {
+              "time_since_entry_s": 0.0007145833333333194,
+              "fwhm_pct": [
+                0.0016499196410446615,
+                0.0015235952678605003,
+                0.001533322665125958
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0011743179523238112,
+                0.0010903991099153743,
+                0.0010954185287515017
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0006691624763410786,
+                0.00066784721715063,
+                0.0006679069199488907
+              ],
+              "adjusted_width_pct": 0.0007956142638265717,
+              "adjusted_peak_pct": 0.0006692818819376001,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 5,
+                "median_width_change_pct": 3.1021691326849066e-07,
+                "minimum_width_change_pct": -0.45774195810758256,
+                "maximum_width_change_pct": 0.48251155025582637
+              }
+            },
+            {
+              "time_since_entry_s": 0.0008166666666666507,
+              "fwhm_pct": [
+                0.01892727860870469,
+                0.018732868560866756,
+                0.018737874486651762
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.009957302168062121,
+                0.009836671849972056,
+                0.009839158181801366
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0009802350300347484,
+                0.0009778394217008213,
+                0.000977780550748264
+              ],
+              "adjusted_width_pct": 0.017936801882179054,
+              "adjusted_peak_pct": 0.0009802350300347484,
+              "passes_gate": false,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 7,
+                "median_width_change_pct": -4.706484146854706e-07,
+                "minimum_width_change_pct": -0.5062365289232096,
+                "maximum_width_change_pct": 0.5645824707214864
+              }
+            },
+            {
+              "time_since_entry_s": 0.000918749999999982,
+              "fwhm_pct": [
+                0.04027254788365742,
+                0.040076297416535844,
+                0.04007493730866507
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.020691773971970306,
+                0.020579403507614558,
+                0.02057851401127131
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0012802174518489196,
+                0.0012774800605797054,
+                0.0012772302327102025
+              ],
+              "adjusted_width_pct": 0.03927567010282296,
+              "adjusted_peak_pct": 0.0012802174518489196,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 8,
+                "median_width_change_pct": -3.4796134806835965e-06,
+                "minimum_width_change_pct": -0.46353244116786874,
+                "maximum_width_change_pct": 0.6059200070168691
+              }
+            },
+            {
+              "time_since_entry_s": 0.0010208333333333133,
+              "fwhm_pct": [
+                0.06134483945405833,
+                0.06121080720311589,
+                0.06120479074671614
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.031180353543658335,
+                0.03112052813631916,
+                0.031117201562191887
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.001470025318806023,
+                0.0014687245811551009,
+                0.001468291659945109
+              ],
+              "adjusted_width_pct": 0.060463085408524186,
+              "adjusted_peak_pct": 0.001470025318806023,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 12,
+                "median_width_change_pct": 0.0007805404315996967,
+                "minimum_width_change_pct": -0.36707832475701974,
+                "maximum_width_change_pct": 0.695803620854174
+              }
+            },
+            {
+              "time_since_entry_s": 0.0011229166666666447,
+              "fwhm_pct": [
+                0.07904485730219069,
+                0.07899871207881493,
+                0.07899071810022473
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.03991424559353085,
+                0.03992300622503997,
+                0.03991867438111196
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0015375169184039805,
+                0.0015277719793260758,
+                0.001527750077379153
+              ],
+              "adjusted_width_pct": 0.07833492226740901,
+              "adjusted_peak_pct": 0.0015375169184039805,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 12,
+                "median_width_change_pct": 0.0034095259240585207,
+                "minimum_width_change_pct": -0.2675456342115967,
+                "maximum_width_change_pct": 0.8159216074398179
+              }
+            },
+            {
+              "time_since_entry_s": 0.001224999999999976,
+              "fwhm_pct": [
+                0.09206255665623608,
+                0.09209721216345557,
+                0.09208863063505657
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0462722545323091,
+                0.04634069301687749,
+                0.046336108899502904
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.001931838569424471,
+                0.0019190964228865681,
+                0.0019189574247180374
+              ],
+              "adjusted_width_pct": 0.09144373696858832,
+              "adjusted_peak_pct": 0.001931838569424471,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00017489096284251104,
+                      0.004262143156213316
+                    ],
+                    "return_error": 6.280369834735101e-16,
+                    "trace": 7.172726936281125,
+                    "determinant": 0.9998129861292171
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.141592595711403,
+                      -1.922180636881876e-09
+                    ],
+                    "return_error": 2.220446049250313e-16,
+                    "trace": -1.288504171540807,
+                    "determinant": 1.0000000200381296
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 7.077462904569674,
+                    "determinant": 0.9999846002918167
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2885041976038476,
+                    "determinant": 1.000000019688969
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 15,
+                "median_width_change_pct": 0.003008320839648082,
+                "minimum_width_change_pct": -0.19146358727912816,
+                "maximum_width_change_pct": 0.9194761281710262
+              }
+            },
+            {
+              "time_since_entry_s": 0.0013270833333333075,
+              "fwhm_pct": [
+                0.10009489642719416,
+                0.10020004799573545,
+                0.10019130459240078
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05011902994747075,
+                0.05023038556506432,
+                0.050225800896086525
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0022305610892781047,
+                0.0022203878894178075,
+                0.0022201574142677316
+              ],
+              "adjusted_width_pct": 0.09947575298967504,
+              "adjusted_peak_pct": 0.0022305610892781047,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.004871954045337912,
+                "minimum_width_change_pct": -0.13714518139218423,
+                "maximum_width_change_pct": 1.0059349092601977
+              }
+            },
+            {
+              "time_since_entry_s": 0.0014291666666666387,
+              "fwhm_pct": [
+                0.10327650876280625,
+                0.10344946151819023,
+                0.10344201278895682
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05150155729971573,
+                0.051642564183618234,
+                0.05163872900073585
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.00236230435162188,
+                0.002359644611082956,
+                0.0023594250508907066
+              ],
+              "adjusted_width_pct": 0.10265995467348965,
+              "adjusted_peak_pct": 0.00236230435162188,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 16,
+                "median_width_change_pct": 0.009529287320286794,
+                "minimum_width_change_pct": -0.2113313942170958,
+                "maximum_width_change_pct": 1.0740784132983183
+              }
+            },
+            {
+              "time_since_entry_s": 0.0015312499999999701,
+              "fwhm_pct": [
+                0.10280436454290776,
+                0.1030487668216784,
+                0.10304538596206392
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.0509924981490828,
+                0.05115598908702612,
+                0.0511543894232247
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002328462209688631,
+                0.0023347772265758238,
+                0.0023346806242940943
+              ],
+              "adjusted_width_pct": 0.10219594619282901,
+              "adjusted_peak_pct": 0.0023410922434630166,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 19,
+                "median_width_change_pct": 0.0224332944440353,
+                "minimum_width_change_pct": -0.3714425107581354,
+                "maximum_width_change_pct": 1.1227523228403147
+              }
+            },
+            {
+              "time_since_entry_s": 0.0016333333333333013,
+              "fwhm_pct": [
+                0.10170927192831858,
+                0.10201718512261593,
+                0.10201972548897764
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05013355001084463,
+                0.05031200136962344,
+                0.0503136500279
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002209371989780884,
+                0.0022226839861527736,
+                0.0022227441449196306
+              ],
+              "adjusted_width_pct": 0.10110761529746881,
+              "adjusted_peak_pct": 0.0022361163000583772,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.02948939329450173,
+                "minimum_width_change_pct": -0.5326695357563693,
+                "maximum_width_change_pct": 1.151101928987841
+              }
+            },
+            {
+              "time_since_entry_s": 0.0017354166666666327,
+              "fwhm_pct": [
+                0.10417105798750104,
+                0.10450228279501594,
+                0.10450935691290741
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05107535584265577,
+                0.05124953934849685,
+                0.05125367384224422
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002110471822613924,
+                0.0021273001020505333,
+                0.0021274602926224517
+              ],
+              "adjusted_width_pct": 0.10356940135665127,
+              "adjusted_peak_pct": 0.0021444487626309794,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 20,
+                "median_width_change_pct": 0.04223180273227323,
+                "minimum_width_change_pct": -0.6345955996387209,
+                "maximum_width_change_pct": 1.1592611929104102
+              }
+            },
+            {
+              "time_since_entry_s": 0.001837499999999964,
+              "fwhm_pct": [
+                0.11316639143525986,
+                0.11345201919430448,
+                0.11345964629310146
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.05537602417216014,
+                0.05551504441383415,
+                0.05551949658930688
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002100367527968494,
+                0.002117616367880437,
+                0.002117792509537253
+              ],
+              "adjusted_width_pct": 0.1125647348044101,
+              "adjusted_peak_pct": 0.0021352174911060118,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.0532785811174219,
+                "minimum_width_change_pct": -0.6506695385376404,
+                "maximum_width_change_pct": 1.1483857133533615
+              }
+            },
+            {
+              "time_since_entry_s": 0.0019395833333332954,
+              "fwhm_pct": [
+                0.1288202818297668,
+                0.12901582300524073,
+                0.12902033481783093
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.06308311101523856,
+                0.06317068486529909,
+                0.0631734661050487
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.002192621636121217,
+                0.002208198852615695,
+                0.0022083366547631655
+              ],
+              "adjusted_width_pct": 0.12821862519891702,
+              "adjusted_peak_pct": 0.002224051673405114,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.06362841907811001,
+                "minimum_width_change_pct": -0.6088823236473195,
+                "maximum_width_change_pct": 1.1200325673502487
+              }
+            },
+            {
+              "time_since_entry_s": 0.0020416666666666266,
+              "fwhm_pct": [
+                0.14856482159004702,
+                0.14867733474135392,
+                0.14867723046219083
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.07292731492709592,
+                0.07297614794528062,
+                0.07297647149131503
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0023672266924679164,
+                0.0023797418435833606,
+                0.0023798238136585326
+              ],
+              "adjusted_width_pct": 0.1479629564008711,
+              "adjusted_peak_pct": 0.0023924209348491488,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 21,
+                "median_width_change_pct": 0.0737720880200965,
+                "minimum_width_change_pct": -0.5625606200210465,
+                "maximum_width_change_pct": 1.0762095234544633
+              }
+            },
+            {
+              "time_since_entry_s": 0.0021437499999999578,
+              "fwhm_pct": [
+                0.16891754860450803,
+                0.1689826329030808,
+                0.16897864757001724
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.08314733047714018,
+                0.08318462681313754,
+                0.08318286829511745
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0025966310901681666,
+                0.002604937380357164,
+                0.0026049633011338003
+              ],
+              "adjusted_width_pct": 0.16830792130753114,
+              "adjusted_peak_pct": 0.002613295512099434,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.12531588087776324,
+                "minimum_width_change_pct": -0.5463067158988699,
+                "maximum_width_change_pct": 1.0197123009458409
+              }
+            },
+            {
+              "time_since_entry_s": 0.0022458333333332894,
+              "fwhm_pct": [
+                0.1870623472856714,
+                0.18710034211635307,
+                0.18709538499495082
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09229337368970025,
+                0.09233830338819526,
+                0.09233594808291112
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0028562780071128557,
+                0.0028591710022896066,
+                0.0028591328759874912
+              ],
+              "adjusted_width_pct": 0.18645077641201713,
+              "adjusted_peak_pct": 0.0028620639974663575,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 24,
+                "median_width_change_pct": 0.1590263655155688,
+                "minimum_width_change_pct": -0.563367940112458,
+                "maximum_width_change_pct": 0.9533505869917747
+              }
+            },
+            {
+              "time_since_entry_s": 0.0023479166666666206,
+              "fwhm_pct": [
+                0.20227953646450025,
+                0.20228327223459353,
+                0.20228001272100116
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.09996396125078189,
+                0.1000184229974499,
+                0.10001688809111453
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0031186701346275214,
+                0.00311471607363778,
+                0.0031146109419566415
+              ],
+              "adjusted_width_pct": 0.20167136080646575,
+              "adjusted_peak_pct": 0.0031186701346275214,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.16658448192644615,
+                "minimum_width_change_pct": -0.5971705347301182,
+                "maximum_width_change_pct": 0.9294178972204747
+              }
+            },
+            {
+              "time_since_entry_s": 0.002449999999999952,
+              "fwhm_pct": [
+                0.21560435203602513,
+                0.21556722849573884,
+                0.21556475779858086
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.10671340560879372,
+                0.10677701976202769,
+                0.10677591871954828
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003355891360690144,
+                0.0033433104021707294,
+                0.0033431519178561686
+              ],
+              "adjusted_width_pct": 0.21492350693028683,
+              "adjusted_peak_pct": 0.003355891360690144,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00024663570776617405,
+                      -8.807386921239058e-05
+                    ],
+                    "return_error": 0.0,
+                    "trace": 6.9827668879665055,
+                    "determinant": 1.0000076942682716
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.141592553603502,
+                      -8.936447359886301e-09
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.264719987361997,
+                    "determinant": 1.0000000170005519
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 6.982569669222392,
+                    "determinant": 0.9999868520608166
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2647200057867032,
+                    "determinant": 1.0000000210670614
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.1545977184084779,
+                "minimum_width_change_pct": -0.6330205045560033,
+                "maximum_width_change_pct": 0.9985631371459691
+              }
+            },
+            {
+              "time_since_entry_s": 0.0025520833333332834,
+              "fwhm_pct": [
+                0.2277903589378738,
+                0.22772609175512049,
+                0.22772340842656114
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1128958601354979,
+                0.11297272549535275,
+                0.112971615882973
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003549739319841372,
+                0.003526325143066167,
+                0.003526123205488396
+              ],
+              "adjusted_width_pct": 0.2270548012843987,
+              "adjusted_peak_pct": 0.003549739319841372,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.17154063951405618,
+                "minimum_width_change_pct": -0.6664290526591343,
+                "maximum_width_change_pct": 1.0884898759692563
+              }
+            },
+            {
+              "time_since_entry_s": 0.002654166666666615,
+              "fwhm_pct": [
+                0.2388924594438846,
+                0.23881657355040442,
+                0.23881375414873673
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.11851060897480892,
+                0.11860352886907677,
+                0.11860248038169097
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0036889847566001777,
+                0.003652082506788723,
+                0.0036518375366112465
+              ],
+              "adjusted_width_pct": 0.2381333922227391,
+              "adjusted_peak_pct": 0.0036889847566001777,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.20348698286594136,
+                "minimum_width_change_pct": -0.6967192735950034,
+                "maximum_width_change_pct": 1.1739079316647638
+              }
+            },
+            {
+              "time_since_entry_s": 0.0027562499999999462,
+              "fwhm_pct": [
+                0.24884038381971507,
+                0.24876745567017355,
+                0.24876466412944165
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12357099963948848,
+                0.12368319376576675,
+                0.1236822690409145
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003763170840276331,
+                0.0037097518212680924,
+                0.0037094643609680844
+              ],
+              "adjusted_width_pct": 0.24808728780831846,
+              "adjusted_peak_pct": 0.003763170840276331,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.2357908403047171,
+                "minimum_width_change_pct": -0.7230275777310502,
+                "maximum_width_change_pct": 1.2524937350388177
+              }
+            },
+            {
+              "time_since_entry_s": 0.0028583333333332774,
+              "fwhm_pct": [
+                0.2575260253132816,
+                0.2574727899622875,
+                0.25747020269522025
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.12809581515915713,
+                0.12823219993782775,
+                0.1282314473387114
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0037619194148685864,
+                0.003688779592359026,
+                0.0036884505267620327
+              ],
+              "adjusted_width_pct": 0.2568127234463091,
+              "adjusted_peak_pct": 0.0037619194148685864,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 22,
+                "median_width_change_pct": 0.26677324623672893,
+                "minimum_width_change_pct": -0.744517197972272,
+                "maximum_width_change_pct": 1.3213323430732782
+              }
+            },
+            {
+              "time_since_entry_s": 0.0029604166666666086,
+              "fwhm_pct": [
+                0.26499079785042845,
+                0.2649743309975694,
+                0.2649721647773884
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.13209148300878937,
+                0.13225814251833778,
+                0.1322575840488449
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.003674823490973367,
+                0.0035789027466925916,
+                0.003578533421499941
+              ],
+              "adjusted_width_pct": 0.26435187507349855,
+              "adjusted_peak_pct": 0.003674823490973367,
+              "passes_gate": true,
+              "seeded_field_lines": {},
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.2962823828698391,
+                "minimum_width_change_pct": -0.7609170805235266,
+                "maximum_width_change_pct": 1.377352180358149
+              }
+            },
+            {
+              "time_since_entry_s": 0.0030624999999999403,
+              "fwhm_pct": [
+                0.2711742481986912,
+                0.2712081875913208,
+                0.271206600096785
+              ],
+              "fwhm_stations": 36,
+              "integral_width_pct": [
+                0.1355310650317465,
+                0.13573234550783297,
+                0.13573197492167122
+              ],
+              "integral_width_stations": 36,
+              "peak_current_pct": [
+                0.0034913966274308095,
+                0.0033701733323399097,
+                0.0033697654893138917
+              ],
+              "adjusted_width_pct": 0.27056941657876976,
+              "adjusted_peak_pct": 0.0034913966274308095,
+              "passes_gate": true,
+              "seeded_field_lines": {
+                "field": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      -0.00021236650977751736,
+                      -0.0001011690329533188
+                    ],
+                    "return_error": 0.0,
+                    "trace": 6.936165549350724,
+                    "determinant": 1.0000103340542816
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      3.1415925718676005,
+                      -1.189926046585299e-08
+                    ],
+                    "return_error": 2.220446049250313e-16,
+                    "trace": -1.254436430014107,
+                    "determinant": 1.0000000154109945
+                  }
+                },
+                "baseline": {
+                  "X": {
+                    "status": "tracked",
+                    "classification": "hyperbolic",
+                    "xy": [
+                      0.0,
+                      0.0
+                    ],
+                    "return_error": 4.440892098500626e-16,
+                    "trace": 6.935945478443671,
+                    "determinant": 0.9999882984780254
+                  },
+                  "O": {
+                    "status": "tracked",
+                    "classification": "elliptic",
+                    "xy": [
+                      -3.141592653589793,
+                      0.0
+                    ],
+                    "return_error": 0.0,
+                    "trace": -1.2544364815323412,
+                    "determinant": 1.000000021798976
+                  }
+                }
+              },
+              "fine_station_widths": {
+                "stations_above_width_threshold": 23,
+                "median_width_change_pct": 0.3236111844944878,
+                "minimum_width_change_pct": -0.7716837933339438,
+                "maximum_width_change_pct": 1.4190897727357932
+              }
+            }
+          ],
+          "windows": [
+            {
+              "first_s": 0.000918749999999982,
+              "last_s": 0.0030624999999999403,
+              "sampled_span_s": 0.002143749999999958,
+              "count": 22,
+              "min_adjusted_width_pct": 0.03927567010282296,
+              "max_adjusted_peak_pct": 0.003763170840276331,
+              "reaches_last_sample": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

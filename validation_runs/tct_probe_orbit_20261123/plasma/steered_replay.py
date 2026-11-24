@@ -99,12 +99,13 @@ def load_flybys():
         }
 
 
-def report_frame(current, sample, peak_values, center, velocity, time):
-    distance = mhd.wrapped(PEAK_POINTS - center, mhd.LENGTH)
-    valid = np.einsum("...i,...i->...", distance, distance) >= GUARD_RADIUS**2
+def report_frame(current, sample, peak_values, center, velocity, time, *,
+                 peak_points=PEAK_POINTS, guard_radius=GUARD_RADIUS):
+    distance = mhd.wrapped(peak_points - center, mhd.LENGTH)
+    valid = np.einsum("...i,...i->...", distance, distance) >= guard_radius**2
     ix, iy = np.unravel_index(int(np.argmax(np.where(valid, peak_values, -np.inf))), peak_values.shape)
     assert valid[ix, iy]
-    position = PEAK_POINTS[ix, iy].copy()
+    position = peak_points[ix, iy].copy()
     peak = float(peak_values[ix, iy])
     if 0 < iy < len(PEAK_Y) - 1 and valid[ix, iy - 1:iy + 2].all():
         left, _, right = peak_values[ix, iy - 1:iy + 2]
@@ -113,13 +114,13 @@ def report_frame(current, sample, peak_values, center, velocity, time):
             fraction = np.clip((left - right) / (2 * curvature), -.5, .5)
             candidate = position.copy()
             candidate[1] += fraction * (PEAK_Y[1] - PEAK_Y[0])
-            if np.linalg.norm(mhd.wrapped(candidate - center, mhd.LENGTH)) >= GUARD_RADIUS:
+            if np.linalg.norm(mhd.wrapped(candidate - center, mhd.LENGTH)) >= guard_radius:
                 position = candidate
                 peak += float(.5 * (right - left) * fraction + .5 * curvature * fraction**2)
     return dict(
         t=time, center=center.tolist(), velocity=velocity.tolist(), annulus_peak_j=peak,
         annulus_peak_xyz=position.tolist(), valid_peak_points=int(valid.sum()),
-        profiles=read_sheet(current, center, sample=sample),
+        profiles=read_sheet(current, center, sample=sample, guard_radius=guard_radius),
     )
 
 

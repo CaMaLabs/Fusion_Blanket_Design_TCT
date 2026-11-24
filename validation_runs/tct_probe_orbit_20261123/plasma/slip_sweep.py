@@ -31,13 +31,13 @@ CASES = {
 }
 
 
-def core_and_field(path, grid, time, core, field):
+def core_and_field(path, grid, time, core, field, *, source_strength=SOURCE_STRENGTH):
     _, mask, center, velocity = path.body(grid, time, core, False)
     source = None
     if field:
         x, y, z = (mhd.wrapped(coordinate - offset, length)
                    for coordinate, offset, length in zip((grid.x, grid.y, grid.z), center, mhd.LENGTH))
-        envelope = SOURCE_STRENGTH * np.exp(-(x*x + y*y + z*z) / (2 * mhd.SOURCE_WIDTH**2))
+        envelope = source_strength * np.exp(-(x*x + y*y + z*z) / (2 * mhd.SOURCE_WIDTH**2))
         potential = np.array([-y * envelope, x * envelope, np.zeros_like(envelope)])
         source = grid.curl(grid.transform(potential))
     return source, mask, center, velocity
@@ -90,7 +90,9 @@ def simulate(spec):
 def assess(records, comparison, floors):
     treatment, reference = comparison
     frames = []
-    for index in range(FRAMES + 1):
+    sample_count = len(records[0][treatment]["records"])
+    assert all(len(group[key]["records"]) == sample_count for group in records for key in comparison)
+    for index in range(sample_count):
         pairs = [(group[treatment]["records"][index], group[reference]["records"][index]) for group in records]
         for a, b in pairs:
             assert (a["t"], a["center"], a["valid_peak_points"]) == (b["t"], b["center"], b["valid_peak_points"])

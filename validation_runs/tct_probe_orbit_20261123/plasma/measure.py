@@ -49,7 +49,7 @@ def interpolate_crossing(profile, lower_idx, level):
     return NORMAL[lower_idx] + (level - a) / (b - a) * (NORMAL[1] - NORMAL[0])
 
 
-def read_sheet(current, center, *, sample=None):
+def read_sheet(current, center, *, sample=None, guard_radius=GUARD_RADIUS):
     if sample is None:
         sample = sampler(current)
     centers = np.column_stack((STATIONS[:, 0], np.zeros(len(STATIONS)), STATIONS[:, 1]))
@@ -82,7 +82,7 @@ def read_sheet(current, center, *, sample=None):
         nearest = -np.dot(difference, unit_normal[i])
         s_integral = np.clip(nearest, window[0], window[-1])
         total = cumulative[i, -1]
-        if total > 0 and np.linalg.norm(difference + s_integral * unit_normal[i]) >= GUARD_RADIUS:
+        if total > 0 and np.linalg.norm(difference + s_integral * unit_normal[i]) >= guard_radius:
             lower_q, upper_q = np.interp([0.25 * total, 0.75 * total], cumulative[i], window)
             diagnostics["integral_width"] = float(upper_q - lower_q)
         level = 0.5 * strength[i]
@@ -97,7 +97,7 @@ def read_sheet(current, center, *, sample=None):
             continue
         # Common exclusion around the trajectory, including the virtual no-core path.
         s = np.clip(nearest, left, right)
-        if np.linalg.norm(difference + s * unit_normal[i]) < GUARD_RADIUS:
+        if np.linalg.norm(difference + s * unit_normal[i]) < guard_radius:
             continue
         diagnostics.update(width=float(right - left), peak_current=float(strength[i]))
     return output
