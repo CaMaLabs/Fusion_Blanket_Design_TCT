@@ -25,7 +25,7 @@ FRAMES = 12
 
 
 class SettledPass(Flyby):
-    def __init__(self, track, sheet_speed):
+    def __init__(self, track, sheet_speed=None, *, relative_speed=None, max_exposure_s=None):
         knots = np.array(track["history"])
         midpoint = track["center_time_s"]
         reference_radius, reference_height = track["target_RZ_m"]
@@ -38,6 +38,15 @@ class SettledPass(Flyby):
         assert np.linalg.det(frame) > 0.
         times = knots[:, 0]
         toroidal_angle = CubicHermiteSpline(times, knots[:, 2], knots[:, 5] / knots[:, 1])
+        lab_speed = reference_radius * toroidal_angle(midpoint, 1)
+        if relative_speed is not None:
+            if sheet_speed is not None:
+                raise ValueError("Specify the sheet speed or the relative speed")
+            sheet_speed = lab_speed - relative_speed
+        if sheet_speed is None or not np.isfinite(sheet_speed):
+            raise ValueError("Provide a finite sheet or relative speed")
+        if max_exposure_s is not None and (not np.isfinite(max_exposure_s) or max_exposure_s <= 0.):
+            raise ValueError("Maximum exposure must be a finite, positive duration")
         relative_displacement = (
             reference_radius * (knots[:, 2] - toroidal_angle(midpoint))
             - sheet_speed * (times - midpoint)
@@ -52,24 +61,30 @@ class SettledPass(Flyby):
                                       velocity @ frame.T / METERS_PER_UNIT, extrapolate=False)
         center = self.path(midpoint)
         self.origin = np.array([-center[0], STAND_OFF, .17 - center[2]])
-        relative_sign = np.sign(reference_radius * toroidal_angle(midpoint, 1) - sheet_speed)
+        relative_sign = np.sign(lab_speed - sheet_speed)
 
-        def distance(time):
-            return relative_sign * (
-                reference_radius * (toroidal_angle(time) - toroidal_angle(midpoint))
-                - sheet_speed * (time - midpoint)
-            )
+        def toroidal_distance(time):
+            return (reference_radius * (toroidal_angle(time) - toroidal_angle(midpoint))
+                    - sheet_speed * (time - midpoint))
 
-        self.start = brentq(lambda time: distance(time) + HALF_PATCH * METERS_PER_UNIT,
-                            times[0], midpoint, xtol=1e-14)
-        self.end = brentq(lambda time: distance(time) - HALF_PATCH * METERS_PER_UNIT,
-                          midpoint, times[-1], xtol=1e-14)
+        self.start, self.end = times[0], times[-1]
+        if max_exposure_s is not None:
+            self.start = max(self.start, midpoint - max_exposure_s / 2)
+            self.end = min(self.end, midpoint + max_exposure_s / 2)
+        half_patch_m = HALF_PATCH * METERS_PER_UNIT
+        if max_exposure_s is None or relative_sign * toroidal_distance(self.start) < -half_patch_m:
+            self.start = brentq(lambda t: relative_sign * toroidal_distance(t) + half_patch_m,
+                                self.start, midpoint, xtol=1e-14)
+        if max_exposure_s is None or relative_sign * toroidal_distance(self.end) > half_patch_m:
+            self.end = brentq(lambda t: relative_sign * toroidal_distance(t) - half_patch_m,
+                              midpoint, self.end, xtol=1e-14)
         self.duration = (self.end - self.start) / SECONDS_PER_UNIT
         self.metadata = dict(
-            sheet_speed_m_s=sheet_speed, midpoint_relative_toroidal_speed_m_s=
-            reference_radius * toroidal_angle(midpoint, 1) - sheet_speed,
+            sheet_speed_m_s=sheet_speed, midpoint_relative_toroidal_speed_m_s=lab_speed - sheet_speed,
             meters_per_length_unit=METERS_PER_UNIT, seconds_per_time_unit=SECONDS_PER_UNIT,
-            travel_m=2 * HALF_PATCH * METERS_PER_UNIT, transit_s=self.end - self.start,
+            travel_m=(2 * half_patch_m if max_exposure_s is None else
+                      abs(toroidal_distance(self.end) - toroidal_distance(self.start))),
+            transit_s=self.end - self.start,
             stand_off_from_commanded_target_units=STAND_OFF, field_frame=frame.tolist(),
             physical_interval_s=[self.start, self.end],
         )

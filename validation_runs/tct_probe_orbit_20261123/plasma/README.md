@@ -63,3 +63,36 @@ python3 assess_replay.py --archive input
 
 - [Steering and orbit inputs](https://chatgpt.com/library?file_id=libfile_a784eedf42208191ae687259d5ebb80d&account_id=personal)
 - [Original approach-and-hold reference](https://chatgpt.com/library?file_id=libfile_d6bf28a0ef448191bee6078ef42d11d9&account_id=personal)
+
+## Relative-speed and self-field sweep
+
+The follow-on experiment reuses the passing, half-load orbit track and retains the 42 mm commanded stand-off, 23 mm sphere radius, 0.10 m length unit and 4.079 ms time unit. It compares the no-probe baseline, momentum-penalty core, imposed magnetic field, and combination. The field is a divergence-free guide-axis perturbation carried with the core. It uses the archived source geometry, width 0.19 and peak vector-potential coefficient 0.09 in normalized units. Its amplitude stays constant during the nominal pass. The startup sensitivity ramps the core penalty and field over 0.6125 ms. The model assumes the reference fluid is at rest in the sheet-pattern frame. The sweep tests relative-speed sensitivity under that assumption. Independent bulk flow, core heating and absolute magnetic protection remain unresolved.
+
+The probe covers a 0.21 m patch or runs for at most 2.45 ms. The +10 m/s near-comoving case covers 24.5 mm and starts with the core already near the sheet. A transient within this window can depend on how the modeled interaction is initialized. The gate requires all 36 FWHM profiles, strictly above +0.020% widening and at most +0.100% increase in peak sampled plasma current. Refined comparisons deduct the diagnostic, mesh and time-step allowances from the width and add the mesh and time-step allowances to the peak current.
+
+| Sheet and numerical setting | Solid core | Local field only | Core and field |
+| --- | ---: | ---: | ---: |
+| +10 m/s relative speed, coarse | 1/8 | 0/8 | 1/8 |
+| +10 m/s relative speed, refined | 0/8 | 0/8 | 0/8 |
+| +10 m/s relative speed, ramped and coarse | 2/8 | 0/8 | 2/8 |
+| +10 m/s relative speed, ramped and refined | 0/8 | 0/8 | 0/8 |
+| Stationary pattern, coarse and refined | 0/8 | 2/8 | 0/8 |
+| −500, −5,000 and −64,683 m/s relative speed, coarse | 0/24 | 0/24 | 0/24 |
+
+The table counts passing post-entry samples against the matched no-probe baseline. At +10 m/s and sudden startup, the solid-only 0.306 ms sample retained 35 of 36 common stations in the refinement. It showed +0.239% adjusted width and +0.074% adjusted peak current on that reduced support. Later samples exceeded the current cap. Ramping both inputs over 0.6125 ms restored full profile coverage at 0.306 ms. The adjusted widening there was +0.0067% for the core and +0.0019% for the combination, below the width threshold.
+
+The stationary-pattern local field alone gave +0.0616% adjusted widening at 1.225 ms and +0.2001% at 2.450 ms. Adjusted peak current increased by +0.00210% and +0.00388%, respectively. The original elliptic and hyperbolic field lines remained trackable at all three topology samples. The qualified samples are isolated in time. Sustained widening, plasmoid breakup and delivery of the prescribed field with physical coils remain unverified.
+
+Results are in the [relative-speed screen](runs/slip_screen.json), [refined comparison](runs/slip_refined.json), [ramped screen](runs/slip_startup_ramp_screen.json) and [refined ramped comparison](runs/slip_startup_ramp_refined.json).
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/slip_sweep.py --output plasma/runs/slip_screen.json
+python3 plasma/slip_sweep.py --refine --cases near_comoving stationary_pattern --output plasma/runs/slip_refined.json
+python3 plasma/slip_sweep.py --cases near_comoving --ramp-s .0006125 --output plasma/runs/slip_startup_ramp_screen.json
+python3 plasma/slip_sweep.py --refine --cases near_comoving --ramp-s .0006125 --output plasma/runs/slip_startup_ramp_refined.json
+```
+
+Use the same scratch `--cache` path across commands to reuse completed runs for identical inputs.

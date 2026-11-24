@@ -84,7 +84,7 @@ def observe(grid, state, t, mode):
 
 
 def integrate(grid, dt, mode, state, start, end, *, include_start=True, model=None, inspect=None,
-              cadence=CADENCE):
+              cadence=CADENCE, core=None, field=False):
     def probe_model(current_grid, t, core, field):
         return prescribed_body(current_grid, t, mode)
 
@@ -92,6 +92,8 @@ def integrate(grid, dt, mode, state, start, end, *, include_start=True, model=No
         probe_model = model
     if inspect is None:
         inspect = observe
+    if core is None:
+        core = mode != "baseline"
     steps_per_output = round(cadence/dt)
     records = []
     for step in range(start, end+1):
@@ -99,10 +101,9 @@ def integrate(grid, dt, mode, state, start, end, *, include_start=True, model=No
         if step % steps_per_output == 0 and (include_start or step != start):
             records.append(inspect(grid, state, t, mode))
         if step < end:
-            k1 = mhd.rhs(grid, state, t, mode != "baseline", False, mhd.PENALTY_TIME, probe_model)
+            k1 = mhd.rhs(grid, state, t, core, field, mhd.PENALTY_TIME, probe_model)
             midpoint = state + 0.5*dt*k1
-            state += dt*mhd.rhs(grid, midpoint, t+0.5*dt, mode != "baseline",
-                                False, mhd.PENALTY_TIME, probe_model)
+            state += dt*mhd.rhs(grid, midpoint, t+0.5*dt, core, field, mhd.PENALTY_TIME, probe_model)
     if not np.isfinite(state).all():
         raise ArithmeticError("Nonfinite MHD state")
     divergence = max(float(np.max(np.abs(grid.physical(

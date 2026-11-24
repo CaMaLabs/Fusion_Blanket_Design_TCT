@@ -1,0 +1,3565 @@
+{
+  "source_track": {
+    "mode": "guided_1.6kA_I",
+    "kappa_Am2_kg": 4761.9047619047615,
+    "gravity": true,
+    "phase_deg": 180,
+    "launch": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "reference_height_m": -0.0051640142737476085,
+    "cutoff_hz": 100,
+    "steps_per_lap": 1152,
+    "outcome": "completed",
+    "laps": 3.0000546498923746,
+    "elapsed_s": 0.4833757940610646,
+    "direction": 1,
+    "radial_peak_m": 0.0022010747604150893,
+    "vertical_peak_m": 0.012344439987668234,
+    "initial_toroidal_speed_m_s": 85.81526562902829,
+    "final_toroidal_speed_m_s": 85.69629377421695,
+    "peak_current_A": 1600.0,
+    "peak_slew_A_s": 2010619.2982974676,
+    "kick_time_s": null,
+    "duration_s": 0.2,
+    "tracking_pass": true,
+    "settled_error_m": 0.00011794071751804452,
+    "settled_speed_m_s": 0.005256417703020485,
+    "final_normal_displacement_m": -0.00218946836899563,
+    "worst_normal_error_m": 0.00011794071751804452,
+    "corridor_margin_m": 0.012655560012331767,
+    "profile": "toroidal_priority",
+    "drag_fraction": 0.5,
+    "drag_at_nominal_speed_T_m": 0.0002000961616401006,
+    "supplemental_capacity_T_m": 0.0
+  },
+  "stage": "single-grid screen",
+  "model": "Periodic incompressible resistive MHD with the reference fluid at rest in the pattern frame",
+  "max_exposure_s": 0.00245,
+  "activation_ramp_s": 0.0,
+  "field_potential_amplitude": 0.09,
+  "field_width_units": 0.19,
+  "width_pct_gate_exclusive": 0.02,
+  "peak_pct_gate_inclusive": 0.1,
+  "benchmarks": [
+    {
+      "known_width": 0.4760976068178251,
+      "recovered_width": 0.47609884733620295,
+      "max_false_width_gain_pct": 0.0006016566308497673,
+      "recovered_0p02pct_gains": [
+        0.01997135241258441,
+        0.01997131537416763,
+        0.019971219695325004
+      ]
+    }
+  ],
+  "cases": {
+    "near_comoving": {
+      "geometry": {
+        "sheet_speed_m_s": 75.70024749158394,
+        "midpoint_relative_toroidal_speed_m_s": 10.0,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.024499892957765237,
+        "transit_s": 0.002449999999999952,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.34877500000000006,
+          0.351225
+        ]
+      },
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 248,
+          "step_s": 9.879032258064323e-06
+        }
+      ],
+      "comparisons": {
+        "core_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              0.5980326277445602
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.3004627438333074
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.07356456982079429
+            ],
+            "adjusted_width_pct": 0.5974309711137105,
+            "adjusted_peak_pct": 0.07356456982079429,
+            "passes_gate": true,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              1.2140502035320466
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.5773676692379937
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              0.1806611874582975
+            ],
+            "adjusted_width_pct": 1.2134485469011969,
+            "adjusted_peak_pct": 0.1806611874582975,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              1.6945270044086191
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              1.0777327396834568
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.32814744369320525
+            ],
+            "adjusted_width_pct": 1.6939253477777694,
+            "adjusted_peak_pct": 0.32814744369320525,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              1.455864536241025
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.8412715311663321
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              2.831384194733322
+            ],
+            "adjusted_width_pct": 1.4552628796101752,
+            "adjusted_peak_pct": 2.831384194733322,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              2.742712007130055
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              1.9110094007741774
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              11.754706877294163
+            ],
+            "adjusted_width_pct": 2.742110350499205,
+            "adjusted_peak_pct": 11.754706877294163,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              0.5131692405905053
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.020758662794739813
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              17.17467278596263
+            ],
+            "adjusted_width_pct": 0.5125675839596555,
+            "adjusted_peak_pct": 17.17467278596263,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              0.7486229580258019
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.46474939191669673
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              19.02074727244274
+            ],
+            "adjusted_width_pct": 0.7480213013949522,
+            "adjusted_peak_pct": 19.02074727244274,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              -0.2696930100029915
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              0.9059501331449171
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              20.453705716407345
+            ],
+            "adjusted_width_pct": -0.2702946666338413,
+            "adjusted_peak_pct": 20.453705716407345,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "field_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              -0.01744214041439207
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.008407623663220232
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0001512962536143192
+            ],
+            "adjusted_width_pct": -0.01804379704524184,
+            "adjusted_peak_pct": 0.0001512962536143192,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              -0.06751620086290488
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.03261558278908616
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.00047352790217836116
+            ],
+            "adjusted_width_pct": -0.06811785749375465,
+            "adjusted_peak_pct": 0.00047352790217836116,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              -0.14413275898368383
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.06969764866727735
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0007765942504178724
+            ],
+            "adjusted_width_pct": -0.1447344156145336,
+            "adjusted_peak_pct": 0.0007765942504178724,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              -0.2389823796085433
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.11509814012280462
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0008827250690179866
+            ],
+            "adjusted_width_pct": -0.23958403623939306,
+            "adjusted_peak_pct": 0.0008827250690179866,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              -0.3403136555989672
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.16259709628252406
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0005615502323585986
+            ],
+            "adjusted_width_pct": -0.34091531222981697,
+            "adjusted_peak_pct": 0.0005615502323585986,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              -0.43186346649236595
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.20322081834068806
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.0005849928550683003
+            ],
+            "adjusted_width_pct": -0.4324651231232157,
+            "adjusted_peak_pct": -0.0005849928550683003,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              -0.49463733225449946
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.22631658287177725
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.003158529882330008
+            ],
+            "adjusted_width_pct": -0.49523898888534923,
+            "adjusted_peak_pct": -0.003158529882330008,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              -0.5110565355075369
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.1438561083047074
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              -0.0032243614843552315
+            ],
+            "adjusted_width_pct": -0.5116581921383867,
+            "adjusted_peak_pct": -0.0032243614843552315,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              0.573313296504474
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.29602482022497156
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.07001806553308398
+            ],
+            "adjusted_width_pct": 0.5727116398736243,
+            "adjusted_peak_pct": 0.07001806553308398,
+            "passes_gate": true,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              1.1618904430289234
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.5688075739830323
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              0.17130916094354465
+            ],
+            "adjusted_width_pct": 1.1612887863980736,
+            "adjusted_peak_pct": 0.17130916094354465,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              1.573989951967869
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.7257032805430885
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              0.33247273428256285
+            ],
+            "adjusted_width_pct": 1.5733882953370193,
+            "adjusted_peak_pct": 0.33247273428256285,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              0.9632518292762349
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              1.5584270405770928
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              4.808272484229081
+            ],
+            "adjusted_width_pct": 0.9626501726453851,
+            "adjusted_peak_pct": 4.808272484229081,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              3.2049976391288038
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              1.499328549205714
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              14.290734165052532
+            ],
+            "adjusted_width_pct": 3.204395982497954,
+            "adjusted_peak_pct": 14.290734165052532,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              -0.07839291887205002
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.2816463496664645
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              19.84937163538443
+            ],
+            "adjusted_width_pct": -0.07899457550289979,
+            "adjusted_peak_pct": 19.84937163538443,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              0.569361626948961
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              1.2925472855081166
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              22.008514309328486
+            ],
+            "adjusted_width_pct": 0.5687599703181112,
+            "adjusted_peak_pct": 22.008514309328486,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              -0.620299866884122
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              0.7388423719278725
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              23.87629060013601
+            ],
+            "adjusted_width_pct": -0.6209015235149717,
+            "adjusted_peak_pct": 23.87629060013601,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_core": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              -0.02457238038795495
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.004424629245880496
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.0035438972349699505
+            ],
+            "adjusted_width_pct": -0.025174037018804718,
+            "adjusted_peak_pct": -0.0035438972349699505,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              -0.051534110529349864
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.0085109557481311
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              -0.00933516150112279
+            ],
+            "adjusted_width_pct": -0.05213576716019963,
+            "adjusted_peak_pct": -0.00933516150112279,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              -0.1185285540838743
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.028944339329373125
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              0.004311143681579033
+            ],
+            "adjusted_width_pct": -0.11913021071472407,
+            "adjusted_peak_pct": 0.004311143681579033,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              -0.15467889151247194
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              0.7111726166494359
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              1.9224561693656383
+            ],
+            "adjusted_width_pct": -0.1552805481433217,
+            "adjusted_peak_pct": 1.9224561693656383,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              0.2825546878614249
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              -0.40396111665375045
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              2.269280067588486
+            ],
+            "adjusted_width_pct": 0.28195303123057514,
+            "adjusted_peak_pct": 2.269280067588486,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              -0.5885419432418715
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.26094185491147837
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              2.282659542226817
+            ],
+            "adjusted_width_pct": -0.5891435998727212,
+            "adjusted_peak_pct": 2.282659542226817,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              0.13797222630940187
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              0.8239685049749701
+            ],
+            "integral_width_stations": 35,
+            "peak_current_pct": [
+              2.5102909411639285
+            ],
+            "adjusted_width_pct": 0.1373705696785521,
+            "adjusted_peak_pct": 2.5102909411639285,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              -0.35155497607792796
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              -0.16560744039033626
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              2.841411032871588
+            ],
+            "adjusted_width_pct": -0.35215663270877773,
+            "adjusted_peak_pct": 2.841411032871588,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ]
+      }
+    },
+    "stationary_pattern": {
+      "geometry": {
+        "sheet_speed_m_s": 0.0,
+        "midpoint_relative_toroidal_speed_m_s": 85.70024749158394,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.20996549931214226,
+        "transit_s": 0.002449999999999952,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.34877500000000006,
+          0.351225
+        ]
+      },
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 248,
+          "step_s": 9.879032258064323e-06
+        }
+      ],
+      "comparisons": {
+        "core_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              -0.19622559217447044
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.06251424420876672
+            ],
+            "integral_width_stations": 31,
+            "peak_current_pct": [
+              72.90529707877906
+            ],
+            "adjusted_width_pct": -0.1968272488053202,
+            "adjusted_peak_pct": 72.90529707877906,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              -0.3168651636731856
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.2040872277147665
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              147.98405696188382
+            ],
+            "adjusted_width_pct": -0.3174668203040354,
+            "adjusted_peak_pct": 147.98405696188382,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              -7.421616236132911
+            ],
+            "fwhm_stations": 28,
+            "integral_width_pct": [
+              -0.1207606486703372
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              555.1021939045921
+            ],
+            "adjusted_width_pct": -7.4222178927637605,
+            "adjusted_peak_pct": 555.1021939045921,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              -9.740620128720145
+            ],
+            "fwhm_stations": 31,
+            "integral_width_pct": [
+              2.6485120629294423
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              507.6048017831648
+            ],
+            "adjusted_width_pct": -9.741221785350994,
+            "adjusted_peak_pct": 507.6048017831648,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              -23.25398998172099
+            ],
+            "fwhm_stations": 25,
+            "integral_width_pct": [
+              9.246324934330442
+            ],
+            "integral_width_stations": 29,
+            "peak_current_pct": [
+              321.3903783392559
+            ],
+            "adjusted_width_pct": -23.25459163835184,
+            "adjusted_peak_pct": 321.3903783392559,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              -37.063571940122095
+            ],
+            "fwhm_stations": 22,
+            "integral_width_pct": [
+              -3.1064252106201895
+            ],
+            "integral_width_stations": 25,
+            "peak_current_pct": [
+              333.8664305867299
+            ],
+            "adjusted_width_pct": -37.064173596752944,
+            "adjusted_peak_pct": 333.8664305867299,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              -25.00317478158971
+            ],
+            "fwhm_stations": 23,
+            "integral_width_pct": [
+              9.589454580317769
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              449.06308247994104
+            ],
+            "adjusted_width_pct": -25.00377643822056,
+            "adjusted_peak_pct": 449.06308247994104,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              -22.30460550567678
+            ],
+            "fwhm_stations": 24,
+            "integral_width_pct": [
+              4.044278603976492
+            ],
+            "integral_width_stations": 27,
+            "peak_current_pct": [
+              379.1498279686081
+            ],
+            "adjusted_width_pct": -22.305207162307628,
+            "adjusted_peak_pct": 379.1498279686081,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "field_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              -0.007809126830593538
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.001097136582572933
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              0.0001161813072858564
+            ],
+            "adjusted_width_pct": -0.008410783461443305,
+            "adjusted_peak_pct": 0.0001161813072858564,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              0.003803511166711182
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              0.002135625275134778
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              0.0006113854110978423
+            ],
+            "adjusted_width_pct": 0.0032018545358614148,
+            "adjusted_peak_pct": 0.0006113854110978423,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              0.037389069779769635
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.01952140214114273
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              0.0016201675861804432
+            ],
+            "adjusted_width_pct": 0.03678741314891987,
+            "adjusted_peak_pct": 0.0016201675861804432,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              0.062211198839756676
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.03201517963808964
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0021042288268935394
+            ],
+            "adjusted_width_pct": 0.06160954220890691,
+            "adjusted_peak_pct": 0.0021042288268935394,
+            "passes_gate": true,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              0.09735927647347431
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.04927874577393965
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              0.002566309867924055
+            ],
+            "adjusted_width_pct": 0.09675761984262454,
+            "adjusted_peak_pct": 0.002566309867924055,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              0.1694152381101155
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              0.08473440948262301
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              0.0024133901254108636
+            ],
+            "adjusted_width_pct": 0.16881358147926573,
+            "adjusted_peak_pct": 0.0024133901254108636,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              0.1684523109733993
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.09401561405253389
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              0.0029940154488761195
+            ],
+            "adjusted_width_pct": 0.16785065434254953,
+            "adjusted_peak_pct": 0.0029940154488761195,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              0.20082852282305996
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.09897752425576112
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0038849008850760924
+            ],
+            "adjusted_width_pct": 0.2002268661922102,
+            "adjusted_peak_pct": 0.0038849008850760924,
+            "passes_gate": true,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              -0.3943404366023029
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.05517743436617151
+            ],
+            "integral_width_stations": 31,
+            "peak_current_pct": [
+              76.17711808019993
+            ],
+            "adjusted_width_pct": -0.39494209323315266,
+            "adjusted_peak_pct": 76.17711808019993,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              -0.1918360960401766
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              0.00521318558570627
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              149.05420738407682
+            ],
+            "adjusted_width_pct": -0.19243775267102636,
+            "adjusted_peak_pct": 149.05420738407682,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              -7.215929779821995
+            ],
+            "fwhm_stations": 28,
+            "integral_width_pct": [
+              1.1091055242955505
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              559.9072267039569
+            ],
+            "adjusted_width_pct": -7.216531436452844,
+            "adjusted_peak_pct": 559.9072267039569,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              -12.549098440888184
+            ],
+            "fwhm_stations": 32,
+            "integral_width_pct": [
+              2.381654979718517
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              530.5719740699332
+            ],
+            "adjusted_width_pct": -12.549700097519032,
+            "adjusted_peak_pct": 530.5719740699332,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              -17.963702543354543
+            ],
+            "fwhm_stations": 26,
+            "integral_width_pct": [
+              2.7994597678971056
+            ],
+            "integral_width_stations": 28,
+            "peak_current_pct": [
+              322.72697229395806
+            ],
+            "adjusted_width_pct": -17.964304199985392,
+            "adjusted_peak_pct": 322.72697229395806,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              -25.78411014876999
+            ],
+            "fwhm_stations": 21,
+            "integral_width_pct": [
+              2.826389295982068
+            ],
+            "integral_width_stations": 24,
+            "peak_current_pct": [
+              331.13420106263317
+            ],
+            "adjusted_width_pct": -25.78471180540084,
+            "adjusted_peak_pct": 331.13420106263317,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              -22.208148412708418
+            ],
+            "fwhm_stations": 24,
+            "integral_width_pct": [
+              9.051971466976404
+            ],
+            "integral_width_stations": 27,
+            "peak_current_pct": [
+              448.5116296363171
+            ],
+            "adjusted_width_pct": -22.208750069339267,
+            "adjusted_peak_pct": 448.5116296363171,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              -18.81986341914965
+            ],
+            "fwhm_stations": 24,
+            "integral_width_pct": [
+              11.478075363914408
+            ],
+            "integral_width_stations": 29,
+            "peak_current_pct": [
+              398.78250761253116
+            ],
+            "adjusted_width_pct": -18.8204650757805,
+            "adjusted_peak_pct": 398.78250761253116,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_core": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000306249999999994,
+            "fwhm_pct": [
+              -0.19850436078526768
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.022496090863199925
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              1.8922618662921442
+            ],
+            "adjusted_width_pct": -0.19910601741611744,
+            "adjusted_peak_pct": 1.8922618662921442,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000612499999999988,
+            "fwhm_pct": [
+              -0.7523413629094255
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              0.20972844226401222
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              0.4315400091859489
+            ],
+            "adjusted_width_pct": -0.7529430195402753,
+            "adjusted_peak_pct": 0.4315400091859489,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000918749999999982,
+            "fwhm_pct": [
+              0.2645525361546275
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              1.2313531630329777
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              0.7334783556021129
+            ],
+            "adjusted_width_pct": 0.2639508795237777,
+            "adjusted_peak_pct": 0.7334783556021129,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001224999999999976,
+            "fwhm_pct": [
+              -0.6389232008395362
+            ],
+            "fwhm_stations": 31,
+            "integral_width_pct": [
+              -1.6607216378839107
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              3.7799523998766293
+            ],
+            "adjusted_width_pct": -0.639524857470386,
+            "adjusted_peak_pct": 3.7799523998766293,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0015312499999999701,
+            "fwhm_pct": [
+              1.1750049572094357
+            ],
+            "fwhm_stations": 25,
+            "integral_width_pct": [
+              -6.6555661201565535
+            ],
+            "integral_width_stations": 27,
+            "peak_current_pct": [
+              0.31718663344184606
+            ],
+            "adjusted_width_pct": 1.1744033005785859,
+            "adjusted_peak_pct": 0.31718663344184606,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.001837499999999964,
+            "fwhm_pct": [
+              11.073227022090148
+            ],
+            "fwhm_stations": 24,
+            "integral_width_pct": [
+              6.348522252894417
+            ],
+            "integral_width_stations": 25,
+            "peak_current_pct": [
+              -0.6297397842930375
+            ],
+            "adjusted_width_pct": 11.072625365459299,
+            "adjusted_peak_pct": -0.6297397842930375,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0021437499999999578,
+            "fwhm_pct": [
+              -3.5143004484193496
+            ],
+            "fwhm_stations": 23,
+            "integral_width_pct": [
+              -1.620261922877475
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              -0.10043524345748622
+            ],
+            "adjusted_width_pct": -3.5149021050501994,
+            "adjusted_peak_pct": -0.10043524345748622,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.002449999999999952,
+            "fwhm_pct": [
+              0.9999133630622214
+            ],
+            "fwhm_stations": 22,
+            "integral_width_pct": [
+              5.8103661724159705
+            ],
+            "integral_width_stations": 27,
+            "peak_current_pct": [
+              4.097398871488123
+            ],
+            "adjusted_width_pct": 0.9993117064313717,
+            "adjusted_peak_pct": 4.097398871488123,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ]
+      }
+    },
+    "slip_minus_500": {
+      "geometry": {
+        "sheet_speed_m_s": 585.7002474915839,
+        "midpoint_relative_toroidal_speed_m_s": -500.0,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.20999999999998514,
+        "transit_s": 0.0004199999992571257,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.3497900000183855,
+          0.35021000001764263
+        ]
+      },
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 64,
+          "step_s": 6.562499988392589e-06
+        }
+      ],
+      "comparisons": {
+        "core_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.2499999907140715e-05,
+            "fwhm_pct": [
+              -0.2162043003846814
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.03916806191973654
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              3.170627462823372
+            ],
+            "adjusted_width_pct": -0.21680595701553118,
+            "adjusted_peak_pct": 3.170627462823372,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00010499999981428143,
+            "fwhm_pct": [
+              -0.6814277162089044
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.2968335872046035
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              49.254980813320955
+            ],
+            "adjusted_width_pct": -0.6820293728397542,
+            "adjusted_peak_pct": 49.254980813320955,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00015749999972142212,
+            "fwhm_pct": [
+              -3.447185276888165
+            ],
+            "fwhm_stations": 33,
+            "integral_width_pct": [
+              -1.8317679735497472
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              100.88305609957145
+            ],
+            "adjusted_width_pct": -3.4477869335190148,
+            "adjusted_peak_pct": 100.88305609957145,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00020999999962856286,
+            "fwhm_pct": [
+              -5.445781155370389
+            ],
+            "fwhm_stations": 31,
+            "integral_width_pct": [
+              -1.3809487531923348
+            ],
+            "integral_width_stations": 31,
+            "peak_current_pct": [
+              395.1472942092926
+            ],
+            "adjusted_width_pct": -5.4463828120012385,
+            "adjusted_peak_pct": 395.1472942092926,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0002624999995357036,
+            "fwhm_pct": [
+              -13.501785916403708
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              1.464475579651392
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              819.946664117562
+            ],
+            "adjusted_width_pct": -13.502387573034557,
+            "adjusted_peak_pct": 819.946664117562,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00031499999944284424,
+            "fwhm_pct": [
+              -9.9862329167145
+            ],
+            "fwhm_stations": 23,
+            "integral_width_pct": [
+              6.201478163598151
+            ],
+            "integral_width_stations": 25,
+            "peak_current_pct": [
+              1295.4444236248123
+            ],
+            "adjusted_width_pct": -9.986834573345348,
+            "adjusted_peak_pct": 1295.4444236248123,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000367499999349985,
+            "fwhm_pct": [
+              -48.7705434848826
+            ],
+            "fwhm_stations": 22,
+            "integral_width_pct": [
+              8.142438924798846
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              1450.4451894926492
+            ],
+            "adjusted_width_pct": -48.77114514151345,
+            "adjusted_peak_pct": 1450.4451894926492,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0004199999992571257,
+            "fwhm_pct": [
+              -45.35851285550172
+            ],
+            "fwhm_stations": 21,
+            "integral_width_pct": [
+              12.246643544292567
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              1932.6350907505152
+            ],
+            "adjusted_width_pct": -45.35911451213257,
+            "adjusted_peak_pct": 1932.6350907505152,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "field_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.2499999907140715e-05,
+            "fwhm_pct": [
+              -0.00022578828039465648
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -3.088451810961956e-05
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              3.366362100187814e-06
+            ],
+            "adjusted_width_pct": -0.0008274449112444238,
+            "adjusted_peak_pct": 3.366362100187814e-06,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00010499999981428143,
+            "fwhm_pct": [
+              0.00010978063420541417
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              6.360187256859717e-05
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              1.739738890726983e-05
+            ],
+            "adjusted_width_pct": -0.0004918759966443531,
+            "adjusted_peak_pct": 1.739738890726983e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00015749999972142212,
+            "fwhm_pct": [
+              0.0008614219262792489
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.0004668788295525417
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              4.669250595057406e-05
+            ],
+            "adjusted_width_pct": 0.00025976529542948157,
+            "adjusted_peak_pct": 4.669250595057406e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00020999999962856286,
+            "fwhm_pct": [
+              0.001285266266592977
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0006869166444767316
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              6.243058647825706e-05
+            ],
+            "adjusted_width_pct": 0.0006836096357432098,
+            "adjusted_peak_pct": 6.243058647825706e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0002624999995357036,
+            "fwhm_pct": [
+              0.0020293941599192067
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.0011017473818153434
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              8.081846358809486e-05
+            ],
+            "adjusted_width_pct": 0.0014277375290694394,
+            "adjusted_peak_pct": 8.081846358809486e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00031499999944284424,
+            "fwhm_pct": [
+              0.0038361122810748327
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              0.0020815036776644646
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              8.221056808643823e-05
+            ],
+            "adjusted_width_pct": 0.0032344556502250654,
+            "adjusted_peak_pct": 8.221056808643823e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000367499999349985,
+            "fwhm_pct": [
+              0.003841922478131643
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.0023935204024327916
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              0.00010240811936235161
+            ],
+            "adjusted_width_pct": 0.0032402658472818757,
+            "adjusted_peak_pct": 0.00010240811936235161,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0004199999992571257,
+            "fwhm_pct": [
+              0.004976353459951177
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0026865022649591452
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0001337256231748185
+            ],
+            "adjusted_width_pct": 0.00437469682910141,
+            "adjusted_peak_pct": 0.0001337256231748185,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.2499999907140715e-05,
+            "fwhm_pct": [
+              -0.21247227075680275
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.03642274458225403
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              3.4524023107883606
+            ],
+            "adjusted_width_pct": -0.21307392738765252,
+            "adjusted_peak_pct": 3.4524023107883606,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00010499999981428143,
+            "fwhm_pct": [
+              -0.6869394303243403
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.2996287285100041
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              48.639972069056256
+            ],
+            "adjusted_width_pct": -0.6875410869551901,
+            "adjusted_peak_pct": 48.639972069056256,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00015749999972142212,
+            "fwhm_pct": [
+              -2.6344717277371865
+            ],
+            "fwhm_stations": 32,
+            "integral_width_pct": [
+              -0.5862284053552713
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              91.41083707775508
+            ],
+            "adjusted_width_pct": -2.6350733843680363,
+            "adjusted_peak_pct": 91.41083707775508,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00020999999962856286,
+            "fwhm_pct": [
+              -0.757317278520997
+            ],
+            "fwhm_stations": 32,
+            "integral_width_pct": [
+              1.5882433734249357
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              385.3074890822909
+            ],
+            "adjusted_width_pct": -0.7579189351518467,
+            "adjusted_peak_pct": 385.3074890822909,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0002624999995357036,
+            "fwhm_pct": [
+              -11.445776859912172
+            ],
+            "fwhm_stations": 29,
+            "integral_width_pct": [
+              3.6376576550329665
+            ],
+            "integral_width_stations": 31,
+            "peak_current_pct": [
+              808.5509393285014
+            ],
+            "adjusted_width_pct": -11.446378516543021,
+            "adjusted_peak_pct": 808.5509393285014,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00031499999944284424,
+            "fwhm_pct": [
+              -14.646298790394551
+            ],
+            "fwhm_stations": 24,
+            "integral_width_pct": [
+              5.1247924172237
+            ],
+            "integral_width_stations": 24,
+            "peak_current_pct": [
+              1316.2682693311203
+            ],
+            "adjusted_width_pct": -14.646900447025402,
+            "adjusted_peak_pct": 1316.2682693311203,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000367499999349985,
+            "fwhm_pct": [
+              -48.342688356335195
+            ],
+            "fwhm_stations": 21,
+            "integral_width_pct": [
+              7.007489322279059
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              1421.5093023160678
+            ],
+            "adjusted_width_pct": -48.343290012966044,
+            "adjusted_peak_pct": 1421.5093023160678,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0004199999992571257,
+            "fwhm_pct": [
+              -63.84595961806927
+            ],
+            "fwhm_stations": 20,
+            "integral_width_pct": [
+              10.458110875751947
+            ],
+            "integral_width_stations": 27,
+            "peak_current_pct": [
+              1895.0150398643548
+            ],
+            "adjusted_width_pct": -63.84656127470012,
+            "adjusted_peak_pct": 1895.0150398643548,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_core": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.2499999907140715e-05,
+            "fwhm_pct": [
+              0.0037401159193262146
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              0.0032427722483907573
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              0.27311537682228604
+            ],
+            "adjusted_width_pct": 0.0031384592884764473,
+            "adjusted_peak_pct": 0.27311537682228604,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00010499999981428143,
+            "fwhm_pct": [
+              1.0064898108275155
+            ],
+            "fwhm_stations": 33,
+            "integral_width_pct": [
+              0.2555991643663713
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.4120524091815181
+            ],
+            "adjusted_width_pct": 1.0058881541966658,
+            "adjusted_peak_pct": -0.4120524091815181,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00015749999972142212,
+            "fwhm_pct": [
+              0.35901609814106283
+            ],
+            "fwhm_stations": 33,
+            "integral_width_pct": [
+              1.2687806864636997
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -4.715290182125309
+            ],
+            "adjusted_width_pct": 0.35841444151021307,
+            "adjusted_peak_pct": -4.715290182125309,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00020999999962856286,
+            "fwhm_pct": [
+              0.0811841051976403
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              1.4373918710362865
+            ],
+            "integral_width_stations": 31,
+            "peak_current_pct": [
+              -1.9872480859892572
+            ],
+            "adjusted_width_pct": 0.08058244856679053,
+            "adjusted_peak_pct": -1.9872480859892572,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0002624999995357036,
+            "fwhm_pct": [
+              -0.22329839165698973
+            ],
+            "fwhm_stations": 29,
+            "integral_width_pct": [
+              1.0321096330447421
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -1.2387375522462274
+            ],
+            "adjusted_width_pct": -0.2239000482878395,
+            "adjusted_peak_pct": -1.2387375522462274,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.00031499999944284424,
+            "fwhm_pct": [
+              1.9922891517256014
+            ],
+            "fwhm_stations": 26,
+            "integral_width_pct": [
+              0.06144062741413325
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              1.4922733828564683
+            ],
+            "adjusted_width_pct": 1.9916874950947516,
+            "adjusted_peak_pct": 1.4922733828564683,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.000367499999349985,
+            "fwhm_pct": [
+              -0.1116655075755868
+            ],
+            "fwhm_stations": 22,
+            "integral_width_pct": [
+              -0.44061216225309563
+            ],
+            "integral_width_stations": 27,
+            "peak_current_pct": [
+              -1.8662953951987138
+            ],
+            "adjusted_width_pct": -0.11226716420643656,
+            "adjusted_peak_pct": -1.8662953951987138,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 0.0004199999992571257,
+            "fwhm_pct": [
+              -8.721881468602543
+            ],
+            "fwhm_stations": 19,
+            "integral_width_pct": [
+              -3.048081587524365
+            ],
+            "integral_width_stations": 26,
+            "peak_current_pct": [
+              -1.8508019987133917
+            ],
+            "adjusted_width_pct": -8.722483125233392,
+            "adjusted_peak_pct": -1.8508019987133917,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ]
+      }
+    },
+    "slip_minus_5000": {
+      "geometry": {
+        "sheet_speed_m_s": 5085.700247491584,
+        "midpoint_relative_toroidal_speed_m_s": -5000.0,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.2100000000000286,
+        "transit_s": 4.199999999993098e-05,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.3499790000000181,
+          0.350021000000018
+        ]
+      },
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 64,
+          "step_s": 6.562499999989216e-07
+        }
+      ],
+      "comparisons": {
+        "core_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.249999999991373e-06,
+            "fwhm_pct": [
+              -0.023255430966917512
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.006128121229187489
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.005143435112520134
+            ],
+            "adjusted_width_pct": -0.02385708759776728,
+            "adjusted_peak_pct": -0.005143435112520134,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.0499999999982745e-05,
+            "fwhm_pct": [
+              -0.06800011700577313
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.029934419206123497
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.027671804052487037
+            ],
+            "adjusted_width_pct": -0.0686017736366229,
+            "adjusted_peak_pct": -0.027671804052487037,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.574999999997412e-05,
+            "fwhm_pct": [
+              -0.6402091344789751
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.4200187181812032
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              -0.08067629492175543
+            ],
+            "adjusted_width_pct": -0.6408107911098249,
+            "adjusted_peak_pct": -0.08067629492175543,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.099999999996549e-05,
+            "fwhm_pct": [
+              -0.9017952005319518
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.7599717427216768
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.164666143418557
+            ],
+            "adjusted_width_pct": -0.9023968571628016,
+            "adjusted_peak_pct": -0.164666143418557,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.6249999999956863e-05,
+            "fwhm_pct": [
+              -1.0276760719174605
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -1.0143305990484408
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              -0.27393165062241653
+            ],
+            "adjusted_width_pct": -1.0282777285483102,
+            "adjusted_peak_pct": -0.27393165062241653,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.149999999994824e-05,
+            "fwhm_pct": [
+              -1.1855810998021021
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -1.3991249218058832
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.3367245170393107
+            ],
+            "adjusted_width_pct": -1.186182756432952,
+            "adjusted_peak_pct": -0.3367245170393107,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.6749999999939616e-05,
+            "fwhm_pct": [
+              -1.4575411657868687
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -1.7306823534109395
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.35356324367027403
+            ],
+            "adjusted_width_pct": -1.4581428224177184,
+            "adjusted_peak_pct": -0.35356324367027403,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.199999999993098e-05,
+            "fwhm_pct": [
+              -1.8382162657265
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              -1.68571847492619
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.9229455969081757
+            ],
+            "adjusted_width_pct": -1.8388179223573498,
+            "adjusted_peak_pct": 0.9229455969081757,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "field_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.249999999991373e-06,
+            "fwhm_pct": [
+              -2.258960185574921e-06
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -3.08647163382858e-07
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              3.3645819463856697e-08
+            ],
+            "adjusted_width_pct": -0.0006039155910353422,
+            "adjusted_peak_pct": 3.3645819463856697e-08,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.0499999999982745e-05,
+            "fwhm_pct": [
+              1.0979716913439574e-06
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              6.381376316255682e-07
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              1.7360823889589483e-07
+            ],
+            "adjusted_width_pct": -0.0006005586591584233,
+            "adjusted_peak_pct": 1.7360823889589483e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.574999999997412e-05,
+            "fwhm_pct": [
+              8.52797890082968e-06
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              4.6394890818035606e-06
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              4.649482354679435e-07
+            ],
+            "adjusted_width_pct": -0.0005931286519489376,
+            "adjusted_peak_pct": 4.649482354679435e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.099999999996549e-05,
+            "fwhm_pct": [
+              1.2628926504554272e-05
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              6.796287599364348e-06
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              6.249163408966751e-07
+            ],
+            "adjusted_width_pct": -0.000589027704345213,
+            "adjusted_peak_pct": 6.249163408966751e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.6249999999956863e-05,
+            "fwhm_pct": [
+              1.9990634614330816e-05
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              1.0936615213452683e-05
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              8.106020965570337e-07
+            ],
+            "adjusted_width_pct": -0.0005816659962354365,
+            "adjusted_peak_pct": 8.106020965570337e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.149999999994824e-05,
+            "fwhm_pct": [
+              3.783202917606587e-05
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              2.0703868064408937e-05
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              8.283317365354037e-07
+            ],
+            "adjusted_width_pct": -0.0005638246016737014,
+            "adjusted_peak_pct": 8.283317365354037e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.6749999999939616e-05,
+            "fwhm_pct": [
+              3.771128478380348e-05
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              2.379293451149067e-05
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              1.0734158006897587e-06
+            ],
+            "adjusted_width_pct": -0.0005639453460659638,
+            "adjusted_peak_pct": 1.0734158006897587e-06,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.199999999993098e-05,
+            "fwhm_pct": [
+              4.880222206349316e-05
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              2.6716699408346756e-05
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              1.4165309147884386e-06
+            ],
+            "adjusted_width_pct": -0.0005528544087862741,
+            "adjusted_peak_pct": 1.4165309147884386e-06,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.249999999991373e-06,
+            "fwhm_pct": [
+              -0.022964335552111415
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.006125974159154612
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.0051439710178513565
+            ],
+            "adjusted_width_pct": -0.023565992182961182,
+            "adjusted_peak_pct": -0.0051439710178513565,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.0499999999982745e-05,
+            "fwhm_pct": [
+              -0.06813765317597031
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.02999727621889603
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.02767327476538295
+            ],
+            "adjusted_width_pct": -0.06873930980682008,
+            "adjusted_peak_pct": -0.02767327476538295,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.574999999997412e-05,
+            "fwhm_pct": [
+              -0.6834099176066588
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.43653050356691203
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              -0.08068238479250756
+            ],
+            "adjusted_width_pct": -0.6840115742375086,
+            "adjusted_peak_pct": -0.08068238479250756,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.099999999996549e-05,
+            "fwhm_pct": [
+              -0.9948850580218549
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.7994974935971788
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.16436778273757335
+            ],
+            "adjusted_width_pct": -0.9954867146527047,
+            "adjusted_peak_pct": -0.16436778273757335,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.6249999999956863e-05,
+            "fwhm_pct": [
+              -1.1122135548829348
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -1.0677241942862903
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              -0.2721581820176566
+            ],
+            "adjusted_width_pct": -1.1128152115137846,
+            "adjusted_peak_pct": -0.2721581820176566,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.149999999994824e-05,
+            "fwhm_pct": [
+              -1.2649110167272215
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -1.4707600719755853
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.3357266987327523
+            ],
+            "adjusted_width_pct": -1.2655126733580713,
+            "adjusted_peak_pct": -0.3357266987327523,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.6749999999939616e-05,
+            "fwhm_pct": [
+              -1.6143310571817837
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -1.8175321541715972
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.35283479251411176
+            ],
+            "adjusted_width_pct": -1.6149327138126335,
+            "adjusted_peak_pct": -0.35283479251411176,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.199999999993098e-05,
+            "fwhm_pct": [
+              -2.973736333914201
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -2.4215875017741584
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.7742389680996498
+            ],
+            "adjusted_width_pct": -2.9743379905450507,
+            "adjusted_peak_pct": 0.7742389680996498,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_core": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 5.249999999991373e-06,
+            "fwhm_pct": [
+              0.0002911631260538172
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              5.977145371982573e-05
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              -5.359328980603095e-07
+            ],
+            "adjusted_width_pct": -0.00031049350479595006,
+            "adjusted_peak_pct": -5.359328980603095e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.0499999999982745e-05,
+            "fwhm_pct": [
+              0.00106597798263941
+            ],
+            "fwhm_stations": 31,
+            "integral_width_pct": [
+              -6.287583429465116e-05
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -1.4711199924910545e-06
+            ],
+            "adjusted_width_pct": 0.00046432135178964273,
+            "adjusted_peak_pct": -1.4711199924910545e-06,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.574999999997412e-05,
+            "fwhm_pct": [
+              -0.04347914055712332
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.016581430497553118
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              -6.0947878077755036e-06
+            ],
+            "adjusted_width_pct": -0.044080797187973086,
+            "adjusted_peak_pct": -6.0947878077755036e-06,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.099999999996549e-05,
+            "fwhm_pct": [
+              -0.09393697663674372
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.03982843573264727
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0002988527903591276
+            ],
+            "adjusted_width_pct": -0.09453863326759349,
+            "adjusted_peak_pct": 0.0002988527903591276,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.6249999999956863e-05,
+            "fwhm_pct": [
+              -0.08541527531161774
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.05394073259390453
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              0.0017783400409809857
+            ],
+            "adjusted_width_pct": -0.08601693194246751,
+            "adjusted_peak_pct": 0.0017783400409809857,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.149999999994824e-05,
+            "fwhm_pct": [
+              -0.08028172184592064
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.07265163733373159
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              0.0010011895572592522
+            ],
+            "adjusted_width_pct": -0.0808833784767704,
+            "adjusted_peak_pct": 0.0010011895572592522,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.6749999999939616e-05,
+            "fwhm_pct": [
+              -0.15441627118604195
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              -0.08581193492288586
+            ],
+            "integral_width_stations": 33,
+            "peak_current_pct": [
+              0.0007310358301593212
+            ],
+            "adjusted_width_pct": -0.15501792781689172,
+            "adjusted_peak_pct": 0.0007310358301593212,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.199999999993098e-05,
+            "fwhm_pct": [
+              -0.1475043368113771
+            ],
+            "fwhm_stations": 35,
+            "integral_width_pct": [
+              -0.7484864003814984
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.14734669893848862
+            ],
+            "adjusted_width_pct": -0.14810599344222686,
+            "adjusted_peak_pct": -0.14734669893848862,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ]
+      }
+    },
+    "pattern_follows_exb_fit": {
+      "geometry": {
+        "sheet_speed_m_s": 64768.609434710525,
+        "midpoint_relative_toroidal_speed_m_s": -64682.90918721894,
+        "meters_per_length_unit": 0.1,
+        "seconds_per_time_unit": 0.004078528423054922,
+        "travel_m": 0.20999999997839852,
+        "transit_s": 3.2466072200088014e-06,
+        "stand_off_from_commanded_target_units": 0.42,
+        "field_frame": [
+          [
+            0.03182010884181455,
+            0.2603943376171184,
+            0.9649778596476901
+          ],
+          [
+            0.9994567688913081,
+            0.0,
+            -0.032957049584972656
+          ],
+          [
+            -0.00858182909649348,
+            0.9655023505600295,
+            -0.26025288331239754
+          ]
+        ],
+        "physical_interval_s": [
+          0.3499983766963899,
+          0.3500016233036099
+        ]
+      },
+      "numerics": [
+        {
+          "mesh": [
+            64,
+            52,
+            52
+          ],
+          "steps": 64,
+          "step_s": 5.072823781263752e-08
+        }
+      ],
+      "comparisons": {
+        "core_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.058259025011002e-07,
+            "fwhm_pct": [
+              -0.001781329832517553
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.0004844952787408374
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.0004022566064576516
+            ],
+            "adjusted_width_pct": -0.0023829864633673203,
+            "adjusted_peak_pct": -0.0004022566064576516,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 8.116518050022004e-07,
+            "fwhm_pct": [
+              -0.005315695244811902
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.002344795827990964
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.002169394113948897
+            ],
+            "adjusted_width_pct": -0.005917351875661669,
+            "adjusted_peak_pct": -0.002169394113948897,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.2174777075033005e-06,
+            "fwhm_pct": [
+              -0.08401743100042713
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.03769567300178078
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              -0.0063129838196562815
+            ],
+            "adjusted_width_pct": -0.0846190876312769,
+            "adjusted_peak_pct": -0.0063129838196562815,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.6233036100044007e-06,
+            "fwhm_pct": [
+              -0.1361310365651569
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.06080791046599865
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.012886333289341412
+            ],
+            "adjusted_width_pct": -0.13673269319600667,
+            "adjusted_peak_pct": -0.012886333289341412,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.029129512505501e-06,
+            "fwhm_pct": [
+              -0.1604527655913568
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.0729837090488128
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              -0.021284403112165062
+            ],
+            "adjusted_width_pct": -0.16105442222220656,
+            "adjusted_peak_pct": -0.021284403112165062,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.434955415006601e-06,
+            "fwhm_pct": [
+              -0.19823188522846147
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.09129664598048759
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.026296296090344562
+            ],
+            "adjusted_width_pct": -0.19883354185931124,
+            "adjusted_peak_pct": -0.026296296090344562,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.8407813175077012e-06,
+            "fwhm_pct": [
+              -0.2719750502653939
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.11046022642695608
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.027742658360818684
+            ],
+            "adjusted_width_pct": -0.2725767068962437,
+            "adjusted_peak_pct": -0.027742658360818684,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.2466072200088014e-06,
+            "fwhm_pct": [
+              -0.30383909133830933
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.1323204995791194
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.027385425797998852
+            ],
+            "adjusted_width_pct": -0.3044407479691591,
+            "adjusted_peak_pct": -0.027385425797998852,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "field_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.058259025011002e-07,
+            "fwhm_pct": [
+              -1.34989908140426e-08
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -1.8442025684350938e-09
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              2.0095036745715333e-10
+            ],
+            "adjusted_width_pct": -0.0006016701298405813,
+            "adjusted_peak_pct": 2.0095036745715333e-10,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 8.116518050022004e-07,
+            "fwhm_pct": [
+              6.562994592229643e-09
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              3.81457088138859e-09
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              1.0372591674467913e-09
+            ],
+            "adjusted_width_pct": -0.000601650067855175,
+            "adjusted_peak_pct": 1.0372591674467913e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.2174777075033005e-06,
+            "fwhm_pct": [
+              5.094094035484886e-08
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              2.772237994719262e-08
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              2.7770674648763816e-09
+            ],
+            "adjusted_width_pct": -0.0006016056899094124,
+            "adjusted_peak_pct": 2.7770674648763816e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.6233036100044007e-06,
+            "fwhm_pct": [
+              7.541729463156344e-08
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              4.0610625973158676e-08
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              3.734368370089669e-09
+            ],
+            "adjusted_width_pct": -0.0006015812135551357,
+            "adjusted_peak_pct": 3.734368370089669e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.029129512505501e-06,
+            "fwhm_pct": [
+              1.1942717925705892e-07
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              6.535283425534999e-08
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              4.844347145649408e-09
+            ],
+            "adjusted_width_pct": -0.0006015372036705102,
+            "adjusted_peak_pct": 4.844347145649408e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.434955415006601e-06,
+            "fwhm_pct": [
+              2.2605282090637502e-07
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              1.2374306024298676e-07
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              4.951372645223273e-09
+            ],
+            "adjusted_width_pct": -0.0006014305780288609,
+            "adjusted_peak_pct": 4.951372645223273e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.8407813175077012e-06,
+            "fwhm_pct": [
+              2.253002451269026e-07
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              1.4220913335805108e-07
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              6.421596587813383e-09
+            ],
+            "adjusted_width_pct": -0.0006014313306046404,
+            "adjusted_peak_pct": 6.421596587813383e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.2466072200088014e-06,
+            "fwhm_pct": [
+              2.9161053571868933e-07
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              1.5970740285808915e-07
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              8.480749436046153e-09
+            ],
+            "adjusted_width_pct": -0.0006013650203140486,
+            "adjusted_peak_pct": 8.480749436046153e-09,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_baseline": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.058259025011002e-07,
+            "fwhm_pct": [
+              -0.0017527726676624944
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.0004863016441758461
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.00040227441210349824
+            ],
+            "adjusted_width_pct": -0.0023544292985122617,
+            "adjusted_peak_pct": -0.00040227441210349824,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 8.116518050022004e-07,
+            "fwhm_pct": [
+              -0.005329954780253221
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.0023484774710924583
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.002169315032996
+            ],
+            "adjusted_width_pct": -0.005931611411102988,
+            "adjusted_peak_pct": -0.002169315032996,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.2174777075033005e-06,
+            "fwhm_pct": [
+              -0.08377391327533124
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.03775393023456308
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              -0.00631315271769628
+            ],
+            "adjusted_width_pct": -0.084375569906181,
+            "adjusted_peak_pct": -0.00631315271769628,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.6233036100044007e-06,
+            "fwhm_pct": [
+              -0.13930908699537614
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.06185625722572308
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.012864725621963835
+            ],
+            "adjusted_width_pct": -0.1399107436262259,
+            "adjusted_peak_pct": -0.012864725621963835,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.029129512505501e-06,
+            "fwhm_pct": [
+              -0.16504733834483698
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.07449499869275344
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              -0.021149636090478374
+            ],
+            "adjusted_width_pct": -0.16564899497568675,
+            "adjusted_peak_pct": -0.021149636090478374,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.434955415006601e-06,
+            "fwhm_pct": [
+              -0.2029425051811029
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.09282013534388511
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              -0.02620934773501782
+            ],
+            "adjusted_width_pct": -0.20354416181195267,
+            "adjusted_peak_pct": -0.02620934773501782,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.8407813175077012e-06,
+            "fwhm_pct": [
+              -0.2809499621245326
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.11304252393963266
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -0.027666934378700603
+            ],
+            "adjusted_width_pct": -0.28155161875538237,
+            "adjusted_peak_pct": -0.027666934378700603,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.2466072200088014e-06,
+            "fwhm_pct": [
+              -0.3124693142369517
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.13519868706177718
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              -0.027310296343219242
+            ],
+            "adjusted_width_pct": -0.31307097086780145,
+            "adjusted_peak_pct": -0.027310296343219242,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ],
+        "combined_vs_core": [
+          {
+            "time_since_entry_s": 0.0,
+            "fwhm_pct": [
+              0.0
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              0.0
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              0.0
+            ],
+            "adjusted_width_pct": -0.0006016566308497673,
+            "adjusted_peak_pct": 0.0,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 4.058259025011002e-07,
+            "fwhm_pct": [
+              2.8557673559248542e-05
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -1.8063741835661062e-06
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              -1.7805723562247522e-08
+            ],
+            "adjusted_width_pct": -0.0005730989572905187,
+            "adjusted_peak_pct": -1.7805723562247522e-08,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 8.116518050022004e-07,
+            "fwhm_pct": [
+              -1.4260293479395614e-05
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -3.681729432436498e-06
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              7.90826737429029e-08
+            ],
+            "adjusted_width_pct": -0.0006159169243291629,
+            "adjusted_peak_pct": 7.90826737429029e-08,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.2174777075033005e-06,
+            "fwhm_pct": [
+              0.00024372249447512928
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -5.8279201509137124e-05
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              -1.6890869813934728e-07
+            ],
+            "adjusted_width_pct": -0.000357934136374638,
+            "adjusted_peak_pct": -1.6890869813934728e-07,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 1.6233036100044007e-06,
+            "fwhm_pct": [
+              -0.0031823826406873756
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.0010489846253514123
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              2.1610452161091587e-05
+            ],
+            "adjusted_width_pct": -0.003784039271537143,
+            "adjusted_peak_pct": 2.1610452161091587e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.029129512505501e-06,
+            "fwhm_pct": [
+              -0.004601956720307054
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.0015123934447691667
+            ],
+            "integral_width_stations": 34,
+            "peak_current_pct": [
+              0.00013479571214780606
+            ],
+            "adjusted_width_pct": -0.005203613351156822,
+            "adjusted_peak_pct": 0.00013479571214780606,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.434955415006601e-06,
+            "fwhm_pct": [
+              -0.0047199764509398
+            ],
+            "fwhm_stations": 30,
+            "integral_width_pct": [
+              -0.0015248815290802575
+            ],
+            "integral_width_stations": 30,
+            "peak_current_pct": [
+              8.697122553247283e-05
+            ],
+            "adjusted_width_pct": -0.005321633081789567,
+            "adjusted_peak_pct": 8.697122553247283e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 2.8407813175077012e-06,
+            "fwhm_pct": [
+              -0.008999387949037985
+            ],
+            "fwhm_stations": 34,
+            "integral_width_pct": [
+              -0.0025851530786158428
+            ],
+            "integral_width_stations": 32,
+            "peak_current_pct": [
+              7.574499578666405e-05
+            ],
+            "adjusted_width_pct": -0.009601044579887752,
+            "adjusted_peak_pct": 7.574499578666405e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          },
+          {
+            "time_since_entry_s": 3.2466072200088014e-06,
+            "fwhm_pct": [
+              -0.008656524804950827
+            ],
+            "fwhm_stations": 36,
+            "integral_width_pct": [
+              -0.0028820009607355423
+            ],
+            "integral_width_stations": 36,
+            "peak_current_pct": [
+              7.51500349283063e-05
+            ],
+            "adjusted_width_pct": -0.009258181435800594,
+            "adjusted_peak_pct": 7.51500349283063e-05,
+            "passes_gate": false,
+            "seeded_field_lines": {}
+          }
+        ]
+      }
+    }
+  }
+}

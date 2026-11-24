@@ -57,6 +57,20 @@ The acceptance test requires above +0.020% FWHM across the full station set and 
 
 The first stationary fine-grid time step overflowed. The stationary comparison in the receipt uses the stable 240- and 480-step integrations on the fine mesh. Both replays are local sensitivity tests at one stand-off and one reachable trajectory. The supplemental actuator result establishes a force target for steering. The replay leaves the widening and breakup goals unmet. [Matched plasma replay](plasma/runs/settled_pass_replay.json)
 
+## Pattern-speed diagnostic
+
+The public analysis of DIII-D shot 158103 at 3796 ms provides a toroidal E×B flow fit and describes the applied n=2 RMP. A search of the public shot literature and the repository inputs did not locate a phase trace or a signed frequency for a specific island or current-sheet pattern at this time. The public Fusion Equilibrium Challenge release omits machine shot identifiers and lists coil currents as its magnetic inputs. Access to unpublished shot signals follows the DIII-D user agreement. [Shot analysis](https://m3dc1.pppl.gov/Papers/lyons_PPCF_17.pdf) · [Public benchmark schema](https://fusion-equilibrium-challenge.sophelio.io/data/) · [DIII-D user agreements](https://d3dfusion.org/user-agreements/)
+
+The orbit speed is 85.70 m/s at 2.198 m. A toroidally traveling mode within ±10 m/s of the probe has signed frequency divided by toroidal mode number in the range 5.48 to 6.93 Hz in the orbit sign convention. Establishing a target requires an identified mode, its signed phase rate, a radial localization consistent with the target and a separate estimate of local fluid velocity. The existing single magnetic precursor channel request can be extended to synchronous calibrated toroidally separated probes at compatible poloidal locations, their geometry and sign conventions, the applied coil traces or pickup-corrected data, and ECE or another radial diagnostic. The near-frequency band calls for a coherent interval around 3.796 s long enough to resolve it. A stationary feature requires a DC-sensitive diagnostic. [Precursor diagnostic request](../diiid_diagnostic_reconstruction_default/DIIID_LIMITED_DATA_ACCESS_REQUEST.md) · [DIII-D rotating island measurements](https://link.aps.org/accepted/10.1103/PhysRevLett.132.065107)
+
+`orbit/mode_pattern_speed.py` fits the chosen toroidal harmonic alongside other specified harmonics. Its input is an NPZ with `time_s`, `phi_rad` and `signal[time, probe]`. Supply calibrated synchronous samples, remove direct coil pickup and use the orbit's toroidal sign convention. The fit reports signed frequency, speed at the specified radius, interval, cycle coverage and phase residual. Synthetic forward and reverse tracks verified the sign and scale of the estimator. Shot-specific speed remains unmeasured in these runs.
+
+```sh
+python3 orbit/mode_pattern_speed.py magnetic_diagnostics.npz --mode 1 --max-mode 2 --radius 2.198
+```
+
+The slip and self-field replay uses prescribed pattern speeds as sensitivity inputs. In the stationary-pattern model the moving local field alone cleared the refined width and peak-current gates at two of eight post-entry samples. The solid core and the core with the field missed the refined gate, including in the near-comoving startup comparison. [Slip and self-field replay](plasma/README.md#relative-speed-and-self-field-sweep)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.
