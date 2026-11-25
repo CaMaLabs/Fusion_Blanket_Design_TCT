@@ -325,3 +325,34 @@ python3 plasma/jet_outer_target_reference.py /tmp/tct-jet-power-control.pdf --ou
 ```
 
 [JET reference calculation](runs/jet_outer_target_reference.json)
+
+## Route the modeled pressure exhaust to absorbing targets
+
+This calculation connects the evolving-pressure release history to the absorbing-target transport calculation. Each approximately 0.102 ms release interval uses the actual energy removed by the pressure model's outer sink over that interval. The release is piecewise constant. Every 0.816 ms, the solver records the spatial distribution of the removed heat and the magnetic field, including the imposed probe field when active. For each location sampled from the exhaust distribution, the calculation traces the field line in both directions and assigns an absorbing diffusion response. The field is frozen only for the transport of energy released in that snapshot's interval. The source strength, spatial weights and magnetic field can change between intervals.
+
+The two idealized plates cut the periodic slab at axial positions one period apart. The second test shifts both plates by a quarter period relative to the probe path. Each layout sweeps the assumed half-gap diffusion time $d^2/\chi_\parallel$ from 0.25 to 30 ms. Those time scales are model inputs. The published JET measurement supplies a dimensional reference for measurement, with no conversion of this reduced model's escaped energy to joules or calibration of its transport time.
+
+The calculation convolves the time-resolved exhaust with the diffusion response. It reports peak power integrated over both plates, energy received by the end of the 14.68 ms release window, and the arrival times for 10%, 50%, and 90% of the traced energy. The eventual-energy bounds account for paths that fail to reach both targets within the trace limit. The model includes perfect absorption at the plates and omits radiation, cross-field transport during propagation, material temperature response, and power per unit target area. It follows the exhaust released inside the recorded window, including background loss above the model floor, and leaves later plasma release outside the calculation.
+
+The diffusion kernel matches the earlier two-ended analytic solution. A rectangular release with a known delay distribution checks the convolution and energy conservation. Refinement increases magnetic and pressure resolution from 48 × 40 × 40 to 64 × 52 × 52, halves the pressure time step and the field-line trace step, and increases samples per release snapshot from 1,024 to 4,096.
+
+| Probe case | Change in peak power on both plates | Change in energy received by 14.68 ms | Change in eventual energy from the tracked release |
+| --- | ---: | ---: | ---: |
+| 46 mm solid | +53.86% to +109.22% | +45.46% to +78.72% | +77.17% |
+| 60 mm solid | +170.20% to +215.82% | +82.56% to +144.15% | +145.36% |
+| Field only | −0.352% to −0.005% | −0.073% to +0.073% | +0.00065% |
+
+The ranges cover both plate cuts and all five diffusion times on the finer level. Both solids increased peak power and energy received within the release window at all ten settings on both levels. The median arrival for the 60 mm solid moved 0.44–4.45 ms later than the matched control. The 46 mm solid changed the median by −0.27 to +3.92 ms. Field-only changes were small on both levels.
+
+Every sampled path reached plates in both directions, and the total arrival after the transport tail matched the simulated escaped energy to within $10^{-9}$ normalized units. If a physical mechanism diverts part of that energy away from a specific measured target, equal total energy on that target would require the probe-to-control ratio of its capture fractions to fall to 0.564 or lower for the 46 mm case and 0.408 or lower for the 60 mm case. A timing change alone retains the full tracked load on the modeled plates. Calibrated measurements from matched probe-on and probe-off shots are needed for actual wall energy.
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/island_target_snapshots.py --cache /tmp/tct-target-release --levels 0 1
+python3 plasma/island_target.py --cache /tmp/tct-target-release --levels 0 --output plasma/runs/island_target_screen.json
+python3 plasma/island_target.py --cache /tmp/tct-target-release --levels 1 --output plasma/runs/island_target_refined.json
+```
+
+[Coarse coupled runs](runs/island_target_screen.json) · [Refined coupled runs](runs/island_target_refined.json)

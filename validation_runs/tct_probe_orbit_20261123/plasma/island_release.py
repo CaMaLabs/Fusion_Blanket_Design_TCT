@@ -52,9 +52,13 @@ def transport_heat(heat, velocity, spacing):
     return result
 
 
+def exhaust_profile(grid, center=EXHAUST_CENTER):
+    return EXHAUST_RATE * np.exp(-((grid.y-center)/EXHAUST_WIDTH)**2)
+
+
 def equations(grid, model, solid, field, drive, *, exhaust_center=EXHAUST_CENTER):
     curvature = drive * (.5 * (1 + np.cos(2*grid.y)))**4
-    exhaust_mask = EXHAUST_RATE * np.exp(-((grid.y-exhaust_center)/EXHAUST_WIDTH)**2)
+    exhaust_mask = exhaust_profile(grid, exhaust_center)
     cell = grid.volume / np.prod(grid.shape)
     spacing = mhd.LENGTH / grid.shape
 
@@ -87,7 +91,7 @@ def equations(grid, model, solid, field, drive, *, exhaust_center=EXHAUST_CENTER
     return evaluate
 
 
-def simulate(name, level, drive=CURVATURE, *, exhaust_center=EXHAUST_CENTER):
+def simulate(name, level, drive=CURVATURE, *, exhaust_center=EXHAUST_CENTER, observer=None):
     base_case = name.removesuffix(NO_DRIVE_SUFFIX)
     solid, field, offset = CASES[base_case]
     mesh, dt = LEVELS[level]
@@ -118,6 +122,8 @@ def simulate(name, level, drive=CURVATURE, *, exhaust_center=EXHAUST_CENTER):
                     magnetic=.5*norm(state[1]), thermal=float(cell*np.sum(state[2])),
                     exhaust_power=float(powers[0]), cumulative=dict(zip(RATES, integration.tolist(), strict=True)),
                 ))
+                if observer is not None:
+                    observer(grid, state, model, solid, field, t)
             if step == count:
                 break
             predictor = tuple(value + dt*rate for value, rate in zip(state, k1, strict=True))

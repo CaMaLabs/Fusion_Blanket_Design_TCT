@@ -35,7 +35,7 @@ def packet_seeds(power):
     return np.vstack((xy, np.full(xy.shape[1], AXIAL_CUT)))
 
 
-def connections(field, seeds, half_gap, ds, sign):
+def connections(field, seeds, half_gap, ds, sign, *, axial_center=AXIAL_CUT, maximum_length=MAX_LENGTH):
     """Follow unit-speed field lines to their first plate intersection."""
     scale = np.asarray(field.shape[1:])[:, None] / LENGTH[:, None]
     center = LENGTH[:, None] / 2
@@ -52,15 +52,15 @@ def connections(field, seeds, half_gap, ds, sign):
     lengths = np.full(len(ids), np.inf)
     plate = np.zeros(len(ids), dtype=int)
     landing = np.zeros((2, len(ids)))
-    for i in range(round(MAX_LENGTH/ds)):
+    for i in range(round(maximum_length/ds)):
         if not ids.size:
             break
         next_position = position + ds*tangent(position + .5*ds*tangent(position))
-        crossed = abs(next_position[2] - AXIAL_CUT) >= half_gap
+        crossed = abs(next_position[2] - axial_center) >= half_gap
         if np.any(crossed):
             found = ids[crossed]
-            side = np.sign(next_position[2, crossed] - AXIAL_CUT)
-            z_plate = AXIAL_CUT + side*half_gap
+            side = np.sign(next_position[2, crossed] - axial_center)
+            z_plate = axial_center + side*half_gap
             fraction = (z_plate - position[2, crossed]) / (next_position[2, crossed] - position[2, crossed])
             lengths[found] = (i + fraction)*ds
             plate[found] = side.astype(int)

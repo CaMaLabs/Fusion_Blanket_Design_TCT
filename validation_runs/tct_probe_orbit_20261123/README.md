@@ -83,6 +83,8 @@ In the absorbing-endplate replay, an identical passive heat pulse reached the ta
 
 The self-evolving pressure-layer follow-up includes heating from resolved resistive and viscous dissipation while the probe crosses. Relative to the matched no-probe case, modeled exhaust by 14.68 ms increased 77.2% with the 46 mm centered solid and 145.4% with the 60 mm solid. The field-only case stayed near the unforced result. The loss region is a normalized slab closure for energy escaping the plasma. [Pressure-release comparison](plasma/README.md#self-evolving-pressure-release)
 
+Routing the evolving exhaust to idealized absorbing targets increased both peak target power and energy received within the release window for both solids in every tested layout and transport setting. The 60 mm solid still delayed median arrival. [Coupled release and target transport](plasma/README.md#route-the-modeled-pressure-exhaust-to-absorbing-targets)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.
