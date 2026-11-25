@@ -215,3 +215,33 @@ python3 plasma/island_energy.py --cache /tmp/tct-island-energy --refine --cases 
 ```
 
 [Six-case screen](runs/island_energy_screen.json) · [Refined centered crossings](runs/island_energy_refined.json)
+
+## Absorbing-endplate heat pulse
+
+The matched comparison launches the same unit heat pulse in all cases immediately at clearance, 1.224 ms later, or 2.447 ms later. The source is centered on the initial island axis in the original axial cut. The two packets have Gaussian widths of 12 × 6 mm and 24 × 12 mm, truncated at 2.5 standard deviations in each transverse coordinate. Each release is a separate comparison on a common magnetic history. The endplates are perpendicular to the guide direction at 80 mm or 157 mm on either side of the launch plane. The perpendicular sides are periodic.
+
+The magnetic field is frozen during heat transport. Each release sample follows its magnetic field line in both directions until the first plate intersections. The heat diffuses along the resulting constant-area path with spatially uniform parallel diffusivity and perfectly absorbing endpoints. The packet split and arrival history follow the absorbing 1D diffusion solution. A sample is marked unresolved if either direction has no intersection within 0.60 m of path length. The total deposited fraction is counted across both plates. Peak fluence is the maximum on either plate after 10 mm Gaussian smoothing of the deposited footprint.
+
+Time after each heat release is expressed as $\theta=\chi_\parallel t/d^2$, where $d$ is the plate half-gap. Both-plate energy integrated up to $\theta=1$ measures how much of the pulse arrives within a common diffusion window. Eventual peak fluence measures the largest local accumulated dose per unit of injected heat. For a pulse with all field lines connected to the plates, the two plates together ultimately receive all the injected heat in this model. The resolved MHD resistive and viscous dissipation from the previous audit does not feed this pulse. The model prescribes the release and omits thermal feedback, cross-field heat transport, sheath physics, radiation, and tokamak divertor geometry.
+
+The straight-field benchmark checks the analytic diffusion arrival curve and the 50/50 pulse split. The tilted-field benchmark checks the endpoint locations and lengths, and an unequal-length test checks the non-symmetric heat split. Refinement increases the magnetic mesh from 64 × 52 × 52 to 80 × 64 × 64 and the Sobol sample count from 8,192 to 32,768 per packet. The field-line trace step falls from 4 mm to 2 mm.
+
+| Centered crossing case | Pulse energy on both plates by $\theta=1$ | Change in peak fluence by $\theta=1$ | Change in eventual peak fluence |
+| --- | ---: | ---: | ---: |
+| Unforced | 84.5% to 88.5% | Reference | Reference |
+| 46 mm solid | 38.1% to 64.7% | −71.7% to −28.2% | −24.5% to +40.6% |
+| 46 mm solid with field | 36.9% to 61.4% | −77.8% to −31.4% | −34.9% to +50.9% |
+| 60 mm solid | 33.7% to 50.5% | −75.9% to −33.2% | −37.5% to +56.6% |
+| Field only | 84.4% to 88.5% | −2.03% to +0.11% | −2.03% to +0.11% |
+
+The ranges cover all 12 combinations of packet width, plate gap and release time on the finer mesh. The comparison uses the same combination in the unforced run. All traced paths resolved at both ends. The early energy reduction for all solid cases agreed within 1.81 percentage points between numerical levels. The eventual hotspot response had both signs at both levels and individual fluence comparisons moved by as much as 36.5 percentage points under joint refinement. Treat the short-window delay as the numerical result and the eventual hotspot values as geometry- and resolution-sensitive. By $\theta=4$, the solid cases had delivered 90.1% to 98.9% of the prescribed heat on the finer mesh, with the rest following later.
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/island_heat_snapshots.py --cache /tmp/tct-heat-fields --levels 0 1 --cases unforced centered_solid centered_field centered_combined wide_centered_solid
+python3 plasma/island_heat.py --cache /tmp/tct-heat-fields --cases centered_solid centered_field centered_combined wide_centered_solid --output plasma/runs/island_heat_screen.json
+```
+
+[Heat-pulse results](runs/island_heat_screen.json)

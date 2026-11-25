@@ -74,7 +74,7 @@ def energy_probe(grid, model, solid, target):
     return observe
 
 
-def simulate(name, level):
+def simulate(name, level, *, inspect=None, cadence=SAMPLE_CADENCE):
     solid, field, offset = CASES[name]
     mesh = MESHES[level]
     grid = mhd.Grid(mesh, "island", "sphere")
@@ -85,11 +85,12 @@ def simulate(name, level):
     model = crossing_model(CrossIsland(target, offset))
     dt = CADENCE / (80 if level == 2 else 40)
     count = round((CROSSING + AFTER) / dt)
+    if inspect is None:
+        inspect = energy_probe(grid, model, solid, target)
     with np.errstate(over="raise", invalid="raise"):
         rows = integrate(grid, dt, name, initial, 0, count, model=model,
-                         inspect=energy_probe(grid, model, solid, target),
-                         cadence=SAMPLE_CADENCE, core=solid, field=field)
-    assert len(rows) == round((CROSSING + AFTER) / SAMPLE_CADENCE) + 1
+                         inspect=inspect, cadence=cadence, core=solid, field=field)
+    assert len(rows) == round((CROSSING + AFTER) / cadence) + 1
     return dict(case=name, mesh=list(mesh), dt_s=dt*SECONDS_PER_UNIT, rows=rows)
 
 

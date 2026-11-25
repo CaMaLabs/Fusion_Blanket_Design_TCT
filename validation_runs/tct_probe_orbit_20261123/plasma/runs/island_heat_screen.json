@@ -1,0 +1,3287 @@
+{
+  "model": "Frozen periodic MHD field, constant-area parallel diffusion on traced lines, two absorbing axial plates",
+  "normalization": "Unit pulse energy, no conversion to tokamak ELM joules",
+  "diffusion_time_theta": "chi_parallel * elapsed_time / plate_half_gap**2",
+  "theta": [
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "transverse_packet_sigma_m": {
+    "narrow": [
+      0.012,
+      0.006
+    ],
+    "broad": [
+      0.024,
+      0.012
+    ]
+  },
+  "footprint_sigma_m": 0.010000000000000002,
+  "maximum_trace_length_each_direction_m": 0.6000000000000001,
+  "results": [
+    {
+      "case": "unforced",
+      "level": 0,
+      "mesh": [
+        64,
+        52,
+        52
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 8192,
+      "field_line_step_m": 0.004,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000025566846,
+            0.49999999744331536
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08251086061691232,
+            0.29736850515656843,
+            0.6095471936916186,
+            0.8798118730121778,
+            0.9884698572057837,
+            0.9998872459024073
+          ],
+          "mean_exit_theta_resolved": 0.5224799167614607,
+          "worst_plate_fluence_per_m2": 322.70969095555984,
+          "worst_plate_fluence_at_theta_1_per_m2": 286.2284444908214,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000250475314,
+            0.49999997495246856
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06655371067146876,
+            0.25966366931372276,
+            0.5615512943220178,
+            0.8446872271377301,
+            0.9785410481317198,
+            0.9993782755817534
+          ],
+          "mean_exit_theta_resolved": 0.5866532589370035,
+          "worst_plate_fluence_per_m2": 153.5272749280857,
+          "worst_plate_fluence_at_theta_1_per_m2": 135.1280597934733,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.50000000170132,
+            0.49999999829868
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08398131953714809,
+            0.3004866771607549,
+            0.6132331617900488,
+            0.8822274538161016,
+            0.9889951172849791,
+            0.9999002978806176
+          ],
+          "mean_exit_theta_resolved": 0.5180860901464411,
+          "worst_plate_fluence_per_m2": 238.58190378081514,
+          "worst_plate_fluence_at_theta_1_per_m2": 212.34691194222412,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000127583657,
+            0.4999999872416343
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06947030323795078,
+            0.2671847301698692,
+            0.5716914037736938,
+            0.8527622595159021,
+            0.9812488400162518,
+            0.9995680976906487
+          ],
+          "mean_exit_theta_resolved": 0.5716858552727199,
+          "worst_plate_fluence_per_m2": 115.84591559642026,
+          "worst_plate_fluence_at_theta_1_per_m2": 102.75483827221362,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000006225013,
+            0.4999999993774988
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08384523320721596,
+            0.3001899360598158,
+            0.6128736764256614,
+            0.8819772893536916,
+            0.9889343916160203,
+            0.9998985554592366
+          ],
+          "mean_exit_theta_resolved": 0.5185371473262903,
+          "worst_plate_fluence_per_m2": 339.5765678284596,
+          "worst_plate_fluence_at_theta_1_per_m2": 301.3553218417241,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.499999993338499,
+            0.500000006661501
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06923109740492346,
+            0.26644262482728187,
+            0.570584980631555,
+            0.8517274279823999,
+            0.9808156940707862,
+            0.9995321923529799
+          ],
+          "mean_exit_theta_resolved": 0.5736375695406256,
+          "worst_plate_fluence_per_m2": 160.6318871303542,
+          "worst_plate_fluence_at_theta_1_per_m2": 141.56898762166725,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000010851761,
+            0.49999999891482394
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08505559865869661,
+            0.3027199055627196,
+            0.6158355802177965,
+            0.8838883839292647,
+            0.9893359924079368,
+            0.9999077516986364
+          ],
+          "mean_exit_theta_resolved": 0.5150520556502971,
+          "worst_plate_fluence_per_m2": 259.78213911917004,
+          "worst_plate_fluence_at_theta_1_per_m2": 231.22756109725032,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000002960916,
+            0.4999999997039085
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07185767705174197,
+            0.2730446820647235,
+            0.5793339493662063,
+            0.8585422817322563,
+            0.9829905788036706,
+            0.99966738107366
+          ],
+          "mean_exit_theta_resolved": 0.5611037945055658,
+          "worst_plate_fluence_per_m2": 125.27938536079562,
+          "worst_plate_fluence_at_theta_1_per_m2": 111.21188109283275,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000014633386,
+            0.49999999853666155
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0850159281240051,
+            0.302628367885427,
+            0.6157194625322904,
+            0.8837992934820448,
+            0.9893112181199282,
+            0.9999069591182259
+          ],
+          "mean_exit_theta_resolved": 0.5152100882498283,
+          "worst_plate_fluence_per_m2": 354.919691292703,
+          "worst_plate_fluence_at_theta_1_per_m2": 315.14484765577635,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999999411983226,
+            0.5000000058801678
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07179730180379942,
+            0.2727640690173527,
+            0.5788523938479119,
+            0.8580109052502058,
+            0.9827358445682564,
+            0.9996461579612483
+          ],
+          "mean_exit_theta_resolved": 0.5621050364551886,
+          "worst_plate_fluence_per_m2": 166.4231487742955,
+          "worst_plate_fluence_at_theta_1_per_m2": 146.87870077610162,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000013622092,
+            0.49999999863779065
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08598909735211893,
+            0.3046370629974763,
+            0.6180511941021447,
+            0.8852831522734704,
+            0.9896138155264377,
+            0.9999134151048323
+          ],
+          "mean_exit_theta_resolved": 0.5124967345609001,
+          "worst_plate_fluence_per_m2": 281.13645970532673,
+          "worst_plate_fluence_at_theta_1_per_m2": 250.25119077061083,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500000000635876,
+            0.499999999364124
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07412321627051414,
+            0.27847169057488314,
+            0.5862953757887055,
+            0.8636868219091755,
+            0.9844618292339076,
+            0.9997411976138904
+          ],
+          "mean_exit_theta_resolved": 0.5517305341404098,
+          "worst_plate_fluence_per_m2": 134.91793241508088,
+          "worst_plate_fluence_at_theta_1_per_m2": 119.78882502824732,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "case": "unforced",
+      "level": 1,
+      "mesh": [
+        80,
+        64,
+        64
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 32768,
+      "field_line_step_m": 0.002,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999991518017,
+            0.5000000008481983
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08250556571670495,
+            0.29735712918910273,
+            0.6095336397239555,
+            0.8798029095443135,
+            0.9884678709656856,
+            0.9998871938109876
+          ],
+          "mean_exit_theta_resolved": 0.5224961901288487,
+          "worst_plate_fluence_per_m2": 322.4612943033537,
+          "worst_plate_fluence_at_theta_1_per_m2": 286.010973543359,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999929394011,
+            0.5000000070605988
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06653631420167651,
+            0.259614748750205,
+            0.5614816755724952,
+            0.8446284806075652,
+            0.9785188982968965,
+            0.9993762949129135
+          ],
+          "mean_exit_theta_resolved": 0.5867644467590947,
+          "worst_plate_fluence_per_m2": 153.43421227458668,
+          "worst_plate_fluence_at_theta_1_per_m2": 135.0402390880946,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000001435971,
+            0.4999999998564029
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0839776299875022,
+            0.30047889355744317,
+            0.6132240036936372,
+            0.8822215279586858,
+            0.9889938654805434,
+            0.9999002685921626
+          ],
+          "mean_exit_theta_resolved": 0.5180968818710484,
+          "worst_plate_fluence_per_m2": 238.63774319135936,
+          "worst_plate_fluence_at_theta_1_per_m2": 212.39576872870728,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999960445494,
+            0.5000000039554506
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06945579765145166,
+            0.2671456569238882,
+            0.571637386581852,
+            0.8527183167231089,
+            0.9812335312776738,
+            0.9995669505115528
+          ],
+          "mean_exit_theta_resolved": 0.5717675667253287,
+          "worst_plate_fluence_per_m2": 115.98877450938713,
+          "worst_plate_fluence_at_theta_1_per_m2": 102.94839339683155,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999998085439,
+            0.5000000001914562
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0838457520149408,
+            0.30019090316395153,
+            0.612874715297264,
+            0.8819778643073496,
+            0.9889344704608344,
+            0.9998985550361381
+          ],
+          "mean_exit_theta_resolved": 0.5185360637163866,
+          "worst_plate_fluence_per_m2": 339.307831039246,
+          "worst_plate_fluence_at_theta_1_per_m2": 301.11711470962115,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999927265768,
+            0.5000000072734232
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06922530065886298,
+            0.2664243009695133,
+            0.5705574398131514,
+            0.8517028278674874,
+            0.9808057117023418,
+            0.9995312692759732
+          ],
+          "mean_exit_theta_resolved": 0.5736842935232012,
+          "worst_plate_fluence_per_m2": 160.4217706651683,
+          "worst_plate_fluence_at_theta_1_per_m2": 141.3846274199602,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000006523277,
+            0.49999999934767225
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08505635938838137,
+            0.3027213964520314,
+            0.6158372491315496,
+            0.883889385513844,
+            0.9893361722844404,
+            0.9999077544758241
+          ],
+          "mean_exit_theta_resolved": 0.5150501956917338,
+          "worst_plate_fluence_per_m2": 259.5136547440071,
+          "worst_plate_fluence_at_theta_1_per_m2": 230.98948147069046,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.499999996338775,
+            0.500000003661225
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07185310507296823,
+            0.27303085505918706,
+            0.5793137363876273,
+            0.8585248045226237,
+            0.9829839694221087,
+            0.9996668612950501
+          ],
+          "mean_exit_theta_resolved": 0.5611363394241555,
+          "worst_plate_fluence_per_m2": 125.20138283546241,
+          "worst_plate_fluence_at_theta_1_per_m2": 111.14373155020391,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000006761526,
+            0.4999999993238473
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08502020870208196,
+            0.30263710732267635,
+            0.6157295231552156,
+            0.883805591634293,
+            0.9893124583087818,
+            0.9999069837091796
+          ],
+          "mean_exit_theta_resolved": 0.5151985320213038,
+          "worst_plate_fluence_per_m2": 355.383248966176,
+          "worst_plate_fluence_at_theta_1_per_m2": 315.5555369056093,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999927157592,
+            0.5000000072842408
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07180106324889095,
+            0.272769999673396,
+            0.578857340964944,
+            0.8580118092379942,
+            0.982734342633393,
+            0.9996458723740489
+          ],
+          "mean_exit_theta_resolved": 0.5621041956253785,
+          "worst_plate_fluence_per_m2": 166.8786158950643,
+          "worst_plate_fluence_at_theta_1_per_m2": 147.28035182518542,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000009033764,
+            0.49999999909662357
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08599274594327898,
+            0.30464444470591945,
+            0.6180596390731949,
+            0.8852883840812173,
+            0.9896148234678004,
+            0.9999134341736549
+          ],
+          "mean_exit_theta_resolved": 0.5124871087786901,
+          "worst_plate_fluence_per_m2": 281.45152262449784,
+          "worst_plate_fluence_at_theta_1_per_m2": 250.53210049278954,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999951209365,
+            0.5000000048790635
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0741268944705082,
+            0.27847813241999575,
+            0.586301681200893,
+            0.8636894882818658,
+            0.9844614212621591,
+            0.9997410639869511
+          ],
+          "mean_exit_theta_resolved": 0.5517259769114861,
+          "worst_plate_fluence_per_m2": 135.0169461402193,
+          "worst_plate_fluence_at_theta_1_per_m2": 119.87841379396215,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": 0.0,
+            "eventual_peak_fluence_change_pct": 0.0,
+            "peak_fluence_at_theta_1_change_pct": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "case": "centered_solid",
+      "level": 0,
+      "mesh": [
+        64,
+        52,
+        52
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 8192,
+      "field_line_step_m": 0.004,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500034192534418,
+            0.4999658074655819
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0010468197285305187,
+            0.021797249285461198,
+            0.1329019707386539,
+            0.3801506341592832,
+            0.6924942454886363,
+            0.9232084112075549
+          ],
+          "mean_exit_theta_resolved": 1.740127051324488,
+          "worst_plate_fluence_per_m2": 216.75138644324113,
+          "worst_plate_fluence_at_theta_1_per_m2": 74.08759123522718,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4996612388528946,
+            "eventual_peak_fluence_change_pct": -32.8339394452552,
+            "peak_fluence_at_theta_1_change_pct": -74.11592290660582
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500002294215167,
+            0.49999770578483294
+          ],
+          "cumulative_both_plate_fractions": [
+            0.006873200696573246,
+            0.05440336756761692,
+            0.20799193501124588,
+            0.4769813800908326,
+            0.7666885542629407,
+            0.9486165681732404
+          ],
+          "mean_exit_theta_resolved": 1.455947084350696,
+          "worst_plate_fluence_per_m2": 137.81032415206167,
+          "worst_plate_fluence_at_theta_1_per_m2": 48.37525552818271,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.36770584704689757,
+            "eventual_peak_fluence_change_pct": -10.237236858001975,
+            "peak_fluence_at_theta_1_change_pct": -64.2004365324875
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999906957974485,
+            0.5000093042025515
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0006812982994852816,
+            0.02094843788978578,
+            0.13808985658699022,
+            0.3950279441971367,
+            0.7106068114607644,
+            0.9332829545086508
+          ],
+          "mean_exit_theta_resolved": 1.6674338197694392,
+          "worst_plate_fluence_per_m2": 219.28983189533903,
+          "worst_plate_fluence_at_theta_1_per_m2": 82.48759158159595,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.48719950961896485,
+            "eventual_peak_fluence_change_pct": -8.086142150663578,
+            "peak_fluence_at_theta_1_change_pct": -61.15432486061329
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999497809401896,
+            0.5000502190598104
+          ],
+          "cumulative_both_plate_fractions": [
+            0.00706832465494645,
+            0.05352176674513295,
+            0.20871647570310944,
+            0.4820806723296821,
+            0.7735452291750983,
+            0.9526966278912572
+          ],
+          "mean_exit_theta_resolved": 1.4281149507200368,
+          "worst_plate_fluence_per_m2": 115.71970115921694,
+          "worst_plate_fluence_at_theta_1_per_m2": 44.82871622843062,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.37068158718622,
+            "eventual_peak_fluence_change_pct": -0.10895026946226016,
+            "peak_fluence_at_theta_1_change_pct": -56.37313338991168
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000362378131425,
+            0.49996376218685745
+          ],
+          "cumulative_both_plate_fractions": [
+            0.003225692032596115,
+            0.04423633646792353,
+            0.20102943466326167,
+            0.4826974964847504,
+            0.7860460119677495,
+            0.9629274871219171
+          ],
+          "mean_exit_theta_resolved": 1.3799411474660737,
+          "worst_plate_fluence_per_m2": 210.32113783941958,
+          "worst_plate_fluence_at_theta_1_per_m2": 107.00642525456269,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.39927979286894116,
+            "eventual_peak_fluence_change_pct": -38.063707050109144,
+            "peak_fluence_at_theta_1_change_pct": -64.4916092403492
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000278320751563,
+            0.49997216792484367
+          ],
+          "cumulative_both_plate_fractions": [
+            0.008365158984610002,
+            0.06917687258312798,
+            0.2514700687061079,
+            0.541448710813798,
+            0.8242952208616435,
+            0.9720441070721468
+          ],
+          "mean_exit_theta_resolved": 1.2367822521985488,
+          "worst_plate_fluence_per_m2": 146.90912614820525,
+          "worst_plate_fluence_at_theta_1_per_m2": 74.05486239680548,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3102787171686019,
+            "eventual_peak_fluence_change_pct": -8.542986842340216,
+            "peak_fluence_at_theta_1_change_pct": -47.68991172366671
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000097673793337,
+            0.49999023262066633
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0007031178380688544,
+            0.02210496159680385,
+            0.14335348059988892,
+            0.4042652486394435,
+            0.7200484971169503,
+            0.9379561444600045
+          ],
+          "mean_exit_theta_resolved": 1.629887794722705,
+          "worst_plate_fluence_per_m2": 253.26944914243578,
+          "worst_plate_fluence_at_theta_1_per_m2": 99.66964234615612,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4796231352898212,
+            "eventual_peak_fluence_change_pct": -2.5069814263661505,
+            "peak_fluence_at_theta_1_change_pct": -56.895431550983325
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999224071117987,
+            0.5000077592888201
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0059593387036622515,
+            0.0493945269447179,
+            0.20251910777826831,
+            0.4769939995887532,
+            0.772290380665972,
+            0.9535983225525715
+          ],
+          "mean_exit_theta_resolved": 1.4326849287023795,
+          "worst_plate_fluence_per_m2": 151.6935592867755,
+          "worst_plate_fluence_at_theta_1_per_m2": 60.438484625943794,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3815482821435031,
+            "eventual_peak_fluence_change_pct": 21.08421417451001,
+            "peak_fluence_at_theta_1_change_pct": -45.654651254847934
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49997533281372475,
+            0.5000246671862753
+          ],
+          "cumulative_both_plate_fractions": [
+            0.009551913175951273,
+            0.08597870409268733,
+            0.2995597649787274,
+            0.6087467945933185,
+            0.8770087743746127,
+            0.9873950697489797
+          ],
+          "mean_exit_theta_resolved": 1.0510352038139843,
+          "worst_plate_fluence_per_m2": 330.8717370143125,
+          "worst_plate_fluence_at_theta_1_per_m2": 199.16629556029196,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.2750524988887263,
+            "eventual_peak_fluence_change_pct": -6.7756044165377505,
+            "peak_fluence_at_theta_1_change_pct": -36.80166531618643
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000156375351019,
+            0.4999843624648982
+          ],
+          "cumulative_both_plate_fractions": [
+            0.01791615155636652,
+            0.11493591614451223,
+            0.3448757828819663,
+            0.650896385532924,
+            0.8955031222171008,
+            0.9891747751069717
+          ],
+          "mean_exit_theta_resolved": 0.9698160392494014,
+          "worst_plate_fluence_per_m2": 159.91070405490987,
+          "worst_plate_fluence_at_theta_1_per_m2": 99.18053054105523,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.2071145197172819,
+            "eventual_peak_fluence_change_pct": -3.9131844141573446,
+            "peak_fluence_at_theta_1_change_pct": -32.47453169384739
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49996906070427805,
+            0.500030939295722
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0027063248425707224,
+            0.03441397496967945,
+            0.17349506157912437,
+            0.4447079567171071,
+            0.7527697545799715,
+            0.9497602071486402
+          ],
+          "mean_exit_theta_resolved": 1.5058453790399666,
+          "worst_plate_fluence_per_m2": 352.9320131393273,
+          "worst_plate_fluence_at_theta_1_per_m2": 147.33925603696912,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4405751955563633,
+            "eventual_peak_fluence_change_pct": 25.537617393792722,
+            "peak_fluence_at_theta_1_change_pct": -41.12345456448775
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999936681044795,
+            0.5000063318955206
+          ],
+          "cumulative_both_plate_fractions": [
+            0.01195031973279288,
+            0.07694841166442365,
+            0.25865102416079483,
+            0.5435526393749244,
+            0.818396840718828,
+            0.9671635280923041
+          ],
+          "mean_exit_theta_resolved": 1.255467456987559,
+          "worst_plate_fluence_per_m2": 163.84885960140048,
+          "worst_plate_fluence_at_theta_1_per_m2": 70.735463572369,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3201341825342511,
+            "eventual_peak_fluence_change_pct": 21.443352020332142,
+            "peak_fluence_at_theta_1_change_pct": -40.94986443377425
+          }
+        }
+      ]
+    },
+    {
+      "case": "centered_solid",
+      "level": 1,
+      "mesh": [
+        80,
+        64,
+        64
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 32768,
+      "field_line_step_m": 0.002,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000265178891605,
+            0.4999734821108395
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0012172647521900208,
+            0.022610655273379847,
+            0.13408663014895772,
+            0.38113653392423635,
+            0.6930397692690132,
+            0.9233438195488336
+          ],
+          "mean_exit_theta_resolved": 1.737722295329353,
+          "worst_plate_fluence_per_m2": 243.31683964149613,
+          "worst_plate_fluence_at_theta_1_per_m2": 80.98118250851523,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.49866637562007715,
+            "eventual_peak_fluence_change_pct": -24.5438618711872,
+            "peak_fluence_at_theta_1_change_pct": -71.6859876020671
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500017693327538,
+            0.49998230667246196
+          ],
+          "cumulative_both_plate_fractions": [
+            0.007053466346159118,
+            0.05426693127119338,
+            0.20594152779257024,
+            0.4731114185198898,
+            0.7628512171010476,
+            0.9468577115649441
+          ],
+          "mean_exit_theta_resolved": 1.4706615473527127,
+          "worst_plate_fluence_per_m2": 138.95318119932512,
+          "worst_plate_fluence_at_theta_1_per_m2": 48.7322861012263,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.37151706208767543,
+            "eventual_peak_fluence_change_pct": -9.437941421660401,
+            "peak_fluence_at_theta_1_change_pct": -63.912766720269666
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000091477515713,
+            0.49999085224842854
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0007567722307681222,
+            0.021274794401946018,
+            0.13839101725733904,
+            0.39498456203446264,
+            0.7102040421558357,
+            0.932918572895645
+          ],
+          "mean_exit_theta_resolved": 1.669177573810215,
+          "worst_plate_fluence_per_m2": 240.95115684167735,
+          "worst_plate_fluence_at_theta_1_per_m2": 88.60231040868427,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.48723696592422316,
+            "eventual_peak_fluence_change_pct": 0.9694248778002068,
+            "peak_fluence_at_theta_1_change_pct": -58.284333563228444
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000057347827507,
+            0.4999942652172492
+          ],
+          "cumulative_both_plate_fractions": [
+            0.007383580530086654,
+            0.05421252398686828,
+            0.20886954377356748,
+            0.48121041499511236,
+            0.7720221825444675,
+            0.9517628362758606
+          ],
+          "mean_exit_theta_resolved": 1.4338487424659123,
+          "worst_plate_fluence_per_m2": 127.32134707178476,
+          "worst_plate_fluence_at_theta_1_per_m2": 46.69896189367154,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3715079017279966,
+            "eventual_peak_fluence_change_pct": 9.770404601938854,
+            "peak_fluence_at_theta_1_change_pct": -54.63847433377354
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000098748756199,
+            0.49999012512438007
+          ],
+          "cumulative_both_plate_fractions": [
+            0.002446276245175771,
+            0.039303273400618975,
+            0.1913696410628733,
+            0.47208083510183074,
+            0.7786984949924488,
+            0.9608319371924522
+          ],
+          "mean_exit_theta_resolved": 1.4080955384785516,
+          "worst_plate_fluence_per_m2": 278.2836634172565,
+          "worst_plate_fluence_at_theta_1_per_m2": 129.46327135257766,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.40989702920551885,
+            "eventual_peak_fluence_change_pct": -17.984898089467073,
+            "peak_fluence_at_theta_1_change_pct": -57.00567485929051
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500005876883706,
+            0.499994123116294
+          ],
+          "cumulative_both_plate_fractions": [
+            0.007962523394590044,
+            0.06675860560850655,
+            0.246736541634635,
+            0.5362316681269218,
+            0.8208826704113601,
+            0.971210882232317
+          ],
+          "mean_exit_theta_resolved": 1.2496745250966446,
+          "worst_plate_fluence_per_m2": 152.27484549747675,
+          "worst_plate_fluence_at_theta_1_per_m2": 74.54946455477594,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3154711597405656,
+            "eventual_peak_fluence_change_pct": -5.078441120498411,
+            "peak_fluence_at_theta_1_change_pct": -47.271873954628184
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000071465583661,
+            0.49999285344163397
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0006062050747655129,
+            0.020516506274248253,
+            0.13794525477999725,
+            0.3959122791302912,
+            0.7122977453725599,
+            0.9345905732987403
+          ],
+          "mean_exit_theta_resolved": 1.6597394032903698,
+          "worst_plate_fluence_per_m2": 347.6296197925492,
+          "worst_plate_fluence_at_theta_1_per_m2": 133.72848470621557,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4879771063835528,
+            "eventual_peak_fluence_change_pct": 33.954269240846926,
+            "peak_fluence_at_theta_1_change_pct": -42.10624490137922
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000067382009913,
+            0.4999932617990087
+          ],
+          "cumulative_both_plate_fractions": [
+            0.005958947807717969,
+            0.04871813868326793,
+            0.20004222491883722,
+            0.4731149063219414,
+            0.7687162137183048,
+            0.9521348415712395
+          ],
+          "mean_exit_theta_resolved": 1.4460703635606815,
+          "worst_plate_fluence_per_m2": 176.02668403899258,
+          "worst_plate_fluence_at_theta_1_per_m2": 68.76099544276411,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3854098982006823,
+            "eventual_peak_fluence_change_pct": 40.594840130738774,
+            "peak_fluence_at_theta_1_change_pct": -38.13326718142031
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999926082778201,
+            0.5000073917221799
+          ],
+          "cumulative_both_plate_fractions": [
+            0.008481046100412573,
+            0.08252747046983003,
+            0.29444319108603145,
+            0.6041047933561319,
+            0.8748921246465106,
+            0.9871205020267512
+          ],
+          "mean_exit_theta_resolved": 1.0604405422860044,
+          "worst_plate_fluence_per_m2": 340.9005665266445,
+          "worst_plate_fluence_at_theta_1_per_m2": 204.57534817824245,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.2797007982781611,
+            "eventual_peak_fluence_change_pct": -4.075229342312037,
+            "peak_fluence_at_theta_1_change_pct": -35.16978019642985
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999883064802664,
+            0.5000011693519735
+          ],
+          "cumulative_both_plate_fractions": [
+            0.01693754184703935,
+            0.11176519886496002,
+            0.34023716040950336,
+            0.6468137610193858,
+            0.8937739810819498,
+            0.9890080986422378
+          ],
+          "mean_exit_theta_resolved": 0.9777446660508433,
+          "worst_plate_fluence_per_m2": 169.9569013900148,
+          "worst_plate_fluence_at_theta_1_per_m2": 105.78323718507413,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.21119804821860844,
+            "eventual_peak_fluence_change_pct": 1.8446254952678487,
+            "peak_fluence_at_theta_1_change_pct": -28.175594453608
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999804921530555,
+            0.5000019507846944
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0014612297044652564,
+            0.02894545827393583,
+            0.16330882097198532,
+            0.4333632572370286,
+            0.7453081362471863,
+            0.9478583161000137
+          ],
+          "mean_exit_theta_resolved": 1.534350526599334,
+          "worst_plate_fluence_per_m2": 374.3264481348798,
+          "worst_plate_fluence_at_theta_1_per_m2": 155.8435823452956,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.45192512684418873,
+            "eventual_peak_fluence_change_pct": 32.99855145366979,
+            "peak_fluence_at_theta_1_change_pct": -37.79496438230642
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000014326737232,
+            0.4999985673262768
+          ],
+          "cumulative_both_plate_fractions": [
+            0.010552492524198515,
+            0.07146565500653287,
+            0.24873444454653837,
+            0.5327039538373124,
+            0.8114518819975645,
+            0.9653421696249689
+          ],
+          "mean_exit_theta_resolved": 1.2826990189152034,
+          "worst_plate_fluence_per_m2": 173.42288777249328,
+          "worst_plate_fluence_at_theta_1_per_m2": 73.84480502212507,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.33098553444455336,
+            "eventual_peak_fluence_change_pct": 28.44527500450813,
+            "peak_fluence_at_theta_1_change_pct": -38.400248480895094
+          }
+        }
+      ]
+    },
+    {
+      "case": "centered_field",
+      "level": 0,
+      "mesh": [
+        64,
+        52,
+        52
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 8192,
+      "field_line_step_m": 0.004,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999996773143485,
+            0.5000000322685652
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08220062837994865,
+            0.29671057322516503,
+            0.608770334428908,
+            0.8793060132382701,
+            0.9883611043009013,
+            0.9998845508940799
+          ],
+          "mean_exit_theta_resolved": 0.5234010224963055,
+          "worst_plate_fluence_per_m2": 319.57013275078185,
+          "worst_plate_fluence_at_theta_1_per_m2": 283.4173342055534,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0005058597739077131,
+            "eventual_peak_fluence_change_pct": -0.9728738531159631,
+            "peak_fluence_at_theta_1_change_pct": -0.9821212179903172
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000017733115,
+            0.4999999982266884
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06627628549126496,
+            0.25896789392302333,
+            0.5606297837069691,
+            0.84397737294005,
+            0.978315499284176,
+            0.9993629761772573
+          ],
+          "mean_exit_theta_resolved": 0.58796629806946,
+          "worst_plate_fluence_per_m2": 152.21384563155007,
+          "worst_plate_fluence_at_theta_1_per_m2": 133.9672726937455,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0007098541976801043,
+            "eventual_peak_fluence_change_pct": -0.8555022533623724,
+            "peak_fluence_at_theta_1_change_pct": -0.8590274303515666
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999996974911387,
+            0.5000000302508862
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0837297864229889,
+            0.2999602059386869,
+            0.6126169617406436,
+            0.8818315825739386,
+            0.988912693040176,
+            0.9998984297991601
+          ],
+          "mean_exit_theta_resolved": 0.5188082572510648,
+          "worst_plate_fluence_per_m2": 233.85048559999723,
+          "worst_plate_fluence_at_theta_1_per_m2": 208.1329532483202,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00039587124216300396,
+            "eventual_peak_fluence_change_pct": -1.9831421016594186,
+            "peak_fluence_at_theta_1_change_pct": -1.9844690254080422
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.499999976636203,
+            0.500000023363797
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0692237991353358,
+            0.26657643911481876,
+            0.5708957899922893,
+            0.8521578571890853,
+            0.9810642981685984,
+            0.9995571531484911
+          ],
+          "mean_exit_theta_resolved": 0.5727950249668073,
+          "worst_plate_fluence_per_m2": 114.92892387381173,
+          "worst_plate_fluence_at_theta_1_per_m2": 102.00390374722683,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0006044023268167997,
+            "eventual_peak_fluence_change_pct": -0.7915615478435223,
+            "peak_fluence_at_theta_1_change_pct": -0.7308021087994332
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999996854997303,
+            0.500000031450027
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08370116547969506,
+            0.29988965812392376,
+            0.6125233117351241,
+            0.8817536399973003,
+            0.9888883661588226,
+            0.9998975263294978
+          ],
+          "mean_exit_theta_resolved": 0.5189457825468219,
+          "worst_plate_fluence_per_m2": 338.159725045493,
+          "worst_plate_fluence_at_theta_1_per_m2": 300.08220732084135,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0002236493563912978,
+            "eventual_peak_fluence_change_pct": -0.4172380891965144,
+            "peak_fluence_at_theta_1_change_pct": -0.42246292950864905
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999997218810305,
+            0.500000027811897
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06904632215964816,
+            0.26598767230700715,
+            0.5699898309641827,
+            0.8512770533512739,
+            0.9806780255840348,
+            0.9995236445681124
+          ],
+          "mean_exit_theta_resolved": 0.574466626219034,
+          "worst_plate_fluence_per_m2": 159.45389872644188,
+          "worst_plate_fluence_at_theta_1_per_m2": 140.53320079883986,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00045037463112596043,
+            "eventual_peak_fluence_change_pct": -0.7333465508976844,
+            "peak_fluence_at_theta_1_change_pct": -0.7316481103866179
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999998995039785,
+            0.500000010049602
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08495315091750247,
+            0.30250768779650594,
+            0.6155889807504712,
+            0.8837319117860116,
+            0.9893043066523698,
+            0.9999070804904442
+          ],
+          "mean_exit_theta_resolved": 0.5153381410234034,
+          "worst_plate_fluence_per_m2": 257.55978266849667,
+          "worst_plate_fluence_at_theta_1_per_m2": 229.2477496582622,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00015647214325309466,
+            "eventual_peak_fluence_change_pct": -0.8554693013956283,
+            "peak_fluence_at_theta_1_change_pct": -0.8562177577764785
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999999469486317,
+            0.5000000053051369
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07172231129635123,
+            0.27271194319799774,
+            0.5789005169531953,
+            0.8582153807525965,
+            0.982892952014034,
+            0.9996620041177017
+          ],
+          "mean_exit_theta_resolved": 0.5617010507053296,
+          "worst_plate_fluence_per_m2": 124.81586929849732,
+          "worst_plate_fluence_at_theta_1_per_m2": 110.79913463444116,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00032690097965981657,
+            "eventual_peak_fluence_change_pct": -0.3699859006838224,
+            "peak_fluence_at_theta_1_change_pct": -0.37113521894936996
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999889854638,
+            0.5000000110145363
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08501119266980403,
+            0.30261863983079684,
+            0.6157082418922368,
+            0.8837923239742083,
+            0.9893098606070309,
+            0.9999069312316773
+          ],
+          "mean_exit_theta_resolved": 0.51522289799119,
+          "worst_plate_fluence_per_m2": 355.3596866666018,
+          "worst_plate_fluence_at_theta_1_per_m2": 315.5418741566772,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -6.969507836518396e-06,
+            "eventual_peak_fluence_change_pct": 0.12397040364151568,
+            "peak_fluence_at_theta_1_change_pct": 0.12598222812594262
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999998801342044,
+            0.5000000119865796
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07175865332118642,
+            0.2726683423307491,
+            0.5787268559622885,
+            0.857915960240445,
+            0.9827069218200675,
+            0.9996444020523974
+          ],
+          "mean_exit_theta_resolved": 0.5622795050929315,
+          "worst_plate_fluence_per_m2": 166.67032509032242,
+          "worst_plate_fluence_at_theta_1_per_m2": 147.10342507897153,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -9.494500976081621e-05,
+            "eventual_peak_fluence_change_pct": 0.14852279736765617,
+            "peak_fluence_at_theta_1_change_pct": 0.15299992557291642
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999968526373,
+            0.5000000031473626
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08596919068003853,
+            0.30459605941629,
+            0.6180037409340589,
+            0.8852532703632707,
+            0.9896078661502075,
+            0.9999132940182155
+          ],
+          "mean_exit_theta_resolved": 0.5125514491357316,
+          "worst_plate_fluence_per_m2": 281.2868354811621,
+          "worst_plate_fluence_at_theta_1_per_m2": 250.38323613818739,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -2.9881910199702766e-05,
+            "eventual_peak_fluence_change_pct": 0.05348853577831214,
+            "peak_fluence_at_theta_1_change_pct": 0.0527651305753718
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999944783824,
+            0.5000000055216176
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07406820228096545,
+            0.27833567247283875,
+            0.5861179121169069,
+            0.8635529389482947,
+            0.9844222209937874,
+            0.9997391405473862
+          ],
+          "mean_exit_theta_resolved": 0.551974102945091,
+          "worst_plate_fluence_per_m2": 134.9804647650022,
+          "worst_plate_fluence_at_theta_1_per_m2": 119.84394524287384,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00013388296088079343,
+            "eventual_peak_fluence_change_pct": 0.04634843478696915,
+            "peak_fluence_at_theta_1_change_pct": 0.0460144880906288
+          }
+        }
+      ]
+    },
+    {
+      "case": "centered_field",
+      "level": 1,
+      "mesh": [
+        80,
+        64,
+        64
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 32768,
+      "field_line_step_m": 0.002,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999999952558644,
+            0.5000000004744135
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08218252783808766,
+            0.29667224436648326,
+            0.6087251256230397,
+            0.8792766286850631,
+            0.9883548133321678,
+            0.9998843962737824
+          ],
+          "mean_exit_theta_resolved": 0.523454541636753,
+          "worst_plate_fluence_per_m2": 319.4974197074056,
+          "worst_plate_fluence_at_theta_1_per_m2": 283.35029049569397,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0005262808592504387,
+            "eventual_peak_fluence_change_pct": -0.9191411956437467,
+            "peak_fluence_at_theta_1_change_pct": -0.930273064247189
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999999242940874,
+            0.5000000075705913
+          ],
+          "cumulative_both_plate_fractions": [
+            0.06625277974648773,
+            0.2589037978802481,
+            0.5605401692526928,
+            0.8439033330388932,
+            0.9782885092076237,
+            0.9993606543029044
+          ],
+          "mean_exit_theta_resolved": 0.5881058767982716,
+          "worst_plate_fluence_per_m2": 152.1788943773555,
+          "worst_plate_fluence_at_theta_1_per_m2": 133.93645793037106,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0007251475686720354,
+            "eventual_peak_fluence_change_pct": -0.8181473210059909,
+            "peak_fluence_at_theta_1_change_pct": -0.8173720404949014
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000041511922,
+            0.4999999958488079
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08371539653593903,
+            0.29993015306511706,
+            0.6125818396475426,
+            0.8818090777647178,
+            0.9889080313525587,
+            0.9998983251214514
+          ],
+          "mean_exit_theta_resolved": 0.5188493363183081,
+          "worst_plate_fluence_per_m2": 233.7911235469593,
+          "worst_plate_fluence_at_theta_1_per_m2": 208.07856915481165,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00041245019396796145,
+            "eventual_peak_fluence_change_pct": -2.0309526814933143,
+            "peak_fluence_at_theta_1_change_pct": -2.032620329367285
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999989634976,
+            0.5000000010365024
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0692036940459411,
+            0.2665237206711536,
+            0.570824047666667,
+            0.8521005563903037,
+            0.9810449370079188,
+            0.9995557594409428
+          ],
+          "mean_exit_theta_resolved": 0.5729013263857132,
+          "worst_plate_fluence_per_m2": 114.661610072404,
+          "worst_plate_fluence_at_theta_1_per_m2": 101.76714149578724,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0006177603328052506,
+            "eventual_peak_fluence_change_pct": -1.144218000920183,
+            "peak_fluence_at_theta_1_change_pct": -1.147421404131077
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000024374067,
+            0.4999999975625933
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08369439956823732,
+            0.299875669539586,
+            0.612507090312431,
+            0.8817434143439995,
+            0.9888863196925608,
+            0.9998974831980172
+          ],
+          "mean_exit_theta_resolved": 0.5189645075135032,
+          "worst_plate_fluence_per_m2": 338.49099172057066,
+          "worst_plate_fluence_at_theta_1_per_m2": 300.37545469907343,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00023444996335009183,
+            "eventual_peak_fluence_change_pct": -0.24073694856187045,
+            "peak_fluence_at_theta_1_change_pct": -0.24630284175740647
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999954260086,
+            0.5000000045739913
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0690359603604524,
+            0.2659583866767727,
+            0.5699481762217469,
+            0.8512420302704276,
+            0.9806649839807491,
+            0.9995225370689661
+          ],
+          "mean_exit_theta_resolved": 0.5745325448414758,
+          "worst_plate_fluence_per_m2": 159.49765636600836,
+          "worst_plate_fluence_at_theta_1_per_m2": 140.57843784488725,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0004607975970598588,
+            "eventual_peak_fluence_change_pct": -0.5760529230716238,
+            "peak_fluence_at_theta_1_change_pct": -0.570210205865096
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000000008803342,
+            0.4999999991196657
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08494846008028577,
+            0.30249797735453987,
+            0.615577706571906,
+            0.8837247769694793,
+            0.9893028702998402,
+            0.9999070503645091
+          ],
+          "mean_exit_theta_resolved": 0.5153511909277604,
+          "worst_plate_fluence_per_m2": 257.2007355053643,
+          "worst_plate_fluence_at_theta_1_per_m2": 228.9288771563148,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0001646085443647305,
+            "eventual_peak_fluence_change_pct": -0.8912514607080424,
+            "peak_fluence_at_theta_1_change_pct": -0.8920771202463262
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999966119131,
+            0.500000003388087
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07171437042466605,
+            0.2726899834899172,
+            0.578869824982339,
+            0.8581901175682378,
+            0.9828840715858094,
+            0.9996613615833203
+          ],
+          "mean_exit_theta_resolved": 0.5617478348750605,
+          "worst_plate_fluence_per_m2": 124.47905523661143,
+          "worst_plate_fluence_at_theta_1_per_m2": 110.50138605866618,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.0003346869543858766,
+            "eventual_peak_fluence_change_pct": -0.5769326044906764,
+            "peak_fluence_at_theta_1_change_pct": -0.5779412681025331
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999999991641673,
+            0.5000000008358326
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08501395063099916,
+            0.30262434526013626,
+            0.6157148754317284,
+            0.8837965595377565,
+            0.9893107295119401,
+            0.9999069499123632
+          ],
+          "mean_exit_theta_resolved": 0.5152151596717821,
+          "worst_plate_fluence_per_m2": 355.76243007026767,
+          "worst_plate_fluence_at_theta_1_per_m2": 315.8973162982521,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -9.032096536465417e-06,
+            "eventual_peak_fluence_change_pct": 0.10669639190781233,
+            "peak_fluence_at_theta_1_change_pct": 0.10831037730929527
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999999037497717,
+            0.5000000096250228
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07176123476975102,
+            0.2726715102292122,
+            0.5787283083760228,
+            0.8579143719269682,
+            0.9827047402217002,
+            0.9996440807243714
+          ],
+          "mean_exit_theta_resolved": 0.5622832331428026,
+          "worst_plate_fluence_per_m2": 166.8305031158129,
+          "worst_plate_fluence_at_theta_1_per_m2": 147.24648715429544,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -9.743731102607178e-05,
+            "eventual_peak_fluence_change_pct": -0.02883100329743593,
+            "peak_fluence_at_theta_1_change_pct": -0.02299333921348401
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999999919119453,
+            0.5000000008088055
+          ],
+          "cumulative_both_plate_fractions": [
+            0.08597095916029507,
+            0.3045996294332982,
+            0.6180078243674303,
+            0.8852558096200172,
+            0.9896083609625658,
+            0.999913303661641
+          ],
+          "mean_exit_theta_resolved": 0.512546776075303,
+          "worst_plate_fluence_per_m2": 281.31863741921455,
+          "worst_plate_fluence_at_theta_1_per_m2": 250.41146522835191,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -3.257446120019658e-05,
+            "eventual_peak_fluence_change_pct": -0.047214242809612283,
+            "peak_fluence_at_theta_1_change_pct": -0.04815161977260729
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.499999993023783,
+            0.5000000069762169
+          ],
+          "cumulative_both_plate_fractions": [
+            0.07407025733994771,
+            0.2783382037826463,
+            0.5861191982683773,
+            0.8635519114142087,
+            0.9844207703002077,
+            0.9997389569751056
+          ],
+          "mean_exit_theta_resolved": 0.5519762574546733,
+          "worst_plate_fluence_per_m2": 135.02484483877055,
+          "worst_plate_fluence_at_theta_1_per_m2": 119.88462089986373,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.00013757686765702992,
+            "eventual_peak_fluence_change_pct": 0.005850153463748953,
+            "peak_fluence_at_theta_1_change_pct": 0.005177834528447001
+          }
+        }
+      ]
+    },
+    {
+      "case": "centered_combined",
+      "level": 0,
+      "mesh": [
+        64,
+        52,
+        52
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 8192,
+      "field_line_step_m": 0.004,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000382823853002,
+            0.49996171761469976
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0008382885938974232,
+            0.019100650711642804,
+            0.12280612524925295,
+            0.3628053465684764,
+            0.6744224514772532,
+            0.913350224665869
+          ],
+          "mean_exit_theta_resolved": 1.8171232026162547,
+          "worst_plate_fluence_per_m2": 210.47587053469172,
+          "worst_plate_fluence_at_theta_1_per_m2": 63.92078833613537,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5170065264437014,
+            "eventual_peak_fluence_change_pct": -34.77857144250551,
+            "peak_fluence_at_theta_1_change_pct": -77.6679119191506
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999978353098974,
+            0.5000021646901025
+          ],
+          "cumulative_both_plate_fractions": [
+            0.00653409918590698,
+            0.05151958360053966,
+            0.19897862816760653,
+            0.462694090045095,
+            0.7524614542790666,
+            0.941126783146292
+          ],
+          "mean_exit_theta_resolved": 1.5163121624935838,
+          "worst_plate_fluence_per_m2": 131.92240157406613,
+          "worst_plate_fluence_at_theta_1_per_m2": 44.50355871319991,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.38199313709263516,
+            "eventual_peak_fluence_change_pct": -14.072335592577655,
+            "peak_fluence_at_theta_1_change_pct": -67.06564219066111
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000013427196754,
+            0.4999986572803246
+          ],
+          "cumulative_both_plate_fractions": [
+            0.000609802827987567,
+            0.019655936759779467,
+            0.1331154824621758,
+            0.38674183795378886,
+            0.7023787689628872,
+            0.9292372524715928
+          ],
+          "mean_exit_theta_resolved": 1.7005854094353239,
+          "worst_plate_fluence_per_m2": 196.75976452051637,
+          "worst_plate_fluence_at_theta_1_per_m2": 72.85241271472306,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4954856158623127,
+            "eventual_peak_fluence_change_pct": -17.529468328293962,
+            "peak_fluence_at_theta_1_change_pct": -65.69179553948732
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999514773592473,
+            0.5000485226407527
+          ],
+          "cumulative_both_plate_fractions": [
+            0.006728036273261903,
+            0.051575094860194924,
+            0.20350537007349062,
+            0.4745215656782106,
+            0.7667799511008965,
+            0.9496749115216332
+          ],
+          "mean_exit_theta_resolved": 1.4552626234220012,
+          "worst_plate_fluence_per_m2": 113.12426749724882,
+          "worst_plate_fluence_at_theta_1_per_m2": 43.487240414855854,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.37824069383769154,
+            "eventual_peak_fluence_change_pct": -2.3493690607556794,
+            "peak_fluence_at_theta_1_change_pct": -57.67864448421265
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000420908897135,
+            0.4999579091102865
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0020936018551004055,
+            0.034166055655383235,
+            0.17321774134047627,
+            0.4431096474022488,
+            0.7520470734717528,
+            0.9501973711612162
+          ],
+          "mean_exit_theta_resolved": 1.5064760110771724,
+          "worst_plate_fluence_per_m2": 232.28563350018342,
+          "worst_plate_fluence_at_theta_1_per_m2": 91.22688884283211,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4388676419514428,
+            "eventual_peak_fluence_change_pct": -31.595505842580764,
+            "peak_fluence_at_theta_1_change_pct": -69.72779896989982
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000196681874765,
+            0.4999803318125235
+          ],
+          "cumulative_both_plate_fractions": [
+            0.007163501181285491,
+            0.0608007731848438,
+            0.23048995875628922,
+            0.5130500007089509,
+            0.8010524632437191,
+            0.963794657165354
+          ],
+          "mean_exit_theta_resolved": 1.3235936408179234,
+          "worst_plate_fluence_per_m2": 158.9673375176509,
+          "worst_plate_fluence_at_theta_1_per_m2": 68.5756715760011,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.33867742727344896,
+            "eventual_peak_fluence_change_pct": -1.0362510473107323,
+            "peak_fluence_at_theta_1_change_pct": -51.56024442354242
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000141000249732,
+            0.49998589997502696
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0005595923023171131,
+            0.019415382707742748,
+            0.13331943522304157,
+            0.3879440651921843,
+            0.7042121220767235,
+            0.9305371834587511
+          ],
+          "mean_exit_theta_resolved": 1.6923433060651099,
+          "worst_plate_fluence_per_m2": 254.1832286152972,
+          "worst_plate_fluence_at_theta_1_per_m2": 93.37840051411067,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.49594431873708045,
+            "eventual_peak_fluence_change_pct": -2.155233043679128,
+            "peak_fluence_at_theta_1_change_pct": -59.61623256717337
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999877254663149,
+            0.500012274533685
+          ],
+          "cumulative_both_plate_fractions": [
+            0.005332737898886547,
+            0.04555840401369045,
+            0.19231869355082268,
+            0.46244164241468205,
+            0.75964259232486,
+            0.9483709815845196
+          ],
+          "mean_exit_theta_resolved": 1.4819973783295437,
+          "worst_plate_fluence_per_m2": 160.34719934844492,
+          "worst_plate_fluence_at_theta_1_per_m2": 60.61198594816815,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3961006393175743,
+            "eventual_peak_fluence_change_pct": 27.991687448542724,
+            "peak_fluence_at_theta_1_change_pct": -45.498641554697706
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000071977391363,
+            0.49999280226086373
+          ],
+          "cumulative_both_plate_fractions": [
+            0.006391567977367631,
+            0.06688378278641147,
+            0.25862251974489653,
+            0.559773626422305,
+            0.8440576257944954,
+            0.979658868853177
+          ],
+          "mean_exit_theta_resolved": 1.1711542435619275,
+          "worst_plate_fluence_per_m2": 338.27011464715315,
+          "worst_plate_fluence_at_theta_1_per_m2": 183.5678453842143,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3240256670597398,
+            "eventual_peak_fluence_change_pct": -4.691082815075176,
+            "peak_fluence_at_theta_1_change_pct": -41.751278261505895
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500028235335417,
+            0.4999717646645831
+          ],
+          "cumulative_both_plate_fractions": [
+            0.014930194506458475,
+            0.10071275045888362,
+            0.3172284212015204,
+            0.6199142969167061,
+            0.8764177466527141,
+            0.9850960262933119
+          ],
+          "mean_exit_theta_resolved": 1.0420129830766103,
+          "worst_plate_fluence_per_m2": 168.73860004416335,
+          "worst_plate_fluence_at_theta_1_per_m2": 98.13829675091067,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.23809660833349977,
+            "eventual_peak_fluence_change_pct": 1.3913036058511796,
+            "peak_fluence_at_theta_1_change_pct": -33.18411979929592
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000138416601907,
+            0.4999861583398093
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0016331080648561134,
+            0.02682614435463989,
+            0.1524088187903529,
+            0.41436780841008636,
+            0.7264132557023277,
+            0.9390909794778053
+          ],
+          "mean_exit_theta_resolved": 1.607211276787154,
+          "worst_plate_fluence_per_m2": 406.28407427402277,
+          "worst_plate_fluence_at_theta_1_per_m2": 157.380028851618,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4709153438633841,
+            "eventual_peak_fluence_change_pct": 44.51490023736855,
+            "peak_fluence_at_theta_1_change_pct": -37.111176827175164
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000191685532066,
+            0.4999808314467934
+          ],
+          "cumulative_both_plate_fractions": [
+            0.009042672583646943,
+            0.06398884382471237,
+            0.23171042788508275,
+            0.5107877805374015,
+            0.7947293932769215,
+            0.9595926999172852
+          ],
+          "mean_exit_theta_resolved": 1.3469022171704002,
+          "worst_plate_fluence_per_m2": 186.95298045123994,
+          "worst_plate_fluence_at_theta_1_per_m2": 75.93220906375673,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.35289904137177397,
+            "eventual_peak_fluence_change_pct": 38.56792577881416,
+            "peak_fluence_at_theta_1_change_pct": -36.61160876579997
+          }
+        }
+      ]
+    },
+    {
+      "case": "centered_combined",
+      "level": 1,
+      "mesh": [
+        80,
+        64,
+        64
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 32768,
+      "field_line_step_m": 0.002,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000235053960682,
+            0.4999764946039318
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0011501917450810618,
+            0.021387980834911197,
+            0.12804516812148034,
+            0.36934148149235574,
+            0.679748526440059,
+            0.915527843707646
+          ],
+          "mean_exit_theta_resolved": 1.7956194706517257,
+          "worst_plate_fluence_per_m2": 210.0029071865861,
+          "worst_plate_fluence_at_theta_1_per_m2": 63.61200063922468,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5104614280519577,
+            "eventual_peak_fluence_change_pct": -34.875003327057605,
+            "peak_fluence_at_theta_1_change_pct": -77.75889510421838
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000151148502807,
+            0.4999848851497193
+          ],
+          "cumulative_both_plate_fractions": [
+            0.006920968240184256,
+            0.05275600173394329,
+            0.1996606077784323,
+            0.46159634007535394,
+            0.7501719736238004,
+            0.9394949587136427
+          ],
+          "mean_exit_theta_resolved": 1.5259784474972078,
+          "worst_plate_fluence_per_m2": 134.25800641158955,
+          "worst_plate_fluence_at_theta_1_per_m2": 43.72856127585605,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3830321405322113,
+            "eventual_peak_fluence_change_pct": -12.497998704929836,
+            "peak_fluence_at_theta_1_change_pct": -67.61812510763599
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000073485933327,
+            0.49999265140666727
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0007172702427757014,
+            0.020513376241197805,
+            0.1351430040145334,
+            0.38926986089206633,
+            0.7042379787979118,
+            0.929761064118608
+          ],
+          "mean_exit_theta_resolved": 1.6938438024496385,
+          "worst_plate_fluence_per_m2": 199.21628288872282,
+          "worst_plate_fluence_at_theta_1_per_m2": 69.60250892542048,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.49295166706661947,
+            "eventual_peak_fluence_change_pct": -16.51937358082757,
+            "peak_fluence_at_theta_1_change_pct": -67.22980436850246
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000041523733437,
+            0.4999958476266563
+          ],
+          "cumulative_both_plate_fractions": [
+            0.007180590146506497,
+            0.053086098725985784,
+            0.20539139257108113,
+            0.47557758155328744,
+            0.7664120554699732,
+            0.9489698485497522
+          ],
+          "mean_exit_theta_resolved": 1.4567147343649554,
+          "worst_plate_fluence_per_m2": 115.7370755216742,
+          "worst_plate_fluence_at_theta_1_per_m2": 40.5384255056249,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3771407351698215,
+            "eventual_peak_fluence_change_pct": -0.21700288564783232,
+            "peak_fluence_at_theta_1_change_pct": -60.622575867344665
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000082806718609,
+            0.49999171932813913
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0016580915294061626,
+            0.030357765032672453,
+            0.1638673538424069,
+            0.4310848578021442,
+            0.7423237128566673,
+            0.946625161509723
+          ],
+          "mean_exit_theta_resolved": 1.5436426276376867,
+          "worst_plate_fluence_per_m2": 264.64207896592114,
+          "worst_plate_fluence_at_theta_1_per_m2": 106.4732321134185,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4508930065052054,
+            "eventual_peak_fluence_change_pct": -22.00531353627635,
+            "peak_fluence_at_theta_1_change_pct": -64.64059101519528
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000054414319379,
+            0.4999945585680622
+          ],
+          "cumulative_both_plate_fractions": [
+            0.007032368576215442,
+            0.05899228266821523,
+            0.22555299736075501,
+            0.5063654467557376,
+            0.7955745650259664,
+            0.9618371257116247
+          ],
+          "mean_exit_theta_resolved": 1.3440532481320455,
+          "worst_plate_fluence_per_m2": 168.61163148000887,
+          "worst_plate_fluence_at_theta_1_per_m2": 72.20977952163568,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.34533738111174983,
+            "eventual_peak_fluence_change_pct": 5.105205347679642,
+            "peak_fluence_at_theta_1_change_pct": -48.92671088834276
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500005383950532,
+            0.499994616049468
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0004923476632004881,
+            0.018079643231573128,
+            0.12828664411370838,
+            0.3797435869664259,
+            0.6962741144895895,
+            0.9268563298607857
+          ],
+          "mean_exit_theta_resolved": 1.7234873703016778,
+          "worst_plate_fluence_per_m2": 327.19940409416415,
+          "worst_plate_fluence_at_theta_1_per_m2": 117.92593026089352,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.504145798547418,
+            "eventual_peak_fluence_change_pct": 26.081767996726235,
+            "peak_fluence_at_theta_1_change_pct": -48.94748907609598
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000050549159123,
+            0.4999949450840876
+          ],
+          "cumulative_both_plate_fractions": [
+            0.005496298868453929,
+            0.04567959754685712,
+            0.19124092195919318,
+            0.459906259754696,
+            0.7567236452916819,
+            0.9469292776778915
+          ],
+          "mean_exit_theta_resolved": 1.4929904329732695,
+          "worst_plate_fluence_per_m2": 177.86134445372295,
+          "worst_plate_fluence_at_theta_1_per_m2": 65.41689047185479,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3986185447679277,
+            "eventual_peak_fluence_change_pct": 42.06020766357301,
+            "peak_fluence_at_theta_1_change_pct": -41.142078316575315
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999952936072281,
+            0.500004706392772
+          ],
+          "cumulative_both_plate_fractions": [
+            0.004976134696004526,
+            0.05939222294416438,
+            0.24323487462218552,
+            0.5416975547034126,
+            0.8319718276363077,
+            0.9767281662964804
+          ],
+          "mean_exit_theta_resolved": 1.215876558362446,
+          "worst_plate_fluence_per_m2": 332.86000744537307,
+          "worst_plate_fluence_at_theta_1_per_m2": 176.78062370531592,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3421080369308803,
+            "eventual_peak_fluence_change_pct": -6.33773302099182,
+            "peak_fluence_at_theta_1_change_pct": -43.97796804998053
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999872131844425,
+            0.5000012786815557
+          ],
+          "cumulative_both_plate_fractions": [
+            0.014351608628198839,
+            0.09798622734743635,
+            0.3120562494651356,
+            0.6140787397519673,
+            0.8725683948495988,
+            0.9841849515998803
+          ],
+          "mean_exit_theta_resolved": 1.0563964194289075,
+          "worst_plate_fluence_per_m2": 176.55412838022784,
+          "worst_plate_fluence_at_theta_1_per_m2": 100.99097657673342,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.243933069486027,
+            "eventual_peak_fluence_change_pct": 5.7979342849102,
+            "peak_fluence_at_theta_1_change_pct": -31.429430113933478
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000015305323511,
+            0.4999984694676489
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0008734862909183529,
+            0.022511864337024633,
+            0.14284249801941606,
+            0.4023069258004759,
+            0.7172165752162774,
+            0.9361342931355168
+          ],
+          "mean_exit_theta_resolved": 1.6416863276291294,
+          "worst_plate_fluence_per_m2": 424.7461946020922,
+          "worst_plate_fluence_at_theta_1_per_m2": 165.37922902052338,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.48298145828074146,
+            "eventual_peak_fluence_change_pct": 50.91273646040024,
+            "peak_fluence_at_theta_1_change_pct": -33.98880674563175
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500003287939953,
+            0.4999967120600471
+          ],
+          "cumulative_both_plate_fractions": [
+            0.008314907039618576,
+            0.06057139629606448,
+            0.22465165379166438,
+            0.502142726213732,
+            0.7882281202002122,
+            0.9575101868749405
+          ],
+          "mean_exit_theta_resolved": 1.371522492923859,
+          "worst_plate_fluence_per_m2": 196.49260550962495,
+          "worst_plate_fluence_at_theta_1_per_m2": 78.89730921574252,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.36154676206813374,
+            "eventual_peak_fluence_change_pct": 45.53180998891892,
+            "peak_fluence_at_theta_1_change_pct": -34.185557917587076
+          }
+        }
+      ]
+    },
+    {
+      "case": "wide_centered_solid",
+      "level": 0,
+      "mesh": [
+        64,
+        52,
+        52
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 8192,
+      "field_line_step_m": 0.004,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000228604890686,
+            0.4999771395109315
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0007288380032706803,
+            0.01673552563642831,
+            0.11116099925167136,
+            0.3402157469884721,
+            0.6507558263859463,
+            0.9021018516027434
+          ],
+          "mean_exit_theta_resolved": 1.9084207052013673,
+          "worst_plate_fluence_per_m2": 188.29210687953602,
+          "worst_plate_fluence_at_theta_1_per_m2": 62.754865149172055,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5395961260237057,
+            "eventual_peak_fluence_change_pct": -41.652788200443105,
+            "peak_fluence_at_theta_1_change_pct": -78.07525200341001
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000177377033048,
+            0.4999822622966952
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0019053095838258674,
+            0.027215503716166954,
+            0.14120930481232552,
+            0.3845393108227626,
+            0.6906510233065968,
+            0.9191777876925832
+          ],
+          "mean_exit_theta_resolved": 1.7525927051087857,
+          "worst_plate_fluence_per_m2": 113.96255365614603,
+          "worst_plate_fluence_at_theta_1_per_m2": 48.30635678480939,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.46014791631496754,
+            "eventual_peak_fluence_change_pct": -25.770483642383624,
+            "peak_fluence_at_theta_1_change_pct": -64.25142427217578
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000102071524655,
+            0.49998979284753453
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0005241761717485195,
+            0.017900010341270083,
+            0.12571738448576408,
+            0.3738535858887877,
+            0.6898748700036285,
+            0.9239141865614221
+          ],
+          "mean_exit_theta_resolved": 1.7471368138708472,
+          "worst_plate_fluence_per_m2": 179.42574438614093,
+          "worst_plate_fluence_at_theta_1_per_m2": 68.87247158519514,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5083738679273139,
+            "eventual_peak_fluence_change_pct": -24.794906259537974,
+            "peak_fluence_at_theta_1_change_pct": -67.5660592587595
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000165109578042,
+            0.4999834890421958
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0016317773866430592,
+            0.02718890441374216,
+            0.15119395796369808,
+            0.40982319162396896,
+            0.7200466564383825,
+            0.9350760474574231
+          ],
+          "mean_exit_theta_resolved": 1.633954363381441,
+          "worst_plate_fluence_per_m2": 108.01557884863463,
+          "worst_plate_fluence_at_theta_1_per_m2": 43.441573363359254,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.44293906789193316,
+            "eventual_peak_fluence_change_pct": -6.759268729909018,
+            "peak_fluence_at_theta_1_change_pct": -57.7230872104769
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000005000452892,
+            0.49999949995471094
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0010448423063091259,
+            0.024330105069704934,
+            0.14604652169509197,
+            0.4046592820363008,
+            0.7188408466120773,
+            0.9373141600185007
+          ],
+          "mean_exit_theta_resolved": 1.6319076105616581,
+          "worst_plate_fluence_per_m2": 287.1771202893128,
+          "worst_plate_fluence_at_theta_1_per_m2": 113.42933969788989,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.47731800731739077,
+            "eventual_peak_fluence_change_pct": -15.430819586355216,
+            "peak_fluence_at_theta_1_change_pct": -62.36026660997063
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999914932022834,
+            0.5000085067977165
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0024391247982937575,
+            0.03486036382469958,
+            0.17133298617416276,
+            0.43729994843002096,
+            0.7448869951142294,
+            0.9465208020658114
+          ],
+          "mean_exit_theta_resolved": 1.533229407502593,
+          "worst_plate_fluence_per_m2": 151.84116219104425,
+          "worst_plate_fluence_at_theta_1_per_m2": 62.068067477645194,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4144274795523789,
+            "eventual_peak_fluence_change_pct": -5.4725902162726765,
+            "peak_fluence_at_theta_1_change_pct": -56.15701678709637
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.500004212081352,
+            0.49999578791864796
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0004534984173587952,
+            0.017383733584726446,
+            0.12555083218315716,
+            0.37513613014552366,
+            0.6919828737259122,
+            0.9252193928525998
+          ],
+          "mean_exit_theta_resolved": 1.7388020812048972,
+          "worst_plate_fluence_per_m2": 279.682641340981,
+          "worst_plate_fluence_at_theta_1_per_m2": 102.8685090766016,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.508752253783741,
+            "eventual_peak_fluence_change_pct": 7.660458216752919,
+            "peak_fluence_at_theta_1_change_pct": -55.512003591415784
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000011160533451,
+            0.499998883946655
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0015322122788243666,
+            0.02668230707138399,
+            0.1509456033986341,
+            0.41072691244554826,
+            0.7218083811698645,
+            0.9363490626752569
+          ],
+          "mean_exit_theta_resolved": 1.6263525382031239,
+          "worst_plate_fluence_per_m2": 153.65088756883708,
+          "worst_plate_fluence_at_theta_1_per_m2": 56.13664091123819,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.44781536928670806,
+            "eventual_peak_fluence_change_pct": 22.646584772373824,
+            "peak_fluence_at_theta_1_change_pct": -49.522802456350135
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49998480981557597,
+            0.5000151901844241
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0021851423976175692,
+            0.04117868076316997,
+            0.2021774811900396,
+            0.49088146649802983,
+            0.7958045901870092,
+            0.9669886607037488
+          ],
+          "mean_exit_theta_resolved": 1.3481215091649448,
+          "worst_plate_fluence_per_m2": 399.7445740820517,
+          "worst_plate_fluence_at_theta_1_per_m2": 195.1715828993664,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.39291782698401495,
+            "eventual_peak_fluence_change_pct": 12.62958463253636,
+            "peak_fluence_at_theta_1_change_pct": -38.0692451895813
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999061732684513,
+            0.5000093826731549
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0032562329543242225,
+            0.04757155635679777,
+            0.21474088742299063,
+            0.5048161242318425,
+            0.8049750972928693,
+            0.9692383161863994
+          ],
+          "mean_exit_theta_resolved": 1.3135399046078207,
+          "worst_plate_fluence_per_m2": 199.71709990588664,
+          "worst_plate_fluence_at_theta_1_per_m2": 100.48647528124539,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3531947810183633,
+            "eventual_peak_fluence_change_pct": 20.00560100971571,
+            "peak_fluence_at_theta_1_change_pct": -31.58540023143004
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.499999582219795,
+            0.500000417780205
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0004140786456646913,
+            0.0173100624427605,
+            0.1266147288828758,
+            0.37798676622106,
+            0.6953854693232622,
+            0.9270829102123341
+          ],
+          "mean_exit_theta_resolved": 1.7251891508090922,
+          "worst_plate_fluence_per_m2": 446.31924565081556,
+          "worst_plate_fluence_at_theta_1_per_m2": 168.05926653578578,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5072963860524105,
+            "eventual_peak_fluence_change_pct": 58.755376701629245,
+            "peak_fluence_at_theta_1_change_pct": -32.84376948686134
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000001434437154,
+            0.4999998565562847
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0011085573005700264,
+            0.02430977671420842,
+            0.1469696222213115,
+            0.4073719227980953,
+            0.7208557223491026,
+            0.9371029640488542
+          ],
+          "mean_exit_theta_resolved": 1.628521243801306,
+          "worst_plate_fluence_per_m2": 214.17514733861907,
+          "worst_plate_fluence_at_theta_1_per_m2": 81.62605448940727,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.45631489911108014,
+            "eventual_peak_fluence_change_pct": 58.744759502910206,
+            "peak_fluence_at_theta_1_change_pct": -31.85837287396459
+          }
+        }
+      ]
+    },
+    {
+      "case": "wide_centered_solid",
+      "level": 1,
+      "mesh": [
+        80,
+        64,
+        64
+      ],
+      "mhd_dt_s": 1.0196321057637306e-05,
+      "samples_per_packet": 32768,
+      "field_line_step_m": 0.002,
+      "targets": [
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999864308538055,
+            0.5000135691461945
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0006575166125489238,
+            0.01599580692064101,
+            0.10911219869357162,
+            0.3372275305678316,
+            0.6478871733565263,
+            0.9006490456544339
+          ],
+          "mean_exit_theta_resolved": 1.9204453307909795,
+          "worst_plate_fluence_per_m2": 201.63526499568158,
+          "worst_plate_fluence_at_theta_1_per_m2": 69.0686279685678,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5425753789764819,
+            "eventual_peak_fluence_change_pct": -37.46993249800881,
+            "peak_fluence_at_theta_1_change_pct": -75.8510566525179
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999176481496144,
+            0.5000082351850386
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0018674183685904282,
+            0.026618621289983692,
+            0.13934754817243722,
+            0.3817010136997321,
+            0.6879917654184136,
+            0.9179635778458324
+          ],
+          "mean_exit_theta_resolved": 1.7631458502339967,
+          "worst_plate_fluence_per_m2": 111.55885938824406,
+          "worst_plate_fluence_at_theta_1_per_m2": 44.66028933644288,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.46292746690783315,
+            "eventual_peak_fluence_change_pct": -27.292057140034885,
+            "peak_fluence_at_theta_1_change_pct": -66.92816182937267
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999932947664172,
+            0.5000067052335828
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0005076232113561579,
+            0.017689085386991765,
+            0.12507788652627183,
+            0.37290861140917286,
+            0.6889936508613984,
+            0.9235062758557193
+          ],
+          "mean_exit_theta_resolved": 1.7506563982410257,
+          "worst_plate_fluence_per_m2": 196.26634976392324,
+          "worst_plate_fluence_at_theta_1_per_m2": 75.30396378913356,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5093129165495129,
+            "eventual_peak_fluence_change_pct": -17.755528886920146,
+            "peak_fluence_at_theta_1_change_pct": -64.54545010954564
+          }
+        },
+        {
+          "time_after_clearance_ms": 0.0,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999337295574886,
+            0.5000066270442511
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0016143705172312465,
+            0.026865178112439655,
+            0.15002193522217017,
+            0.40793053470616314,
+            0.7182295939761221,
+            0.934267869155964
+          ],
+          "mean_exit_theta_resolved": 1.6409507359839692,
+          "worst_plate_fluence_per_m2": 119.39631612668434,
+          "worst_plate_fluence_at_theta_1_per_m2": 46.033202538522474,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4447877820169458,
+            "eventual_peak_fluence_change_pct": 2.9378201741595555,
+            "peak_fluence_at_theta_1_change_pct": -55.28516665521928
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999550031884454,
+            0.5000044996811555
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0011418802103871964,
+            0.025449149572423654,
+            0.14910163510997473,
+            0.40872919874388597,
+            0.7223375982401572,
+            0.9388218130469519
+          ],
+          "mean_exit_theta_resolved": 1.6179305849202772,
+          "worst_plate_fluence_per_m2": 263.77616733571585,
+          "worst_plate_fluence_at_theta_1_per_m2": 108.97191971897256,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4732486655634636,
+            "eventual_peak_fluence_change_pct": -22.26051296021925,
+            "peak_fluence_at_theta_1_change_pct": -63.810785107960946
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999966480185282,
+            0.5000033519814718
+          ],
+          "cumulative_both_plate_fractions": [
+            0.002450123068694481,
+            0.034934927672824655,
+            0.17129442455013552,
+            0.4369656234175816,
+            0.7445259056905209,
+            0.9464182042804894
+          ],
+          "mean_exit_theta_resolved": 1.5342520921417009,
+          "worst_plate_fluence_per_m2": 145.0983535982417,
+          "worst_plate_fluence_at_theta_1_per_m2": 59.91034064354625,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4147372044499058,
+            "eventual_peak_fluence_change_pct": -9.551956073910695,
+            "peak_fluence_at_theta_1_change_pct": -57.62598682981831
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999981957248553,
+            0.5000018042751446
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0004640548774901986,
+            0.01758043768856416,
+            0.1262524087627247,
+            0.3762374228544289,
+            0.6930541324672648,
+            0.9257598018483579
+          ],
+          "mean_exit_theta_resolved": 1.734372135105337,
+          "worst_plate_fluence_per_m2": 270.9580524183504,
+          "worst_plate_fluence_at_theta_1_per_m2": 101.62601759636443,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5076519626594151,
+            "eventual_peak_fluence_change_pct": 4.409940465611495,
+            "peak_fluence_at_theta_1_change_pct": -56.00404964359408
+          }
+        },
+        {
+          "time_after_clearance_ms": 1.223558526916477,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999712898500076,
+            0.5000028710149993
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0014786519523698337,
+            0.026199296814609724,
+            0.14957296544146714,
+            0.4087455081480835,
+            0.7201119737801562,
+            0.9357022272212485
+          ],
+          "mean_exit_theta_resolved": 1.6327421906353043,
+          "worst_plate_fluence_per_m2": 145.33322045678955,
+          "worst_plate_fluence_at_theta_1_per_m2": 53.915440444265116,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.44977929637454017,
+            "eventual_peak_fluence_change_pct": 16.079564910064992,
+            "peak_fluence_at_theta_1_change_pct": -51.49034525630321
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999989242465529,
+            0.500001075753447
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0021309542815520265,
+            0.04065518508726297,
+            0.20078595024193202,
+            0.4890184993623804,
+            0.7945019978774782,
+            0.9667338806810646
+          ],
+          "mean_exit_theta_resolved": 1.3524808105844728,
+          "worst_plate_fluence_per_m2": 399.7298560767162,
+          "worst_plate_fluence_at_theta_1_per_m2": 195.13467907632472,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.39478709227191255,
+            "eventual_peak_fluence_change_pct": 12.478530498988416,
+            "peak_fluence_at_theta_1_change_pct": -38.161541708363536
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.08000000000000002,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.4999986075021947,
+            0.5000013924978053
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0032513199856794195,
+            0.0475459447168149,
+            0.21457701290299705,
+            0.5045180334480501,
+            0.8047790740919357,
+            0.9692250714125257
+          ],
+          "mean_exit_theta_resolved": 1.314095207852632,
+          "worst_plate_fluence_per_m2": 195.81659886033054,
+          "worst_plate_fluence_at_theta_1_per_m2": 97.87443330455663,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.3534937757899441,
+            "eventual_peak_fluence_change_pct": 17.340737643379576,
+            "peak_fluence_at_theta_1_change_pct": -33.54549191956793
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "narrow",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.5000004837835534,
+            0.49999951621644645
+          ],
+          "cumulative_both_plate_fractions": [
+            0.00041324467859218326,
+            0.017257131128049497,
+            0.12634510251596326,
+            0.37748937323334175,
+            0.6948719738500948,
+            0.9268330559316883
+          ],
+          "mean_exit_theta_resolved": 1.7272017598341147,
+          "worst_plate_fluence_per_m2": 439.60445442473656,
+          "worst_plate_fluence_at_theta_1_per_m2": 165.08608040353857,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.5077990108478756,
+            "eventual_peak_fluence_change_pct": 56.191890640876174,
+            "peak_fluence_at_theta_1_change_pct": -34.105817147256204
+          }
+        },
+        {
+          "time_after_clearance_ms": 2.4471170538329527,
+          "half_gap_m": 0.15707963267948966,
+          "packet": "broad",
+          "unresolved_fraction": 0.0,
+          "eventual_plate_fractions": [
+            0.49999823447370795,
+            0.500001765526292
+          ],
+          "cumulative_both_plate_fractions": [
+            0.0010805186906069392,
+            0.023946134923378496,
+            0.1458157287805973,
+            0.4056235687390012,
+            0.7192844831098691,
+            0.9364654138750741
+          ],
+          "mean_exit_theta_resolved": 1.6344644773900756,
+          "worst_plate_fluence_per_m2": 211.4312531811558,
+          "worst_plate_fluence_at_theta_1_per_m2": 80.03319459904169,
+          "comparison": {
+            "change_in_both_plate_fraction_at_theta_1": -0.4580659195428646,
+            "eventual_peak_fluence_change_pct": 56.59608606580235,
+            "peak_fluence_at_theta_1_change_pct": -33.23802670879794
+          }
+        }
+      ]
+    }
+  ]
+}
