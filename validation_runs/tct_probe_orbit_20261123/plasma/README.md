@@ -280,3 +280,31 @@ python3 plasma/island_release.py --cache /tmp/tct-pressure-release --levels 1 --
 ```
 
 [Coarse pressure-release runs](runs/island_release_screen.json) · [Refined pressure-release runs](runs/island_release_refined.json)
+
+### Verification of the pressure-release result
+
+The audit recomputes the peak exhaust power and total escaped energy from the recorded histories. It also independently integrates the sampled exhaust-power trace by the trapezoidal rule and checks the energy balance at every recorded time. The fixed-pulse audit checks the accounting of both plates and reproduces the early arrival fractions from the same normalized time.
+
+The step-size check uses the same 64 × 52 × 52 mesh and loss region as the refined runs and halves the time step again. The loss-region check holds the 48 × 40 × 40 mesh, the 23 mm Gaussian width, the loss rate, and the other model settings fixed. It moves the loss-region center from its original 64 mm position to 48 mm and 80 mm, measured outward from the sheet center. Every setting has its own matched no-probe control. All runs use the same 14.68 ms window.
+
+At the half time step, escaped energy increased by 77.171% for the 46 mm solid and 145.361% for the 60 mm solid. Both changes agree with the previous fine-mesh values to within 0.002 percentage points. The field-only change remained below 0.001%. Across all five pressure-release receipts, the independent integration reproduced the stored escaped energy to within 0.0034%, and the largest sampled energy-balance residual was below 0.0057% of the corresponding budget scale.
+
+| Distance of loss center from sheet | Unforced escaped energy | 46 mm escaped energy change | 60 mm escaped energy change |
+| --- | ---: | ---: | ---: |
+| 48 mm | 0.49057 | +37.25% | +56.93% |
+| 64 mm | 0.19174 | +77.12% | +150.07% |
+| 80 mm | 0.14522 | +105.61% | +344.51% |
+
+Both solids increased modeled escaped energy at every tested loss placement. The background escape also changes with placement. Across the three coarse runs the excess over the matched control was 0.148 to 0.183 normalized units for the 46 mm solid and 0.279 to 0.500 for the 60 mm solid. At the 80 mm placement, both solid runs reached their highest sampled exhaust power at the end of the comparison window. The percentages describe this model and time window. Wall energy in joules per ELM requires a calibrated target geometry and heat-flux measurement.
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/island_release.py --cache /tmp/tct-pressure-release --levels 2 --cases centered_solid wide_centered_solid centered_field --output plasma/runs/island_release_half_step.json
+python3 plasma/island_release.py --cache /tmp/tct-pressure-release --levels 0 --cases centered_solid wide_centered_solid --exhaust-center .48 --output plasma/runs/island_release_exhaust_inboard.json
+python3 plasma/island_release.py --cache /tmp/tct-pressure-release --levels 0 --cases centered_solid wide_centered_solid --exhaust-center .80 --output plasma/runs/island_release_exhaust_outboard.json
+python3 plasma/island_release_audit.py plasma/runs/island_release_{screen,refined,half_step,exhaust_inboard,exhaust_outboard}.json --heat plasma/runs/island_heat_screen.json
+```
+
+[Half-time-step runs](runs/island_release_half_step.json) · [Inboard loss-region runs](runs/island_release_exhaust_inboard.json) · [Outboard loss-region runs](runs/island_release_exhaust_outboard.json)

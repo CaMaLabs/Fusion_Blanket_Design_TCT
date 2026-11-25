@@ -52,9 +52,9 @@ def transport_heat(heat, velocity, spacing):
     return result
 
 
-def equations(grid, model, solid, field, drive):
+def equations(grid, model, solid, field, drive, *, exhaust_center=EXHAUST_CENTER):
     curvature = drive * (.5 * (1 + np.cos(2*grid.y)))**4
-    exhaust_mask = EXHAUST_RATE * np.exp(-((grid.y-EXHAUST_CENTER)/EXHAUST_WIDTH)**2)
+    exhaust_mask = EXHAUST_RATE * np.exp(-((grid.y-exhaust_center)/EXHAUST_WIDTH)**2)
     cell = grid.volume / np.prod(grid.shape)
     spacing = mhd.LENGTH / grid.shape
 
@@ -87,7 +87,7 @@ def equations(grid, model, solid, field, drive):
     return evaluate
 
 
-def simulate(name, level, drive=CURVATURE):
+def simulate(name, level, drive=CURVATURE, *, exhaust_center=EXHAUST_CENTER):
     base_case = name.removesuffix(NO_DRIVE_SUFFIX)
     solid, field, offset = CASES[base_case]
     mesh, dt = LEVELS[level]
@@ -98,7 +98,8 @@ def simulate(name, level, drive=CURVATURE):
     axis, _, _ = initial_target(grid, plasma_field, radius*(1+mhd.MASK_HALF_WIDTH))
     model = crossing_model(CrossIsland(axis, offset))
     state = (velocity, plasma_field, initial_heat(grid))
-    evaluate = equations(grid, model, solid, field, drive if base_case == name else 0.)
+    evaluate = equations(grid, model, solid, field, drive if base_case == name else 0.,
+                         exhaust_center=exhaust_center)
     norm = spectral_norm(grid)
     integration = np.zeros(len(RATES))
     output = []
@@ -173,11 +174,11 @@ def analyze(results):
             result["summary"]["escape_change_from_enabling_curvature"] = cumulative - off_energy
 
 
-def save_case(cache, name, level):
+def save_case(cache, name, level, *, exhaust_center=EXHAUST_CENTER):
     path = cache / f"{name}_{level}.json"
     if path.is_file():
         return json.loads(path.read_text())
-    result = simulate(name, level)
+    result = simulate(name, level, exhaust_center=exhaust_center)
     staged = path.with_name(f".{path.stem}-{os.getpid()}.json")
     try:
         staged.write_text(json.dumps(result, allow_nan=False) + "\n")
@@ -195,12 +196,18 @@ def main():
                         default=[*CASES, *SOLID_NO_DRIVE])
     parser.add_argument("--levels", nargs="+", type=int, choices=(0,1,2), default=[0])
     parser.add_argument("--jobs", type=int, default=7)
+    parser.add_argument("--exhaust-center", type=float, default=EXHAUST_CENTER,
+                        help="outward displacement of the loss region in normalized length units")
     args = parser.parse_args()
-    args.cache.mkdir(parents=True, exist_ok=True)
+    if not 0. < args.exhaust_center < mhd.LENGTH[1]/2:
+        parser.error("--exhaust-center must lie on the outer half of the domain")
+    cache = args.cache if args.exhaust_center == EXHAUST_CENTER else args.cache / args.exhaust_center.hex()
+    cache.mkdir(parents=True, exist_ok=True)
     names = tuple(dict.fromkeys(("unforced", NO_DRIVE, *args.cases)))
     results = []
     with ProcessPoolExecutor(max_workers=args.jobs) as pool:
-        pending = [pool.submit(save_case, args.cache, name, level) for level, name in product(args.levels, names)]
+        pending = [pool.submit(save_case, cache, name, level, exhaust_center=args.exhaust_center)
+                   for level, name in product(args.levels, names)]
         for task in as_completed(pending):
             results.append(task.result())
     results.sort(key=lambda r: (r["level"], names.index(r["case"])))
@@ -208,7 +215,7 @@ def main():
     receipt = dict(
         model="Pressure-coupled normalized periodic slab with a localized sink representing open-edge heat loss",
         choices=dict(curvature=CURVATURE, chi_iso=CHI_ISO,
-                     exhaust_rate=EXHAUST_RATE, exhaust_center=EXHAUST_CENTER, exhaust_width=EXHAUST_WIDTH),
+                     exhaust_rate=EXHAUST_RATE, exhaust_center=args.exhaust_center, exhaust_width=EXHAUST_WIDTH),
         crossing_ms=1000*CROSSING*SECONDS_PER_UNIT, horizon_ms=1000*END*SECONDS_PER_UNIT, results=results,
     )
     args.output.write_text(json.dumps(receipt, indent=2, allow_nan=False) + "\n")
