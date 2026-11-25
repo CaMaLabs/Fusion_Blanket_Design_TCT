@@ -75,6 +75,8 @@ The denser field-only follow-up measured a nominal span of 1.429 ms across 15 co
 
 The same pulse retained all 24 field-off passes at initial guide-velocity jumps of ±25 m/s across 50 mm. At −55, +55, −85 and +85 m/s it passed 20, 7, 14 and 0 samples respectively after refinement. The effect depends on the magnitude and direction of the initial shear in the local model. [Guide-flow shear sweep](plasma/README.md#initial-guide-flow-shear)
 
+An intentionally centered trajectory drove 46 mm and 60 mm modeled solids across the initial island axis. The initial local normal thickness was 54.25 mm. The solid passes left multiple projected centers, and the 3D one-turn search recovered zero stable axes at all three post-pass checkpoints. The offset solid produced the same qualitative result. Peak sampled current remained severalfold above the matched unforced control. [Direct island-axis crossings](plasma/README.md#deliberate-island-axis-crossing)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.

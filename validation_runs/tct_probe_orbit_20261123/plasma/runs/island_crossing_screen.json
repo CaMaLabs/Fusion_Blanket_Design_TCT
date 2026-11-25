@@ -1,0 +1,4374 @@
+{
+  "crossing_duration_s": 0.007341351161498861,
+  "recovery_duration_s": 0.0024471170538329532,
+  "physical_scope": "Prescribed crossing in periodic incompressible resistive MHD with a solid momentum mask. Magnetic field evolves inside the mask. Topology is checked after coupling falls to zero.",
+  "cases": {
+    "unforced": {
+      "0": {
+        "case": "unforced",
+        "mesh": [
+          64,
+          52,
+          52
+        ],
+        "dt_s": 1.0196321057637306e-05,
+        "aim_point_m": [
+          -0.3141592653589793,
+          0.0,
+          0.017
+        ],
+        "initial_separatrix_y_m": [
+          -0.02712714454722259,
+          0.027127144547222606
+        ],
+        "closest_sample_to_axis_m": 0.0,
+        "normal_travel_m": 0.13999999999999999,
+        "core_diameter_m": 0.046000000000000006,
+        "initial_trajectory_offset_m": 0.0,
+        "solid": false,
+        "prescribed_field": false,
+        "rows": [
+          {
+            "time_s": 0.0,
+            "center_m": [
+              -0.3141592653589793,
+              0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.07000000000000002,
+            "peak_sampled_current": 3.796438367871772,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.606372735708385
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48637273570838563
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11999999999999938
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.3148909117064473,
+                "determinant": 1.0000000184833142
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 7.174852858160772,
+                "determinant": 0.9999830894575074
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.3148909117064473,
+                  "determinant": 1.0000000184833142
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 7.174852858160772,
+                  "determinant": 0.9999830894575074
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0004078528423054923,
+            "center_m": [
+              -0.3141592653589793,
+              0.06977950515673424,
+              0.017
+            ],
+            "speed_m_s": -1.575002017400115,
+            "distance_to_initial_axis_m": 0.06977950515673426,
+            "peak_sampled_current": 3.7775343932948866
+          },
+          {
+            "time_s": 0.0008157056846109846,
+            "center_m": [
+              -0.3141592653589793,
+              0.06838540872834425,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528435,
+            "distance_to_initial_axis_m": 0.06838540872834424,
+            "peak_sampled_current": 3.749942335807292
+          },
+          {
+            "time_s": 0.0012235585269164766,
+            "center_m": [
+              -0.3141592653589793,
+              0.06503086419753086,
+              0.017
+            ],
+            "speed_m_s": -11.03591378974129,
+            "distance_to_initial_axis_m": 0.06503086419753083,
+            "peak_sampled_current": 3.7141089920933013,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6046800107907508
+                },
+                {
+                  "xy": [
+                    0.0,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.4851809861959844
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11949902459476647
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.288371368736498,
+                "determinant": 1.0000000200530268
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 8.881784197001252e-16,
+                "trace": 7.076716822495775,
+                "determinant": 0.9999845177463663
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.288371368736498,
+                  "determinant": 1.0000000200530268
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 8.881784197001252e-16,
+                  "trace": 7.076716822495775,
+                  "determinant": 0.9999845177463663
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0016314113692219691,
+            "center_m": [
+              -0.3141592653589793,
+              0.05930244373317076,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317076,
+            "peak_sampled_current": 3.6705437536110943
+          },
+          {
+            "time_s": 0.002039264211527461,
+            "center_m": [
+              -0.3141592653589793,
+              0.05110679266371996,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371996,
+            "peak_sampled_current": 3.619809463485491
+          },
+          {
+            "time_s": 0.0024471170538329532,
+            "center_m": [
+              -0.3141592653589793,
+              0.04061728395061729,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.04061728395061728,
+            "peak_sampled_current": 3.5625130303608223
+          },
+          {
+            "time_s": 0.0028549698961384457,
+            "center_m": [
+              -0.3141592653589793,
+              0.02822067266168774,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956846,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 3.4992959248993585
+          },
+          {
+            "time_s": 0.0032628227384439382,
+            "center_m": [
+              -0.3141592653589793,
+              0.014463750444546048,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955273,
+            "distance_to_initial_axis_m": 0.014463750444546043,
+            "peak_sampled_current": 3.4308246901846866
+          },
+          {
+            "time_s": 0.0036706755807494303,
+            "center_m": [
+              -0.3141592653589793,
+              0.0,
+              0.017
+            ],
+            "speed_m_s": -35.75636067876178,
+            "distance_to_initial_axis_m": 0.0,
+            "peak_sampled_current": 3.3577816004805996
+          },
+          {
+            "time_s": 0.004078528423054922,
+            "center_m": [
+              -0.3141592653589793,
+              -0.014463750444546064,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955272,
+            "distance_to_initial_axis_m": 0.014463750444546064,
+            "peak_sampled_current": 3.280855602733769
+          },
+          {
+            "time_s": 0.004486381265360415,
+            "center_m": [
+              -0.3141592653589793,
+              -0.02822067266168773,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956845,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 3.200733671358682
+          },
+          {
+            "time_s": 0.0048942341076659065,
+            "center_m": [
+              -0.3141592653589793,
+              -0.04061728395061725,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.040617283950617235,
+            "peak_sampled_current": 3.1180926990012447
+          },
+          {
+            "time_s": 0.005302086949971399,
+            "center_m": [
+              -0.3141592653589793,
+              -0.051106792663719904,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371992,
+            "peak_sampled_current": 3.0335920342423317
+          },
+          {
+            "time_s": 0.0057099397922768915,
+            "center_m": [
+              -0.3141592653589793,
+              -0.05930244373317082,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317082,
+            "peak_sampled_current": 2.9515700070980393
+          },
+          {
+            "time_s": 0.0061177926345823835,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06503086419753092,
+              0.017
+            ],
+            "speed_m_s": -11.035913789741299,
+            "distance_to_initial_axis_m": 0.06503086419753092,
+            "peak_sampled_current": 2.8785110652013217
+          },
+          {
+            "time_s": 0.0065256454768878765,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0683854087283443,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528429,
+            "distance_to_initial_axis_m": 0.0683854087283443,
+            "peak_sampled_current": 2.8042188087607043
+          },
+          {
+            "time_s": 0.006933498319193368,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0697795051567342,
+              0.017
+            ],
+            "speed_m_s": -1.5750020174001162,
+            "distance_to_initial_axis_m": 0.0697795051567342,
+            "peak_sampled_current": 2.728982630468278
+          },
+          {
+            "time_s": 0.007341351161498861,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.653071544903464,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5974484296491334
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.47873540912428564
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11871302052484772
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.2191987925239696,
+                "determinant": 1.0000000299487368
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 6.617509940854081,
+                "determinant": 1.000007680380011
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.2191987925239696,
+                  "determinant": 1.0000000299487368
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 6.617509940854081,
+                  "determinant": 1.000007680380011
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 36,
+            "mean_width_change_pct": 0.0,
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.007749204003804353,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.5767349974169984,
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 36,
+            "mean_width_change_pct": 0.0
+          },
+          {
+            "time_s": 0.008157056846109845,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.5002041175615735,
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 36,
+            "mean_width_change_pct": 0.0
+          },
+          {
+            "time_s": 0.008564909688415338,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.4236933343458915,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5963322867049219
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.47720957083509624
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11912271586982565
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.2191206461767985,
+                "determinant": 1.0000000331379055
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -8.881784197001252e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 6.532268837638687,
+                "determinant": 1.000018296450986
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.2191206461767985,
+                  "determinant": 1.0000000331379055
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -8.881784197001252e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 6.532268837638687,
+                  "determinant": 1.000018296450986
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 14,
+            "mean_width_change_pct": 0.0,
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.00897276253072083,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.3476366037551792,
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 12,
+            "mean_width_change_pct": 0.0
+          },
+          {
+            "time_s": 0.009380615373026322,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.279929897622599,
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 11,
+            "mean_width_change_pct": 0.0
+          },
+          {
+            "time_s": 0.009788468215331813,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.223199398093362,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5953216787453101
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.4755531606706208
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11976851807468925
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.221589795689983,
+                "determinant": 1.0000000362371055
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -8.881784197001252e-16,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": 6.453631024319282,
+                "determinant": 1.0000327161215694
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.221589795689983,
+                  "determinant": 1.0000000362371055
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -8.881784197001252e-16,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": 6.453631024319282,
+                  "determinant": 1.0000327161215694
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 0.0,
+            "common_width_profiles": 7,
+            "mean_width_change_pct": 0.0,
+            "projected_flux_change_pct": 0.0
+          }
+        ]
+      }
+    },
+    "centered_solid": {
+      "0": {
+        "case": "centered_solid",
+        "mesh": [
+          64,
+          52,
+          52
+        ],
+        "dt_s": 1.0196321057637306e-05,
+        "aim_point_m": [
+          -0.3141592653589793,
+          0.0,
+          0.017
+        ],
+        "initial_separatrix_y_m": [
+          -0.02712714454722259,
+          0.027127144547222606
+        ],
+        "closest_sample_to_axis_m": 0.0,
+        "normal_travel_m": 0.13999999999999999,
+        "core_diameter_m": 0.046000000000000006,
+        "initial_trajectory_offset_m": 0.0,
+        "solid": true,
+        "prescribed_field": false,
+        "rows": [
+          {
+            "time_s": 0.0,
+            "center_m": [
+              -0.3141592653589793,
+              0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.07000000000000002,
+            "peak_sampled_current": 3.796438367871772,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.606372735708385
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48637273570838563
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11999999999999938
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.3148909117064473,
+                "determinant": 1.0000000184833142
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 7.174852858160772,
+                "determinant": 0.9999830894575074
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.3148909117064473,
+                  "determinant": 1.0000000184833142
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 7.174852858160772,
+                  "determinant": 0.9999830894575074
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0004078528423054923,
+            "center_m": [
+              -0.3141592653589793,
+              0.06977950515673424,
+              0.017
+            ],
+            "speed_m_s": -1.575002017400115,
+            "distance_to_initial_axis_m": 0.06977950515673426,
+            "peak_sampled_current": 3.7787706286406473
+          },
+          {
+            "time_s": 0.0008157056846109846,
+            "center_m": [
+              -0.3141592653589793,
+              0.06838540872834425,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528435,
+            "distance_to_initial_axis_m": 0.06838540872834424,
+            "peak_sampled_current": 3.77865782821214
+          },
+          {
+            "time_s": 0.0012235585269164766,
+            "center_m": [
+              -0.3141592653589793,
+              0.06503086419753086,
+              0.017
+            ],
+            "speed_m_s": -11.03591378974129,
+            "distance_to_initial_axis_m": 0.06503086419753083,
+            "peak_sampled_current": 3.81471354927738,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.1404810451372533,
+                    -0.0037420067561444448
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6030180875846312
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  3.141578722967715,
+                  -0.0024104862745497613
+                ],
+                "return_error": 2.220446049250313e-16,
+                "trace": -1.291905228492431,
+                "determinant": 1.0000162675908857
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  4.5185552055571065e-07,
+                  6.157121065442084e-06
+                ],
+                "return_error": 0.0,
+                "trace": 7.073134302016613,
+                "determinant": 0.9999851011045031
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    3.141578722967715,
+                    -0.0024104862745497613
+                  ],
+                  "return_error": 2.220446049250313e-16,
+                  "trace": -1.291905228492431,
+                  "determinant": 1.0000162675908857
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    4.5185552055571065e-07,
+                    6.157121065442084e-06
+                  ],
+                  "return_error": 0.0,
+                  "trace": 7.073134302016613,
+                  "determinant": 0.9999851011045031
+                }
+              ],
+              "unresolved_seed_count": 11,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.0016314113692219691,
+            "center_m": [
+              -0.3141592653589793,
+              0.05930244373317076,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317076,
+            "peak_sampled_current": 3.860982491287281
+          },
+          {
+            "time_s": 0.002039264211527461,
+            "center_m": [
+              -0.3141592653589793,
+              0.05110679266371996,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371996,
+            "peak_sampled_current": 6.269448839325606
+          },
+          {
+            "time_s": 0.0024471170538329532,
+            "center_m": [
+              -0.3141592653589793,
+              0.04061728395061729,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.04061728395061728,
+            "peak_sampled_current": 9.69535938076656
+          },
+          {
+            "time_s": 0.0028549698961384457,
+            "center_m": [
+              -0.3141592653589793,
+              0.02822067266168774,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956846,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 12.380416804046074
+          },
+          {
+            "time_s": 0.0032628227384439382,
+            "center_m": [
+              -0.3141592653589793,
+              0.014463750444546048,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955273,
+            "distance_to_initial_axis_m": 0.014463750444546043,
+            "peak_sampled_current": 15.188687715929438
+          },
+          {
+            "time_s": 0.0036706755807494303,
+            "center_m": [
+              -0.3141592653589793,
+              0.0,
+              0.017
+            ],
+            "speed_m_s": -35.75636067876178,
+            "distance_to_initial_axis_m": 0.0,
+            "peak_sampled_current": 18.448080861007465
+          },
+          {
+            "time_s": 0.004078528423054922,
+            "center_m": [
+              -0.3141592653589793,
+              -0.014463750444546064,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955272,
+            "distance_to_initial_axis_m": 0.014463750444546064,
+            "peak_sampled_current": 21.16859732195337
+          },
+          {
+            "time_s": 0.004486381265360415,
+            "center_m": [
+              -0.3141592653589793,
+              -0.02822067266168773,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956845,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 21.817957883522393
+          },
+          {
+            "time_s": 0.0048942341076659065,
+            "center_m": [
+              -0.3141592653589793,
+              -0.04061728395061725,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.040617283950617235,
+            "peak_sampled_current": 20.20532856247001
+          },
+          {
+            "time_s": 0.005302086949971399,
+            "center_m": [
+              -0.3141592653589793,
+              -0.051106792663719904,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371992,
+            "peak_sampled_current": 21.42155722820044
+          },
+          {
+            "time_s": 0.0057099397922768915,
+            "center_m": [
+              -0.3141592653589793,
+              -0.05930244373317082,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317082,
+            "peak_sampled_current": 22.09631099138379
+          },
+          {
+            "time_s": 0.0061177926345823835,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06503086419753092,
+              0.017
+            ],
+            "speed_m_s": -11.035913789741299,
+            "distance_to_initial_axis_m": 0.06503086419753092,
+            "peak_sampled_current": 21.87639461081202
+          },
+          {
+            "time_s": 0.0065256454768878765,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0683854087283443,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528429,
+            "distance_to_initial_axis_m": 0.0683854087283443,
+            "peak_sampled_current": 20.94702540420892
+          },
+          {
+            "time_s": 0.006933498319193368,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0697795051567342,
+              0.017
+            ],
+            "speed_m_s": -1.5750020174001162,
+            "distance_to_initial_axis_m": 0.0697795051567342,
+            "peak_sampled_current": 19.392606829198474
+          },
+          {
+            "time_s": 0.007341351161498861,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 17.960307713568245,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.140329361624227,
+                    -0.15172594895240077
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.4225482027010663
+                },
+                {
+                  "xy": [
+                    2.6747492087671656,
+                    -0.21380549414424443
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5719523095575471
+                },
+                {
+                  "xy": [
+                    -2.6749259152780214,
+                    -0.21369006180576755
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5723059911397014
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 1.606691669633361,
+                "candidate_distance": 0.5357369160683578
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  0.0003062960022357508,
+                  0.0003303026601451098
+                ],
+                "return_error": 4.965068306494546e-16,
+                "trace": 7.551357858185058,
+                "determinant": 0.9977638851283249
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    0.0003062960022357508,
+                    0.0003303026601451098
+                  ],
+                  "return_error": 4.965068306494546e-16,
+                  "trace": 7.551357858185058,
+                  "determinant": 0.9977638851283249
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.676710157780194,
+                    -0.17625678307063763
+                  ],
+                  "return_error": 7.913275960600955e-13,
+                  "trace": -10.15373182031132,
+                  "determinant": 1.025667761449606
+                }
+              ],
+              "unresolved_seed_count": 23,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 576.9628112016013,
+            "common_width_profiles": 30,
+            "mean_width_change_pct": -79.95563884893981,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.007749204003804353,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 16.59764767508141,
+            "peak_current_change_pct": 544.1348331015578,
+            "common_width_profiles": 30,
+            "mean_width_change_pct": -80.60298667493606
+          },
+          {
+            "time_s": 0.008157056846109845,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 15.137720439440436,
+            "peak_current_change_pct": 505.4593836204109,
+            "common_width_profiles": 28,
+            "mean_width_change_pct": -79.4676108867584
+          },
+          {
+            "time_s": 0.008564909688415338,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 13.643515110826591,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    2.6346824216183666,
+                    -0.19625098393898743
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5934770975823191
+                },
+                {
+                  "xy": [
+                    -2.6347355715520444,
+                    -0.19619630427840584
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5936298098409282
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -2.6501340434713057,
+                  -0.20136578420467832
+                ],
+                "return_error": 2.151798052888057e-12,
+                "trace": -7.3629526449734435,
+                "determinant": 0.9758546171405809
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  0.00025208096937934243,
+                  5.99462522092864e-05
+                ],
+                "return_error": 4.965068306494546e-16,
+                "trace": 7.556170395229487,
+                "determinant": 0.994990667561068
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.6501340434713057,
+                    -0.20136578420467832
+                  ],
+                  "return_error": 2.151798052888057e-12,
+                  "trace": -7.3629526449734435,
+                  "determinant": 0.9758546171405809
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    0.00025208096937934243,
+                    5.99462522092864e-05
+                  ],
+                  "return_error": 4.965068306494546e-16,
+                  "trace": 7.556170395229487,
+                  "determinant": 0.994990667561068
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.6502033415551463,
+                    -0.20151232971470323
+                  ],
+                  "return_error": 3.1732325063337324e-11,
+                  "trace": -7.529443414854066,
+                  "determinant": 1.025447755248231
+                }
+              ],
+              "unresolved_seed_count": 13,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 462.92250003273267,
+            "common_width_profiles": 12,
+            "mean_width_change_pct": -74.84245220108517,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.00897276253072083,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 12.587259222059966,
+            "peak_current_change_pct": 436.16727571575274,
+            "common_width_profiles": 9,
+            "mean_width_change_pct": -77.57190960974162
+          },
+          {
+            "time_s": 0.009380615373026322,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 11.630905789167732,
+            "peak_current_change_pct": 410.1431320890998,
+            "common_width_profiles": 9,
+            "mean_width_change_pct": -84.93857969861976
+          },
+          {
+            "time_s": 0.009788468215331813,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 10.768647083625224,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.141369072300826,
+                    -0.13596108639657167
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5978871962458717
+                },
+                {
+                  "xy": [
+                    2.619222979694852,
+                    -0.1772885067586436
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6015908948211327
+                },
+                {
+                  "xy": [
+                    2.875978628271839,
+                    -0.1660760437289457
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5682699199074085
+                },
+                {
+                  "xy": [
+                    -2.8760747956379373,
+                    -0.16614063435141024
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5682266877293333
+                },
+                {
+                  "xy": [
+                    -2.619097433702287,
+                    -0.17716191354549116
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6015816534082575
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  2.6680303988226566,
+                  -0.2336731925570077
+                ],
+                "return_error": 6.49981334747518e-10,
+                "trace": -7.461191639261735,
+                "determinant": 0.9994044005674847
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  0.00013100710129076987,
+                  0.00020889424919268151
+                ],
+                "return_error": 4.440892098500626e-16,
+                "trace": 6.724077743702981,
+                "determinant": 0.9951511681647977
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.6680303988226566,
+                    -0.2336731925570077
+                  ],
+                  "return_error": 6.49981334747518e-10,
+                  "trace": -7.461191639261735,
+                  "determinant": 0.9994044005674847
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    0.00013100710129076987,
+                    0.00020889424919268151
+                  ],
+                  "return_error": 4.440892098500626e-16,
+                  "trace": 6.724077743702981,
+                  "determinant": 0.9951511681647977
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -3.1415312807703057,
+                    -0.23514899221768149
+                  ],
+                  "return_error": 3.580361673049448e-15,
+                  "trace": -8.798889844779168,
+                  "determinant": 0.9963441523615573
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.6680652780760914,
+                    -0.2335486398158959
+                  ],
+                  "return_error": 5.65206642209897e-12,
+                  "trace": -7.495178191953335,
+                  "determinant": 0.9997446480919061
+                }
+              ],
+              "unresolved_seed_count": 13,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 384.37612446551236,
+            "common_width_profiles": 7,
+            "mean_width_change_pct": -68.79761346566058,
+            "projected_flux_change_pct": null
+          }
+        ]
+      }
+    },
+    "offset_solid": {
+      "0": {
+        "case": "offset_solid",
+        "mesh": [
+          64,
+          52,
+          52
+        ],
+        "dt_s": 1.0196321057637306e-05,
+        "aim_point_m": [
+          -0.3141592653589793,
+          0.0,
+          0.017
+        ],
+        "initial_separatrix_y_m": [
+          -0.02712714454722259,
+          0.027127144547222606
+        ],
+        "closest_sample_to_axis_m": 0.046,
+        "normal_travel_m": 0.13999999999999999,
+        "core_diameter_m": 0.046000000000000006,
+        "initial_trajectory_offset_m": 0.046000000000000006,
+        "solid": true,
+        "prescribed_field": false,
+        "rows": [
+          {
+            "time_s": 0.0,
+            "center_m": [
+              -0.2681592653589793,
+              0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.08376156636548772,
+            "peak_sampled_current": 3.796438367871772,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.606372735708385
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48637273570838563
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11999999999999938
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.3148909117064473,
+                "determinant": 1.0000000184833142
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 7.174852858160772,
+                "determinant": 0.9999830894575074
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.3148909117064473,
+                  "determinant": 1.0000000184833142
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 7.174852858160772,
+                  "determinant": 0.9999830894575074
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0004078528423054923,
+            "center_m": [
+              -0.2681592653589793,
+              0.06977950515673424,
+              0.017
+            ],
+            "speed_m_s": -1.575002017400115,
+            "distance_to_initial_axis_m": 0.08357738533789331,
+            "peak_sampled_current": 3.7775679620732054
+          },
+          {
+            "time_s": 0.0008157056846109846,
+            "center_m": [
+              -0.2681592653589793,
+              0.06838540872834425,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528435,
+            "distance_to_initial_axis_m": 0.08241701357694721,
+            "peak_sampled_current": 3.756014935336539
+          },
+          {
+            "time_s": 0.0012235585269164766,
+            "center_m": [
+              -0.2681592653589793,
+              0.06503086419753086,
+              0.017
+            ],
+            "speed_m_s": -11.03591378974129,
+            "distance_to_initial_axis_m": 0.07965559175775232,
+            "peak_sampled_current": 3.7865814319409816,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.097805992980158,
+                    -0.0004800256943278125
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6042125096273498
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  3.1407366491588657,
+                  -0.0007443268624649502
+                ],
+                "return_error": 9.155133597044475e-16,
+                "trace": -1.2913011732388364,
+                "determinant": 1.0000599119713027
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  1.4122156293705501e-05,
+                  -5.424130274267469e-06
+                ],
+                "return_error": 0.0,
+                "trace": 7.077365444654536,
+                "determinant": 0.9999976731927084
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    3.1407366491588657,
+                    -0.0007443268624649502
+                  ],
+                  "return_error": 9.155133597044475e-16,
+                  "trace": -1.2913011732388364,
+                  "determinant": 1.0000599119713027
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    1.4122156293705501e-05,
+                    -5.424130274267469e-06
+                  ],
+                  "return_error": 0.0,
+                  "trace": 7.077365444654536,
+                  "determinant": 0.9999976731927084
+                }
+              ],
+              "unresolved_seed_count": 11,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.0016314113692219691,
+            "center_m": [
+              -0.2681592653589793,
+              0.05930244373317076,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.07505184763032742,
+            "peak_sampled_current": 3.842700732585645
+          },
+          {
+            "time_s": 0.002039264211527461,
+            "center_m": [
+              -0.2681592653589793,
+              0.05110679266371996,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.06875975753573059,
+            "peak_sampled_current": 6.321991063242282
+          },
+          {
+            "time_s": 0.0024471170538329532,
+            "center_m": [
+              -0.2681592653589793,
+              0.04061728395061729,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.06136581911394218,
+            "peak_sampled_current": 9.740461059904996
+          },
+          {
+            "time_s": 0.0028549698961384457,
+            "center_m": [
+              -0.2681592653589793,
+              0.02822067266168774,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956846,
+            "distance_to_initial_axis_m": 0.05396671534824154,
+            "peak_sampled_current": 12.284737973496545
+          },
+          {
+            "time_s": 0.0032628227384439382,
+            "center_m": [
+              -0.2681592653589793,
+              0.014463750444546048,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955273,
+            "distance_to_initial_axis_m": 0.04822032846136685,
+            "peak_sampled_current": 15.06668555006551
+          },
+          {
+            "time_s": 0.0036706755807494303,
+            "center_m": [
+              -0.2681592653589793,
+              0.0,
+              0.017
+            ],
+            "speed_m_s": -35.75636067876178,
+            "distance_to_initial_axis_m": 0.046,
+            "peak_sampled_current": 18.452615742214945
+          },
+          {
+            "time_s": 0.004078528423054922,
+            "center_m": [
+              -0.2681592653589793,
+              -0.014463750444546064,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955272,
+            "distance_to_initial_axis_m": 0.048220328461366854,
+            "peak_sampled_current": 21.162746714139534
+          },
+          {
+            "time_s": 0.004486381265360415,
+            "center_m": [
+              -0.2681592653589793,
+              -0.02822067266168773,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956845,
+            "distance_to_initial_axis_m": 0.05396671534824154,
+            "peak_sampled_current": 21.375356792853367
+          },
+          {
+            "time_s": 0.0048942341076659065,
+            "center_m": [
+              -0.2681592653589793,
+              -0.04061728395061725,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.061365819113942156,
+            "peak_sampled_current": 20.334512706621176
+          },
+          {
+            "time_s": 0.005302086949971399,
+            "center_m": [
+              -0.2681592653589793,
+              -0.051106792663719904,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.06875975753573056,
+            "peak_sampled_current": 21.4893104189857
+          },
+          {
+            "time_s": 0.0057099397922768915,
+            "center_m": [
+              -0.2681592653589793,
+              -0.05930244373317082,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.07505184763032746,
+            "peak_sampled_current": 21.709391883426086
+          },
+          {
+            "time_s": 0.0061177926345823835,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06503086419753092,
+              0.017
+            ],
+            "speed_m_s": -11.035913789741299,
+            "distance_to_initial_axis_m": 0.07965559175775239,
+            "peak_sampled_current": 21.521792112268468
+          },
+          {
+            "time_s": 0.0065256454768878765,
+            "center_m": [
+              -0.2681592653589793,
+              -0.0683854087283443,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528429,
+            "distance_to_initial_axis_m": 0.08241701357694725,
+            "peak_sampled_current": 20.833630346393736
+          },
+          {
+            "time_s": 0.006933498319193368,
+            "center_m": [
+              -0.2681592653589793,
+              -0.0697795051567342,
+              0.017
+            ],
+            "speed_m_s": -1.5750020174001162,
+            "distance_to_initial_axis_m": 0.08357738533789326,
+            "peak_sampled_current": 19.303047845496664
+          },
+          {
+            "time_s": 0.007341351161498861,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 17.825564285161306,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.0647053486977196,
+                    -0.18830366249382524
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5795457709622931
+                },
+                {
+                  "xy": [
+                    -2.676437989587654,
+                    -0.15094445799915746
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.4150306581590623
+                },
+                {
+                  "xy": [
+                    -2.259759614007915,
+                    -0.22590652924125032
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5526544016970362
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "stability_unresolved",
+                "xy": [
+                  2.9776901367117654,
+                  -0.05622755611577723
+                ],
+                "return_error": 6.700451198866449e-14,
+                "trace": -4.234159210723456,
+                "determinant": 1.033944723717905
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -0.007332821400205969,
+                  0.0015421718046748634
+                ],
+                "return_error": 2.220446049250313e-16,
+                "trace": 6.200984098928773,
+                "determinant": 0.9977791415621285
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -0.007332821400205969,
+                    0.0015421718046748634
+                  ],
+                  "return_error": 2.220446049250313e-16,
+                  "trace": 6.200984098928773,
+                  "determinant": 0.9977791415621285
+                }
+              ],
+              "unresolved_seed_count": 28,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 571.8840401950004,
+            "common_width_profiles": 22,
+            "mean_width_change_pct": -74.00725450016563,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.007749204003804353,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 16.43516095452872,
+            "peak_current_change_pct": 537.828918030137,
+            "common_width_profiles": 21,
+            "mean_width_change_pct": -71.39458464291148
+          },
+          {
+            "time_s": 0.008157056846109845,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 15.18875690191129,
+            "peak_current_change_pct": 507.5006754538404,
+            "common_width_profiles": 18,
+            "mean_width_change_pct": -81.73037208615908
+          },
+          {
+            "time_s": 0.008564909688415338,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 14.172673976038709,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.0280882869704993,
+                    -0.19082723527340528
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6001058326375854
+                },
+                {
+                  "xy": [
+                    -2.8477117148054263,
+                    -0.3392987003405543
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.530672249397473
+                },
+                {
+                  "xy": [
+                    -2.8611619449621624,
+                    -0.1828859917445098
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5205504244380708
+                },
+                {
+                  "xy": [
+                    -2.6906515182392026,
+                    -0.31337946598363486
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5403962121944446
+                },
+                {
+                  "xy": [
+                    -2.5258988164167837,
+                    -0.3059450753683093
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5292452176663274
+                },
+                {
+                  "xy": [
+                    -2.231190645984025,
+                    -0.19834581663423267
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5739368973386502
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  2.941639716104218,
+                  -0.10504334428055451
+                ],
+                "return_error": 1.616932716068078e-12,
+                "trace": -3.7119245040915256,
+                "determinant": 0.9983949231758414
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -0.007147636150356629,
+                  0.0032146285135521424
+                ],
+                "return_error": 6.6018607235733855e-15,
+                "trace": 5.895086117484126,
+                "determinant": 0.9947556530944974
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.941639716104218,
+                    -0.10504334428055451
+                  ],
+                  "return_error": 1.616932716068078e-12,
+                  "trace": -3.7119245040915256,
+                  "determinant": 0.9983949231758414
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -0.007147636150356629,
+                    0.0032146285135521424
+                  ],
+                  "return_error": 6.6018607235733855e-15,
+                  "trace": 5.895086117484126,
+                  "determinant": 0.9947556530944974
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.769654864724179,
+                    -0.5232537530627113
+                  ],
+                  "return_error": 1.8663006891766117e-12,
+                  "trace": -16.257736051522365,
+                  "determinant": 0.976830024907257
+                }
+              ],
+              "unresolved_seed_count": 13,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 484.7552483311031,
+            "common_width_profiles": 6,
+            "mean_width_change_pct": -85.68748000250952,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.00897276253072083,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 13.054935978944155,
+            "peak_current_change_pct": 456.0884490411351,
+            "common_width_profiles": 6,
+            "mean_width_change_pct": -73.81975286085878
+          },
+          {
+            "time_s": 0.009380615373026322,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 11.98783500427775,
+            "peak_current_change_pct": 425.79840357276277,
+            "common_width_profiles": 5,
+            "mean_width_change_pct": -84.42825295561607
+          },
+          {
+            "time_s": 0.009788468215331813,
+            "center_m": [
+              -0.2681592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.0837615663654877,
+            "peak_sampled_current": 11.226089884643605,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -2.7467260737862165,
+                    -0.1373998818107789
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5905561083003975
+                },
+                {
+                  "xy": [
+                    2.9982715252863272,
+                    -0.1821072362905758
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6083926457092651
+                },
+                {
+                  "xy": [
+                    -2.9922907786325648,
+                    -0.17635877440345826
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5626985096688507
+                },
+                {
+                  "xy": [
+                    -2.4564527180328777,
+                    -0.16195596072452667
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5590383491111411
+                },
+                {
+                  "xy": [
+                    -2.2299483336535526,
+                    -0.1729853967054129
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5816675481637292
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  2.924823616650878,
+                  -0.14923317112461554
+                ],
+                "return_error": 6.032302582235741e-14,
+                "trace": -3.403353576294845,
+                "determinant": 1.0034617112721467
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -0.005529144650208817,
+                  0.00456458069291843
+                ],
+                "return_error": 9.930136612989092e-16,
+                "trace": 6.524060583502854,
+                "determinant": 0.9904924243224098
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.924823616650878,
+                    -0.14923317112461554
+                  ],
+                  "return_error": 6.032302582235741e-14,
+                  "trace": -3.403353576294845,
+                  "determinant": 1.0034617112721467
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -0.005529144650208817,
+                    0.00456458069291843
+                  ],
+                  "return_error": 9.930136612989092e-16,
+                  "trace": 6.524060583502854,
+                  "determinant": 0.9904924243224098
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.86157100789241,
+                    -0.2227505806448371
+                  ],
+                  "return_error": 1.1573992337112138e-11,
+                  "trace": 35.911338627714,
+                  "determinant": 0.9928049534556976
+                }
+              ],
+              "unresolved_seed_count": 16,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 404.9520026980581,
+            "common_width_profiles": 3,
+            "mean_width_change_pct": -83.88201711527523,
+            "projected_flux_change_pct": null
+          }
+        ]
+      }
+    },
+    "centered_field": {
+      "0": {
+        "case": "centered_field",
+        "mesh": [
+          64,
+          52,
+          52
+        ],
+        "dt_s": 1.0196321057637306e-05,
+        "aim_point_m": [
+          -0.3141592653589793,
+          0.0,
+          0.017
+        ],
+        "initial_separatrix_y_m": [
+          -0.02712714454722259,
+          0.027127144547222606
+        ],
+        "closest_sample_to_axis_m": 0.0,
+        "normal_travel_m": 0.13999999999999999,
+        "core_diameter_m": 0.046000000000000006,
+        "initial_trajectory_offset_m": 0.0,
+        "solid": false,
+        "prescribed_field": true,
+        "rows": [
+          {
+            "time_s": 0.0,
+            "center_m": [
+              -0.3141592653589793,
+              0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.07000000000000002,
+            "peak_sampled_current": 3.796438367871772,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.606372735708385
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48637273570838563
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11999999999999938
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.3148909117064473,
+                "determinant": 1.0000000184833142
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 7.174852858160772,
+                "determinant": 0.9999830894575074
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.3148909117064473,
+                  "determinant": 1.0000000184833142
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 7.174852858160772,
+                  "determinant": 0.9999830894575074
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0004078528423054923,
+            "center_m": [
+              -0.3141592653589793,
+              0.06977950515673424,
+              0.017
+            ],
+            "speed_m_s": -1.575002017400115,
+            "distance_to_initial_axis_m": 0.06977950515673426,
+            "peak_sampled_current": 3.777542926724635
+          },
+          {
+            "time_s": 0.0008157056846109846,
+            "center_m": [
+              -0.3141592653589793,
+              0.06838540872834425,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528435,
+            "distance_to_initial_axis_m": 0.06838540872834424,
+            "peak_sampled_current": 3.7500606147900926
+          },
+          {
+            "time_s": 0.0012235585269164766,
+            "center_m": [
+              -0.3141592653589793,
+              0.06503086419753086,
+              0.017
+            ],
+            "speed_m_s": -11.03591378974129,
+            "distance_to_initial_axis_m": 0.06503086419753083,
+            "peak_sampled_current": 3.7146377117275575,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.14159265232508,
+                    -2.4516013616304733e-05
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6046086619313387
+                },
+                {
+                  "xy": [
+                    0.0,
+                    9.943157408542902e-13
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48518023439694846
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.1194284275343902
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592652741071,
+                  0.00023340526967086106
+                ],
+                "return_error": 9.155133597044475e-16,
+                "trace": -1.2903935465172784,
+                "determinant": 1.000000007045941
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -1.554312234475219e-14,
+                  -3.9383747374444056e-09
+                ],
+                "return_error": 4.440892098500626e-16,
+                "trace": 7.076716898042566,
+                "determinant": 0.9999845223382694
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592652741071,
+                    0.00023340526967086106
+                  ],
+                  "return_error": 9.155133597044475e-16,
+                  "trace": -1.2903935465172784,
+                  "determinant": 1.000000007045941
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -1.554312234475219e-14,
+                    -3.9383747374444056e-09
+                  ],
+                  "return_error": 4.440892098500626e-16,
+                  "trace": 7.076716898042566,
+                  "determinant": 0.9999845223382694
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": -0.05907752018534662
+          },
+          {
+            "time_s": 0.0016314113692219691,
+            "center_m": [
+              -0.3141592653589793,
+              0.05930244373317076,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317076,
+            "peak_sampled_current": 3.6720445860620754
+          },
+          {
+            "time_s": 0.002039264211527461,
+            "center_m": [
+              -0.3141592653589793,
+              0.05110679266371996,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371996,
+            "peak_sampled_current": 3.6233609304130434
+          },
+          {
+            "time_s": 0.0024471170538329532,
+            "center_m": [
+              -0.3141592653589793,
+              0.04061728395061729,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.04061728395061728,
+            "peak_sampled_current": 3.5706269018486223
+          },
+          {
+            "time_s": 0.0028549698961384457,
+            "center_m": [
+              -0.3141592653589793,
+              0.02822067266168774,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956846,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 3.516608487930495
+          },
+          {
+            "time_s": 0.0032628227384439382,
+            "center_m": [
+              -0.3141592653589793,
+              0.014463750444546048,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955273,
+            "distance_to_initial_axis_m": 0.014463750444546043,
+            "peak_sampled_current": 3.462701394267062
+          },
+          {
+            "time_s": 0.0036706755807494303,
+            "center_m": [
+              -0.3141592653589793,
+              0.0,
+              0.017
+            ],
+            "speed_m_s": -35.75636067876178,
+            "distance_to_initial_axis_m": 0.0,
+            "peak_sampled_current": 3.4259569111764185
+          },
+          {
+            "time_s": 0.004078528423054922,
+            "center_m": [
+              -0.3141592653589793,
+              -0.014463750444546064,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955272,
+            "distance_to_initial_axis_m": 0.014463750444546064,
+            "peak_sampled_current": 3.5299302128867636
+          },
+          {
+            "time_s": 0.004486381265360415,
+            "center_m": [
+              -0.3141592653589793,
+              -0.02822067266168773,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956845,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 3.5685129938153013
+          },
+          {
+            "time_s": 0.0048942341076659065,
+            "center_m": [
+              -0.3141592653589793,
+              -0.04061728395061725,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.040617283950617235,
+            "peak_sampled_current": 3.534592700163732
+          },
+          {
+            "time_s": 0.005302086949971399,
+            "center_m": [
+              -0.3141592653589793,
+              -0.051106792663719904,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371992,
+            "peak_sampled_current": 3.434456691448898
+          },
+          {
+            "time_s": 0.0057099397922768915,
+            "center_m": [
+              -0.3141592653589793,
+              -0.05930244373317082,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317082,
+            "peak_sampled_current": 3.285893874327994
+          },
+          {
+            "time_s": 0.0061177926345823835,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06503086419753092,
+              0.017
+            ],
+            "speed_m_s": -11.035913789741299,
+            "distance_to_initial_axis_m": 0.06503086419753092,
+            "peak_sampled_current": 3.116104754660171
+          },
+          {
+            "time_s": 0.0065256454768878765,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0683854087283443,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528429,
+            "distance_to_initial_axis_m": 0.0683854087283443,
+            "peak_sampled_current": 2.9867939719626717
+          },
+          {
+            "time_s": 0.006933498319193368,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0697795051567342,
+              0.017
+            ],
+            "speed_m_s": -1.5750020174001162,
+            "distance_to_initial_axis_m": 0.0697795051567342,
+            "peak_sampled_current": 2.883303125780042
+          },
+          {
+            "time_s": 0.007341351161498861,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.787535060104176,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592644124041,
+                    -0.0009234951333059183
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5974875144109473
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  3.141592650898996,
+                  0.00047288727621408455
+                ],
+                "return_error": 1.3506446028928519e-15,
+                "trace": -1.21860679898478,
+                "determinant": 1.0000003837923628
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -1.1790568521519162e-11,
+                  2.013099131836782e-07
+                ],
+                "return_error": 0.0,
+                "trace": 6.622291556635738,
+                "determinant": 0.9999981725534048
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    3.141592650898996,
+                    0.00047288727621408455
+                  ],
+                  "return_error": 1.3506446028928519e-15,
+                  "trace": -1.21860679898478,
+                  "determinant": 1.0000003837923628
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -1.1790568521519162e-11,
+                    2.013099131836782e-07
+                  ],
+                  "return_error": 0.0,
+                  "trace": 6.622291556635738,
+                  "determinant": 0.9999981725534048
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 5.068220472946372,
+            "common_width_profiles": 32,
+            "mean_width_change_pct": 3.2923555438495677,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.007749204003804353,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.694387467872732,
+            "peak_current_change_pct": 4.565951507379373,
+            "common_width_profiles": 34,
+            "mean_width_change_pct": 4.026771317398903
+          },
+          {
+            "time_s": 0.008157056846109845,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.6043173159599218,
+            "peak_current_change_pct": 4.16418794237845,
+            "common_width_profiles": 36,
+            "mean_width_change_pct": 4.266353248493182
+          },
+          {
+            "time_s": 0.008564909688415338,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.517545843278035,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.1415926523801865,
+                    -0.00019264972282706516
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5961487604695378
+                },
+                {
+                  "xy": [
+                    -8.881784197001252e-16,
+                    -5.293543381412746e-13
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.47719790405356355
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11895085641597425
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.1415926514062797,
+                  0.0004338895476703186
+                ],
+                "return_error": 9.155133597044475e-16,
+                "trace": -1.215109732518373,
+                "determinant": 1.0000001288470064
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  1.0806022743281574e-11,
+                  1.207243183420914e-06
+                ],
+                "return_error": 0.0,
+                "trace": 6.538556915248404,
+                "determinant": 1.000002299249926
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.1415926514062797,
+                    0.0004338895476703186
+                  ],
+                  "return_error": 9.155133597044475e-16,
+                  "trace": -1.215109732518373,
+                  "determinant": 1.0000001288470064
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    1.0806022743281574e-11,
+                    1.207243183420914e-06
+                  ],
+                  "return_error": 0.0,
+                  "trace": 6.538556915248404,
+                  "determinant": 1.000002299249926
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 3.8722930662130395,
+            "common_width_profiles": 14,
+            "mean_width_change_pct": -1.389920524305377,
+            "projected_flux_change_pct": -0.14427093321075501
+          },
+          {
+            "time_s": 0.00897276253072083,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.438401847650723,
+            "peak_current_change_pct": 3.8662390827592263,
+            "common_width_profiles": 11,
+            "mean_width_change_pct": 2.3798246562612313
+          },
+          {
+            "time_s": 0.009380615373026322,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.3711731106813176,
+            "peak_current_change_pct": 4.002018358277715,
+            "common_width_profiles": 9,
+            "mean_width_change_pct": 2.4293700821299336
+          },
+          {
+            "time_s": 0.009788468215331813,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 2.3054258802357044,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653535376,
+                    -0.00019149707311028052
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5951180172215247
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592650787996,
+                  0.00021700933381541
+                ],
+                "return_error": 1.4895204919483639e-15,
+                "trace": -1.2169453864255848,
+                "determinant": 0.9999999830513492
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  1.3766765505351941e-14,
+                  1.3756148118382328e-06
+                ],
+                "return_error": 0.0,
+                "trace": 6.4589243544296275,
+                "determinant": 1.0000175250089858
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592650787996,
+                    0.00021700933381541
+                  ],
+                  "return_error": 1.4895204919483639e-15,
+                  "trace": -1.2169453864255848,
+                  "determinant": 0.9999999830513492
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    1.3766765505351941e-14,
+                    1.3756148118382328e-06
+                  ],
+                  "return_error": 0.0,
+                  "trace": 6.4589243544296275,
+                  "determinant": 1.0000175250089858
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 3.6985653294464127,
+            "common_width_profiles": 7,
+            "mean_width_change_pct": -0.23981780231249195,
+            "projected_flux_change_pct": null
+          }
+        ]
+      }
+    },
+    "centered_combined": {
+      "0": {
+        "case": "centered_combined",
+        "mesh": [
+          64,
+          52,
+          52
+        ],
+        "dt_s": 1.0196321057637306e-05,
+        "aim_point_m": [
+          -0.3141592653589793,
+          0.0,
+          0.017
+        ],
+        "initial_separatrix_y_m": [
+          -0.02712714454722259,
+          0.027127144547222606
+        ],
+        "closest_sample_to_axis_m": 0.0,
+        "normal_travel_m": 0.13999999999999999,
+        "core_diameter_m": 0.046000000000000006,
+        "initial_trajectory_offset_m": 0.0,
+        "solid": true,
+        "prescribed_field": true,
+        "rows": [
+          {
+            "time_s": 0.0,
+            "center_m": [
+              -0.3141592653589793,
+              0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.07000000000000002,
+            "peak_sampled_current": 3.796438367871772,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.606372735708385
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48637273570838563
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11999999999999938
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.3148909117064473,
+                "determinant": 1.0000000184833142
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 7.174852858160772,
+                "determinant": 0.9999830894575074
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.3148909117064473,
+                  "determinant": 1.0000000184833142
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 7.174852858160772,
+                  "determinant": 0.9999830894575074
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0004078528423054923,
+            "center_m": [
+              -0.3141592653589793,
+              0.06977950515673424,
+              0.017
+            ],
+            "speed_m_s": -1.575002017400115,
+            "distance_to_initial_axis_m": 0.06977950515673426,
+            "peak_sampled_current": 3.7787491542863876
+          },
+          {
+            "time_s": 0.0008157056846109846,
+            "center_m": [
+              -0.3141592653589793,
+              0.06838540872834425,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528435,
+            "distance_to_initial_axis_m": 0.06838540872834424,
+            "peak_sampled_current": 3.7782260495881768
+          },
+          {
+            "time_s": 0.0012235585269164766,
+            "center_m": [
+              -0.3141592653589793,
+              0.06503086419753086,
+              0.017
+            ],
+            "speed_m_s": -11.03591378974129,
+            "distance_to_initial_axis_m": 0.06503086419753083,
+            "peak_sampled_current": 3.8127053702855194,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.1405288379020178,
+                    -0.003747452745832547
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6029619349618521
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  3.1415797170311297,
+                  -0.0021718717507233087
+                ],
+                "return_error": 1.7763568394002505e-15,
+                "trace": -1.2935007401041494,
+                "determinant": 1.0000155634356642
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  5.535536642398142e-07,
+                  6.031624018909554e-06
+                ],
+                "return_error": 0.0,
+                "trace": 7.0730732926007605,
+                "determinant": 0.9999848456949701
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    3.1415797170311297,
+                    -0.0021718717507233087
+                  ],
+                  "return_error": 1.7763568394002505e-15,
+                  "trace": -1.2935007401041494,
+                  "determinant": 1.0000155634356642
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    5.535536642398142e-07,
+                    6.031624018909554e-06
+                  ],
+                  "return_error": 0.0,
+                  "trace": 7.0730732926007605,
+                  "determinant": 0.9999848456949701
+                }
+              ],
+              "unresolved_seed_count": 11,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.0016314113692219691,
+            "center_m": [
+              -0.3141592653589793,
+              0.05930244373317076,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317076,
+            "peak_sampled_current": 3.858992467328728
+          },
+          {
+            "time_s": 0.002039264211527461,
+            "center_m": [
+              -0.3141592653589793,
+              0.05110679266371996,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371996,
+            "peak_sampled_current": 6.222520418288233
+          },
+          {
+            "time_s": 0.0024471170538329532,
+            "center_m": [
+              -0.3141592653589793,
+              0.04061728395061729,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.04061728395061728,
+            "peak_sampled_current": 9.618087682722319
+          },
+          {
+            "time_s": 0.0028549698961384457,
+            "center_m": [
+              -0.3141592653589793,
+              0.02822067266168774,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956846,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 12.209317355957022
+          },
+          {
+            "time_s": 0.0032628227384439382,
+            "center_m": [
+              -0.3141592653589793,
+              0.014463750444546048,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955273,
+            "distance_to_initial_axis_m": 0.014463750444546043,
+            "peak_sampled_current": 15.135024304249917
+          },
+          {
+            "time_s": 0.0036706755807494303,
+            "center_m": [
+              -0.3141592653589793,
+              0.0,
+              0.017
+            ],
+            "speed_m_s": -35.75636067876178,
+            "distance_to_initial_axis_m": 0.0,
+            "peak_sampled_current": 18.76763037224759
+          },
+          {
+            "time_s": 0.004078528423054922,
+            "center_m": [
+              -0.3141592653589793,
+              -0.014463750444546064,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955272,
+            "distance_to_initial_axis_m": 0.014463750444546064,
+            "peak_sampled_current": 21.7481737226424
+          },
+          {
+            "time_s": 0.004486381265360415,
+            "center_m": [
+              -0.3141592653589793,
+              -0.02822067266168773,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956845,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 22.329051121628943
+          },
+          {
+            "time_s": 0.0048942341076659065,
+            "center_m": [
+              -0.3141592653589793,
+              -0.04061728395061725,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.040617283950617235,
+            "peak_sampled_current": 21.121198484844207
+          },
+          {
+            "time_s": 0.005302086949971399,
+            "center_m": [
+              -0.3141592653589793,
+              -0.051106792663719904,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371992,
+            "peak_sampled_current": 21.188067833420252
+          },
+          {
+            "time_s": 0.0057099397922768915,
+            "center_m": [
+              -0.3141592653589793,
+              -0.05930244373317082,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317082,
+            "peak_sampled_current": 22.25069321582997
+          },
+          {
+            "time_s": 0.0061177926345823835,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06503086419753092,
+              0.017
+            ],
+            "speed_m_s": -11.035913789741299,
+            "distance_to_initial_axis_m": 0.06503086419753092,
+            "peak_sampled_current": 21.967114172437665
+          },
+          {
+            "time_s": 0.0065256454768878765,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0683854087283443,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528429,
+            "distance_to_initial_axis_m": 0.0683854087283443,
+            "peak_sampled_current": 21.21246535286538
+          },
+          {
+            "time_s": 0.006933498319193368,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0697795051567342,
+              0.017
+            ],
+            "speed_m_s": -1.5750020174001162,
+            "distance_to_initial_axis_m": 0.0697795051567342,
+            "peak_sampled_current": 19.49061252630413
+          },
+          {
+            "time_s": 0.007341351161498861,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 18.06273337359349,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.1408836284371624,
+                    -0.16071014744620005
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.4164466866148904
+                },
+                {
+                  "xy": [
+                    2.65663263389866,
+                    -0.20394217374762325
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5721226678758726
+                },
+                {
+                  "xy": [
+                    -2.6570198572260892,
+                    -0.20405773393012083
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5724323485354671
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 1.610784632831165,
+                "candidate_distance": 0.4555446102671195
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  0.00021493905796354795,
+                  0.0004847081570160672
+                ],
+                "return_error": 2.482534153247273e-15,
+                "trace": 7.4835524626251075,
+                "determinant": 0.9978946116113732
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    0.00021493905796354795,
+                    0.0004847081570160672
+                  ],
+                  "return_error": 2.482534153247273e-15,
+                  "trace": 7.4835524626251075,
+                  "determinant": 0.9978946116113732
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.6762783188226837,
+                    -0.17700402974875407
+                  ],
+                  "return_error": 4.472029278653519e-12,
+                  "trace": -11.186958584320285,
+                  "determinant": 1.0273647879077963
+                }
+              ],
+              "unresolved_seed_count": 24,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 580.8234556769455,
+            "common_width_profiles": 30,
+            "mean_width_change_pct": -77.53801111555167,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.007749204003804353,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 16.676532455374414,
+            "peak_current_change_pct": 547.1962569721567,
+            "common_width_profiles": 30,
+            "mean_width_change_pct": -79.65977848195736
+          },
+          {
+            "time_s": 0.008157056846109845,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 15.446313222301681,
+            "peak_current_change_pct": 517.8020871898384,
+            "common_width_profiles": 28,
+            "mean_width_change_pct": -79.04846311611193
+          },
+          {
+            "time_s": 0.008564909688415338,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 14.15393767890397,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141107943326262,
+                    -0.29794503850474374
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5354521210649048
+                },
+                {
+                  "xy": [
+                    2.624348559018401,
+                    -0.19625726413261013
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5899487310397159
+                },
+                {
+                  "xy": [
+                    -2.6243814212196654,
+                    -0.19619183260408035
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5900736430081742
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 1.6057035951415857,
+                "candidate_distance": 0.5179704216037636
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  0.00017556389505823944,
+                  0.0002412343431033026
+                ],
+                "return_error": 4.965068306494546e-16,
+                "trace": 7.3533119213944325,
+                "determinant": 0.9961186295766952
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    0.00017556389505823944,
+                    0.0002412343431033026
+                  ],
+                  "return_error": 4.965068306494546e-16,
+                  "trace": 7.3533119213944325,
+                  "determinant": 0.9961186295766952
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.6491787346202704,
+                    -0.2052061043334914
+                  ],
+                  "return_error": 2.2649638130145463e-14,
+                  "trace": -8.613686104810615,
+                  "determinant": 1.0176400798151408
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.649273737662144,
+                    -0.20509487401681858
+                  ],
+                  "return_error": 1.354472090042691e-14,
+                  "trace": -8.508445588687243,
+                  "determinant": 0.9844687475194089
+                }
+              ],
+              "unresolved_seed_count": 16,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 483.9822009793928,
+            "common_width_profiles": 10,
+            "mean_width_change_pct": -77.17200484617503,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.00897276253072083,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 12.568414420687724,
+            "peak_current_change_pct": 435.3645619847563,
+            "common_width_profiles": 7,
+            "mean_width_change_pct": -80.39452562760265
+          },
+          {
+            "time_s": 0.009380615373026322,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 10.94262675853529,
+            "peak_current_change_pct": 379.9545271082999,
+            "common_width_profiles": 9,
+            "mean_width_change_pct": -84.12572961716008
+          },
+          {
+            "time_s": 0.009788468215331813,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 10.48223465225048,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    3.1414176201577924,
+                    -0.14145676629385195
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5868128277415626
+                },
+                {
+                  "xy": [
+                    2.608290372386014,
+                    -0.18978227120085545
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5974079303038968
+                },
+                {
+                  "xy": [
+                    2.8615151472890705,
+                    -0.17930540871906775
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5605463664181687
+                },
+                {
+                  "xy": [
+                    -2.8616776221979268,
+                    -0.17939280358490484
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5605344199115165
+                },
+                {
+                  "xy": [
+                    -2.6082600188540876,
+                    -0.1896193839744642
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5973989868487237
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 0.5379450829132627,
+                "candidate_distance": 0.49976045030652144
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  8.315917073309365e-05,
+                  0.00044878232256584383
+                ],
+                "return_error": 4.965068306494546e-16,
+                "trace": 6.413613593262644,
+                "determinant": 0.9967703147853801
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    8.315917073309365e-05,
+                    0.00044878232256584383
+                  ],
+                  "return_error": 4.965068306494546e-16,
+                  "trace": 6.413613593262644,
+                  "determinant": 0.9967703147853801
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.663756849045817,
+                    -0.24069180315272787
+                  ],
+                  "return_error": 9.299416283935673e-12,
+                  "trace": -7.76139775736129,
+                  "determinant": 0.9965410360944335
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    3.141499674331767,
+                    -0.30363919676922735
+                  ],
+                  "return_error": 6.681160866131184e-12,
+                  "trace": -5.265333886268266,
+                  "determinant": 1.0001301857655127
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.6640599236365508,
+                    -0.24060004973666094
+                  ],
+                  "return_error": 3.2708248100954285e-13,
+                  "trace": -7.809106795112266,
+                  "determinant": 1.0011879919886069
+                }
+              ],
+              "unresolved_seed_count": 17,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 371.49323003776215,
+            "common_width_profiles": 5,
+            "mean_width_change_pct": -70.28020183882714,
+            "projected_flux_change_pct": null
+          }
+        ]
+      }
+    },
+    "wide_centered_solid": {
+      "0": {
+        "case": "wide_centered_solid",
+        "mesh": [
+          64,
+          52,
+          52
+        ],
+        "dt_s": 1.0196321057637306e-05,
+        "aim_point_m": [
+          -0.3141592653589793,
+          0.0,
+          0.017
+        ],
+        "initial_separatrix_y_m": [
+          -0.02712714454722259,
+          0.027127144547222606
+        ],
+        "closest_sample_to_axis_m": 0.0,
+        "normal_travel_m": 0.13999999999999999,
+        "core_diameter_m": 0.06,
+        "initial_trajectory_offset_m": 0.0,
+        "solid": true,
+        "prescribed_field": false,
+        "rows": [
+          {
+            "time_s": 0.0,
+            "center_m": [
+              -0.3141592653589793,
+              0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.07000000000000002,
+            "peak_sampled_current": 3.796438367871772,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.606372735708385
+                },
+                {
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.48637273570838563
+                }
+              ],
+              "original_pair_projected_flux_contrast": 0.11999999999999938
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592653589793,
+                  0.0
+                ],
+                "return_error": 0.0,
+                "trace": -1.3148909117064473,
+                "determinant": 1.0000000184833142
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.440892098500626e-16,
+                  0.0
+                ],
+                "return_error": 1.3322676295501878e-15,
+                "trace": 7.174852858160772,
+                "determinant": 0.9999830894575074
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592653589793,
+                    0.0
+                  ],
+                  "return_error": 0.0,
+                  "trace": -1.3148909117064473,
+                  "determinant": 1.0000000184833142
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.440892098500626e-16,
+                    0.0
+                  ],
+                  "return_error": 1.3322676295501878e-15,
+                  "trace": 7.174852858160772,
+                  "determinant": 0.9999830894575074
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": 0.0
+          },
+          {
+            "time_s": 0.0004078528423054923,
+            "center_m": [
+              -0.3141592653589793,
+              0.06977950515673424,
+              0.017
+            ],
+            "speed_m_s": -1.575002017400115,
+            "distance_to_initial_axis_m": 0.06977950515673426,
+            "peak_sampled_current": 3.77811836661834
+          },
+          {
+            "time_s": 0.0008157056846109846,
+            "center_m": [
+              -0.3141592653589793,
+              0.06838540872834425,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528435,
+            "distance_to_initial_axis_m": 0.06838540872834424,
+            "peak_sampled_current": 3.774502165393776
+          },
+          {
+            "time_s": 0.0012235585269164766,
+            "center_m": [
+              -0.3141592653589793,
+              0.06503086419753086,
+              0.017
+            ],
+            "speed_m_s": -11.03591378974129,
+            "distance_to_initial_axis_m": 0.06503086419753083,
+            "peak_sampled_current": 3.8644821522770516,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.141223738554291,
+                    -0.005479778423175707
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.6026683089531399
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "tracked",
+                "classification": "elliptic",
+                "xy": [
+                  -3.141592426523367,
+                  -0.004738712897719433
+                ],
+                "return_error": 1.3873168511253122e-13,
+                "trace": -1.2832845402441801,
+                "determinant": 0.9999948295391765
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -1.3284409883240755e-07,
+                  -3.925038670749004e-06
+                ],
+                "return_error": 0.0,
+                "trace": 7.081137199900443,
+                "determinant": 0.9999758538608327
+              },
+              "elliptic": [
+                {
+                  "status": "tracked",
+                  "classification": "elliptic",
+                  "xy": [
+                    -3.141592426523367,
+                    -0.004738712897719433
+                  ],
+                  "return_error": 1.3873168511253122e-13,
+                  "trace": -1.2832845402441801,
+                  "determinant": 0.9999948295391765
+                }
+              ],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -1.3284409883240755e-07,
+                    -3.925038670749004e-06
+                  ],
+                  "return_error": 0.0,
+                  "trace": 7.081137199900443,
+                  "determinant": 0.9999758538608327
+                }
+              ],
+              "unresolved_seed_count": 12,
+              "total_seed_count": 29
+            },
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.0016314113692219691,
+            "center_m": [
+              -0.3141592653589793,
+              0.05930244373317076,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317076,
+            "peak_sampled_current": 4.498772507148821
+          },
+          {
+            "time_s": 0.002039264211527461,
+            "center_m": [
+              -0.3141592653589793,
+              0.05110679266371996,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371996,
+            "peak_sampled_current": 6.752741073423367
+          },
+          {
+            "time_s": 0.0024471170538329532,
+            "center_m": [
+              -0.3141592653589793,
+              0.04061728395061729,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.04061728395061728,
+            "peak_sampled_current": 9.336490821769324
+          },
+          {
+            "time_s": 0.0028549698961384457,
+            "center_m": [
+              -0.3141592653589793,
+              0.02822067266168774,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956846,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 12.579485079400396
+          },
+          {
+            "time_s": 0.0032628227384439382,
+            "center_m": [
+              -0.3141592653589793,
+              0.014463750444546048,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955273,
+            "distance_to_initial_axis_m": 0.014463750444546043,
+            "peak_sampled_current": 16.255380827252825
+          },
+          {
+            "time_s": 0.0036706755807494303,
+            "center_m": [
+              -0.3141592653589793,
+              0.0,
+              0.017
+            ],
+            "speed_m_s": -35.75636067876178,
+            "distance_to_initial_axis_m": 0.0,
+            "peak_sampled_current": 19.574521417976726
+          },
+          {
+            "time_s": 0.004078528423054922,
+            "center_m": [
+              -0.3141592653589793,
+              -0.014463750444546064,
+              0.017
+            ],
+            "speed_m_s": -34.87893740955272,
+            "distance_to_initial_axis_m": 0.014463750444546064,
+            "peak_sampled_current": 21.843289830544375
+          },
+          {
+            "time_s": 0.004486381265360415,
+            "center_m": [
+              -0.3141592653589793,
+              -0.02822067266168773,
+              0.017
+            ],
+            "speed_m_s": -32.31206560956845,
+            "distance_to_initial_axis_m": 0.02822067266168773,
+            "peak_sampled_current": 22.78569567114447
+          },
+          {
+            "time_s": 0.0048942341076659065,
+            "center_m": [
+              -0.3141592653589793,
+              -0.04061728395061725,
+              0.017
+            ],
+            "speed_m_s": -28.251939301737703,
+            "distance_to_initial_axis_m": 0.040617283950617235,
+            "peak_sampled_current": 22.817922440063093
+          },
+          {
+            "time_s": 0.005302086949971399,
+            "center_m": [
+              -0.3141592653589793,
+              -0.051106792663719904,
+              0.017
+            ],
+            "speed_m_s": -23.025548524275035,
+            "distance_to_initial_axis_m": 0.05110679266371992,
+            "peak_sampled_current": 21.378041139415526
+          },
+          {
+            "time_s": 0.0057099397922768915,
+            "center_m": [
+              -0.3141592653589793,
+              -0.05930244373317082,
+              0.017
+            ],
+            "speed_m_s": -17.090679330680835,
+            "distance_to_initial_axis_m": 0.05930244373317082,
+            "peak_sampled_current": 21.17870064182287
+          },
+          {
+            "time_s": 0.0061177926345823835,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06503086419753092,
+              0.017
+            ],
+            "speed_m_s": -11.035913789741299,
+            "distance_to_initial_axis_m": 0.06503086419753092,
+            "peak_sampled_current": 22.006630405037992
+          },
+          {
+            "time_s": 0.0065256454768878765,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0683854087283443,
+              0.017
+            ],
+            "speed_m_s": -5.580629985528429,
+            "distance_to_initial_axis_m": 0.0683854087283443,
+            "peak_sampled_current": 21.843973992531225
+          },
+          {
+            "time_s": 0.006933498319193368,
+            "center_m": [
+              -0.3141592653589793,
+              -0.0697795051567342,
+              0.017
+            ],
+            "speed_m_s": -1.5750020174001162,
+            "distance_to_initial_axis_m": 0.0697795051567342,
+            "peak_sampled_current": 20.913328815532584
+          },
+          {
+            "time_s": 0.007341351161498861,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 19.139778040491827,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.14153056372995,
+                    -0.20934325295513423
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.29974880410527943
+                },
+                {
+                  "xy": [
+                    2.5462139764104474,
+                    -0.26578757983946955
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5840585202792486
+                },
+                {
+                  "xy": [
+                    -3.14149029384167,
+                    -0.4838672066634653
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.26502144081901974
+                },
+                {
+                  "xy": [
+                    -2.5462438359427395,
+                    -0.2659442670809642
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5840310826236829
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 1.408698702223631,
+                "candidate_distance": 0.5608631518688856
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -0.00011954346487064171,
+                  0.0004755180863977859
+                ],
+                "return_error": 0.0,
+                "trace": 5.955167839643781,
+                "determinant": 1.00025560015323
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -0.00011954346487064171,
+                    0.0004755180863977859
+                  ],
+                  "return_error": 0.0,
+                  "trace": 5.955167839643781,
+                  "determinant": 1.00025560015323
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.5071349914425562,
+                    -0.17556525924130595
+                  ],
+                  "return_error": 5.773996595493855e-06,
+                  "trace": -13.182408794299217,
+                  "determinant": 1.0106731582370894
+                }
+              ],
+              "unresolved_seed_count": 22,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 621.4195967409638,
+            "common_width_profiles": 22,
+            "mean_width_change_pct": -80.36245115650544,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.007749204003804353,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 17.138484042180096,
+            "peak_current_change_pct": 565.1240449390511,
+            "common_width_profiles": 14,
+            "mean_width_change_pct": -80.62476910734345
+          },
+          {
+            "time_s": 0.008157056846109845,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 15.237880309724842,
+            "peak_current_change_pct": 509.4654513482767,
+            "common_width_profiles": 16,
+            "mean_width_change_pct": -82.28227672197083
+          },
+          {
+            "time_s": 0.008564909688415338,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 14.521271660018998,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    2.4842797588237584,
+                    -0.27737608406120895
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5924449112288824
+                },
+                {
+                  "xy": [
+                    -2.4843255722800923,
+                    -0.27739239113393355
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5924782811200641
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 1.485442502278942,
+                "candidate_distance": 0.3487236977277744
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -2.6595002784901567e-05,
+                  0.0031810757450658755
+                ],
+                "return_error": 0.0,
+                "trace": 5.832722443470882,
+                "determinant": 1.0014015372489733
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.6595002784901567e-05,
+                    0.0031810757450658755
+                  ],
+                  "return_error": 0.0,
+                  "trace": 5.832722443470882,
+                  "determinant": 1.0014015372489733
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.465986312160961,
+                    -0.2413920554096407
+                  ],
+                  "return_error": 1.628663499255034e-14,
+                  "trace": -8.615573207485852,
+                  "determinant": 1.0090463983586153
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.466020477204022,
+                    -0.24127569763416057
+                  ],
+                  "return_error": 8.189353020564573e-14,
+                  "trace": -8.534321356022724,
+                  "determinant": 1.029517892568805
+                }
+              ],
+              "unresolved_seed_count": 18,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 499.1381605188931,
+            "common_width_profiles": 8,
+            "mean_width_change_pct": -78.03802299805385,
+            "projected_flux_change_pct": null
+          },
+          {
+            "time_s": 0.00897276253072083,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 13.783093865505938,
+            "peak_current_change_pct": 487.1050844691674,
+            "common_width_profiles": 4,
+            "mean_width_change_pct": -84.88275796155966
+          },
+          {
+            "time_s": 0.009380615373026322,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 12.829760481705156,
+            "peak_current_change_pct": 462.7260950033337,
+            "common_width_profiles": 7,
+            "mean_width_change_pct": -80.44534497175815
+          },
+          {
+            "time_s": 0.009788468215331813,
+            "center_m": [
+              -0.3141592653589793,
+              -0.06999999999999999,
+              0.017
+            ],
+            "speed_m_s": -0.0,
+            "distance_to_initial_axis_m": 0.06999999999999999,
+            "peak_sampled_current": 12.041107263186149,
+            "slice_map": {
+              "points": [
+                {
+                  "xy": [
+                    -3.1236974595148936,
+                    -0.2767174663065164
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5860463345832125
+                },
+                {
+                  "xy": [
+                    2.4400758128804885,
+                    -0.280549490323063
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5917955440989134
+                },
+                {
+                  "xy": [
+                    2.719228698129755,
+                    -0.33917139126775986
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5575797743867873
+                },
+                {
+                  "xy": [
+                    -2.7193237029138397,
+                    -0.3392955228758332
+                  ],
+                  "kind": "X",
+                  "projected_flux": -0.5575992714253497
+                },
+                {
+                  "xy": [
+                    -2.440233114325026,
+                    -0.28065722762752543
+                  ],
+                  "kind": "O",
+                  "projected_flux": -0.5918256785498838
+                }
+              ],
+              "original_pair_projected_flux_contrast": null
+            },
+            "field_line_map": {
+              "status": "searched",
+              "original_axis": {
+                "status": "continuation_failed",
+                "return_error": 1.4534977964186488,
+                "candidate_distance": 0.637827367784246
+              },
+              "original_saddle": {
+                "status": "tracked",
+                "classification": "hyperbolic",
+                "xy": [
+                  -4.531670135676791e-05,
+                  0.0048181761039567395
+                ],
+                "return_error": 2.3914935841127266e-15,
+                "trace": 6.1786849055053255,
+                "determinant": 1.0017203107618986
+              },
+              "elliptic": [],
+              "hyperbolic": [
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -4.531670135676791e-05,
+                    0.0048181761039567395
+                  ],
+                  "return_error": 2.3914935841127266e-15,
+                  "trace": 6.1786849055053255,
+                  "determinant": 1.0017203107618986
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    2.454353062650722,
+                    -0.27551598883949024
+                  ],
+                  "return_error": 6.217529996402007e-12,
+                  "trace": -8.691495093781423,
+                  "determinant": 0.9789931718061051
+                },
+                {
+                  "status": "tracked",
+                  "classification": "hyperbolic",
+                  "xy": [
+                    -2.4543636781004605,
+                    -0.2754542428984439
+                  ],
+                  "return_error": 1.9098792086293637e-12,
+                  "trace": -8.956986614027441,
+                  "determinant": 1.028374306615513
+                }
+              ],
+              "unresolved_seed_count": 22,
+              "total_seed_count": 29
+            },
+            "peak_current_change_pct": 441.61166441088113,
+            "common_width_profiles": 4,
+            "mean_width_change_pct": -74.95930052834224,
+            "projected_flux_change_pct": null
+          }
+        ]
+      }
+    }
+  }
+}

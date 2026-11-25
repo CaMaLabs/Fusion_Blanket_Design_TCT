@@ -157,3 +157,37 @@ python3 plasma/field_window.py --refine --cases long_decay --shear-m-s 55 -55 --
 ```
 
 [Coarse sweep](runs/field_guide_shear_screen.json) · [Coarse ±55 m/s runs](runs/field_guide_shear_intermediate_screen.json) · [Refined sweep](runs/field_guide_shear_refined.json) · [Refined ±55 m/s runs](runs/field_guide_shear_intermediate_refined.json)
+
+## Deliberate island-axis crossing
+
+The target is the elliptic field line of the seeded island at the axial cut used by the Poincaré map. The code solves for that axis on each mesh before placing the trajectory. It also finds both intersections of the initial projected separatrix with the sheet-normal line through the axis. The nominal island thickness on that line is 54.25 mm.
+
+The centered trajectories cross from 70 mm above the axis to 70 mm below it in 7.34 ms, with 35.76 m/s peak normal speed. The standard solid diameter is 46 mm. A second solid pass uses a 60 mm diameter, greater than the initial local normal thickness, while retaining the same aim and speed. The offset control travels on the same normal trajectory 46 mm away in the sheet plane. An unforced control and centered field-only and solid-plus-field cases distinguish the effects of the moving field and momentum coupling.
+
+The model begins at zero flow. The solid is a smooth momentum penalty, and the induction equation evolves magnetic field throughout the grid, including inside the mask. The model prescribes the trajectory and tapers coupling at the ends of the pass, away from the axis. The simulated sphere occupies only a local part of the field-aligned island. Guidance authority for this normal trajectory and the electromagnetic boundary of a real probe remain open.
+
+The comparison checks topology at entry, before the crossing, and at three times after the applied coupling has ended. It follows the original elliptic axis and its saddle, searches neighboring seeds for additional one-turn field lines, and independently classifies critical points of the projected in-plane flux on the cut. A planar root alone gives evidence about the slice. The one-turn field-line map tests continuity along the modeled guide direction. The comparison uses the unforced run to measure local peak-current and sheet-width changes after the probe clears the island.
+
+The refined search also seeds the line map at the projected critical points. The last level doubles the axial integration points from 64 to 128 and halves the time step on the 80 × 64 × 64 mesh. A synthetic field with two nearby elliptic axes verified that the combined diagnostics can recover a pair when present. The line search tests fixed points that close after one axial period. The original flux-contrast proxy is reported only when its projected roots remain near both original locations.
+
+| Case | Projected centers at clearance, +1.22 ms and +2.45 ms | Stable one-turn axes found at those times | Final local peak current relative to unforced |
+| --- | --- | --- | ---: |
+| Unforced | 1, 1, 1 | 1, 1, 1 | 1.00× |
+| Centered 46 mm solid | 3, 3, 3 | 0, 0, 0 | 4.78× |
+| 46 mm-offset solid | 2, 3, 3 | 0, 0, 0 | 5.38× |
+| Centered 46 mm solid with field | 3, 3, 3 | 0, 0, 0 | 4.77× |
+| Centered 60 mm solid | 3, 3, 3 | 0, 0, 0 | 5.85× |
+
+The two fine time steps agree on all entries for the topology counts above. Before contact, the 46 mm centered run's tracked axis was 0.23 mm from its initial aim point. The shift was 0.49 mm in the 60 mm run. The centered routes cross the initial axis exactly in the prescribed geometry. The coarse field-only case retained one stable one-turn axis at all three post-pass checks.
+
+The solid passes produced substantial deformation and several centers in the cut. The sampled 3D line search did not recover either the original stable axis or a set of stable daughter axes after the solid passed. The offset crossing also produced that outcome while crossing the island away from the axis. A persistent three-dimensional split remains unverified. The post-pass current increase was large on all three numerical levels, and too few common late width profiles survived for a whole-region width claim.
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/island_crossing.py --cache /tmp/tct-island-crossing --output plasma/runs/island_crossing_screen.json
+python3 plasma/island_crossing.py --cache /tmp/tct-island-crossing --refine --cases centered_solid offset_solid centered_combined wide_centered_solid --output plasma/runs/island_crossing_refined.json
+```
+
+[Crossing screen](runs/island_crossing_screen.json) · [Refined solid crossings](runs/island_crossing_refined.json)

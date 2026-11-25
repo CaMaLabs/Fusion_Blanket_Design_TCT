@@ -141,7 +141,7 @@ def wrapped(x, length):
     return (x + length / 2) % length - length / 2
 
 
-def field_line_map(grid, total, guesses):
+def field_line_map(grid, total, guesses, *, axial_steps=64):
     # A return map on one axial period of the frozen 3D total magnetic field.
     # Track the seeded one-turn periodic field lines and classify their stability.
     if total[2].min() <= 0:
@@ -161,8 +161,8 @@ def field_line_map(grid, total, guesses):
 
     def return_displacement(seeds):
         xy = seeds.copy()
-        dz = LENGTH[2] / 64
-        for i in range(64):
+        dz = LENGTH[2] / axial_steps
+        for i in range(axial_steps):
             z = 0.17 + i * dz
             k1 = field_slope(xy, z)
             k2 = field_slope(xy + dz/2*k1, z + dz/2)
