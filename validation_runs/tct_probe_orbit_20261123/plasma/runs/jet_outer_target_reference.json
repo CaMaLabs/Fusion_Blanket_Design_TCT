@@ -1,0 +1,83 @@
+{
+  "source": "https://pure.mpg.de/rest/items/item_2143150/component/file_2143149/content",
+  "source_sha256": "815eff8cd405ca64779cab9bb80aa4c87939e5c2b4737b3309f6e65b53116f96",
+  "source_page": 23,
+  "figure": "4.2.2-2",
+  "experimental_source_doi": "10.1016/S0022-3115(02)01477-0",
+  "scope": "Published vector figure, one JET Type I ELM, outboard divertor target",
+  "time_origin": "Published figure zero, approximately the target power maximum",
+  "baseline_power_w": 11134552.32626283,
+  "published_energy_trend_step_j": 52668.28130465803,
+  "nominal": {
+    "window_s": [
+      -0.0009,
+      0.0021
+    ],
+    "deposited_energy_j": 51823.89100415042,
+    "from_energy_curve_j": 51837.57027774203,
+    "peak_excess_power_w": 44547271.26276823,
+    "peak_time_s": 4.648803631655559e-07,
+    "t10_s": -0.00028183278835416643,
+    "t50_s": 0.0002769599983501804,
+    "t90_s": 0.0011437017266756218,
+    "t10_to_t90_s": 0.0014255345150297884
+  },
+  "window_sensitivity": [
+    {
+      "window_s": [
+        -0.001,
+        0.002
+      ],
+      "deposited_energy_j": 51606.525892088066,
+      "from_energy_curve_j": 51686.02096797244,
+      "peak_excess_power_w": 44547271.26276823,
+      "peak_time_s": 4.648803631655559e-07,
+      "t10_s": -0.00028994573649698753,
+      "t50_s": 0.00027021594689463814,
+      "t90_s": 0.0011168938695650282,
+      "t10_to_t90_s": 0.0014068396060620157
+    },
+    {
+      "window_s": [
+        -0.001,
+        0.0025
+      ],
+      "deposited_energy_j": 52106.35186446117,
+      "from_energy_curve_j": 52091.675242134625,
+      "peak_excess_power_w": 44547271.26276823,
+      "peak_time_s": 4.648803631655559e-07,
+      "t10_s": -0.00028660581179007537,
+      "t50_s": 0.00027892155683897175,
+      "t90_s": 0.001162265064559593,
+      "t10_to_t90_s": 0.0014488708763496683
+    },
+    {
+      "window_s": [
+        -0.0008,
+        0.002
+      ],
+      "deposited_energy_j": 51162.16185166843,
+      "from_energy_curve_j": 51124.140172068044,
+      "peak_excess_power_w": 44547271.26276823,
+      "peak_time_s": 4.648803631655559e-07,
+      "t10_s": -0.0002677571551414616,
+      "t50_s": 0.000276642077602833,
+      "t90_s": 0.0011206151128053243,
+      "t10_to_t90_s": 0.001388372267946786
+    },
+    {
+      "window_s": [
+        -0.0008,
+        0.0025
+      ],
+      "deposited_energy_j": 51661.987824041535,
+      "from_energy_curve_j": 51529.79444623022,
+      "peak_excess_power_w": 44547271.26276823,
+      "peak_time_s": 4.648803631655559e-07,
+      "t10_s": -0.0002644172304345495,
+      "t50_s": 0.0002853476875471667,
+      "t90_s": 0.0011659863077998897,
+      "t10_to_t90_s": 0.0014304035382344392
+    }
+  ]
+}

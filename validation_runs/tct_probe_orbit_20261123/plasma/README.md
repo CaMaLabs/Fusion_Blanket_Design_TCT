@@ -308,3 +308,20 @@ python3 plasma/island_release_audit.py plasma/runs/island_release_{screen,refine
 ```
 
 [Half-time-step runs](runs/island_release_half_step.json) · [Inboard loss-region runs](runs/island_release_exhaust_inboard.json) · [Outboard loss-region runs](runs/island_release_exhaust_outboard.json)
+
+## Measured outer-divertor energy reference
+
+The fixed-pulse replay gives a cumulative arrival curve. At its earliest sampled diffusion time, $\theta=0.125$, the fine-grid solid cases had already delivered 0.06% to 1.69% of the prescribed pulse for the 46 mm solid and 0.04% to 0.33% for the 60 mm solid. The unforced arrivals were 6.65% to 8.60%. The model leaves the parallel diffusivity uncalibrated. Its time variable $\theta=\chi_\parallel t/d^2$ cannot establish a probe arrival time in milliseconds without the physical transport and geometry. For a repeated measurement, report the times to 10%, 50%, and 90% of accumulated excess energy relative to a common release trigger.
+
+The dimensional reference uses the JET Type I ELM plotted in figure 4.2.2-2 of *Chapter 4, Power and particle control*. It reads the vector paths for the infrared-derived outboard-divertor power and accumulated energy, along with the figure's inter-ELM background trend. The power integration over −0.90 to +2.10 ms gives **51.824 kJ** of excess energy. Reading and background-correcting the accumulated-energy curve over that interval gives **51.838 kJ**. Both curves come from the same experiment. Shifting the integration endpoints over the tested windows gives 51.16 to 52.11 kJ. The target received the middle 80% of that energy over 1.43 ms, from 0.282 ms before to 1.144 ms after the figure's zero near peak power. The energy range measures integration-window sensitivity. The plotted power and cumulative-energy curves share their underlying thermography calibration. [Published JET figure](https://pure.mpg.de/rest/items/item_2143150/component/file_2143149/content#page=23) · [Experimental paper](https://doi.org/10.1016/S0022-3115(02)01477-0)
+
+For a probe shot, wall deposition in joules requires time-synchronized, calibrated surface-normal heat flux and the corresponding surface areas. Integrate background-subtracted heat flux over each observed surface and then over the full event window. Report the measured surface coverage and the timing and spatial uncertainty. Repeat with and without the probe under matched plasma conditions. The JET reference covers one outboard target in an experiment without the proposed probe. The pressure-release receipts contain normalized energy escaping to a modeled sink. They supply no measurement of probe-induced deposition.
+
+Run from the parent of this directory with PyMuPDF, NumPy and SciPy installed.
+
+```sh
+curl -fL 'https://pure.mpg.de/rest/items/item_2143150/component/file_2143149/content' -o /tmp/tct-jet-power-control.pdf
+python3 plasma/jet_outer_target_reference.py /tmp/tct-jet-power-control.pdf --output plasma/runs/jet_outer_target_reference.json
+```
+
+[JET reference calculation](runs/jet_outer_target_reference.json)
