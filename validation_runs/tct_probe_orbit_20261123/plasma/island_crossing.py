@@ -58,6 +58,20 @@ def coupling(time):
     return q*q * (3 - 2*q)
 
 
+def crossing_model(path):
+    def model(grid, time, solid, magnet):
+        weight = coupling(time)
+        source, mask, center, velocity = core_and_field(
+            path, grid, time, solid and bool(weight), magnet and bool(weight),
+            source_strength=SOURCE_STRENGTH*weight,
+        )
+        if mask is not None:
+            mask *= weight
+        return source, mask, center, velocity
+
+    return model
+
+
 def periodic_distance(a, b):
     return float(np.linalg.norm(mhd.wrapped(np.asarray(a) - np.asarray(b), mhd.LENGTH[:2])))
 
@@ -171,15 +185,7 @@ def simulate(name, level):
     shift = np.array([*target, 0.])
     dt = CADENCE / (80 if level == 2 else 40)
     count = round((CROSSING + AFTER) / dt)
-
-    def model(gr, time, solid, magnet):
-        weight = coupling(time)
-        source, mask, center, velocity = core_and_field(path, gr, time, solid and bool(weight),
-                                                        magnet and bool(weight),
-                                                        source_strength=SOURCE_STRENGTH*weight)
-        if mask is not None:
-            mask *= weight
-        return source, mask, center, velocity
+    model = crossing_model(path)
 
     def inspect(gr, state, time, mode):
         center, velocity = path.at(time)

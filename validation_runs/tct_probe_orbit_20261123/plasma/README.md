@@ -191,3 +191,27 @@ python3 plasma/island_crossing.py --cache /tmp/tct-island-crossing --refine --ca
 ```
 
 [Crossing screen](runs/island_crossing_screen.json) · [Refined solid crossings](runs/island_crossing_refined.json)
+
+## Energy budget for the island crossings
+
+The energy audit repeats the island-axis experiment with the same initial field, trajectories, force and field amplitudes, and numerical time steps. Each driven run has an unforced control at the same resolution. The audit samples every 0.102 ms and integrates over the 7.34 ms crossing and 2.45 ms of recovery.
+
+The resolved kinetic and plasma magnetic energy balance is $\Delta(E_K+E_B)=W_{\rm body}-D_{\rm slip}-D_\eta-D_\nu$. The first two terms give the net work of the imposed moving mask on the resolved fluid. The other terms are volume-integrated resistive and viscous dissipation. The prescribed field transfers energy between the two solved fields through the Lorentz and induction terms. The generator and its energy cost are outside this model. The local diagnostic integrates plasma $\eta|\mathbf J|^2$ over a cylinder with a 75 mm radius and a 50 mm half-height along the sheet normal. The cylinder stays centered at the initial island axis on the crossing plane and includes cells occupied by the mask.
+
+| Forcing | Domain-wide resistive dissipation in recovery | Local resistive dissipation in recovery |
+| --- | ---: | ---: |
+| Centered 46 mm solid | +51.62% | 4.68× baseline |
+| Centered 60 mm solid | +76.45% | 5.17× baseline |
+| Centered field only | +0.0051% | +0.102% |
+
+Recovery begins when the applied forcing ends. The table uses the 80 × 64 × 64 mesh with the halved time step. The recovery comparisons changed by less than 0.07 percentage points when the time step was halved on that mesh. The coarse offset and solid-plus-field controls also increased domain-wide resistive dissipation in recovery, by 51.34% and 54.30% respectively. The energy balance residual stayed below 0.005% of the budget scale in every reported interval. The scale is the sum of absolute body work, penalty slip, resistive dissipation and viscous dissipation over the interval.
+
+The budget uses normalized MHD energy units. The simulation has a periodic domain with no thermal transport or material boundary. It quantifies work and dissipation in the solved fields. Assigning an energy in joules to a wall or divertor per ELM requires time-resolved boundary heat flux and an identified ELM in a model with those surfaces.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/island_energy.py --cache /tmp/tct-island-energy --output plasma/runs/island_energy_screen.json
+python3 plasma/island_energy.py --cache /tmp/tct-island-energy --refine --cases centered_solid centered_field wide_centered_solid --output plasma/runs/island_energy_refined.json
+```
+
+[Six-case screen](runs/island_energy_screen.json) · [Refined centered crossings](runs/island_energy_refined.json)

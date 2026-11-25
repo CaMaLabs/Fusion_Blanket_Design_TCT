@@ -77,6 +77,8 @@ The same pulse retained all 24 field-off passes at initial guide-velocity jumps 
 
 An intentionally centered trajectory drove 46 mm and 60 mm modeled solids across the initial island axis. The initial local normal thickness was 54.25 mm. The solid passes left multiple projected centers, and the 3D one-turn search recovered zero stable axes at all three post-pass checkpoints. The offset solid produced the same qualitative result. Peak sampled current remained severalfold above the matched unforced control. [Direct island-axis crossings](plasma/README.md#deliberate-island-axis-crossing)
 
+During 2.45 ms of unforced recovery, the centered 46 mm and 60 mm solids produced 4.68× and 5.17× the local resistive dissipation of the unforced control. The field-only pass increased the same measure by 0.102%. The periodic energy audit measures dissipation inside the plasma model. Wall and divertor deposition require a boundary heat-flux diagnostic. [Island-crossing energy budget](plasma/README.md#energy-budget-for-the-island-crossings)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.
