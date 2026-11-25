@@ -81,6 +81,8 @@ During 2.45 ms of unforced recovery, the centered 46 mm and 60 mm solids produce
 
 In the absorbing-endplate replay, an identical passive heat pulse reached the targets more slowly after solid crossings. Both numerical levels showed lower early deposited energy and mixed changes in the eventual hotspot. Every pulse reached the model endplates in full over time. The replay tests transport after probe clearance with a prescribed release and simplified target geometry. [Absorbing-endplate comparison](plasma/README.md#absorbing-endplate-heat-pulse)
 
+The self-evolving pressure-layer follow-up includes heating from resolved resistive and viscous dissipation while the probe crosses. Relative to the matched no-probe case, modeled exhaust by 14.68 ms increased 77.2% with the 46 mm centered solid and 145.4% with the 60 mm solid. The field-only case stayed near the unforced result. The loss region is a normalized slab closure for energy escaping the plasma. [Pressure-release comparison](plasma/README.md#self-evolving-pressure-release)
+
 ## Reproduce
 
 Python 3 with NumPy, SciPy and Matplotlib is required. Run from this directory with the equilibrium path preserved in the checkout.

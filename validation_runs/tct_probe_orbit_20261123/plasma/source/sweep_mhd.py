@@ -116,7 +116,7 @@ def probe(grid, t, core, field):
     return source, mask, np.array([x_center, y_center, 0.17]), speed
 
 
-def rhs(grid, state, t, core, field, penalty_time, probe_model=probe):
+def fluid_terms(grid, state, t, core, field, penalty_time, probe_model):
     velocity_hat, plasma_hat = state
     source, mask, _, speed = probe_model(grid, t, core, field)
     velocity = grid.physical(velocity_hat)
@@ -124,6 +124,7 @@ def rhs(grid, state, t, core, field, penalty_time, probe_model=probe):
     current = grid.physical(grid.curl(plasma_hat))
     vorticity = grid.physical(grid.curl(velocity_hat))
     force = cross(velocity, vorticity) + cross(current, total)
+    relative = None
     if mask is not None:
         relative = -velocity
         if np.ndim(speed) == 0:
@@ -131,6 +132,12 @@ def rhs(grid, state, t, core, field, penalty_time, probe_model=probe):
         else:
             relative += np.asarray(speed)[:, None, None, None]
         force += mask / penalty_time * relative
+    return velocity, total, current, vorticity, force, mask, relative
+
+
+def rhs(grid, state, t, core, field, penalty_time, probe_model=probe):
+    velocity_hat, plasma_hat = state
+    velocity, total, _, _, force, _, _ = fluid_terms(grid, state, t, core, field, penalty_time, probe_model)
     return np.array([
         grid.project(grid.transform(force)) - NU * grid.k2 * velocity_hat,
         grid.curl(grid.transform(cross(velocity, total))) - ETA * grid.k2 * plasma_hat,

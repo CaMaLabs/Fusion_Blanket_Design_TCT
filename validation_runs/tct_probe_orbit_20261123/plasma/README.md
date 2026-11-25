@@ -245,3 +245,38 @@ python3 plasma/island_heat.py --cache /tmp/tct-heat-fields --cases centered_soli
 ```
 
 [Heat-pulse results](runs/island_heat_screen.json)
+
+## Self-evolving pressure release
+
+The absorbing-endplate test starts from a prescribed heat pulse. This follow-up initializes the same seeded magnetic island together with a perturbed pressure layer and evolves the release. The run compares the same trajectories, including the 46 mm and 60 mm solids, with the no-probe control. A second no-probe control disables the pressure-curvature drive. The layer starts from the same condition within each numerical level, and the model applies no pedestal refill or prescribed pulse timing.
+
+The normalized thermal energy density $h$ is advected by the MHD flow. The heat update uses a conservative, slope-limited finite-volume flux and a small isotropic diffusivity. A curvature force proportional to $h$ drives sheet-normal motion and exchanges energy with the thermal field. The domain-mean force is removed to keep the uniform pressure component from accelerating the slab. The model returns resolved resistive and viscous dissipation, $\eta|\mathbf J|^2 + \nu|\boldsymbol\omega|^2$, to the thermal field. A localized sink on the outer side of the pressure layer removes thermal energy above the initial background. The sink represents open-edge exhaust. Its time integral measures the energy escaping the simulated plasma. The sink has finite width and a prescribed loss rate. It supplies neither a divertor footprint nor a dimensional calibration.
+
+The integrated energy balance is $\Delta(E_K+E_B+E_h)=W_{\rm body}-D_{\rm slip}-E_{\rm exhaust}$. The momentum penalty can add energy, while the associated slip dissipation leaves the resolved fields. The no-drive run gives a comparison for leakage and background heating. The model uses the first rise and fall in exhaust power to test whether the imposed crossing changes the pressure-driven release. A single loaded pressure layer supports comparison of energy escaped over a common window, peak exhaust power and release timing. Repeated ELMs and wall loading in joules require a reloading pedestal and resolved target geometry.
+
+The code reports cumulative exhaust, kinetic, magnetic, and thermal energy histories, penalty work and slip, resistive and viscous heating, and thermal-to-kinetic conversion. The time scale is inherited from the island replay. The curvature, diffusivity, and loss coefficients are normalized model choices.
+
+| Probe case | Escaped energy by 14.68 ms | Change versus no probe | Window peak power versus no probe |
+| --- | ---: | ---: | ---: |
+| Unforced | 0.19073 | Reference | Reference |
+| 46 mm centered solid | 0.33792 | +77.17% | +108.97% |
+| 46 mm offset solid | 0.33531 | +75.80% | +108.75% |
+| 46 mm centered solid with field | 0.34111 | +78.84% | +110.52% |
+| 60 mm centered solid | 0.46798 | +145.36% | +227.36% |
+| Centered field only | 0.19073 | +0.00065% | −0.00265% |
+
+These results use the finer 64 × 52 × 52 mesh. The coarse 48 × 40 × 40 mesh agreed on the direction of every solid-probe change. Refinement halved the time step. The no-probe pressure-driven run peaked at 7.14 ms, and its curvature-disabled control had no resolved interior peak. The 46 mm solid peaked at 3.67 ms. The 60 mm solid had two resolved interior maxima and was still climbing at the end of the comparison. Its entry in the table gives the maximum observed in the window.
+
+With curvature disabled, the 46 mm and 60 mm solids still increased exhaust compared with the curvature-disabled no-probe run. Enabling curvature increased the cumulative exhaust by 0.05254 without a probe, 0.11540 with the 46 mm solid, and 0.21656 with the 60 mm solid. These paired differences measure the response to the curvature term in the coupled model. All 18 runs kept the thermal energy density positive. The largest sampled energy-balance residual was 0.0052% of the budget scale across the two levels, using cumulative absolute body work, slip, and escaped energy for that scale.
+
+The earlier endplate experiment measured the arrival of a fixed pulse. The self-evolving calculation measures how much leaves the pressure layer, and the solid crossings increased that amount in the tested conditions. The two model stages use different heat transport and boundary treatments. The estimated exhaust here has no calibrated wall-deposition value.
+
+Run from the parent of this directory.
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 plasma/island_release.py --cache /tmp/tct-pressure-release --levels 0 --output plasma/runs/island_release_screen.json
+python3 plasma/island_release.py --cache /tmp/tct-pressure-release --levels 1 --output plasma/runs/island_release_refined.json
+```
+
+[Coarse pressure-release runs](runs/island_release_screen.json) · [Refined pressure-release runs](runs/island_release_refined.json)
